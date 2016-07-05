@@ -53,6 +53,9 @@
 [Demo](https://codepen.io/rgg/pen/WrKyzj)
 
 
+# Font-Face (Latin)
+[Demo](https://yusugomori.com/projects/css-sans/fonts)
+
 # Contribute
 
 Please give me a hand.
