@@ -43,7 +43,7 @@
 [Demo](https://codepen.io/llgruff/pen/ZGBxOa)
 
 
-# Textfield
+# Floating label on Textfield
 
 [Demo](http://codepen.io/KtorZ/pen/ZOzdqG)
 
