@@ -15,6 +15,11 @@
 [Demo](https://codepen.io/RuudBurger/pen/bwjry)
 
 
+# Floating label on Textfield
+
+[Demo](http://codepen.io/KtorZ/pen/ZOzdqG)
+
+
 # Games
 
 [Game 1](https://codepen.io/i0z/pen/mFLCw)
@@ -41,11 +46,6 @@
 # Tabs
 
 [Demo](https://codepen.io/llgruff/pen/ZGBxOa)
-
-
-# Textfield
-
-[Demo](http://codepen.io/KtorZ/pen/ZOzdqG)
 
 
 # Treeview
