@@ -20,9 +20,14 @@
 [Demo](http://codepen.io/KtorZ/pen/ZOzdqG)
 
 
+# Font-Face (Latin)
+[Demo](https://yusugomori.com/projects/css-sans/fonts)
+
+
 # Games
 
 [Game 1](https://codepen.io/i0z/pen/mFLCw)
+
 [Game 2](https://codepen.io/TabAtkins/pen/JYZgRo)
 
 
@@ -52,9 +57,6 @@
 
 [Demo](https://codepen.io/rgg/pen/WrKyzj)
 
-
-# Font-Face (Latin)
-[Demo](https://yusugomori.com/projects/css-sans/fonts)
 
 # Contribute
 
