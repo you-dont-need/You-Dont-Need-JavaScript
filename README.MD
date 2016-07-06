@@ -1,63 +1,65 @@
-# Accordion / Toggle
+# You Don't Need Javascript
+
+## Accordion / Toggle
 
 [Demo](http://jsfiddle.net/yn4ls/)
 
 
-# Carousel
+## Carousel
 
 [Demo 1](http://codepen.io/SitePoint/pen/MyPVdK)
 
 [Demo 2](https://codepen.io/cavico/pen/yOjwya)
 
 
-# Flip on click
+## Flip on click
 
 [Demo](https://codepen.io/RuudBurger/pen/bwjry)
 
 
-# Floating label on Textfield
+## Floating label on Textfield
 
 [Demo](http://codepen.io/KtorZ/pen/ZOzdqG)
 
 
-# Font-Face (Latin)
+## Font-Face (Latin)
 [Demo](https://yusugomori.com/projects/css-sans/fonts)
 
 
-# Games
+## Games
 
 [Game 1](https://codepen.io/i0z/pen/mFLCw)
 
 [Game 2](https://codepen.io/TabAtkins/pen/JYZgRo)
 
 
-# Info on hover/ Popover
+## Info on hover/ Popover
 
 [Demo](https://codepen.io/guuslieben/pen/gabQWM)
 
 
-# Menu
+## Menu
 
 [Demo](https://codepen.io/antoniputra/pen/BzyWmb)
 
 
-# Modal/Popup
+## Modal/Popup
 
 [Demo 1](https://codepen.io/peiche/pen/vhqym)
 
 [Demo 2](https://codepen.io/chrisburnell/pen/scyKF)
 
 
-# Tabs
+## Tabs
 
 [Demo](https://codepen.io/llgruff/pen/ZGBxOa)
 
 
-# Treeview
+## Treeview
 
 [Demo](https://codepen.io/rgg/pen/WrKyzj)
 
 
-# Contribute
+## Contribute
 
 Please give me a hand.
