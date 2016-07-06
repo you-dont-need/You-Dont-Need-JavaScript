@@ -2,7 +2,7 @@
 
 ## Accordion / Toggle
 
-[Demo](http://jsfiddle.net/yn4ls/)
+[Demo](http://www.mraffaele.com/labs/css-only-accordions/)
 
 
 ## Carousel
