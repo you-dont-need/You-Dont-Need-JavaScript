@@ -1,4 +1,4 @@
-# You Don't Need Javascript
+# You Don't Need JavaScript
 
 ## Accordion / Toggle
 
