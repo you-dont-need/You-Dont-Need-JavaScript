@@ -52,7 +52,9 @@
 
 ## Tabs
 
-[Demo](https://codepen.io/llgruff/pen/ZGBxOa)
+[Demo 1](https://codepen.io/llgruff/pen/ZGBxOa)
+
+[Demo 2](https://codepen.io/fusco/pen/Wvzjrm)
 
 
 ## Treeview
