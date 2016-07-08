@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Floating label Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+        /* CSS styles */
+        /* Example by Matthias Benkort at http://codepen.io/KtorZ/pen/ZOzdqG */
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+        .wrapper {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .material-textfield {
+            display: inline-block;
+            height: 4rem;
+            padding-top: 2rem;
+        }
+        .material-textfield input {
+            background: none;
+            border: none;
+            box-sizing: border-box;
+            display: block;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 1rem;
+            padding: 0.25rem 0.1rem;
+            width: 100%;
+        }
+        .material-textfield input:invalid {
+            box-shadow: none;
+        }
+        .material-textfield input:focus {
+            outline: none;
+        }
+        .material-textfield label {
+            display: inline-block;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 0;
+            pointer-events: none;
+            position: relative;
+            text-transform: uppercase;
+            width: 100%;
+        }
+        .material-textfield label::before {
+            content: attr(data-content);
+            position: relative;
+            transition: all 0.2s ease;
+            will-change: font-size, top;
+        }
+        .material-textfield label::after {
+            bottom: 0.9rem;
+            content: "";
+            height: 0.3rem;
+            left: 50%;
+            position: absolute;
+            transition: all 0.2s ease;
+            width: 0;
+            will-change: width, left;
+        }
+        .material-textfield label::before, .material-textfield input[required]:focus ~ label::before {
+            font-size: 0.75rem;
+            top: -3.25rem;
+        }
+        .material-textfield input:focus ~ label::after {
+            left: 0%;
+            width: 100%;
+        }
+        .material-textfield input:invalid ~ label::before {
+            font-size: 1rem;
+            top: -2rem;
+        }
+
+        .material-textfield.blue input {
+            border-bottom: 0.1rem solid #03A9F4;
+            color: #0275a8;
+        }
+        .material-textfield.blue label::after {
+            background: #03A9F4;
+        }
+        .material-textfield.blue label::before, .material-textfield.blue input[required]:focus ~ label::before {
+            color: #47c4fd;
+        }
+        .material-textfield.blue input:invalid ~ label::before {
+            color: #03A9F4;
+        }
+
+        .material-textfield.red input {
+            border-bottom: 0.1rem solid #F44336;
+            color: #d2190b;
+        }
+        .material-textfield.red label::after {
+            background: #F44336;
+        }
+        .material-textfield.red label::before, .material-textfield.red input[required]:focus ~ label::before {
+            color: #f8877f;
+        }
+        .material-textfield.red input:invalid ~ label::before {
+            color: #F44336;
+        }
+        </style>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="wrapper">
+            <div class="material-textfield blue">
+                <input type="text" required/>
+                <label data-content="username">username</label>
+            </div>
+
+            <div class="material-textfield red">
+                <input type="password" required/>
+                <label data-content="password">password</label>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Carousel Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+        /* CSS styles */
+        /* Example by Camilo Vitorino at https://codepen.io/cavico/pen/yOjwya */
+        body {
+            background: #999;
+            font-family: sans-serif;
+            font-weight: 300;
+            line-height: 1.61803398875em;
+        }
+
+        .carousel {
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-item {
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            transition: opacity 0.6s ease-in-out;
+            width: 100%;
+        }
+
+        .carousel-active:checked + .carousel-item {
+            opacity: 1;
+            pointer-events: auto;
+            position: static;
+        }
+
+        .carousel-item img {
+            display: block;
+            height: auto;
+            width: 100%;
+        }
+
+        .carousel-controls {
+            height: 100%;
+            width: 100%;
+        }
+
+        .carousel-control {
+            background: rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            font-size: 28px;
+            height: 100%;
+            line-height: 40px;
+            text-align: center;
+            transition: background 0.1s ease-in-out;
+            width: 50%;
+            z-index: 2;
+        }
+
+        .carousel-control:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel-control.prev {
+            float: left;
+        }
+
+        .carousel-control.next {
+            float: right;
+        }
+
+        .carousel-caption {
+            bottom: 15%;
+            font-size: 120%;
+            left: 20%;
+            opacity: 0;
+            right: 20%;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.1s ease-out;
+            z-index: 2;
+        }
+
+        .carousel-active:checked + .carousel-item .carousel-caption {
+            transition: opacity 0.6s ease-in;
+            opacity: 1;
+        }
+
+        .carousel-indicators {
+            bottom: 5%;
+            left: 5%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            right: 5%;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .carousel-indicators li {
+            display: inline-block;
+        }
+
+        .carousel-indicator {
+            border-radius: 50%;
+            cursor: pointer;
+            display: block;
+            font-size: 28px;
+            line-height: 1;
+            padding: 5px 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background 0.1s ease-in-out;
+        }
+
+        .carousel-indicator:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* If you`re needing more than 3 banners, maybe you might be using another way to represent your info... ;-) */
+        #carousel-1:checked ~ .carousel-indicators .carousel-indicator[for="carousel-1"],
+        #carousel-2:checked ~ .carousel-indicators .carousel-indicator[for="carousel-2"],
+        #carousel-3:checked ~ .carousel-indicators .carousel-indicator[for="carousel-3"] {
+            color: #007f7f;
+        }
+
+        @media (min-width: 768px) {
+            .carousel-indicators {
+                background: transparent;
+            }
+            .carousel-control {
+                width: 5%;
+            }
+            .carousel-controls,
+            .carousel-caption,
+            .carousel-indicators {
+                position: absolute;
+            }
+        }
+        </style>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="carousel" class="carousel">
+            <input class="carousel-active" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden checked="checked">
+            <div class="carousel-item">
+                <div class="carousel-controls" aria-hidden="true">
+                    <label for="carousel-3" class="carousel-control prev" title="Prev">«</label>
+                    <label for="carousel-2" class="carousel-control next" title="Next">»</label>
+                </div>
+                <img src="http://placehold.it/1200x300/444/fff/&text=First+slide" alt="First slide">
+            </div>
+
+            <input class="carousel-active" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden>
+            <div class="carousel-item">
+                <div class="carousel-controls" aria-hidden="true">
+                    <label for="carousel-1" class="carousel-control prev" title="Prev">«</label>
+                    <label for="carousel-3" class="carousel-control next" title="Next">»</label>
+                </div>
+                <img src="http://placehold.it/1200x300/777/000/&text=+" alt="Blank image">
+                <div class="carousel-caption">
+                    <h2>SECOND SLIDE <br><small>with an <i>amazing caption</i></small></h2>
+                    <p>Aren`t you impressed?</p>
+                </div>
+            </div>
+
+            <input class="carousel-active" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden>
+            <div class="carousel-item">
+                <div class="carousel-controls" aria-hidden="true">
+                    <label for="carousel-2" class="carousel-control prev" title="Prev">«</label>
+                    <label for="carousel-1" class="carousel-control next" title="Next">»</label>
+                </div>
+                <img src="http://placehold.it/1200x300/ccc/077/&text=Third+slide" alt="Third slide">
+            </div>
+
+            <ol class="carousel-indicators" aria-label="Carousel navigation" aria-hidden="true">
+                <li>
+                    <label for="carousel-1" class="carousel-indicator" title="Jump to carousel item #1">●</label>
+                </li>
+                <li>
+                    <label for="carousel-2" class="carousel-indicator" title="Jump to carousel item #2">●</label>
+                </li>
+                <li>
+                    <label for="carousel-3" class="carousel-indicator" title="Jump to carousel item #3">●</label>
+                </li>
+            </ol>
+        </div>
+    </body>
+</html>
