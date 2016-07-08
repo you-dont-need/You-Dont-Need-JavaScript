@@ -49,6 +49,9 @@
 
 [Demo 2](https://codepen.io/chrisburnell/pen/scyKF)
 
+## Mouse tracking
+
+[Demo](https://codepen.io/Momciloo/pen/GoGRrQ)
 
 ## Tabs
 
@@ -60,10 +63,6 @@
 ## Treeview
 
 [Demo](https://codepen.io/rgg/pen/WrKyzj)
-
-## Mouse tracking
-
-[Demo](https://codepen.io/Momciloo/pen/GoGRrQ)
 
 
 ## Contribute
