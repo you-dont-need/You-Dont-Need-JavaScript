@@ -49,6 +49,9 @@
 
 [Demo 2](https://codepen.io/chrisburnell/pen/scyKF)
 
+## Mouse tracking
+
+[Demo](https://codepen.io/Momciloo/pen/GoGRrQ)
 
 ## Tabs
 
