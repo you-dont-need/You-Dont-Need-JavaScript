@@ -65,6 +65,11 @@
 [Demo](https://codepen.io/rgg/pen/WrKyzj)
 
 
+## Counter of checked check-boxes
+
+[Demo](https://codepen.io/anon/pen/eZWXOZ)
+
+
 ## Contribute
 
 Please give me a hand.
