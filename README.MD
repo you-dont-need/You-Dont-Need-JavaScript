@@ -44,6 +44,10 @@
 
 + [Demo](https://codepen.io/Momciloo/pen/GoGRrQ)
 
+## Parallax scrolling
+
++ [Demo](http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/)
+
 ## Tabs
 
 + [Demo 1](https://codepen.io/llgruff/pen/ZGBxOa)
