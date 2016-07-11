@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>No JS Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+            /* CSS styles */
+        /* Example by Tymon Sturgeon at http://codepen.io/scryptonite/pen/oLGzdj */
+        /* boilerplate css */
+        body { margin: 10px; font: 14px/120% Sans-Serif; }
+        form { margin: 10px; border: 1px solid #ddd; padding: 8px 12px; border-radius: 4px; background: #fff; }
+        h1 { margin: 10px 0px; }
+        h1 small { font-size: 45%; font-weight: normal; vertical-align: middle; }
+
+        /* related to the hidden checkboxes */
+        .hidden { display: none; }
+        .invisible { position: absolute; top: 0px; left: 0px; width: 0px;height: 0px; }
+
+
+
+        /* dumb-css boilerplate */
+        #dumb-css #todos .dumb-thing { display: block; }
+        #dumb-css #todos .smart-thing { display: none; }
+        #dumb-css #todos .todo-label { color: #000 }
+
+        /* smart-css todo boilerplate */
+        #smart-css:checked ~ #todos .dumb-thing { display: none }
+        #smart-css:checked ~ #todos .smart-thing { display: block }
+        #smart-css:checked ~ #todos .submit-unchanged { display: none }
+        #smart-css:checked ~ #todos .todo-item { color: #bbb }
+        #smart-css:checked ~ #todos .todo-item .faux { pointer-events: none }
+
+        /* todo counter magic */
+        #smart-css:checked {
+            counter-reset: completed-todos total-todos changed-todos;
+        }
+        #smart-css:checked ~ .todo:checked {
+            counter-increment: completed-todos total-todos;
+        }
+        #smart-css:checked ~ .todo {
+            counter-increment: total-todos;
+            outline: none;
+        }
+        #smart-css:checked ~ #todos h1 small:before {
+            content: counter(completed-todos) '/' counter(total-todos);
+        }
+
+        #smart-css:checked ~ #todo0:focus ~ #todos .t0 [type=checkbox],
+        #smart-css:checked ~ #todo1:focus ~ #todos .t1 [type=checkbox],
+        #smart-css:checked ~ #todo2:focus ~ #todos .t2 [type=checkbox],
+        #smart-css:checked ~ #todo3:focus ~ #todos .t3 [type=checkbox],
+        #smart-css:checked ~ #todo4:focus ~ #todos .t4 [type=checkbox],
+        #smart-css:checked ~ #todo5:focus ~ #todos .t5 [type=checkbox],
+        #smart-css:checked ~ #todo6:focus ~ #todos .t6 [type=checkbox],
+        #smart-css:checked ~ #todo7:focus ~ #todos .t7 [type=checkbox],
+        #smart-css:checked ~ #todo8:focus ~ #todos .t8 [type=checkbox],
+        #smart-css:checked ~ #todo9:focus ~ #todos .t9 [type=checkbox],
+        #smart-css:checked ~ #todo10:focus ~ #todos .t10 [type=checkbox],
+        #smart-css:checked ~ #todo11:focus ~ #todos .t11 [type=checkbox],
+        #smart-css:checked ~ #todo12:focus ~ #todos .t12 [type=checkbox],
+        #smart-css:checked ~ #todo13:focus ~ #todos .t13 [type=checkbox],
+        #smart-css:checked ~ #todo14:focus ~ #todos .t14 [type=checkbox],
+        #smart-css:checked ~ #todo15:focus ~ #todos .t15 [type=checkbox],
+        #smart-css:checked ~ #todo16:focus ~ #todos .t16 [type=checkbox],
+        #smart-css:checked ~ #todo17:focus ~ #todos .t17 [type=checkbox],
+        #smart-css:checked ~ #todo18:focus ~ #todos .t18 [type=checkbox],
+        #smart-css:checked ~ #todo19:focus ~ #todos .t19 [type=checkbox],
+        #smart-css:checked ~ #todo20:focus ~ #todos .t20 [type=checkbox],
+        #smart-css:checked ~ #todo21:focus ~ #todos .t21 [type=checkbox],
+        #smart-css:checked ~ #todo22:focus ~ #todos .t22 [type=checkbox],
+        #smart-css:checked ~ #todo23:focus ~ #todos .t23 [type=checkbox] {
+            outline: 5px auto -webkit-focus-ring-color
+        }
+
+        #smart-css:checked ~ #todo0:checked ~ #todos .t0 .todo-label span,
+        #smart-css:checked ~ #todo1:checked ~ #todos .t1 .todo-label span,
+        #smart-css:checked ~ #todo2:checked ~ #todos .t2 .todo-label span,
+        #smart-css:checked ~ #todo3:checked ~ #todos .t3 .todo-label span,
+        #smart-css:checked ~ #todo4:checked ~ #todos .t4 .todo-label span,
+        #smart-css:checked ~ #todo5:checked ~ #todos .t5 .todo-label span,
+        #smart-css:checked ~ #todo6:checked ~ #todos .t6 .todo-label span,
+        #smart-css:checked ~ #todo7:checked ~ #todos .t7 .todo-label span,
+        #smart-css:checked ~ #todo8:checked ~ #todos .t8 .todo-label span,
+        #smart-css:checked ~ #todo9:checked ~ #todos .t9 .todo-label span,
+        #smart-css:checked ~ #todo10:checked ~ #todos .t10 .todo-label span,
+        #smart-css:checked ~ #todo11:checked ~ #todos .t11 .todo-label span,
+        #smart-css:checked ~ #todo12:checked ~ #todos .t12 .todo-label span,
+        #smart-css:checked ~ #todo13:checked ~ #todos .t13 .todo-label span,
+        #smart-css:checked ~ #todo14:checked ~ #todos .t14 .todo-label span,
+        #smart-css:checked ~ #todo15:checked ~ #todos .t15 .todo-label span,
+        #smart-css:checked ~ #todo16:checked ~ #todos .t16 .todo-label span,
+        #smart-css:checked ~ #todo17:checked ~ #todos .t17 .todo-label span,
+        #smart-css:checked ~ #todo18:checked ~ #todos .t18 .todo-label span,
+        #smart-css:checked ~ #todo19:checked ~ #todos .t19 .todo-label span,
+        #smart-css:checked ~ #todo20:checked ~ #todos .t20 .todo-label span,
+        #smart-css:checked ~ #todo21:checked ~ #todos .t21 .todo-label span,
+        #smart-css:checked ~ #todo22:checked ~ #todos .t22 .todo-label span,
+        #smart-css:checked ~ #todo23:checked ~ #todos .t23 .todo-label span {
+            text-decoration: line-through;
+        }
+
+        #smart-css:checked ~ #todo0:checked + #todo1:checked + #todo2:checked + #todo3:checked + #todo4:checked + #todo5:checked + #todo6:checked + #todo7:checked + #todo8:checked + #todo9:checked + #todo10:checked + #todo11:checked + #todo12:checked + #todo13:checked + #todo14:checked + #todo15:checked + #todo16:checked + #todo17:checked + #todo18:checked + #todo19:checked + #todo20:checked + #todo21:checked + #todo22:checked + #todo23:checked + #todos h1 small:after {
+            content: ' (hooray!)';
+            font-weight: bold
+        }
+
+        #smart-css:checked ~ #todo0:checked       ~ #todos .t0,
+        #smart-css:checked ~ #todo1:not(:checked) ~ #todos .t1,
+        #smart-css:checked ~ #todo2:checked       ~ #todos .t2,
+        #smart-css:checked ~ #todo3:checked       ~ #todos .t3,
+        #smart-css:checked ~ #todo4:checked       ~ #todos .t4,
+        #smart-css:checked ~ #todo5:checked       ~ #todos .t5,
+        #smart-css:checked ~ #todo6:checked       ~ #todos .t6,
+        #smart-css:checked ~ #todo7:checked       ~ #todos .t7,
+        #smart-css:checked ~ #todo8:not(:checked) ~ #todos .t8,
+        #smart-css:checked ~ #todo9:not(:checked) ~ #todos .t9,
+        #smart-css:checked ~ #todo10:checked       ~ #todos .t10,
+        #smart-css:checked ~ #todo11:checked       ~ #todos .t11,
+        #smart-css:checked ~ #todo12:checked       ~ #todos .t12,
+        #smart-css:checked ~ #todo13:not(:checked) ~ #todos .t13,
+        #smart-css:checked ~ #todo14:checked       ~ #todos .t14,
+        #smart-css:checked ~ #todo15:checked       ~ #todos .t15,
+        #smart-css:checked ~ #todo16:not(:checked) ~ #todos .t16,
+        #smart-css:checked ~ #todo17:checked       ~ #todos .t17,
+        #smart-css:checked ~ #todo18:checked       ~ #todos .t18,
+        #smart-css:checked ~ #todo19:not(:checked) ~ #todos .t19,
+        #smart-css:checked ~ #todo20:not(:checked) ~ #todos .t20,
+        #smart-css:checked ~ #todo21:checked       ~ #todos .t21,
+        #smart-css:checked ~ #todo22:not(:checked) ~ #todos .t22,
+        #smart-css:checked ~ #todo23:not(:checked) ~ #todos .t23 {
+            color: rgb(0,100,200);
+            counter-increment: changed-todos;
+        }
+
+        /* handling single change text */
+        #smart-css:checked ~ #todo0:checked ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:not(:checked) ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:checked ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:checked ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:checked ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:checked ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:checked ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:checked ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:not(:checked) ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:not(:checked) ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:checked ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:checked ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:checked ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:not(:checked) ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:checked ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:checked ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:not(:checked) ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:checked ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:checked ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:not(:checked) ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:not(:checked) ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:checked ~ #todo22:checked ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:not(:checked) ~ #todo23:checked ~ #todos .changed-todos:after,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todo1:checked ~ #todo2:not(:checked) ~ #todo3:not(:checked) ~ #todo4:not(:checked) ~ #todo5:not(:checked) ~ #todo6:not(:checked) ~ #todo7:not(:checked) ~ #todo8:checked ~ #todo9:checked ~ #todo10:not(:checked) ~ #todo11:not(:checked) ~ #todo12:not(:checked) ~ #todo13:checked ~ #todo14:not(:checked) ~ #todo15:not(:checked) ~ #todo16:checked ~ #todo17:not(:checked) ~ #todo18:not(:checked) ~ #todo19:checked ~ #todo20:checked ~ #todo21:not(:checked) ~ #todo22:checked ~ #todo23:not(:checked) ~ #todos .changed-todos:after {
+            content: counter(changed-todos) ' change';
+        }
+
+        #smart-css:checked ~ #todos .changed-todos:after {
+            content: counter(changed-todos) ' changes';
+        }
+
+        /* each todo has a faux-checkbox to represent the real todo checkbox state */
+        #smart-css:checked ~ #todo0:checked       ~ #todos .t0 .nc,
+        #smart-css:checked ~ #todo0:not(:checked) ~ #todos .t0 .c,
+        #smart-css:checked ~ #todo1:checked       ~ #todos .t1 .nc,
+        #smart-css:checked ~ #todo1:not(:checked) ~ #todos .t1 .c,
+        #smart-css:checked ~ #todo2:checked       ~ #todos .t2 .nc,
+        #smart-css:checked ~ #todo2:not(:checked) ~ #todos .t2 .c,
+        #smart-css:checked ~ #todo3:checked       ~ #todos .t3 .nc,
+        #smart-css:checked ~ #todo3:not(:checked) ~ #todos .t3 .c,
+        #smart-css:checked ~ #todo4:checked       ~ #todos .t4 .nc,
+        #smart-css:checked ~ #todo4:not(:checked) ~ #todos .t4 .c,
+        #smart-css:checked ~ #todo5:checked       ~ #todos .t5 .nc,
+        #smart-css:checked ~ #todo5:not(:checked) ~ #todos .t5 .c,
+        #smart-css:checked ~ #todo6:checked       ~ #todos .t6 .nc,
+        #smart-css:checked ~ #todo6:not(:checked) ~ #todos .t6 .c,
+        #smart-css:checked ~ #todo7:checked       ~ #todos .t7 .nc,
+        #smart-css:checked ~ #todo7:not(:checked) ~ #todos .t7 .c,
+        #smart-css:checked ~ #todo8:checked       ~ #todos .t8 .nc,
+        #smart-css:checked ~ #todo8:not(:checked) ~ #todos .t8 .c,
+        #smart-css:checked ~ #todo9:checked       ~ #todos .t9 .nc,
+        #smart-css:checked ~ #todo9:not(:checked) ~ #todos .t9 .c,
+        #smart-css:checked ~ #todo10:checked       ~ #todos .t10 .nc,
+        #smart-css:checked ~ #todo10:not(:checked) ~ #todos .t10 .c,
+        #smart-css:checked ~ #todo11:checked       ~ #todos .t11 .nc,
+        #smart-css:checked ~ #todo11:not(:checked) ~ #todos .t11 .c,
+        #smart-css:checked ~ #todo12:checked       ~ #todos .t12 .nc,
+        #smart-css:checked ~ #todo12:not(:checked) ~ #todos .t12 .c,
+        #smart-css:checked ~ #todo13:checked       ~ #todos .t13 .nc,
+        #smart-css:checked ~ #todo13:not(:checked) ~ #todos .t13 .c,
+        #smart-css:checked ~ #todo14:checked       ~ #todos .t14 .nc,
+        #smart-css:checked ~ #todo14:not(:checked) ~ #todos .t14 .c,
+        #smart-css:checked ~ #todo15:checked       ~ #todos .t15 .nc,
+        #smart-css:checked ~ #todo15:not(:checked) ~ #todos .t15 .c,
+        #smart-css:checked ~ #todo16:checked       ~ #todos .t16 .nc,
+        #smart-css:checked ~ #todo16:not(:checked) ~ #todos .t16 .c,
+        #smart-css:checked ~ #todo17:checked       ~ #todos .t17 .nc,
+        #smart-css:checked ~ #todo17:not(:checked) ~ #todos .t17 .c,
+        #smart-css:checked ~ #todo18:checked       ~ #todos .t18 .nc,
+        #smart-css:checked ~ #todo18:not(:checked) ~ #todos .t18 .c,
+        #smart-css:checked ~ #todo19:checked       ~ #todos .t19 .nc,
+        #smart-css:checked ~ #todo19:not(:checked) ~ #todos .t19 .c,
+        #smart-css:checked ~ #todo20:checked       ~ #todos .t20 .nc,
+        #smart-css:checked ~ #todo20:not(:checked) ~ #todos .t20 .c,
+        #smart-css:checked ~ #todo21:checked       ~ #todos .t21 .nc,
+        #smart-css:checked ~ #todo21:not(:checked) ~ #todos .t21 .c,
+        #smart-css:checked ~ #todo22:checked       ~ #todos .t22 .nc,
+        #smart-css:checked ~ #todo22:not(:checked) ~ #todos .t22 .c,
+        #smart-css:checked ~ #todo23:checked       ~ #todos .t23 .nc,
+        #smart-css:checked ~ #todo23:not(:checked) ~ #todos .t23 .c {
+            display: none
+        }
+        /* update button magic */
+        #smart-css:checked ~ #todo0:not(:checked) + #todo1:checked + #todo2:not(:checked) + #todo3:not(:checked) + #todo4:not(:checked) + #todo5:not(:checked) + #todo6:not(:checked) + #todo7:not(:checked) + #todo8:checked + #todo9:checked + #todo10:not(:checked) + #todo11:not(:checked) + #todo12:not(:checked) + #todo13:checked + #todo14:not(:checked) + #todo15:not(:checked) + #todo16:checked + #todo17:not(:checked) + #todo18:not(:checked) + #todo19:checked + #todo20:checked + #todo21:not(:checked) + #todo22:checked + #todo23:checked + #todos .submit-changed {
+            display: none
+        }
+        #smart-css:checked ~ #todo0:not(:checked) + #todo1:checked + #todo2:not(:checked) + #todo3:not(:checked) + #todo4:not(:checked) + #todo5:not(:checked) + #todo6:not(:checked) + #todo7:not(:checked) + #todo8:checked + #todo9:checked + #todo10:not(:checked) + #todo11:not(:checked) + #todo12:not(:checked) + #todo13:checked + #todo14:not(:checked) + #todo15:not(:checked) + #todo16:checked + #todo17:not(:checked) + #todo18:not(:checked) + #todo19:checked + #todo20:checked + #todo21:not(:checked) + #todo22:checked + #todo23:checked + #todos .submit-unchanged {
+            display: inline-block
+        }
+        </style>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <form id="dumb-css" method="post" onsubmit="alert('this is not a usable form. there is no server logic to save todo changes');return false">
+            <input type="checkbox" id="smart-css" tabindex="-1" checked="checked" class="invisible"/>
+            <input type="checkbox" id="todo0" name="is_0_done_b" title="1st task" class="todo invisible"/>
+            <input type="checkbox" id="todo1" name="is_1_done_b" title="2nd task" checked="checked" class="todo invisible"/>
+            <input type="checkbox" id="todo2" name="is_2_done_b" title="3rd task" class="todo invisible"/>
+            <input type="checkbox" id="todo3" name="is_3_done_b" title="4th task" class="todo invisible"/>
+            <input type="checkbox" id="todo4" name="is_4_done_b" title="5th task" class="todo invisible"/>
+            <input type="checkbox" id="todo5" name="is_5_done_b" title="6th task" class="todo invisible"/>
+            <input type="checkbox" id="todo6" name="is_6_done_b" title="7th task" class="todo invisible"/>
+            <input type="checkbox" id="todo7" name="is_7_done_b" title="8th task" class="todo invisible"/>
+            <input type="checkbox" id="todo8" name="is_8_done_b" title="9th task" checked="checked" class="todo invisible"/>
+            <input type="checkbox" id="todo9" name="is_9_done_b" title="10th task" checked="checked" class="todo invisible"/>
+            <input type="checkbox" id="todo10" name="is_10_done_b" title="11th task" class="todo invisible"/>
+            <input type="checkbox" id="todo11" name="is_11_done_b" title="12th task" class="todo invisible"/>
+            <input type="checkbox" id="todo12" name="is_12_done_b" title="13th task" class="todo invisible"/>
+            <input type="checkbox" id="todo13" name="is_13_done_b" title="14th task" checked="checked" class="todo invisible"/>
+            <input type="checkbox" id="todo14" name="is_14_done_b" title="15th task" class="todo invisible"/>
+            <input type="checkbox" id="todo15" name="is_15_done_b" title="16th task" class="todo invisible"/>
+            <input type="checkbox" id="todo16" name="is_16_done_b" title="17th task" checked="checked" class="todo invisible"/>
+            <input type="checkbox" id="todo17" name="is_17_done_b" title="18th task" class="todo invisible"/>
+            <input type="checkbox" id="todo18" name="is_18_done_b" title="19th task" class="todo invisible"/>
+            <input type="checkbox" id="todo19" name="is_19_done_b" title="20th task" checked="checked" class="todo invisible"/>
+            <input type="checkbox" id="todo20" name="is_20_done_b" title="21st task" checked="checked" class="todo invisible"/>
+            <input type="checkbox" id="todo21" name="is_21_done_b" title="22nd task" class="todo invisible"/>
+            <input type="checkbox" id="todo22" name="is_22_done_b" title="23rd task" checked="checked" class="todo invisible"/>
+            <input type="checkbox" id="todo23" name="is_23_done_b" title="24th task" checked="checked" class="todo invisible"/>
+            <div id="todos">
+                <h1>Todos <small style="-webkit-user-select:none"></small></h1>
+                <ul>
+                    <li class="todo-item t0">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_0_done_a" class="real"/> 1st task
+                        </label>
+                        <label for="todo0" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>1st task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t1">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_1_done_a" checked="checked" class="real"/> 2nd task
+                        </label>
+                        <label for="todo1" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>2nd task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t2">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_2_done_a" class="real"/> 3rd task
+                        </label>
+                        <label for="todo2" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>3rd task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t3">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_3_done_a" class="real"/> 4th task
+                        </label>
+                        <label for="todo3" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>4th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t4">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_4_done_a" class="real"/> 5th task
+                        </label>
+                        <label for="todo4" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>5th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t5">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_5_done_a" class="real"/> 6th task
+                        </label>
+                        <label for="todo5" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>6th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t6">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_6_done_a" class="real"/> 7th task
+                        </label>
+                        <label for="todo6" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>7th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t7">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_7_done_a" class="real"/> 8th task
+                        </label>
+                        <label for="todo7" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>8th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t8">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_8_done_a" checked="checked" class="real"/> 9th task
+                        </label>
+                        <label for="todo8" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>9th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t9">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_9_done_a" checked="checked" class="real"/> 10th task
+                        </label>
+                        <label for="todo9" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>10th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t10">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_10_done_a" class="real"/> 11th task
+                        </label>
+                        <label for="todo10" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>11th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t11">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_11_done_a" class="real"/> 12th task
+                        </label>
+                        <label for="todo11" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>12th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t12">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_12_done_a" class="real"/> 13th task
+                        </label>
+                        <label for="todo12" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>13th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t13">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_13_done_a" checked="checked" class="real"/> 14th task
+                        </label>
+                        <label for="todo13" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>14th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t14">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_14_done_a" class="real"/> 15th task
+                        </label>
+                        <label for="todo14" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>15th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t15">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_15_done_a" class="real"/> 16th task
+                        </label>
+                        <label for="todo15" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>16th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t16">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_16_done_a" checked="checked" class="real"/> 17th task
+                        </label>
+                        <label for="todo16" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>17th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t17">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_17_done_a" class="real"/> 18th task
+                        </label>
+                        <label for="todo17" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>18th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t18">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_18_done_a" class="real"/> 19th task
+                        </label>
+                        <label for="todo18" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>19th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t19">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_19_done_a" checked="checked" class="real"/> 20th task
+                        </label>
+                        <label for="todo19" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>20th task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t20">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_20_done_a" checked="checked" class="real"/> 21st task
+                        </label>
+                        <label for="todo20" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>21st task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t21">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_21_done_a" class="real"/> 22nd task
+                        </label>
+                        <label for="todo21" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>22nd task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t22">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_22_done_a" checked="checked" class="real"/> 23rd task
+                        </label>
+                        <label for="todo22" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>23rd task</span>
+                        </label>
+                    </li>
+                    <li class="todo-item t23">
+                        <label class="todo-label dumb-thing">
+                            <input type="checkbox" name="is_23_done_a" checked="checked" class="real"/> 24th task
+                        </label>
+                        <label for="todo23" class="todo-label smart-thing"> 
+                            <input type="checkbox" tabindex="-1" class="faux nc"/>
+                            <input type="checkbox" tabindex="-1" checked="checked" class="faux c"/> <span>24th task</span>
+                        </label>
+                    </li>
+                </ul>
+                <div>
+                    <div class="dumb-thing">
+                        <input type="submit" name="save_set_a" value="Save" class="submit-changed"/>
+                    </div>
+                    <div class="smart-thing submit-changed">
+                        <input type="submit" name="save_set_b" value="Save"/><small class="changed-todos"> </small>
+                    </div>
+                    <div class="smart-thing submit-unchanged">
+                        <input type="submit" name="save_set_b" value="Save" disabled="disabled"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
