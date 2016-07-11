@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>No JS Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+            /* CSS styles */
+        /* Example by llgruff at https://codepen.io/llgruff/pen/ZGBxOa */
+        div.tab-frame input{ display:none;}
+        div.tab-frame label{ display:block; float:left;padding:5px 10px; cursor:pointer}
+        div.tab-frame input:checked + label{ background:black; color:white; cursor:default}
+        div.tab-frame div.tab{ display:none; padding:5px 10px;clear:left}
+
+        div.tab-frame input:nth-of-type(1):checked ~ .tab:nth-of-type(1),
+        div.tab-frame input:nth-of-type(2):checked ~ .tab:nth-of-type(2),
+        div.tab-frame input:nth-of-type(3):checked ~ .tab:nth-of-type(3){ display:block;}
+        </style>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h2>It is a simple tabs model. Only CSS. Without js, bugs, position-absolute.</h2><br/><br/>
+
+        <div class="tab-frame">
+            <input type="radio" checked name="tab" id="tab1">
+            <label for="tab1">tab1</label>
+
+            <input type="radio" name="tab" id="tab2">
+            <label for="tab2">tab2</label>
+
+            <input type="radio" name="tab" id="tab3">
+            <label for="tab3">tab3</label>
+
+            <div class="tab">sample content 1</div>
+            <div class="tab">sample content 2</div>
+            <div class="tab">sample content 3</div>
+        </div>
+    </body>
+</html>
