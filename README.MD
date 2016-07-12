@@ -1,5 +1,7 @@
 # You Don't Need JavaScript
 
+Please note these demos should be considered as CSS "Proofs of Concepts". They may have serious issues from accessibility point of view (keyboard navigation, speech synthesis, etc.), or progressive enhancement/degradation/etc.
+
 ## Accordion / Toggle
 
 + [Demo](http://www.mraffaele.com/labs/css-only-accordions/)
