@@ -11,6 +11,12 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 + [Demo 1](http://codepen.io/SitePoint/pen/MyPVdK)
 + [Demo 2](https://codepen.io/cavico/pen/yOjwya)
 
+## Counter of checked check-boxes
+
++ [Demo](https://codepen.io/anon/pen/eZWXOZ)
+
+
+
 ## Flip on click
 
 + [Demo](https://codepen.io/RuudBurger/pen/bwjry)
