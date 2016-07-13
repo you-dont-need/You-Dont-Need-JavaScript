@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>No JS Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+            /* CSS styles */
+        /* Example by Guus Lieben at https://codepen.io/guuslieben/pen/gabQWM */
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400,300);
+
+        ::-moz-selection { background: rgba(0,0,0,0.2); }
+        ::selection { background: rgba(0,0,0,0.2); }
+
+        /* Skip to line 40 for the hover code */
+
+        body {
+            background: #fff;
+            background-size: 100%;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.5em;
+            margin: 80px 4em 0;
+            color: #333;
+        }
+        h1 {
+            max-width: 49rem;
+            font-size: 3.5em;
+            line-height: 1em;
+            font-weight: 700;
+            margin: 0.25em auto;
+        }
+        h2 {
+            max-width: 49rem;
+            margin: 1.4em auto;
+        }
+        p {
+            line-height: 1.5em;
+            margin: 1.4em auto;
+            max-width: 49rem;
+            font-size: 1em;
+            font-weight: 300;
+        }
+        a.dfn-hover {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /** Code for hover info **/
+
+        dfn {
+            background: #e9e9e9;
+            border-bottom: dashed 1px rgba(0,0,0,0.8);
+            padding: 0 0.4em;
+            cursor: help;
+            font-style: normal;
+            position: relative;
+
+        }
+        dfn::after {
+            content: attr(data-info);
+            display: inline;
+            position: absolute;
+            top: 22px; left: 0;
+            opacity: 0;
+            width: 230px;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 1.5em;
+            padding: 0.5em 0.8em;
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            pointer-events: none; /* This prevents the box from apearing when hovered. */
+            transition: opacity 250ms, top 250ms;
+        }
+        dfn::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 12px; left: 20px;
+            opacity: 0;
+            width: 0; height: 0;
+            border: solid transparent 5px;
+            border-bottom-color: rgba(0,0,0,0.8);
+            transition: opacity 250ms, top 250ms;
+        }
+        dfn:hover {z-index: 2;} /* Keeps the info boxes on top of other elements */
+        dfn:hover::after,
+        dfn:hover::before {opacity: 1;}
+        dfn:hover::after {top: 30px;}
+        dfn:hover::before {top: 20px;}
+        </style>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>Info on Hover!</h1>
+
+        <h2>Prettifying the 'title' attribute without Javascript!</h2>
+
+        <p>You can use this for lots of different purposes. You can display links: <a class="dfn-hover" href="http://www.guuslieben.nl/"><dfn data-info="http://www.guuslieben.nl/">My Website!</dfn></a>, Give information about something: <dfn data-info="JavaScript is the programming language of HTML and the Web.">Javascript</dfn> and who knows what else!.</p>
+
+        <p>You can make your page more compact by <i>hiding</i> the information with the data info. You can make text as long or short as you want! Example: <dfn data-info="HTML5 is a core technology markup language of the Internet used for structuring and presenting content for the World Wide Web. As of October 2014 this is the final and complete fifth revision of the HTML standard of the World Wide Web Consortium (W3C). The previous version, HTML 4, was standardised in 1997.
+
+                Its core aims have been to improve the language with support for the latest multimedia while keeping it easily readable by humans and consistently understood by computers and devices (web browsers, parsers, etc.). HTML5 is intended to subsume not only HTML 4, but also XHTML 1 and DOM Level 2 HTML.">About HTML5</dfn>. Are you ready for it? Follow <a href="http://guuslieben.nl/uploads/hover-info.zip" download>the link</a> to download.</p>
+
+    </body>
+</html>
