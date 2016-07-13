@@ -34,7 +34,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 + [Demo](https://codepen.io/guuslieben/pen/gabQWM)
 
 ## Image Gallery
-[Demo](https://codepen.io/shaishgandhi/pen/yJzamw)
++ [Demo](https://codepen.io/shaishgandhi/pen/yJzamw)
 
 ## Menu
 
