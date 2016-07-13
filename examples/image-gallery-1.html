@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>No JS Image Gallery</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+
+  /* CSS Style */
+  /* Example by Shaishav Gandhi at https://codepen.io/shaishgandhi/pen/yJzamw */
+
+  div.container input{
+    display:none;
+  }
+  div.container img.small{
+    width:150px;
+    position:relative;
+    bottom:0px;
+    float:left;
+    z-index:1000;
+    transition:0.5s all ease-in;
+    cursor:pointer;
+    padding:5px;
+    background:rgba(0,0,0,0.8);
+    margin:auto;
+  }
+  div.container img.large{
+    width:100%;
+    transition:0.5s all ease-in;
+    position:absolute;
+    z-index:-1;
+    top:0;
+    opacity:0;
+    display:block;
+  }
+  div.container input:nth-of-type(1):checked ~ .placeholder:nth-of-type(1) .large, div.container input:nth-of-type(2):checked ~ .placeholder:nth-of-type(2) .large, div.container input:nth-of-type(3):checked ~ .placeholder:nth-of-type(3) .large, div.container input:nth-of-type(4):checked ~ .placeholder:nth-of-type(4) .large{
+    opacity:1;
+    z-index:100;
+  }
+  </style>
+</head>
+
+<body>
+  <!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <div class="container">
+    <input id="1" name="image" checked type="radio" />
+    <label for="1">
+      <img  class="small" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Beatles_and_George_Martin_in_studio_1966.JPG"/>
+    </label>
+
+    <input id="2" name="image" type="radio" />
+    <label for="2">
+      <img class="small" src="https://upload.wikimedia.org/wikipedia/commons/5/50/The_Beatles_with_Birmingham_Police_officers.jpg"/>
+    </label>
+    <input id="3" name="image" type="radio" />
+    <label for="3">
+      <img class="small" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Beatles_ad_1965_just_the_beatles_crop.jpg"/></label>
+
+      <input id="4" name="image" type="radio" />
+      <label for="4">
+        <img class="small" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/The_Beatles_in_America.JPG"/>
+      </label>
+      
+      <div class="placeholder"><img class="large" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Beatles_and_George_Martin_in_studio_1966.JPG" />
+      </div>
+      <div class="placeholder">
+        <img class="large" src="https://upload.wikimedia.org/wikipedia/commons/5/50/The_Beatles_with_Birmingham_Police_officers.jpg" />
+      </div>
+      <div class="placeholder">
+        <img class="large" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Beatles_ad_1965_just_the_beatles_crop.jpg" /></div>
+        <div class="placeholder">
+          <img class="large" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/The_Beatles_in_America.JPG" />
+        </div>
+      </div>
+    </body>
+    </html>
