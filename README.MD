@@ -11,6 +11,10 @@
 
 [Demo 2](https://codepen.io/cavico/pen/yOjwya)
 
+## Counter of checked check-boxes
+
+[Demo](https://codepen.io/anon/pen/eZWXOZ)
+
 
 ## Flip on click
 
@@ -63,11 +67,6 @@
 ## Treeview
 
 [Demo](https://codepen.io/rgg/pen/WrKyzj)
-
-
-## Counter of checked check-boxes
-
-[Demo](https://codepen.io/anon/pen/eZWXOZ)
 
 
 ## Contribute
