@@ -42,6 +42,18 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## Image Gallery
 + [Demo](https://codepen.io/shaishgandhi/pen/yJzamw)
 
+## Loaders
+
++ [Demo](http://codepen.io/lucadem1313/pen/vKWqRV)
++ [Demo](http://codepen.io/lucadem1313/pen/XKzLER)
++ [Demo](http://codepen.io/brunjo/pen/xbwVXJ)
++ [Demo](http://codepen.io/brunjo/pen/ByjRPy)
++ [Demo](http://codepen.io/brunjo/pen/LEGyrJ)
++ [Demo](http://codepen.io/brunjo/pen/bNEWjV)
++ [Demo](http://codepen.io/brunjo/pen/wBKmbm)
++ [Demo](http://tobiasahlin.com/spinkit/)
++ [Demo](http://codepen.io/viduthalai1947/pen/JkhDK)
+
 ## Menu
 
 + [Demo](https://codepen.io/antoniputra/pen/BzyWmb)
@@ -75,18 +87,6 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## Treeview
 
 + [Demo](https://codepen.io/rgg/pen/WrKyzj)
-
-## Loaders
-
-+ [Demo](http://codepen.io/lucadem1313/pen/vKWqRV)
-+ [Demo](http://codepen.io/lucadem1313/pen/XKzLER)
-+ [Demo](http://codepen.io/brunjo/pen/xbwVXJ)
-+ [Demo](http://codepen.io/brunjo/pen/ByjRPy)
-+ [Demo](http://codepen.io/brunjo/pen/LEGyrJ)
-+ [Demo](http://codepen.io/brunjo/pen/bNEWjV)
-+ [Demo](http://codepen.io/brunjo/pen/wBKmbm)
-+ [Demo](http://tobiasahlin.com/spinkit/)
-+ [Demo](http://codepen.io/viduthalai1947/pen/JkhDK)
 
 ## Contribute
 
