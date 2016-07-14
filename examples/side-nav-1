@@ -1,0 +1,80 @@
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+<div id="container">
+  <a class="open-menu" href="#container">OPEN</a>
+  <a class="close-menu" href="#">CLOSE</a>
+
+  <section id="menu">  
+      <ul>
+        <li><a href="#">First</a></li>
+        <li><a href="#">Second</a></li>
+        <li><a href="#">Third</a></li>
+        <li><a href="#">Fourth</a></li>
+        <li><a href="#">Fifth</a></li>
+        <li><a href="#">Sixth</a></li>
+      </ul>
+  </section>  
+</div>
+<style>
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+#menu {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 80%;
+  max-width: 400px;
+}
+#menu ul {
+  margin: 0;
+  background: #2980b9;
+  list-style: none;
+  padding: 16px;
+}
+#menu ul li {
+  font-size: 24px;
+}
+#menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+#container a.open-menu {
+  font-size: 24px;
+  background: #16a085;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  display: block;
+  width: 140px;
+  text-align: center;
+  margin: 200px;
+}
+#container a.close-menu {
+  font-size: 24px;
+  background: #16a085;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  display: block;
+  width: 140px;
+  text-align: center;
+  margin: 200px;
+}
+#container:not(:target) #menu {
+  right: -100%;
+  transition: right 1.5s;
+}
+#container:not(:target) .close-menu {
+  display: none;
+}
+#container:target #menu {
+  right: 0%;
+  transition: right 1.5s;
+}
+#container:target .open-menu {
+  display: none;
+}
+
+</style>
