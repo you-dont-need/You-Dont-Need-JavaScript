@@ -40,7 +40,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 + [Demo](https://codepen.io/guuslieben/pen/gabQWM)
 
 ## Image Gallery
-+ [Demo](https://codepen.io/shaishgandhi/pen/yJzamw)
++ [Demo 1](https://codepen.io/shaishgandhi/pen/yJzamw)
++ [Demo 2](http://codepen.io/pavlovsk/pen/sjubp)
 
 ## Loaders
 
