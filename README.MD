@@ -4,43 +4,42 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## Accordion / Toggle
 
-+ [Demo](http://www.mraffaele.com/labs/css-only-accordions/)
+[<img src="images/accordion.png" height="230" title="Demo">](http://www.mraffaele.com/labs/css-only-accordions/)
 
 ## Carousel
-
-+ [Demo 1](http://codepen.io/SitePoint/pen/MyPVdK)
-+ [Demo 2](https://codepen.io/cavico/pen/yOjwya)
+[<img src="images/slideshow2.png" height="230" title="Demo 1">](http://codepen.io/SitePoint/pen/MyPVdK)
+[<img src="images/slideshow.png" height="230" title="Demo 2">](https://codepen.io/cavico/pen/yOjwya)
 
 ## Counter of checked check-boxes
 
-+ [Demo](https://codepen.io/anon/pen/eZWXOZ)
+[<img src="images/checkedcounter.png" height="230" title="Demo">](https://codepen.io/anon/pen/eZWXOZ)
 
 
 
 ## Flip on click
 
-+ [Demo](https://codepen.io/RuudBurger/pen/bwjry)
+[<img src="images/flipper.png" height="230" title="Demo">](https://codepen.io/RuudBurger/pen/bwjry)
 
 ## Floating label on Textfield
 
-+ [Demo](http://codepen.io/KtorZ/pen/ZOzdqG)
+[<img src="images/textfields.png" height="230" title="Demo">](http://codepen.io/KtorZ/pen/ZOzdqG)
 
 ## Font-Face (Latin)
 
-+ [Demo](https://yusugomori.com/projects/css-sans/fonts)
+[<img src="images/sansfont.png" height="230" title="Demo">](https://yusugomori.com/projects/css-sans/fonts)
 
 ## Games
 
-+ [Game 1](https://codepen.io/i0z/pen/mFLCw)
-+ [Game 2](https://codepen.io/TabAtkins/pen/JYZgRo)
+[<img src="images/game.png" height="230" title="Game 1">](https://codepen.io/i0z/pen/mFLCw)
+[<img src="images/sudoku.png" height="230" title="Game 2">](https://codepen.io/TabAtkins/pen/JYZgRo)
 
 
 ## Info on hover/ Popover
 
-+ [Demo](https://codepen.io/guuslieben/pen/gabQWM)
+[<img src="images/tooltips.png" height="230" title="Demo">](https://codepen.io/guuslieben/pen/gabQWM)
 
 ## Image Gallery
-+ [Demo](https://codepen.io/shaishgandhi/pen/yJzamw)
+[<img src="images/gallery.png" height="230" title="Demo">](https://codepen.io/shaishgandhi/pen/yJzamw)
 
 ## Loaders
 
@@ -56,37 +55,37 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## Menu
 
-+ [Demo](https://codepen.io/antoniputra/pen/BzyWmb)
+[<img src="images/menu2.png" height="230" title="Demo">](https://codepen.io/antoniputra/pen/BzyWmb)
 
 ## Mobile menu off canvas
 
-+ [Demo](https://codepen.io/fabricionaweb/pen/xOLwxj)
+[<img src="images/menu.png" height="230" title="Demo">](https://codepen.io/fabricionaweb/pen/xOLwxj)
 
 
 ## Modal/Popup
 
-+ [Demo 1](https://codepen.io/peiche/pen/vhqym)
-+ [Demo 2](https://codepen.io/chrisburnell/pen/scyKF)
+[<img src="images/modal2.png" height="230" title="Demo 1">](https://codepen.io/peiche/pen/vhqym)
+[<img src="images/modal.png" height="230" title="Demo 2">](https://codepen.io/chrisburnell/pen/scyKF)
 
 ## Mouse tracking
 
-+ [Demo](https://codepen.io/Momciloo/pen/GoGRrQ)
+[<img src="images/mousetracking.png" height="230" title="Demo">](https://codepen.io/Momciloo/pen/GoGRrQ)
 
 ## Parallax scrolling
 
-+ [Demo](http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/)
+[<img src="images/parallax.png" height="230" title="Demo">](http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/)
 
 ## Tabs
 
-+ [Demo 1](https://codepen.io/llgruff/pen/ZGBxOa)
-+ [Demo 2](https://codepen.io/fusco/pen/Wvzjrm)
+[<img src="images/tabs2.png" height="230" title="Demo 1">](https://codepen.io/llgruff/pen/ZGBxOa)
+[<img src="images/tabs.png" height="230" title="Demo">](https://codepen.io/fusco/pen/Wvzjrm)
 
 ## Todo List
-+ [Demo](http://codepen.io/scryptonite/pen/oLGzdj)
+[<img src="images/todo.png" height="230" title="Demo">](http://codepen.io/scryptonite/pen/oLGzdj)
 
 ## Treeview
 
-+ [Demo](https://codepen.io/rgg/pen/WrKyzj)
+[<img src="images/tree.png" height="230" title="Demo">](https://codepen.io/rgg/pen/WrKyzj)
 
 ## Contribute
 
