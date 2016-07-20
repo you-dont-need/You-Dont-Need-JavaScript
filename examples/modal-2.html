@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>No JS Modal Demo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+  /* CSS styles */
+
+  /* Example by Chris Burnell at https://codepen.io/chrisburnell/pen/scyKF */
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background-color: mistyrose;
+    position: relative;
+    font-weight: bold;
+  }
+
+  h1 {
+    line-height: 1em;
+  }
+
+  p {
+    margin: 0;
+    line-height: 2em;
+  }
+
+  .modal-toggler {
+    display: none;
+  }
+
+  .modal-container {
+    background: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    color: white;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .5s, visibility 0s linear .6s;
+    transition: opacity .5s, visibility 0s linear .6s;
+    z-index: 2;
+  }
+  .modal-toggler:checked + .modal-container {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+  }
+
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 2em;
+    border-radius: .5em;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .modal.close-modal-area {
+    width: 100%;
+    height: 100%;
+  }
+  .modal.modal-box {
+    background: indianred;
+    text-align: center;
+  }
+  .content .modal {
+    width: 100%;
+    max-width: 40em;
+  }
+
+  .toggle-modal-button {
+    background-color: transparent;
+    color: white;
+    display: inline-block;
+    padding: 1em;
+    cursor: pointer;
+    border-radius: .5em;
+    box-shadow: inset 0 0 1px black;
+    -webkit-transition: background-color .2s, color .2s, -webkit-transform .1s linear;
+    transition: background-color .2s, color .2s, -webkit-transform .1s linear;
+    transition: background-color .2s, color .2s, transform .1s linear;
+    transition: background-color .2s, color .2s, transform .1s linear, -webkit-transform .1s linear;
+  }
+  .toggle-modal-button:hover, .toggle-modal-button:focus, .toggle-modal-button:active {
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: none;
+    -webkit-transition: background-color .2s, color .2s, box-shadow .2s, -webkit-transform .1s linear;
+    transition: background-color .2s, color .2s, box-shadow .2s, -webkit-transform .1s linear;
+    transition: background-color .2s, color .2s, box-shadow .2s, transform .1s linear;
+    transition: background-color .2s, color .2s, box-shadow .2s, transform .1s linear, -webkit-transform .1s linear;
+  }
+  .toggle-modal-button:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  .content .toggle-modal-button {
+    color: rgba(0, 0, 0, 0.75);
+    margin-bottom: 1em;
+  }
+
+  .content {
+    color: peru;
+    width: 90%;
+    max-width: 600px;
+    padding-top: 2em;
+    margin: 0 auto;
+  }
+
+  /* Uncompiled SCSS
+
+  *, *:before, *:after {
+  box-sizing: border-box;
+}
+html,
+body {
+height: 100%;
+}
+body {
+background-color: mistyrose;
+position: relative;
+font-weight: bold;
+}
+h1 {
+line-height: 1em;
+}
+p {
+margin: 0;
+line-height: 2em;
+}
+.modal-toggler {
+display: none;
+}
+.modal-container {
+background: rgba(black, .75);
+opacity: 0;
+color: white;
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+visibility: hidden;
+transition: opacity .5s, visibility 0s linear .6s;
+z-index: 2;
+.modal-toggler:checked + & {
+opacity: 1;
+visibility: visible;
+transition: opacity .5s;
+}
+}
+.modal {
+position: absolute;
+top: 50%;
+left: 50%;
+padding: 2em;
+border-radius: .5em;
+transform: translateX(-50%) translateY(-50%);
+&.close-modal-area {
+width: 100%;
+height: 100%;
+}
+&.modal-box {
+background: indianred;
+text-align: center;
+}
+.content & {
+width: 100%;
+max-width: 40em;
+}
+}
+.toggle-modal-button {
+background-color: transparent;
+color: white;
+display: inline-block;
+padding: 1em;
+cursor: pointer;
+border-radius: .5em;
+box-shadow: inset 0 0 1px black;
+transition: background-color .2s, color .2s, transform .1s linear;
+&:hover,
+&:focus,
+&:active {
+background-color: rgba(black, .25);
+box-shadow: none;
+transition: background-color .2s, color .2s, box-shadow .2s, transform .1s linear;
+}
+&:active {
+transform: scale(1.2);
+}
+.content & {
+color: rgba(black, .75);
+margin-bottom: 1em;
+}
+}
+.content {
+color: peru;
+width: 90%;
+max-width: 600px;
+padding-top: 2em;
+margin: 0 auto;
+}
+
+*/
+
+</style>
+
+</head>
+<body>
+  <!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <input id="toggler" class="modal-toggler" type="checkbox" checked>
+  <section class="modal-container">
+    <label for="toggler" class="modal  close-modal-area"></label>
+    <div class="modal  modal-box">
+      <h1>Modal Container without JS</h1>
+      <label for="toggler" class="toggle-modal-button">Close Me</label>
+    </div>
+  </section>
+  <section class="content">
+    <label for="toggler" class="toggle-modal-button">Show It Again</label>
+    <p>Bacon ipsum dolor sit amet short loin pork loin corned beef, swine ground round chuck ham strip steak kielbasa biltong tongue filet mignon. Strip steak meatball chicken shank leberkas kielbasa. Short ribs pork loin short loin strip steak rump ground round drumstick kielbasa pastrami hamburger pig capicola jerky. Andouille short ribs turducken jerky boudin spare ribs ham pork loin leberkas ribeye.</p>
+  </section>
+
+</body>
+</html>

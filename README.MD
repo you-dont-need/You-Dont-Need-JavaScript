@@ -42,6 +42,18 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## Image Gallery
 + [Demo](https://codepen.io/shaishgandhi/pen/yJzamw)
 
+## Loaders
+
++ [Demo 1](http://codepen.io/lucadem1313/pen/vKWqRV)
++ [Demo 2](http://codepen.io/lucadem1313/pen/XKzLER)
++ [Demo 3](http://codepen.io/brunjo/pen/xbwVXJ)
++ [Demo 4](http://codepen.io/brunjo/pen/ByjRPy)
++ [Demo 5](http://codepen.io/brunjo/pen/LEGyrJ)
++ [Demo 6](http://codepen.io/brunjo/pen/bNEWjV)
++ [Demo 7](http://codepen.io/brunjo/pen/wBKmbm)
++ [Demo 8](http://tobiasahlin.com/spinkit/)
++ [Demo 9](http://codepen.io/viduthalai1947/pen/JkhDK)
+
 ## Menu
 
 + [Demo](https://codepen.io/antoniputra/pen/BzyWmb)
