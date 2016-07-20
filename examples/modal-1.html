@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>No JS Modal Demo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+  /* CSS styles */
+  /* Example by Paul at https://codepen.io/peiche/pen/vhqym */
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #ddd;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+    color: #333;
+    text-shadow: 0 1px 0 #fff;
+    margin: 50px 0;
+  }
+
+  #wrapper {
+    width: 100px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border: 10px solid #aaa;
+    border-radius: 15px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+
+  .button {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding: 5px 10px;
+    border: 1px solid #aaa;
+    background-color: #eee;
+    background-image: linear-gradient(top, #fff, #f0f0f0);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    color: #666;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+  }
+  .button:hover {
+    border-color: #999;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  }
+  .button:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay.light {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .overlay .cancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .popup {
+    margin: 75px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #666;
+    width: 300px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  .light .popup {
+    border-color: #aaa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  }
+  .popup h2 {
+    margin-top: 0;
+    color: #666;
+    font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    opacity: 0.8;
+    transition: all 200ms;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #666;
+  }
+  .popup .close:hover {
+    opacity: 1;
+  }
+  .popup .content {
+    max-height: 400px;
+    overflow: auto;
+  }
+  .popup p {
+    margin: 0 0 1em;
+  }
+  .popup p:last-child {
+    margin: 0;
+  }
+
+
+  /* UNCOMPILED SCSS
+
+  body {
+  font-family: Arial, sans-serif;
+  background: #ddd;
+}
+
+h1 {
+text-align: center;
+font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+color: #333;
+text-shadow: 0 1px 0 #fff;
+margin: 50px 0;
+}
+
+#wrapper {
+width: 100px;
+margin: 0 auto;
+background: #fff;
+padding: 20px;
+border: 10px solid #aaa;
+border-radius: 15px;
+background-clip: padding-box;
+text-align: center;
+}
+
+.button {
+font-family: Helvetica, Arial, sans-serif;
+font-size: 13px;
+padding: 5px 10px;
+border: 1px solid #aaa;
+background-color: #eee;
+background-image: linear-gradient(top, #fff, #f0f0f0);
+border-radius: 2px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+color: #666;
+text-decoration: none;
+text-shadow: 0 1px 0 #fff;
+cursor: pointer;
+transition: all 0.2s ease-out;
+&:hover {
+border-color: #999;
+box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+&:active {
+box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+}
+}
+
+.overlay {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(0,0,0,0.5);
+transition: opacity 200ms;
+visibility: hidden;
+opacity: 0;
+&.light {
+background: rgba(255,255,255,0.5);
+}
+.cancel {
+position: absolute;
+width: 100%;
+height: 100%;
+cursor: default;
+}
+&:target {
+visibility: visible;
+opacity: 1;
+}
+}
+
+.popup {
+margin: 75px auto;
+padding: 20px;
+background: #fff;
+border: 1px solid #666;
+width: 300px;
+box-shadow: 0 0 50px rgba(0,0,0,0.5);
+position: relative;
+.light & {
+border-color: #aaa;
+box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+h2 {
+margin-top: 0;
+color: #666;
+font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+}
+.close {
+position: absolute;
+width: 20px;
+height: 20px;
+top: 20px;
+right: 20px;
+opacity: 0.8;
+transition: all 200ms;
+font-size: 24px;
+font-weight: bold;
+text-decoration: none;
+color: #666;
+&:hover {
+opacity: 1;
+}
+}
+.content {
+max-height: 400px;
+overflow: auto;
+}
+p {
+margin: 0 0 1em;
+&:last-child {
+margin: 0;
+}
+}
+}
+
+*/
+
+</style>
+
+</head>
+<body>
+  <!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <h1>Popup/Modal Windows without JavaScript</h1>
+  <div id="wrapper">
+    <p><a class="button" href="#popup1">Click Me</a></p>
+    <p><a class="button" href="#popup2">Click Me Too</a></p>
+  </div>
+
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <h2>Info box</h2>
+      <a class="close" href="#">&times;</a>
+      <div class="content">
+        <p>This is done totally without JavaScript. Just HTML and CSS.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup2" class="overlay light">
+    <a class="cancel" href="#"></a>
+    <div class="popup">
+      <h2>What the what?</h2>
+      <div class="content">
+        <p>Click outside the popup to close.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
