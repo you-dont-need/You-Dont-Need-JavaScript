@@ -84,6 +84,9 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## Todo List
 + [Demo](http://codepen.io/scryptonite/pen/oLGzdj)
 
+## Tooltips
++ [Demo](https://kushagragour.in/lab/hint/)
+
 ## Treeview
 
 + [Demo](https://codepen.io/rgg/pen/WrKyzj)
