@@ -159,6 +159,13 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
+##Twitter Heart Animation
+
+[<img src="https://cdn.css-tricks.com/wp-content/uploads/2016/06/art_twitter_heart_animation.gif" height="230" title="Demo">](http://codepen.io/thebabydino/pen/RRRRZE)
+
+***
+&nbsp;
+
 ## Contribute
 
 Please give me a hand.
