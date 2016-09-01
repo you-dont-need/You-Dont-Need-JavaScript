@@ -22,6 +22,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## Accordion / Toggle
 
 [<img src="images/accordion.png" height="230" title="Demo">](http://www.mraffaele.com/labs/css-only-accordions/)
+[<img src="images/toggler.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/pyXQrj)
+[<img src="images/toggler2.png" height="230" title="Demo 3">](http://codepen.io/PaulZi/pen/zBbVvV)
 
 ***
 &nbsp;
@@ -73,6 +75,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## Info on hover/ Popover
 
 [<img src="images/tooltips.png" height="230" title="Demo">](https://codepen.io/guuslieben/pen/gabQWM)
+[<img src="images/tooltips02.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
 
 ***
 &nbsp;
@@ -102,6 +105,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## Menu
 
 [<img src="images/menu2.png" height="230" title="Demo">](https://codepen.io/antoniputra/pen/BzyWmb)
+[<img src="images/menu3.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/NNOodj)
 
 ***
 &nbsp;
