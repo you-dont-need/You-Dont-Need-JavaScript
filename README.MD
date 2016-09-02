@@ -233,4 +233,4 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## Contribute
 
-Please give me a hand.
+Welcome to contribute to this project.
