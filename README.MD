@@ -231,6 +231,6 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
-## Contribute
+## Contributing
 
-Welcome to contribute to this project.
+Welcome to contribute to this project. Send us a Pull Request now!
