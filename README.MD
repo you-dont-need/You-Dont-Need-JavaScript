@@ -112,7 +112,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## <a id="Info"></a>Info on hover/ Popover
 
 [<img src="images/tooltips.png" height="230" title="Demo">](https://codepen.io/guuslieben/pen/gabQWM)
-[<img src="images/tooltips02.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
+[<img src="images/tooltips2.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
 
 **[⬆ back to top](#quick-links)**
 
