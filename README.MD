@@ -19,75 +19,116 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
-## Accordion / Toggle
+## Quick links
+
+1. [Accordion / Toggle](#Accordion)
+1. [Carousel](#Carousel)
+1. [Counter of checked check-boxes](#Counter)
+1. [Flip on click](#Flip)
+1. [Floating label on Textfield](#Floating)
+1. [Font-Face (Latin)](#Font)
+1. [Games](#Games)
+1. [Info on hover/ Popover](#Info)
+1. [Image Gallery](#Image)
+1. [Menu](#Menu)
+1. [Mobile menu off canvas](#Mobile)
+1. [Modal/Popup](#Modal)
+1. [Mouse tracking](#Mouse)
+1. [Parallax scrolling](#Parallax)
+1. [Tabs](#Tabs)
+1. [Todo List](#Todo)
+1. [Tooltips](#Tooltips)
+1. [Treeview](#Treeview)
+1. [Twitter Heart Animation](#Twitter)
+
+
+## <a id="Accordion"></a>Accordion / Toggle
 
 [<img src="images/accordion.png" height="230" title="Demo">](http://www.mraffaele.com/labs/css-only-accordions/)
 [<img src="images/toggler.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/pyXQrj)
 [<img src="images/toggler2.png" height="230" title="Demo 3">](http://codepen.io/PaulZi/pen/zBbVvV)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Carousel
+## <a id="Carousel"></a>Carousel
 
 [<img src="images/slideshow2.png" height="230" title="Demo 1">](http://codepen.io/SitePoint/pen/MyPVdK)
 [<img src="images/slideshow.png" height="230" title="Demo 2">](https://codepen.io/cavico/pen/yOjwya)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Counter of checked check-boxes
+## <a id="Counter"></a>Counter of checked check-boxes
 
 [<img src="images/checkedcounter.png" height="230" title="Demo">](https://codepen.io/anon/pen/eZWXOZ)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Flip on click
+## <a id="Flip"></a>Flip on click
 
 [<img src="images/flipper.png" height="230" title="Demo">](https://codepen.io/RuudBurger/pen/bwjry)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Floating label on Textfield
+## <a id="Floating"></a>Floating label on Textfield
 
 [<img src="images/textfields.png" height="230" title="Demo">](http://codepen.io/KtorZ/pen/ZOzdqG)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Font-Face (Latin)
+## <a id="Font"></a>Font-Face (Latin)
 
 [<img src="images/sansfont.png" height="230" title="Demo">](https://yusugomori.com/projects/css-sans/fonts)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Games
+## <a id="Games"></a>Games
 
 [<img src="images/game.png" height="230" title="Game 1">](https://codepen.io/i0z/pen/mFLCw)
 [<img src="images/sudoku.png" height="230" title="Game 2">](https://codepen.io/TabAtkins/pen/JYZgRo)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Info on hover/ Popover
+## <a id="Info"></a>Info on hover/ Popover
 
 [<img src="images/tooltips.png" height="230" title="Demo">](https://codepen.io/guuslieben/pen/gabQWM)
 [<img src="images/tooltips2.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Image Gallery
+## <a id="Image"></a>Image Gallery
 [<img src="images/gallery.png" height="230" title="Demo 1">](https://codepen.io/shaishgandhi/pen/yJzamw)
 [<img src="images/gallery2.png" height="230" title="Demo 2">](http://codepen.io/pavlovsk/pen/sjubp)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Loaders
+## <a id="Loaders"></a>Loaders
 
 [<img src="images/loader.png" height="230" title="Demo 1">](http://codepen.io/lucadem1313/pen/vKWqRV)
 [<img src="images/loader2.png" height="230" title="Demo 2">](http://codepen.io/lucadem1313/pen/XKzLER)
@@ -99,77 +140,97 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 [<img src="images/loader8.png" height="230" title="Demo 8">](http://tobiasahlin.com/spinkit/)
 [<img src="images/loader9.png" height="230" title="Demo 9">](http://codepen.io/viduthalai1947/pen/JkhDK)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Menu
+## <a id="Menu"></a>Menu
 
 [<img src="images/menu2.png" height="230" title="Demo">](https://codepen.io/antoniputra/pen/BzyWmb)
 [<img src="images/menu3.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/NNOodj)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Mobile menu off canvas
+## <a id="Mobile"></a>Mobile menu off canvas
 
 [<img src="images/menu.png" height="230" title="Demo">](https://codepen.io/fabricionaweb/pen/xOLwxj)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Modal/Popup
+## <a id="Modal"></a>Modal/Popup
 
 [<img src="images/modal2.png" height="230" title="Demo 1">](https://codepen.io/peiche/pen/vhqym)
 [<img src="images/modal.png" height="230" title="Demo 2">](https://codepen.io/chrisburnell/pen/scyKF)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Mouse tracking
+## <a id="Mouse"></a>Mouse tracking
 
 [<img src="images/mousetracking.png" height="230" title="Demo">](https://codepen.io/Momciloo/pen/GoGRrQ)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Parallax scrolling
+## <a id="Parallax"></a>Parallax scrolling
 
 [<img src="images/parallax.png" height="230" title="Demo">](http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Tabs
+## <a id="Tabs"></a>Tabs
 
 [<img src="images/tabs.png" height="230" title="Demo 1">](https://codepen.io/llgruff/pen/ZGBxOa)
 [<img src="images/tabs2.png" height="230" title="Demo">](https://codepen.io/fusco/pen/Wvzjrm)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Todo List
+## <a id="Todo"></a>Todo List
 [<img src="images/todo.png" height="230" title="Demo">](http://codepen.io/scryptonite/pen/oLGzdj)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Tooltips
+## <a id="Tooltips"></a>Tooltips
 + [Demo](https://kushagragour.in/lab/hint/)
 
-## Treeview
+## <a id="Treeview"></a>Treeview
 
 [<img src="images/tree.png" height="230" title="Demo">](https://codepen.io/rgg/pen/WrKyzj)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-##Twitter Heart Animation
+## <a id="Twitter"></a>Twitter Heart Animation
 
 [<img src="images/art_twitter_heart_animation.gif">](http://codepen.io/thebabydino/pen/RRRRZE)
 
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
-## Contribute
+## Contributing
 
-Please give me a hand.
+Welcome to contribute to this project. Send us a Pull Request now!
