@@ -27,6 +27,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Flip on click](#Flip)
 1. [Floating label on Textfield](#Floating)
 1. [Font-Face (Latin)](#Font)
+1. [Icons](#Icons)
 1. [Games](#Games)
 1. [Info on hover/ Popover](#Info)
 1. [Image Gallery](#Image)
@@ -93,6 +94,17 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## <a id="Font"></a>Font-Face (Latin)
 
 [<img src="images/sansfont.png" height="230" title="Demo">](https://yusugomori.com/projects/css-sans/fonts)
+
+**[⬆ back to top](#quick-links)**
+
+***
+&nbsp;
+
+## <a id="Icons"></a>Icons
+
+[CSSIcon.space](http://cssicon.space) — libriary of icons on clear css
+[<img src="images/cssicon.png" height="230" title="Demo">](http://cssicon.space)
+
 
 **[⬆ back to top](#quick-links)**
 
