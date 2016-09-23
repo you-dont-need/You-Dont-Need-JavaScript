@@ -113,6 +113,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 [<img src="images/tooltips.png" height="230" title="Demo">](https://codepen.io/guuslieben/pen/gabQWM)
 [<img src="images/tooltips2.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
+[<img src="images/info-on-hover.png" height="230" title="Demo 3">](http://codepen.io/SitePoint/pen/akAmPw)
 
 **[⬆ back to top](#quick-links)**
 
