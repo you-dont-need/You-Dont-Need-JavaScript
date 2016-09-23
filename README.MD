@@ -66,6 +66,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## <a id="Counter"></a>Counter of checked check-boxes
 
 [<img src="images/checkedcounter.png" height="230" title="Demo">](https://codepen.io/anon/pen/eZWXOZ)
+[<img src="images/checkedcounter2.png" height="230" title="Demo 2">](http://codepen.io/lonekorean/pen/wKbzv)
 
 **[⬆ back to top](#quick-links)**
 
