@@ -40,6 +40,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Tooltips](#Tooltips)
 1. [Treeview](#Treeview)
 1. [Twitter Heart Animation](#Twitter)
+1. [Dynamic Image Colorizing](#ImageColorizing)
 
 
 ## <a id="Accordion"></a>Accordion / Toggle
@@ -227,6 +228,15 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## <a id="Twitter"></a>Twitter Heart Animation
 
 [<img src="images/art_twitter_heart_animation.gif">](http://codepen.io/thebabydino/pen/RRRRZE)
+
+**[⬆ back to top](#quick-links)**
+
+***
+&nbsp;
+
+## <a id="ImageColorizing"></a>Dynamic Image Colorizing
+
+[<img src="images/imagecolorizing.png">](http://codepen.io/noahblon/pen/ZbjmbK)
 
 **[⬆ back to top](#quick-links)**
 
