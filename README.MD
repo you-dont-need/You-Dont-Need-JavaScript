@@ -47,7 +47,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
-[<img src="images/accordion.png" height="230" title="Demo">](http://www.mraffaele.com/labs/css-only-accordions/)
+[<img src="images/accordion.png" height="230" title="Demo 1">](http://www.mraffaele.com/labs/css-only-accordions/)
 [<img src="images/toggler.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/pyXQrj)
 [<img src="images/toggler2.png" height="230" title="Demo 3">](http://codepen.io/PaulZi/pen/zBbVvV)
 
@@ -68,7 +68,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Counter"></a>Counter of checked check-boxes
 
-[<img src="images/checkedcounter.png" height="230" title="Demo">](https://codepen.io/anon/pen/eZWXOZ)
+[<img src="images/checkedcounter.png" height="230" title="Demo 1">](https://codepen.io/anon/pen/eZWXOZ)
 [<img src="images/checkedcounter2.png" height="230" title="Demo 2">](http://codepen.io/lonekorean/pen/wKbzv)
 
 **[⬆ back to top](#quick-links)**
@@ -115,7 +115,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Info"></a>Info on hover/ Popover
 
-[<img src="images/tooltips.png" height="230" title="Demo">](https://codepen.io/guuslieben/pen/gabQWM)
+[<img src="images/tooltips.png" height="230" title="Demo 1">](https://codepen.io/guuslieben/pen/gabQWM)
 [<img src="images/tooltips2.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
 [<img src="images/info-on-hover.png" height="230" title="Demo 3">](http://codepen.io/SitePoint/pen/akAmPw)
 
@@ -152,7 +152,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Menu"></a>Menu
 
-[<img src="images/menu2.png" height="230" title="Demo">](https://codepen.io/antoniputra/pen/BzyWmb)
+[<img src="images/menu2.png" height="230" title="Demo 1">](https://codepen.io/antoniputra/pen/BzyWmb)
 [<img src="images/menu3.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/NNOodj)
 
 **[⬆ back to top](#quick-links)**
@@ -218,7 +218,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## <a id="Tabs"></a>Tabs
 
 [<img src="images/tabs.png" height="230" title="Demo 1">](https://codepen.io/llgruff/pen/ZGBxOa)
-[<img src="images/tabs2.png" height="230" title="Demo">](https://codepen.io/fusco/pen/Wvzjrm)
+[<img src="images/tabs2.png" height="230" title="Demo 2">](https://codepen.io/fusco/pen/Wvzjrm)
 
 **[⬆ back to top](#quick-links)**
 
@@ -247,7 +247,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Twitter"></a>Twitter Heart Animation
 
-[<img src="images/art_twitter_heart_animation.gif">](http://codepen.io/thebabydino/pen/RRRRZE)
+[<img src="images/art_twitter_heart_animation.gif" height="230" title="Demo">](http://codepen.io/thebabydino/pen/RRRRZE)
 
 **[⬆ back to top](#quick-links)**
 
@@ -256,7 +256,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="ImageColorizing"></a>Dynamic Image Colorizing
 
-[<img src="images/imagecolorizing.png">](http://codepen.io/noahblon/pen/ZbjmbK)
+[<img src="images/imagecolorizing.png"  height="230" title="Demo">](http://codepen.io/noahblon/pen/ZbjmbK)
 
 **[⬆ back to top](#quick-links)**
 
