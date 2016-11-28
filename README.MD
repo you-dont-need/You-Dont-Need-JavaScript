@@ -33,6 +33,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Menu](#Menu)
 1. [Mobile menu off canvas](#Mobile)
 1. [Burger menu](#BurgerMenu)
+1. [Fancy menu](#FancyMenu)
 1. [Modal/Popup](#Modal)
 1. [Mouse tracking](#Mouse)
 1. [Parallax scrolling](#Parallax)
@@ -171,6 +172,15 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## <a id="BurgerMenu"></a>Burger Menu
 
 [<img src="images/menu4.png" height="230" title="Demo">](https://codepen.io/eduardoboucas/pen/BNyKwO)
+
+**[⬆ back to top](#quick-links)**
+
+***
+&nbsp;
+
+## <a id="FancyMenu"></a>Fancy Menu
+
+[<img src="images/fancyMenu1.png" height="230" title="Demo">](http://codepen.io/lbebber/pen/RNgBPP)
 
 **[⬆ back to top](#quick-links)**
 
