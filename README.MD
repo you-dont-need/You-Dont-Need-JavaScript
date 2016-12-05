@@ -180,7 +180,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="FancyMenu"></a>Fancy Menu
 
-[<img src="images/fancyMenu1.png" height="230" title="Demo">](http://codepen.io/lbebber/pen/RNgBPP)
+[<img src="images/fancyMenu.gif" height="230" title="Demo">](http://codepen.io/lbebber/pen/RNgBPP)
 
 **[⬆ back to top](#quick-links)**
 
