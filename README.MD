@@ -43,6 +43,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Treeview](#Treeview)
 1. [Twitter Heart Animation](#Twitter)
 1. [Dynamic Image Colorizing](#ImageColorizing)
+1. [Ripple Effect](#RippleEffect)
 
 
 ## <a id="Accordion"></a>Accordion / Toggle
@@ -256,7 +257,16 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="ImageColorizing"></a>Dynamic Image Colorizing
 
-[<img src="images/imagecolorizing.png"  height="230" title="Demo">](http://codepen.io/noahblon/pen/ZbjmbK)
+[<img src="images/imagecolorizing.png" height="230" title="Demo">](http://codepen.io/noahblon/pen/ZbjmbK)
+
+**[⬆ back to top](#quick-links)**
+
+***
+&nbsp;
+
+## <a id="RippleEffect"></a>Ripple Effect
+
+[<img src="images/ripple-effect.gif" height="230" title="Ripple EffectDemo">](http://mladenplavsic.github.io/css-ripple-effect/)
 
 **[⬆ back to top](#quick-links)**
 
