@@ -44,6 +44,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Twitter Heart Animation](#Twitter)
 1. [Dynamic Image Colorizing](#ImageColorizing)
 1. [Ripple Effect](#RippleEffect)
+1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
 
 
 ## <a id="Accordion"></a>Accordion / Toggle
@@ -269,6 +270,15 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## <a id="RippleEffect"></a>Ripple Effect
 
 [<img src="images/ripple-effect.gif" height="230" title="Ripple EffectDemo">](http://mladenplavsic.github.io/css-ripple-effect/)
+
+**[⬆ back to top](#quick-links)**
+
+***
+&nbsp;
+
+## <a id="ResponsiveItemShowcase"></a>Responsive Counter Showing # of Items That Didn't Fit Screen
+
+[<img src="images/responsive-item-showcase.gif" title="Responsive Item Showcase">](https://codepen.io/pavlovsk/pen/QqrZzv/right/)
 
 **[⬆ back to top](#quick-links)**
 
