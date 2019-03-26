@@ -27,7 +27,6 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Flip on click](#Flip)
 1. [Floating label on Textfield](#Floating)
 1. [Font-Face (Latin)](#Font)
-1. [Games](#Games)
 1. [Info on hover/ Popover](#Info)
 1. [Image Gallery](#Image)
 1. [Menu](#Menu)
@@ -100,16 +99,6 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## <a id="Font"></a>Font-Face (Latin)
 
 [<img src="images/sansfont.png" height="230" title="Demo">](https://yusugomori.com/projects/css-sans/fonts)
-
-**[⬆ back to top](#quick-links)**
-
-***
-&nbsp;
-
-## <a id="Games"></a>Games
-
-[<img src="images/game.png" height="230" title="Game 1">](https://codepen.io/i0z/pen/mFLCw)
-[<img src="images/sudoku.png" height="230" title="Game 2">](https://codepen.io/TabAtkins/pen/JYZgRo)
 
 **[⬆ back to top](#quick-links)**
 
