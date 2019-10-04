@@ -62,6 +62,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 [<img src="images/slideshow2.png" height="230" title="Demo 1">](http://codepen.io/SitePoint/pen/MyPVdK)
 [<img src="images/slideshow.png" height="230" title="Demo 2">](https://codepen.io/cavico/pen/yOjwya)
+[<img src="images/slideshow3.png" height="230" title="Demo 3">](https://codepen.io/FabianK/pen/zJLLrR)
 
 **[⬆ back to top](#quick-links)**
 
