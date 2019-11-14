@@ -1,4 +1,5 @@
 # You Don't Need JavaScript
+[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/you-dont-need/javascript)
 
 Please note these demos should be considered as CSS "Proofs of Concepts". They may have serious issues from accessibility point of view (keyboard navigation, speech synthesis, etc.), or progressive enhancement/degradation/etc.
 
