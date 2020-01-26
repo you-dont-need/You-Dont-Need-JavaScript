@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Drop Down</title>
+	<style type="text/css">
+
+		body{
+	background: #f4f4f4;
+
+}
+
+.menu{
+	width: 600px;
+	position: absolute;
+
+}
+
+.menu ul{
+
+	list-style: none;
+
+}
+
+.menu ul li{
+	border:1px solid #b7b7b7;
+	background:#f4f4f4;
+	float:left;
+	display: block;
+	padding:8px;
+	font:bold 12px arial;
+	height:40px;
+	line-height: 40px;
+	width: 135px;
+	box-shadow: 0px 3px 5px #d2d2d2;
+	position: absolute;
+	overflow: hidden;
+	z-index: 10000;
+	background:linear-gradient(top,#ffffff 0%, #f2f2f2 50%,#e1e1e1 51%,#f6f6f6 100%);
+}
+.menu ul li:hover{
+
+background:linear-gradient (top,#ffffff 0%, #f4f4f4 50%, #ededed 51%,#ffffff 100%);
+}
+
+
+.menu ul li:first-child{
+	border-radius: 4px 0 0 4px;
+}
+.menu ul li:last-child{
+	border-radius: 0 4px 4px 0;
+}
+
+#b{
+	margin-left: 150px;
+}
+#c{
+	margin-left: 300px;
+}
+
+.menu ul li a{
+	display:block;
+	text-decoration: none;
+	color:#303030;
+}
+
+.menu ul li div{
+	text-align:left;
+	font: normal 11px
+</style>
+	</head>
+<body>
+	<nav class="menu">
+		<ul>
+			<li id="a"><a href="#a">Web Design</a>
+				<div>
+					<hr><strong>HTML:</strong> <a href="#">Basic HTML</a> | <a href="#">HTML5</a>
+					<hr><strong>CSS:</strong> <a href="#">CSS3</a> | <a href="#">CSS Animation</a>
+				</div>
+			</li>
+			<li id="b"><a href="#b">Web Programming</a>
+				<div>
+					<hr><strong>Frontend:</strong> <a href="#">JavaScript</a> | <a href="#">JQuery</a>
+					<hr><strong>Backend:</strong> <a href="#">Node.js<a> | <a href="#">PHP</a>
+				</div>
+			</li>
+			<li id="c"><a href="#c">Graphic Design</a>
+				<div>
+					<hr><strong>Graphics:</strong> <a href="#">Photoshop</a> | <a href="#">Illustrator</a>
+					<hr><strong>3d Animation:</strong> <a href="#">In-Design</a> | <a href="#">Flash</a>
+				</div>
+			</li>
+		</ul>
+	</nav>
+</body>
+</html>
