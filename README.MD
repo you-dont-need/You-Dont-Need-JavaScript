@@ -20,7 +20,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
-## Quick links
+## Quick links for all
 
 1. [Accordion / Toggle](#Accordion)
 1. [Carousel](#Carousel)
