@@ -1,3 +1,4 @@
+
 # You Don't Need JavaScript
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/you-dont-need/javascript)
 
@@ -21,7 +22,6 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 &nbsp;
 
 ## Quick links
-
 1. [Accordion / Toggle](#Accordion)
 1. [Carousel](#Carousel)
 1. [Counter of checked check-boxes](#Counter)
@@ -45,6 +45,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Dynamic Image Colorizing](#ImageColorizing)
 1. [Ripple Effect](#RippleEffect)
 1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
+1. [Nuemorphism Card Design](#nuemorphism-card-design)
 
 
 ## <a id="Accordion"></a>Accordion / Toggle
@@ -270,6 +271,15 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## <a id="ResponsiveItemShowcase"></a>Responsive Counter Showing # of Items That Didn't Fit Screen
 
 [<img src="images/responsive-item-showcase.gif" title="Responsive Item Showcase">](https://codepen.io/pavlovsk/pen/QqrZzv/right/)
+
+**[⬆ back to top](#quick-links)**
+
+***
+&nbsp;
+
+## <a id="NuemorphismCardDesign"></a>Nuemorphism Card Design
+
+[<img src="images/nuemorphism-card-design.gif" title="Nuemorphism Card Design">](https://codepen.io/saviomartin/pen/LYNgqKW)
 
 **[⬆ back to top](#quick-links)**
 
