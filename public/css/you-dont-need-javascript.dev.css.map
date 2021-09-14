@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,yBAA0B;EACtB,KAAK,EAAC,KAAK;;;;AAEf,8BAA+B;EAC3B,KAAK,EAAC,MAAM",
+"sources": ["../../scss/_simple-test-sass.scss"],
+"names": [],
+"file": "you-dont-need-javascript.dev.css"
+}
