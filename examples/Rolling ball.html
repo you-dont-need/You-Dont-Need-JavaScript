@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./css/fontawesome-free-5.13.0-web/css/all.css">
+    <title>Rolling Ball</title>
+    <style type="text/css">
+        body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 950px;
+    min-height: 100vh;
+    background-color: #f09824;
+    --wheel-diameter: 100px;
+--box-shadow:0 0 11px 10px red;
+
+}
+.item{
+    --scale:0;
+    --arrow-size:10px;
+    box-sizing: border-box;
+    border-radius: 35rem;
+    background-color: #0074D9;
+  width: var(--wheel-diameter);
+  height: 100px;
+  background-position: center;
+  position: relative;
+  animation: move 4s infinite ;
+  box-shadow: var(--box-shadow); 
+}
+.item:hover{
+    box-shadow: var(--box-shadow); 
+  
+   
+}
+@keyframes move{
+    0% {  transform: translateX(64px) rotate(0deg);}
+    100%{transform: translateX(842px) rotate(360deg);}
+}
+.item::before, .item::after{
+  
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;   
+     transform: translateX(-50%) translateY(var(--ty,0)) scale(var(--scale));
+     transition: transform 150ms 250ms;
+                                                                                                                                                                                                                                                                                            
+}
+
+.item::before{
+    --ty: calc(-100% - var(--arrow-size));
+    content:attr(data-tooltip);
+    box-sizing: border-box;
+    color: white;
+    padding: .5rem;
+    width: max-content;
+    background: black;
+    border-radius: .35rem;
+    transform-origin: bottom center ;
+
+}
+.item::after{
+    content: "";
+    --ty: calc(-1 * var(--arrow-size));
+border-left: 10px solid transparent;
+border-bottom: 10px solid transparent;
+border-top: 10px solid black;
+border-right: 10px solid transparent; 
+transform-origin: center top;
+}
+
+.item [class^="wheel-strips"]::after{
+    content: "";
+    position: fixed;
+    transform: translate(calc(0%),48px);
+border-left: 98px solid black;
+border-bottom:    solid black;
+border-top:   solid black;
+border-right: solid black; 
+}
+.item:hover::before, .item:hover::after{
+    --scale:1;
+    
+}
+.road{
+    content: "";
+    transform: translateY(calc(var(--wheel-diameter) /2 + 2px ));
+    border-left: 50rem solid black;
+border-bottom:    solid black;
+border-top:   solid black;
+border-right: solid black; 
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="item" data-tooltip="Rolling Ball"> 
+        <div class="wheel-strips1"></div>
+        <div class="wheel-strips2"></div>
+        </div>
+        <div class="road" ></div>
+
+</body>
+</html>
