@@ -1,12 +1,12 @@
 简体中文 | [English](./README.md)
 
-# You Don't Need JavaScript
-[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/you-dont-need/javascript)
+# 你不需要 JavaScript
+[![加入 Spectrum 社区](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/you-dont-need/javascript)
 
-Please note these demos should be considered as CSS "Proofs of Concepts". They may have serious issues from accessibility point of view (keyboard navigation, speech synthesis, etc.), or progressive enhancement/degradation/etc.
+请注意，这些演示应该被认为是CSS的“概念证明”。从可访问性的角度来看，它们可能存在严重的问题(键盘导航、语音合成等)，或者渐进增强/降级/等等。
 
 
-### Style Guide:
+### 风格指南：
 
 ```markdown
 ## Subject
@@ -288,6 +288,6 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
-## Contributing
+## 贡献
 
-Welcome to contribute to this project. Send us a Pull Request now!
+欢迎你为这个项目做出贡献。现在给我们发送一个PR(合并请求)吧!
