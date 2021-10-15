@@ -32,7 +32,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Info on hover/ Popover](#Info)
 1. [Image Gallery](#Image)
 1. [Loaders](#Loaders)
-1. [Menu](#Menu)
+1. [Dropdown Menu](#DropdownMenu)
 1. [Mobile menu off canvas](#Mobile)
 1. [Burger menu](#BurgerMenu)
 1. [Fancy menu](#FancyMenu)
@@ -148,7 +148,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
-## <a id="Menu"></a>Menu
+## <a id="DropdownMenu"></a>Dropdown Menu
 
 [<img src="images/menu2.png" height="230" title="Demo 1">](https://codepen.io/antoniputra/pen/BzyWmb)
 [<img src="images/menu3.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/NNOodj)
