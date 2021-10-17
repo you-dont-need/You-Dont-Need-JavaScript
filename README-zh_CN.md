@@ -1,10 +1,10 @@
 简体中文 | [English](./README.md)
 
 # 你不需要 JavaScript
+
 [![加入 Spectrum 社区](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/you-dont-need/javascript)
 
-请注意，这些演示应该被认为是CSS的“概念证明”。从可访问性的角度来看，它们可能存在严重的问题(键盘导航、语音合成等)，或者渐进增强/降级/等等。
-
+请注意，这些演示应该被认为是 CSS 的“概念证明”。从可访问性的角度来看，它们可能存在严重的问题(键盘导航、语音合成等)，或者渐进增强/降级/等等。
 
 ### 风格指南：
 
@@ -15,14 +15,18 @@
 [<img src="images/image2.png" height="230" title="Demo 2">](http://url-to-page)
 [<img src="images/image3.png" height="230" title="Demo 3">](http://url-to-page)
 
-***
+---
+
 &nbsp;
 ```
 
-***
+---
+
 &nbsp;
 
 ## Quick links
+
+1. [标题样式](#Heading)
 1. [手风琴 / 切换](#Accordion)
 1. [轮播](#Carousel)
 1. [复选框勾选计数](#Counter)
@@ -43,12 +47,21 @@
 1. [待办事项](#Todo)
 1. [工具提示](#Tooltips)
 1. [树状视图](#Treeview)
-1. [Twitter上的心动画](#Twitter)
+1. [Twitter 上的心动画](#Twitter)
 1. [动态图像着色](#ImageColorizing)
 1. [涟漪效应](#RippleEffect)
 1. [响应计数器 # 显示不适合屏幕的物品](#ResponsiveItemShowcase)
-1. [Neumorphism风格的卡片设计](#neumorphism-card-design)
+1. [Neumorphism 风格的卡片设计](#neumorphism-card-design)
 
+## <a id="Heading"></a>标题样式 | CSS
+
+[<img src="images/heading_styles.png" height="230" title="Demo">](https://dilshadnoshad.github.io/Heading-Designs/)
+
+**[⬆ 回到顶部](#quick-links)**
+
+---
+
+&nbsp;
 
 ## <a id="Accordion"></a>手风琴 / 切换
 
@@ -59,7 +72,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Carousel"></a>轮播
@@ -70,7 +84,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Counter"></a>复选框勾选计数
@@ -80,7 +95,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Flip"></a>点击打开
@@ -89,7 +105,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Floating"></a>文本框上的浮动标签
@@ -98,7 +115,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Font"></a>字体(拉丁)
@@ -107,7 +125,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Info"></a>悬停/弹出窗口信息
@@ -119,16 +138,19 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Image"></a>图片库
+
 [<img src="images/gallery.png" height="230" title="Demo 1">](https://codepen.io/shaishgandhi/pen/yJzamw)
 [<img src="images/gallery2.png" height="230" title="Demo 2">](http://codepen.io/pavlovsk/pen/sjubp)
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Loaders"></a>Loaders
@@ -145,7 +167,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Menu"></a>菜单
@@ -155,7 +178,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Mobile"></a>菜单显示隐藏
@@ -164,7 +188,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="BurgerMenu"></a>汉堡式菜单
@@ -173,7 +198,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="FancyMenu"></a>花哨的菜单
@@ -182,7 +208,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Modal"></a>模态框/弹出
@@ -192,7 +219,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Mouse"></a>鼠标跟随
@@ -201,7 +229,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Parallax"></a>视差滚动
@@ -210,7 +239,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Tabs"></a>选项卡
@@ -220,19 +250,23 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Todo"></a>待办事项
+
 [<img src="images/todo.png" height="230" title="Demo">](http://codepen.io/scryptonite/pen/oLGzdj)
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Tooltips"></a>工具提示
-+ [Demo](https://kushagragour.in/lab/hint/)
+
+- [Demo](https://kushagragour.in/lab/hint/)
 
 ## <a id="Treeview"></a>树状视图
 
@@ -240,16 +274,18 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
-## <a id="Twitter"></a>Twitter上的心动画
+## <a id="Twitter"></a>Twitter 上的心动画
 
 [<img src="images/art_twitter_heart_animation.gif" height="230" title="Demo">](http://codepen.io/thebabydino/pen/RRRRZE)
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="ImageColorizing"></a>动态图像着色
@@ -258,7 +294,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="RippleEffect"></a>涟漪效应
@@ -267,7 +304,8 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="ResponsiveItemShowcase"></a>响应计数器 # 显示不适合屏幕的物品
@@ -276,18 +314,20 @@
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
-## <a id="NeumorphismCardDesign"></a>Neumorphism风格的卡片设计
+## <a id="NeumorphismCardDesign"></a>Neumorphism 风格的卡片设计
 
 [<img src="images/neumorphism-card-design.gif" title="Neumorphism Card Design">](https://codepen.io/saviomartin/pen/LYNgqKW)
 
 **[⬆ 回到顶部](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## 贡献
 
-欢迎你为这个项目做出贡献。现在给我们发送一个PR(合并请求)吧!
+欢迎你为这个项目做出贡献。现在给我们发送一个 PR(合并请求)吧!

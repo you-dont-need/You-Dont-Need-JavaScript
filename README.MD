@@ -1,10 +1,10 @@
 English | [简体中文](./README-zh_CN.md)
 
 # You Don't Need JavaScript
+
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/you-dont-need/javascript)
 
 Please note these demos should be considered as CSS "Proofs of Concepts". They may have serious issues from accessibility point of view (keyboard navigation, speech synthesis, etc.), or progressive enhancement/degradation/etc.
-
 
 ### Style Guide:
 
@@ -15,14 +15,18 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 [<img src="images/image2.png" height="230" title="Demo 2">](http://url-to-page)
 [<img src="images/image3.png" height="230" title="Demo 3">](http://url-to-page)
 
-***
+---
+
 &nbsp;
 ```
 
-***
+---
+
 &nbsp;
 
 ## Quick links
+
+1. [Heading Styles](#Heading)
 1. [Accordion / Toggle](#Accordion)
 1. [Carousel](#Carousel)
 1. [Counter of checked check-boxes](#Counter)
@@ -49,6 +53,15 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
 1. [Neumorphism Card Design](#neumorphism-card-design)
 
+## <a id="Heading"></a>Heading Styles | CSS
+
+[<img src="images/heading_styles.png" height="230" title="Demo">](https://dilshadnoshad.github.io/Heading-Designs/)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -59,7 +72,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Carousel"></a>Carousel
@@ -70,7 +84,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Counter"></a>Counter of checked check-boxes
@@ -80,7 +95,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Flip"></a>Flip on click
@@ -89,7 +105,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Floating"></a>Floating label on Textfield
@@ -98,7 +115,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Font"></a>Font-Face (Latin)
@@ -107,7 +125,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Info"></a>Info on hover/ Popover
@@ -119,16 +138,19 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Image"></a>Image Gallery
+
 [<img src="images/gallery.png" height="230" title="Demo 1">](https://codepen.io/shaishgandhi/pen/yJzamw)
 [<img src="images/gallery2.png" height="230" title="Demo 2">](http://codepen.io/pavlovsk/pen/sjubp)
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Loaders"></a>Loaders
@@ -145,7 +167,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="DropdownMenu"></a>Dropdown Menu
@@ -155,7 +178,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Mobile"></a>Mobile menu off canvas
@@ -164,7 +188,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="BurgerMenu"></a>Burger Menu
@@ -173,7 +198,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="FancyMenu"></a>Fancy Menu
@@ -182,7 +208,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Modal"></a>Modal/Popup
@@ -192,7 +219,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Mouse"></a>Mouse tracking
@@ -201,7 +229,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Parallax"></a>Parallax scrolling
@@ -210,7 +239,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Tabs"></a>Tabs
@@ -220,19 +250,23 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Todo"></a>Todo List
+
 [<img src="images/todo.png" height="230" title="Demo">](http://codepen.io/scryptonite/pen/oLGzdj)
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Tooltips"></a>Tooltips
-+ [Demo](https://kushagragour.in/lab/hint/)
+
+- [Demo](https://kushagragour.in/lab/hint/)
 
 ## <a id="Treeview"></a>Treeview
 
@@ -240,7 +274,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Twitter"></a>Twitter Heart Animation
@@ -249,7 +284,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="ImageColorizing"></a>Dynamic Image Colorizing
@@ -258,7 +294,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="RippleEffect"></a>Ripple Effect
@@ -267,7 +304,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="ResponsiveItemShowcase"></a>Responsive Counter Showing # of Items That Didn't Fit Screen
@@ -276,7 +314,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="NeumorphismCardDesign"></a>Neumorphism Card Design
@@ -285,7 +324,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## Contributing

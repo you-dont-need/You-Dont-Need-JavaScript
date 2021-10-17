@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heading Styles CSS | vers-D-1</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    html {
+      --primary-color: #a21047;
+      --secondary-color: #1c3fa8;
+      --dark-color: #343a40;
+      --light-color: #fff;
+      --hover-color: #e00d5c;
+      --back-grey: #f1f3f5;
+      font-size: 62.5%;
+    }
+    /* this page design */
+    .head-assest {
+      width: 100%;
+      background: var(--back-grey);
+      padding: 50px;
+    }
+    .heading-main {
+      max-width: 600px;
+      margin: 20px auto;
+      overflow: auto;
+      padding: 0 40px;
+    }
+    .head-wrapper {
+      padding: 90px 90px 40px;
+      height: auto;
+      background: var(--light-color);
+      border-radius: 5px;
+      max-width: 100%;
+      box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+      margin-bottom: 34px;
+    }
+    /* constant */
+    h2 {
+      font-weight: 700;
+      font-size: 38px;
+      text-align: center;
+      line-height: 1.33;
+      /* margin-bottom: 40px; */
+      color: var(--dark-color);
+    }
+
+    .spacing {
+      margin-bottom: 40px;
+    }
+    /* ------------------------------heading 1--------------------------------- */
+    .link {
+      text-decoration: none;
+      position: relative;
+      margin-bottom: 25px;
+      color: inherit;
+      font-weight: 600;
+      border-bottom: 5px solid var(--dark-color);
+      transition: 300ms ease-in-out;
+      cursor: pointer;
+    }
+
+    .link::after {
+      content: "";
+      position: absolute;
+      right: 0px;
+      width: 0px;
+      bottom: -5px;
+      background: var(--hover-color);
+      height: 5px;
+      transition-property: width;
+      transition-duration: 300ms;
+      transition-timing-function: ease-in-out;
+    }
+
+    .link:focus::after,
+    .link:hover::after {
+      left: 0px;
+      right: auto;
+      width: 100%;
+    }
+
+    /* ------------------------------heading 2--------------------------------- */
+
+    .link2:focus::after,
+    .link2:hover::after {
+      background-color: var(--dark-color);
+    }
+    .link2:focus::before,
+    .link2:hover::before {
+      background-color: var(--dark-color);
+    }
+
+    .link2 {
+      background: url("../images/middle.png") no-repeat top center;
+      background-size: contain;
+      display: block;
+      height: 28px;
+      position: relative;
+      border: 0;
+      transition: 300ms ease-in-out;
+      cursor: pointer;
+      margin-bottom: 40px;
+    }
+    .link2:before,
+    .link2:after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: #d7d7d7;
+      height: 2px;
+      top: 8px;
+      transition-property: width;
+      transition-duration: 300ms;
+      transition-timing-function: ease-in-out;
+      background: var(--hover-color);
+    }
+    .link2:before {
+      left: 0;
+      right: 50%;
+      margin-right: 20px;
+      bottom: -5px;
+      background: var(--hover-color);
+      height: 3px;
+    }
+    .link2:after {
+      right: 0;
+      left: 50%;
+      margin-left: 20px;
+      bottom: -5px;
+      background: var(--hover-color);
+      height: 3px;
+    }
+    /* ------------------------------heading 3--------------------------------- */
+    .bg-underline {
+      background-image: linear-gradient(transparent 65%, var(--hover-color) 0%);
+      background-repeat: no-repeat;
+      background-size: 100% 250%;
+      background-position: 0% 65%;
+      transition: background-position 0.5s ease 0s;
+    }
+
+    .bg-underline:hover {
+      background-position: 0% 100%;
+    }
+    /* ------------------------------heading 4--------------------------------- */
+    .shadow-underline {
+      box-shadow: inset 0 -0.45em 0 var(--primary-color);
+      transition: box-shadow 0.5s ease;
+    }
+
+    .shadow-underline:hover {
+      box-shadow: inset 0 -1.25em 0 var(--hover-color);
+    }
+    /* ------------------------------heading 5--------------------------------- */
+    .underline {
+      padding-right: 0.5em;
+      box-shadow: inset 0 -0.55em 0 var(--back-grey);
+    }
+    /* ------------------------------heading and nav 5--------------------------------- */
+    .container {
+      display: flex;
+      align-items: center;
+    }
+    .container a {
+      margin: 0 8px;
+      padding: 8px;
+      position: relative;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 28px;
+      text-align: center;
+      line-height: 1.33;
+      color: var(--dark-color);
+      cursor: pointer;
+    }
+    .container a:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: var(--dark-color);
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.2s ease-in-out;
+    }
+    .container a:hover:after {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+  </style>
+  <body>
+    <section class="head-assest">
+      <div class="head-wrapper">
+        <div class="heading-main">
+          <h2 class="link">Heading One</h2>
+        </div>
+        <div class="heading-main">
+          <h2>Heading Two</h2>
+          <div class="link2"></div>
+        </div>
+        <div class="heading-main">
+          <h2 class="bg-underline">Heading Three</h2>
+        </div>
+        <div class="heading-main">
+          <h2 class="shadow-underline">Heading Four</h2>
+        </div>
+        <div class="heading-main">
+          <h2 class="underline spacing">Heading Four</h2>
+        </div>
+        <div class="heading-main">
+          <div class="container">
+            <a>Overview</a>
+            <a>Work</a>
+            <a>Get in touch...</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
