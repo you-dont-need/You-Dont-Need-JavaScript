@@ -48,6 +48,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Ripple Effect](#RippleEffect)
 1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
 1. [Neumorphism Card Design](#neumorphism-card-design)
+1. [Sticky Headers](#StickyHeaders)
 
 
 ## <a id="Accordion"></a>Accordion / Toggle
@@ -282,6 +283,15 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## <a id="NeumorphismCardDesign"></a>Neumorphism Card Design
 
 [<img src="images/neumorphism-card-design.gif" title="Neumorphism Card Design">](https://codepen.io/saviomartin/pen/LYNgqKW)
+
+**[⬆ back to top](#quick-links)**
+
+***
+&nbsp;
+
+## <a id="StickyHeaders"></a>Sticky Header
+
+[<img src="images/sticky-header.gif" title="Sticky Header">](https://vanillaweb.vercel.app/sticky-header)
 
 **[⬆ back to top](#quick-links)**
 
