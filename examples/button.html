@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* new code area */
+            background-color: black;
+        }
+
+        .btn {
+
+            border-radius: 4px;
+            color: cyan;
+            background-color: transparent;
+            border: 2px solid cyan;
+            text-shadow: 0 0 10px rgb(62, 248, 248);
+            box-shadow: inset 0px 0px 15px cyan, 0px 0px 30px cyan;
+            padding: 17px;
+            height: 16px;
+            width: 96px;
+            font-family: Oxygen, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            -webkit-animation-duration: 0.5s;
+            transition-duration: 0.5s;
+            -webkit-transition-property: box-shadow, transform;
+        }
+
+        .btn:hover,
+        .btn:active,
+        .btn:focus {
+
+            box-shadow: 0 0 20px rgb(24, 255, 255);
+            color: black;
+            background-color: cyan;
+            transition: background-color 900ms ease, color 900ms ease;
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="btn">button</a>
+    </div>
+</body>
+
+</html>
