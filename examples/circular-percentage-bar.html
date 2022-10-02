@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circular Percentage Bar</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        background: #222;
+        gap: 20rem;
+      }
+      h3 {
+        color: #fff;
+        font-size: 2rem;
+        margin: 2rem;
+      }
+      .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container .card {
+        position: relative;
+        width: 220px;
+        height: 250px;
+        background: #2a2a2a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container .card .percentage {
+        position: relative;
+        width: 150px;
+        height: 150px;
+      }
+      .container .card .percentage svg {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        transform: rotate(270deg);
+      }
+      .container .card .percentage svg circle {
+        width: 100%;
+        height: 100%;
+        fill: transparent;
+        stroke-width: 2;
+        stroke: #191919;
+        transform: translate(5px, 5px);
+      }
+      .container .card .percentage svg circle:nth-child(2) {
+        stroke: var(--clr);
+        stroke-dasharray: 440;
+        stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+        opacity: 0;
+        animation: fadeIn 1s linear forwards;
+        animation-delay: 2s;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .dot {
+        position: absolute;
+        inset: 5px;
+        z-index: 10;
+        transform: rotate(calc(3.6deg * var(--num))); /* 360deg / 100  = 3.6*/
+        animation: animateDot 2s linear forwards;
+      }
+      @keyframes animateDot {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(calc(3.6deg * var(--num)));
+        }
+      }
+      .dot::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 10px;
+        height: 10px;
+        background: var(--clr);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+      }
+      .number {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        animation: fadeIn 1s linear forwards;
+        animation-delay: 2s;
+      }
+      .number h4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 2em;
+        font-weight: 700;
+      }
+      .number h4 span {
+        color: #fff;
+        font-size: 0.5em;
+        font-weight: 300;
+      }
+      .number p {
+        font-size: 0.75em;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.75);
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Circular Percentage Bar</h3>
+    <div class="container">
+      <div class="card">
+        <div class="percentage" style="--clr: #06ccff; --num: 85">
+          <div class="dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70"></circle>
+          </svg>
+          <div class="number">
+            <h4>85<span>%</span></h4>
+            <p>css</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
