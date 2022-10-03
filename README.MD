@@ -37,6 +37,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Burger menu](#BurgerMenu)
 1. [Fancy menu](#FancyMenu)
 1. [Modal/Popup](#Modal)
+1. [Eyes that follow](#EyesThatFollow)
 1. [Mouse tracking](#Mouse)
 1. [Parallax scrolling](#Parallax)
 1. [Tabs](#Tabs)
@@ -198,6 +199,15 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## <a id="Mouse"></a>Mouse tracking
 
 [<img src="images/mousetracking.png" height="230" title="Demo">](https://codepen.io/Momciloo/pen/GoGRrQ)
+
+**[⬆ back to top](#quick-links)**
+
+***
+&nbsp;
+
+## <a id="EyesThatFollow"></a>Eyes That Follow
+
+[<img src="images/imagecolorizing.png" height="230" title="Demo">](https://codepen.io/starohit/full/VwxxJWa)
 
 **[⬆ back to top](#quick-links)**
 
