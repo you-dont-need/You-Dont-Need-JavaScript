@@ -52,10 +52,10 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
-[<img src="images/accordion.png" height="230" title="Demo 1">](http://www.mraffaele.com/labs/css-only-accordions/)
-[<img src="images/toggler.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/pyXQrj)
-[<img src="images/toggler2.png" height="230" title="Demo 3">](http://codepen.io/PaulZi/pen/zBbVvV)
-[<img src="images/accordion.gif" height="230" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)
+[<img src="images/accordion.png" height="350" width="300" title="Demo 1">](http://www.mraffaele.com/labs/css-only-accordions/)
+[<img src="images/toggler.png" height="350" width="650" title="Demo 2">](http://codepen.io/cristina-silva/pen/pyXQrj)
+[<img src="images/toggler2.png" height="350" width="480" title="Demo 3">](http://codepen.io/PaulZi/pen/zBbVvV)
+[<img src="images/accordion.gif" height="350" width="470" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)
 
 **[⬆ back to top](#quick-links)**
 
@@ -64,9 +64,9 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Carousel"></a>Carousel
 
-[<img src="images/slideshow2.png" height="230" title="Demo 1">](http://codepen.io/SitePoint/pen/MyPVdK)
-[<img src="images/slideshow.png" height="230" title="Demo 2">](https://codepen.io/cavico/pen/yOjwya)
-[<img src="images/slideshow3.png" height="230" title="Demo 3">](https://codepen.io/FabianK/pen/zJLLrR)
+[<div align="center"><img src="images/slideshow2.png"  width="900" title="Demo 1">](http://codepen.io/SitePoint/pen/MyPVdK)</div>
+[<div align="center"><img src="images/slideshow.png" width="900" title="Demo 2">](https://codepen.io/cavico/pen/yOjwya)</div>
+[<div align="center"><img src="images/slideshow3.png" width="900" title="Demo 3">](https://codepen.io/FabianK/pen/zJLLrR)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -75,8 +75,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Counter"></a>Counter of checked check-boxes
 
-[<img src="images/checkedcounter.png" height="230" title="Demo 1">](https://codepen.io/anon/pen/eZWXOZ)
-[<img src="images/checkedcounter2.png" height="230" title="Demo 2">](http://codepen.io/lonekorean/pen/wKbzv)
+[<div align="center"><img src="images/checkedcounter.png" width="900" title="Demo 1">](https://codepen.io/anon/pen/eZWXOZ)</div>
+[<div align="center"><img src="images/checkedcounter2.png"  width="900" title="Demo 2">](http://codepen.io/lonekorean/pen/wKbzv)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -85,7 +85,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Flip"></a>Flip on click
 
-[<img src="images/flipper.png" height="230" title="Demo">](https://codepen.io/RuudBurger/pen/bwjry)
+[<div align="center"><img src="images/flipper.png"  width="900" title="Demo">](https://codepen.io/RuudBurger/pen/bwjry)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -94,7 +94,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Floating"></a>Floating label on Textfield
 
-[<img src="images/textfields.png" height="230" title="Demo">](http://codepen.io/KtorZ/pen/ZOzdqG)
+[<div align="center"><img src="images/textfields.png"  width="900" title="Demo">](http://codepen.io/KtorZ/pen/ZOzdqG)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -103,7 +103,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Font"></a>Font-Face (Latin)
 
-[<img src="images/sansfont.png" height="230" title="Demo">](https://yusugomori.com/projects/css-sans/fonts)
+[<div align="center"><img src="images/sansfont.png"  width="900" title="Demo">](https://yusugomori.com/projects/css-sans/fonts)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -112,10 +112,10 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Info"></a>Info on hover/ Popover
 
-[<img src="images/tooltips.png" height="230" title="Demo 1">](https://codepen.io/guuslieben/pen/gabQWM)
-[<img src="images/tooltips2.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
-[<img src="images/info-on-hover.png" height="230" title="Demo 3">](http://codepen.io/SitePoint/pen/akAmPw)
-[<img src="images/tooltips.gif" height="230" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)
+[<div align="center"><img src="images/tooltips.png" width="900" title="Demo 1">](https://codepen.io/guuslieben/pen/gabQWM)</div>
+[<img src="images/tooltips2.png" width="650" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
+[<img src="images/info-on-hover.png" width="300" title="Demo 3">](http://codepen.io/SitePoint/pen/akAmPw)
+[<div align="center"><img src="images/tooltips.gif" width="900" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -123,8 +123,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 &nbsp;
 
 ## <a id="Image"></a>Image Gallery
-[<img src="images/gallery.png" height="230" title="Demo 1">](https://codepen.io/shaishgandhi/pen/yJzamw)
-[<img src="images/gallery2.png" height="230" title="Demo 2">](http://codepen.io/pavlovsk/pen/sjubp)
+[<div align="center"><img src="images/gallery.png" width="900" title="Demo 1">](https://codepen.io/shaishgandhi/pen/yJzamw)</div>
+[<div align="center"><img src="images/gallery2.png" width="900" title="Demo 2">](http://codepen.io/pavlovsk/pen/sjubp)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -133,15 +133,15 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Loaders"></a>Loaders
 
-[<img src="images/loader.png" height="230" title="Demo 1">](http://codepen.io/lucadem1313/pen/vKWqRV)
-[<img src="images/loader2.png" height="230" title="Demo 2">](http://codepen.io/lucadem1313/pen/XKzLER)
-[<img src="images/loader3.png" height="230" title="Demo 3">](http://codepen.io/brunjo/pen/xbwVXJ)
-[<img src="images/loader4.png" height="230" title="Demo 4">](http://codepen.io/brunjo/pen/ByjRPy)
-[<img src="images/loader5.png" height="230" title="Demo 5">](http://codepen.io/brunjo/pen/LEGyrJ)
-[<img src="images/loader6.png" height="230" title="Demo 6">](http://codepen.io/brunjo/pen/bNEWjV)
-[<img src="images/loader7.png" height="230" title="Demo 7">](http://codepen.io/brunjo/pen/wBKmbm)
-[<img src="images/loader8.png" height="230" title="Demo 8">](http://tobiasahlin.com/spinkit/)
-[<img src="images/loader9.png" height="230" title="Demo 9">](http://codepen.io/viduthalai1947/pen/JkhDK)
+[<div align="center"><img src="images/loader.png" width="900" title="Demo 1">](http://codepen.io/lucadem1313/pen/vKWqRV)</div>
+[<div align="center"><img src="images/loader2.png" width="900" title="Demo 2">](http://codepen.io/lucadem1313/pen/XKzLER)</div>
+[<div align="center"><img src="images/loader3.png" width="900" title="Demo 3">](http://codepen.io/brunjo/pen/xbwVXJ)</div>
+[<div align="center"><img src="images/loader4.png" width="900" title="Demo 4">](http://codepen.io/brunjo/pen/ByjRPy)</div>
+[<img src="images/loader5.png" width="350" title="Demo 5">](http://codepen.io/brunjo/pen/LEGyrJ)
+[<img src="images/loader6.png" width="300" title="Demo 6">](http://codepen.io/brunjo/pen/bNEWjV)
+[<img src="images/loader7.png" width="350" title="Demo 7">](http://codepen.io/brunjo/pen/wBKmbm)
+[<img src="images/loader8.png" height="250" title="Demo 8">](http://tobiasahlin.com/spinkit/)
+[<img src="images/loader9.png" height="250" title="Demo 9">](http://codepen.io/viduthalai1947/pen/JkhDK)
 
 **[⬆ back to top](#quick-links)**
 
@@ -150,8 +150,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="DropdownMenu"></a>Dropdown Menu
 
-[<img src="images/menu2.png" height="230" title="Demo 1">](https://codepen.io/antoniputra/pen/BzyWmb)
-[<img src="images/menu3.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/NNOodj)
+[<div align="center"><img src="images/menu2.png" height="500" title="Demo 1">](https://codepen.io/antoniputra/pen/BzyWmb)</div>
+[<div align="center"><img src="images/menu3.png" height="500" title="Demo 2">](http://codepen.io/cristina-silva/pen/NNOodj)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -160,7 +160,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Mobile"></a>Mobile menu off canvas
 
-[<img src="images/menu.png" height="230" title="Demo">](https://codepen.io/fabricionaweb/pen/xOLwxj)
+[<div align="center"><img src="images/menu.png" height="600" title="Demo">](https://codepen.io/fabricionaweb/pen/xOLwxj)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -169,7 +169,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="BurgerMenu"></a>Burger Menu
 
-[<img src="images/menu4.png" height="230" title="Demo">](https://codepen.io/eduardoboucas/pen/BNyKwO)
+[<div align="center"><img src="images/menu4.png" height="600" title="Demo">](https://codepen.io/eduardoboucas/pen/BNyKwO)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -178,7 +178,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="FancyMenu"></a>Fancy Menu
 
-[<img src="images/fancyMenu.gif" height="230" title="Demo">](http://codepen.io/lbebber/pen/RNgBPP)
+[<div align="center"><img src="images/fancyMenu.gif" height="600" title="Demo">](http://codepen.io/lbebber/pen/RNgBPP)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -187,8 +187,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Modal"></a>Modal/Popup
 
-[<img src="images/modal2.png" height="230" title="Demo 1">](https://codepen.io/peiche/pen/vhqym)
-[<img src="images/modal.png" height="230" title="Demo 2">](https://codepen.io/chrisburnell/pen/scyKF)
+[<div align="center"><img src="images/modal2.png" height="600" title="Demo 1">](https://codepen.io/peiche/pen/vhqym)</div>
+[<div align="center"><img src="images/modal.png" height="600" title="Demo 2">](https://codepen.io/chrisburnell/pen/scyKF)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -197,7 +197,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Mouse"></a>Mouse tracking
 
-[<img src="images/mousetracking.png" height="230" title="Demo">](https://codepen.io/Momciloo/pen/GoGRrQ)
+[<div align="center"><img src="images/mousetracking.png" height="600" title="Demo">](https://codepen.io/Momciloo/pen/GoGRrQ)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -206,7 +206,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Parallax"></a>Parallax scrolling
 
-[<img src="images/parallax.png" height="230" title="Demo">](http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/)
+[<div align="center"><img src="images/parallax.png" height="600" title="Demo">](http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -215,8 +215,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Tabs"></a>Tabs
 
-[<img src="images/tabs.png" height="230" title="Demo 1">](https://codepen.io/llgruff/pen/ZGBxOa)
-[<img src="images/tabs2.png" height="230" title="Demo 2">](https://codepen.io/fusco/pen/Wvzjrm)
+[<img src="images/tabs.png" height="500" title="Demo 1">](https://codepen.io/llgruff/pen/ZGBxOa)
+[<img src="images/tabs2.png" height="500" title="Demo 2">](https://codepen.io/fusco/pen/Wvzjrm)
 
 **[⬆ back to top](#quick-links)**
 
@@ -224,7 +224,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 &nbsp;
 
 ## <a id="Todo"></a>Todo List
-[<img src="images/todo.png" height="230" title="Demo">](http://codepen.io/scryptonite/pen/oLGzdj)
+[<img src="images/todo.png" height="500" title="Demo">](http://codepen.io/scryptonite/pen/oLGzdj)
 
 **[⬆ back to top](#quick-links)**
 
@@ -236,7 +236,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Treeview"></a>Treeview
 
-[<img src="images/tree.png" height="230" title="Demo">](https://codepen.io/rgg/pen/WrKyzj)
+[<div align="center"><img src="images/tree.png" height="400" title="Demo">](https://codepen.io/rgg/pen/WrKyzj)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -245,7 +245,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="Twitter"></a>Twitter Heart Animation
 
-[<img src="images/art_twitter_heart_animation.gif" height="230" title="Demo">](http://codepen.io/thebabydino/pen/RRRRZE)
+[<div align="center"><img src="images/art_twitter_heart_animation.gif" height="400" title="Demo">](http://codepen.io/thebabydino/pen/RRRRZE)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -254,7 +254,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="ImageColorizing"></a>Dynamic Image Colorizing
 
-[<img src="images/imagecolorizing.png" height="230" title="Demo">](http://codepen.io/noahblon/pen/ZbjmbK)
+[<div align="center"><img src="images/imagecolorizing.png" height="400" title="Demo">](http://codepen.io/noahblon/pen/ZbjmbK)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -263,7 +263,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="RippleEffect"></a>Ripple Effect
 
-[<img src="images/ripple-effect.gif" height="230" title="Ripple EffectDemo">](http://mladenplavsic.github.io/css-ripple-effect/)
+[<div align="center"><img src="images/ripple-effect.gif" height="400" title="Ripple EffectDemo">](http://mladenplavsic.github.io/css-ripple-effect/)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -272,7 +272,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="ResponsiveItemShowcase"></a>Responsive Counter Showing # of Items That Didn't Fit Screen
 
-[<img src="images/responsive-item-showcase.gif" title="Responsive Item Showcase">](https://codepen.io/pavlovsk/pen/QqrZzv/right/)
+[<div align="center"><img src="images/responsive-item-showcase.gif" height="300" title="Responsive Item Showcase">](https://codepen.io/pavlovsk/pen/QqrZzv/right/)</div>
 
 **[⬆ back to top](#quick-links)**
 
@@ -281,7 +281,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## <a id="NeumorphismCardDesign"></a>Neumorphism Card Design
 
-[<img src="images/neumorphism-card-design.gif" title="Neumorphism Card Design">](https://codepen.io/saviomartin/pen/LYNgqKW)
+[<div align="center"><img src="images/neumorphism-card-design.gif" height="400" title="Neumorphism Card Design">](https://codepen.io/saviomartin/pen/LYNgqKW)</div>
 
 **[⬆ back to top](#quick-links)**
 
