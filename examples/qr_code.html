@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styel.css">
+  
+  <title>Frontend Mentor | QR code component</title>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+ --White: hsl(0, 0%, 100%);
+ --Light-gray: hsl(212, 45%, 89%);
+ --Grayish-blue: hsl(220, 15%, 55%);
+ --Dark-blue: hsl(218, 44%, 22%);
+}
+
+
+img{
+    max-width: 100%;
+}
+
+body{
+    font-family: "Outfit",sans-serif;
+    font-size: 15px;
+    background-color: var(--Light-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh-1px);
+    margin: 1.25rem;
+    margin-top: 50px;
+}
+
+
+.container{
+    background-color: var(--White);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.container img {
+    border-radius: 0.625rem;
+    margin-bottom: 1rem;
+}
+
+.container h1{
+    color: var(--Dark-blue);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.container p{
+    color: var(--Grayish-blue);
+    text-align: center;
+}
+
+
+.attribution { 
+    font-size: 14px;
+     text-align: center; 
+    }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media(min-width:500px){
+    .container{
+        width: 400px;
+    }
+}
+</style>
+
+<body>
+
+  <div class="container">
+    <img src="../images/image-qr-code copy.png" alt="" srcset="">
+    <h1>Improve your front-end skills by building projects</h1>
+    <p>
+      Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+  </div>
+
+  
+
+  
+  <div class="attribution">
+    
+    Coded by <a href="#Shubham">Shubham</a>.
+  </div>
+</body>
+</html>
