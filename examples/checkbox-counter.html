@@ -10,7 +10,20 @@
   /* CSS styles */
   /* Example by Yuriy at https://codepen.io/anon/pen/eZWXOZ */
 
-
+  body{
+    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+  }
+  .container{
+    margin: auto;
+    width: 30%;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: #DECBA4;
+  }
+  .box2{
+    margin: 10px 0;
+  }
   input:checked {
     counter-increment: list;
   }
@@ -23,7 +36,7 @@
   .result::after {
     content: "Selected: "counter(list);
   }
-
+ 
   </style>
 
 </head>
@@ -31,14 +44,19 @@
   <!--[if lt IE 8]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-
-  <h3>Select any checkbox</h3>
-  <input type="checkbox">
-  <input type="checkbox">
-  <input type="checkbox">
-  <input type="checkbox">
-  <input type="checkbox">
-  <div class="result"></div>
-
+  <div class="container">
+    <div class="box1">
+      <h3>Select any checkbox</h3>
+    </div>
+    <div class="box2">
+      <input type="checkbox">
+      <input type="checkbox">
+      <input type="checkbox">
+      <input type="checkbox">
+      <input type="checkbox">
+      <div class="result"></div>
+    </div>
+  </div>
+    
 </body>
 </html>
