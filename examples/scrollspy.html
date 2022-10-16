@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smooth Scrolling - ScrollSpy</title>
+
+    <style>
+        :root {
+            --linkheight: 2rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Inter';
+        }
+
+        body {
+            background: #fafafa;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        ul {
+            background-color: rgb(0 0 0 / 0);
+        }
+
+        ul li {
+            padding-left: 1rem;
+        }
+
+        .section-nav {
+            width: 15em;
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            padding-left: 0;
+            border-left: 1px solid #ddd;
+            background-color: rgb(0 0 0 / 0);
+        }
+
+        .section-nav a {
+            display: inline-block;
+            text-decoration: none;
+            line-height: 2rem;
+            padding: 0 1rem;
+            color: #202020;
+        }
+
+        .section-nav a:hover,
+        .section-nav a:focus {
+            color: red;
+            text-decoration: underline;
+        }
+
+        h1 {
+            width: calc(100% - 7.5em);
+            font-weight: 300;
+            margin: 2rem 0;
+        }
+
+        main {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        section {
+            padding-bottom: 20rem;
+
+        }
+
+        section:nth-of-type(even) {
+            padding-bottom: 70rem;
+        }
+
+        section:nth-of-type(1) {
+            background:
+                right 2rem top 2rem / 15em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(2) {
+            background:
+                right 2rem top calc(2 * var(--linkheight)) / 15em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(3) {
+            background: right 2rem top calc(3 * var(--linkheight)) / 15em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(4) {
+            padding-bottom: 0;
+            background: right 2rem top calc(4 * var(--linkheight)) / 15em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(4) section:nth-of-type(1) {
+            background: right 2rem top calc(5 * var(--linkheight)) / 14em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(4) section:nth-of-type(2) {
+            background: right 2rem top calc(6 * var(--linkheight)) / 14em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(4) section:nth-of-type(3) {
+            background: right 2rem top calc(7 * var(--linkheight)) / 14em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(4) section:nth-of-type(4) {
+            background: right 2rem top calc(8 * var(--linkheight)) / 14em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(4) section:nth-of-type(5) {
+            background: right 2rem top calc(9 * var(--linkheight)) / 14em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(4) section:nth-of-type(6) {
+            background: right 2rem top calc(10 * var(--linkheight)) / 14em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(4) section:nth-of-type(7) {
+            background: right 2rem top calc(11 * var(--linkheight)) / 14em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(4) section:nth-of-type(8) {
+            background: right 2rem top calc(12 * var(--linkheight)) / 14em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(5) {
+            background: right 2rem top calc(13 * var(--linkheight)) / 15em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(6) {
+            background: right 2rem top calc(14 * var(--linkheight)) / 15em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(7) {
+            background: right 2rem top calc(15 * var(--linkheight)) / 15em var(--linkheight) no-repeat linear-gradient(#ccc, #ccc);
+
+        }
+
+        section:nth-of-type(n),
+        section:nth-of-type(4) section:nth-of-type(n) {
+            background-attachment: fixed;
+        }
+        section{
+            /* margin: 10px;
+            /* width: 70%; */
+            /* border: solid 2px black; */ 
+        }
+    </style>
+
+</head>
+
+<body>
+ 
+    <main>
+        <div>
+            <h1>Smooth Scrolling - ScrollSpy</h1>
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>…</p>
+            </section>
+            <section id="overview">
+                <h2>Detailed Overview</h2>
+                <p>…</p>
+            </section>
+            <section id="Para 1">
+                <h2>Para 1</h2>
+                <p>…</p>
+            </section>
+            <section id="endpoints">
+                <h2>Endpoints</h2>
+                <section id="endpoints--root">
+                    <h3>Root</h3>
+                    <p>…</p>
+                </section>
+                <section id="endpoints--cities-overview">
+                    <h3>Cities Overview</h3>
+                    <p>…</p>
+                </section>
+                <section id="endpoints--city-detail">
+                    <h3>City Detail</h3>
+                    <p>…</p>
+                </section>
+                <section id="endpoints--city-config">
+                    <h3>City Config</h3>
+                    <p>…</p>
+                </section>
+                <section id="endpoints--city-spots-overview">
+                    <h3>City Spots Overview</h3>
+                    <p>…</p>
+                </section>
+                <section id="endpoints--city-spot-detail">
+                    <h3>City Spot Detail</h3>
+                    <p>…</p>
+                </section>
+                <section id="endpoints--city-icons-overview">
+                    <h3>City Icons Overview</h3>
+                    <p>…</p>
+                </section>
+                <section id="endpoints--city-icon-detail">
+                    <h3>City Icon Detail</h3>
+                    <p>…</p>
+                </section>
+            </section>
+            <section id="links">
+                <h2>Links</h2>
+                <p>…</p>
+            </section>
+            <section id="expanders">
+                <h2>Expanders</h2>
+                <p>…</p>
+            </section>
+            <section id="filters">
+                <h2>Filters</h2>
+                <p>…</p>
+            </section>
+        </div>
+        <nav class="section-nav">
+            <ol>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#overview">Detailed overview</a></li>
+                <li><a href="#Para 1">Para 1</a></li>
+                <li><a href="#endpoints">Endpoints</a>
+                    <ul>
+                        <li class=""><a href="#endpoints--root">Root</a></li>
+                        <li class=""><a href="#endpoints--cities-overview">Cities Overview</a></li>
+                        <li class=""><a href="#endpoints--city-detail">City Detail</a></li>
+                        <li class=""><a href="#endpoints--city-config">City Config</a></li>
+                        <li class=""><a href="#endpoints--city-spots-overview">City Spots Overview</a></li>
+                        <li class=""><a href="#endpoints--city-spot-detail">City Spot Detail</a></li>
+                        <li class=""><a href="#endpoints--city-icons-overview">City Icons Overview</a></li>
+                        <li class=""><a href="#endpoints--city-icon-detail">City Icon Detail</a></li>
+                    </ul>
+                </li>
+                <li class=""><a href="#links">Links</a></li>
+                <li class=""><a href="#expanders">Expanders</a></li>
+                <li class=""><a href="#filters">Filters</a></li>
+            </ol>
+        </nav>
+    </main>
+    <!-- partial -->
+
+</body>
+
+</html>

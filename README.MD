@@ -48,7 +48,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Ripple Effect](#RippleEffect)
 1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
 1. [Neumorphism Card Design](#neumorphism-card-design)
-
+1. [ScrollSpy Smooth Navigation](#ScrollSpy)
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -287,6 +287,19 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ***
 &nbsp;
+
+## <a id="ScrollSpy"></a>ScrollSpy Design
+[<img src="images/scrollspy (1).jpg" height="230" title="Demo 1">](https://codepen.io/anuragmandloi/pen/abGMxZW)
+[<img src="images/scrollspy (2).jpg" height="230" title="Demo 2">](https://codepen.io/anuragmandloi/pen/abGMxZW)
+[<img src="images/scrollspy (3).jpg" height="230" title="Demo 3">](https://codepen.io/anuragmandloi/pen/abGMxZW)
+[<img src="images/scrollspy (4).jpg" height="230" title="Demo 4">](https://codepen.io/anuragmandloi/pen/abGMxZW)
+
+
+**[⬆ back to top](#quick-links)**
+
+***
+&nbsp;
+
 
 ## Contributing
 
