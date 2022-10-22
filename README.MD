@@ -48,6 +48,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Ripple Effect](#RippleEffect)
 1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
 1. [Neumorphism Card Design](#neumorphism-card-design)
+1. [Dark Mode](#DarkMode)
 
 
 ## <a id="Accordion"></a>Accordion / Toggle
