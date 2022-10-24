@@ -28,20 +28,20 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
   - [Quick links](#quick-links)
   - [<a id="Accordion"></a>Accordion / Toggle](#accordion--toggle)
   - [<a id="Carousel"></a>Carousel](#carousel)
-  - [<a id="Counter"></a>Counter of checked check-boxes](#counter-of-checked-check-boxes)
-  - [<a id="Flip"></a>Flip on click](#flip-on-click)
-  - [<a id="Floating"></a>Floating label on Textfield](#floating-label-on-textfield)
+  - [<a id="Counter"></a>Counter of Checked Check-boxes](#counter-of-checked-check-boxes)
+  - [<a id="Flip"></a>Flip on Click](#flip-on-click)
+  - [<a id="Floating"></a>Floating Label on Textfield](#floating-label-on-textfield)
   - [<a id="Font"></a>Font-Face (Latin)](#font-face-latin)
-  - [<a id="Info"></a>Info on hover/ Popover](#info-on-hover-popover)
+  - [<a id="Info"></a>Info on Hover / Popover](#info-on-hover--popover)
   - [<a id="Image"></a>Image Gallery](#image-gallery)
   - [<a id="Loaders"></a>Loaders](#loaders)
   - [<a id="DropdownMenu"></a>Dropdown Menu](#dropdown-menu)
-  - [<a id="Mobile"></a>Mobile menu off canvas](#mobile-menu-off-canvas)
+  - [<a id="Mobile"></a>Mobile Menu Off Canvas](#mobile-menu-off-canvas)
   - [<a id="BurgerMenu"></a>Burger Menu](#burger-menu)
   - [<a id="FancyMenu"></a>Fancy Menu](#fancy-menu)
-  - [<a id="Modal"></a>Modal/Popup](#modalpopup)
-  - [<a id="Mouse"></a>Mouse tracking](#mouse-tracking)
-  - [<a id="Parallax"></a>Parallax scrolling](#parallax-scrolling)
+  - [<a id="Modal"></a>Modal / Popup](#modal--popup)
+  - [<a id="Mouse"></a>Mouse Tracking](#mouse-tracking)
+  - [<a id="Parallax"></a>Parallax Scrolling](#parallax-scrolling)
   - [<a id="Tabs"></a>Tabs](#tabs)
   - [<a id="Todo"></a>Todo List](#todo-list)
   - [<a id="Tooltips"></a>Tooltips](#tooltips)
@@ -77,7 +77,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
-## <a id="Counter"></a>Counter of checked check-boxes
+## <a id="Counter"></a>Counter of Checked Check-boxes
 
 [<img src="images/checkedcounter.png" height="230" title="Demo 1">](https://codepen.io/anon/pen/eZWXOZ)
 [<img src="images/checkedcounter2.png" height="230" title="Demo 2">](http://codepen.io/lonekorean/pen/wKbzv)
@@ -87,7 +87,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
-## <a id="Flip"></a>Flip on click
+## <a id="Flip"></a>Flip on Click
 
 [<img src="images/flipper.png" height="230" title="Demo">](https://codepen.io/RuudBurger/pen/bwjry)
 
@@ -96,7 +96,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
-## <a id="Floating"></a>Floating label on Textfield
+## <a id="Floating"></a>Floating Label on Textfield
 
 [<img src="images/textfields.png" height="230" title="Demo">](http://codepen.io/KtorZ/pen/ZOzdqG)
 
@@ -114,7 +114,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
-## <a id="Info"></a>Info on hover/ Popover
+## <a id="Info"></a>Info on Hover / Popover
 
 [<img src="images/tooltips.png" height="230" title="Demo 1">](https://codepen.io/guuslieben/pen/gabQWM)
 [<img src="images/tooltips2.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
@@ -162,7 +162,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
-## <a id="Mobile"></a>Mobile menu off canvas
+## <a id="Mobile"></a>Mobile Menu Off Canvas
 
 [<img src="images/menu.png" height="230" title="Demo">](https://codepen.io/fabricionaweb/pen/xOLwxj)
 
@@ -189,7 +189,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
-## <a id="Modal"></a>Modal/Popup
+## <a id="Modal"></a>Modal / Popup
 
 [<img src="images/modal2.png" height="230" title="Demo 1">](https://codepen.io/peiche/pen/vhqym)
 [<img src="images/modal.png" height="230" title="Demo 2">](https://codepen.io/chrisburnell/pen/scyKF)
@@ -199,7 +199,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
-## <a id="Mouse"></a>Mouse tracking
+## <a id="Mouse"></a>Mouse Tracking
 
 [<img src="images/mousetracking.png" height="230" title="Demo">](https://codepen.io/Momciloo/pen/GoGRrQ)
 
@@ -208,7 +208,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ***
 &nbsp;
 
-## <a id="Parallax"></a>Parallax scrolling
+## <a id="Parallax"></a>Parallax Scrolling
 
 [<img src="images/parallax.png" height="230" title="Demo">](http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/)
 
