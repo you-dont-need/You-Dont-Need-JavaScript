@@ -23,31 +23,35 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 &nbsp;
 
 ## Quick links
-1. [Accordion / Toggle](#Accordion)
-1. [Carousel](#Carousel)
-1. [Counter of checked check-boxes](#Counter)
-1. [Flip on click](#Flip)
-1. [Floating label on Textfield](#Floating)
-1. [Font-Face (Latin)](#Font)
-1. [Info on hover/ Popover](#Info)
-1. [Image Gallery](#Image)
-1. [Loaders](#Loaders)
-1. [Dropdown Menu](#DropdownMenu)
-1. [Mobile menu off canvas](#Mobile)
-1. [Burger menu](#BurgerMenu)
-1. [Fancy menu](#FancyMenu)
-1. [Modal/Popup](#Modal)
-1. [Mouse tracking](#Mouse)
-1. [Parallax scrolling](#Parallax)
-1. [Tabs](#Tabs)
-1. [Todo List](#Todo)
-1. [Tooltips](#Tooltips)
-1. [Treeview](#Treeview)
-1. [Twitter Heart Animation](#Twitter)
-1. [Dynamic Image Colorizing](#ImageColorizing)
-1. [Ripple Effect](#RippleEffect)
-1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
-1. [Neumorphism Card Design](#neumorphism-card-design)
+- [You Don't Need JavaScript](#you-dont-need-javascript)
+    - [Style Guide:](#style-guide)
+  - [Quick links](#quick-links)
+  - [<a id="Accordion"></a>Accordion / Toggle](#accordion--toggle)
+  - [<a id="Carousel"></a>Carousel](#carousel)
+  - [<a id="Counter"></a>Counter of checked check-boxes](#counter-of-checked-check-boxes)
+  - [<a id="Flip"></a>Flip on click](#flip-on-click)
+  - [<a id="Floating"></a>Floating label on Textfield](#floating-label-on-textfield)
+  - [<a id="Font"></a>Font-Face (Latin)](#font-face-latin)
+  - [<a id="Info"></a>Info on hover/ Popover](#info-on-hover-popover)
+  - [<a id="Image"></a>Image Gallery](#image-gallery)
+  - [<a id="Loaders"></a>Loaders](#loaders)
+  - [<a id="DropdownMenu"></a>Dropdown Menu](#dropdown-menu)
+  - [<a id="Mobile"></a>Mobile menu off canvas](#mobile-menu-off-canvas)
+  - [<a id="BurgerMenu"></a>Burger Menu](#burger-menu)
+  - [<a id="FancyMenu"></a>Fancy Menu](#fancy-menu)
+  - [<a id="Modal"></a>Modal/Popup](#modalpopup)
+  - [<a id="Mouse"></a>Mouse tracking](#mouse-tracking)
+  - [<a id="Parallax"></a>Parallax scrolling](#parallax-scrolling)
+  - [<a id="Tabs"></a>Tabs](#tabs)
+  - [<a id="Todo"></a>Todo List](#todo-list)
+  - [<a id="Tooltips"></a>Tooltips](#tooltips)
+  - [<a id="Treeview"></a>Treeview](#treeview)
+  - [<a id="Twitter"></a>Twitter Heart Animation](#twitter-heart-animation)
+  - [<a id="ImageColorizing"></a>Dynamic Image Colorizing](#dynamic-image-colorizing)
+  - [<a id="RippleEffect"></a>Ripple Effect](#ripple-effect)
+  - [<a id="ResponsiveItemShowcase"></a>Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
+  - [<a id="NeumorphismCardDesign"></a>Neumorphism Card Design](#neumorphism-card-design)
+  - [Contributing](#contributing)
 
 
 ## <a id="Accordion"></a>Accordion / Toggle
@@ -290,4 +294,4 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 ## Contributing
 
-Welcome to contribute to this project. Send us a Pull Request now!
+Welcome to contribute to this project. Send us a pull request now!
