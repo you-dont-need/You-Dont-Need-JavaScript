@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+perspective:1000px;
+padding-top:300px;
+}
+
+[class='cubeMain'] {position:absolute;
+transform-style:preserve-3d;
+left:40%;
+top:40%;
+animation: ani 6s ease-in-out infinite;
+}
+.cube{
+width:100px;
+height:100px;
+position:absolute;
+box-shadow:0 0 0px 2px black;
+font-size:40px;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+opacity:1;
+
+}
+.cube:nth-child(1){
+background:blue;
+transform:rotate3d(0,1,0,0deg) translateZ(50px);
+}
+.cube:nth-child(2){
+background:yellow;
+transform:rotate3d(0,1,0,90deg) translateZ(50px);
+}
+.cube:nth-child(3){
+background:black;
+transform:rotate3d(0,1,0,180deg) translateZ(50px);
+}
+.cube:nth-child(4){
+background:red;
+transform:rotate3d(0,1,0,270deg) translateZ(50px);
+}
+.cube:nth-child(5){
+background:aqua;
+transform:rotate3d(1,0,0,90deg) translateZ(50px);
+}
+.cube:nth-child(6){
+background:magenta;
+transform:rotate3d(1,0,0,-90deg) translateZ(50px);
+}
+@keyframes ani{
+0%{
+transform:rotateY(0deg) rotateX(0deg);
+}
+20%{
+transform:rotateY(-90deg) rotateX(0deg);
+}
+40%{
+transform:rotateY(180deg) rotateX(0deg);
+}
+60%{
+transform:rotateY(90deg) rotateX(0deg);
+}
+80%{
+transform:rotateY(0deg) rotateX(-90deg);
+}
+100%{
+transform:rotateY(0deg) rotateX(90deg);
+}
+}
+</style>
+<body>
+<div class="cubeMain">
+<div class="cube">1</div>
+<div class="cube">2</div>
+<div class="cube">3</div>
+<div class="cube">4</div>
+<div class="cube">5</div>
+<div class="cube">6</div>
+</div>
+
+
+
+</body>
+</html>
