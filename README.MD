@@ -126,6 +126,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 ## <a id="Image"></a>Image Gallery
 [<img src="images/gallery.png" height="230" title="Demo 1">](https://codepen.io/shaishgandhi/pen/yJzamw)
 [<img src="images/gallery2.png" height="230" title="Demo 2">](http://codepen.io/pavlovsk/pen/sjubp)
+[<img src="images/gallery3.png" height="230" title="Demo 2">](https://codepen.io/olgamozejko/pen/yLjwyye)
 
 **[⬆ back to top](#quick-links)**
 
