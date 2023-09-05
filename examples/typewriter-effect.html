@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typewriter Effect</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+      :root {
+        --typewriterSpeed: 3s;
+        --bgC: black;
+        --fgC: white;
+        --totalLetters: 16;
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      ::selection {
+        background-color: var(--fgC);
+        color: var(--bgC);
+      }
+
+      html {
+        font-size: 10px;
+      }
+
+      body {
+        font-family: "Cutive Mono", monospace;
+        background-color: var(--bgC);
+      }
+
+      .container {
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: clamp(1.4rem, 2vw + 1.4rem, 6rem);
+        position: relative;
+        line-height: 100%;
+        color: var(--fgC);
+      }
+
+      h1::before,
+      h1::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      h1::before {
+        background-color: var(--bgC);
+        animation: typewriter var(--typewriterSpeed) steps(var(--totalLetters))
+          1s forwards;
+      }
+
+      h1::after {
+        width: 0.1em;
+        background-color: var(--fgC);
+        animation: typewriter var(--typewriterSpeed) steps(var(--totalLetters))
+            1s forwards,
+          blinking 750ms ease infinite;
+        opacity: 0;
+      }
+
+      @keyframes typewriter {
+        to {
+          left: 100%;
+        }
+      }
+      @keyframes blinking {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Traveloper Habib</h1>
+    </div>
+  </body>
+</html>
