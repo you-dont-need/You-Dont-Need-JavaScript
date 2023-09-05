@@ -4,7 +4,7 @@ English | [简体中文](./README-zh_CN.md)
 
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/you-dont-need/javascript)
 
-Please note these demos should be considered as CSS "Proofs of Concepts". They may have serious issues from accessibility point of view (keyboard navigation, speech synthesis, etc.), or progressive enhancement/degradation/etc.
+Please note demos may have serious issues regarding accessibility (keyboard navigation, speech synthesis, etc.), or progressive enhancement/degradation/etc.
 
 ### Style Guide:
 
@@ -51,7 +51,8 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 1. [Ripple Effect](#RippleEffect)
 1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
 1. [Neumorphism Card Design](#neumorphism-card-design)
-1. [Typewriter Effect](#TypewriterEffect)
+1. [Neon Button](#neon-button)
+1. [Typewriter Effect](#typewriter-effect)
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -136,6 +137,7 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 [<img src="images/gallery.png" height="230" title="Demo 1">](https://codepen.io/shaishgandhi/pen/yJzamw)
 [<img src="images/gallery2.png" height="230" title="Demo 2">](http://codepen.io/pavlovsk/pen/sjubp)
+[<img src="images/gallery3.png" height="230" title="Demo 2">](https://codepen.io/olgamozejko/pen/yLjwyye)
 
 **[⬆ back to top](#quick-links)**
 
@@ -318,9 +320,19 @@ Please note these demos should be considered as CSS "Proofs of Concepts". They m
 
 &nbsp;
 
-## <a id="TypewriterEffect"></a>Typewriter Effect
+## <a id="neon-button"></a>Neon Button
 
-[<img src="images/typewriter-effect.gif" height="230" title="Typewriter Effect">](https://codepen.io/hrshainik/pen/PopRWGN)
+[<img src="images/neon-button.gif" title="Neon Button">](https://codepen.io/nikhilkalburgi/pen/WNyeopW)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="typewriter-effect"></a>Typewriter Effect
+
+[<img src="images/typewriter-effect.gif" title="Typewriter Effect">](https://codepen.io/hrshainik/pen/PopRWGN)
 
 **[⬆ back to top](#quick-links)**
 
