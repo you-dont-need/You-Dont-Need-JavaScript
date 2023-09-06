@@ -1,4 +1,4 @@
-简体中文 | [English](./README.md)
+简体中文 | [English](./README.MD)
 
 # 你不需要 JavaScript
 [![加入 Spectrum 社区](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/you-dont-need/javascript)
