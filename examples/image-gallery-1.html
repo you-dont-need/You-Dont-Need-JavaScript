@@ -16,7 +16,9 @@
   }
   div.container img.small{
     width:150px;
+    height: 115px;
     position:relative;
+    top:0px;
     bottom:0px;
     float:left;
     z-index:1000;
@@ -26,8 +28,13 @@
     background:rgba(0,0,0,0.8);
     margin:auto;
   }
+  div.container img.small:hover {
+    background: rgb(255, 255, 255); 
+    transition:0.2s all ease-in;
+  }
   div.container img.large{
     width:100%;
+    height: max-content;
     transition:0.5s all ease-in;
     position:absolute;
     z-index:-1;

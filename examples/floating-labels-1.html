@@ -17,16 +17,14 @@
             align-items: center;
             justify-content: center;
         }
-
         .wrapper {
             flex-direction: column;
-            margin-top: 200px;
+            margin-top: 80px;
         }
-
-        
         .material-textfield {
-            height: 4rem;
-            padding-top: 2rem;
+            height: 6rem;
+            position:static;
+            align-items:center;
         }
 
         .material-textfield input {
@@ -127,26 +125,67 @@
         .material-textfield.red input:invalid~label::before {
             color: #F44336;
         }
+        body {
+          background-color: #f0f0f0;
+      }
+      .box {
+        position: fixed;
+        top: 25%; 
+        left: 40%; 
+        width: 20%; 
+        height: 50%; 
+        background-color: transparent;
+        border: 2px solid #d2190b;
+        z-index: 9999; 
+    }
+    
+      .button-box {
+          width: 200px;
+          height: 30px;
+          background: linear-gradient(to bottom, #3498db, #2980b9);
+          border: 1px solid #2980b9;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+          text-align: center;
+          
+      }
+
+      .button-box a {
+          text-decoration: none;
+          color: white;
+          font-size:25px;
+          font-weight: bold;
+          font-family:Arial, Helvetica, sans-serif;
+          align-items: center;
+
+      }
+
+      .button-box:hover {
+          transform: translateY(-5px);
+          background-color: antiquewhite;
+
+      }
     </style>
 
 </head>
 
 <body>
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <div class="box">
     <div class="container">
         <div class="wrapper">
             <div class="material-textfield blue">
                 <input type="text" required />
                 <label data-content="username">username</label>
             </div>
-
             <div class="material-textfield red">
                 <input type="password" required />
                 <label data-content="password">password</label>
             </div>
+            <div class="button-box">
+              <a href="#">SUBMIT</a>
+          </div>
         </div>
+      </div>
     </div>
 </body>
 
