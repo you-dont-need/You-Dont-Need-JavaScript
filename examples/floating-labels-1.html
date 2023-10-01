@@ -11,11 +11,30 @@
         /* CSS styles */
         /* Example by Matthias Benkort at http://codepen.io/KtorZ/pen/ZOzdqG */
         @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
-
+        body{
+           
+            background: linear-gradient(to  right, #073c8a 0%, #d923ac 100%);
+        }
+        body:hover{
+            background: linear-gradient(to  right, #092b5e 0%, #b91390 100%);
+        }
         .container {
             display: flex;
+            background: linear-gradient(to  right, black 0%, rgb(94, 91, 91) 100%);
+            color: whitesmoke !important;
             align-items: center;
             justify-content: center;
+            border-radius: 30%;
+        }
+        .container:hover{
+            width: 220px;
+            height: 450px;
+            background: black;
+        }
+        .box:hover{
+            width: 250px;
+            height: 470px;
+            background: black;
         }
         .wrapper {
             flex-direction: column;
@@ -93,15 +112,17 @@
         .material-textfield.blue input {
             border-bottom: 0.1rem solid #03A9F4;
             color: #0275a8;
+            
         }
 
         .material-textfield.blue label::after {
-            background: #03A9F4;
+            background: linear-gradient(to  right, #0066ff 0%, #ff33cc 100%);
         }
 
         .material-textfield.blue label::before,
         .material-textfield.blue input[required]:focus~label::before {
             color: #47c4fd;
+            
         }
 
         .material-textfield.blue input:invalid~label::before {
@@ -125,18 +146,18 @@
         .material-textfield.red input:invalid~label::before {
             color: #F44336;
         }
-        body {
-          background-color: #f0f0f0;
-      }
+      
       .box {
         position: fixed;
         top: 25%; 
         left: 40%; 
         width: 20%; 
         height: 50%; 
-        background-color: transparent;
-        border: 2px solid #d2190b;
+        background: linear-gradient(to  right, black 0%, rgb(94, 91, 91) 100%);
+        border: 3px solid #89898c;
         z-index: 9999; 
+        color: whitesmoke;
+        border-radius: 10%;
     }
     
       .button-box {
@@ -175,7 +196,7 @@
         <div class="wrapper">
             <div class="material-textfield blue">
                 <input type="text" required />
-                <label data-content="username">username</label>
+                <label data-content="username" >username</label>
             </div>
             <div class="material-textfield red">
                 <input type="password" required />
