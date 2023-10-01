@@ -48,6 +48,7 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
 1. [Neumorphism Card Design](#neumorphism-card-design)
 1. [Neon Button](#neon-button)
+1. [Shake Button](#shake-button)
 
 
 ## <a id="Accordion"></a>Accordion / Toggle
