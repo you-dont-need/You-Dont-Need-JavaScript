@@ -12,14 +12,14 @@
             box-sizing: border-box;
         }
 
-        /* Create a centered container */
+        
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-image: url('../images/gif.gif'); /* Replace with your background image */
+            background-image: url('../images/gif.gif');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -32,7 +32,7 @@
             display: none;
             flex-direction: column;
             align-items: center;
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            background: rgba(255, 255, 255, 0.9); 
             padding: 20px;
             border-radius: 50px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -70,7 +70,6 @@
             cursor: pointer;
         }
 
-        /* Use :target pseudo-class to show the form when the target is selected */
         .login-container:target {
             display: flex;
         }
@@ -96,7 +95,7 @@
             margin: 10px;
         }
 
-        /* Style the image */
+        /* Styling the image */
         .login-image {
             max-width: 15%;
             height: auto;
@@ -128,9 +127,6 @@
     
     <div class="container">
         <img src="../images/gorilla.webp" alt="Image" class="login-image"> 
-        
-
-        <!-- Replace with your image -->
 
         <div class="login-container" id="form1">
             <h2>Login Form </h2>
