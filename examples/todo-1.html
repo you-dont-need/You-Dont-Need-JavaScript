@@ -10,8 +10,31 @@
             /* CSS styles */
         /* Example by Tymon Sturgeon at http://codepen.io/scryptonite/pen/oLGzdj */
         /* boilerplate css */
-        body { margin: 10px; font: 14px/120% Sans-Serif; }
-        form { margin: 10px; border: 1px solid #ddd; padding: 8px 12px; border-radius: 4px; background: #fff; }
+        
+        body {
+          background-color: #1c105a; 
+          background-image: 
+              linear-gradient(45deg, #39063d00 75%, transparent 25%, transparent 75%, #ff008c 75%, #96a2d7);
+          background-size: 3px 5px; 
+          background-position: 0 0, 10px 10px; 
+          font: 14px/120% 'Courier New', Courier, monospace;
+          width: 50%;
+          margin: 70px auto;
+        }
+
+        form {
+          opacity: 80%;
+          margin: 10px;
+          border: 1px solid #ddd;
+          padding: 8px 12px;
+          border-radius: 4px;
+          background: #fff;
+          transition: opacity 0.4s; 
+      }
+      
+      form:hover {
+          opacity: 100%; 
+      }
         h1 { margin: 10px 0px; }
         h1 small { font-size: 45%; font-weight: normal; vertical-align: middle; }
 
@@ -260,7 +283,7 @@
             <input type="checkbox" id="todo22" name="is_22_done_b" title="23rd task" checked="checked" class="todo invisible"/>
             <input type="checkbox" id="todo23" name="is_23_done_b" title="24th task" checked="checked" class="todo invisible"/>
             <div id="todos">
-                <h1>Todos <small style="-webkit-user-select:none"></small></h1>
+                <h1>Todos <small style="user-select:none;"></small></h1>
                 <ul>
                     <li class="todo-item t0">
                         <label class="todo-label dumb-thing">
