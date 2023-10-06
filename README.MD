@@ -291,7 +291,7 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 ## <a id="neon-button"></a>Neon Button
 
-[<img src="images/neon-button.gif" title="Neon Button">](https://codepen.io/nikhilkalburgi/pen/WNyeopW))
+[<img src="images/neon_button.gif" title="Neon Button">](https://codepen.io/nikhilkalburgi/pen/WNyeopW))
 
 **[⬆ back to top](#quick-links)**
 
