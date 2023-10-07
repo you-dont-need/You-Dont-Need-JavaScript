@@ -225,7 +225,7 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 &nbsp;
 
 ## <a id="Todo"></a>Todo List
-[<img src="images/todo.png" height="230" title="Demo">](http://codepen.io/scryptonite/pen/oLGzdj)
+[<img src="images/Todo List.png" height="230" title="Demo">](https://codepen.io/SamsShow/pen/NWeerXr)
 
 **[⬆ back to top](#quick-links)**
 
