@@ -112,7 +112,7 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 ## <a id="Info"></a>Info on hover/ Popover
 
-[<img src="images/tooltips.png" height="230" title="Demo 1">](https://codepen.io/guuslieben/pen/gabQWM)
+[<img src="images/tooltips.png" height="230" title="Demo 1">](https://codepen.io/monika-sivakumar/pen/rNoqxVX)
 [<img src="images/tooltips2.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
 [<img src="images/info-on-hover.png" height="230" title="Demo 3">](http://codepen.io/SitePoint/pen/akAmPw)
 [<img src="images/tooltips.gif" height="230" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)
