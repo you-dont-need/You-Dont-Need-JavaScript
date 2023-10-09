@@ -9,7 +9,34 @@
         <style type="text/css">
             /* CSS styles */
         /* Example by Joseph Fusco at https://codepen.io/fusco/pen/Wvzjrm */
+        body{
+            color: whitesmoke;
+            background: linear-gradient(to left, rgb(19, 22, 36) 0%, rgb(40, 36, 36) 50%, rgb(24, 15, 34) 100%);
+        }p{
+            color: rgb(131, 129, 129);
+        }
+     .container{
+        background: linear-gradient(to left, rgb(35, 28, 55) 0%, rgb(18, 33, 69) 50%, rgb(44, 29, 62) 100%); 
+        color: whitesmoke;
+     }
+     .container:hover{
+        background: linear-gradient(to left, rgb(9, 8, 11) 0%, rgb(22, 28, 41) 50%, rgb(14, 2, 30) 100%); 
+        color: whitesmoke;
+     }
 
+.demo-section{
+    background: linear-gradient(to left, rgb(9, 8, 11) 0%, rgb(22, 28, 41) 50%, rgb(14, 2, 30) 100%);
+}
+.demo-section:hover{
+    background: linear-gradient(to left, rgb(35, 28, 55) 0%, rgb(18, 33, 69) 50%, rgb(44, 29, 62) 100%); 
+}
+        body:hover{
+            color: rgb(0, 0, 0);
+            background: linear-gradient(to left, rgb(236, 231, 231) 0%, rgb(161, 207, 226) 50%, rgb(230, 244, 246) 100%);
+        }
+        p:hover{
+            color: rgb(249, 249, 249);
+        }
         @import url(http://fonts.googleapis.com/css?family=Maven+Pro);
         .tab-wrap {
             -webkit-transition: 0.3s box-shadow ease;
@@ -201,7 +228,7 @@
             <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
         </div>
 
-        <div class="tab-wrap">
+        <div class="tab-wrap" style="background: black;">
 
             <!-- active tab on page load gets checked attribute -->
             <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
@@ -238,14 +265,14 @@
 
         </div>
 
-        <div class="demo-section">
+        <div class="demo-section" >
             <p>Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Phasellus volutpat, metus eget
                 egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus. Praesent nec nisl a purus blandit viverra. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 
             <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit. Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus blandit viverra.</p>
         </div>
 
-        <div class="tab-wrap">
+        <div class="tab-wrap" style="background: black;" >
 
             <input type="radio" id="tab4" name="tabGroup2" class="tab" checked>
             <label for="tab4">Apples</label>
@@ -291,7 +318,7 @@
 
         </div>
 
-        <div class="demo-section">
+        <div class="demo-section" style="background: black;" >
             <p>Etiam ut purus enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit. Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus blandit viverra.</p>
 
             <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
