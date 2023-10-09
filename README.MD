@@ -1,7 +1,8 @@
 English | [简体中文](./README-zh_CN.md)
 
 # You Don't Need JavaScript
-[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/you-dont-need/javascript)
+[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://dev.to/t/javascript
+)
 
 Please note demos may have serious issues regarding accessibility (keyboard navigation, speech synthesis, etc.), or progressive enhancement/degradation/etc.
 
@@ -48,6 +49,7 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
 1. [Neumorphism Card Design](#neumorphism-card-design)
 1. [Neon Button](#neon-button)
+1. [Shake Button](#shake-button)
 
 
 ## <a id="Accordion"></a>Accordion / Toggle
@@ -112,7 +114,7 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 ## <a id="Info"></a>Info on hover/ Popover
 
-[<img src="images/tooltips.png" height="230" title="Demo 1">](https://codepen.io/guuslieben/pen/gabQWM)
+[<img src="images/tooltips.png" height="230" title="Demo 1">](https://codepen.io/monika-sivakumar/pen/rNoqxVX)
 [<img src="images/tooltips2.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
 [<img src="images/info-on-hover.png" height="230" title="Demo 3">](http://codepen.io/SitePoint/pen/akAmPw)
 [<img src="images/tooltips.gif" height="230" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)
@@ -225,7 +227,7 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 &nbsp;
 
 ## <a id="Todo"></a>Todo List
-[<img src="images/todo.png" height="230" title="Demo">](http://codepen.io/scryptonite/pen/oLGzdj)
+[<img src="images/Todo List.png" height="230" title="Demo">](https://codepen.io/SamsShow/pen/NWeerXr)
 
 **[⬆ back to top](#quick-links)**
 
@@ -291,7 +293,16 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 ## <a id="neon-button"></a>Neon Button
 
-[<img src="images/neon-button.gif" title="Neon Button">](https://codepen.io/nikhilkalburgi/pen/WNyeopW))
+[<img src="images/neon-button.gif" title="Neon Button">](https://codepen.io/nikhilkalburgi/pen/WNyeopW)
+
+**[⬆ back to top](#quick-links)**
+
+***
+&nbsp;
+
+## <a id="shake-button"></a>Shake Button
+
+[<img src="images/shake-button.gif" height="230" title="Demo">](https://codepen.io/krushnarout/pen/zYyLEmM)
 
 **[⬆ back to top](#quick-links)**
 

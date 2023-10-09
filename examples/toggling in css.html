@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggling In CSS</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('../images/gif.gif');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: #333; /* Text color */
+        }
+
+        /* Style the login form container */
+        .login-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        /* Style the form header */
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #6835e8; /* Header color */
+        }
+
+        /* Style the form inputs */
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            font-size: 16px;
+        }
+
+        /* Style the login button */
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: #5b28f5;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .login-container:target {
+            display: flex;
+        }
+
+        /* Style the button container */
+        .login-buttons {
+            display:grid;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            border-radius: 50px;
+        }
+
+        /* Style the buttons */
+        .login-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        /* Styling the image */
+        .login-image {
+            max-width: 15%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .login-button-login-button1{
+            border-radius: 50px;
+            background-color: #5b28f5;
+            color: #fff;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+        .login-button-login-button2{
+            border-radius: 50px;
+            background-color: #5b28f5;
+            color: #fff;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <img src="../images/gorilla.webp" alt="Image" class="login-image"> 
+
+        <div class="login-container" id="form1">
+            <h2>Login Form </h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        
+        <div class="login-container" id="form2">
+            <h2>SignUP Form </h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Username" required>
+                <input type="text" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">SignUp</button>
+            </form>
+        </div>
+        <a href="#form1" class="login-button-login-button1">Login Form</a>
+        <a href="#form2" class="login-button-login-button2">SignUp Form</a>
+    </div>
+</body>
+</html>
