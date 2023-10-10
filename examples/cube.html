@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+        background-color: rgb(10, 10, 80);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 5s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  border: 2px solid #f0c506;
+  box-shadow: 0 0 10px rgba(40, 1, 213, 0.5);
+}
+
+.front { transform: translateZ(100px); background-color: rgb(0, 13, 255); }
+.back { transform: rotateY(180deg) translateZ(100px); background-color: rgb(0, 13, 255); }
+.right { transform: rotateY(90deg) translateZ(100px); background-color: rgb(0, 13, 255); }
+.left { transform: rotateY(-90deg) translateZ(100px); background-color: rgb(0, 13, 255); }
+.top { transform: rotateX(90deg) translateZ(100px); background-color: rgb(0, 13, 255); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); background-color: rgb(0, 13, 255); }
+
+@keyframes rotate {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+  </style>
+  <title>Rotating Cube Animation</title>
+</head>
+<body>
+  <div class="cube">
+    <div class="face front">Front</div>
+    <div class="face back">Back</div>
+    <div class="face right">Right</div>
+    <div class="face left">Left</div>
+    <div class="face top">Top</div>
+    <div class="face bottom">Bottom</div>
+  </div>
+</body>
+</html>
