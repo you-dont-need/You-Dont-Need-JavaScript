@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* imported font from Google Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@400;500;600;700&family=Raleway:wght@300&family=Roboto+Slab:wght@300;400;600&family=Ubuntu&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      /* container item holds the two cards */
+      #container {
+        background: url("https://images.unsplash.com/photo-1506452305024-9d3f02d1c9b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        padding: 90px;
+      }
+      /* styles for card1 */
+      #card1 {
+        border: 1px solid rgb(92, 92, 92);
+        height: 50vh;
+        padding: 20px;
+        width: 400px;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        background-color: rgba(17, 25, 40, 0.33);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition:  0.4s;
+      }
+      #card1 img{
+        height: 200px;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+      }
+      #card1 h1{
+        font-size: 21px;
+        color: rgb(204, 204, 204);
+        font-weight: 200;
+        margin-top: 10px;
+      }
+      #card1 h2 {
+        font-size: 18px;
+        color: rgb(151, 151, 151);
+        font-weight: 200;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      #card1 button {
+        border: 1px solid rgb(117, 117, 117);
+        background: transparent;
+        color: white;
+        width: 200px;
+        height: 30px;
+        font-size: 15px;
+        font-weight: 200;
+        border-radius: 12px;
+        transition: 0.2s ease;
+      }
+      #card1 button:hover {
+        cursor: pointer;
+        border: 0px;
+        background: white;
+        color: rgb(61, 61, 61);
+      }
+      #card1:hover{
+        transform: translateY(-2px) scale(1.03);
+      }
+      /* similar styles for card2  */
+      #card2 {
+        border: 1px solid black;
+        height: 50vh;
+        padding: 20px;
+        width: 400px;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        background-color: rgba(17, 25, 40, 0.33);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition:  0.4s;
+      }
+      #card2 img{
+        height: 200px;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+      }
+      #card2 h1{
+        font-size: 21px;
+        color: rgb(204, 204, 204);
+        font-weight: 200;
+        margin-top: 10px;
+      }
+      #card2 h2 {
+        font-size: 18px;
+        color: rgb(151, 151, 151);
+        font-weight: 200;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      #card2 button {
+        border: 1px solid rgb(117, 117, 117);
+        background: transparent;
+        color: white;
+        width: 200px;
+        height: 30px;
+        font-size: 15px;
+        font-weight: 200;
+        border-radius: 12px;
+        transition: 0.2s ease;
+      }
+      #card2 button:hover {
+        cursor: pointer;
+        border: 0px;
+        background: white;
+        color: rgb(61, 61, 61);
+      }
+      #card2:hover{
+        transform: translateY(-2px) scale(1.03);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="card1">
+        <img src="https://images.unsplash.com/photo-1568205638206-1c38fae1e6fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1960&q=80" alt="">
+        <h1>Nwantiti Creek</h1>
+        <h2>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, illo.
+        </h2>
+        <button>Explore</button>
+      </div>
+      <div id="card2">
+        <img src="https://images.unsplash.com/photo-1573126617899-41f1dffb196c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
+        <h1>Rawnson Creek</h1>
+        <h2>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, illo.
+        </h2>
+        <button>Explore</button>
+      </div>
+    </div>
+  </body>
+</html>
