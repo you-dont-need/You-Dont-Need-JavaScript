@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins";
+    line-height: 1.7em; 
+}
+
+.container{
+    height: 100%;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn{
+    display: inline-block;
+    padding: 07px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 03px;
+    background: #1546b0;
+}
+
+.lead{
+    font-size: 16px;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.bg-primary{
+    width: 100%;
+    border-bottom: 0.5px solid #ddd;
+}
+
+.bg-primary-1{
+    background-color: #ddd;
+    padding: 10px 22px;
+    color: #333;
+    text-align: center;
+    display: inline-block;
+}
+
+.names{
+    font-size: 20px;
+}
+/*Navbar*/
+#navbar{
+    background-color:#131122f2;
+    overflow: auto;
+}
+#navbar h1{
+    float: left;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+#navbar ul{
+    list-style: none;
+    float: right;
+}
+
+#navbar ul li{
+    float: left;
+}
+
+#navbar ul li a{
+    display: block; 
+    text-align: center;
+    padding: 20px;
+    transition: all 0.5s;
+}
+
+#navbar ul li a:hover,
+#navbar ui li a:current{
+    background: #4397ea;
+    transition: all 0.3;
+}
+
+/*showcase*/
+#showcase{
+    background: url(img/img2.jpg) no-repeat
+    center center/cover;
+    min-height: 650px;
+}
+
+.showcase-content{
+    padding-top: 150px;
+    color: black;
+    text-align: center;
+    padding-left: 30px;
+}
+.showcase-content h2{
+    font-size: 52px;
+    line-height: 1.9em;
+}
+
+.showcase-content p{
+    font-size: 25px;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.showcase-content a:hover{
+    background: #4397ea;
+    transition: all 0.3;
+}
+
+/*author*/
+#authors{
+    background: url(img/background.jpg) no-repeat
+    center center/cover;
+    min-height: 700px;
+    padding-top: 40px;
+}
+
+.auth{
+    float: left;
+    height: 500px;
+    width: 33%;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: 20 01;
+}
+
+.auth img{
+    border-radius: 50%;
+    height: 8rem;
+    width: 8rem;
+}
+
+/*contact*/
+
+.contact{
+    background: #ebebeb;
+    min-height: 100vh;
+}
+
+.text-center{
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+}
+
+.form{
+    max-width: 62%;
+    margin: 25px auto;
+}
+
+.form-input{
+    width: 100%;
+    font-size: 18px;
+    border: 2px solid grey;
+    border-radius: 6px;
+    margin: 14px 0;
+    padding: 5px 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*popup*/
+
+.popup{
+    width: 400px;
+    background: #f0e207;;
+    border-radius: 6px;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%,-50%)scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    margin-top: -300px;
+    visibility: hidden;
+    transition: transform 0.4s,top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    transform: translate(-50%,-50%)scale(1);
+    left: 50%;
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    color: white;
+    border: 0;
+    background-color: #6fd649;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
