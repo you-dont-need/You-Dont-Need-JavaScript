@@ -197,7 +197,9 @@
 
 ## <a id="Mouse"></a>鼠标跟随
 
-[<img src="images/mousetracking.png" height="230" title="Demo">](https://codepen.io/Momciloo/pen/GoGRrQ)
+[<img src="images/mousetracking.png" height="230" title="Demo 1">](https://codepen.io/Momciloo/pen/GoGRrQ)
+[<img src="images/mouse-tracking-2.gif" height="230" title="Demo 2">](https://codepen.io/masterujjval/pen/xxmBRJV)
+
 
 **[⬆ 回到顶部](#quick-links)**
 
