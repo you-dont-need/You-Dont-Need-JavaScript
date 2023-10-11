@@ -1,0 +1,2593 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>No JS Mouse Tracking Demo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+
+  /* CSS styles */
+
+  
+
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow: hidden;
+    cursor:crosshair;
+  }
+
+  .grid {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+    width: calc(100vw + 17px);
+  }
+  .grid .grid-item {
+    position: relative;
+    z-index: 20;
+    float: left;
+    width: 3.33333vw;
+    border: 1px solid rgba(56, 93, 173, 0.02);
+  }
+  .grid .grid-item:nth-child(1):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(2):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(3):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(4):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(5):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(6):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(7):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(8):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(9):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(10):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(11):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(12):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(13):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(14):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(15):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(16):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(17):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(18):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(19):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(20):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(21):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(22):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(23):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(24):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(25):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(26):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(27):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(28):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(29):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(30):hover ~ .playground .point {
+    top: 1.16667vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(31):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(32):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(33):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(34):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(35):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(36):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(37):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(38):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(39):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(40):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(41):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(42):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(43):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(44):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(45):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(46):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(47):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(48):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(49):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(50):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(51):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(52):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(53):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(54):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(55):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(56):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(57):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(58):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(59):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(60):hover ~ .playground .point {
+    top: 4.5vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(61):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(62):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(63):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(64):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(65):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(66):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(67):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(68):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(69):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(70):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(71):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(72):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(73):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(74):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(75):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(76):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(77):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(78):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(79):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(80):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(81):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(82):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(83):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(84):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(85):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(86):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(87):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(88):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(89):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(90):hover ~ .playground .point {
+    top: 7.83333vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(91):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(92):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(93):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(94):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(95):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(96):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(97):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(98):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(99):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(100):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(101):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(102):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(103):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(104):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(105):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(106):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(107):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(108):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(109):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(110):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(111):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(112):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(113):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(114):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(115):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(116):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(117):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(118):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(119):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(120):hover ~ .playground .point {
+    top: 11.16667vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(121):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(122):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(123):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(124):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(125):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(126):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(127):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(128):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(129):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(130):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(131):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(132):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(133):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(134):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(135):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(136):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(137):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(138):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(139):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(140):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(141):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(142):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(143):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(144):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(145):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(146):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(147):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(148):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(149):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(150):hover ~ .playground .point {
+    top: 14.5vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(151):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(152):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(153):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(154):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(155):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(156):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(157):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(158):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(159):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(160):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(161):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(162):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(163):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(164):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(165):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(166):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(167):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(168):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(169):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(170):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(171):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(172):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(173):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(174):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(175):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(176):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(177):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(178):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(179):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(180):hover ~ .playground .point {
+    top: 17.83333vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(181):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(182):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(183):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(184):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(185):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(186):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(187):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(188):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(189):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(190):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(191):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(192):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(193):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(194):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(195):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(196):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(197):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(198):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(199):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(200):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(201):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(202):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(203):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(204):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(205):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(206):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(207):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(208):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(209):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(210):hover ~ .playground .point {
+    top: 21.16667vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(211):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(212):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(213):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(214):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(215):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(216):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(217):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(218):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(219):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(220):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(221):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(222):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(223):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(224):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(225):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(226):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(227):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(228):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(229):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(230):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(231):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(232):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(233):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(234):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(235):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(236):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(237):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(238):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(239):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(240):hover ~ .playground .point {
+    top: 24.5vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(241):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(242):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(243):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(244):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(245):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(246):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(247):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(248):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(249):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(250):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(251):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(252):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(253):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(254):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(255):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(256):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(257):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(258):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(259):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(260):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(261):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(262):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(263):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(264):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(265):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(266):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(267):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(268):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(269):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(270):hover ~ .playground .point {
+    top: 27.83333vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(271):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(272):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(273):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(274):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(275):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(276):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(277):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(278):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(279):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(280):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(281):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(282):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(283):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(284):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(285):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(286):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(287):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(288):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(289):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(290):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(291):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(292):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(293):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(294):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(295):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(296):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(297):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(298):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(299):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(300):hover ~ .playground .point {
+    top: 31.16667vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(301):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(302):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(303):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(304):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(305):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(306):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(307):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(308):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(309):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(310):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(311):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(312):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(313):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(314):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(315):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(316):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(317):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(318):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(319):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(320):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(321):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(322):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(323):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(324):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(325):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(326):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(327):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(328):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(329):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(330):hover ~ .playground .point {
+    top: 34.5vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(331):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(332):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(333):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(334):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(335):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(336):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(337):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(338):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(339):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(340):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(341):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(342):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(343):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(344):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(345):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(346):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(347):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(348):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(349):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(350):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(351):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(352):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(353):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(354):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(355):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(356):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(357):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(358):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(359):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(360):hover ~ .playground .point {
+    top: 37.83333vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(361):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(362):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(363):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(364):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(365):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(366):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(367):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(368):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(369):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(370):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(371):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(372):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(373):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(374):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(375):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(376):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(377):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(378):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(379):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(380):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(381):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(382):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(383):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(384):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(385):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(386):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(387):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(388):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(389):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(390):hover ~ .playground .point {
+    top: 41.16667vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(391):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(392):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(393):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(394):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(395):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(396):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(397):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(398):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(399):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(400):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(401):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(402):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(403):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(404):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(405):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(406):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(407):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(408):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(409):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(410):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(411):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(412):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(413):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(414):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(415):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(416):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(417):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(418):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(419):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(420):hover ~ .playground .point {
+    top: 44.5vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(421):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(422):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(423):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(424):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(425):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(426):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(427):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(428):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(429):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(430):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(431):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(432):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(433):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(434):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(435):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(436):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(437):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(438):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(439):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(440):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(441):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(442):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(443):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(444):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(445):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(446):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(447):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(448):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(449):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(450):hover ~ .playground .point {
+    top: 47.83333vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(451):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(452):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(453):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(454):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(455):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(456):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(457):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(458):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(459):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(460):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(461):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(462):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(463):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(464):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(465):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(466):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(467):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(468):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(469):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(470):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 64.5vw;
+  }
+  .grid .grid-item:nth-child(471):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 67.83333vw;
+  }
+  .grid .grid-item:nth-child(472):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 71.16667vw;
+  }
+  .grid .grid-item:nth-child(473):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 74.5vw;
+  }
+  .grid .grid-item:nth-child(474):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 77.83333vw;
+  }
+  .grid .grid-item:nth-child(475):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 81.16667vw;
+  }
+  .grid .grid-item:nth-child(476):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 84.5vw;
+  }
+  .grid .grid-item:nth-child(477):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 87.83333vw;
+  }
+  .grid .grid-item:nth-child(478):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 91.16667vw;
+  }
+  .grid .grid-item:nth-child(479):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 94.5vw;
+  }
+  .grid .grid-item:nth-child(480):hover ~ .playground .point {
+    top: 51.16667vw;
+    left: 97.83333vw;
+  }
+  .grid .grid-item:nth-child(481):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 1.16667vw;
+  }
+  .grid .grid-item:nth-child(482):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 4.5vw;
+  }
+  .grid .grid-item:nth-child(483):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 7.83333vw;
+  }
+  .grid .grid-item:nth-child(484):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 11.16667vw;
+  }
+  .grid .grid-item:nth-child(485):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 14.5vw;
+  }
+  .grid .grid-item:nth-child(486):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 17.83333vw;
+  }
+  .grid .grid-item:nth-child(487):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 21.16667vw;
+  }
+  .grid .grid-item:nth-child(488):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 24.5vw;
+  }
+  .grid .grid-item:nth-child(489):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 27.83333vw;
+  }
+  .grid .grid-item:nth-child(490):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 31.16667vw;
+  }
+  .grid .grid-item:nth-child(491):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 34.5vw;
+  }
+  .grid .grid-item:nth-child(492):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 37.83333vw;
+  }
+  .grid .grid-item:nth-child(493):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 41.16667vw;
+  }
+  .grid .grid-item:nth-child(494):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 44.5vw;
+  }
+  .grid .grid-item:nth-child(495):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 47.83333vw;
+  }
+  .grid .grid-item:nth-child(496):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 51.16667vw;
+  }
+  .grid .grid-item:nth-child(497):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 54.5vw;
+  }
+  .grid .grid-item:nth-child(498):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 57.83333vw;
+  }
+  .grid .grid-item:nth-child(499):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 61.16667vw;
+  }
+  .grid .grid-item:nth-child(500):hover ~ .playground .point {
+    top: 54.5vw;
+    left: 64.5vw;
+  }
+  .grid .playground {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 55.55556vw;
+    background: #0d2552;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RhZDI5OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IwZGFiOSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #3c3b6d), color-stop(100%, #2294c9));
+    background-image: -moz-linear-gradient(bottom, #000000, #000000);
+    background-image: -webkit-linear-gradient(bottom, #000000, #000000);
+    background-image: linear-gradient(to top, #000000, #000000);
+  }
+  .grid .playground .point {
+    position: absolute;
+    display: block;
+    width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+    -moz-transition: all, 0.1s;
+    -o-transition: all, 0.1s;
+    -webkit-transition: all, 0.1s;
+    transition: all, 0.1s;
+  }
+
+  .grid-item:after,
+  .point:after {
+    display: block;
+    padding-bottom: 100%;
+    content: '';
+  }
+
+
+
+</style>
+
+</head>
+<body>
+
+
+
+<div class="grid">
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="playground"><span class="point"></span></div>
+</div>
+
+</body>
+</html>
