@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Loading animation</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(rgb(204, 234, 236), rgb(143, 142, 233));
+}
+
+.infinite {
+    position: relative;
+    width: 800px;
+    height: 160px;
+    background: #525252;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateX(25deg);
+}
+
+.infinite::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 70%, #525252 70%, #525252 100%);
+    background-size: 120px;
+    animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -120px;
+    }
+}
+
+.infinite:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background: #333;
+    bottom: -30px;
+    transform-origin: top;
+    transform: perspective(500px) rotateX(-25deg);
+}
+
+.shadow {
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 60px;
+    background: linear-gradient(#000, transparent);
+    opacity: 0.5;
+}
+    </style>
+</head>
+<body>
+    
+
+<div class="infinite">
+    <div class="shadow"> </div>
+</div>
+
+</body>
+</html>
