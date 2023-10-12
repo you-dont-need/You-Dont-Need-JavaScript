@@ -1,0 +1,431 @@
+<div class="panels">
+    <div class="panel">
+      <div class="resizer"></div>
+      <pre>
+        <code class="language-text">
+Lorem ipsum dolor sit amet, 
+consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        </code>
+      </pre>
+    </div>
+    <div class="panel">
+      <pre>
+        <code class="language-html">
+  <!-- &lt;div class="panels"&gt;
+    &lt;div class="panel"&gt;
+      
+      &lt;div class="resizer"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="panel"&gt;&lt;/div&gt;    
+  &lt;/div&gt;
+  &lt;!--
+  The trick is to use display: grid and
+   a relatively positioned resizable element,
+   scaled up so you can grab the handle
+  --&gt; -->
+  This is slider window 
+  which you can re adjust
+        </code>
+      </pre>
+    </div>
+  </div>
+
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+:root {
+  --aspect-ratio: 16 / 10;
+  --min-width: 0.5rem;
+  --frame: hsl(0 0% 25%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: black;
+}
+
+.panels {
+  container-type: inline-size;
+  width: 90vmin;
+  aspect-ratio: var(--aspect-ratio);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  overflow: hidden;
+  border: 4px solid var(--frame);
+  box-shadow: 0 -1px hsl(0 0% 100% / 0.75);
+}
+
+.panel:first-of-type {
+  position: relative;
+}
+
+
+
+.resizer {
+  position: relative;
+  top: 50%;
+  right: 0;
+  height: 48px;
+  width: 400px;
+  resize: horizontal;
+  overflow: hidden;
+  max-width: calc(100cqi - var(--min-width));
+  min-width: calc(var(--min-width) * 3);
+  transform-origin: 100% 100%;
+  scale: 4;
+  translate: 14px -50%;
+  background: green;
+  z-index: 9999;
+  clip-path: inset(calc(100% - 12px) 0 0 calc(100% - 12px));
+  
+  opacity: 0;
+}
+
+
+
+.panel:first-of-type::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--frame);
+  translate: 0% 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.panel:first-of-type::after {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 2rem;
+  top: 50%;
+  bottom: 0;
+  right: 0;
+  background: hsl(10 80% 50%);
+  translate: -50% -50%;
+  pointer-events: none;
+  border-radius: 4rem;
+  box-shadow:
+    0 1px black,
+    0 1px hsl(0 0% 100% / 0.5) inset;
+  z-index: 3;
+}
+
+.panels:has(.resizer:is(:hover)) .panel:first-of-type::after {
+  background: hsl(10 80% 60%);
+}
+
+.panels:has(.resizer:is(:active)) .panel:first-of-type::after {
+  background: hsl(10 80% 40%);
+  box-shadow:
+    0 1px black inset,
+    0 1px black,
+    0 -1px hsl(0 0% 100% / 0.5) inset;
+}
+
+.panel {
+  background: hsl(0 0% 10%);
+}
+
+pre {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+  margin: 0;
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: hsl(0 0% 50%) transparent; 
+}
+
+.panel:first-of-type pre {
+  inset: 0 1rem 0 0;
+}
+
+pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+pre::-webkit-scrollbar-thumb {
+  background: hsl(0 0% 50%);
+}
+pre::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  background: transparent;
+}
+
+.panel {
+  position: relative;
+}
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #ccc;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 2rem;
+  margin: 0;
+  overflow: auto;
+  outline: transparent;
+}
+
+
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+}
+
+pre {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999;
+}
+
+.token.punctuation {
+  color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+  color: #e2777a;
+}
+
+.token.function-name {
+  color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+  color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+  color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+  color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+  color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.inserted {
+  color: green;
+}
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; 
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #999;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+span.inline-color-wrapper {
+ 
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyIDIiPjxwYXRoIGZpbGw9ImdyYXkiIGQ9Ik0wIDBoMnYySDB6Ii8+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wIDBoMXYxSDB6TTEgMWgxdjFIMXoiLz48L3N2Zz4=");
+  
+  background-position: center;
+  background-size: 110%;
+
+  display: inline-block;
+  height: 1.333ch;
+  width: 1.333ch;
+  margin: 0 .333ch;
+  box-sizing: border-box;
+  border: 1px solid white;
+  outline: 1px solid rgba(0,0,0,.5);
+  overflow: hidden;
+}
+
+span.inline-color {
+  display: block;
+
+  height: 120%;
+  width: 120%;
+}
+
+div.code-toolbar {
+  height: 100%;
+  position: relative;
+}
+
+div.code-toolbar > .toolbar {
+  position: absolute;
+  top: .3em;
+  right: .2em;
+  opacity: 1;
+}
+
+div.code-toolbar:hover > .toolbar {
+  opacity: 1;
+}
+
+
+div.code-toolbar:focus-within > .toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar > .toolbar .toolbar-item {
+  display: inline-block;
+}
+
+div.code-toolbar > .toolbar a {
+  cursor: pointer;
+}
+
+div.code-toolbar > .toolbar button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  /* -webkit-user-select: none; /* for button */
+  /* -moz-user-select: none; */
+  /* -ms-user-select: none; */ 
+}
+
+div.code-toolbar > .toolbar a,
+div.code-toolbar > .toolbar button {
+  color: #bbb;
+  font-size: 1rem;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  background: hsl(0, 0%, 25%);
+  border-radius: .5em;
+  outline: transparent;
+  cursor: pointer;
+}
+
+div.code-toolbar > .toolbar a:hover,
+div.code-toolbar > .toolbar a:focus,
+div.code-toolbar > .toolbar button:hover,
+div.code-toolbar > .toolbar button:focus,
+div.code-toolbar > .toolbar span:hover,
+div.code-toolbar > .toolbar span:focus {
+  background: hsl(0, 0%, 40%);
+  text-decoration: none;
+}
+
+.panel:last-of-type pre::after {
+  content: "HTML";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.panel:first-of-type pre::after {
+  content: "CSS";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+  </style>
