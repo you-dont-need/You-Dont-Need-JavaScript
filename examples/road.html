@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Road Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(rgb(12, 203, 229), rgb(84, 2, 125));
+            overflow: hidden;
+        }
+
+        .road-container {
+            width: 100%;
+            height: 100px;
+            /* Adjusted height for the road */
+            background: #808080;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .road {
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(90deg, #808080 0px, #808080 10px, #ffffff 10px, #ffffff 20px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: moveRoad 2s linear infinite;
+        }
+
+
+        @keyframes moveRoad {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-10%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="road-container">
+        <div class="road"></div>
+    </div>
+</body>
+
+</html>
