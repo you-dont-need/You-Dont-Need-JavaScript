@@ -1,8 +1,31 @@
 English | [简体中文](./README-zh_CN.md)
 
-# You Don't Need JavaScript
-[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://dev.to/t/javascript
-)
+# <p align="center">You Don't Need JavaScript</p>
+
+<p align="center">
+    <a href="https://dev.to/t/javascript">
+        <img src="https://withspectrum.github.io/badge/badge.svg" alt="Join the community on spectrum" />
+    </a>
+</p>
+  <p align="center">
+    <a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/master/LICENSE" target="blank">
+      <img src="https://img.shields.io/github/license/you-dont-need/You-Dont-Need-JavaScript" alt="License" />
+    </a>
+    <a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript/fork" target="blank">
+      <img src="https://img.shields.io/github/forks/you-dont-need/You-Dont-Need-JavaScript" alt="Forks"/>
+    </a>
+    <a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript/stargazers" target="blank">
+    <img src="https://img.shields.io/github/stars/you-dont-need/You-Dont-Need-JavaScript" alt="Star"/>
+    </a>
+  </p>
+  <p align="center">
+    <a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript/issues" target="blank">
+      <img src="https://img.shields.io/github/issues/you-dont-need/You-Dont-Need-JavaScript.svg" alt="Click Vote Issue"/>
+    </a>
+    <a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript/pulls" target="blank">
+      <img src="https://img.shields.io/github/issues-pr/you-dont-need/You-Dont-Need-JavaScript.svg" alt="Click Vote Open Pull Request"/>
+    </a>
+   </p>
 
 Please note demos may have serious issues regarding accessibility (keyboard navigation, speech synthesis, etc.), or progressive enhancement/degradation/etc.
 
@@ -15,14 +38,17 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 [<img src="images/image2.png" height="230" title="Demo 2">](http://url-to-page)
 [<img src="images/image3.png" height="230" title="Demo 3">](http://url-to-page)
 
-***
+---
+
 &nbsp;
 ```
 
-***
+---
+
 &nbsp;
 
 ## Quick links
+
 1. [Accordion / Toggle](#Accordion)
 1. [Carousel](#Carousel)
 1. [Counter of checked check-boxes](#Counter)
@@ -51,7 +77,6 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 1. [Neon Button](#neon-button)
 1. [Shake Button](#shake-button)
 
-
 ## <a id="Accordion"></a>Accordion / Toggle
 
 [<img src="images/accordion.png" height="230" title="Demo 1">](http://www.mraffaele.com/labs/css-only-accordions/)
@@ -61,7 +86,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Carousel"></a>Carousel
@@ -72,7 +98,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Counter"></a>Counter of checked check-boxes
@@ -82,7 +109,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Flip"></a>Flip on click
@@ -91,7 +119,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Floating"></a>Floating label on Textfield
@@ -100,7 +129,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Font"></a>Font-Face (Latin)
@@ -109,7 +139,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Info"></a>Info on hover/ Popover
@@ -121,17 +152,20 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Image"></a>Image Gallery
+
 [<img src="images/gallery.png" height="230" title="Demo 1">](https://codepen.io/shaishgandhi/pen/yJzamw)
 [<img src="images/gallery2.png" height="230" title="Demo 2">](http://codepen.io/pavlovsk/pen/sjubp)
 [<img src="images/gallery3.png" height="230" title="Demo 2">](https://codepen.io/olgamozejko/pen/yLjwyye)
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Loaders"></a>Loaders
@@ -148,7 +182,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="DropdownMenu"></a>Dropdown Menu
@@ -158,7 +193,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Mobile"></a>Mobile menu off canvas
@@ -167,7 +203,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="BurgerMenu"></a>Burger Menu
@@ -176,7 +213,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="FancyMenu"></a>Fancy Menu
@@ -185,7 +223,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Modal"></a>Modal/Popup
@@ -195,7 +234,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Mouse"></a>Mouse tracking
@@ -205,7 +245,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Parallax"></a>Parallax scrolling
@@ -214,7 +255,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Tabs"></a>Tabs
@@ -224,19 +266,23 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Todo"></a>Todo List
+
 [<img src="images/Todo List.png" height="230" title="Demo">](https://codepen.io/SamsShow/pen/NWeerXr)
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Tooltips"></a>Tooltips
-+ [Demo](https://kushagragour.in/lab/hint/)
+
+- [Demo](https://kushagragour.in/lab/hint/)
 
 ## <a id="Treeview"></a>Treeview
 
@@ -244,7 +290,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="Twitter"></a>Twitter Heart Animation
@@ -253,7 +300,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="ImageColorizing"></a>Dynamic Image Colorizing
@@ -262,7 +310,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="RippleEffect"></a>Ripple Effect
@@ -271,7 +320,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="ResponsiveItemShowcase"></a>Responsive Counter Showing # of Items That Didn't Fit Screen
@@ -280,7 +330,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="NeumorphismCardDesign"></a>Neumorphism Card Design
@@ -289,7 +340,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="neon-button"></a>Neon Button
@@ -298,7 +350,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## <a id="shake-button"></a>Shake Button
@@ -307,7 +360,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
-***
+---
+
 &nbsp;
 
 ## Contributing
