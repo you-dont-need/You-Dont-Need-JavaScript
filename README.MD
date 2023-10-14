@@ -50,6 +50,7 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 1. [Neumorphism Card Design](#neumorphism-card-design)
 1. [Neon Button](#neon-button)
 1. [Shake Button](#shake-button)
+1. [Moving Hand](#moving_hand)
 
 
 ## <a id="Accordion"></a>Accordion / Toggle
