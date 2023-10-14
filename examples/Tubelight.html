@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tubelight Text Animation</title>
+  <style>
+    *
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Brush Script MT;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2A2438;
+}
+
+h1{
+  position: relative;
+  font-size: 6em;
+  letter-spacing: 15px;
+  color: #713ABE;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+  line-height: 0.70em;
+  outline: none;
+  animation: animate 5s linear infinite;
+}
+
+
+
+@keyframes animate {
+  0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92%{
+    color: #9D76C1;
+    text-shadow: none;
+  }
+  18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+    color: #fff;
+    text-shadow: 0 0 10px #9D76C1,
+                0 0 20px #9D76C1,
+                0 0 40px #9D76C1,
+                0 0 80px #9D76C1,
+                0 0 160px #9D76C1
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <h1 contenteditable="true">Hello Everyone</h1>
+</body>
+</html>
