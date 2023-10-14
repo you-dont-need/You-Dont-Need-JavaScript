@@ -212,7 +212,7 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 ***
 ## <a id="navBar"></a>NavBar
 
-[<img src="images/navbar.png" height="150" title="Demo">]
+[<img src="images/navbar.png" height="230" title="Demo">]
 
 **[⬆ back to top](#quick-links)**
 
