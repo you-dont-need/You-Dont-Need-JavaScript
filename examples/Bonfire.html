@@ -1,0 +1,205 @@
+
+<head>
+   
+</head>
+<style>
+  body{
+    background:#133;
+  }
+  .container{
+    width:200px;
+    height:200px;
+    margin:10px auto;
+   
+  }
+  #flame-1{
+    height:95px;
+    width:95px;
+    background:#ff7200;
+    position:relative;
+    top:52px;
+    left:2px;
+    margin:30px 70px;
+    border-radius:0% 50% 70% 50%;
+    transform:rotateZ(45deg) scale(1.1);
+    filter: drop-shadow(0 0 10px #d43322);
+    animation:scale-alternate 2s ease-in-out infinite;
+  }
+  #flame-2{
+    height:75px;
+    width:75px;
+    background:#ef5a00;
+    position:relative;
+    top:162px;
+    left:-20px; 
+    margin:30px 70px;
+    border-radius:0% 40% 60% 40%;
+    transform:scaleX(0.8) rotatez(45deg);
+    filter: drop-shadow(0 0 10px #d43322);
+    animation: scale-up 2s ease-in-out infinite;
+  }
+  
+  #flame-3{
+    height:75px;
+    width:75px;
+    background:#ef5a00;
+    position:relative;
+    top:-60px;
+    left:50px; 
+    margin:30px 70px;
+    border-radius:0% 40% 60% 40%;
+    transform:scaleX(0.8) rotatez(45deg);
+    filter: drop-shadow(0 0 10px #d43322);
+    animation: scale-up-3 3s ease-in-out infinite;
+  }
+  .wood{
+    width:20px;
+    height:120px;
+    background:#563111;
+    border-radius:5px;
+    }
+  #wood-1{
+    transform:rotate(72deg);
+    position:relative;
+    top:-220px;
+    left:117px;
+  }
+  
+  #wood-2{
+    transform:rotate(106deg);
+    position:relative;
+    top:-340px;
+    left:115px;
+  }
+  .small-element{
+    height:20px;
+    width:20px;
+    border-radius:50%;
+    background: #ef5a00;  
+    position:relative;
+    top:-130px;
+    left:110px;
+      
+  }
+  #small-element-1{
+      
+    animation: particle-up 3.5s ease-in-out infinite;
+    
+  }
+  #small-element-2{
+      
+    animation: particle-up 3s ease-in-out infinite;
+    
+  }
+  
+  
+    .fire-bottom .main-fire {
+    position: relative;
+    top: -190px;
+    left: 90px;
+    width: 55px;
+    height: 55px;
+    background-color: #ff7800;
+    transform: scaleX(0.8) rotate(45deg);
+    border-radius: 0 40% 100% 40%;
+    filter: blur(8px);
+    animation: glow 2s ease-out 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  
+    
+  }
+  @keyframes glow{
+    0%,100%{
+      
+      background:#ef5a00;
+    }
+    50%{
+      background:#ff7800;
+  
+      
+    }
+    
+  }
+  
+  @keyframes scale-up-3{
+    0%,100%{
+      transform:scale(1.1) rotatez(45deg);
+         
+    }
+    40%,90%{
+      transform:scale(0.96) rotatez(45deg);
+    }
+    30%,75%{
+      transform:scale(0.90) rotatez(45deg);
+    }
+    
+    
+  }
+  
+  
+  @keyframes scale-up{
+    0%,100%{
+      transform:scale(1) rotatez(45deg);
+         
+    }
+    40%,90%{
+      transform:scale(0.96) rotatez(45deg);
+    }
+    30%,75%{
+      transform:scale(0.90) rotatez(45deg);
+    }
+    
+    
+  }
+  
+  
+  
+  @keyframes scale-alternate{
+     0%,100%{
+      transform:scale(1.1) rotatez(45deg);
+         
+    }
+    30%,90%{
+      transform:scale(0.90) rotatez(45deg);
+    }
+     45%,60%{
+      transform:scale(0.96) rotatez(45deg);
+    }
+    50%,75%{
+      transform:scale(0.97) rotatez(45deg);
+    }
+    
+    
+  }
+  @keyframes particle-up{
+    0%{
+      top:-130px;
+      left:110px;
+    }
+    100%{
+      position:relative;
+      opacity:0.8;
+      top:-270px;
+       left:145px;
+      transform:scale(0.1);
+      
+    }
+    
+    
+  }
+</style>
+<body>
+    <div class = "container">
+        <div class = "flame" id = "flame-2"></div>
+        <div class = "flame" id = "flame-1"></div>
+        <div class = "flame" id = "flame-3"></div>
+          <div class = "small-element" id = "small-element-1"></div>
+          <div class = "small-element" id = "small-element-2"></div>
+          <div class = "fire-bottom">
+            <div class = "main-fire"></div>
+          </div>
+          <div class = "wood" id = "wood-1"></div>
+          <div class = "wood" id = "wood-2"></div>
+        </div>  
+</body>
