@@ -38,6 +38,7 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 1. [Fancy menu](#FancyMenu)
 1. [Modal/Popup](#Modal)
 1. [Mouse tracking](#Mouse)
+1. [NavBar](#navBar)
 1. [Parallax scrolling](#Parallax)
 1. [Tabs](#Tabs)
 1. [Todo List](#Todo)
@@ -50,6 +51,7 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 1. [Neumorphism Card Design](#neumorphism-card-design)
 1. [Neon Button](#neon-button)
 1. [Shake Button](#shake-button)
+
 
 
 ## <a id="Accordion"></a>Accordion / Toggle
@@ -201,6 +203,16 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 ## <a id="Mouse"></a>Mouse tracking
 
 [<img src="images/mousetracking.png" height="230" title="Demo">](https://codepen.io/Momciloo/pen/GoGRrQ)
+
+**[⬆ back to top](#quick-links)**
+
+***
+&nbsp;
+
+***
+## <a id="navBar"></a>NavBar
+
+[<img src="images/navbar.png" height="150" title="Demo">]
 
 **[⬆ back to top](#quick-links)**
 
