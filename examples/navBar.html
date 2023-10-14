@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <style>
+        *{
+            margin: 0px ;
+            padding: 0px ;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration:none;
+        }
+        nav{
+            position:sticky;
+            padding:10px;
+            background-color:#27374d;
+            box-shadow: 0 4px 15px rgba(58, 58, 58, 0.662);
+        }
+        .navBar{
+            display: flex;
+            margin: auto;
+            max-width: 1200px;
+            color: #dde6ed;
+            justify-content: space-between;
+        }
+        .navBar > div{
+            display: flex;
+            align-items: center;
+        }
+        .title img,span{
+            margin-right:20px;
+        }
+        .title>span{
+            font-size:1.5rem;
+        }
+        .nav-links > a{
+            margin-right: 20px;
+            padding:5px;
+            border-radius:5px;
+            color: #dde6ed;
+            transition:all 0.2s ease-in-out;
+        }
+        .nav-links > a:hover{
+            background-color: #dde6ed;
+            color: #27374d;
+        }
+       
+       
+        @media screen and (max-width:800px) {
+            .navBar{
+                display: flex;
+                flex-direction: column;
+            }
+            .navBar>div{
+                display: inline-block;
+                padding: 1% 2%;
+                margin:auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navBar">
+            <div class="title">
+                <img src="/sample_logo.jpg" alt="logo" width="50" height="50">
+                <span>Website title</span> 
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="">Explore</a>
+                <a href="">About Us</a>
+                <a href="">Aurthor</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    
+</body>
+</html>
