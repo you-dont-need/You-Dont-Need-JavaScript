@@ -307,6 +307,12 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 **[⬆ back to top](#quick-links)**
 
+## <a id="moving_hand"></a>Shake Button
+
+[<img src="images/moving_hand.png" height="230" title="image">](examples\Moving_hand.html)
+
+**[⬆ back to top](#quick-links)**
+
 ***
 &nbsp;
 
