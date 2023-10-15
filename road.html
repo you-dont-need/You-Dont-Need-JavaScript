@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html{
+            box-sizing: border-box;
+            background-color: rgb(45, 218, 45);
+            --n-road:-4em;
+            --p-road:7em;
+        }
+        html * , html *::before , html *::after{
+            box-sizing: inherit;
+        }
+        body::before , body::after{
+             content:"";
+             position:absolute;
+
+        }
+        body{
+            position: relative;
+            display: block;
+            margin: 0;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        /* === road line section === */
+        body::before{
+            width: 15.5em;
+            height: 62.9em;
+            top:calc(50% - 26.2em);
+            background-size: 24.6% 491%;
+            background-repeat: no-repeat;
+            background-position: center 0;
+            /* transform: perspective(311px) rotateX(83deg) translate3d(-4em, -11.975em, 0 ); */
+            background-image: repeating-linear-gradient(to top, #fff, #fff 4.6%, transparent 0, transparent 13.01%);
+            animation: line 1.5s infinite linear, move-road 3.5s infinite linear;
+
+        }
+
+        /* ==== ANIMATION SECTION == */
+
+        /* ==== road-line ==== */
+        
+
+    </style>
+    <title>Moving Road</title>
+</head>
+<body>
+    <img src="./images/fresh-green-mountains-grassland.jpg" alt="img" height="100%" width="100%" >
+</body>
+</html>
