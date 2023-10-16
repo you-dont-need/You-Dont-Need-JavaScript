@@ -301,4 +301,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 
 ## Contributing
 
-Welcome to contribute to this project. Send us a Pull Request now!
+Contributions are always welcome!
+
+--> Hacktoberfest
+
+If you wish to contribute, make sure you work in the develop branch, the master/main branch is only for *release* to the production.
