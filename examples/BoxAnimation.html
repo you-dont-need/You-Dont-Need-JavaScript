@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            perspective: 800px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            transition: transform 1s ease-in-out;
+            animation: rotate 5s linear infinite;
+        }
+
+        .box-content {
+            color: white;
+            font-size: 20px;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            25% {
+                transform: rotateX(360deg) rotateY(0deg);
+            }
+
+            50% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+
+            75% {
+                transform: rotateX(0deg) rotateY(360deg);
+            }
+
+            100% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+        }
+    </style>
+    <title>Animated Box</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="box-content">Your Name</div>
+        </div>
+    </div>
+</body>
+
+</html>
