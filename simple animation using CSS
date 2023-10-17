@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color: aquamarine;
+        }
+
+        .box {
+            width: 300px;
+            background-color: red;
+            color: white;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* animation-name: widthAnimate;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: 5;
+            animation-direction: alternate-reverse; */
+            animation: widthAnimate2 3s ease-in-out 2s 6 alternate;
+        }
+
+        @keyframes widthAnimate {
+            from {
+                width: 300px;
+                height: 300px;
+            }
+
+            to {
+                width: 100vw;
+                height: 100vh;
+            }
+        }
+
+        @keyframes widthAnimate2 {
+            0% {
+                width: 300px;
+                height: 300px;
+            }
+
+            20% {
+                width: 130px;
+                height: 130px;
+            }
+
+            100% {
+                width: 1190vw;
+                height: 1190vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Moving bin</div>
+    </div>
+</body>
+
+</html>
