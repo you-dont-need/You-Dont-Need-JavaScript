@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving road </title>
+    <style type="text/css">
+        *{
+           margin: 0;
+           padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+          
+            background-color: rgb(191, 238, 162);
+        }
+        .road{
+          position: absolute;
+          width: 700px;
+          height: 750px;
+          background-color: rgb(66, 63, 63);
+          transform-style: preserve-3d;
+          transform-origin: bottom;
+          transform:perspective(100px) rotateX(20deg);
+
+        }
+        .road:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 39%;
+  right: 0;
+  width: 130px;
+  height: 100%;
+  background: linear-gradient( 0deg, rgb(225, 232, 24) 0%, rgb(208, 221, 24) 70%, rgb(66, 63, 63) 0%, rgb(66, 63, 63) 70%, rgb(66, 63, 63) 100%) top/100% 50%;
+  bottom: 0;
+  animation: color 0.6s linear infinite;
+}
+.road .line1{
+    
+    position: absolute;
+    left: 20px;
+    width: 10px;
+    height: 100%;
+    transform: rotate(0deg);
+    background-color: white;
+}
+.road .line2{
+    
+    position: absolute;
+    right: 20px;
+    width: 10px;
+    height: 100%;
+    transform: rotate(0deg);
+    background-color: white;
+}
+
+@keyframes color {
+  0% {
+    background-position: top;
+  }
+  100% {
+    background-position: bottom;
+  }
+}
+    </style>
+</head>
+<body>
+    <img src="/images/fresh-green-mountains-grassland.jpg" alt="img" height="610px" width="100%" style="translate: 0 -7.5rem;">
+    <div class="road">
+        <div class="line1"></div>
+        <div class="line2"></div>
+    </div>
+</body>
+</html>
