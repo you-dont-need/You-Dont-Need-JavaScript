@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Vertical Gallery hall</title>
+   <style>
+      body {
+         background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  perspective: clamp(400px, 100vw, 1000px);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  height: 40vh;
+}
+
+body::before {
+  top: 0;
+  background: linear-gradient(5deg, rgba(0,0,0,0) 25%, #222);
+}
+
+body::after {
+  bottom: 0;
+  background: linear-gradient(-5deg, #222, rgba(0,0,0,0) 80%);
+}
+
+.gallery {
+  display: flex;
+  gap: 1vw;
+  max-width: 1200px;
+  min-width: 500px;
+  height: 100vh;
+  transform: translate(5%, -25%) rotate(-6deg) rotateX(10deg) rotateY(20deg);
+}
+
+.gallery_line {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  height: fit-content;
+  animation: slide 30s linear infinite;
+}
+
+.gallery_line:nth-child(2) {
+  animation-direction: reverse;
+}
+
+.gallery_line img {
+  flex: 1 1 auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+@keyframes slide {
+   0% { transform: translatey(0); } 
+   100% { transform: translatey(-50%); }
+}
+   </style>
+</head>
+<body>
+   <div class="gallery">
+      <div class="gallery_line">
+        <img src="https://picsum.photos/300/200?random=0"/>
+        <img src="https://picsum.photos/200/300?random=1"/>
+        <img src="https://picsum.photos/300/200?random=2"/>
+        <img src="https://picsum.photos/300/200?random=3"/>
+        <img src="https://picsum.photos/200/300?random=4"/>
+        <img src="https://picsum.photos/300/200?random=5"/>
+        <!-- need to reapeat images to infinit animation -->
+        <img src="https://picsum.photos/300/200?random=0"/>
+        <img src="https://picsum.photos/200/300?random=1"/>
+        <img src="https://picsum.photos/300/200?random=2"/>
+        <img src="https://picsum.photos/300/200?random=3"/>
+        <img src="https://picsum.photos/200/300?random=4"/>
+        <img src="https://picsum.photos/300/200?random=5"/>
+      </div>
+      <div class="gallery_line">
+        <img src="https://picsum.photos/200/300?random=6"/>
+        <img src="https://picsum.photos/300/200?random=7"/>
+        <img src="https://picsum.photos/200/300?random=8"/>
+        <img src="https://picsum.photos/300/200?random=9"/>
+        <img src="https://picsum.photos/300/200?random=10"/>
+        <img src="https://picsum.photos/300/200?random=11"/>
+        <!-- need to reapeat images to infinit animation -->
+        <img src="https://picsum.photos/200/300?random=6"/>
+        <img src="https://picsum.photos/300/200?random=7"/>
+        <img src="https://picsum.photos/200/300?random=8"/>
+        <img src="https://picsum.photos/300/200?random=9"/>
+        <img src="https://picsum.photos/300/200?random=10"/>
+        <img src="https://picsum.photos/300/200?random=11"/>
+      </div>
+      <div class="gallery_line">
+        <img src="https://picsum.photos/200/300?random=12"/>
+        <img src="https://picsum.photos/300/200?random=13"/>
+        <img src="https://picsum.photos/300/200?random=14"/>
+        <img src="https://picsum.photos/200/300?random=15"/>
+        <img src="https://picsum.photos/300/200?random=16"/>
+        <img src="https://picsum.photos/300/200?random=17"/>
+        <!-- need to reapeat images to infinit animation -->
+        <img src="https://picsum.photos/200/300?random=12"/>
+        <img src="https://picsum.photos/300/200?random=13"/>
+        <img src="https://picsum.photos/300/200?random=14"/>
+        <img src="https://picsum.photos/200/300?random=15"/>
+        <img src="https://picsum.photos/300/200?random=16"/>
+        <img src="https://picsum.photos/300/200?random=17"/>
+      </div>
+    </div>
+   
+    <!-- Credit goes to Joerdan dey, this is Modified -->
+   
+   </body>
+</html>
