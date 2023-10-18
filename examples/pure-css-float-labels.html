@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .form-group {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        input {
+            font-size: 18px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        label {
+            position: absolute;
+            pointer-events: none;
+            left: 10px;
+            top: 10px;
+            transition: 0.2s ease all;
+        }
+
+        input:valid + label,
+        input:focus + label {
+            top: -20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="form-group">
+            <input type="text" id="name" required>
+            <label for="name">Name</label>
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" required>
+            <label for="email">Email</label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
