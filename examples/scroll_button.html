@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+    <title>Back To Top</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Raleway", sans-serif;
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+        }
+
+        .section1 {
+            background: radial-gradient(rgb(12, 203, 229), rgb(37, 2, 125));
+        }
+
+        .section2 {
+            background: radial-gradient(rgb(229, 12, 149), rgb(175, 158, 184));
+        }
+
+        .section3 {
+           background: radial-gradient(rgb(12, 203, 229), rgb(84, 2, 125));
+        }
+
+        .section4 {
+            background: radial-gradient(rgb(229, 186, 12), rgb(84, 2, 125));
+        }
+
+        .to-top {
+            background: white;
+            position: fixed;
+            bottom: 16px;
+            right: 32px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #1f1f1f;
+            text-decoration: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .4s;
+        }
+
+        .to-top.active {
+            bottom: 32px;
+            pointer-events: auto;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="section1">Section 1</section>
+    <section class="section2">Section 2</section>
+    <section class="section3">Section 3</section>
+    <section class="section4">Section 4</section>
+
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        const toTop = document.querySelector(".to-top");
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        })
+    </script>
+
+</body>
+
+</html>
