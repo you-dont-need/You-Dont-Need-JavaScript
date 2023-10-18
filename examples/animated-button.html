@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Box</title>
+</head>
+<body>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #4e4d4d;
+        }
+
+        .animated-button {
+            background-color: #111;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .animated-button::before {
+            content: '';
+            position: absolute;
+            background: #0ff;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            transition: 0.3s;
+        }
+
+        .animated-button:hover::before {
+            left: 100%;
+        }
+
+
+    </style>
+
+    <button class="animated-button">Click Me</button>
+    
+</body>
+</html>
