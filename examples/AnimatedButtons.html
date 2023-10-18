@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Buttons</title>
+    <style>
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #EB5353;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+
+        }
+
+        .animated-button {
+            display: inline-block;
+            width: 150px; 
+            height: 150px; 
+            background-color: #187498; 
+            color: #F9D923;
+            border: none;
+            border-radius: 10px; 
+            cursor: pointer;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 18px; 
+            text-align: center;
+            line-height: 150px; 
+            text-decoration: none;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        /* Pulsate Effect */
+        .pulsate:hover {
+            animation: pulsate 1s infinite;
+        }
+
+        @keyframes pulsate {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Scale Effect */
+        .scale:hover {
+            transform: scale(1.1);
+        }
+
+        /* Color Change Effect */
+        .color-change:hover {
+            background-color: #36AE7C;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="#" class="animated-button pulsate">Pulsate</a>
+        <a href="#" class="animated-button scale">Scale</a>
+        <a href="#" class="animated-button color-change">Color Change</a>
+    </div>
+</body>
+</html>

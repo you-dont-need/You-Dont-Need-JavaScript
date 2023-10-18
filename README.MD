@@ -38,6 +38,7 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 1. [Fancy menu](#FancyMenu)
 1. [Modal/Popup](#Modal)
 1. [Mouse tracking](#Mouse)
+1. [NavBar](#navBar)
 1. [Parallax scrolling](#Parallax)
 1. [Tabs](#Tabs)
 1. [Todo List](#Todo)
@@ -50,6 +51,8 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 1. [Neumorphism Card Design](#neumorphism-card-design)
 1. [Neon Button](#neon-button)
 1. [Shake Button](#shake-button)
+1. [Moving Hand](#moving_hand)
+
 
 
 ## <a id="Accordion"></a>Accordion / Toggle
@@ -208,6 +211,16 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 ***
 &nbsp;
 
+***
+## <a id="navBar"></a>NavBar
+
+[<img src="images/navbar.png" height="230" title="Demo">](https://codepen.io/janup2442/pen/QWzPRQQ)
+
+**[⬆ back to top](#quick-links)**
+
+***
+&nbsp;
+
 ## <a id="Parallax"></a>Parallax scrolling
 
 [<img src="images/parallax.png" height="230" title="Demo">](http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/)
@@ -304,6 +317,12 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 ## <a id="shake-button"></a>Shake Button
 
 [<img src="images/shake-button.gif" height="230" title="Demo">](https://codepen.io/krushnarout/pen/zYyLEmM)
+
+**[⬆ back to top](#quick-links)**
+
+## <a id="moving_hand"></a>Shake Button
+
+[<img src="images/moving_hand.png" height="230" title="image">](examples\Moving_hand.html)
 
 **[⬆ back to top](#quick-links)**
 

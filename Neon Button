@@ -1,0 +1,58 @@
+<!-- HTML File -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animated Neon Button</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#" class="neon-loader">
+      <span>Click!</span>
+    </a>
+  </body>
+</html>
+
+/* CSS File */
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #262626;
+}
+
+.neon-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 20px;
+  background-color: #00ffff;
+  text-decoration: none;
+  animation: neon-loader 1s infinite alternate;
+}
+
+.neon-loader:hover{
+  background-color: #00ffff !important;
+  animation-play-state: paused;
+  box-shadow: 0 0 10px #00ffff,
+              0 0 30px #00ffff,
+              0 0 60px #00ffff;
+}
+
+span{
+  font-size: 2em;
+  color: #000;
+}
+
+@keyframes neon-loader {
+  from {
+    background-color: #00ffff;
+  }
+  to {
+    background-color: #ff00ff;
+  }
+}
