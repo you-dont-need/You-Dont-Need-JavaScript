@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Background line animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background: #131313;
+        overflow: hidden;
+      }
+
+      .layer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 250vh;
+        background: #fff;
+        box-shadow: inset -10px 0 40px rgba(0, 0, 0, 1),
+          inset 10px 0 40px rgba(0, 0, 0, 1),
+          inset -10px 0 10px rgba(255, 255, 0255, 0.25),
+          inset 10px 0 10px rgba(255, 255, 255, 0.25), 0 0 50px rgba(0, 0, 0, 1);
+      }
+
+      .layer.layer1 {
+        background: #222
+          radial-gradient(#6dff73 9px, #000 9px, #000 13px, transparent 13px);
+        background-size: 35px 35px;
+        transform: translate(-50%, -50%) rotate(45deg);
+        z-index: 10;
+        animation: animateDots_one 2s linear infinite;
+      }
+
+      .layer.layer2 {
+        background: #222
+          radial-gradient(#ff0a0a 9px, #000 9px, #000 13px, transparent 13px);
+        background-size: 35px 35px;
+        transform: translate(-50%, -38%) rotate(45deg);
+        z-index: 8;
+        animation: animateDots_two 2s linear infinite;
+      }
+
+      .layer.layer3 {
+        background: #222
+          radial-gradient(#03a9f4 9px, #000 9px, #000 13px, transparent 13px);
+        background-size: 35px 35px;
+        transform: translate(-50%, -62%) rotate(45deg);
+        z-index: 8;
+        animation: animateDots_two 2s linear infinite;
+      }
+
+      .layer.layer4 {
+        background: #222
+          radial-gradient(#fdfdfd 9px, #000 9px, #000 13px, transparent 13px);
+        background-size: 35px 35px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        z-index: 11;
+        animation: animateDots_one 2s linear infinite;
+      }
+
+      .layer.layer5 {
+        background: #222
+          radial-gradient(#e91e63 9px, #000 9px, #000 13px, transparent 13px);
+        background-size: 35px 35px;
+        transform: translate(-50%, -38%) rotate(-45deg);
+        z-index: 9;
+        animation: animateDots_two 2s linear infinite;
+      }
+
+      .layer.layer6 {
+        background: #222
+          radial-gradient(
+            rgb(235, 228, 16) 9px,
+            #000 9px,
+            #000 13px,
+            transparent 13px
+          );
+        background-size: 35px 35px;
+        transform: translate(-50%, -62%) rotate(-45deg);
+        z-index: 9;
+        animation: animateDots_two 2s linear infinite;
+      }
+
+      @keyframes animateDots_one {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 35px -35px;
+        }
+      }
+
+      @keyframes animateDots_two {
+        0% {
+          background-position: 35px -35px;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="layer layer1"></div>
+      <div class="layer layer2"></div>
+      <div class="layer layer3"></div>
+      <div class="layer layer4"></div>
+      <div class="layer layer5"></div>
+      <div class="layer layer6"></div>
+    </div>
+  </body>
+</html>
