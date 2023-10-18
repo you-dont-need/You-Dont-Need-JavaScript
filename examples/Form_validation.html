@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Form Validation (YDNJS)</title>
+</head>
+<body>
+  <form onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="error-message" style="color: red; display: none;">Please fill in all the required fields.</p>
+
+  <script>
+    function validateForm() {
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const errorMessage = document.getElementById('error-message');
+
+      if (!nameInput.checkValidity() || !emailInput.checkValidity()) {
+        errorMessage.style.display = 'block';
+        return false;
+      } else {
+        errorMessage.style.display = 'none';
+        return true;
+      }
+    }
+  </script>
+</body>
+</html>

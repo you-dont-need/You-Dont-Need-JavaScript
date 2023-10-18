@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .hand {
+            position: relative;
+            animation: moveHand 2s infinite alternate;
+        }
+
+        @keyframes moveHand {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hand">🤚</div>
+</body>
+</html>

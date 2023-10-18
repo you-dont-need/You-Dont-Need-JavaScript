@@ -5,74 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animated Buttons</title>
     <style>
-        
+        /* CSS Styles */
+
+        /* Set up the overall styling for the entire page */
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #EB5353;
+            display: flex;  /* Use flexbox for layout */
+            justify-content: center;  /* Horizontally center content */
+            align-items: center;  /* Vertically center content */
+            height: 100vh;  /* Full viewport height */
+            margin: 0;  /* Remove default margins */
+            background-color: #EB5353;  /* Background color */
         }
 
+        /* Create a container for the buttons and space them evenly */
         .button-container {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-
+            display: flex;  /* Use flexbox for layout */
+            justify-content: space-around;  /* Space buttons evenly */
+            text-align: center;  /* Center-align text */
         }
 
+        /* Define the style for the animated buttons */
         .animated-button {
-            display: inline-block;
-            width: 150px; 
-            height: 150px; 
-            background-color: #187498; 
-            color: #F9D923;
-            border: none;
-            border-radius: 10px; 
-            cursor: pointer;
-            margin: 10px;
-            font-weight: bold;
-            font-size: 18px; 
-            text-align: center;
-            line-height: 150px; 
-            text-decoration: none;
-            transition: transform 0.2s, background-color 0.2s;
+            display: inline-block;  /* Display as inline block */
+            width: 150px;  /* Set width */
+            height: 150px;  /* Set height */
+            background-color: #187498;  /* Background color */
+            color: #F9D923;  /* Text color */
+            border: none;  /* Remove border */
+            border-radius: 10px;  /* Rounded corners */
+            cursor: pointer;  /* Show pointer cursor on hover */
+            margin: 10px;  /* Add margin around buttons */
+            font-weight: bold;  /* Set font weight to bold */
+            font-size: 18px;  /* Set font size */
+            text-align: center;  /* Center-align text */
+            line-height: 150px;  /* Center text vertically */
+            text-decoration: none;  /* Remove text decoration (underline) */
+            transition: transform 0.2s, background-color 0.2s;  /* Add animation transition */
         }
 
-        /* Pulsate Effect */
+        /* Pulsate Effect - Applies animation when hovering over the button */
         .pulsate:hover {
-            animation: pulsate 1s infinite;
+            animation: pulsate 1s infinite;  /* Apply the 'pulsate' animation infinitely */
         }
 
         @keyframes pulsate {
             0% {
-                transform: scale(1);
+                transform: scale(1);  /* Start with the button at its normal size */
             }
             50% {
-                transform: scale(1.1);
+                transform: scale(1.1);  /* Scale the button up at 50% of the animation */
             }
             100% {
-                transform: scale(1);
+                transform: scale(1);  /* Return the button to its normal size at the end of the animation */
             }
         }
 
-        /* Scale Effect */
+        /* Scale Effect - Enlarges the button when hovering over it */
         .scale:hover {
-            transform: scale(1.1);
+            transform: scale(1.1);  /* Scale the button up by 10% when hovering */
         }
 
-        /* Color Change Effect */
+        /* Color Change Effect - Changes the background color when hovering over the button */
         .color-change:hover {
-            background-color: #36AE7C;
+            background-color: #36AE7C;  /* Change the background color to a different shade */
         }
     </style>
 </head>
 <body>
+    <!-- Create a container for the buttons -->
     <div class="button-container">
+        <!-- Three animated buttons with different effects applied -->
         <a href="#" class="animated-button pulsate">Pulsate</a>
         <a href="#" class="animated-button scale">Scale</a>
         <a href="#" class="animated-button color-change">Color Change</a>
     </div>
 </body>
 </html>
+
