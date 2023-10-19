@@ -362,7 +362,19 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
-[<img src="https://github.com/{{ contributor }}.png" width="60px;"/><br /><sub><ahref="https://github.com/{{ contributor }}">{{ contributor }}</a></sub>](https://github.com/{{ contributor }}/{{ repository }}
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/contributor-username">
+        <img src="https://avatars.githubusercontent.com/u/contributor-github-id?v=4" width="100px;" alt="Contributor Name"/>
+        <br />
+        <sub><b>Contributor Name</b></sub>
+      </a>
+    </td>
+    <!-- Add more contributor entries as needed -->
+  </tr>
+</table>
 
 ## Contributing
 
