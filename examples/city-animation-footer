@@ -8,13 +8,6 @@
       body {
         background: #fbfbfd;
       }
-      .footer_bottom {
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 20px;
-        color: #7f88a6;
-        padding: 27px 0px;
-      }
 
       .footer_bg {
         position: absolute;
@@ -81,12 +74,10 @@
   </head>
   <body>
     <footer>
-      <div class="footer_bottom">
         <div class="footer_bg">
           <div class="footer_bg_one"></div>
           <div class="footer_bg_two"></div>
         </div>
-      </div>
     </footer>
   </body>
 </html>
