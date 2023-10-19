@@ -359,6 +359,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+## <a id="Thankyou-Animation"></a>Thankyou-Animation
+
+[<img src="images/Thankyou-animation.png" height="230" title="Thankyou">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/5e37601d-dce5-4326-b22a-c7d4f1c6d16f)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
 ## Contributing
 
 We welcome contributions from the community to make this project better. Feel free to fork the repository, make your changes, and submit a pull request. Be sure to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
