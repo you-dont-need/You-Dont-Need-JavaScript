@@ -1,0 +1,75 @@
+/* 
+   base.css
+   Author: Mudit Kashyap (GitHub: @muditkashyap - https://github.com/muditkashyap)
+   Description: This is the base stylesheet.
+                It provides foundational styles, color variables, and basic typography settings.
+   Contact: If you have questions or suggestions regarding this CSS code, please feel free to create an issue or discussion on the project's GitHub repository.
+*/
+
+
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+/* Typography */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Basic Styles */
+body {
+    background-color: var(--light-color);
+    color: #333;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+nav {
+    background-color: var(--dark-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+aside {
+    background-color: var(--light-color);
+    padding: 10px;
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
