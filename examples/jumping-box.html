@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumping Box</title>
+</head>
+<body>
+    <style>
+        /* Custom CSS Property */
+        @property --shadow-color {
+        syntax: "<color>";
+        initial-value: transparent;
+        inherits: false;
+        }
+
+        /* Box */
+        .box-container {
+        position: absolute;
+        top: 220px;
+        left: 100px;
+        width: 250px;
+        height: 250px;
+        transform-origin: bottom;
+        animation: box 3s ease-in infinite;
+        }
+
+        .box-top {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background: #dcb5ea;
+        clip-path: path("M 154 63 L 239 94 L 155 127 L 72 94 Z");
+        }
+
+        .box-left {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background: #b370bd;
+        clip-path: path("M 72 94 L 72 199 L 153 243 L 155 127 Z");
+        }
+
+        .box-right {
+        width: inherit;
+        height: inherit;
+        background: #c985cfb9;
+        clip-path: path("M 153 243 L 238 200 L 239 94 L 155 127 Z");
+        }
+
+        /* Shadow */
+        .shadow {
+        position: absolute;
+        top: 465px;
+        left: 170px;
+        width: 170px;
+        --shadow-color: #6d3382;
+        border-bottom: 5px var(--shadow-color) solid;
+        transform-origin: center bottom;
+        animation: shadow 3s ease-out infinite;
+        filter: blur(1px);
+        }
+
+        /* Animation */
+        @keyframes box {
+        from {
+            transform: scaleY(0.8);
+        }
+
+        10% {
+            transform: scaleY(1);
+        }
+
+        15% {
+            transform: translateY(-250px) scaleX(0.9);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+        }
+
+        @keyframes shadow {
+        from {
+            transform: scaleX(100%);
+        }
+
+        10% {
+            transform: scaleX(100%);
+            --shadow-color: #7c4292;
+        }
+
+        20% {
+            transform: scaleX(5%);
+            --shadow-color: #895899;
+        }
+
+        30% {
+            transform: scaleX(10%);
+            --shadow-color: #774178;
+        }
+
+        to {
+            transform: scaleX(95%);
+        }
+        }
+
+        /* Body and Container Settings */
+        /* Center shapes */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* Set background and border color */
+        .container {
+            min-width: 500px;
+            height: 500px;
+            position: relative;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+    </style>
+    <div class="container">
+        <!-- Box -->
+        <div class="box-container">
+          <div class="box-top"></div>
+          <div class="box-left"></div>
+          <div class="box-right"></div>
+        </div>
+        <!-- Shadow -->
+        <div class="shadow"></div>
+      </div>
+</body>
+</html>
