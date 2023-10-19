@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonfire</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(#550d39, #270537);
+      }
+      .stage {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .campfire {
+        position: relative;
+        width: 600px;
+        height: 600px;
+        transform-origin: center center;
+        transform: scale(0.75);
+      }
+      .log {
+        position: absolute;
+        width: 238px;
+        height: 70px;
+        border-radius: 32px;
+        background: #781e20;
+        overflow: hidden;
+        opacity: 0.99;
+      }
+
+      .log:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 35px;
+        width: 8px;
+        height: 8px;
+        border-radius: 32px;
+        background: #b35050;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        box-shadow: 0 0 0 2.5px #781e20, 0 0 0 10.5px #b35050,
+          0 0 0 13px #781e20, 0 0 0 21px #b35050, 0 0 0 23.5px #781e20,
+          0 0 0 31.5px #b35050;
+      }
+
+      .streak {
+        position: absolute;
+        height: 2px;
+        border-radius: 20px;
+        background: #b35050;
+      }
+      .streak:nth-child(1) {
+        top: 10px;
+        width: 90px;
+      }
+      .streak:nth-child(2) {
+        top: 10px;
+        left: 100px;
+        width: 80px;
+      }
+      .streak:nth-child(3) {
+        top: 10px;
+        left: 190px;
+        width: 30px;
+      }
+
+      .streak:nth-child(4) {
+        top: 22px;
+        width: 132px;
+      }
+      .streak:nth-child(5) {
+        top: 22px;
+        left: 142px;
+        width: 48px;
+      }
+      .streak:nth-child(6) {
+        top: 22px;
+        left: 200px;
+        width: 28px;
+      }
+      .streak:nth-child(7) {
+        top: 34px;
+        left: 74px;
+        width: 160px;
+      }
+
+      .streak:nth-child(8) {
+        top: 46px;
+        left: 110px;
+        width: 40px;
+      }
+      .streak:nth-child(9) {
+        top: 46px;
+        left: 170px;
+        width: 54px;
+      }
+      .streak:nth-child(10) {
+        top: 58px;
+        left: 90px;
+        width: 110px;
+      }
+      .log {
+        transform-origin: center center;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.15);
+      }
+      .log:nth-child(1) {
+        bottom: 100px;
+        left: 100px;
+        transform: rotate(150deg) scaleX(0.75);
+        z-index: 20;
+      }
+      .log:nth-child(2) {
+        bottom: 120px;
+        left: 140px;
+        transform: rotate(110deg) scaleX(0.75);
+        z-index: 10;
+      }
+      .log:nth-child(3) {
+        bottom: 98px;
+        left: 68px;
+        transform: rotate(-10deg) scaleX(0.75);
+      }
+      .log:nth-child(4) {
+        bottom: 80px;
+        left: 220px;
+        transform: rotate(-120deg) scaleX(0.75);
+        z-index: 26;
+      }
+      .log:nth-child(5) {
+        bottom: 75px;
+        left: 210px;
+        transform: rotate(-30deg) scaleX(0.75);
+        z-index: 25;
+      }
+      .log:nth-child(6) {
+        bottom: 92px;
+        left: 280px;
+        transform: rotate(35deg) scaleX(0.85);
+        z-index: 30;
+      }
+      .log:nth-child(7) {
+        bottom: 70px;
+        left: 300px;
+        transform: rotate(-30deg) scaleX(0.75);
+        z-index: 20;
+      }
+      .stick {
+        position: absolute;
+        width: 68px;
+        height: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+        background: #781e20;
+      }
+      .stick:before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        left: 30px;
+        width: 6px;
+        height: 20px;
+        background: #781e20;
+        border-radius: 10px;
+        transform: translateY(50%) rotate(32deg);
+      }
+      .stick:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background: #b35050;
+        border-radius: 10px;
+      }
+      .stick {
+        transform-origin: center center;
+      }
+      .stick:nth-child(1) {
+        left: 158px;
+        bottom: 164px;
+        transform: rotate(-152deg) scaleX(0.8);
+        z-index: 12;
+      }
+      .stick:nth-child(2) {
+        left: 180px;
+        bottom: 30px;
+        transform: rotate(20deg) scaleX(0.9);
+      }
+      .stick:nth-child(3) {
+        left: 400px;
+        bottom: 38px;
+        transform: rotate(170deg) scaleX(0.9);
+      }
+      .stick:nth-child(3):before {
+        display: none;
+      }
+      .stick:nth-child(4) {
+        left: 370px;
+        bottom: 150px;
+        transform: rotate(80deg) scaleX(0.9);
+        z-index: 20;
+      }
+      .stick:nth-child(4):before {
+        display: none;
+      }
+      .fire .flame {
+        position: absolute;
+        transform-origin: bottom center;
+        opacity: 0.9;
+      }
+      .fire__red .flame {
+        width: 48px;
+        border-radius: 48px;
+        background: #e20f00;
+        box-shadow: 0 0 80px 18px rgba(226, 15, 0, 0.4);
+      }
+      .fire__red .flame:nth-child(1) {
+        left: 138px;
+        height: 160px;
+        bottom: 100px;
+        animation: fire 2s 0.15s ease-in-out infinite alternate;
+      }
+      .fire__red .flame:nth-child(2) {
+        left: 186px;
+        height: 240px;
+        bottom: 100px;
+        animation: fire 2s 0.35s ease-in-out infinite alternate;
+      }
+      .fire__red .flame:nth-child(3) {
+        left: 234px;
+        height: 300px;
+        bottom: 100px;
+        animation: fire 2s 0.1s ease-in-out infinite alternate;
+      }
+      .fire__red .flame:nth-child(4) {
+        left: 282px;
+        height: 360px;
+        bottom: 100px;
+        animation: fire 2s 0s ease-in-out infinite alternate;
+      }
+      .fire__red .flame:nth-child(5) {
+        left: 330px;
+        height: 310px;
+        bottom: 100px;
+        animation: fire 2s 0.45s ease-in-out infinite alternate;
+      }
+      .fire__red .flame:nth-child(6) {
+        left: 378px;
+        height: 232px;
+        bottom: 100px;
+        animation: fire 2s 0.3s ease-in-out infinite alternate;
+      }
+      .fire__red .flame:nth-child(7) {
+        left: 426px;
+        height: 140px;
+        bottom: 100px;
+        animation: fire 2s 0.1s ease-in-out infinite alternate;
+      }
+      .fire__orange .flame {
+        width: 48px;
+        border-radius: 48px;
+        background: #ff9c00;
+        box-shadow: 0 0 80px 18px rgba(255, 156, 0, 0.4);
+      }
+      .fire__orange .flame:nth-child(1) {
+        left: 138px;
+        height: 140px;
+        bottom: 100px;
+        animation: fire 2s 0.05s ease-in-out infinite alternate;
+      }
+      .fire__orange .flame:nth-child(2) {
+        left: 186px;
+        height: 210px;
+        bottom: 100px;
+        animation: fire 2s 0.1s ease-in-out infinite alternate;
+      }
+      .fire__orange .flame:nth-child(3) {
+        left: 234px;
+        height: 250px;
+        bottom: 100px;
+        animation: fire 2s 0.35s ease-in-out infinite alternate;
+      }
+      .fire__orange .flame:nth-child(4) {
+        left: 282px;
+        height: 300px;
+        bottom: 100px;
+        animation: fire 2s 0.4s ease-in-out infinite alternate;
+      }
+      .fire__orange .flame:nth-child(5) {
+        left: 330px;
+        height: 260px;
+        bottom: 100px;
+        animation: fire 2s 0.5s ease-in-out infinite alternate;
+      }
+      .fire__orange .flame:nth-child(6) {
+        left: 378px;
+        height: 202px;
+        bottom: 100px;
+        animation: fire 2s 0.35s ease-in-out infinite alternate;
+      }
+      .fire__orange .flame:nth-child(7) {
+        left: 426px;
+        height: 110px;
+        bottom: 100px;
+        animation: fire 2s 0.1s ease-in-out infinite alternate;
+      }
+      .fire__yellow .flame {
+        width: 48px;
+        border-radius: 48px;
+        background: #ffeb6e;
+        box-shadow: 0 0 80px 18px rgba(255, 235, 110, 0.4);
+      }
+      .fire__yellow .flame:nth-child(1) {
+        left: 186px;
+        height: 140px;
+        bottom: 100px;
+        animation: fire 2s 0.6s ease-in-out infinite alternate;
+      }
+      .fire__yellow .flame:nth-child(2) {
+        left: 234px;
+        height: 172px;
+        bottom: 120px;
+        animation: fire 2s 0.4s ease-in-out infinite alternate;
+      }
+      .fire__yellow .flame:nth-child(3) {
+        left: 282px;
+        height: 240px;
+        bottom: 100px;
+        animation: fire 2s 0.38s ease-in-out infinite alternate;
+      }
+      .fire__yellow .flame:nth-child(4) {
+        left: 330px;
+        height: 200px;
+        bottom: 100px;
+        animation: fire 2s 0.22s ease-in-out infinite alternate;
+      }
+      .fire__yellow .flame:nth-child(5) {
+        left: 378px;
+        height: 142px;
+        bottom: 100px;
+        animation: fire 2s 0.18s ease-in-out infinite alternate;
+      }
+      .fire__white .flame {
+        width: 48px;
+        border-radius: 48px;
+        background: #fef1d9;
+        box-shadow: 0 0 80px 18px rgba(254, 241, 217, 0.4);
+      }
+      .fire__white .flame:nth-child(1) {
+        left: 156px;
+        width: 32px;
+        height: 100px;
+        bottom: 100px;
+        animation: fire 2s 0.22s ease-in-out infinite alternate;
+      }
+      .fire__white .flame:nth-child(2) {
+        left: 181px;
+        width: 32px;
+        height: 120px;
+        bottom: 100px;
+        animation: fire 2s 0.42s ease-in-out infinite alternate;
+      }
+      .fire__white .flame:nth-child(3) {
+        left: 234px;
+        height: 170px;
+        bottom: 100px;
+        animation: fire 2s 0.32s ease-in-out infinite alternate;
+      }
+      .fire__white .flame:nth-child(4) {
+        left: 282px;
+        height: 210px;
+        bottom: 100px;
+        animation: fire 2s 0.8s ease-in-out infinite alternate;
+      }
+      .fire__white .flame:nth-child(5) {
+        left: 330px;
+        height: 170px;
+        bottom: 100px;
+        animation: fire 2s 0.85s ease-in-out infinite alternate;
+      }
+      .fire__white .flame:nth-child(6) {
+        left: 378px;
+        width: 32px;
+        height: 110px;
+        bottom: 100px;
+        animation: fire 2s 0.64s ease-in-out infinite alternate;
+      }
+      .fire__white .flame:nth-child(7) {
+        left: 408px;
+        width: 32px;
+        height: 100px;
+        bottom: 100px;
+        animation: fire 2s 0.32s ease-in-out infinite alternate;
+      }
+      .spark {
+        position: absolute;
+        width: 6px;
+        height: 20px;
+        background: #fef1d9;
+        border-radius: 18px;
+        z-index: 50;
+        transform-origin: bottom center;
+        transform: scaleY(0);
+      }
+      .spark:nth-child(1) {
+        left: 160px;
+        bottom: 212px;
+        animation: spark 1s 0.4s linear infinite;
+      }
+      .spark:nth-child(2) {
+        left: 180px;
+        bottom: 240px;
+        animation: spark 1s 1s linear infinite;
+      }
+      .spark:nth-child(3) {
+        left: 208px;
+        bottom: 320px;
+        animation: spark 1s 0.8s linear infinite;
+      }
+      .spark:nth-child(4) {
+        left: 310px;
+        bottom: 400px;
+        animation: spark 1s 2s linear infinite;
+      }
+      .spark:nth-child(5) {
+        left: 360px;
+        bottom: 380px;
+        animation: spark 1s 0.75s linear infinite;
+      }
+      .spark:nth-child(6) {
+        left: 390px;
+        bottom: 320px;
+        animation: spark 1s 0.65s linear infinite;
+      }
+      .spark:nth-child(7) {
+        left: 400px;
+        bottom: 280px;
+        animation: spark 1s 1s linear infinite;
+      }
+      .spark:nth-child(8) {
+        left: 430px;
+        bottom: 210px;
+        animation: spark 1s 1.4s linear infinite;
+      }
+      @-moz-keyframes fire {
+        0% {
+          transform: scaleY(1);
+        }
+        28% {
+          transform: scaleY(0.7);
+        }
+        38% {
+          transform: scaleY(0.8);
+        }
+        50% {
+          transform: scaleY(0.6);
+        }
+        70% {
+          transform: scaleY(0.95);
+        }
+        82% {
+          transform: scaleY(0.58);
+        }
+        100% {
+          transform: scaleY(1);
+        }
+      }
+      @-webkit-keyframes fire {
+        0% {
+          transform: scaleY(1);
+        }
+        28% {
+          transform: scaleY(0.7);
+        }
+        38% {
+          transform: scaleY(0.8);
+        }
+        50% {
+          transform: scaleY(0.6);
+        }
+        70% {
+          transform: scaleY(0.95);
+        }
+        82% {
+          transform: scaleY(0.58);
+        }
+        100% {
+          transform: scaleY(1);
+        }
+      }
+      @-o-keyframes fire {
+        0% {
+          transform: scaleY(1);
+        }
+        28% {
+          transform: scaleY(0.7);
+        }
+        38% {
+          transform: scaleY(0.8);
+        }
+        50% {
+          transform: scaleY(0.6);
+        }
+        70% {
+          transform: scaleY(0.95);
+        }
+        82% {
+          transform: scaleY(0.58);
+        }
+        100% {
+          transform: scaleY(1);
+        }
+      }
+      @keyframes fire {
+        0% {
+          transform: scaleY(1);
+        }
+        28% {
+          transform: scaleY(0.7);
+        }
+        38% {
+          transform: scaleY(0.8);
+        }
+        50% {
+          transform: scaleY(0.6);
+        }
+        70% {
+          transform: scaleY(0.95);
+        }
+        82% {
+          transform: scaleY(0.58);
+        }
+        100% {
+          transform: scaleY(1);
+        }
+      }
+      @-moz-keyframes spark {
+        0%,
+        35% {
+          transform: scaleY(0) translateY(0);
+          opacity: 0;
+        }
+        50% {
+          transform: scaleY(1) translateY(0);
+          opacity: 1;
+        }
+        70% {
+          transform: scaleY(1) translateY(-10px);
+          opacity: 1;
+        }
+        75% {
+          transform: scaleY(1) translateY(-10px);
+          opacity: 0;
+        }
+        100% {
+          transform: scaleY(0) translateY(0);
+          opacity: 0;
+        }
+      }
+      @-webkit-keyframes spark {
+        0%,
+        35% {
+          transform: scaleY(0) translateY(0);
+          opacity: 0;
+        }
+        50% {
+          transform: scaleY(1) translateY(0);
+          opacity: 1;
+        }
+        70% {
+          transform: scaleY(1) translateY(-10px);
+          opacity: 1;
+        }
+        75% {
+          transform: scaleY(1) translateY(-10px);
+          opacity: 0;
+        }
+        100% {
+          transform: scaleY(0) translateY(0);
+          opacity: 0;
+        }
+      }
+      @-o-keyframes spark {
+        0%,
+        35% {
+          transform: scaleY(0) translateY(0);
+          opacity: 0;
+        }
+        50% {
+          transform: scaleY(1) translateY(0);
+          opacity: 1;
+        }
+        70% {
+          transform: scaleY(1) translateY(-10px);
+          opacity: 1;
+        }
+        75% {
+          transform: scaleY(1) translateY(-10px);
+          opacity: 0;
+        }
+        100% {
+          transform: scaleY(0) translateY(0);
+          opacity: 0;
+        }
+      }
+      @keyframes spark {
+        0%,
+        35% {
+          transform: scaleY(0) translateY(0);
+          opacity: 0;
+        }
+        50% {
+          transform: scaleY(1) translateY(0);
+          opacity: 1;
+        }
+        70% {
+          transform: scaleY(1) translateY(-10px);
+          opacity: 1;
+        }
+        75% {
+          transform: scaleY(1) translateY(-10px);
+          opacity: 0;
+        }
+        100% {
+          transform: scaleY(0) translateY(0);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="campfire">
+        <div class="sparks">
+          <div class="spark"></div>
+          <div class="spark"></div>
+          <div class="spark"></div>
+          <div class="spark"></div>
+          <div class="spark"></div>
+          <div class="spark"></div>
+          <div class="spark"></div>
+          <div class="spark"></div>
+        </div>
+        <div class="logs">
+          <div class="log">
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+          </div>
+          <div class="log">
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+          </div>
+          <div class="log">
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+          </div>
+          <div class="log">
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+          </div>
+          <div class="log">
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+          </div>
+          <div class="log">
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+          </div>
+          <div class="log">
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+            <div class="streak"></div>
+          </div>
+        </div>
+        <div class="sticks">
+          <div class="stick"></div>
+          <div class="stick"></div>
+          <div class="stick"></div>
+          <div class="stick"></div>
+        </div>
+        <div class="fire">
+          <div class="fire__red">
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+          </div>
+          <div class="fire__orange">
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+          </div>
+          <div class="fire__yellow">
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+          </div>
+          <div class="fire__white">
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
