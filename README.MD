@@ -356,7 +356,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+&nbsp;
 
+## <a id="Dog-Animation"></a>Dog Box Animation
+
+[<img src="images/Dog-box-animation.png" title="Dog-box">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/b8321f82-ee84-4e4a-9010-62a5f4afc45a)
+
+**[⬆ back to top](#quick-links)**
+
+---
 &nbsp;
 
 ## Contributing
