@@ -1,0 +1,384 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  perspective: 800px;
+  perspective-origin: center calc(50% - 2.4em);
+  overflow: hidden;
+}
+
+.cradle {
+  position: relative;
+  animation: rotate 60s infinite linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.floor {
+  position: absolute;
+  width: 20em;
+  height: 20em;
+  background-color: #fff;
+  background-image: radial-gradient(rgba(0, 17, 34, 0.6666666667), #111 66%), url("https://assets.codepen.io/1948355/marble01.jpg");
+  background-size: 20em, 10em;
+  transform: translate(-50%, -50%) rotateX(90deg) translateZ(-3em);
+}
+.floor::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8.5em;
+  height: 4.5em;
+  background-color: #000;
+  filter: blur(0.3em);
+}
+
+.wood {
+  --width: 0;
+  --height: 0;
+  --depth: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--width);
+  height: var(--height);
+  transform: translate(-50%, -50%);
+}
+.wood.base {
+  --width: 8em;
+  --height: 1em;
+  --depth: 4em;
+  transform: translate(-50%, calc(-50% + 2.5em));
+}
+.wood.poll {
+  --width: 0.25em;
+  --height: 3em;
+  --depth: 0.25em;
+}
+.wood.poll:nth-child(3) {
+  transform: translate3d(calc(-50% + 3.5em), calc(-50% + 0.5em), 1.5em);
+}
+.wood.poll:nth-child(4) {
+  transform: translate3d(calc(-50% + 3.5em), calc(-50% + 0.5em), -1.5em);
+}
+.wood.poll:nth-child(5) {
+  transform: translate3d(calc(-50% - 3.5em), calc(-50% + 0.5em), 1.5em);
+}
+.wood.poll:nth-child(6) {
+  transform: translate3d(calc(-50% - 3.5em), calc(-50% + 0.5em), -1.5em);
+}
+.wood.strecher {
+  --width: 8em;
+  --height: 0.25em;
+  --depth: 1em;
+}
+.wood.strecher:nth-child(7) {
+  transform: translate3d(-50%, calc(-50% - 1em), 1.5em);
+}
+.wood.strecher:nth-child(8) {
+  transform: translate3d(-50%, calc(-50% - 1em), -1.5em);
+}
+.wood.strecher .dots::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 76% 50%, #777 0px, rgba(119, 119, 119, 0) 2px), radial-gradient(circle at 63% 50%, #777 0px, rgba(119, 119, 119, 0) 2px), radial-gradient(circle at 50% 50%, #777 0px, rgba(119, 119, 119, 0) 2px), radial-gradient(circle at 37% 50%, #777 0px, rgba(119, 119, 119, 0) 2px), radial-gradient(circle at 24% 50%, #777 0px, rgba(119, 119, 119, 0) 2px);
+}
+.wood > * {
+  position: absolute;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.4666666667) inset;
+  background-size: 5em;
+  background-image: url("https://assets.codepen.io/1948355/wood04.png");
+}
+.wood > .top {
+  width: var(--width);
+  height: var(--depth);
+  transform: translateY(-50%) rotateX(90deg);
+  background-color: #6f463f;
+}
+.wood > .left {
+  width: var(--depth);
+  height: var(--height);
+  transform: translateX(-50%) rotateY(90deg);
+  background-color: #5f3c35;
+}
+.wood > .right {
+  width: var(--depth);
+  height: var(--height);
+  right: 0;
+  transform: translateX(50%) rotateY(90deg);
+  background-color: #1d1211;
+}
+.wood > .front {
+  width: var(--width);
+  height: var(--height);
+  transform: translateZ(calc(var(--depth) / 2));
+  background-color: #3E2723;
+}
+.wood > .back {
+  width: var(--width);
+  height: var(--height);
+  transform: translateZ(calc(var(--depth) / -2));
+  background-color: #3E2723;
+}
+
+.ballPlate {
+  position: absolute;
+  top: -1em;
+  width: 2em;
+  height: 3em;
+  transform: translate(-50%, 0%) rotateY(90deg);
+  transform-origin: top;
+}
+.ballPlate:nth-child(9) {
+  left: -2.05em;
+  animation: ballPlateStart 3s infinite;
+}
+.ballPlate:nth-child(9) .ballWrapper {
+  animation: ballWrapperStart 3s infinite;
+}
+.ballPlate:nth-child(9) .ball {
+  background-position-y: 0%;
+}
+.ballPlate:nth-child(10) {
+  left: -1.025em;
+  animation: ballPlateSwing 3s linear infinite;
+}
+.ballPlate:nth-child(10) .ballWrapper {
+  animation: ballWrapperSwing 3s linear infinite;
+}
+.ballPlate:nth-child(10) .ball {
+  background-position-y: 25%;
+}
+.ballPlate:nth-child(11) {
+  left: 0;
+  animation: ballPlateSwing 3s linear infinite;
+}
+.ballPlate:nth-child(11) .ballWrapper {
+  animation: ballWrapperSwing 3s linear infinite;
+}
+.ballPlate:nth-child(11) .ball {
+  background-position-y: 50%;
+}
+.ballPlate:nth-child(12) {
+  left: 1.025em;
+  animation: ballPlateSwing 3s linear infinite;
+}
+.ballPlate:nth-child(12) .ballWrapper {
+  animation: ballWrapperSwing 3s linear infinite;
+}
+.ballPlate:nth-child(12) .ball {
+  background-position-y: 75%;
+}
+.ballPlate:nth-child(13) {
+  left: 2.05em;
+  animation: ballPlateEnd 3s infinite;
+}
+.ballPlate:nth-child(13) .ballWrapper {
+  animation: ballWrapperEnd 3s infinite;
+}
+.ballPlate:nth-child(13) .ball {
+  background-position-y: 100%;
+}
+@keyframes ballPlateSwing {
+  0%, 100% {
+    transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+  }
+  50% {
+    transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+  }
+}
+@keyframes ballPlateStart {
+  0%, 100% {
+    animation-timing-function: ease-out;
+    transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+  }
+  50% {
+    animation-timing-function: ease-out;
+    transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+  }
+  75% {
+    animation-timing-function: ease-in;
+    transform: translate(-50%, 0%) rotateY(90deg) rotateX(-80deg);
+  }
+}
+@keyframes ballPlateEnd {
+  0%, 100% {
+    animation-timing-function: ease-out;
+    transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+  }
+  25% {
+    animation-timing-function: ease-in;
+    transform: translate(-50%, 0%) rotateY(90deg) rotateX(80deg);
+  }
+  50% {
+    animation-timing-function: ease-out;
+    transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+  }
+}
+@keyframes ballWrapperSwing {
+  0%, 100% {
+    transform: rotateY(90deg) rotate(-5deg);
+  }
+  50% {
+    transform: rotateY(90deg) rotate(5deg);
+  }
+}
+@keyframes ballWrapperStart {
+  0%, 100% {
+    animation-timing-function: ease-out;
+    transform: rotateY(90deg) rotate(-5deg);
+  }
+  50% {
+    animation-timing-function: ease-out;
+    transform: rotateY(90deg) rotate(5deg);
+  }
+  75% {
+    animation-timing-function: ease-in;
+    transform: rotateY(90deg) rotate(80deg);
+  }
+}
+@keyframes ballWrapperEnd {
+  0%, 100% {
+    animation-timing-function: ease-out;
+    transform: rotateY(90deg) rotate(-5deg);
+  }
+  25% {
+    animation-timing-function: ease-in;
+    transform: rotateY(90deg) rotate(-80deg);
+  }
+  50% {
+    animation-timing-function: ease-out;
+    transform: rotateY(90deg) rotate(5deg);
+  }
+}
+.ballPlate .ballWrapper {
+  position: absolute;
+  bottom: 0.1em;
+  left: calc(50% - 0.5em);
+  width: 1em;
+  height: 1em;
+}
+.ballPlate .ball {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: radial-gradient(circle at top, #fff, rgba(102, 119, 136, 0.6666666667), #000), url("https://assets.codepen.io/1948355/marble01.jpg");
+  background-size: 1em, 5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6666666667) inset;
+  animation: backPos 120s infinite linear, rotate 60s infinite linear reverse;
+}
+@keyframes backPos {
+  from {
+    background-position-x: center, 5em;
+  }
+  to {
+    background-position-x: center, 0;
+  }
+}
+.ballPlate .line {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 2.15em;
+  background-color: rgba(255, 255, 255, 0.4666666667);
+  transform-origin: top;
+}
+.ballPlate .line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4666666667);
+  transform: rotateY(90deg);
+}
+.ballPlate .line:nth-child(2) {
+  transform: translateX(-1px) rotate(-20deg);
+}
+.ballPlate .line:nth-child(3) {
+  right: 0;
+  transform: translateX(1px) rotate(20deg);
+}
+
+.shadow {
+  position: absolute;
+  top: 50%;
+  width: 3em;
+  height: 3em;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 50%);
+}
+.shadow:nth-child(1) {
+  animation: shadowSwing 3s ease-out infinite, shadowStart 3s ease-out infinite;
+}
+.shadow:nth-child(2) {
+  left: 2.975em;
+  animation: shadowSwing 3s linear infinite;
+}
+.shadow:nth-child(3) {
+  left: 4em;
+  animation: shadowSwing 3s linear infinite;
+}
+.shadow:nth-child(4) {
+  left: 5.025em;
+  animation: shadowSwing 3s linear infinite;
+}
+.shadow:nth-child(5) {
+  animation: shadowSwing 3s ease-out infinite, shadowEnd 3s ease-out infinite;
+}
+@keyframes shadowSwing {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotateX(0deg) translateZ(0em) translateX(10px);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotateX(0deg) translateZ(0em) translateX(-10px);
+  }
+}
+@keyframes shadowStart {
+  0%, 50%, 100% {
+    left: 1.95em;
+    opacity: 1;
+  }
+  75% {
+    left: 0;
+    opacity: -0.5;
+    animation-timing-function: ease-in;
+  }
+}
+@keyframes shadowEnd {
+  0%, 50%, 100% {
+    left: 6.05em;
+    opacity: 1;
+  }
+  25% {
+    left: 8em;
+    opacity: -0.5;
+    animation-timing-function: ease-in;
+  }
+}
+
+.twitterLink {
+  font-size: 24px;
+}/*# sourceMappingURL=style.css.map */
