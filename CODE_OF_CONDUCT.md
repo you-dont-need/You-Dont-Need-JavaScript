@@ -187,22 +187,25 @@ When in doubt, keep your Pull Requests small. To give a Pull Request the best ch
 
 2. Clone the fork to your local machine :
 
-
+```shell
 git clone https://github.com/<your username>You-Dont-Need-JavaScript/.git
 cd You-Dont-Need-JavaScript
-
+```
 
 <!-- #default-branch-switch -->
-
 
 3. Create a new topic branch:
 
 
+```shell 
 git checkout -b my-topic-branch
+```
 
 
 4. Make changes, commit and push to your fork:
 
 
-git push 
+```shell
+git push
+```
 
