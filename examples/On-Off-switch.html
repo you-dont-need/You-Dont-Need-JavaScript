@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <style>
+        * {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),10%,90%);
+	--fg: hsl(var(--hue),10%,10%);
+	--primary: hsl(var(--hue),90%,50%);
+	--primary-t: hsla(var(--hue),90%,50%,0);
+	--unchecked: hsl(var(--hue),10%,70%);
+	--checked: hsl(133,70%,40%);
+	--trans-dur: 0.4s;
+	--trans-timing1: cubic-bezier(0.65,0,0.35,1);
+	--trans-timing2: cubic-bezier(0.68,-0.6,0.32,1.6);
+	font-size: calc(40px + (80 - 40) * (100vw - 320px) / (2560 - 320));
+}
+body,
+input {
+	color: var(--fg);
+	font: 1em/1.5 sans-serif;
+	transition:
+		background-color var(--trans-dur),
+		color var(--trans-dur);
+}
+body {
+	background-color: var(--bg);
+	display: flex;
+	height: 100vh;
+}
+.switch,
+.switch__input {
+	-webkit-tap-highlight-color: transparent;
+}
+.switch {
+	display: flex;
+	align-items: center;
+	margin: auto;
+}
+.switch__input {
+	background-color: var(--unchecked);
+	border-radius: 0.75em;
+	box-shadow: 0 0 0 0.125em var(--primary-t);
+	outline: transparent;
+	position: relative;
+	width: 2.25em;
+	height: 1.5em;
+	transition:
+		background-color var(--trans-dur) var(--trans-timing1),
+		box-shadow 0.15s var(--trans-timing1),
+		transform var(--trans-dur) var(--trans-timing2);
+	-webkit-appearance: none;
+	appearance: none;
+}
+.switch__input:focus-visible {
+	box-shadow: 0 0 0 0.125em var(--primary);
+}
+.switch__input:before {
+	background-color: var(--bg);
+	border-radius: 50%;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0.25em;
+	left: 0.25em;
+	transition:
+		background-color var(--trans-dur),
+		transform var(--trans-dur) var(--trans-timing2);
+	width: 1em;
+	height: 1em;
+}
+.switch__letters,
+.switch__letter {
+	transition: transform var(--trans-dur) var(--trans-timing2);
+}
+.switch__letters {
+	margin-left: 0.375em;
+	overflow: visible;
+	pointer-events: none;
+	width: 1.5em;
+	height: 1.5em;
+}
+.switch__letter:last-child {
+	transform: translateX(14px);
+}
+.switch__letter-stroke {
+	stroke: var(--unchecked);
+	transition:
+		stroke var(--trans-dur) var(--trans-timing1),	
+		stroke-dashoffset var(--trans-dur) var(--trans-timing2),
+		transform var(--trans-dur) var(--trans-timing2);
+}
+.switch__letter-stroke:nth-child(2) {
+	transform-origin: 2px 2px;
+}
+.switch__text {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+}
+
+/* “on” state */
+.switch__input:checked {
+	background-color: var(--checked);
+}
+.switch__input:checked,
+.switch__input:checked + .switch__letters {
+	transform: translateX(0.375em);
+}
+.switch__input:checked:before {
+	transform: translateX(0.75em);
+}
+.switch__input:checked ~ .switch__letters .switch__letter-stroke {
+	stroke: var(--checked);
+}
+.switch__input:checked ~ .switch__letters .switch__letter-stroke:nth-child(2) {
+	stroke-dashoffset: 6;
+}
+.switch__input:checked ~ .switch__letters .switch__letter-stroke:last-child {
+	stroke-dashoffset: 4;
+}
+.switch__input:checked ~ .switch__letters .switch__letter:first-child .switch__letter-stroke:nth-child(2) {
+	stroke-dashoffset: 0;
+	transform: rotate(56.5deg);
+}
+.switch__input:checked ~ .switch__letters .switch__letter:last-child {
+	stroke-dashoffset: 0;
+	transform: translateX(8px);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),10%,10%);
+		--fg: hsl(var(--hue),10%,90%);
+		--primary: hsl(var(--hue),90%,60%);
+		--primary-t: hsla(var(--hue),90%,60%,0);
+		--unchecked: hsl(var(--hue),10%,30%);
+		--checked: hsl(133,70%,50%);
+	}
+}
+    </style>
+</head>
+<body>
+    <label class="switch">
+        <input class="switch__input" type="checkbox" role="switch">
+        <svg class="switch__letters" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true">
+            <g stroke="currentcolor" stroke-linecap="round" stroke-width="4" transform="translate(0,4)">
+                <g class="switch__letter">
+                    <polyline class="switch__letter-stroke" points="2 2,2 14" />
+                    <polyline class="switch__letter-stroke" points="2 2,16 2" stroke-dasharray="14 16" stroke-dashoffset="8" transform="rotate(0,2,2)" />
+                    <polyline class="switch__letter-stroke" points="2 8,6 8" stroke-dasharray="4 6" />
+                </g>
+                <g class="switch__letter" transform="translate(14,0)">
+                    <polyline class="switch__letter-stroke" points="2 2,2 14" />
+                    <polyline class="switch__letter-stroke" points="2 2,8 2" stroke-dasharray="6 8" />
+                    <polyline class="switch__letter-stroke" points="2 8,6 8" stroke-dasharray="4 6" />
+                </g>
+            </g>
+        </svg>
+        <span class="switch__text">Power</span>
+    </label>
+</body>
+</html>
