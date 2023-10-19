@@ -1,0 +1,132 @@
+/* Base Button Styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+/* Primary Button */
+.button-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.button-hover-primary:hover{
+    background-color: var(--primary-color);
+    color:#fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Secondary Button */
+.button-secondary {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+.button-hover-secondary:hover{
+    background-color: var(--secondary-color);
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Success Button */
+.button-success {
+    background-color: var(--success-color);
+    color: #fff;
+}
+.button-hover-success:hover {
+    background-color: var(--success-color);
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Danger Button */
+.button-danger {
+    background-color: var(--danger-color);
+    color: #fff;
+}
+.button-hover-danger:hover {
+    background-color: var(--danger-color);
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Warning Button */
+.button-warning {
+    background-color: var(--warning-color);
+    color: #fff;
+}
+.button-hover-warning:hover {
+    background-color: var(--warning-color);
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Info Button */
+.button-info {
+    background-color: var(--info-color);
+    color: #fff;
+}
+.button-hover-info:hover{
+    background-color: var(--info-color);
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Button */
+.button-light {
+    background-color: var(--light-color);
+    color: #333;
+}
+.button-hover-light:hover {
+    background-color: var(--light-color);
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Button */
+.button-dark {
+    background-color: var(--dark-color);
+    color: #fff;
+}
+.button-hover-dark:hover{
+    background-color: var(--dark-color);
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Guidelines for Variants:
+   - To create a new button variant, follow these steps:
+   1. Define a class for the new variant, e.g., .button-new-variant.
+   2. Use background-color and color properties, maintaining the color format.
+   3. Ensure that the .button class's base styles are inherited for consistency.
+   4. Provide a brief description in a comment for the new variant.
+*/
+
+/* Example of a Custom Button Variant:
+    .button-custom-variant {
+        background-color: var(--primary-color); /* Maintain the color format 
+        color: #fff;
+        Add any additional styles for the custom variant 
+    }
+*/
+
+
+/* Rounded Button */
+.button-rounded{
+    border-radius: 20px;
+}
+
+/* Neon Button */
+.button-neon {
+    background-color: #00ffec;
+    color: #000;
+    text-shadow: 0 0 5px rgba(0, 255, 236, 0.5);
+    box-shadow: 0 0 10px rgba(0, 255, 236, 0.5);
+}
