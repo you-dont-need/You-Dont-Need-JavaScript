@@ -360,6 +360,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+## Contributors
+Thanks to these wonderful people who have contributed to this project!
+[<img src="https://github.com/{{ contributor }}.png" width="60px;"/><br /><sub><ahref="https://github.com/{{ contributor }}">{{ contributor }}</a></sub>](https://github.com/{{ contributor }}/{{ repository }}
+
 ## Contributing
 
 We welcome contributions from the community to make this project better. Feel free to fork the repository, make your changes, and submit a pull request. Be sure to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
