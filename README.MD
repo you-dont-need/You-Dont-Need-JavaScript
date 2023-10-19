@@ -378,6 +378,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+## Contributors
+Thanks to these wonderful people who have contributed to this project!
+
+<a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=you-dont-need/You-Dont-Need-JavaScript" />
+</a>
+
 ## Contributing
 
 We welcome contributions from the community to make this project better. Feel free to fork the repository, make your changes, and submit a pull request. Be sure to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
