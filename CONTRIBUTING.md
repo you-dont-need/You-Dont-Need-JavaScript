@@ -34,6 +34,8 @@ We encourage contributions in the form of bug fixes, feature enhancements, or th
 5. Test Your Changes:
    - Ensure that your changes are functional and do not introduce any issues.
 
+6. Add your work in the README.md file using our [Style Guide](README.md#style-guide).
+
 6. Commit Your Changes:
    - Commit your changes with a meaningful commit message.
      ```sh
