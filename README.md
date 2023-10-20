@@ -56,7 +56,11 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Switch](#switch)
 1. [Bonfire](#bonfire)
 1. [City animation footer](#city-animation-footer)
+<<<<<<< HEAD
 1. [Shuffling Squares](#shuffling-squares)
+=======
+1. [Star Wars intro animation](#StarWarsIntro)
+>>>>>>> newbranch
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -415,6 +419,11 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+---
+## <a id="starwarsintro"></a> Star Wars Intro
+[<img src="images/intro1.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
+[<img src="images/intro2.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
+**[⬆ back to top](#quick-links)**
 
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
