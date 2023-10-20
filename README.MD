@@ -287,6 +287,15 @@ Please note demos may have serious issues regarding accessibility (keyboard navi
 ***
 &nbsp;
 
+## <a id="CubeAnimation"></a>Cubic Animation Effect
+
+[<img src="images/cubeAnimation.gif" height="230" title="Ripple EffectDemo">](https://github-production-user-asset-6210df.s3.amazonaws.com/97428742/276852429-43597ada-f726-46aa-825a-6f3acada372b.gif)
+
+**[⬆ back to top](#quick-links)**
+
+***
+&nbsp;
+
 ## <a id="ResponsiveItemShowcase"></a>Responsive Counter Showing # of Items That Didn't Fit Screen
 
 [<img src="images/responsive-item-showcase.gif" title="Responsive Item Showcase">](https://codepen.io/pavlovsk/pen/QqrZzv/right/)
