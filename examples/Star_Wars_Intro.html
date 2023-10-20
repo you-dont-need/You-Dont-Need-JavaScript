@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      overflow: hidden !important;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80vh;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 61%,
+        rgba(0, 0, 0, 0.54) 79%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      z-index: 1;
+    }
+
+    .crawl {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      color: rgb(75, 213, 238);
+      font-family: "Open Sans", sans-serif;
+      font-weight: 500;
+      font-size: 3.25rem;
+      width: 80%;
+      opacity: 0;
+      animation: intro 3s ease-out 1s;
+    }
+
+    @keyframes intro {
+      0% {
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    p {
+      color: #ffe81f;
+    }
+
+    #scroller {
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 350%;
+      text-align: justify;
+      overflow: hidden;
+      height: 50em;
+      width: 20em;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -10em;
+      z-index: 0;
+      transform: perspective(350px) rotateX(25deg);
+      transform-origin: 50% 100%;
+    }
+
+    #scroller::after {
+      position: absolute;
+      content: "";
+      bottom: 60%;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+
+    #content {
+      position: absolute;
+      top: 100%;
+      animation: scroller 100s linear 3s;
+    }
+
+    @keyframes scroller {
+      0% {
+        top: 100%;
+      }
+      100% {
+        top: -200%;
+      }
+    }
+
+    #title,
+    #subtitle {
+      text-align: center;
+      line-height: 1.5rem;
+    }
+
+    #subtitle {
+      text-transform: uppercase;
+      font-size: 3.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="crawl">
+    In a galaxy far, far away...
+    <br>
+    Episode IV
+    <br>
+    A NEW HOPE
+    <br>
+    It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.
+  </div>
+  <div id="scroller">
+    <div id="content">
+      <div id="title">Star Wars: A New Hope</div>
+      <p>
+        It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.
+      </p>
+      <div id="subtitle">Episode IV</div>
+    </div>
+  </div>
+</body>
+</html>
