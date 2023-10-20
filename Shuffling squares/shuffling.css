@@ -1,4 +1,7 @@
-body { margin: 0; background-color: rgb(182, 222, 244);}
+body 
+{ margin: 0; 
+ background: #f5a9c7;
+}
 
 span {
   position: absolute;
