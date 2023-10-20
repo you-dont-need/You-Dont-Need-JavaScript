@@ -420,4 +420,6 @@ Thanks to these wonderful people who have contributed to this project!
 
 We welcome contributions from the community to make this project better. Feel free to fork the repository, make your changes, and submit a pull request. Be sure to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
+For detailed guidelines on how to contribute, please refer to our [CONTRIBUTING](CONTRIBUTING.md) file.
+
 Let's build something great together!
