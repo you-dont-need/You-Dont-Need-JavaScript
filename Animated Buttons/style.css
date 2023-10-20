@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	background-color: #291d89;
+}
+
+svg {
+	width: 100%;
+	height: 100vh;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+#base {
+	cursor: pointer;
+}
