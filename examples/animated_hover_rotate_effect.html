@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Effect</title>
+
+   <style>
+   .animation img{
+    transition: 1s ease;
+    }
+    
+    .animation img:hover{
+    transform: rotate(-360deg);
+    transition: 2s ease-in;
+    border-radius: 50%;
+  border: 10px solid #d66d50;
+    }
+    .animation{
+        display: flex;
+        justify-content: center;
+        height: 500px;
+        align-items: center;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="animation">
+        <img src="https://t4.ftcdn.net/jpg/05/65/20/27/360_F_565202786_towUjm2KMittPXHT7yF7H4SFPAxv0xjD.jpg" height="300px" width="300px">
+    </div>
+    
+</body>
+</html>

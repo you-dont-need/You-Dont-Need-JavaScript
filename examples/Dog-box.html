@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dog-box-animation</title>
+
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
+    body {
+        position: relative;
+        background: #f0f0f0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+        height: 420px;
+    }
+
+    * {
+        position: absolute;
+    }
+
+    * *:before,
+    * *:after {
+        content: "";
+        position: absolute;
+    }
+
+    .box {
+        background-color: #d1585d;
+        width: 50%;
+        height: 45%;
+        left: 25%;
+        bottom: 0;
+        border-radius: 20px;
+        transform-origin: center bottom;
+        animation: bigBox 8s linear infinite;
+    }
+
+    .box:before {
+        background-color: #f79568;
+        width: 70%;
+        height: 100%;
+        bottom: 0;
+        border-radius: 20px;
+    }
+
+    .box:after {
+        background-color: #ffbd31;
+        height: 100%;
+        width: 11%;
+        right: 10%;
+    }
+
+    .box .sign {
+        width: 36px;
+        height: 36px;
+        border-radius: 6px;
+        border: 3px solid #d1585d;
+        left: 150px;
+        top: 10%;
+    }
+
+    .box .sign:after {
+        width: 3px;
+        height: 20px;
+        left: 13px;
+        top: 6px;
+        background-color: #d1585d;
+    }
+
+    .box .sign:before {
+        width: 9px;
+        height: 9px;
+        left: 10px;
+        top: 6px;
+        border: 3px solid #d1585d;
+        border-left: 0;
+        border-bottom: 0;
+        transform: rotate(-45deg);
+    }
+
+    .dog {
+        bottom: 45%;
+        height: 45%;
+        width: 45%;
+        animation: dog-bounce 8s linear infinite;
+        transform-origin: center bottom;
+    }
+
+    .dog-group {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        animation: dog-jump 8s linear infinite;
+        transform-origin: center bottom;
+    }
+
+    .body-group {
+        z-index: 2;
+        width: 52%;
+        height: 38%;
+        bottom: 0;
+        left: 25%;
+    }
+
+    .body-group .dog-box {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 7px 7px;
+        overflow: hidden;
+        z-index: 3;
+        background: #f79568;
+        background: linear-gradient(90deg, rgba(247, 149, 104, 1) 0%, rgba(247, 149, 104, 1) 67%, rgba(209, 88, 93, 1) 67%, rgba(209, 88, 93, 1) 100%);
+    }
+
+    .body-group .dog-box .dog-box-sign {
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+        border: 3px solid #d1585d;
+        left: 35%;
+        top: 15%;
+    }
+
+    .body-group .dog-box .dog-box-sign:after {
+        width: 70%;
+        height: 3px;
+        border-radius: 10px;
+        background-color: #d1585d;
+        left: 15%;
+        top: 5px;
+        box-shadow: 0px 6px #d1585d;
+    }
+
+    .body-group .dog-box .dog-box-sign:before {
+        width: 45%;
+        height: 3px;
+        border-radius: 10px;
+        background-color: #d1585d;
+        left: 39%;
+        top: 17px;
+    }
+
+    .body-group .dog-box .bottom-shadow {
+        width: 100%;
+        height: 20px;
+        background-color: #a53942;
+        bottom: -13px;
+        transform: rotate(-2deg);
+        animation: shadows 8s linear infinite;
+    }
+
+    .body-group .dog-box .top-left-shadow {
+        height: 40px;
+        width: 60px;
+        background-color: #a53942;
+        transform: rotate(-15deg);
+        top: -32px;
+        left: -10px;
+        animation: shadows 8s linear infinite;
+    }
+
+    .body-group .dog-shape {
+        border-radius: 50%;
+        background-color: #39cede;
+        width: 50px;
+        height: 50px;
+        right: 18%;
+        top: -40%;
+        z-index: 2;
+        box-shadow: 6px 10px 0 #a53942;
+        animation: blue-shape 8s linear infinite;
+        transform-origin: center bottom;
+    }
+
+    .body-group .tail-group {
+        right: 0px;
+        top: -65%;
+        height: 70px;
+        width: 24px;
+        z-index: 1;
+        transform: rotate(25deg);
+        animation: tailGroup 8s linear infinite;
+        transform-origin: center;
+    }
+
+    .body-group .tail-group .tail {
+        bottom: 0;
+        background-color: #ff4a50;
+        height: 22px;
+        width: 22px;
+        border-radius: 0 0 20px 20px;
+        z-index: 1;
+        animation: tail 8s linear infinite;
+        transform-origin: center center;
+    }
+
+    .body-group .tail-group .tail .tail {
+        bottom: 40%;
+    }
+
+    .body-group .tail-group .tail.last {
+        border-radius: 20px;
+    }
+
+    .head-group {
+        bottom: 38%;
+        width: 45%;
+        height: 38%;
+        left: 10%;
+        animation: dog-head 8s linear infinite;
+        transform-origin: center bottom;
+    }
+
+    .head-group .head {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 3px 3px;
+        overflow: hidden;
+        background: #f79568;
+        background: linear-gradient(90deg, rgba(247, 149, 104, 1) 0%, rgba(247, 149, 104, 1) 67%, rgba(209, 88, 93, 1) 67%, rgba(209, 88, 93, 1) 100%);
+    }
+
+    .head-group .head:after {
+        background-color: #a53942;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        right: -25px;
+        bottom: -25px;
+    }
+
+    .head-group .ear {
+        height: 30px;
+        width: 50%;
+        bottom: 100%;
+        transform: perspective(3000px);
+    }
+
+    .head-group .ear.right {
+        right: -20px;
+    }
+
+    .head-group .ear .ear-container {
+        width: 95%;
+        height: 100%;
+        left: -9px;
+        transform-style: preserve-3d;
+        transform-origin: center bottom;
+        transform: rotateY(45deg);
+    }
+
+    .head-group .ear .ear-left,
+    .head-group .ear .ear-right {
+        background-color: #cb444a;
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
+        border-radius: 4px 4px 0 0;
+        transform-origin: center bottom;
+    }
+
+    .head-group .ear .ear-left {
+        transform: rotateX(50deg);
+        animation: earLeft 8s linear infinite;
+    }
+
+    .head-group .ear .ear-right {
+        transform: rotateX(-50deg);
+        animation: earRight 8s linear infinite;
+    }
+
+    .head-group .face {
+        width: 67%;
+        height: 100%;
+    }
+
+    .head-group .face .muzzle {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background-color: #d1585d;
+        left: 29%;
+        bottom: 8%;
+        z-index: 2;
+    }
+
+    .head-group .face .eyes {
+        width: 100%;
+        height: 50%;
+        top: 17%;
+        z-index: 1;
+    }
+
+    .head-group .face .eyes .eye-left,
+    .head-group .face .eyes .eye-right {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #fff;
+        bottom: 0;
+        transform-origin: center top;
+        animation: eyeWink 8s linear infinite;
+    }
+
+    .head-group .face .eyes .eye-left .pupil,
+    .head-group .face .eyes .eye-right .pupil {
+        background-color: #421163;
+        border-radius: 50%;
+        width: 76%;
+        height: 76%;
+        top: 12%;
+        left: 14%;
+        animation: eyeMove 8s linear infinite;
+    }
+
+    .head-group .face .eyes .eye-left .pupil:after,
+    .head-group .face .eyes .eye-right .pupil:after {
+        background-color: #fff;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        top: 3px;
+        left: -1px;
+        transform-origin: center bottom;
+        animation: eyeWink2 8s linear infinite;
+    }
+
+    .head-group .face .eyes .eye-left {
+        left: 4px;
+    }
+
+    .head-group .face .eyes .eye-right {
+        right: 4px;
+    }
+
+    .head-group .face .nose {
+        background-color: #421163;
+        width: 12px;
+        height: 8px;
+        left: 9px;
+        top: 6px;
+        border-radius: 40%;
+        animation: nose 8s linear infinite;
+    }
+
+    .head-group .face .nose:after {
+        width: 4px;
+        height: 6px;
+        background-color: #421163;
+        left: 4px;
+        top: 8px;
+    }
+
+    .head-group .face .mouth-close {
+        width: 100%;
+        height: 8px;
+        top: 12px;
+        animation: mouthClose 8s linear infinite;
+    }
+
+    .head-group .face .mouth-close:after,
+    .head-group .face .mouth-close:before {
+        width: 12px;
+        height: 8px;
+        border: 3px solid #421163;
+        border-radius: 0 0 8px 8px;
+        border-top: 0;
+        top: 4px;
+        left: 4px;
+    }
+
+    .head-group .face .mouth-close:before {
+        left: 14px;
+    }
+
+    .head-group .face .mouth-barks {
+        background-color: #421163;
+        width: 20px;
+        height: 20px;
+        bottom: 2px;
+        left: 6px;
+        border-radius: 50%;
+        overflow: hidden;
+        opacity: 0;
+        animation: mouthBarks 8s linear infinite;
+    }
+
+    .head-group .face .mouth-barks:after {
+        width: 80%;
+        height: 80%;
+        background-color: #ff4a50;
+        left: 40%;
+        top: 40%;
+        border-radius: 50%;
+    }
+
+    .head-group .face .mouth-open {
+        opacity: 0;
+        background-color: #421163;
+        width: 24px;
+        height: 12px;
+        bottom: 3px;
+        left: 4px;
+        border-radius: 0px 0px 22px 22px;
+        animation: mouthOpen 8s linear infinite;
+    }
+
+    .head-group .face .mouth-open .teeth {
+        width: 0;
+        height: 0;
+        left: 3px;
+        top: 0px;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-top: 5px solid #fff;
+    }
+
+    .head-group .face .mouth-open .teeth:after {
+        width: 0;
+        height: 0;
+        left: 9px;
+        top: -5px;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-top: 5px solid #fff;
+    }
+
+    .head-group .face .mouth-open .tongue-open {
+        background-color: #ff4a50;
+        width: 12px;
+        height: 9px;
+        left: 6px;
+        top: 3px;
+        border-radius: 40%;
+        animation: tongue 8s linear infinite;
+        transform-origin: center top;
+    }
+
+    .tongue-open {
+        z-index: 99;
+        background-color: #ff4a50;
+        width: 12px;
+        height: 9px;
+        left: 61px;
+        top: 100px;
+        border-radius: 40%;
+        animation: tongue 8s linear infinite;
+        transform-origin: center top;
+    }
+
+    .plant-group {
+        width: 32%;
+        height: 45%;
+        bottom: 0;
+        right: 0;
+    }
+
+    .plant-group:before {
+        background-color: #a53942;
+        left: 13%;
+        bottom: 30%;
+        height: 60px;
+        width: 16px;
+    }
+
+    .plant-group .pot {
+        background-color: #a53942;
+        left: 0%;
+        bottom: 0;
+        height: 60px;
+        width: 60px;
+        z-index: 2;
+    }
+
+    .plant-group .pot:after {
+        background-color: #ff4a50;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 200%;
+        border-radius: 0 0 120px 120px;
+    }
+
+    .plant-group .plant {
+        bottom: 60px;
+        left: 0%;
+        height: 50px;
+        width: 120px;
+    }
+
+    .plant-group .plant .stem {
+        width: 8px;
+        height: 110%;
+        background-color: #421163;
+        left: 56px;
+        top: -4px;
+    }
+
+    .plant-group .plant .leaf {
+        background-color: #421163;
+        width: 6px;
+        height: 16px;
+        left: -6px;
+        border-radius: 50px;
+    }
+
+    .plant-group .plant .leaf:after {
+        background-color: #39cede;
+        width: 20px;
+        height: 38px;
+        border-radius: 50%;
+        left: -7px;
+        bottom: 70%;
+    }
+
+    .plant-group .plant .leaf:nth-of-type(1),
+    .plant-group .plant .leaf:nth-of-type(2) {
+        transform: rotate(-45deg);
+    }
+
+    .plant-group .plant .leaf:nth-of-type(4),
+    .plant-group .plant .leaf:nth-of-type(5) {
+        transform: rotate(45deg);
+        left: 8px;
+    }
+
+    .plant-group .plant .leaf:nth-of-type(1),
+    .plant-group .plant .leaf:nth-of-type(5) {
+        bottom: -3px;
+    }
+
+    .plant-group .plant .leaf:nth-of-type(3) {
+        top: -2px;
+        left: 1px;
+    }
+
+    .plant-group .plant .leaf:nth-of-type(2),
+    .plant-group .plant .leaf:nth-of-type(4) {
+        bottom: 25px;
+    }
+
+    .shapes {
+        width: 50%;
+        height: 45%;
+        bottom: 0;
+        left: 0;
+    }
+
+    .shapes:before {
+        background-color: #a53942;
+        width: 52%;
+        height: 50%;
+        bottom: 0;
+        right: -1px;
+        border-radius: 0 30px 0 0;
+        transform: skewX(5deg);
+    }
+
+    .shapes .red-shape {
+        background-color: #ff4a50;
+        right: 0;
+        bottom: 0;
+        height: 120px;
+        width: 120px;
+        border-radius: 100%;
+    }
+
+    .shapes .blue-shape {
+        left: 24%;
+        bottom: 0;
+        width: 120px;
+        height: 50px;
+        background-color: #39cede;
+        border-radius: 50px;
+    }
+
+    .shapes .yellow-shape {
+        left: 35%;
+        bottom: 77px;
+        width: 120px;
+        height: 40px;
+        background-color: #ffbd31;
+        border-radius: 50px;
+        transform: rotate(-45deg);
+    }
+
+    @keyframes bigBox {
+
+        6.3%,
+        11.6%,
+        14.4%,
+        16%,
+        48%,
+        52.4%,
+        55.6%,
+        57.2%,
+        62.4%,
+        67.2%,
+        70.8%,
+        72.4% {
+            transform: scaleX(1) scaleY(1);
+        }
+
+        8.8%,
+        50.4%,
+        65.6% {
+            transform: scaleX(1.02) scaleY(0.98);
+        }
+
+        14.8%,
+        56%,
+        71.2% {
+            transform: scaleX(1.05) scaleY(0.95);
+        }
+    }
+
+    @keyframes dog-bounce {
+
+        6.3%,
+        11.2%,
+        14.4%,
+        16%,
+        48%,
+        52.4%,
+        55.6%,
+        57.2%,
+        62.8%,
+        67.2%,
+        70.8%,
+        72.4% {
+            transform: scaleX(1) scaleY(1);
+        }
+
+        8.8%,
+        50.4%,
+        65.6% {
+            transform: scaleX(1.15) scaleY(0.85) translateY(5px);
+        }
+
+        14.8%,
+        56%,
+        71.2% {
+            transform: scaleX(1.1) scaleY(0.9) translateY(10px);
+        }
+
+        16.4%,
+        72.8% {
+            transform: scaleX(0.95) scaleY(1.05);
+        }
+
+        18.4%,
+        22%,
+        26%,
+        30%,
+        34%,
+        74.4%,
+        78.4%,
+        82.4%,
+        86.4%,
+        90.4% {
+            transform: scaleX(1.04) scaleY(0.96);
+        }
+
+        20%,
+        24%,
+        28%,
+        32%,
+        36%,
+        40%,
+        76.4%,
+        80.4%,
+        84.4%,
+        88.4%,
+        92.4%,
+        96.4% {
+            transform: scaleX(1) scaleY(1);
+        }
+
+        38%,
+        94.4% {
+            transform: scaleX(1.08) scaleY(0.92);
+        }
+    }
+
+    @keyframes dog-jump {
+
+        10.4%,
+        71.2% {
+            transform: translateX(0px) translateY(0px);
+        }
+
+        10.8%,
+        70.4% {
+            transform: translateY(-15px);
+        }
+
+        11.2%,
+        69.6% {
+            transform: translateX(-4px) translateY(-22px);
+        }
+
+        11.6%,
+        69.2% {
+            transform: translateX(-8px) translateY(-28px);
+        }
+
+        12%,
+        68.8% {
+            transform: translateX(-12px) translateY(-30px);
+        }
+
+        12.4%,
+        68.4% {
+            transform: translateX(-16px) translateY(-28px);
+        }
+
+        12.8%,
+        68% {
+            transform: translateX(-20px) translateY(-25px);
+        }
+
+        13.2%,
+        67.6% {
+            transform: translateX(-24px) translateY(-20px);
+        }
+
+        13.6%,
+        67.2% {
+            transform: translateX(-28px) translateY(-10px);
+        }
+
+        14.8%,
+        51.6%,
+        55.2%,
+        66.8% {
+            transform: translateX(-32px) translateY(0px);
+        }
+
+        52%,
+        53.6% {
+            transform: translateX(-32px) translateY(-10px);
+        }
+    }
+
+    @keyframes dog-head {
+
+        10.4%,
+        51.2%,
+        71.2% {
+            transform: translateX(0px) translateY(0px);
+        }
+
+        11.6%,
+        13.6%,
+        70.4% {
+            transform: translateY(-15px);
+        }
+
+        14.8%,
+        55.6%,
+        66.8% {
+            transform: translateY(0px);
+        }
+
+        53.2%,
+        54.4% {
+            transform: translateY(-15px);
+        }
+    }
+
+    @keyframes blue-shape {
+
+        10.4%,
+        51.2%,
+        71.2% {
+            transform: translateX(0px) translateY(0px);
+        }
+
+        11.6%,
+        13.6%,
+        70.4% {
+            transform: translateY(-15px);
+        }
+
+        14.8%,
+        55.6%,
+        66.8% {
+            transform: translateY(0px);
+        }
+
+        53.2%,
+        54.4% {
+            transform: translateY(-15px);
+        }
+    }
+
+    @keyframes eyeMove {
+
+        0%,
+        10.4%,
+        14%,
+        18.4%,
+        25.2%,
+        30.4%,
+        37.6%,
+        51.2%,
+        57.2%,
+        66.8%,
+        71.2%,
+        74.8%,
+        81.6%,
+        86.8%,
+        96% {
+            transform: translate(0px, 0px) rotate(0deg) scale(1);
+        }
+
+        10.8%,
+        13.6%,
+        67.2%,
+        70.4% {
+            transform: translate(0px, -2px);
+        }
+
+        18.8%,
+        24.8%,
+        30.8%,
+        37%,
+        75.2%,
+        81.2%,
+        87.2%,
+        94% {
+            transform: translate(2px, 0px) rotate(2deg);
+        }
+
+        51.6%,
+        56.8% {
+            transform: scale(1.1);
+        }
+    }
+
+    @keyframes eyeWink {
+
+        0%,
+        8.4%,
+        10.8%,
+        13.2%,
+        16.4%,
+        36.4%,
+        42%,
+        52%,
+        56.4%,
+        64.4%,
+        67.2%,
+        69.2%,
+        72.8%,
+        93.2%,
+        98% {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #fff;
+            bottom: 0;
+        }
+
+        8.8%,
+        9.6%,
+        14.8%,
+        15.2%,
+        36.7%,
+        40.4%,
+        53.2%,
+        54.8%,
+        65.2%,
+        66.2%,
+        71%,
+        72%,
+        94%,
+        96.8% {
+            height: 3px;
+            width: 27px;
+            border-radius: 2px;
+            background-color: #421163;
+            bottom: 35%;
+        }
+    }
+
+    @keyframes eyeWink2 {
+
+        0%,
+        8%,
+        10.4%,
+        12.8%,
+        16%,
+        36%,
+        41.6%,
+        51.6%,
+        56%,
+        64%,
+        66.8%,
+        68.8%,
+        72.4%,
+        92.8%,
+        97.6% {
+            opacity: 1;
+        }
+
+        8.4%,
+        9.6%,
+        14.4%,
+        15.2%,
+        36.7%,
+        40.4%,
+        53.2%,
+        54.8%,
+        65.2%,
+        66.2%,
+        71%,
+        72%,
+        94%,
+        96.8% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes earLeft {
+
+        10.8%,
+        17.2%,
+        20.8%,
+        24.4%,
+        25.2%,
+        28.4%,
+        29.2%,
+        32.4%,
+        33.2%,
+        36.4%,
+        52.4%,
+        58.4%,
+        59.2%,
+        62%,
+        67.6%,
+        73.6%,
+        76.8%,
+        77.2%,
+        80.8%,
+        81.2%,
+        84.8%,
+        85.2%,
+        88.8%,
+        89.2%,
+        92.8% {
+            transform: rotateX(50deg);
+        }
+
+        14.4%,
+        54.4%,
+        55.6%,
+        68.8%,
+        70.8% {
+            transform: rotateX(-20deg) scaleY(0.8);
+        }
+
+        14.8%,
+        15.6%,
+        56%,
+        56.8%,
+        71.2%,
+        72% {
+            transform: rotateX(130deg);
+        }
+
+        18.8%,
+        22.8%,
+        26.8%,
+        30.8%,
+        34.8%,
+        60%,
+        75.2%,
+        79.2%,
+        83.2%,
+        87.2%,
+        91.2% {
+            transform: rotateX(70deg);
+        }
+    }
+
+    @keyframes earRight {
+
+        10.8%,
+        17.2%,
+        20.8%,
+        24.4%,
+        25.2%,
+        28.4%,
+        29.2%,
+        32.4%,
+        33.2%,
+        36.4%,
+        52.4%,
+        58.4%,
+        59.2%,
+        62%,
+        67.6%,
+        73.6%,
+        76.8%,
+        77.2%,
+        80.8%,
+        81.2%,
+        84.8%,
+        85.2%,
+        88.8%,
+        89.2%,
+        92.8% {
+            transform: rotateX(-50deg);
+        }
+
+        14.4%,
+        54.4%,
+        55.6%,
+        68.8%,
+        70.8% {
+            transform: rotateX(20deg) scaleY(0.8);
+        }
+
+        14.8%,
+        15.6%,
+        56%,
+        56.8%,
+        71.2%,
+        72% {
+            transform: rotateX(-130deg);
+        }
+
+        18.8%,
+        22.8%,
+        26.8%,
+        30.8%,
+        34.8%,
+        60%,
+        75.2%,
+        79.2%,
+        83.2%,
+        87.2%,
+        91.2% {
+            transform: rotateX(-70deg);
+        }
+    }
+
+    @keyframes shadows {
+
+        10.4%,
+        14.8%,
+        51.6%,
+        55.6%,
+        66.8%,
+        71.2% {
+            opacity: 1;
+        }
+
+        10.8%,
+        14.4%,
+        52%,
+        54.8%,
+        67.2%,
+        70.8% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes mouthClose {
+
+        17.2%,
+        37.2%,
+        50%,
+        56.2%,
+        73.6%,
+        93.6% {
+            opacity: 1;
+        }
+
+        17.6%,
+        36.8%,
+        52.4%,
+        55.8%,
+        74%,
+        93.2% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes mouthBarks {
+
+        50%,
+        57.2% {
+            opacity: 0;
+        }
+
+        50.4%,
+        56.8% {
+            opacity: 1;
+            transform: scale(0);
+        }
+
+        53%,
+        54.2% {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    }
+
+    @keyframes nose {
+
+        50%,
+        57.2% {
+            transform: translateY(0px);
+        }
+
+        53% {
+            transform: translateY(-4px);
+        }
+    }
+
+    @keyframes mouthOpen {
+
+        17.2%,
+        37.2%,
+        73.6%,
+        93.6% {
+            opacity: 0;
+        }
+
+        17.6%,
+        36.8%,
+        74%,
+        93.2% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes tongue {
+
+        0%,
+        17.2%,
+        37.2%,
+        73.6%,
+        93.6%,
+        100% {
+            opacity: 0;
+        }
+
+        17.6%,
+        36.8% {
+            opacity: 1;
+        }
+
+        19.2%,
+        22%,
+        24%,
+        26.4%,
+        28.4%,
+        30.8%,
+        32.8%,
+        35.6%,
+        75.6%,
+        78.4%,
+        80.4%,
+        82.8%,
+        84.8%,
+        87.2%,
+        89.2%,
+        92% {
+            transform: scaleY(2.7);
+        }
+
+        20.8%,
+        23.2%,
+        25.2%,
+        27.6%,
+        29.6%,
+        32%,
+        34%,
+        74.8%,
+        77.2%,
+        79.6%,
+        81.6%,
+        84%,
+        86%,
+        88.4%,
+        90.4% {
+            transform: scaleY(1.7);
+        }
+
+        74%,
+        93.2% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes tail {
+
+        17.2%,
+        38.4%,
+        73.6%,
+        94.8% {
+            transform: rotate(0deg);
+        }
+
+        18.8%,
+        22.8%,
+        24.8%,
+        26.4%,
+        28.4%,
+        30.4%,
+        32.4%,
+        34.4%,
+        36.4%,
+        75.2%,
+        78.8%,
+        80.8%,
+        82.8%,
+        84.8%,
+        86.8%,
+        88.8%,
+        90.8%,
+        92.8% {
+            transform: rotate(12deg);
+        }
+
+        21.2%,
+        21.6%,
+        23.6%,
+        25.6%,
+        27.2%,
+        29.6%,
+        31.6%,
+        33.6%,
+        35.6%,
+        37.6%,
+        77.6%,
+        78%,
+        80%,
+        82%,
+        84%,
+        86%,
+        88%,
+        90%,
+        92%,
+        94% {
+            transform: rotate(-12deg);
+        }
+    }
+
+    @keyframes tailGroup {
+
+        10.4%,
+        14.4%,
+        17.2%,
+        38.4%,
+        51.2%,
+        55.6%,
+        66.8%,
+        70.8%,
+        73.6%,
+        94.8% {
+            transform: rotate(25deg) translateX(0px) translateY(0px);
+        }
+
+        18.8%,
+        22.8%,
+        24.8%,
+        26.4%,
+        28.4%,
+        30.4%,
+        32.4%,
+        34.4%,
+        36.4%,
+        75.2%,
+        78.8%,
+        80.8%,
+        82.8%,
+        84.8%,
+        86.8%,
+        88.8%,
+        90.8%,
+        92.8% {
+            transform: rotate(-10deg) translateX(-15px);
+        }
+
+        21.2%,
+        21.6%,
+        23.6%,
+        25.6%,
+        27.2%,
+        29.6%,
+        31.6%,
+        33.6%,
+        35.6%,
+        37.6%,
+        77.6%,
+        78%,
+        80%,
+        82%,
+        84%,
+        86%,
+        88%,
+        90%,
+        92%,
+        94% {
+            transform: rotate(50deg) translateX(15px);
+        }
+
+        13.2%,
+        54%,
+        69.2% {
+            transform: rotate(5deg) translateY(-30px) translateX(-5px);
+        }
+    }
+
+    @keyframes blue-shape {
+
+        10.4%,
+        14.8%,
+        38%,
+        51.2%,
+        55.6%,
+        66.8%,
+        71.2%,
+        94.4% {
+            transform: translateX(0px) translateY(0px);
+            box-shadow: 6px 10px 0 #a53942;
+        }
+
+        11.6%,
+        13.6%,
+        53.2%,
+        54.4%,
+        70.4% {
+            transform: translateY(-15px);
+            box-shadow: none;
+        }
+
+        18.8%,
+        37.6%,
+        75.2%,
+        94% {
+            box-shadow: none;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <div class="sign"></div>
+        </div>
+        <div class="dog">
+            <div class="dog-group">
+                <div class="tongue-open"></div>
+                <div class="body-group">
+                    <div class="dog-box">
+                        <div class="dog-box-sign">
+                            <div class="content"></div>
+                        </div>
+                        <div class="bottom-shadow"></div>
+                        <div class="top-left-shadow"></div>
+                    </div>
+                    <div class="tail-group">
+                        <div class="tail">
+                            <div class="tail">
+                                <div class="tail">
+                                    <div class="tail">
+                                        <div class="tail">
+                                            <div class="tail">
+                                                <div class="tail last"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dog-shape"></div>
+                </div>
+                <div class="head-group">
+                    <div class="ear">
+                        <div class="ear-container">
+                            <div class="ear-left"></div>
+                        </div>
+                    </div>
+                    <div class="head"></div>
+                    <div class="ear right">
+                        <div class="ear-container">
+                            <div class="ear-right"></div>
+                        </div>
+                    </div>
+                    <div class="face">
+                        <div class="muzzle">
+                            <div class="nose"></div>
+                            <div class="mouth-close"></div>
+                            <div class="mouth-open">
+                                <div class="teeth"></div>
+                            </div>
+                            <div class="mouth-barks"></div>
+                        </div>
+                        <div class="eyes">
+                            <div class="eye-left">
+                                <div class="pupil"></div>
+                            </div>
+                            <div class="eye-right">
+                                <div class="pupil"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="plant-group">
+            <div class="pot"></div>
+            <div class="plant">
+                <div class="stem">
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                </div>
+            </div>
+        </div>
+        <div class="shapes">
+            <div class="red-shape"></div>
+            <div class="blue-shape"></div>
+            <div class="yellow-shape"></div>
+        </div>
+    </div>
+</body>
+
+</html>

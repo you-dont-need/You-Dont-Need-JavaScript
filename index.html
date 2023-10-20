@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>You Dont Need Javascript</title>
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			#pageSection {
+				margin: 5px 20px;
+				max-width: 1000px;
+				border: 5px solid #23aa04;
+				border-radius: 30px;
+				padding: 2%;
+				text-align: center;
+				overflow: auto;
+				max-height: 100vh;
+			}
+			#pageSection p {
+				font-size: 18px;
+			}
+			#pages {
+				font-family: Arial, Helvetica, sans-serif;
+				border-collapse: collapse;
+				width: 100%;
+				border-radius: 10px;
+			}
+			#pages tbody {
+				border-radius: 10px;
+			}
+			#pages td,
+			#pages th {
+				/* border: 1px solid #ddd; */
+				padding: 8px;
+			}
+
+			#pages tr:nth-child(even) {
+				background-color: #f2f2f2;
+			}
+
+			#pages tr:hover {
+				background-color: #ddd;
+			}
+
+			#pages th {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				text-align: left;
+				background-color: #04aa6d;
+				color: white;
+			}
+			.pageUrl {
+				/* display: grid; */
+				grid-template-columns: repeat(7, 1fr);
+			}
+			.pageUrl a {
+				display: inline-flex;
+				text-transform: capitalize;
+				font-size: 16px;
+				letter-spacing: 0.5px;
+				padding: 5px;
+				margin: 5px 0;
+				/* text-decoration: none; */
+				color: #04aa6d;
+			}
+			@media (max-width: 768px) {
+				.pageUrl a {
+					font-size: 12px;
+
+					/* grid-template-columns: repeat(6, 1fr); */
+				}
+			}
+			@media (max-width: 500px) {
+				.pageUrl a {
+					font-size: 12px;
+					/* grid-template-columns: repeat(2, 1fr); */
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section id="pageSection">
+			<h1>You Dont Need Javascript</h1>
+			<p class="description">a display of pages</p>
+
+			<table id="pages">
+				<tr>
+					<th>Folder</th>
+					<th>Pages</th>
+				</tr>
+				<tr>
+					<td>Examples</td>
+					<td class="pageUrl">
+						<a href="./examples/About.html">About</a>
+						<a href="./examples/alert.html">alert</a>
+						<a href="./examples/Animated_Boxes.html">Animated_Boxes</a>
+						<a href="./examples/AnimatedButtons.html">AnimatedButtons</a>
+						<a href="./examples/art.html">art</a>
+						<a href="./examples/author.html">author</a>
+						<a href="./examples/batman-hover-button.html">batman-hover-button</a>
+						<a href="./examples/Bonfire.html">Bonfire</a>
+						<a href="./examples/burger-menu-1.html">burger-menu-1</a>
+						<a href="./examples/Card-flip.html">Card-flip</a>
+						<a href="./examples/card-hover.html">card-hover</a>
+						<a href="./examples/carousel-1.html">carousel-1</a>
+						<a href="./examples/carousel-2.html">carousel-2</a>
+						<a href="./examples/checkbox-counter.html">checkbox-counter</a>
+						<a href="./examples/coffeemachine.html">coffeemachine</a>
+						<a href="./examples/css-toggle-modal.html">css-toggle-modal</a>
+						<a href="./examples/cube.html">cube</a>
+						<a href="./examples/faceAnimation.html">faceAnimation</a>
+						<a href="./examples/flip-1.html">flip-1</a>
+						<a href="./examples/flip-2.html">flip-2</a>
+						<a href="./examples/floating-labels-1.html">floating-labels-1</a>
+						<a href="./examples/FloatingImage.html">FloatingImage</a>
+						<a href="./examples/flower-animation.html">flower-animation</a>
+						<a href="./examples/Form_validation.html">Form_validation</a>
+						<a href="./examples/game-1.html">game-1</a>
+						<a href="./examples/game-2.html">game-2</a>
+						<a href="./examples/glassmorphism-card-design.html">glassmorphism-card-design</a>
+						<a href="./examples/hover-1.html">hover-1</a>
+						<a href="./examples/image-gallery-1.html">image-gallery-1</a>
+						<a href="./examples/image-gallery-2.html">image-gallery-2</a>
+						<a href="./examples/input-filed.html">input-filed</a>
+						<a href="./examples/loader-1.html">loader-1</a>
+						<a href="./examples/loader-2.html">loader-2</a>
+						<a href="./examples/loader-3.html">loader-3</a>
+						<a href="./examples/loader-4.html">loader-4</a>
+						<a href="./examples/loader-5.html">loader-5</a>
+						<a href="./examples/loader-6.html">loader-6</a>
+						<a href="./examples/loader-7.html">loader-7</a>
+						<a href="./examples/loader-8.html">loader-8</a>
+						<a href="./examples/loader-9.html">loader-9</a>
+						<a href="./examples/loader-10.html">loader-10</a>
+						<a href="./examples/loader-11.html">loader-11</a>
+						<a href="./examples/login-from.html">login-from</a>
+						<a href="./examples/menu-1.html">menu-1</a>
+						<a href="./examples/modal-1.html">modal-1</a>
+						<a href="./examples/mouse-tracking-2.html">mouse-tracking-2</a>
+						<a href="./examples/mouse-tracking.html">mouse-tracking</a>
+						<a href="./examples/moving-hand.html">moving-hand</a>
+						<a href="./examples/Moving_hand.html">Moving_hand</a>
+						<a href="./examples/Moving-road-animation.html">Moving-road-animation</a>
+						<a href="./examples/movinghand.html">movinghand</a>
+						<a href="./examples/navBar.html">navBar</a>
+						<a href="./examples/neon-button.html">neon-button</a>
+						<a href="./examples/neumorphism-card-design.html">neumorphism-card-design</a>
+						<a href="./examples/openingenvelope.html">openingenvelope</a>
+						<a href="./examples/ProgressBar.html">ProgressBar</a>
+						<a href="./examples/road.html">road</a>
+						<a href="./examples/scroll_button.html">scroll_button</a>
+						<a href="./examples/ScrollingText.html">ScrollingText</a>
+						<a href="./examples/shake-button.html">shake-button</a>
+						<a href="./examples/side-nav-1.html">side-nav-1</a>
+						<a href="./examples/slider-bar.html">slider-bar</a>
+						<a href="./examples/slider.html">slider</a>
+						<a href="./examples/spinner.html">spinner</a>
+						<a href="./examples/tabs-1.html">tabs-1</a>
+						<a href="./examples/tabs-2.html">tabs-2</a>
+						<a href="./examples/template.html">template</a>
+						<a href="./examples/todo-1.html">todo-1</a>
+						<a href="./examples/toggling in css.html">toggling in css</a>
+						<a href="./examples/tree-1.html">tree-1</a>
+						<a href="./examples/Tubelight.html">Tubelight</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Author</td>
+					<td class="pageUrl">
+						<a href="./Author/Author-page.html">About</a>
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</html>
