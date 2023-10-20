@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css?family=Asar|Oxygen");
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  perspective: 1500px;
+  font-family: "Asar", serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.card {
+  background-color: black;
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+  perspective: 1500;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  box-shadow: 5px 5px 24px 0px rgba(0, 0, 0, 0.2);
+}
+@media (min-height: 600px) {
+  .card {
+    width: 400px;
+    height: 550px;
+  }
+}
+.card h2, .card h3, .card P {
+  transform: translateZ(2px);
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  margin: 0;
+  font-weight: 300;
+  padding: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+@media (min-height: 600px) {
+  .card h2, .card h3, .card P {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+.card h2 {
+  margin: 20px 0 0 0;
+}
+.card h3 {
+  margin: 10px 0 40px 0;
+}
+@media (min-height: 600px) {
+  .card h3 {
+    margin: 20px 0 40px 0;
+  }
+}
+.card P {
+  margin: 0px 0 30px 0;
+  font-size: 16px;
+}
+@media (min-height: 600px) {
+  .card P {
+    margin: 0px 0 40px 0;
+    font-size: 21px;
+  }
+}
+.card .chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transform: translateZ(2px);
+  transition: transform 0.5s ease-in-out;
+}
+.card .photo {
+  position: absolute;
+  transform: translateZ(1px);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("https://source.unsplash.com/kpAXYoXSeuY/600x600") no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+.card .photo:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease-in-out;
+}
+.card .bar {
+  will-change: height;
+  width: 15px;
+  height: 1px;
+  background-color: white;
+  transform: translateX(-7.5px) rotateX(-90deg) rotateY(-45deg);
+  transform-origin: 100% 100%;
+  transition: height 0.5s ease-in-out, margin 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  margin: 6px;
+  position: relative;
+  background: linear-gradient(to bottom, #feffff 0%, #ddf1f9 0%, #a0d8ef 100%);
+}
+@media (min-height: 600px) {
+  .card .bar {
+    margin: 10px;
+    width: 25px;
+    transform: translateX(-12.5px) rotateX(-90deg) rotateY(-45deg);
+  }
+}
+.card .bar:after {
+  display: block;
+  content: "";
+  height: 100%;
+  width: 15px;
+  position: absolute;
+  top: 0;
+  right: -15px;
+  background-color: grey;
+  transform: rotateY(90deg);
+  transform-origin: 0% 50%;
+  background: linear-gradient(to bottom, #feffff 0%, #85d7f7 0%, #4c8596 100%);
+}
+@media (min-height: 600px) {
+  .card .bar:after {
+    width: 25px;
+    right: -25px;
+  }
+}
+.card .bar:before {
+  font-family: "Oxygen", sans-serif;
+  display: block;
+  content: "";
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  background-color: white;
+  transform: rotateX(90deg);
+  transform-origin: 0% 100%;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  line-height: 14px;
+  padding: 0;
+  transition: color 0.3s ease-in-out;
+}
+@media (min-height: 600px) {
+  .card .bar:before {
+    width: 25px;
+    height: 25px;
+    top: -25px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+.card .bar.bar1:before {
+  content: "M";
+}
+.card .bar.bar2:before {
+  content: "T";
+}
+.card .bar.bar3:before {
+  content: "W";
+}
+.card .bar.bar4:before {
+  content: "T";
+}
+.card .bar.bar5:before {
+  content: "F";
+}
+.card .bar.bar6:before {
+  content: "S";
+}
+.card .bar.bar7:before {
+  content: "S";
+}
+.card .bar span {
+  font-family: "Oxygen", sans-serif;
+  position: absolute;
+  transform: rotateZ(-90deg);
+  border-radius: 2px;
+  transform-origin: 0% 100%;
+  top: 20px;
+  white-space: nowrap;
+  text-align: right;
+  left: 18px;
+  padding: 5px;
+  color: black;
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+@media (min-height: 600px) {
+  .card .bar span {
+    top: 25px;
+    left: 25px;
+    font-size: 13px;
+  }
+}
+
+.details .card {
+  transform: rotateX(60deg) translateY(150px);
+  box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.75);
+}
+.details .card .chart {
+  transform: translateZ(40px) translatey(50px);
+}
+.details .card .bar {
+  transform: translateX(-7.5px) rotateX(-90deg) rotateY(-25deg);
+}
+@media (min-height: 600px) {
+  .details .card .bar {
+    transform: translateX(-12.5px) rotateX(-90deg) rotateY(-25deg);
+  }
+}
+.details .card .bar.bar1 {
+  height: 150px;
+  transition-delay: 0.3s;
+  margin-top: -150px;
+}
+.details .card .bar.bar2 {
+  height: 75px;
+  transition-delay: 0.2s;
+  margin-top: -75px;
+}
+.details .card .bar.bar3 {
+  height: 112.5px;
+  transition-delay: 0.1s;
+  margin-top: -112.5px;
+}
+.details .card .bar.bar4 {
+  height: 180px;
+  transition-delay: 0s;
+  margin-top: -180px;
+}
+.details .card .bar.bar5 {
+  height: 52.5px;
+  transition-delay: 0.1s;
+  margin-top: -52.5px;
+}
+.details .card .bar.bar6 {
+  height: 52.5px;
+  transition-delay: 0.2s;
+  margin-top: -52.5px;
+}
+.details .card .bar.bar7 {
+  height: 75px;
+  transition-delay: 0.3s;
+  margin-top: -75px;
+}
+.details .card .bar span {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+.details .card .bar:before {
+  color: black;
+}
+.details .card .photo {
+  transform: translateZ(20px);
+}
+.details .card .photo:after {
+  background-color: rgba(0, 50, 100, 0.8);
+}
+.details .card h2 {
+  opacity: 0;
+  transform: translateZ(40px) translateY(-100px);
+}
+.details .card p {
+  opacity: 0;
+  transform: translateZ(40px) translateY(-80px);
+}
+.details .card h3 {
+  transform: translateZ(60px) translateY(100px);
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(120deg, rgba(50, 150, 100, 0.4), rgba(0, 0, 100, 0));
+}
+.background:before, .background:after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 200, 0.4), rgba(0, 0, 200, 0));
+}
+.background:after {
+  background: linear-gradient(240deg, rgba(150, 50, 50, 0.4), rgba(0, 0, 200, 0));
+}
+
+.info {
+  font-family: "Oxygen", sans-serif;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}/*# sourceMappingURL=style.css.map */
