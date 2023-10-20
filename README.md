@@ -142,6 +142,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/gallery2.png" height="230" title="Demo 2">](http://codepen.io/pavlovsk/pen/sjubp)
 [<img src="images/gallery3.png" height="230" title="Demo 2">](https://codepen.io/olgamozejko/pen/yLjwyye)
 [<img src="images/vertical-gallery.gif" height="230" title="Demo 4">]()
+[<img src="./Author/a-img2.jpg" height="230" title="Demo 5">]()
 
 **[⬆ back to top](#quick-links)**
 
