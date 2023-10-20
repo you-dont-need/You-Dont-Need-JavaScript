@@ -53,6 +53,9 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Neon Button](#neon-button)
 1. [Shake Button](#shake-button)
 1. [Moving Hand](#moving_hand)
+1. [Switch](#switch)
+1. [Bonfire](#bonfire)
+1. [City animation footer](#city-animation-footer)
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -377,6 +380,34 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 &nbsp;
+
+## <a id="Switch"></a>Switch
+
+[<img src="images/Switch.gif" height="230" title="Switch">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/Switch.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="bonfire"></a>Bonfire
+
+[<img src="images/Bonfire.gif" height="230" title="Bonfire">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/Bonfire.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="city-animation-footer"></a>City animation footer
+
+[<img src="images/City animtion footer.gif" height="230" title="City animation footer">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/City%20animation%20footer.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
 
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
