@@ -56,6 +56,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Switch](#switch)
 1. [Bonfire](#bonfire)
 1. [City animation footer](#city-animation-footer)
+1. [Shuffling Squares](#shuffling-squares)
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -406,6 +407,11 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 [<img src="images/City animtion footer.gif" height="230" title="City animation footer">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/City%20animation%20footer.gif)
 
+**[⬆ back to top](#quick-links)**
+
+---
+## <a id="shuffling-squres"></a>Shuffling squares
+[<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
 **[⬆ back to top](#quick-links)**
 
 ---
