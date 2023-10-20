@@ -25,6 +25,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## Quick links
 
 1. [Accordion / Toggle](#Accordion)
+1. [Animated-Buttons](#Animated Buttons)
 1. [Carousel](#Carousel)
 1. [Counter of checked check-boxes](#Counter)
 1. [Flip on click](#Flip)
@@ -68,6 +69,18 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/toggler.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/pyXQrj)
 [<img src="images/toggler2.png" height="230" title="Demo 3">](http://codepen.io/PaulZi/pen/zBbVvV)
 [<img src="images/accordion.gif" height="230" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+## <a id="Animated-Buttons"></a>Animated Buttons
+
+[<img src="images/Animated-button-1.png" height="230" title="Demo 1">]
+[<img src="images/Animated-button.png" height="230" title="Demo 2">]
+[<img src="images/Animated-button-2.png" height="230" title="Demo 2">]
+
 
 **[⬆ back to top](#quick-links)**
 
