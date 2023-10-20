@@ -25,7 +25,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## Quick links
 
 1. [Accordion / Toggle](#Accordion)
-1. [Animated Buttons(#Animated-Buttons)
+1. [Animated Buttons](#Animated-Buttons)
 1. [Carousel](#Carousel)
 1. [Counter of checked check-boxes](#Counter)
 1. [Flip on click](#Flip)
