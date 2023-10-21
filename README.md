@@ -232,7 +232,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="footer"></a>Footer
 
-[<img src="images/fancyMenu.gif" height="230" title="Demo">](https://codepen.io/janup2442/pen/qBgBBKz)
+[<img src="images/footer_lg.png" height="230" title="Demo">](https://codepen.io/janup2442/pen/qBgBBKz)
+[<img src="images/footer_sm.png" height="230" title="Demo">](https://codepen.io/janup2442/pen/qBgBBKz)
 
 **[⬆ back to top](#quick-links)**
 
