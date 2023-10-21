@@ -423,6 +423,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+## <a id="scenary"></a>Scenary
+
+[<img src="images/scenary.gif" height="230" title="scenary">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/5943c92d-c9d3-401e-a8dd-88091a1d839d)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+
+&nbsp;
+
 ## <a id="city-animation-footer"></a>City animation footer
 
 [<img src="images/City animtion footer.gif" height="230" title="City animation footer">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/City%20animation%20footer.gif)
