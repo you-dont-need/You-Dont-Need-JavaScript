@@ -53,6 +53,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
 1. [Neumorphism Card Design](#neumorphism-card-design)
 1. [Neon Button](#neon-button)
+1. [Neon Card](#neon-card)
 1. [Shake Button](#shake-button)
 1. [Moving Hand](#moving_hand)
 1. [Switch](#switch)
@@ -370,6 +371,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 [<img src="images/neon-button.gif" title="Neon Button">](https://codepen.io/nikhilkalburgi/pen/WNyeopW)
 [<img src="images/neon-button-updated.gif" title="Neon Button Updated">](https://codepen.io/masterujjval/pen/MWZMZbw)
+**[⬆ back to top](#quick-links)**
+
+---
+&nbsp;
+
+## <a id="neon-card"></a>Neon Card
+
+[<img src="images/neon-card-2.gif" title="Neon Card">](examples/neon-card-2.html)
 **[⬆ back to top](#quick-links)**
 
 ---
