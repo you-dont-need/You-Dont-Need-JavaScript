@@ -56,12 +56,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Switch](#switch)
 1. [Bonfire](#bonfire)
 1. [City animation footer](#city-animation-footer)
-1. [Gradient-Animation](#gradient-animation)
+
 <<<<<<< HEAD
 1. [Shuffling Squares](#shuffling-squares)
 =======
 1. [Star Wars intro animation](#StarWarsIntro)
 >>>>>>> newbranch
+1. [Gradient-Animation](#gradient-animation)
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
