@@ -61,6 +61,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Shuffling Squares](#shuffling-squares)
 1. [Star Wars intro animation](#StarWarsIntro)
 1. [Gradient-Animation](#gradient-animation)
+1. [RGB color game](#RGBcolorgame)
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
