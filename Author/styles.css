@@ -22,13 +22,20 @@ a{
 
 .btn{
     display: inline-block;
-    padding: 07px 16px;
+    padding: 0.7rem 2rem;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 03px;
-    background: #1546b0;
+    border-radius: 5px;
+    background: rgb(243, 90, 202);
+    box-shadow: 0px 0px 10px rgb(218, 28, 167);
 }
+
+#read-more:hover {
+    background:rgb(245, 77, 200);
+    box-shadow: 0px 0px 15px rgb(218, 28, 167);
+}
+
 
 .lead{
     font-size: 16px;
