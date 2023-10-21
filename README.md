@@ -56,11 +56,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Switch](#switch)
 1. [Bonfire](#bonfire)
 1. [City animation footer](#city-animation-footer)
+
 <<<<<<< HEAD
 1. [Shuffling Squares](#shuffling-squares)
 =======
 1. [Star Wars intro animation](#StarWarsIntro)
 >>>>>>> newbranch
+1. [Gradient-Animation](#gradient-animation)
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -403,6 +405,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
+
 ---
 
 &nbsp;
@@ -424,6 +427,12 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/intro1.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
 [<img src="images/intro2.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
 **[⬆ back to top](#quick-links)**
+
+
+## <a id= "Gradient-Animation"></a> Gradient Animation
+[<img src="image/gradient-animation.gif" height="230" title="Gradient Animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/b3b64a1d4a426ab3a8f20fbe34640de18bca14a5/images/gradient-animation.gif)
+**[⬆ back to top](#quick-links)**
+
 
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
