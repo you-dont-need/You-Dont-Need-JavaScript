@@ -465,6 +465,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="image/gradient-animation.gif" height="230" title="Gradient Animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/b3b64a1d4a426ab3a8f20fbe34640de18bca14a5/images/gradient-animation.gif)
 **[⬆ back to top](#quick-links)**
 
+## <a id="zoom-when-hover"></a> Zoom when hover
+[<img src="image/zoom-effect.gif" height="230" title="zoom-when-hover">](https://codepen.io/kdwzrjtc-the-animator/pen/gOqOwLx)
 
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
