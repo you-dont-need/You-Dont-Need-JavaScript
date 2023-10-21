@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neon-card-2</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(180deg, rgba(0, 255, 209, 0.098) 0%, rgba(123, 247, 255, 0.03) 100%), #0C0C0C;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1.5s;
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    width: 120%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0px;
+    background-color: #5af5ff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    opacity: 1;
+}
+
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%);
+    background: #5af5ff;
+}
+
+.bg::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 5px);
+    height: calc(100% - 6px);
+    clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%);
+    background: linear-gradient(180deg, rgba(0, 255, 209, 0.098) 0%, rgba(123, 247, 255, 0.03) 100%), #0C0C0C;
+}
+
+.bg::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 0;
+    background: #5af5ff;
+}
+
+.card:hover .bg::after{
+    height: 100%;
+    transition: 1.5s;
+}
+
+.card:hover::before{
+    height: 5px;
+    top: 100%;
+    transition: top 1.5s;
+    animation: hide .5s 1.5s forwards 1;
+}
+
+@keyframes hide{
+    100%{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.card:hover{
+    transform: translateY(-40px);
+}
+
+.content{
+    position: relative;
+    z-index: 3;
+    padding: 40px;
+}
+
+.heading{
+    text-align: center;
+    font-family: 'dosis';
+    font-size: 60px;
+    text-transform: capitalize;
+    color: none;
+    -webkit-text-stroke: 1px #5af5ff;
+    margin-bottom: 30px;
+}
+
+.info{
+    font-family: 'roboto', sans-serif;
+    color: #5af5ff;
+    text-align: center;
+    line-height: 25px;
+}
+
+.card:hover .info{
+    transition: .5s;
+    transition-delay: 1.5s;
+    color: #000;
+}
+</style>
+  </head>
+  <body>
+	<div class="card">
+        <div class="bg"></div>
+        <div class="content">
+            <h1 class="heading">card 01</h1>
+            <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni perferendis incidunt ut corporis vero. Cupiditate ipsa vitae nobis? Sed, asperiores.</p>
+        </div>
+    </div>
+  </body>
+  </html>
