@@ -38,6 +38,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Mobile menu off canvas](#Mobile)
 1. [Burger menu](#BurgerMenu)
 1. [Fancy menu](#FancyMenu)
+1. [Footer](#footer)
 1. [Modal/Popup](#Modal)
 1. [Mouse tracking](#Mouse)
 1. [NavBar](#navBar)
@@ -57,12 +58,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Switch](#switch)
 1. [Bonfire](#bonfire)
 1. [City animation footer](#city-animation-footer)
-
-<<<<<<< HEAD
 1. [Shuffling Squares](#shuffling-squares)
-=======
 1. [Star Wars intro animation](#StarWarsIntro)
->>>>>>> newbranch
 1. [Gradient-Animation](#gradient-animation)
 
 ## <a id="Accordion"></a>Accordion / Toggle
@@ -222,6 +219,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="FancyMenu"></a>Fancy Menu
 
 [<img src="images/fancyMenu.gif" height="230" title="Demo">](http://codepen.io/lbebber/pen/RNgBPP)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="footer"></a>Footer
+
+[<img src="images/footer_lg.png" height="230" title="Demo">](https://codepen.io/janup2442/pen/qBgBBKz)
+[<img src="images/footer_sm.png" height="230" title="Demo">](https://codepen.io/janup2442/pen/qBgBBKz)
 
 **[⬆ back to top](#quick-links)**
 
