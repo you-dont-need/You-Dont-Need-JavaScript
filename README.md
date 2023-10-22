@@ -57,6 +57,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Bonfire](#bonfire)
 1. [City animation footer](#city-animation-footer)
 1. [Shuffling Squares](#shuffling-squares)
+1. [Floating Labels V2](#Floating-labelV2)
+
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -412,6 +414,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 ## <a id="shuffling-squres"></a>Shuffling squares
 [<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
+---
+## <a id="Floating-labelV2"></a>Floating-labelV2
+[<img src="images/Floatinglabel2.gif" height="230" title="Floating-labelV2">](https://im2.ezgif.com/tmp/ezgif-2-3297933621.gif)
+
 **[⬆ back to top](#quick-links)**
 
 ---
