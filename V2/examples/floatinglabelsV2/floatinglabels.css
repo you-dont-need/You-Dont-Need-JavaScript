@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg ,rgb(114, 204, 235) , rgb(243, 65, 65));
+}
+.container
+{
+    position: relative;
+    padding: 50px;
+    background: white;
+    display:flex;
+    flex-direction: column;
+    gap: 38px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0, 0.25);
+}
+.container .inputBox , .inputBox2, .inputBox3
+{
+    position: relative;
+    width: 350px;
+   
+}
+.container .inputBox  input, .inputBox2  input, .inputBox3  input
+{
+    position: relative;
+    padding: 8px 10px;
+    width: 100%;
+   border: none;
+   outline: none;
+   background: transparent;
+   color: white;
+    font-size:1rem ;
+    letter-spacing: 0.025em;
+    z-index: 2;
+   
+}
+
+.container .inputBox span, .inputBox2 span, .inputBox3 span
+{
+    position: absolute;
+   left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    font-size:1rem ;
+    transition:0.5s;
+    color: rgb(81, 78, 78);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 3px;
+   
+}
+.container .inputBox input:valid ~ span,
+.container .inputBox input:focus ~ span
+{
+    font-size: 0.85em;
+    transform: translateY(-32px);
+}
+.container .inputBox2 input:valid ~ span,
+.container .inputBox2 input:focus ~ span
+{
+    font-size: 0.85em;
+    transform: translateY(-32px);
+}
+.container .inputBox3 input:valid ~ span,
+.container .inputBox3 input:focus ~ span
+{
+    font-size: 0.85em;
+    transform: translateY(-32px);
+}
+.container .inputBox i, .inputBox2 i, .inputBox3 i
+{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(45deg, rgb(105, 185, 237), rgb(232, 63, 105)) ;
+    z-index: 1;
+    border-radius:4px ;
+    pointer-events: none;
+    transition: 0.2s;
+
+}
+.container .inputBox input:valid ~ i,
+.container .inputBox input:focus ~ i
+{
+  height: 100%;
+ box-shadow: inset 0 0 10px rgb(49, 48, 48);
+}
+.container .inputBox2 input:valid ~ i,
+.container .inputBox2 input:focus ~ i
+{
+  height: 100%;
+ box-shadow: inset 0 0 10px rgb(49, 48, 48);
+}
+.container .inputBox3 input:valid ~ i,
+.container .inputBox3 input:focus ~ i
+{
+  height: 100%;
+ box-shadow: inset 0 0 10px rgb(49, 48, 48);
+}
+
+.container button{
+    height: 40px;
+    bottom: 0;
+    width: 50%;
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, rgb(24, 125, 193), rgb(204, 50, 158)) border-box;
+border-radius: 9px;
+border: 3px solid transparent;
+    cursor: pointer;
+   
+    
+}
+.container button:hover{
+    background:  linear-gradient(45deg, rgb(101, 181, 234), rgb(231, 81, 146));
+    border: 3px solid rgb(39, 38, 38);
+}
+ 
