@@ -75,6 +75,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Floating Labels V2](#Floating-labelV2)
   - [Scary animation](#scary-animation)
   - [Light Bulb Animation](#light-bulb-animation)
+  - [growing-flower](#growing-flower)
+=======
 
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -83,6 +85,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 =======
   - [Contributors](#contributors)
   - [Contributing](#contributing)
+
 
 
 =====
@@ -527,7 +530,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
 
 
-
 ---
 ## <a id="Floating-labelV2"></a>Floating-labelV2
 [<img src="images/Floatinglabel2.gif" height="230" title="Floating-labelV2">](https://im2.ezgif.com/tmp/ezgif-2-3297933621.gif)
@@ -537,9 +539,20 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 ---
 ## <a id="scary-animation"></a>scary-animation
+
+[<img src="images/Scary-animation.gif" height="230" title="scary-animation">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
+---
+## <a id="growing-flower"></a>growing-flower
+[<img src="images/growing-flower.gif" height="230" title="growing-flower">](https://im3.ezgif.com/tmp/ezgif-3-f53ebce80a.gif)
+=======
 [<img src="images/Scary-animation.gif" height="230" title="Floating-labelV2">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
 
 =======
+
 
 **[⬆ back to top](#quick-links)**
 
