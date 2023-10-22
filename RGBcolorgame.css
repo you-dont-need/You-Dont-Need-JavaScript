@@ -1,0 +1,87 @@
+body {
+	background-color: #232323;
+	font-family: "Raleway", Sans-serif;
+	font-size: 62.5%; /*1 em = 10px */
+	margin: 0;
+}
+
+#container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding-top: 20px;
+
+}
+.square {
+	width: 30%;
+	background-color: purple;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	transition: background .5s;
+	-webkit-transition: background .5s;
+	-moz-transition: background .5s;
+	o-transition: background .5s;
+} 
+
+h1 {
+	color: white;
+	background-color: #2C8E99;
+	font-size: 3.5em;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 10px 0;
+}
+
+#color-display {
+	display: block;
+	font-size: 2em;
+}
+
+#stripe {
+	background: white;
+	height: 30px;
+	text-align: center;
+	color: black;
+}
+
+#message {
+	text-transform: uppercase;
+	color: #2C8E99;
+	font-size: 1.5em;
+	display: inline-block;
+	width: 20%;
+}
+
+button {
+	outline: none;
+	color: #2C8E99;
+	font-family: "Raleway", Sans-serif;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	background-color: white;
+	height: 100%;
+	letter-spacing: 1px;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	o-transition: all 0.3s;
+}
+
+button:hover {
+	background-color: #2C8E99;
+	color: white;
+}
+
+.selected {
+	background-color: #2C8E99;
+	color: white;
+}
+
+.square {
+	border-radius: 20%;
+}
+
+* {
+	border: 0px solid red;
+}
