@@ -24,39 +24,55 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## Quick links
 
-1. [Accordion / Toggle](#Accordion)
-1. [Carousel](#Carousel)
-1. [Counter of checked check-boxes](#Counter)
-1. [Flip on click](#Flip)
-1. [Floating label on Textfield](#Floating)
-1. [Font-Face (Latin)](#Font)
-1. [Info on hover/ Popover](#Info)
-1. [Image Gallery](#Image)
-1. [Loaders](#Loaders)
-1. [Dropdown Menu](#DropdownMenu)
-1. [Mobile menu off canvas](#Mobile)
-1. [Burger menu](#BurgerMenu)
-1. [Fancy menu](#FancyMenu)
-1. [Modal/Popup](#Modal)
-1. [Mouse tracking](#Mouse)
-1. [NavBar](#navBar)
-1. [Parallax scrolling](#Parallax)
-1. [Tabs](#Tabs)
-1. [Todo List](#Todo)
-1. [Tooltips](#Tooltips)
-1. [Treeview](#Treeview)
-1. [Twitter Heart Animation](#Twitter)
-1. [Dynamic Image Colorizing](#ImageColorizing)
-1. [Ripple Effect](#RippleEffect)
-1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
-1. [Neumorphism Card Design](#neumorphism-card-design)
-1. [Neon Button](#neon-button)
-1. [Shake Button](#shake-button)
-1. [Moving Hand](#moving_hand)
-1. [Switch](#switch)
-1. [Bonfire](#bonfire)
-1. [City animation footer](#city-animation-footer)
-1. [Shuffling Squares](#shuffling-squares)
+- [You Don't Need JavaScript](#you-dont-need-javascript)
+    - [Style Guide:](#style-guide)
+  - [Quick links](#quick-links)
+  - [Accordion / Toggle](#accordion--toggle)
+  - [Animated Buttons](#animated-buttons)
+  - [Carousel](#carousel)
+  - [Counter of checked check-boxes](#counter-of-checked-check-boxes)
+  - [Flip on click](#flip-on-click)
+  - [Floating label on Textfield](#floating-label-on-textfield)
+  - [Font-Face (Latin)](#font-face-latin)
+  - [Info on hover/ Popover](#info-on-hover-popover)
+  - [Image Gallery](#image-gallery)
+  - [Loaders](#loaders)
+  - [Dropdown Menu](#dropdown-menu)
+  - [Mobile menu off canvas](#mobile-menu-off-canvas)
+  - [Burger Menu](#burger-menu)
+  - [Fancy Menu](#fancy-menu)
+  - [Footer](#footer)
+  - [Modal/Popup](#modalpopup)
+  - [Mouse tracking](#mouse-tracking)
+  - [NavBar](#navbar)
+  - [Parallax scrolling](#parallax-scrolling)
+  - [Tabs](#tabs)
+  - [Todo List](#todo-list)
+  - [Tooltips](#tooltips)
+  - [Treeview](#treeview)
+  - [Twitter Heart Animation](#twitter-heart-animation)
+  - [Dynamic Image Colorizing](#dynamic-image-colorizing)
+  - [Ripple Effect](#ripple-effect)
+  - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
+  - [Neumorphism Card Design](#neumorphism-card-design)
+  - [Neon Button](#neon-button)
+  - [Neon Card](#neon-card)
+  - [Shake Button](#shake-button)
+  - [Shake Button](#shake-button-1)
+  - [Dog Box Animation](#dog-box-animation)
+  - [Thankyou-Animation](#thankyou-animation)
+  - [Switch](#switch)
+  - [Bonfire](#bonfire)
+  - [Scenary](#scenary)
+  - [Bubble](#bubble)
+  - [City animation footer](#city-animation-footer)
+  - [Shuffling squares](#shuffling-squares)
+  - [Playing Card Animation](#playing-card-animation)
+  - [ Star Wars Intro](#-star-wars-intro)
+  - [ Gradient Animation](#-gradient-animation)
+  - [ Zoom when hover](#-zoom-when-hover)
+  - [Contributors](#contributors)
+  - [Contributing](#contributing)
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -64,6 +80,18 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/toggler.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/pyXQrj)
 [<img src="images/toggler2.png" height="230" title="Demo 3">](http://codepen.io/PaulZi/pen/zBbVvV)
 [<img src="images/accordion.gif" height="230" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+## <a id="Animated-Buttons"></a>Animated Buttons
+
+<img src="images/Animated-button-1.png" height="230" title="Demo 1">
+<img src="images/Animated-button.png" height="230" title="Demo 2">
+<img src="images/Animated-button-2.png" height="230" title="Demo 2">
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -210,6 +238,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+## <a id="footer"></a>Footer
+
+[<img src="images/footer_lg.png" height="230" title="Demo">](https://codepen.io/janup2442/pen/qBgBBKz)
+[<img src="images/footer_sm.png" height="230" title="Demo">](https://codepen.io/janup2442/pen/qBgBBKz)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
 ## <a id="Modal"></a>Modal/Popup
 
 [<img src="images/modal2.png" height="230" title="Demo 1">](https://codepen.io/peiche/pen/vhqym)
@@ -346,6 +385,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+&nbsp;
+
+## <a id="neon-card"></a>Neon Card
+
+[<img src="images/neon-card-2.gif" title="Neon Card">](examples/neon-card-2.html)
+**[⬆ back to top](#quick-links)**
+
+---
 
 &nbsp;
 
@@ -399,7 +446,39 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
+
 ---
+
+&nbsp;
+
+## <a id="scenary"></a>Scenary
+
+[<img src="images/scenary.gif" height="230" title="scenary">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/5943c92d-c9d3-401e-a8dd-88091a1d839d)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="bubble"></a>Bubble
+
+[<img src="images/bubble.gif" height="230" title="scenary">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/17b72752-9010-4433-9d1e-b9a24a8f5222)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="flower"></a>Flower
+
+[<img src="images/flower.gif" height="230" title="flower">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/4ca880e9-47b9-4df5-b484-6e2a955ec266)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 
 &nbsp;
 
@@ -415,6 +494,29 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
+&nbsp;
+
+## <a id="playing-card"></a>Playing Card Animation
+
+<img src="images/playing-card.png" height="230" title="Playing cacrd animation">
+
+**[⬆ back to top](#quick-links)**
+
+---
+---
+## <a id="starwarsintro"></a> Star Wars Intro
+[<img src="images/intro1.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
+[<img src="images/intro2.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
+**[⬆ back to top](#quick-links)**
+
+
+## <a id= "Gradient-Animation"></a> Gradient Animation
+[<img src="image/gradient-animation.gif" height="230" title="Gradient Animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/b3b64a1d4a426ab3a8f20fbe34640de18bca14a5/images/gradient-animation.gif)
+**[⬆ back to top](#quick-links)**
+
+## <a id="zoom-when-hover"></a> Zoom when hover
+[<img src="image/zoom-effect.gif" height="230" title="zoom-when-hover">](https://codepen.io/kdwzrjtc-the-animator/pen/gOqOwLx)
 
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
