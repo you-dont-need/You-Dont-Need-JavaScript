@@ -25,9 +25,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## Quick links
 
 1. [You Don't Need JavaScript](#you-dont-need-javascript)	
-1. [Style Guide:](#style-guide)	1. [Accordion / Toggle](#Accordion)
-1. [Quick links](#quick-links)	1. [Animated Buttons](#Animated-Buttons)
+1. [Style Guide:](#style-guide)	
+1. [Quick links](#quick-links)	
 1. [Accordion / Toggle](#Accordion)
+1. [Animated Buttons](#Animated-Buttons)
 1. [Carousel](#Carousel)
 1. [Counter of checked check-boxes](#Counter)
 1. [Flip on click](#Flip)
@@ -73,7 +74,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Contributing](#contributing)	
 
 =======
-
+## <a id="Accordion"></a>Accordion / Toggle
 
 
 [<img src="images/accordion.png" height="230" title="Demo 1">](http://www.mraffaele.com/labs/css-only-accordions/)
