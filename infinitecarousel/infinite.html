@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./infinite.css">
+    <title>Infinite Auto play carousel</title>
+</head>
+<body>
+    <section class="carousel">
+        <input class="carousel__input" type="radio" id="carousel__slide--1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+        <div class="carousel__slide" style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/334248/earth_back_1.jpg)">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/334248/earth_front_1.jpg">
+            <div class="carousel__caption">
+                <p>Aurora over the northern hemisphere, from the ISS (solar array visible to the right)<br/>Image: <a target="_blank" href="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2015/04/living_being/15347247-1-eng-GB/Living_being_fullwidth.jpg">NASA/ESA</a></p>
+            </div>
+        </div>
+        <input class="carousel__input" type="radio" id="carousel__slide--2" name="carousel" aria-hidden="true" hidden="">
+	<div class="carousel__slide" style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/334248/earth_back_2.jpg)">
+		<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/334248/earth_front_2.jpg">
+		<div class="carousel__caption">
+			<p>The Moon in the haze of Earth’s atmosphere; photographed by astronaut Scott Kelly<br/>Image: <a target="_blank" href="https://www.instagram.com/p/7rIJ1pwinV/">@whitehouse</a></p>
+		</div>
+	</div>
+
+	<input class="carousel__input" type="radio" id="carousel__slide--3" name="carousel" aria-hidden="true" hidden="">
+	<div class="carousel__slide" style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/334248/earth_back_3.jpg)">
+		<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/334248/earth_front_3.jpg">
+		<div class="carousel__caption">
+			<p>Apollo 17 photo "The Blue Marble" is the first image to capture Antarctic ice sheet<br/>Image: <a target="_blank" href="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/images/135918main_bm1_high.jpg?itok=2I8-uSUB">NASA</a></p>
+		</div>
+	</div>
+
+	<input class="carousel__input" type="radio" id="carousel__slide--4" name="carousel" aria-hidden="true" hidden="">
+	<div class="carousel__slide" style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/334248/earth_back_4.jpg)">
+		<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/334248/earth_front_4.jpg">
+		<div class="carousel__caption">
+			<p>Soyuz spacecraft over the river Seine and most of France, captured from the ISS<br/>Image: <a target="_blank" href="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2016/05/reflets_du_soleil_sur_les_meandres_de_la_seine/15969380-1-eng-GB/Reflets_du_Soleil_sur_les_meandres_de_la_Seine_node_full_image_2.jpg">ESA/Tim Peake</a></p>
+		</div>
+	</div>
+
+	<input class="carousel__input" type="radio" id="carousel__slide--5" name="carousel" aria-hidden="true" hidden="">
+	<div class="carousel__slide" style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/334248/earth_back_5.jpg)">
+		<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/334248/earth_front_5.jpg">
+		<div class="carousel__caption">
+			<p>Buzz Aldrin on the Moon with Neil Armstrong reflected in his visor, July 20, 1969<br/>Image: <a target="_blank" href="https://www.nasa.gov/sites/default/files/images/337294main_pg62_as11-40-5903_full.jpg">NASA</a>
+            </p>
+		</div>
+	</div>
+	
+	<!-- ARROWS -->
+	<label for="carousel__slide--5" class="carousel__arrow carousel__arrow--prev carousel__arrow--1"></label>
+	<label for="carousel__slide--5" class="carousel__arrow carousel__arrow--next carousel__arrow--4"></label>
+	<label for="carousel__slide--4" class="carousel__arrow carousel__arrow--prev carousel__arrow--5"></label>
+	<label for="carousel__slide--4" class="carousel__arrow carousel__arrow--next carousel__arrow--3"></label>
+	<label for="carousel__slide--3" class="carousel__arrow carousel__arrow--prev carousel__arrow--4">
+    </label>
+	<label for="carousel__slide--3" class="carousel__arrow carousel__arrow--next carousel__arrow--2"></label>
+	<label for="carousel__slide--2" class="carousel__arrow carousel__arrow--prev carousel__arrow--3"></label>
+	<label for="carousel__slide--2" class="carousel__arrow carousel__arrow--next carousel__arrow--1"></label>
+	<label for="carousel__slide--1" class="carousel__arrow carousel__arrow--prev carousel__arrow--2"></label>
+	<label for="carousel__slide--1" class="carousel__arrow carousel__arrow--next carousel__arrow--5"></label>
+
+	<!-- BULLETS -->
+	<ol class="carousel__bullets">
+		<li>
+			<label for="carousel__slide--1" class="carousel__bullets--bullet"></label>
+		</li>
+		<li>
+			<label for="carousel__slide--2" class="carousel__bullets--bullet"></label>
+		</li>
+		<li>
+			<label for="carousel__slide--3" class="carousel__bullets--bullet"></label>
+		</li>
+		<li>
+			<label for="carousel__slide--4" class="carousel__bullets--bullet"></label>
+		</li>
+		<li>
+			<label for="carousel__slide--5" class="carousel__bullets--bullet"></label>
+		</li>
+	</ol>
+</section>
+
+</body>
+</html>
