@@ -63,10 +63,11 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Playing Card Animation](#playing-card-animation)	
 1. [ Star Wars Intro](#-star-wars-intro)	
 1. [ Gradient Animation](#-gradient-animation)	
-1. [ Zoom when hover](#-zoom-when-hover)	
+1. [ Zoom when hover](#-zoom-when-hover)
+1. [Floating Labels V2](#Floating-labelV2) 
 1. [Contributors](#contributors)	
 1. [Contributing](#contributing) 
-1. [Floating Labels V2](#Floating-labelV2)
+
   
  [Contributors](#contributors)	
 - [Contributing](#contributing)	
