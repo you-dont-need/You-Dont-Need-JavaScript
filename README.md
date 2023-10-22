@@ -439,7 +439,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="smoke"></a>Smoke
 
-[<img src="images/smoke.gif" height="230" title="smoke">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/4ca880e9-47b9-4df5-b484-6e2a955ec266)
+[<img src="images/smoke.gif" height="230" title="smoke">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/0e9da0f4-8f3d-4700-baa5-99a69f9b53a2)
 
 **[⬆ back to top](#quick-links)**
 
