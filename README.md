@@ -91,6 +91,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 <img src="images/Animated-button-1.png" height="230" title="Demo 1">
 <img src="images/Animated-button.png" height="230" title="Demo 2">
 <img src="images/Animated-button-2.png" height="230" title="Demo 2">
+<img src="images/liquidButton.png" height="230" title="Demo 2">
 
 
 **[⬆ back to top](#quick-links)**
