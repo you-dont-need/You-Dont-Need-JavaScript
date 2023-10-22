@@ -1,0 +1,75 @@
+/* Styling the body */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Styling the first parallax's 
+height, width and background color */
+.parallax-1 {
+    width: 100%;
+    height: 600px;
+    background: url(
+'https://media.geeksforgeeks.org/wp-content/uploads/20210402175040/back22.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/* Styling the title of first parallax */
+.parallax-1 h2 {
+    margin: auto;
+    position: relative;
+    left: 500x;
+    top: 300px;
+    width: 250px;
+    height: 32px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* Styling the second parallax's 
+height, width and background color */
+.parallax-2 {
+    width: 100%;
+    height: 600px;
+    background: url(
+'https://media.geeksforgeeks.org/wp-content/uploads/20210402175040/back22.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/* Styling the title of second parallax */
+.parallax-2 h2 {
+    margin: auto;
+    position: relative;
+    left: 500x;
+    top: 300px;
+    width: 250px;
+    height: 37px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-family: Verdana;
+}
+
+/* Styling the content or paragraph */
+.para-1 {
+    padding: 50px;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+}
+
+/* Styling the content or paragraph */
+.para-2 {
+    text-align: center;
+    padding: 25px;
+    font-size: 17px;
+    font-family: Verdana;
+    background-color: black;
+    color: white;
+}

@@ -74,6 +74,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Floating Labels V2](#Floating-labelV2)
   - [Scary animation](#scary-animation)
   - [growing-flower](#growing-flower)
+  - [Parallax Website](#parallax-website)
 =======
 
   - [Contributors](#contributors)
@@ -545,6 +546,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
+&nbsp;
+## <a id="Parallax-Website"></a>Parallax Website
+
+<img src="images/parallexWebsite.png" height="230" title="Demo 1">
+
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ---
 ## <a id="starwarsintro"></a> Star Wars Intro
 [<img src="images/intro1.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
