@@ -34,9 +34,6 @@ Let's navigate through these guidelines for a smooth and collaborative contribut
 5. **Test Your Changes:**
    - Cast a spell of testing to ensure your changes function correctly without introducing any gremlins.
 
-6. **Add Your Work to README:**
-   - Weave your masterpiece into the README.md following our [Style Guide](README.md#style-guide).
-
 6. **Commit Your Changes:**
    - Contribute with meaningful commits that tell the story of your work.
      ```sh
