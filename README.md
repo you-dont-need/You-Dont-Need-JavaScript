@@ -24,6 +24,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## Quick links
 
+
 1. [Accordion / Toggle](#Accordion)
 1. [Animated Buttons](#Animated-Buttons)
 1. [Carousel](#Carousel)
@@ -64,6 +65,56 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Gradient-Animation](#gradient-animation)
 1. [Floating Labels V2](#Floating-labelV2)
 
+=======
+- [You Don't Need JavaScript](#you-dont-need-javascript)
+    - [Style Guide:](#style-guide)
+  - [Quick links](#quick-links)
+  - [Accordion / Toggle](#accordion--toggle)
+  - [Animated Buttons](#animated-buttons)
+  - [Carousel](#carousel)
+  - [Counter of checked check-boxes](#counter-of-checked-check-boxes)
+  - [Flip on click](#flip-on-click)
+  - [Floating label on Textfield](#floating-label-on-textfield)
+  - [Font-Face (Latin)](#font-face-latin)
+  - [Info on hover/ Popover](#info-on-hover-popover)
+  - [Image Gallery](#image-gallery)
+  - [Loaders](#loaders)
+  - [Dropdown Menu](#dropdown-menu)
+  - [Mobile menu off canvas](#mobile-menu-off-canvas)
+  - [Burger Menu](#burger-menu)
+  - [Fancy Menu](#fancy-menu)
+  - [Footer](#footer)
+  - [Modal/Popup](#modalpopup)
+  - [Mouse tracking](#mouse-tracking)
+  - [NavBar](#navbar)
+  - [Parallax scrolling](#parallax-scrolling)
+  - [Tabs](#tabs)
+  - [Todo List](#todo-list)
+  - [Tooltips](#tooltips)
+  - [Treeview](#treeview)
+  - [Twitter Heart Animation](#twitter-heart-animation)
+  - [Dynamic Image Colorizing](#dynamic-image-colorizing)
+  - [Ripple Effect](#ripple-effect)
+  - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
+  - [Neumorphism Card Design](#neumorphism-card-design)
+  - [Neon Button](#neon-button)
+  - [Neon Card](#neon-card)
+  - [Shake Button](#shake-button)
+  - [Shake Button](#shake-button-1)
+  - [Dog Box Animation](#dog-box-animation)
+  - [Thankyou-Animation](#thankyou-animation)
+  - [Switch](#switch)
+  - [Bonfire](#bonfire)
+  - [Scenary](#scenary)
+  - [Bubble](#bubble)
+  - [City animation footer](#city-animation-footer)
+  - [Shuffling squares](#shuffling-squares)
+  - [Playing Card Animation](#playing-card-animation)
+  - [ Star Wars Intro](#-star-wars-intro)
+  - [ Gradient Animation](#-gradient-animation)
+  - [ Zoom when hover](#-zoom-when-hover)
+  - [Contributors](#contributors)
+  - [Contributing](#contributing)
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -482,6 +533,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
+&nbsp;
+
+## <a id="playing-card"></a>Playing Card Animation
+
+<img src="images/playing-card.png" height="230" title="Playing cacrd animation">
+
+**[⬆ back to top](#quick-links)**
+
+---
 ---
 ## <a id="starwarsintro"></a> Star Wars Intro
 [<img src="images/intro1.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
@@ -495,6 +556,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="zoom-when-hover"></a> Zoom when hover
 [<img src="image/zoom-effect.gif" height="230" title="zoom-when-hover">](https://codepen.io/kdwzrjtc-the-animator/pen/gOqOwLx)
+
+---
+## <a id="Floating-labelV2"></a>Floating-labelV2
+[<img src="images/Floatinglabel2.gif" height="230" title="Floating-labelV2">](https://im2.ezgif.com/tmp/ezgif-2-3297933621.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
 
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
