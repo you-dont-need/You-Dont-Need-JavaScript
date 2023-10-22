@@ -22,13 +22,20 @@ a{
 
 .btn{
     display: inline-block;
-    padding: 07px 16px;
+    padding: 0.7rem 2rem;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 03px;
-    background: #1546b0;
+    border-radius: 5px;
+    background: rgb(243, 90, 202);
+    box-shadow: 0px 0px 10px rgb(218, 28, 167);
 }
+
+#read-more:hover {
+    background:rgb(245, 77, 200);
+    box-shadow: 0px 0px 15px rgb(218, 28, 167);
+}
+
 
 .lead{
     font-size: 16px;
@@ -89,12 +96,12 @@ a{
 #showcase{
     background: url(img/img2.jpg) no-repeat
     center center/cover;
-    min-height: 650px;
+    min-height: 500px;
 }
 
 .showcase-content{
     padding-top: 150px;
-    color: black;
+    color: aquamarine;
     text-align: center;
     padding-left: 30px;
 }
@@ -218,3 +225,77 @@ a{
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 840px) {
+    #showcase{
+        min-height: 350px;
+    }
+    .showcase-content{
+       padding: 120px;
+    }
+    .showcase-content h2{
+        font-size: 40px;
+        line-height: 1em;
+    }
+    
+    .showcase-content p{
+        font-size: 20px;
+        line-height: 1.5em;
+      
+    }
+    
+    
+}
+@media screen and (max-width: 590px) {
+    #showcase{
+        min-height: 100px;
+    }
+    .showcase-content{
+        padding: 80px;
+     }
+     .showcase-content h2{
+        font-size: 25px;
+        line-height: 1em;
+    }
+    
+    .showcase-content p{
+        font-size: 14px;
+        line-height: 1.5em;
+      
+    }
+    .btn{
+      
+        padding: 3px 10px;
+      
+        font-size: 12px;
+       
+    }
+    
+}
+
+@media screen and (max-width: 440px) {
+    #showcase{
+        min-height:50px;
+        width: 100%;
+    }
+    .showcase-content{
+        padding: 56px;
+     }
+     .showcase-content h2{
+        font-size: 20px;
+        line-height: 1em;
+    }
+    
+    .showcase-content p{
+        font-size: 10px;
+        line-height: 1em;
+      
+    }
+    .btn{
+      
+        padding: 2px 8px;
+      
+        font-size: 10px;
+       
+    }
+    
+}
