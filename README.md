@@ -27,7 +27,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [You Don't Need JavaScript](#you-dont-need-javascript)	
 1. [Style Guide:](#style-guide)	
 1. [Quick links](#quick-links)	
-1. [Accordion / Toggle](#Accordion)
+1. [Accordion / Toggle](#accordion--toggle)
 1. [Animated Buttons](#Animated-Buttons)
 1. [Carousel](#Carousel)
 1. [Counter of checked check-boxes](#Counter)
