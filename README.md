@@ -110,6 +110,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+
+## <a id="basicprofile"></a>Carousel
+
+[<img src="images/screenshot(39).png" height="230" title="Demo 1">](http://url-to-page)
+[<img src="images/screenshot(40).png" height="230" title="Demo 2">](http://url-to-page)
+[<img src="images/screenshot(42).png" height="230" title="Demo 3">](http://url-to-page)
+
+**[⬆ back to top](#quick-links)**
+
 ## <a id="Flip"></a>Flip on click
 
 [<img src="images/flipper.png" height="230" title="Demo">](https://codepen.io/RuudBurger/pen/bwjry)
