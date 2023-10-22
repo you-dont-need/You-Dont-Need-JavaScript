@@ -75,7 +75,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Floating Labels V2](#Floating-labelV2)
   - [Scary animation](#scary-animation)
   - [Light Bulb Animation](#light-bulb-animation)
-=======
 
   - [Contributors](#contributors)
   - [Contributing](#contributing)
