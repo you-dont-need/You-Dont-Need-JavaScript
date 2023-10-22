@@ -24,44 +24,55 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## Quick links
 
-1. [Accordion / Toggle](#Accordion)
-1. [Animated Buttons](#Animated-Buttons)
-1. [Carousel](#Carousel)
-1. [Counter of checked check-boxes](#Counter)
-1. [Flip on click](#Flip)
-1. [Floating label on Textfield](#Floating)
-1. [Font-Face (Latin)](#Font)
-1. [Info on hover/ Popover](#Info)
-1. [Image Gallery](#Image)
-1. [Loaders](#Loaders)
-1. [Dropdown Menu](#DropdownMenu)
-1. [Mobile menu off canvas](#Mobile)
-1. [Burger menu](#BurgerMenu)
-1. [Fancy menu](#FancyMenu)
-1. [Footer](#footer)
-1. [Modal/Popup](#Modal)
-1. [Mouse tracking](#Mouse)
-1. [NavBar](#navBar)
-1. [Parallax scrolling](#Parallax)
-1. [Tabs](#Tabs)
-1. [Todo List](#Todo)
-1. [Tooltips](#Tooltips)
-1. [Treeview](#Treeview)
-1. [Twitter Heart Animation](#Twitter)
-1. [Dynamic Image Colorizing](#ImageColorizing)
-1. [Ripple Effect](#RippleEffect)
-1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
-1. [Neumorphism Card Design](#neumorphism-card-design)
-1. [Neon Button](#neon-button)
-1. [Neon Card](#neon-card)
-1. [Shake Button](#shake-button)
-1. [Moving Hand](#moving_hand)
-1. [Switch](#switch)
-1. [Bonfire](#bonfire)
-1. [City animation footer](#city-animation-footer)
-1. [Shuffling Squares](#shuffling-squares)
-1. [Star Wars intro animation](#StarWarsIntro)
-1. [Gradient-Animation](#gradient-animation)
+- [You Don't Need JavaScript](#you-dont-need-javascript)
+    - [Style Guide:](#style-guide)
+  - [Quick links](#quick-links)
+  - [Accordion / Toggle](#accordion--toggle)
+  - [Animated Buttons](#animated-buttons)
+  - [Carousel](#carousel)
+  - [Counter of checked check-boxes](#counter-of-checked-check-boxes)
+  - [Flip on click](#flip-on-click)
+  - [Floating label on Textfield](#floating-label-on-textfield)
+  - [Font-Face (Latin)](#font-face-latin)
+  - [Info on hover/ Popover](#info-on-hover-popover)
+  - [Image Gallery](#image-gallery)
+  - [Loaders](#loaders)
+  - [Dropdown Menu](#dropdown-menu)
+  - [Mobile menu off canvas](#mobile-menu-off-canvas)
+  - [Burger Menu](#burger-menu)
+  - [Fancy Menu](#fancy-menu)
+  - [Footer](#footer)
+  - [Modal/Popup](#modalpopup)
+  - [Mouse tracking](#mouse-tracking)
+  - [NavBar](#navbar)
+  - [Parallax scrolling](#parallax-scrolling)
+  - [Tabs](#tabs)
+  - [Todo List](#todo-list)
+  - [Tooltips](#tooltips)
+  - [Treeview](#treeview)
+  - [Twitter Heart Animation](#twitter-heart-animation)
+  - [Dynamic Image Colorizing](#dynamic-image-colorizing)
+  - [Ripple Effect](#ripple-effect)
+  - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
+  - [Neumorphism Card Design](#neumorphism-card-design)
+  - [Neon Button](#neon-button)
+  - [Neon Card](#neon-card)
+  - [Shake Button](#shake-button)
+  - [Shake Button](#shake-button-1)
+  - [Dog Box Animation](#dog-box-animation)
+  - [Thankyou-Animation](#thankyou-animation)
+  - [Switch](#switch)
+  - [Bonfire](#bonfire)
+  - [Scenary](#scenary)
+  - [Bubble](#bubble)
+  - [City animation footer](#city-animation-footer)
+  - [Shuffling squares](#shuffling-squares)
+  - [Playing Card Animation](#playing-card-animation)
+  - [ Star Wars Intro](#-star-wars-intro)
+  - [ Gradient Animation](#-gradient-animation)
+  - [ Zoom when hover](#-zoom-when-hover)
+  - [Contributors](#contributors)
+  - [Contributing](#contributing)
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -469,6 +480,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 ## <a id="shuffling-squres"></a>Shuffling squares
 [<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="playing-card"></a>Playing Card Animation
+
+<img src="images/playing-card.png" height="230" title="Playing cacrd animation">
+
 **[⬆ back to top](#quick-links)**
 
 ---
