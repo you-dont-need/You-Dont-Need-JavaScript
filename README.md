@@ -75,7 +75,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Scary animation](#scary-animation)
   - [growing-flower](#growing-flower)
   - [Parallax Website](#parallax-website)
-=======
 
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -550,7 +549,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 &nbsp;
 ## <a id="Parallax-Website"></a>Parallax Website
 
-<img src="images/parallexWebsite.png" height="230" title="Demo 1">
+<img src="images/parallaxWebsite.png" height="230" title="Demo 1">
 
 
 **[⬆ back to top](#quick-links)**
