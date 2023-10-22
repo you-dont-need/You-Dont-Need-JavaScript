@@ -72,8 +72,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [ Gradient Animation](#-gradient-animation)
   - [ Zoom when hover](#-zoom-when-hover)
   - [Floating Labels V2](#Floating-labelV2)
+  - [Scary animation](#scary-animation)
+=======
+
   - [Contributors](#contributors)
   - [Contributing](#contributing)
+ 
+
+=======
+  - [Contributors](#contributors)
+  - [Contributing](#contributing)
+
 
 =====
 ## <a id="Accordion"></a>Accordion / Toggle
@@ -495,6 +504,21 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 ## <a id="shuffling-squres"></a>Shuffling squares
 [<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
+
+
+
+---
+## <a id="Floating-labelV2"></a>Floating-labelV2
+[<img src="images/Floatinglabel2.gif" height="230" title="Floating-labelV2">](https://im2.ezgif.com/tmp/ezgif-2-3297933621.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
+---
+## <a id="scary-animation"></a>scary-animation
+[<img src="images/Scary-animation.gif" height="230" title="Floating-labelV2">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
+
+=======
 
 **[⬆ back to top](#quick-links)**
 
