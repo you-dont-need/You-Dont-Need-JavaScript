@@ -429,7 +429,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="flower"></a>Flower
 
-[<img src="images/flower.gif" height="230" title="flower">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/17b72752-9010-4433-9d1e-b9a24a8f5222)
+[<img src="images/flower.gif" height="230" title="flower">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/4ca880e9-47b9-4df5-b484-6e2a955ec266)
 
 **[⬆ back to top](#quick-links)**
 
