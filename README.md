@@ -70,9 +70,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Contributing](#contributing) 
 
   
- [Contributors](#contributors)	
-- [Contributing](#contributing)	
-
 =======
 ## <a id="Accordion"></a>Accordion / Toggle
 
