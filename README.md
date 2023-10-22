@@ -74,6 +74,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Floating Labels V2](#Floating-labelV2)
   - [Scary animation](#scary-animation)
   - [growing-flower](#growing-flower)
+=======
+
   - [Contributors](#contributors)
   - [Contributing](#contributing)
  
@@ -83,7 +85,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Contributing](#contributing)
 
 
+
+=====
 ## <a id="Accordion"></a>Accordion / Toggle
+
 
 [<img src="images/accordion.png" height="230" title="Demo 1">](http://www.mraffaele.com/labs/css-only-accordions/)
 [<img src="images/toggler.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/pyXQrj)
@@ -100,6 +105,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 <img src="images/Animated-button-1.png" height="230" title="Demo 1">
 <img src="images/Animated-button.png" height="230" title="Demo 2">
 <img src="images/Animated-button-2.png" height="230" title="Demo 2">
+<img src="images/liquidButton.png" height="230" title="Demo 2">
 
 
 **[⬆ back to top](#quick-links)**
@@ -501,9 +507,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="shuffling-squres"></a>Shuffling squares
 [<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
 
-**[⬆ back to top](#quick-links)**
 
----
 ---
 ## <a id="Floating-labelV2"></a>Floating-labelV2
 [<img src="images/Floatinglabel2.gif" height="230" title="Floating-labelV2">](https://im2.ezgif.com/tmp/ezgif-2-3297933621.gif)
@@ -513,6 +517,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 ---
 ## <a id="scary-animation"></a>scary-animation
+
 [<img src="images/Scary-animation.gif" height="230" title="scary-animation">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
 
 **[⬆ back to top](#quick-links)**
@@ -521,6 +526,11 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 ## <a id="growing-flower"></a>growing-flower
 [<img src="images/growing-flower.gif" height="230" title="growing-flower">](https://im3.ezgif.com/tmp/ezgif-3-f53ebce80a.gif)
+=======
+[<img src="images/Scary-animation.gif" height="230" title="Floating-labelV2">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
+
+=======
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -548,6 +558,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="zoom-when-hover"></a> Zoom when hover
 [<img src="image/zoom-effect.gif" height="230" title="zoom-when-hover">](https://codepen.io/kdwzrjtc-the-animator/pen/gOqOwLx)
+
+---
+## <a id="Floating-labelV2"></a>Floating-labelV2
+[<img src="images/Floatinglabel2.gif" height="230" title="Floating-labelV2">](https://im2.ezgif.com/tmp/ezgif-2-3297933621.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
 
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
