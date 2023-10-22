@@ -435,6 +435,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+&nbsp;
+
+## <a id="smoke"></a>Smoke
+
+[<img src="images/smoke.gif" height="230" title="smoke">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/4ca880e9-47b9-4df5-b484-6e2a955ec266)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 
 &nbsp;
 
