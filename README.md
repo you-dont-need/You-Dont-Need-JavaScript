@@ -555,6 +555,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="animated-btn"></a>Animated Button
+
+![btn2](https://github.com/Upendra2003/You-Dont-Need-JavaScript/assets/96371563/db4a8e85-9592-498b-9949-95459f99d8d5)
+![btn1](https://github.com/Upendra2003/You-Dont-Need-JavaScript/assets/96371563/6b04ebd8-2af4-4565-b230-d6e2a8f2f8b2)
+
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
 
