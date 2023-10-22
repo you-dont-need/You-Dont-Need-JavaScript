@@ -36,6 +36,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Font-Face (Latin)](#font-face-latin)
   - [Info on hover/ Popover](#info-on-hover-popover)
   - [Image Gallery](#image-gallery)
+  - [Jumping Ball](#jumping-ball)
   - [Loaders](#loaders)
   - [Dropdown Menu](#dropdown-menu)
   - [Mobile menu off canvas](#mobile-menu-off-canvas)
@@ -487,6 +488,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="flower"></a>Flower
 
 [<img src="images/flower.gif" height="230" title="flower">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/4ca880e9-47b9-4df5-b484-6e2a955ec266)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="JumpingBall"></a>Jumping Ball
+
+[<img src="images/jumpingBall" title="Jumping Ball">](https://codepen.io/CodeDrinks270/pen/YzBzvWe)
 
 **[⬆ back to top](#quick-links)**
 
