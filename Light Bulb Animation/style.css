@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .box {
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+  
+  .box span {
+    position: absolute;
+    inset: 0;
+  }
+  
+  .box span::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    left: 15%;
+    background: url("https://i.ibb.co/C1S9Vwn/bulb-off.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: scale(0.8);
+    animation: animate 2s linear infinite;
+    border-bottom: 10px ridge #fff;
+  }
+  
+  @keyframes animate {
+    0%,
+    100% {
+      background: url("https://i.ibb.co/C1S9Vwn/bulb-off.jpg");
+    }
+    50% {
+      background: url("https://i.ibb.co/SXmm4cd/bulb-on.jpg");
+    }
+  }
+  
