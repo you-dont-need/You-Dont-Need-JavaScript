@@ -497,7 +497,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="JumpingBall"></a>Jumping Ball
 
-[<img src="images/jumpingBall.png" height="230" title="Jumping Ball">
+<img src="images/jumpingBall.png" height="230" title="Jumping Ball">
 
 **[⬆ back to top](#quick-links)**
 
