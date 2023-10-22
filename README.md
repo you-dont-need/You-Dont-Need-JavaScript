@@ -24,9 +24,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## Quick links
 
-
+1. [You Don't Need JavaScript](#you-dont-need-javascript)	
+1. [Style Guide:](#style-guide)	1. [Accordion / Toggle](#Accordion)
+1. [Quick links](#quick-links)	1. [Animated Buttons](#Animated-Buttons)
 1. [Accordion / Toggle](#Accordion)
-1. [Animated Buttons](#Animated-Buttons)
 1. [Carousel](#Carousel)
 1. [Counter of checked check-boxes](#Counter)
 1. [Flip on click](#Flip)
@@ -39,7 +40,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Mobile menu off canvas](#Mobile)
 1. [Burger menu](#BurgerMenu)
 1. [Fancy menu](#FancyMenu)
-1. [Footer](#footer)
 1. [Modal/Popup](#Modal)
 1. [Mouse tracking](#Mouse)
 1. [NavBar](#navBar)
@@ -54,16 +54,22 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 1. [Responsive Counter Showing # of Items That Didn't Fit Screen](#ResponsiveItemShowcase)
 1. [Neumorphism Card Design](#neumorphism-card-design)
 1. [Neon Button](#neon-button)
-1. [Neon Card](#neon-card)
 1. [Shake Button](#shake-button)
 1. [Moving Hand](#moving_hand)
 1. [Switch](#switch)
 1. [Bonfire](#bonfire)
 1. [City animation footer](#city-animation-footer)
 1. [Shuffling Squares](#shuffling-squares)
-1. [Star Wars intro animation](#StarWarsIntro)
-1. [Gradient-Animation](#gradient-animation)
+1. [Playing Card Animation](#playing-card-animation)	
+1. [ Star Wars Intro](#-star-wars-intro)	
+1. [ Gradient Animation](#-gradient-animation)	
+1. [ Zoom when hover](#-zoom-when-hover)	
+1. [Contributors](#contributors)	
+1. [Contributing](#contributing) 
 1. [Floating Labels V2](#Floating-labelV2)
+  
+ [Contributors](#contributors)	
+- [Contributing](#contributing)	
 
 =======
 
