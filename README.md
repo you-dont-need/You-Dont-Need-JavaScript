@@ -427,6 +427,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+## <a id="flower"></a>Flower
+
+[<img src="images/flower.gif" height="230" title="flower">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/17b72752-9010-4433-9d1e-b9a24a8f5222)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+
+&nbsp;
+
 ## <a id="city-animation-footer"></a>City animation footer
 
 [<img src="images/City animtion footer.gif" height="230" title="City animation footer">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/City%20animation%20footer.gif)
