@@ -74,10 +74,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Zoom when hover](#zoom-when-hover)
   - [Floating Labels V2](#Floating-labelV2)
   - [Scary animation](#scary-animation)
+  - [Animated Button](#animated-btn)
   - [Light Bulb Animation](#light-bulb-animation)
   - [growing-flower](#growing-flower)
-- [Contributors](#contributors)
-- [Contributing](#contributing)
+    
+  - [Contributors](#contributors)
+  - [Contributing](#contributing)
+
  
 
 
@@ -616,6 +619,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 ## <a id= "Css Grids"></a>Css Grids
 ![Screenshot 2023-10-23 133423](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/c3398014-a2cd-4efc-aef6-a004b0e476d5)
+
+## <a id="animated-btn"></a>Animated Button
+
+![btn2](https://github.com/Upendra2003/You-Dont-Need-JavaScript/assets/96371563/db4a8e85-9592-498b-9949-95459f99d8d5)
+![btn1](https://github.com/Upendra2003/You-Dont-Need-JavaScript/assets/96371563/6b04ebd8-2af4-4565-b230-d6e2a8f2f8b2)
+
+
+**[⬆ back to top](#quick-links)**
+
+---
 
 ---
 ## <a id= "Css FLEX"></a>Css FLEX
