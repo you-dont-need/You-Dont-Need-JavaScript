@@ -390,6 +390,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+## <a id="login"></a>A Responsive Footer
+
+[<img src="/Assests/Footer.png" title="Responsive Footer">]
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
 ## <a id="NeumorphismCardDesign"></a>Neumorphism Card Design
 
 [<img src="images/neumorphism-card-design.gif" title="Neumorphism Card Design">](https://codepen.io/saviomartin/pen/LYNgqKW)
