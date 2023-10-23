@@ -74,14 +74,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Zoom when hover](#zoom-when-hover)
   - [Floating Labels V2](#Floating-labelV2)
   - [Scary animation](#scary-animation)
-  - [ANimated Button](#animated-btn)
-
-  - [Contributors](#contributors)
-  - [Contributing](#contributing)
+  - [Animated Button](#animated-btn)
   - [Light Bulb Animation](#light-bulb-animation)
   - [growing-flower](#growing-flower)
+    
   - [Contributors](#contributors)
   - [Contributing](#contributing)
+
  
 
 
