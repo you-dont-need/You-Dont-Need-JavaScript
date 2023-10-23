@@ -570,6 +570,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+&nbsp;
+
+## <a id="spiner"></a>Spiner
+
+[<img src="images/spiner.gif" height="230" title="spiner">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/72b2e6fc-d12b-423b-a1a7-2d705e111e1f)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="shuffling-squres"></a>Shuffling squares
 [<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
 
