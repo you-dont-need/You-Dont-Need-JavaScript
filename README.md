@@ -74,11 +74,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Zoom when hover](#zoom-when-hover)
   - [Floating Labels V2](#Floating-labelV2)
   - [Scary animation](#scary-animation)
+  - [growing-flower](#growing-flower)
+  - [infinite-carousel](#infinite-carousel)
+  - [Animated Button](#animated-btn)
   - [Light Bulb Animation](#light-bulb-animation)
   - [growing-flower](#growing-flower)
-- [Contributors](#contributors)
-- [Contributing](#contributing)
  
+  - [Contributors](#contributors)
+  - [Contributing](#contributing)
+
+ 
+
 
 
 
@@ -201,6 +207,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/loader7.png" height="230" title="Demo 7">](http://codepen.io/brunjo/pen/wBKmbm)
 [<img src="images/loader8.png" height="230" title="Demo 8">](http://tobiasahlin.com/spinkit/)
 [<img src="images/loader9.png" height="230" title="Demo 9">](http://codepen.io/viduthalai1947/pen/JkhDK)
+[<img src="./images/css-loader-purna.gif" alt="CSS-Loader-Purna" height="230" title="CSS-Loader-Purna">](https://codepen.io/purnaaa/pen/vYVVygB)
 
 **[⬆ back to top](#quick-links)**
 
@@ -391,6 +398,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+## <a id="login"></a>A Responsive Footer
+
+[<img src="/Assests/Footer.png" title="Responsive Footer">]
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
 ## <a id="NeumorphismCardDesign"></a>Neumorphism Card Design
 
 [<img src="images/neumorphism-card-design.gif" title="Neumorphism Card Design">](https://codepen.io/saviomartin/pen/LYNgqKW)
@@ -563,9 +580,32 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+---
+## <a id="growing-flower"></a>growing-flower
+[<img src="images/growing-flower.gif" height="230" title="growing-flower">](https://im3.ezgif.com/tmp/ezgif-3-f53ebce80a.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
+---
+## <a id="infinite-carousel"></a>infinite-carousel
+[<img src="images/infinite-carousel.gif" height="230" title="infinite-carousel">](https://im4.ezgif.com/tmp/ezgif-4-cf03115fc6.gif)
+=======
+[<img src="images/Scary-animation.gif" height="230" title="Floating-labelV2">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
+
+=======
+>>>
+=======
+
+[<img src="images/Scary-animation.gif" height="230" title="scary-animation">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
 
 ## <a id="growing-flower"></a>growing-flower
 [<img src="images/growing-flower.gif" height="230" title="growing-flower">](https://im3.ezgif.com/tmp/ezgif-3-f53ebce80a.gif)
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -608,6 +648,20 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ![animation](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/646f9fb9-f003-4bd1-b535-d0b775bc0b04)
 ---
 
+## <a id="animated-btn"></a>Animated Button
+
+![btn2](https://github.com/Upendra2003/You-Dont-Need-JavaScript/assets/96371563/db4a8e85-9592-498b-9949-95459f99d8d5)
+![btn1](https://github.com/Upendra2003/You-Dont-Need-JavaScript/assets/96371563/6b04ebd8-2af4-4565-b230-d6e2a8f2f8b2)
+
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+---
+## <a id= "Css FLEX"></a>Css FLEX
+![Screenshot 2023-10-23 141538](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113248104/973a1186-de6b-4e07-bc53-424b9b864984)
+---
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
 
