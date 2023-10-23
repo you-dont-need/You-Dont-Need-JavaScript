@@ -560,6 +560,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+&nbsp;
+
+## <a id="loader"></a>Loader
+
+[<img src="images/loader.gif" height="230" title="loader">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/97ba01f5-7e85-4c3e-8d60-47374ef3a1f9)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="shuffling-squres"></a>Shuffling squares
 [<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
 
