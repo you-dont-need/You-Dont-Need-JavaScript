@@ -69,26 +69,19 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [City animation footer](#city-animation-footer)
   - [Shuffling squares](#shuffling-squares)
   - [Playing Card Animation](#playing-card-animation)
-  - [ Star Wars Intro](#-star-wars-intro)
-  - [ Gradient Animation](#-gradient-animation)
-  - [ Zoom when hover](#-zoom-when-hover)
+  - [Star Wars Intro](#star-wars-intro)
+  - [Gradient Animation](#gradient-animation)
+  - [Zoom when hover](#zoom-when-hover)
   - [Floating Labels V2](#Floating-labelV2)
   - [Scary animation](#scary-animation)
   - [Light Bulb Animation](#light-bulb-animation)
   - [growing-flower](#growing-flower)
-=======
-
-  - [Contributors](#contributors)
-  - [Contributing](#contributing)
+- [Contributors](#contributors)
+- [Contributing](#contributing)
  
 
-=======
-  - [Contributors](#contributors)
-  - [Contributing](#contributing)
 
 
-
-=====
 ## <a id="Accordion"></a>Accordion / Toggle
 
 
@@ -526,18 +519,20 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
 ## <a id="shuffling-squres"></a>Shuffling squares
 [<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
 
 
 ---
+
 ## <a id="Floating-labelV2"></a>Floating-labelV2
 [<img src="images/Floatinglabel2.gif" height="230" title="Floating-labelV2">](https://im2.ezgif.com/tmp/ezgif-2-3297933621.gif)
 
 **[⬆ back to top](#quick-links)**
 
 ---
----
+
 ## <a id="scary-animation"></a>scary-animation
 
 [<img src="images/Scary-animation.gif" height="230" title="scary-animation">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
@@ -545,14 +540,9 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
----
+
 ## <a id="growing-flower"></a>growing-flower
 [<img src="images/growing-flower.gif" height="230" title="growing-flower">](https://im3.ezgif.com/tmp/ezgif-3-f53ebce80a.gif)
-=======
-[<img src="images/Scary-animation.gif" height="230" title="Floating-labelV2">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
-
-=======
-
 
 **[⬆ back to top](#quick-links)**
 
@@ -567,18 +557,20 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
----
-## <a id="starwarsintro"></a> Star Wars Intro
+
+## <a id="starwarsintro"></a>Star Wars Intro
 [<img src="images/intro1.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
 [<img src="images/intro2.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
+
 **[⬆ back to top](#quick-links)**
 
 
-## <a id= "Gradient-Animation"></a> Gradient Animation
+## <a id= "Gradient-Animation"></a>Gradient Animation
 [<img src="image/gradient-animation.gif" height="230" title="Gradient Animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/b3b64a1d4a426ab3a8f20fbe34640de18bca14a5/images/gradient-animation.gif)
+
 **[⬆ back to top](#quick-links)**
 
-## <a id="zoom-when-hover"></a> Zoom when hover
+## <a id="zoom-when-hover"></a>Zoom when hover
 [<img src="image/zoom-effect.gif" height="230" title="zoom-when-hover">](https://codepen.io/kdwzrjtc-the-animator/pen/gOqOwLx)
 
 ---
