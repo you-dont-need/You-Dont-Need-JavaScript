@@ -617,7 +617,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id= "Css Grids"></a>Css Grids
 ![Screenshot 2023-10-23 133423](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/c3398014-a2cd-4efc-aef6-a004b0e476d5)
 
-
+---
+## <a id= "Css FLEX"></a>Css FLEX
+![Screenshot 2023-10-23 141538](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113248104/973a1186-de6b-4e07-bc53-424b9b864984)
+---
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
 
