@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+}
+
 body {
   margin: 0;
   background: #7e7e7e;
   font-family: "Euclid Circular A", "Poppins";
-  color: #f7f7f7;
+  color: #c8c8c8;
 }
 
 html,
@@ -16,7 +25,8 @@ section {
   bottom: 12px;
   width: 100%;
   background: #000000;
-  padding-top: 60px;
+  box-shadow: 0px 0px 10px black;
+  padding-top: 40px;
 }
 
 footer.top > img {
@@ -30,12 +40,6 @@ footer {
   color: rgb(255 255 255 / 50%);
 }
 
-footer.top {
-  display: grid;
-  border-bottom: 2px solid rgb(255 255 255 / 20%);
-  padding-bottom: 20px;
-}
-
 footer.bottom {
   display: flex;
   align-items: center;
@@ -46,25 +50,19 @@ footer.bottom {
   text-align: center;
 }
 
-footer.top .links {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 30px;
-  margin-bottom: 30px;
-}
-
 .links-column {
-  display: grid;
-  gap: 10px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 8rem;
 }
 
 footer h2 {
   margin: 0 0 10px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  font-weight: bold;
   color: rgb(255 255 255 / 96%);
 }
 
@@ -85,6 +83,15 @@ footer p {
   margin-right: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: #aaa8a8;
+}
+
+a:hover {
+  color: orange;
+}
+
 footer.top .socials {
   position: absolute;
   left: 50%;
@@ -100,8 +107,47 @@ footer.top .socials > a {
   font-size: 24px;
 }
 
+.socials a:hover {
+  color: blue;
+}
+
 .socials-column :is(h2, p) {
   display: none;
+}
+
+#play-store {
+  width: 180px;
+  height: 70px;
+}
+
+#apple-store {
+  width: 180px;
+  height: 60px;
+}
+
+.store-logos {
+  display: flex;
+}
+
+.second-row, .first-row {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.second-row {
+  align-items: center;
+}
+
+.first-row {
+  gap: 4rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  margin-right: auto;
 }
 
 @media (width > 400px) {
