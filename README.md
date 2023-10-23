@@ -544,7 +544,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="spiner"></a>Spiner
 
-[<img src="images/spiner.gif" height="230" title="spiner">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/97ba01f5-7e85-4c3e-8d60-47374ef3a1f9)
+[<img src="images/spiner.gif" height="230" title="spiner">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/72b2e6fc-d12b-423b-a1a7-2d705e111e1f)
 
 **[⬆ back to top](#quick-links)**
 
