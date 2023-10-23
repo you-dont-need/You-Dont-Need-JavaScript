@@ -618,7 +618,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ![Screenshot 2023-10-23 133423](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/c3398014-a2cd-4efc-aef6-a004b0e476d5)
 ---
 ## <a id= "Css Transition"></a>Css Transition
-![Screenshot 2023-10-23 142501](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113248104/a099a591-8191-4fed-9cde-03b6e5a06fdd)
+![transition](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113248104/0003c264-3a14-45d2-b79a-8be255beef32)
 
 ---
 
