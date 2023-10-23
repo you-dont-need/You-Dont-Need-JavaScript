@@ -520,6 +520,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+&nbsp;
+
+## <a id="smoke"></a>Smoke
+
+[<img src="images/smoke.gif" height="230" title="smoke">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/d6a4f0b5-5345-4a23-85ae-6c371f597c61)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="shuffling-squres"></a>Shuffling squares
 [<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
 
