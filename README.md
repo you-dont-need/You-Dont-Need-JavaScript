@@ -201,6 +201,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/loader7.png" height="230" title="Demo 7">](http://codepen.io/brunjo/pen/wBKmbm)
 [<img src="images/loader8.png" height="230" title="Demo 8">](http://tobiasahlin.com/spinkit/)
 [<img src="images/loader9.png" height="230" title="Demo 9">](http://codepen.io/viduthalai1947/pen/JkhDK)
+[<img src="./images/css-loader-purna.gif" alt="CSS-Loader-Purna" height="230" title="CSS-Loader-Purna">](https://codepen.io/purnaaa/pen/vYVVygB)
 
 **[⬆ back to top](#quick-links)**
 
