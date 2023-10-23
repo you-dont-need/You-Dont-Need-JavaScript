@@ -534,7 +534,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="loader"></a>Loader
 
-[<img src="images/loader.gif" height="230" title="loader">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/d6a4f0b5-5345-4a23-85ae-6c371f597c61)
+[<img src="images/loader.gif" height="230" title="loader">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/97ba01f5-7e85-4c3e-8d60-47374ef3a1f9)
 
 **[⬆ back to top](#quick-links)**
 
