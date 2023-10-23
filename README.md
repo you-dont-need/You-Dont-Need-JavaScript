@@ -524,7 +524,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="smoke"></a>Smoke
 
-[<img src="images/smoke.gif" height="230" title="smoke">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/City%20animation%20footer.gif)
+[<img src="images/smoke.gif" height="230" title="smoke">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/d6a4f0b5-5345-4a23-85ae-6c371f597c61)
 
 **[⬆ back to top](#quick-links)**
 
