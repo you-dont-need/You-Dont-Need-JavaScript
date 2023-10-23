@@ -1,0 +1,66 @@
+faq html content
+
+        <h5>
+            <b>Top-Selling Healthcare Products:</b>
+            <span>Accu-Chek Active - 100 Strips</span>
+            |
+            <span>Supradyn Multivitamin Tablets</span>
+            |
+            <span>DR Morepen BG 03 - 50 Strips</span>
+            |
+            <span>Dettol Antiseptic Liquid</span>
+            |
+            <span>Ensure Diabetes Care Vanilla Sugar Free Jar</span>
+            |
+            <span>Dettol Instant Hand Sanitizer</span>
+            |
+            <span>Everherb Shilajit</span>
+            |
+            <span>Softovac SF Powder</span>
+            |
+            <span>Pediasure Premium Chocolate Refill</span>
+        </h5>
+        <h5>
+            <b>Top-Selling Medicines:</b>
+            <span>Dolovera Gel</span>
+            |
+            <span>Neurobion Forte</span>
+            |
+            <span>Chymoral Forte</span>
+            |
+            <span>Crocin Advance</span>
+            |
+            <span>Soframycin</span>
+            |
+            <span>Dexorange</span>
+            |
+            <span>Becadexamin</span>
+            |
+            <span>Folvite</span>
+            |
+            <span>Livogen</span>
+            |
+            <span>Becosules</span>
+            |
+            <span>Fourderm</span>
+            |
+            <span>Nurokind Plus</span>
+            |
+            <span>Burnol</span>
+            |
+            <span>Crocin 650</span>
+            |
+            <span>Mintop 5</span>
+            |
+            <span>Thrombophob</span>
+            |
+            <span>Evion 600</span>
+        </h5>
+        <h5>
+            <b>COVID-19 Preventatives:</b>
+            <span>N95 Masks</span>
+            |
+            <span>Hand Sanitizers</span>
+            |
+            <span>Hand Gloves, Disinfectants, Thermometers & more!</span>
+        </h5>
