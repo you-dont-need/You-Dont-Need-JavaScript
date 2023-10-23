@@ -634,6 +634,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id= "Css FLEX"></a>Css FLEX
 ![Screenshot 2023-10-23 141538](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113248104/973a1186-de6b-4e07-bc53-424b9b864984)
 ---
+&nbsp;
+
+## <a id="Coffee-Animation"></a>Coffee-Animation
+
+[<img src="images/coffee-animation.gif" height="230" title="coffee-animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/7d15c275-5210-4c2e-8530-eb073251a39f)
+
+**[⬆ back to top](#quick-links)**
+
+---
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
 
