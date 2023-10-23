@@ -1,0 +1,117 @@
+:root {
+  --clr-primary-100: #e6f6ff;
+  --clr-primary-700: #005499;
+  --clr-primary-800: #001833;
+  --clr-primary-900: #00050a;
+}
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+body {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  background: var(--clr-primary-800);
+  font-family: system-ui;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--clr-primary-100);
+  text-align: center;
+  filter: drop-shadow(0 0.5rem 1rem var(--clr-primary-700));
+}
+.slider {
+  width: 100%;
+  height: 300px;
+  margin: auto;
+  display: grid;
+  place-items: center;
+}
+.slide-track {
+  display: flex;
+  width: calc(300px * 15);
+  animation: scroll 60s linear infinite;
+}
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 7.5));
+  }
+}
+
+.slide {
+  width: 300px;
+  height: 200px;
+  /* margin: 0 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5em;
+  object-fit: cover;
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-700);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+  /* transition: transform 0.5s ease-in-out; */
+}
+.slider {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    var(--clr-primary-100) 20%,
+    var(--clr-primary-100) 80%,
+    transparent
+  );
+  mask: linear-gradient(
+    90deg,
+    transparent,
+    var(--clr-primary-100) 20%,
+    var(--clr-primary-100) 80%,
+    transparent
+  );
+}
+
+/* .slider::before,
+.slider::after {
+  background: linear-gradient(
+    to right,
+    var(--clr-primary-800) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 20%;
+  z-index: 2;
+}
+.slider::before {
+  left: 0;
+  top: 0;
+  transform: rotateZ(0deg);
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+} */
