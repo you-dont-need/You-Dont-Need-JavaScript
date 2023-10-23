@@ -36,6 +36,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Font-Face (Latin)](#font-face-latin)
   - [Info on hover/ Popover](#info-on-hover-popover)
   - [Image Gallery](#image-gallery)
+  - [Jumping Ball](#jumping-ball)
   - [Loaders](#loaders)
   - [Dropdown Menu](#dropdown-menu)
   - [Mobile menu off canvas](#mobile-menu-off-canvas)
@@ -68,24 +69,23 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [City animation footer](#city-animation-footer)
   - [Shuffling squares](#shuffling-squares)
   - [Playing Card Animation](#playing-card-animation)
-  - [ Star Wars Intro](#-star-wars-intro)
-  - [ Gradient Animation](#-gradient-animation)
-  - [ Zoom when hover](#-zoom-when-hover)
+  - [Star Wars Intro](#star-wars-intro)
+  - [Gradient Animation](#gradient-animation)
+  - [Zoom when hover](#zoom-when-hover)
   - [Floating Labels V2](#Floating-labelV2)
   - [Scary animation](#scary-animation)
   - [ANimated Button](#animated-btn)
-=======
 
+  - [Contributors](#contributors)
+  - [Contributing](#contributing)
+  - [Light Bulb Animation](#light-bulb-animation)
+  - [growing-flower](#growing-flower)
   - [Contributors](#contributors)
   - [Contributing](#contributing)
  
 
-=======
-  - [Contributors](#contributors)
-  - [Contributing](#contributing)
 
 
-=====
 ## <a id="Accordion"></a>Accordion / Toggle
 
 
@@ -118,6 +118,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/slideshow2.png" height="230" title="Demo 1">](http://codepen.io/SitePoint/pen/MyPVdK)
 [<img src="images/slideshow.png" height="230" title="Demo 2">](https://codepen.io/cavico/pen/yOjwya)
 [<img src="images/slideshow3.png" height="230" title="Demo 3">](https://codepen.io/FabianK/pen/zJLLrR)
+[<img src="./images/Infinite-carousel-purnasth.gif" alt="Carousel-Nepal" height="230" title="Carousel-Nepal">](https://codepen.io/purnaaa/pen/NWoWeBB)
 
 **[⬆ back to top](#quick-links)**
 
@@ -204,6 +205,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/loader7.png" height="230" title="Demo 7">](http://codepen.io/brunjo/pen/wBKmbm)
 [<img src="images/loader8.png" height="230" title="Demo 8">](http://tobiasahlin.com/spinkit/)
 [<img src="images/loader9.png" height="230" title="Demo 9">](http://codepen.io/viduthalai1947/pen/JkhDK)
+[<img src="./images/css-loader-purna.gif" alt="CSS-Loader-Purna" height="230" title="CSS-Loader-Purna">](https://codepen.io/purnaaa/pen/vYVVygB)
 
 **[⬆ back to top](#quick-links)**
 
@@ -340,6 +342,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+
+
 &nbsp;
 
 ## <a id="Twitter"></a>Twitter Heart Animation
@@ -375,6 +379,26 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="ResponsiveItemShowcase"></a>Responsive Counter Showing # of Items That Didn't Fit Screen
 
 [<img src="images/responsive-item-showcase.gif" title="Responsive Item Showcase">](https://codepen.io/pavlovsk/pen/QqrZzv/right/)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="login"></a>A login Page with Glassmorphism Effect
+
+[<img src="/Assests/Login Page.png" title="Responsive Login Page with Glassmorphism Effect">]
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="login"></a>A Responsive Footer
+
+[<img src="/Assests/Footer.png" title="Responsive Footer">]
 
 **[⬆ back to top](#quick-links)**
 
@@ -493,6 +517,26 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+&nbsp;
+
+## <a id="JumpingBall"></a>Jumping Ball
+
+<img src="images/jumpingBall.png" height="230" title="Jumping Ball">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="LightBulbAnimation"></a>Light Bulb Animation
+
+<img src="images/LightBulbAnimation.png" height="230" title="Light Bulb animation">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 
 &nbsp;
 
@@ -503,23 +547,40 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
+&nbsp;
+
+## <a id="smoke"></a>Smoke
+
+[<img src="images/smoke.gif" height="230" title="smoke">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/d6a4f0b5-5345-4a23-85ae-6c371f597c61)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="shuffling-squres"></a>Shuffling squares
 [<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
 
 
-
 ---
+
 ## <a id="Floating-labelV2"></a>Floating-labelV2
 [<img src="images/Floatinglabel2.gif" height="230" title="Floating-labelV2">](https://im2.ezgif.com/tmp/ezgif-2-3297933621.gif)
 
 **[⬆ back to top](#quick-links)**
 
 ---
----
-## <a id="scary-animation"></a>scary-animation
-[<img src="images/Scary-animation.gif" height="230" title="Floating-labelV2">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
 
-=======
+## <a id="scary-animation"></a>scary-animation
+
+[<img src="images/Scary-animation.gif" height="230" title="scary-animation">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="growing-flower"></a>growing-flower
+[<img src="images/growing-flower.gif" height="230" title="growing-flower">](https://im3.ezgif.com/tmp/ezgif-3-f53ebce80a.gif)
 
 **[⬆ back to top](#quick-links)**
 
@@ -534,18 +595,20 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
----
-## <a id="starwarsintro"></a> Star Wars Intro
+
+## <a id="starwarsintro"></a>Star Wars Intro
 [<img src="images/intro1.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
 [<img src="images/intro2.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
+
 **[⬆ back to top](#quick-links)**
 
 
-## <a id= "Gradient-Animation"></a> Gradient Animation
+## <a id= "Gradient-Animation"></a>Gradient Animation
 [<img src="image/gradient-animation.gif" height="230" title="Gradient Animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/b3b64a1d4a426ab3a8f20fbe34640de18bca14a5/images/gradient-animation.gif)
+
 **[⬆ back to top](#quick-links)**
 
-## <a id="zoom-when-hover"></a> Zoom when hover
+## <a id="zoom-when-hover"></a>Zoom when hover
 [<img src="image/zoom-effect.gif" height="230" title="zoom-when-hover">](https://codepen.io/kdwzrjtc-the-animator/pen/gOqOwLx)
 
 ---
