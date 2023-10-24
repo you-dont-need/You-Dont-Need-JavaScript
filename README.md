@@ -34,6 +34,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Bubble](#bubble)
   - [Burger Menu](#burger-menu)
   - [Carousel](#carousel)
+  - [Compass Loader](#compassloader)
   - [City animation footer](#city-animation-footer)
   - [Counter of checked check-boxes](#counter-of-checked-check-boxes)
   - [Dog Box Animation](#dog-box-animation)
@@ -239,6 +240,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="BurgerMenu"></a>Burger Menu
 
 [<img src="images/menu4.png" height="230" title="Demo">](https://codepen.io/eduardoboucas/pen/BNyKwO)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="compassloader"></a>Compass Loader
+
+[<img src="images/CompassLoader.gif" height="230" title="Demo">]([https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/dyaPmrE))
 
 **[⬆ back to top](#quick-links)**
 
