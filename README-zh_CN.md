@@ -288,7 +288,7 @@
 ***
 &nbsp;
 
-## <a id="DarkMode"></a>Dark Mode - Day and nigth
+## <a id="DarkMode"></a>深色模式 - 改變明暗
 
 [<img src="images/darkmode.gif" title="Dark Mode - Day and nigth">](https://codepen.io/marcelesilv/pen/yLjrEzz)
 
