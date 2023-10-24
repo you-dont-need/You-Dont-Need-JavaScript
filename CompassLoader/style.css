@@ -1,0 +1,115 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --hue: 223;
+  --bg: hsl(var(--hue), 90%, 25%);
+  --fg: hsl(var(--hue), 10%, 90%);
+  --trans-dur: 0.3s;
+  font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+}
+body {
+  background: #000;
+  color: var(--fg);
+  font: 1em/1.5 sans-serif;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.pl {
+  display: block;
+  width: 9.375em;
+  height: 9.375em;
+}
+.pl__arrows,
+.pl__ring-rotate,
+.pl__ring-stroke,
+.pl__tick {
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.pl__arrows {
+  animation-name: arrows;
+  transform: rotate(45deg);
+  transform-origin: 16px 52px;
+}
+.pl__ring-rotate,
+.pl__ring-stroke {
+  transform-origin: 80px 80px;
+}
+.pl__ring-rotate {
+  animation-name: ringRotate;
+}
+.pl__ring-stroke {
+  animation-name: ringStroke;
+  transform: rotate(-45deg);
+}
+.pl__tick {
+  animation-name: tick;
+}
+.pl__tick:nth-child(2) {
+  animation-delay: -1.75s;
+}
+.pl__tick:nth-child(3) {
+  animation-delay: -1.5s;
+}
+.pl__tick:nth-child(4) {
+  animation-delay: -1.25s;
+}
+.pl__tick:nth-child(5) {
+  animation-delay: -1s;
+}
+.pl__tick:nth-child(6) {
+  animation-delay: -0.75s;
+}
+.pl__tick:nth-child(7) {
+  animation-delay: -0.5s;
+}
+.pl__tick:nth-child(8) {
+  animation-delay: -0.25s;
+}
+
+/* Animations */
+@keyframes arrows {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);
+  }
+}
+@keyframes ringRotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+@keyframes ringStroke {
+  from,
+  to {
+    stroke-dashoffset: 452;
+    transform: rotate(-45deg);
+  }
+  50% {
+    stroke-dashoffset: 169.5;
+    transform: rotate(-180deg);
+  }
+}
+@keyframes tick {
+  from,
+  3%,
+  47%,
+  to {
+    stroke-dashoffset: -12;
+  }
+  14%,
+  36% {
+    stroke-dashoffset: 0;
+  }
+}
