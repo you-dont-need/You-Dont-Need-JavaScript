@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* CSS for the card container */
+        .card {
+            width: 300px;
+            height: 400px;
+            background-color: #3498db;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            animation: cardAnimate 2s ease-in-out infinite;
+        }
+
+        /* CSS for the card content */
+        .card-content {
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Keyframes animation */
+        @keyframes cardAnimate {
+            0% {
+                transform: scale(1);
+                background-color: #3498db;
+            }
+            50% {
+                transform: scale(1.05);
+                background-color: #e74c3c;
+            }
+            100% {
+                transform: scale(1);
+                background-color: #3498db;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <h2>Animated Card</h2>
+            <p>This card is animated using CSS keyframes.</p>
+        </div>
+    </div>
+</body>
+</html>
