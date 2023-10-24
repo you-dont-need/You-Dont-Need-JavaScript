@@ -28,6 +28,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
     - [Style Guide:](#style-guide)
   - [Quick links](#quick-links)
   - [Accordion / Toggle](#accordion--toggle)  
+  - [Analog-clock](#analogclock)
   - [Animated Button](#animated-btn)
   - [Animated Buttons](#animated-buttons)
   - [Bonfire](#bonfire)
@@ -116,6 +117,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+
+
 ## <a id="Carousel"></a>Carousel
 
 [<img src="images/slideshow2.png" height="230" title="Demo 1">](http://codepen.io/SitePoint/pen/MyPVdK)
@@ -150,6 +153,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+## <a id="analogclock"></a>Analog-clock
+
+[<img src="images/clock.jpg" height="230" title="Analog-clock">](https://codepen.io/himadeepthi-sayani/pen/RwvNqQm)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
 ## <a id="Floating"></a>Floating label on Textfield
 
 [<img src="images/textfields.png" height="230" title="Demo">](http://codepen.io/KtorZ/pen/ZOzdqG)
