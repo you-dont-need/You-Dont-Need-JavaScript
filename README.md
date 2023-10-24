@@ -554,7 +554,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="fire"></a>Fire
 
-[<img src="images/fire.gif" height="230" title="fire">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/72b2e6fc-d12b-423b-a1a7-2d705e111e1f)
+[<img src="images/fire.gif" height="230" title="fire">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/85e70774-0da0-47bf-bbea-1b6d2d6d73e1)
 
 **[⬆ back to top](#quick-links)**
 
