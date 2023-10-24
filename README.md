@@ -34,6 +34,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Bonfire](#bonfire)
   - [Bubble](#bubble)
   - [Burger Menu](#burger-menu)
+  - [Button Animation](#button_letsgo)
   - [Carousel](#carousel)
   - [Compass Loader](#compassloader)
   - [City animation footer](#city-animation-footer)
@@ -252,6 +253,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="BurgerMenu"></a>Burger Menu
 
 [<img src="images/menu4.png" height="230" title="Demo">](https://codepen.io/eduardoboucas/pen/BNyKwO)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="button_letsgo"></a>Button Animation
+
+[<img src="images/ButtonAnimation.gif" height="250" title="Demo">]([https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx))
 
 **[⬆ back to top](#quick-links)**
 
