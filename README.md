@@ -170,11 +170,11 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/AnimatedBox.jpg" height="230" title="Demo">](https://codepen.io/Ayan-Saxena/pen/qBgBYoZ)
 [<img src="images/AnimatedBox2.jpg" height="230" title="Demo">](https://codepen.io/Ayan-Saxena/pen/qBgBYoZ)
 
-<<<<<<< HEAD
+
 **[⬆ back to top](#quick-links)**
 
-=======
->>>>>>> 515edc844b5047ef4a9cf86b8caf2356126ef07e
+
+
 ## <a id="analogclock"></a>Analog-clock
 
 [<img src="images/clock.jpg" height="230" title="Analog-clock">](https://codepen.io/himadeepthi-sayani/pen/RwvNqQm)
@@ -185,10 +185,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 515edc844b5047ef4a9cf86b8caf2356126ef07e
 ## <a id="Floating"></a>Floating label on Textfield
 
 [<img src="images/textfields.png" height="230" title="Demo">](http://codepen.io/KtorZ/pen/ZOzdqG)
