@@ -1,0 +1,231 @@
+<!--Based in https://www.youtube.com/watch?v=i5Fps4GBBns&t=1s-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://www.publicdomainpictures.net/pictures/190000/velka/brazil-flag-1469717727WmN.jpg" />
+    <title>Welcome</title>
+
+            <style>
+                /*Based in https://www.youtube.com/watch?v=i5Fps4GBBns&t=1s*/
+
+            *, *::before, *::after{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            @-webkit-keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; } 
+                }
+                @-moz-keyframes fadeIn {
+                0% { opacity: 0;}
+                100% { opacity: 1; }
+                }
+                @-o-keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+                }
+                @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+                }
+
+            .fadeIn {
+                    -webkit-animation: fadeIn 3s ease-in-out;
+                    -moz-animation: fadeIn 3s ease-in-out;
+                    -o-animation: fadeIn 3s ease-in-out;
+                    animation: fadeIn 3s ease-in-out;
+                    }
+
+            .fadeImg {
+                opacity:0;
+                -webkit-animation: fadeIn 5s ease-in-out;
+                -moz-animation: fadeIn 5s ease-in-out;
+                -o-animation: fadeIn 5s ease-in-out;
+                animation: fadeIn 5s ease-in-out; 
+                -webkit-animation-fill-mode:forwards;
+                -moz-animation-fill-mode:forwards;
+                -o-animation-fill-mode:forwards;
+                animation-fill-mode:forwards;
+            }
+                
+                .fadeImg-delay {	
+                -webkit-animation-delay:3s;
+                -moz-animation-delay:3s;
+                -o-animation-delay:3s;
+                animation-delay:3s;
+                }       
+
+            body{
+                background: linear-gradient(to left, #ffedf6, #ffe9f3, #ded2d8) ;
+                color: #351b2d;
+                font-family: Overpass Mono, 'Courier New', Courier, monospace;
+                font-weight: 900;
+                backdrop-filter: opacity(60%) brightness(100%);
+            }
+
+            h1{
+                text-align: center;
+                margin-top: 4rem;
+                padding-bottom: 3rem;
+                font-size: 61px;
+            /* -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #7a7e53;
+                filter: brightness(110%);*/
+            }
+
+            div{
+                width:20rem ;
+                height:4rem;
+                border: #431627 solid 2px;
+                border-radius: 15px;
+                background: #efffb7;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                margin-top: 3rem;
+            }
+
+            a{
+                text-decoration: none;
+                font-size: 25px;
+            }
+
+            img{
+                border-radius: 10rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                width: 20rem;
+                height: 20rem;
+            }
+
+            .menu{
+                width: 68px;
+                height: 60px;
+                background: #fff;
+                border-radius: 50%;
+                position: fixed;
+                /*bottom: 5px;*/
+                right: 25px;
+                cursor: pointer;
+                transition: box-shadow 1s cubic-bezier(0, 1.07, 0, 1.02);
+                box-shadow: 0 0 0 #fff, 0 0 0 #fff;
+            }
+
+            .menu:hover {
+                box-shadow: 0 0 0 8px #fff, 0 0 0 8px #fff;
+            }
+
+            .hamb{
+                position: relative;
+                display: block;
+                background: #000;
+                width: 30px;
+                height: 2px;
+                /*top: 8px;
+                left: 14px;*/
+                transition: .5s ease-in-out;
+            }
+
+            .hamb:before, .hamb:after{
+                background: #000;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                transition: .5s ease-in-out;
+            }
+
+            .hamb:before{
+                top: -10px;
+            }
+
+            .hamb:after{
+                bottom: -10px;
+            }
+
+            input{
+                display: none;
+            }
+
+            input:checked ~ ul{
+                opacity: 1;
+            }
+
+            input:checked ~ label .menu{
+                box-shadow: 0 0 0 110vw #fff, 0 0 0 110vh #fff;
+            }
+
+            input:checked ~ label .hamb{
+                transform: rotate(45deg);
+            }
+
+            input:checked ~ label .hamb:before{
+                transform: rotate(90deg);
+                top: 0;
+            }
+
+            input:checked ~ label .hamb:after{
+                transform: rotate(90deg);
+                bottom: 0;
+            }
+
+            ul{
+                position: absolute;
+                top: 50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+                list-style: none;
+                opacity: 0;
+                transition: .25s 1s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+
+            a{
+                display: block;
+                margin-bottom: 40px;
+                color: crimson;
+                font: 47px;
+                text-decoration: none;
+            }
+            </style>
+
+</head>
+<body class="fadeIn">
+    <h1>Hello, Welcome</h1>
+    <img src="https://img77.uenicdn.com/cdn-cgi/image/width=620,fit=crop,f=auto/image/upload/v1617242692/business/cee58b2e-37e6-4fa2-95ec-76b668637097.jpg" alt="Avatar" class="fadeImg">
+    
+   <!-- 
+    <div>
+        <a href="./homemenu.html">Clique aqui</a>
+    </div>
+    -->
+
+	 <input id="cbmenu"type="checkbox">
+    <label for="cbmenu">
+        <div class="menu">
+            <span class="hamb">
+            </span>
+        </div>
+    </label>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+
+    </ul>
+
+</body>
+</html>

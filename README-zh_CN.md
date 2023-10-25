@@ -27,6 +27,7 @@
 1. [轮播](#Carousel)
 1. [复选框勾选计数](#Counter)
 1. [点击打开](#Flip)
+1. [深色模式/改變明暗](#DarkMode深色模式/改變明暗)
 1. [文本框上的浮动标签](#Floating)
 1. [字体(拉丁)](#Font)
 1. [悬停/弹出窗口信息](#Info)
@@ -86,6 +87,15 @@
 ## <a id="Flip"></a>点击打开
 
 [<img src="images/flipper.png" height="230" title="Demo">](https://codepen.io/RuudBurger/pen/bwjry)
+
+**[⬆ 回到顶部](#quick-links)**
+
+***
+&nbsp;
+
+## <a id="DarkMode"></a>DarkMode深色模式/改變明暗
+
+[<img src="images/darkmode.gif" title="Dark Mode - Day and nigth">](https://codepen.io/marcelesilv/pen/yLjrEzz)
 
 **[⬆ 回到顶部](#quick-links)**
 
