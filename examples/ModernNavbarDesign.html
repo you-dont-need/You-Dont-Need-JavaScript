@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <title>NavbarDesign</title>
+    <style>
+        /* font imported from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,400;1,600&display=swap'); 
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Jost', sans-serif;
+      }
+      nav{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      #logo{
+        font-size: 30px;
+        padding: 20px;
+        border-bottom: 0px solid black;
+        box-shadow: 2px 2px 12px 2px  rgba(210, 210, 210, 0.384);
+        color: rgb(52, 52, 52);
+      }
+      #logo h1{
+        cursor: pointer;
+      }
+      
+      #menu ul{
+        display: flex;
+        border-bottom: 1px solid rgb(247, 247, 247);
+        gap: 50px;
+        list-style: none;
+        justify-content: center;
+        padding: 10px;
+        font-size: 21px;
+        color: red;
+      }
+      #menu li{
+        transition:all 0.3s ease-in-out;
+      }
+      #menu li:hover{
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+      }
+      </style>
+  </head>
+  <body>
+    <nav>
+      <!-- logo section exists for the logo in your website (for example here 'razr.') -->
+        <section id="logo">
+            <h1>RAZR.</h1>
+          </section>
+          <!-- this menu section holds all the links in your navigation bar -->
+          <section id="menu">
+            <ul>
+              <li>Menu</li>
+              <li>Products</li>
+              <li>About</li>
+              <li>Shop</li>
+            </ul>
+          </section>
+    </nav>
+  </body>
+</html>
