@@ -167,7 +167,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
-## <a id="Floating"></a>Floating label on Textfield
+
+=======
+
+ <a id="Floating"></a>Floating label on Textfield
 
 [<img src="images/textfields.png" height="230" title="Demo">](http://codepen.io/KtorZ/pen/ZOzdqG)
 
@@ -761,6 +764,22 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="Coffee-Animation"></a>Coffee-Animation
 
 [<img src="images/coffee-animation.gif" height="230" title="coffee-animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/7d15c275-5210-4c2e-8530-eb073251a39f)
+
+**[⬆ back to top](#quick-links)**
+
+
+=======
+&nbsp;
+
+## <a id="Basketball-Animation"></a>Basketball-Animation
+
+[<img src="images/basketball-animation.gif" height="230" title="basketball-animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/66759afd-9794-408d-92a5-53b793072f98)
+
+**[⬆ back to top](#quick-links)**
+
+## <a id="Business-Card"></a>Business-Card
+
+![img_source](Business-Card/output.png)
 
 **[⬆ back to top](#quick-links)**
 
