@@ -564,7 +564,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="flame"></a>Flame
 
-[<img src="images/flame.gif" height="230" title="flame">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/85e70774-0da0-47bf-bbea-1b6d2d6d73e1)
+[<img src="images/flame.gif" height="230" title="flame">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/5d8659ea-84e4-481e-bdcd-e5e9fe7d30e9)
 
 **[⬆ back to top](#quick-links)**
 
