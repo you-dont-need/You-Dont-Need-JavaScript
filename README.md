@@ -750,6 +750,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+&nbsp;
+
+## <a id="Basketball-Animation"></a>Basketball-Animation
+
+[<img src="images/basketball-animation.gif" height="230" title="basketball-animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/66759afd-9794-408d-92a5-53b793072f98)
+
+**[⬆ back to top](#quick-links)**
+
+---
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
 
