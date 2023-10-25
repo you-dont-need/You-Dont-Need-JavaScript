@@ -643,6 +643,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+&nbsp;
+
+## <a id="flame"></a>Flame
+
+[<img src="images/flame.gif" height="230" title="flame">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/5d8659ea-84e4-481e-bdcd-e5e9fe7d30e9)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="shuffling-squres"></a>Shuffling squares
 [<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
 
