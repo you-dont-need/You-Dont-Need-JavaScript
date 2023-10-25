@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Container for demonstration */
+        .container {
+            position: relative; /* Essential for positioning child elements */
+            width: 300px;
+            height: 200px;
+        }
+
+        /* Element 1 */
+        .element1 {
+            position: absolute; /* Positioned absolutely within the container */
+            width: 100px;
+            height: 100px;
+            background-color: #3498db; /* Blue */
+            left: 50px;
+            top: 50px;
+            z-index: 1; /* Lowest z-index */
+        }
+
+        /* Element 2 */
+        .element2 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #e74c3c; /* Red */
+            left: 100px;
+            top: 100px;
+            z-index: 2; /* Middle z-index */
+        }
+
+        /* Element 3 */
+        .element3 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #27ae60; /* Green */
+            left: 150px;
+            top: 150px;
+            z-index: 3; /* Highest z-index */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Element 1 (Blue) -->
+        <div class="element1">1 (z-index: 1)</div>
+
+        <!-- Element 2 (Red) -->
+        <div class="element2">2 (z-index: 2)</div>
+
+        <!-- Element 3 (Green) -->
+        <div class="element3">3 (z-index: 3)</div>
+    </div>
+</body>
+</html>
