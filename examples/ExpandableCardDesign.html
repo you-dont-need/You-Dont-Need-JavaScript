@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Jost:ital,wght@1,400;1,600&family=Open+Sans:wght@400;500&family=Poppins:wght@400;500&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inclusive Sans", sans-serif;
+        font-family: "Jost", sans-serif;
+        font-family: "Open Sans", sans-serif;
+        font-family: "Poppins", sans-serif;
+      }
+      body{
+        padding-left: 30%;
+        padding-top: 10%;
+      }
+      #user{
+        border: 1px solid rgb(228, 228, 228);
+        display: flex;
+        width: 300px;
+        border-radius: 12px;
+        padding: 20px;
+        color: rgb(78, 95, 78);
+      }
+      #toggle{
+        margin-top: 30px;
+      }
+      label{
+        margin-top: 20px;
+        margin-left: 7rem;
+        border: 0px solid black;
+        background: rgb(235, 245, 235);
+        border-radius: 50%;
+        padding: 1px 4px;
+      }
+      .box {
+        width: 300px;
+        height: 0;
+        background: rgb(255, 255, 255);
+        
+        color: white;
+      }
+      .box ul {
+        list-style: none;
+      }
+      /* the following css styling toggles the details card on or off depending upon the state of the checkbox  */
+      input:checked ~ .box {
+        height: 220px;
+        color: rgba(53, 89, 53, 0.818);
+        border: 1px solid rgb(228, 228, 228);
+        background: rgb(244, 251, 244);
+        border-radius: 12px;
+        margin-top: 20px;
+        padding: 20px;
+        font-size: 26px;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="user">
+        <h1>John Doe</h1>
+        <!-- this part describes the smaller card details. Only the name(in this case), hiding the details. You can change it to your need. -->
+    </div>
+    <input id="toggle" type="checkbox" style="visibility: hidden" />
+    <label for="toggle"> <i class="fa-solid fa-chevron-down" style="color: #000000;"></i> </label>
+    <!-- this is the popup button used for expanding -->
+    <div class="box">
+      <!-- this card shows the full details of the person, it is shown once clicking on the expand pop-up down -->
+        <ul>
+            <li>John Doe</li>
+            <li>DevOps Lead</li>
+            <li>Walmart</li>
+            <li>Houston, TX</li>
+        </ul>
+    </div>
+  </body>
+</html>
