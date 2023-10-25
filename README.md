@@ -25,75 +25,79 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## Quick links
 
 - [You Don't Need JavaScript](#you-dont-need-javascript)
-    - [Style Guide:](#style-guide)
-  - [Quick links](#quick-links)
-  - [Accordion / Toggle](#accordion--toggle)  
-  - [Analog-clock](#analogclock)
-  - [Animated Button](#animated-btn)
-  - [Animated Buttons](#animated-buttons)
-  - [Bonfire](#bonfire)
-  - [Bubble](#bubble)
-  - [Burger Menu](#burger-menu)
-  - [Button Animation](#button_letsgo)
-  - [Carousel](#carousel)
-  - [Compass Loader](#compassloader)
-  - [City animation footer](#city-animation-footer)
-  - [Counter of checked check-boxes](#counter-of-checked-check-boxes)
-  - [Dog Box Animation](#dog-box-animation)
-  - [Dropdown Menu](#dropdown-menu)
-  - [Dynamic Image Colorizing](#dynamic-image-colorizing)
-  - [Enable dark mode](#Enable-dark-mode)
-  - [Fancy Menu](#fancy-menu)
-  - [Flip on click](#flip-on-click)
-  - [Floating label on Textfield](#floating-label-on-textfield)
-  - [Floating Labels V2](#Floating-labelV2)
-  - [Font-Face (Latin)](#font-face-latin)
-  - [Footer](#footer)
-  - [Gradient Animation](#gradient-animation)
-  - [growing-flower](#growing-flower)
-  - [growing-flower](#growing-flower)
-  - [Image Gallery](#image-gallery)
-  - [infinite-carousel](#infinite-carousel)
-  - [Info on hover/ Popover](#info-on-hover-popover)
-  - [Jumping Ball](#jumping-ball)
-  - [Light Bulb Animation](#light-bulb-animation)
-  - [Loaders](#loaders)
-  - [Mobile menu off canvas](#mobile-menu-off-canvas)
-  - [Modal/Popup](#modalpopup)
-  - [Mouse tracking](#mouse-tracking)
-  - [NavBar](#navbar)
-  - [Neon Button](#neon-button)
-  - [Neon Card](#neon-card)
-  - [Neumorphism Card Design](#neumorphism-card-design)
-  - [Parallax scrolling](#parallax-scrolling)
-  - [Playing Card Animation](#playing-card-animation)
-  - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
-  - [Ripple Effect](#ripple-effect)
-  - [Scary animation](#scary-animation)
-  - [Scenary](#scenary)
-  - [Shake Button](#shake-button)
-  - [Shake Button](#shake-button-1)
-  - [Shuffling squares](#shuffling-squares)
-  - [Star Wars Intro](#star-wars-intro)
-  - [Switch](#switch)
-  - [Tabs](#tabs)
-  - [Thankyou-Animation](#thankyou-animation)
-  - [Todo List](#todo-list)
-  - [Tooltips](#tooltips)
-  - [Treeview](#treeview)
-  - [Twitter Heart Animation](#twitter-heart-animation)
-  - [Zoom when hover](#zoom-when-hover)
- 
-  - [Contributors](#contributors)
-  - [Contributing](#contributing)
-
- 
+- [Style Guide:](#style-guide)
+- [Quick links](#quick-links)
+- [Accordion / Toggle](#accordion--toggle)
+- [Analog-clock](#analogclock)
+- [Animated Button](#animated-btn)
+- [Animated Buttons](#animated-buttons)
+- [Bonfire](#bonfire)
+- [Bubble](#bubble)
+- [Burger Menu](#burger-menu)
+- [Button Animation](#button_letsgo)
+- [Carousel](#carousel)
+- [Compass Loader](#compassloader)
+- [City animation footer](#city-animation-footer)
+- [Counter of checked check-boxes](#counter-of-checked-check-boxes)
+- [Dog Box Animation](#dog-box-animation)
+- [Dropdown Menu](#dropdown-menu)
+- [Dynamic Image Colorizing](#dynamic-image-colorizing)
+- [Enable dark mode](#Enable-dark-mode)
+- [Fancy Menu](#fancy-menu)
+- [Flip on click](#flip-on-click)
+- [Floating label on Textfield](#floating-label-on-textfield)
+- [Floating Labels V2](#Floating-labelV2)
+- [Font-Face (Latin)](#font-face-latin)
+- [Footer](#footer)
+- [Gradient Animation](#gradient-animation)
+- [growing-flower](#growing-flower)
+- [growing-flower](#growing-flower)
+- [Image Gallery](#image-gallery)
+- [infinite-carousel](#infinite-carousel)
+- [Info on hover/ Popover](#info-on-hover-popover)
+- [Jumping Ball](#jumping-ball)
+- [Light Bulb Animation](#light-bulb-animation)
+- [Loaders](#loaders)
+- [Mobile menu off canvas](#mobile-menu-off-canvas)
+- [Modal/Popup](#modalpopup)
+- [Mouse tracking](#mouse-tracking)
+- [NavBar](#navbar)
+- [Neon Button](#neon-button)
+- [Neon Card](#neon-card)
+- [Neumorphism Card Design](#neumorphism-card-design)
+- [Parallax scrolling](#parallax-scrolling)
+- [Playing Card Animation](#playing-card-animation)
+- [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
+- [Ripple Effect](#ripple-effect)
+- [Scary animation](#scary-animation)
+- [Scenary](#scenary)
+- [Shake Button](#shake-button)
+- [Shake Button](#shake-button-1)
+- [Shuffling squares](#shuffling-squares)
+- [Star Wars Intro](#star-wars-intro)
+- [Switch](#switch)
+- [Tabs](#tabs)
+- [Thankyou-Animation](#thankyou-animation)
+- [Todo List](#todo-list)
+- [Tooltips](#tooltips)
+- [Treeview](#treeview)
+- [Twitter Heart Animation](#twitter-heart-animation)
+- [Zoom when hover](#zoom-when-hover)
+- [Contributors](#contributors)
+- [Contributing](#contributing)
+- [CSS Toggle](#toggle)
 
 
+
+## <a id="toggle"></a>CSS Toggle
+
+[<img src="/images/toggle1.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
+[<img src="/images/toggle2.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
+
+**[⬆ back to top](#quick-links)**
 
 
 ## <a id="Accordion"></a>Accordion / Toggle
-
 
 [<img src="images/accordion.png" height="230" title="Demo 1">](http://www.mraffaele.com/labs/css-only-accordions/)
 [<img src="images/toggler.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/pyXQrj)
@@ -105,6 +109,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 &nbsp;
+
 ## <a id="Animated-Buttons"></a>Animated Buttons
 
 <img src="images/Animated-button-1.png" height="230" title="Demo 1">
@@ -112,14 +117,11 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 <img src="images/Animated-button-2.png" height="230" title="Demo 2">
 <img src="images/liquidButton.png" height="230" title="Demo 2">
 
-
 **[⬆ back to top](#quick-links)**
 
 ---
 
 &nbsp;
-
-
 
 ## <a id="Carousel"></a>Carousel
 
@@ -164,6 +166,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 &nbsp;
+
 ## <a id="Floating"></a>Floating label on Textfield
 
 [<img src="images/textfields.png" height="230" title="Demo">](http://codepen.io/KtorZ/pen/ZOzdqG)
@@ -264,7 +267,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="button_letsgo"></a>Button Animation
 
-[<img src="images/ButtonAnimation.gif" height="250" title="Demo">]([https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx))
+[<img src="images/ButtonAnimation.gif" height="250" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
 
 **[⬆ back to top](#quick-links)**
 
@@ -274,7 +277,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="compassloader"></a>Compass Loader
 
-[<img src="images/CompassLoader.gif" height="230" title="Demo">]([https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/dyaPmrE))
+[<img src="images/CompassLoader.gif" height="230" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/dyaPmrE)>)
 
 **[⬆ back to top](#quick-links)**
 
@@ -380,8 +383,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-
-
 &nbsp;
 
 ## <a id="Twitter"></a>Twitter Heart Animation
@@ -469,6 +470,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
 &nbsp;
 
 ## <a id="neon-card"></a>Neon Card
@@ -493,6 +495,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
 &nbsp;
 
 ## <a id="Dog-Animation"></a>Dog Box Animation
@@ -502,6 +505,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
 &nbsp;
 
 ## <a id="Thankyou-Animation"></a>Thankyou-Animation
@@ -529,7 +533,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/Bonfire.gif" height="230" title="Bonfire">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/Bonfire.gif)
 
 **[⬆ back to top](#quick-links)**
-
 
 ---
 
@@ -583,7 +586,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-
 &nbsp;
 
 ## <a id="city-animation-footer"></a>City animation footer
@@ -635,12 +637,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 ## <a id="shuffling-squres"></a>Shuffling squares
-[<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
 
+[<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
 
 ---
 
 ## <a id="Floating-labelV2"></a>Floating-labelV2
+
 [<img src="images/Floatinglabel2.gif" height="230" title="Floating-labelV2">](https://im2.ezgif.com/tmp/ezgif-2-3297933621.gif)
 
 **[⬆ back to top](#quick-links)**
@@ -654,22 +657,28 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
 ---
+
 ## <a id="growing-flower"></a>growing-flower
+
 [<img src="images/growing-flower.gif" height="230" title="growing-flower">](https://im3.ezgif.com/tmp/ezgif-3-f53ebce80a.gif)
 
 **[⬆ back to top](#quick-links)**
 
 ---
+
 ---
+
 ## <a id="infinite-carousel"></a>infinite-carousel
-[<img src="images/infinite-carousel.gif" height="230" title="infinite-carousel">](https://im4.ezgif.com/tmp/ezgif-4-cf03115fc6.gif)
-=======
+
+# [<img src="images/infinite-carousel.gif" height="230" title="infinite-carousel">](https://im4.ezgif.com/tmp/ezgif-4-cf03115fc6.gif)
+
 [<img src="images/Scary-animation.gif" height="230" title="Floating-labelV2">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
 
 =======
->>>
-=======
+
+> > > =======
 
 [<img src="images/Scary-animation.gif" height="230" title="scary-animation">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
 
@@ -678,8 +687,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 ## <a id="growing-flower"></a>growing-flower
-[<img src="images/growing-flower.gif" height="230" title="growing-flower">](https://im3.ezgif.com/tmp/ezgif-3-f53ebce80a.gif)
 
+[<img src="images/growing-flower.gif" height="230" title="growing-flower">](https://im3.ezgif.com/tmp/ezgif-3-f53ebce80a.gif)
 
 **[⬆ back to top](#quick-links)**
 
@@ -696,51 +705,57 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 ## <a id="starwarsintro"></a>Star Wars Intro
+
 [<img src="images/intro1.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
 [<img src="images/intro2.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
 
 **[⬆ back to top](#quick-links)**
 
-
 ## <a id= "Gradient-Animation"></a>Gradient Animation
+
 [<img src="image/gradient-animation.gif" height="230" title="Gradient Animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/b3b64a1d4a426ab3a8f20fbe34640de18bca14a5/images/gradient-animation.gif)
 
 **[⬆ back to top](#quick-links)**
 
 ## <a id="zoom-when-hover"></a>Zoom when hover
+
 [<img src="image/zoom-effect.gif" height="230" title="zoom-when-hover">](https://codepen.io/kdwzrjtc-the-animator/pen/gOqOwLx)
 
 ---
+
 ## <a id="Floating-labelV2"></a>Floating-labelV2
+
 [<img src="images/Floatinglabel2.gif" height="230" title="Floating-labelV2">](https://im2.ezgif.com/tmp/ezgif-2-3297933621.gif)
 
 **[⬆ back to top](#quick-links)**
 
 ---
+
 ## <a id= "Css Tables"></a>CSS Tables
-![Screenshot 2023-10-23 144658](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/d73a9af8-5470-4a88-bfc9-a5e8430aba65)
----
+
+## ![Screenshot 2023-10-23 144658](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/d73a9af8-5470-4a88-bfc9-a5e8430aba65)
 
 =======
+
 ## <a id= "3D Transform"></a>3D Transform
 
-![animation](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/646f9fb9-f003-4bd1-b535-d0b775bc0b04)
----
+## ![animation](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/646f9fb9-f003-4bd1-b535-d0b775bc0b04)
 
 ## <a id="animated-btn"></a>Animated Button
 
 ![btn2](https://github.com/Upendra2003/You-Dont-Need-JavaScript/assets/96371563/db4a8e85-9592-498b-9949-95459f99d8d5)
 ![btn1](https://github.com/Upendra2003/You-Dont-Need-JavaScript/assets/96371563/6b04ebd8-2af4-4565-b230-d6e2a8f2f8b2)
 
-
 **[⬆ back to top](#quick-links)**
 
 ---
 
 ---
+
 ## <a id= "Css FLEX"></a>Css FLEX
-![Screenshot 2023-10-23 141538](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113248104/973a1186-de6b-4e07-bc53-424b9b864984)
----
+
+## ![Screenshot 2023-10-23 141538](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113248104/973a1186-de6b-4e07-bc53-424b9b864984)
+
 &nbsp;
 
 ## <a id="Coffee-Animation"></a>Coffee-Animation
@@ -750,7 +765,9 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
 ## Contributors
+
 Thanks to these wonderful people who have contributed to this project!
 
 <a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript/graphs/contributors">
