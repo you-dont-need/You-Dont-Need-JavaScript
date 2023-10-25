@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* The animation code */
+@keyframes example {
+  0%   {background-color: #e74c3c; transform: translate(0, 0) rotate(0deg);}
+  25%  {background-color: #f1c40f; transform: translate(200px, 0) rotate(90deg);}
+  50%  {background-color: #3498db; transform: translate(200px, 200px) rotate(180deg);}
+  75%  {background-color: #2ecc71; transform: translate(0, 200px) rotate(270deg);}
+  100% {background-color: #e74c3c; transform: translate(0, 0) rotate(360deg);}
+}
+
+/* The element to apply the animation to */
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: #e74c3c;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>

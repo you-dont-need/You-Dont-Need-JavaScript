@@ -535,6 +535,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+
+&nbsp;
+
+## <a id="Square_roation_animation"></a>Square_rotation_animation (Latin)
+
+[<img src="images/Square_rotation_animation (1).png" height="230" title="SqaureRotationAnimation(1)">](demoLink)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 &nbsp;
 
 ## <a id="Switch"></a>Switch
