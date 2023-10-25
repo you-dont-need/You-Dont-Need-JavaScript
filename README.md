@@ -147,6 +147,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+
+## <a id="basicprofile"></a>Carousel
+
+[<img src="images/screenshot(39).png" height="230" title="Demo 1">](http://url-to-page)
+[<img src="images/screenshot(40).png" height="230" title="Demo 2">](http://url-to-page)
+[<img src="images/screenshot(42).png" height="230" title="Demo 3">](http://url-to-page)
+
+**[⬆ back to top](#quick-links)**
+
 ## <a id="Flip"></a>Flip on click
 
 [<img src="images/flipper.png" height="230" title="Demo">](https://codepen.io/RuudBurger/pen/bwjry)
@@ -156,6 +165,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 &nbsp;
+
+
+## <a id="Animated Box"></a>Animated Box
+
+[<img src="images/AnimatedBox.jpg" height="230" title="Demo">](https://codepen.io/Ayan-Saxena/pen/qBgBYoZ)
+[<img src="images/AnimatedBox2.jpg" height="230" title="Demo">](https://codepen.io/Ayan-Saxena/pen/qBgBYoZ)
+
+
+**[⬆ back to top](#quick-links)**
+
+
 
 ## <a id="analogclock"></a>Analog-clock
 
@@ -167,10 +187,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
-
-=======
-
- <a id="Floating"></a>Floating label on Textfield
 
 [<img src="images/textfields.png" height="230" title="Demo">](http://codepen.io/KtorZ/pen/ZOzdqG)
 
@@ -634,6 +650,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="fire"></a>Fire
 
 [<img src="images/fire.gif" height="230" title="fire">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/85e70774-0da0-47bf-bbea-1b6d2d6d73e1)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="flame"></a>Flame
+
+[<img src="images/flame.gif" height="230" title="flame">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/5d8659ea-84e4-481e-bdcd-e5e9fe7d30e9)
 
 **[⬆ back to top](#quick-links)**
 

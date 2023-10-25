@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: #0e1538; */
+    background: black;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    overflow: hidden;
+    border-radius: 16px;
+    padding-left: 0px;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 140%;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: animate 4s linear infinite;
+}
+
+.box::after
+{
+    content: '';
+    position: absolute;
+    inset : 4px;
+    background: black;
+    border-radius: 16px;
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: rotate(0deg);
+
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.box h2 {
+    color: #ffff;
+    font-size: 2em;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0px;
+    z-index: 10;
+    animation: example 6s linear infinite;
+}
+
+.box h2::before {
+    color: #00ccff;
+    font-size: 2em;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0px;
+    z-index: 10;
+    animation: example 3s linear infinite;
+}
+
+.box h2::after {
+    color: #d400d4;
+    font-size: 2em;
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* padding-left: 0px; */
+    z-index: 10;
+}
+
+@keyframes example {
+    0%
+    {
+        transform:translateX(0px);
+        transform:translateY(0px);
+        color: #ffff;     
+    }
+    25%
+    {
+        transform:translateX(50px);
+        transform:translateY(50px); 
+        color: #fcc8fc; 
+    }
+    50%
+    {
+        transform:translateX(0px);
+        transform:translateY(0px); 
+        color: #fd83fd; 
+    }
+    75%
+    {
+        transform:translateX(-50px);
+        transform:translateY(-50px);
+        color: #5edaf9;  
+    }
+    100%
+    {
+        transform:translateX(0px);
+        transform:translateY(0px);
+        color: #ffff; 
+    }
+}
+
