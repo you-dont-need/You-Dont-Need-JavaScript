@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: #000;
+}
+
+#canvas1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+h5 {
+    color: #fff;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    font-family: "Exo 2", sans-serif;
+}
+
+h5 span {
+    color: orange;
+}
