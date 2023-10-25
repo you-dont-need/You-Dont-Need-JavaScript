@@ -797,6 +797,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+&nbsp;
+
+## <a id="Paper-Animation"></a>Flying-paper-Animation
+
+[<img src="images/Flying-pages.gif" height="230" title="paper-animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/6ae00b66-16d7-41a1-9921-b28abb12cae9)
+
+**[⬆ back to top](#quick-links)**
+
+---
 ## Contributors
 Thanks to these wonderful people who have contributed to this project!
 
