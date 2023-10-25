@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasketBall-animation</title>
+</head>
+<style>
+    :root{
+--animation-duration:1s;
+--bounce-height:calc(205px - 100vh);
+}
+body{
+background-image: linear-gradient(75deg,white,  lightgray 5%,white 15%, lightgray 55% , lightgray 90%,white);
+background-size: 100%;
+background-attachment: fixed;
+min-height: 300px;
+font-family: arial,sans-serif;
+font-size: 16px;
+overflow: hidden;
+margin:0;
+}
+h1{
+line-height: 24px;
+margin: 0;
+font-weight: normal;
+}
+#suport{
+position: absolute;
+bottom: 0;
+width: 100%;
+text-align:center;
+}
+#smash{
+animation-name: smash;
+animation-duration: var(--animation-duration);
+animation-direction: alternate;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+transform-origin: bottom;
+}
+#translateShadow,#rotateImg,#light{
+border-radius: 50%;
+display:inline-block;
+width: 200px;
+height: 200px;
+}
+#light{
+background-image:  radial-gradient(circle at 20% 20%, rgba(255, 221, 179,.7),rgba(255, 221, 179,.5) 10%, transparent 30% ,rgba(83,42,0,.8) 85%);
+position:absolute;
+z-index: 1;
+}
+#translateShadow{
+animation-name: translateShadow;
+animation-duration: var(--animation-duration);
+animation-direction: alternate;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+}
+
+#rotateImg{
+background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='75 75 251 251' fill='rgb(83,42,0)'><path d='M313.3,145.3c-14.4-29.3-38.8-50.5-67.1-61.6c-4.6-1.7-16.2-5.1-21.3-6.3	c-26.3-5.3-54.5-2.3-80.4,10.4c-30.2,14.8-52.9,40.6-63.8,72.5c-10.9,31.8-8.7,66,6.2,96.1l0.1,0.2c2.1,4.2,4.4,8.3,6.9,12.2l0,0	c0,0,0,0,0,0c23.6,36.9,64.4,58,106.5,58c18.7,0,37.6-4.1,55.4-12.9c30.2-14.8,52.9-40.6,63.8-72.5 	C330.3,209.6,328.1,175.5,313.3,145.3z M238.3,86.2c25.2,12.5,41.2,36.6,46,68.5c-24.3,0.8-45.4-15.7-67.4-33.1 	c-18.4-14.5-37.3-29.3-58.9-34.2C184.6,77.6,212.8,77.7,238.3,86.2z M85.4,161.9c10.4-30.6,32.2-55.3,61.2-69.6 	c0.9-0.4,1.7-0.8,2.6-1.2c23.6,2.3,44.4,18.6,64.6,34.5c21.4,16.9,43.4,34.1,68.8,34.1c0.8,0,1.5,0,2.3-0.1c1,9.5,1.1,19.7,0.2,30.4 	c-9.8-3.3-19.3-5.9-25.7-7.6c-37.6-9.8-79.7-16.1-112.5-16.7c-24-0.5-53,1.8-66,14.2C81.8,173.9,83.4,167.8,85.4,161.9z M91.4,254.4 	l-0.1-0.2c-10.1-20.5-14.1-42.8-11.9-65l0.5,0.2c5.3-12.9,29-19.5,66.7-18.8c32.5,0.7,74.1,6.8,111.4,16.6 	c10.1,2.6,18.9,5.3,26.5,7.8c-1.2,10.2-3.3,20.4-6.3,30.3c-19.8-8.8-48.7,2.6-81.8,15.7c-32,12.6-68.1,26.8-99.7,23 	C94.9,261,93.1,257.7,91.4,254.4z M187.8,321.2c-34.6-3.6-67-21.9-87.5-51.7c31.8,2.4,66.9-11.4,98-23.7 	c32.4-12.8,60.6-23.9,78.4-15.5c-5.6,17.2-13.6,33.4-23.5,47c-12.8,17.7-34.5,39.5-65.6,43.3L187.8,321.2z M253.5,309.4 	c-15.6,7.7-32.1,11.6-48.4,12.3c36.2-12.4,62.8-49,76.1-88.8c9.1,6.7,14.2,20.1,15.8,40.6C285.7,288.6,270.9,300.9,253.5,309.4z 	 M314.8,239.8c-3.3,9.8-7.8,19-13.3,27.4c-2.4-19.7-8.5-32.6-18.7-39.3c3.1-10.3,5.4-20.8,6.6-31.1c19.2,6.9,29.2,13.2,30.7,17.3 	l0.4-0.2C319.6,222.6,317.7,231.3,314.8,239.8z M290,191.7c1.1-11.3,1-22.1-0.2-32.4c6.8-0.9,13.8-3,21.1-6.8l-2.3-4.5 	c-6.8,3.4-13.2,5.4-19.5,6.3c-1.6-11.1-4.6-21.4-8.8-30.7c-4.6-10.3-10.8-19.2-18.3-26.6c19.5,11.6,36,28.7,46.8,50.5 	c9.3,18.9,13.4,39.4,12.3,59.8C314.9,201.6,302.6,196.1,290,191.7z'/></svg>");
+background-color: darkorange; 
+background-size: 100%;
+animation-name: rotateImg;
+animation-duration: calc(var(--animation-duration) * 5.3);
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+
+@keyframes translateShadow {
+0% {transform: translateY(0) ;box-shadow: 40px 40px  10px #444466}
+100% {transform: translateY(var(--bounce-height));box-shadow:40px 350px  250px #444466}
+}
+@keyframes smash{
+0% {transform: scaleY(.7)}
+15%  {transform: scaleY(1)}
+}
+@keyframes rotateImg {
+100% {transform:rotate(360deg)}
+}
+</style>
+<body>
+    <div id="suport"><div id="smash"><div id="translateShadow"><div id="light"></div><div id="rotateImg"></div></div></div></div>
+
+</body>
+</html>
