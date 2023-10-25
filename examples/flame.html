@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+:root {
+  --size: 110vh;
+  --s: calc(var(--size) / 6);
+  --bor: calc(var(--size) / 30);
+  --boxShadow: calc(var(--size) / 12);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000;
+  overflow:hidden;
+}
+.circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--size);
+  height: var(--size);
+  filter: url(#wavy) blur(1px);
+}
+
+.circle:before,
+.circle:after {
+  content: "";
+  position: absolute;
+  top: var(--s);
+  left: var(--s);
+  right: var(--s);
+  bottom: var(--s);
+  border-radius: 50%;
+  border: var(--bor) solid #fff;
+}
+.circle:before {
+  box-shadow: 0 0 var(--boxShadow) #0f0, inset 0 0 var(--boxShadow) #0f0;
+  -webkit-box-reflect: below 10px
+    linear-gradient(transparent, transparent, #0002);
+  animation: move 5s linear infinite;
+}
+
+.circle:after {
+  box-shadow: 0 0 calc(var(--bor)/2) #fff, inset 0 0 var(--bor) #fff;
+}
+
+@keyframes move {
+  0% {
+    box-shadow: 0 0 var(--boxShadow) #0f0, inset 0 0 var(--boxShadow) #0f0;
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    box-shadow: 0 0 60px #0f0, inset 0 0 60px #0f0;
+  }
+
+  40% {
+    box-shadow: 0 0 40px #0f0, inset 0 0 40px #0f0;
+  }
+  60% {
+    box-shadow: 0 0 80px #0f0, inset 0 0 80px #0f0;
+  }
+  80% {
+    box-shadow: 0 0 100px #0f0, inset 0 0 100px #0f0;
+  }
+  100% {
+    box-shadow: 0 0 var(--boxShadow) #0f0, inset 0 0 var(--boxShadow) #0f0;
+    filter: hue-rotate(360deg);
+  }
+}
+
+svg {
+  width: 0;
+  height: 0;
+}
+
+</style>
+<body>
+    <div class="circle"></div>
+    <svg>
+      <filter id="wavy">
+        <feTurbulence x="0" y="0" baseFrequency="0.009" numOctaves="5" speed="2">
+          <animate attributeName="baseFrequency" dur="60s" values="0.02; 0.005; 0.02" repeatCount="indefinite">
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="30"></feTurbulence>
+      </filter>
+    </svg>
+</body>
+</html>

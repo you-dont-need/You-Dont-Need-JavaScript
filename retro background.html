@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Retro-futuristic grid background in CSS?</title>
+  <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'><link rel="stylesheet" href="./style.css">
+	<style>
+		/*stye sheet has to be created for this or you can incude it in the html also*/
+body {
+	background: radial-gradient(ellipse at center, rgba(127,0,173,0.6) 0%,
+  rgba(0,0,0,0.8) 60%, 
+  rgba(0,0,0,1) 90%), 
+  url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/31787/stars.jpg);
+	background-size: cover;
+	z-index:-5;
+	color: white;
+	overflow: hidden;
+	font-family: 'Monoton', monospace;
+	font-size: 2em;
+}
+
+h1 {
+	animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+#overlay {
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin: auto;
+	width: 100%;
+	text-align: center;
+}
+
+#layer-0 {
+	background: rgba(92,71,255,0);
+	background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,71,255,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(92,71,255,0)), color-stop(25%, rgba(0,0,0,1)), color-stop(100%, rgba(255,71,255,1)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,71,255,1) 100%);
+	background: -o-linear-gradient((top, rgba(0,0,0,1) 0%, rgba(0,0,0,1)) 25%, rgba(255,71,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,71,255,1) 100%);
+	background: linear-gradient(top bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,71,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c47ff', endColorstr='#ff47ff', GradientType=0);
+	height:400px;
+	width:200vw;
+	opacity:1;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right: 0;
+	margin: 0 -50%;
+	overflow: hidden;
+	transform: perspective(200px) rotateX(60deg);
+	z-index: -5;
+}
+
+#layer-1 {
+	background: rgba(92,71,255,1);
+	background: -moz-linear-gradient(45deg, rgba(92,71,255,1) 0%, rgba(92,71,255,0) 50%, rgba(92,71,255,0) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(92,71,255,1)), color-stop(50%, rgba(92,71,255,0)), color-stop(100%, rgba(92,71,255,0)));
+	background: -webkit-linear-gradient(45deg, rgba(92,71,255,1) 0%, rgba(92,71,255,0) 50%, rgba(92,71,255,0) 100%);
+	background: -o-linear-gradient(45deg, rgba(92,71,255,1) 0%, rgba(92,71,255,0) 50%, rgba(92,71,255,0) 100%);
+	background: -ms-linear-gradient(45deg, rgba(92,71,255,1) 0%, rgba(92,71,255,0) 50%, rgba(92,71,255,0) 100%);
+	background: linear-gradient(45deg, rgba(92,71,255,1) 0%, rgba(92,71,255,0) 50%, rgba(92,71,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c47ff', endColorstr='#5c47ff', GradientType=1 );
+	height: inherit;
+	width: inherit;
+	opacity:1;
+	position:absolute;
+	top:0;
+	left:0;
+	right: 0;
+	margin: auto;
+	z-index: -5;
+}
+
+#layer-2 {
+	background: rgba(92,71,255,0);
+	background: -moz-linear-gradient(-45deg, rgba(92,71,255,0) 0%, rgba(92,71,255,0) 50%, rgba(92,71,255,1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(92,71,255,0)), color-stop(50%, rgba(92,71,255,0)), color-stop(100%, rgba(92,71,255,1)));
+	background: -webkit-linear-gradient(-45deg, rgba(92,71,255,0) 0%, rgba(92,71,255,0) 50%, rgba(92,71,255,1) 100%);
+	background: -o-linear-gradient(-45deg, rgba(92,71,255,0) 0%, rgba(92,71,255,0) 50%, rgba(92,71,255,1) 100%);
+	background: -ms-linear-gradient(-45deg, rgba(92,71,255,0) 0%, rgba(92,71,255,0) 50%, rgba(92,71,255,1) 100%);
+	background: linear-gradient(135deg, rgba(92,71,255,0) 0%, rgba(92,71,255,0) 50%, rgba(92,71,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c47ff', endColorstr='#5c47ff', GradientType=1 );
+	height: inherit;
+	width: inherit;
+	opacity:1;
+	position:absolute;
+	top:0;
+	left:0;
+	right: 0;
+	margin: auto;
+	z-index: -5;
+}
+
+#layer-corner {
+	background: rgba(71,255,203,1);
+	background: -moz-linear-gradient(top, rgba(71,255,203,1) 0%, rgba(96,130,223,0) 54%, rgba(117,24,240,0) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(71,255,203,1)), color-stop(54%, rgba(96,130,223,0)), color-stop(100%, rgba(117,24,240,0)));
+	background: -webkit-linear-gradient(top, rgba(71,255,203,1) 0%, rgba(96,130,223,0) 54%, rgba(117,24,240,0) 100%);
+	background: -o-linear-gradient(top, rgba(71,255,203,1) 0%, rgba(96,130,223,0) 54%, rgba(117,24,240,0) 100%);
+	background: -ms-linear-gradient(top, rgba(71,255,203,1) 0%, rgba(96,130,223,0) 54%, rgba(117,24,240,0) 100%);
+	background: linear-gradient(to bottom, rgba(71,255,203,1) 0%, rgba(96,130,223,0) 54%, rgba(117,24,240,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47ffcb', endColorstr='#7518f0', GradientType=0 );
+	height: inherit;
+	width: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: -5;
+	animation: layercorneranim 2.5s ease-in-out infinite alternate;	
+}
+
+#hey {
+	width: 100%;
+	background-color: #011;
+	position: absolute;
+	bottom: 253px; right: 0; left: 0;
+	margin: auto;
+	z-index: -10;
+	transform: perspective(200px);
+}
+
+#layer-up {
+	background: rgba(71,255,203,0);
+	background: -moz-linear-gradient(top, rgba(71,255,203,0) 0%, rgba(71,255,203,0) 50%, rgba(71,255,203,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(71,255,203,0)), color-stop(50%, rgba(71,255,203,0)), color-stop(100%, rgba(71,255,203,1)));
+	background: -webkit-linear-gradient(top, rgba(71,255,203,0) 0%, rgba(71,255,203,0) 54%, rgba(71,255,203,1) 100%);
+	background: -o-linear-gradient(top, rgba(71,255,203,0) 0%, rgba(71,255,203,0) 50%, rgba(71,255,203,1) 100%);
+	background: -ms-linear-gradient(top, rgba(71,255,203,0) 0%, rgba(71,255,203,0) 50%, rgba(71,255,203,1) 100%);
+	background: linear-gradient(to bottom, rgba(71,255,203,0) 0%, rgba(71,255,203,0) 50%, rgba(71,255,203,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47ffcb', endColorstr='#47ffcb', GradientType=0 );
+	height:300px;
+	width: inherit;
+	opacity: 1;
+	position: absolute;
+	bottom:0; left:0; right: 0; margin: auto;
+	overflow: hidden;
+	z-index: -5;
+	animation: layerupanim 2.5s ease-in-out infinite alternate;	
+}
+
+#lines {
+    background-size: 40px 40px;    
+    background-image: repeating-linear-gradient(0deg, #60DCD3, #60DCD3 2px, transparent 1px, transparent 40px),repeating-linear-gradient(-90deg, #60DCD3, #60DCD3 2px, transparent 2px, transparent 40px);
+    height:400px;
+    width:100%;
+    opacity:1;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-4;
+}
+
+#mtn {
+	background-color: purple;
+	height:300px;
+	width:1200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: -8;
+	transform: perspective(600px);
+}
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF11A7, 0 0 70px #FF11A7, 0 0 80px #FF11A7, 0 0 100px #FF11A7, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF11A7, 0 0 35px #FF11A7, 0 0 40px #FF11A7, 0 0 50px #FF11A7, 0 0 75px #FF11A7;
+  }
+}
+
+@keyframes layerupanim
+{
+	from {
+		height: 140px;
+	}
+	to {
+		height: 155px;
+	}
+}
+
+@keyframes layercorneranim
+{
+	from {
+		height: 400px;
+	}
+	to {
+		height: 540px;
+	}
+}
+	</style>
+</head>
+<body>
+<!--partial:index.partial.html-->
+<div id="overlay"><h1>CSS background</h1></div>
+<div id="hey"><div id="layer-up"></div></div>
+<div id="layer-0">
+	
+	<div id="layer-1">
+		<div id="layer-2">
+			<div id="lines">
+				<div id="layer-corner"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="mtnZZZ"></div>
+<!--partial--> 
+</body>
+</html>
+
+
