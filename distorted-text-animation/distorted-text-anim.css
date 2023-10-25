@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;;
+    background: linear-gradient(to top,gray 0%, #000 10%, #000 90%, gray 100%);
+}
+
+h2 {
+    position: relative;
+    margin: 0;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    z-index: 1;
+    overflow: hidden;
+    text-shadow: 0px 0px 20px #fff;
+}
+
+h2::before{
+    content: '';
+    position: absolute;
+    left: 120%;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(90deg, transparent 0%, #000 5%, #000 100%);
+    animation: animate 5.5s linear forwards infinite;
+}
+
+@keyframes animate {
+    0% {
+        left: 110%;
+    }
+    100% {
+        left: -20%;
+    }
+}
+
+p {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+    font-weight: bold;
+}
+
+h2 #span-1 {
+    color: #ff022c;
+    text-shadow: 0px 0px 20px #ff022c;
+}
+
+h2 #span-2 {
+    color: aqua;
+    text-shadow: 0px 0px 20px aqua;
+}
+
+#span-3 {
+    color: orange;
+}
