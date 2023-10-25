@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url("https://fonts.cdnfonts.com/css/classical-romance");
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+svg {
+  font: 20em "Classical Romance", "Ubuntu";
+  /* letter-spacing: 0.15em; */
+  width: 50%;
+  height: 50%;
+  text-transform: uppercase;
+}
+
+svg text {
+  fill: #111;
+  stroke: #111;
+  fill-opacity: 1;
+  stroke-width: 0;
+  stroke-dasharray: 100% 0;
+  animation: stroke-offset 3s ease-out;
+}
+
+@keyframes stroke-offset {
+  0% {
+    fill-opacity: 0;
+    stroke-width: 0;
+    stroke-dasharray: 0% 100%;
+  }
+  25% {
+    stroke-width: 3px;
+  }
+  50% {
+    fill-opacity: 0;
+  }
+  75% {
+    stroke-width: 3px;
+  }
+  100% {
+    stroke-width: 0;
+  }
+}

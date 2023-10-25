@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Container for the 3D cube */
+        .cube-container {
+            perspective: 800px; /* Perspective view to create 3D effect */
+            width: 200px;
+            height: 200px;
+        }
+
+        /* Cube */
+        .cube {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            transform-style: preserve-3d; /* Allow child elements to be transformed in 3D space */
+            animation: rotate 5s linear infinite; /* Rotate the cube */
+        }
+
+        /* Faces of the cube */
+        .cube-face {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #3498db;
+            background-color: rgba(52, 152, 219, 0.5);
+        }
+
+        /* Front face */
+        .front { transform: translateZ(50px); }
+
+        /* Back face */
+        .back { transform: rotateY(180deg) translateZ(50px); }
+
+        /* Right face */
+        .right { transform: rotateY(90deg) translateZ(50px); }
+
+        /* Left face */
+        .left { transform: rotateY(-90deg) translateZ(50px); }
+
+        /* Top face */
+        .top { transform: rotateX(90deg) translateZ(50px); }
+
+        /* Bottom face */
+        .bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+        @keyframes rotate {
+            0% { transform: rotateX(0) rotateY(0); }
+            100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="cube-container">
+        <div class="cube">
+            <div class="cube-face front">Front</div>
+            <div class="cube-face back">Back</div>
+            <div class="cube-face right">Right</div>
+            <div class="cube-face left">Left</div>
+            <div class="cube-face top">Top</div>
+            <div class="cube-face bottom">Bottom</div>
+        </div>
+    </div>
+</body>
+</html>
