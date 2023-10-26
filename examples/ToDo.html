@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .todo-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+        }
+        .todo-item {
+            text-align: left;
+            margin: 10px 0;
+        }
+        .todo-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-container">
+        <h2>To-Do List</h2>
+        <div class="todo-item">
+            <input type="checkbox" id="item1">
+            <label for="item1">Task 1</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="item2">
+            <label for="item2">Task 2</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="item3">
+            <label for="item3">Task 3</label>
+        </div>
+    </div>
+</body>
+</html>
