@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    color:white
+}
+#navbar{
+    height: 60px;
+    background-color: #0f1111;
+    font-family: inherit;
+    color: #DDD;
+    /* position: fixed;
+    top: 0px; */
+    
+}
+button{
+    background-color: #f08804;
+}
+#logo{
+    color: #f08804;
+    font-size: 25px;
+}
+a{
+    margin-right: 200px;
+    text-decoration: none;
+}
+#content{
+    height: 550px;
+}
+.sell{
+    font-family: inherit;
+    font-size: 14px;
+    background-color: hsl(213, 52%, 19%);
+    color: #DDD;
+    height: 25px;
+    
+   
+}
+#spc{
+    margin-right: 50px;
+}
+.contentbox{
+    height: 100px;
+    width: 100px;
+}
+footer{
+    text-align: center;
+    background-color: #131A22;
+    font-family: inherit;
+    color: #DDD;
+    height: 70px;
+}
+.fcnd{
+    margin-left: 60px;
+    margin-right: 30px;
+}
+.ftspc{
+    margin-right: 20px;
+}
