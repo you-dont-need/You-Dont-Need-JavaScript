@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+}
+
+.solar-system {
+    position: relative;
+}
+
+.sun {
+    width: 150px;
+    height: 150px;
+    background-color: #fcb34d;
+    border-radius: 50%;
+    position: relative;
+}
+
+.earth {
+    width: 60px;
+    height: 60px;
+    background-color: #4a90e2;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -85px;
+    animation: rotate-earth 10s linear infinite;
+}
+
+.moon {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    transform: translate(-50%, -50%);
+    animation: rotate-moon 2s linear infinite;
+}
+
+@keyframes rotate-earth {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-moon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
