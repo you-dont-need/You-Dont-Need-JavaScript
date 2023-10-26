@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Exo 2", sans-serif;
+}
+
+section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#333, #000);
+}
+
+.set {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.set div {
+    position: absolute;
+    display: block;
+}
+
+.set div:nth-child(1) {
+    left: 20%;
+    animation: animate 5s linear infinite;
+    animation-delay: -7s;
+}
+
+.set div:nth-child(2) {
+    left: 50%;
+    animation: animate 15s linear infinite;
+    animation-delay: -5s;
+}
+
+.set div:nth-child(3) {
+    left: 70%;
+    animation: animate 20s linear infinite;
+}
+
+.set div:nth-child(4) {
+    left: 0%;
+    animation: animate 10s linear infinite;
+    animation-delay: -5s;
+}
+
+.set div:nth-child(5) {
+    left: 85%;
+    animation: animate 15s linear infinite;
+    animation-delay: -10s;
+}
+
+.set div:nth-child(6) {
+    left: 40%;
+    animation: animate 10s linear infinite;
+}
+
+.set div:nth-child(7) {
+    left: 15%;
+    animation: animate 25s linear infinite;
+}
+
+.set div:nth-child(8) {
+    left: 60%;
+    animation: animate 5s linear infinite;
+}
+
+.set2 {
+    transform: scale(2) rotateY(180deg);
+    filter: blur(2px);
+}
+
+.set2 {
+    transform: scale(0.8) rotateY(180deg);
+    filter: blur(4px);
+}
+
+h2 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 5rem;
+    color: #b7b7b7;
+}
+
+h3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    z-index: 10;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+h3 span {
+    color: orange;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        top: -10%;
+        transform: translate(20px) rotate(0deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        transform: translateX(-20px) rotate(45deg);
+    }
+    40% {
+        transform: translateX(-20px) rotate(90deg);
+    }
+    60% {
+        transform: translateX(20px) rotate(135deg);
+    }
+    80% {
+        transform: translateX(-20px) rotate(180deg);
+    }
+    100% {
+        top: 110%;
+        transform: translateX(-20px) rotate(225deg);
+    }
+}
