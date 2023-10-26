@@ -4,10 +4,10 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 .container{
-    display: flex;
-    width: 100%;
+    display: flex-start;
+    width: 90%;
     height: 100vh;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .button {
