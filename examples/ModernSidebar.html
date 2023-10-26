@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Modern Sidebar Design</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@400;500;600;700&family=Raleway:wght@300&family=Roboto+Slab:wght@300;400;600&family=Ubuntu:wght@300;400;500&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+        font-family: "Quicksand", sans-serif;
+        font-family: "Raleway", sans-serif;
+        font-family: "Roboto Slab", serif;
+        font-family: "Ubuntu", sans-serif;
+      }
+
+      .sidebar {
+        width: 50px;
+        height: 240px;
+        margin: 50px;
+        overflow: hidden;
+        background: rgb(219, 210, 249);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+      .sidebar:hover {
+        width: 150px;
+      }
+      .sidebar .wrapper {
+        width: 150px;
+        height: 100%;
+      }
+      .sidebar .links {
+        padding: 0px 5px;
+      }
+      .sidebar .links .link {
+        margin: 8px 0px;
+        height: 50px;
+        color: #000000;
+        display: flex;
+        align-items: center;
+        padding: 0px 12px;
+        border-radius: 5px;
+        transition: all 300ms ease-in-out;
+      }
+      .sidebar .links .link a {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        color: rgba(95, 72, 169, 0.991);
+      }
+      .sidebar .links .link span {
+        display: inline-block;
+        font-size: 17px;
+        margin-left: 20px;
+      }
+      .sidebar .links .link:hover {
+        background: rgba(183, 160, 245, 0.991);      
+      }
+    </style>
+  </head>
+  <body>
+    <!-- modern sidebar design -->
+    <div class="sidebar">
+      <div class="wrapper">
+        <div class="links">
+          <div class="link">
+            <a href="#"><i class="fa fa-home"></i></a>
+            <span>Home</span>
+          </div>
+          <div class="link">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <span>Search</span>
+          </div>
+          <div class="link">
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <span>Inbox</span>
+          </div>
+          <div class="link">
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+            <span>Help</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
