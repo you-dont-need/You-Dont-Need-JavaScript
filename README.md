@@ -91,8 +91,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="toggle"></a>CSS Toggle
 
-[<img src="/images/toggle1.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
-[<img src="/images/toggle2.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
+[<img src="images/toggle1.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
+[<img src="images/toggle2.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
 
 **[⬆ back to top](#quick-links)**
 
@@ -384,6 +384,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 [<img src="images/Todo List.png" height="230" title="Demo">](https://codepen.io/SamsShow/pen/NWeerXr)
 
+
 **[⬆ back to top](#quick-links)**
 
 ---
@@ -454,7 +455,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="login"></a>A login Page with Glassmorphism Effect
 
-[<img src="/Assests/Login Page.png" title="Responsive Login Page with Glassmorphism Effect">]
+[<img src="Login_Page/log-in-6398177_1280.png" title="Responsive Login Page with Glassmorphism Effect">]
 
 **[⬆ back to top](#quick-links)**
 
@@ -462,13 +463,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
-## <a id="login"></a>A Responsive Footer
-
-[<img src="/Assests/Footer.png" title="Responsive Footer">]
-
-**[⬆ back to top](#quick-links)**
-
----
 
 &nbsp;
 
@@ -620,7 +614,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="city-animation-footer"></a>City animation footer
 
-[<img src="images/City animtion footer.gif" height="230" title="City animation footer">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/City%20animation%20footer.gif)
+[<img src="images/City animation footer.gif" height="230" title="City animation footer">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/City%20animation%20footer.gif)
 
 **[⬆ back to top](#quick-links)**
 
@@ -698,18 +692,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
----
-
-## <a id="growing-flower"></a>growing-flower
-
-[<img src="images/growing-flower.gif" height="230" title="growing-flower">](https://im3.ezgif.com/tmp/ezgif-3-f53ebce80a.gif)
-
-**[⬆ back to top](#quick-links)**
-
----
-
----
-
 ## <a id="infinite-carousel"></a>infinite-carousel
 
 # [<img src="images/infinite-carousel.gif" height="230" title="infinite-carousel">](https://im4.ezgif.com/tmp/ezgif-4-cf03115fc6.gif)
@@ -753,13 +735,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id= "Gradient-Animation"></a>Gradient Animation
 
-[<img src="image/gradient-animation.gif" height="230" title="Gradient Animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/b3b64a1d4a426ab3a8f20fbe34640de18bca14a5/images/gradient-animation.gif)
+[<img src="images/gradient-animation.gif" height="230" title="Gradient Animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/b3b64a1d4a426ab3a8f20fbe34640de18bca14a5/images/gradient-animation.gif)
 
 **[⬆ back to top](#quick-links)**
 
 ## <a id="zoom-when-hover"></a>Zoom when hover
 
-[<img src="image/zoom-effect.gif" height="230" title="zoom-when-hover">](https://codepen.io/kdwzrjtc-the-animator/pen/gOqOwLx)
+[<img src="images/zoom-effect.gif" height="230" title="zoom-when-hover">](https://codepen.io/kdwzrjtc-the-animator/pen/gOqOwLx)
 
 ---
 
@@ -800,7 +782,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="Coffee-Animation"></a>Coffee-Animation
 
-[<img src="images/coffee-animation.gif" height="230" title="coffee-animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/7d15c275-5210-4c2e-8530-eb073251a39f)
+[<img src="https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/7d15c275-5210-4c2e-8530-eb073251a39f" height="230" title="coffee-animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/7d15c275-5210-4c2e-8530-eb073251a39f)
 
 **[⬆ back to top](#quick-links)**
 
@@ -814,11 +796,27 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
+=======
+&nbsp;
+
 ## <a id="Business-Card"></a>Business-Card
 
 ![img_source](Business-Card/output.png)
 
 **[⬆ back to top](#quick-links)**
+
+=======
+&nbsp;
+
+
+## <a id="SolarSystem"></a>SolarSystem
+
+![img_source](SolarSystem/output.png)
+
+**[⬆ back to top](#quick-links)**
+=======
+&nbsp;
+
 
 ---
 
