@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.pendulum {
+    width: 10px;
+    height: 200px;
+    background-color: #222;
+    position: relative;
+    border-radius: 5px;
+    transform-origin: top center;
+    animation: swing 2s infinite ease-in-out;
+}
+
+.bell {
+    width: 50px;
+    height: 50px;
+    background-color: #777;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.clapper {
+    width: 5px;
+    height: 60px;
+    background-color: #444;
+    border-radius: 5px;
+    transform-origin: 50% 0;
+    position: relative;
+    animation: swing 2s infinite ease-in-out;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
