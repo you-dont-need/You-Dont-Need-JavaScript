@@ -818,6 +818,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 &nbsp;
 
 
+## <a id="Pendulum"></a>Pendulum
+
+![img_source](images/pendulum.png)
+
+**[⬆ back to top](#quick-links)**
+=======
+&nbsp;
+
+
 ---
 
 ## Contributors
