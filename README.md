@@ -82,6 +82,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Tooltips](#tooltips)
 - [Treeview](#treeview)
 - [Twitter Heart Animation](#twitter-heart-animation)
+- [Book Animation](#book-animation)
 - [Zoom when hover](#zoom-when-hover)
 - [Contributors](#contributors)
 - [Contributing](#contributing)
@@ -408,6 +409,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="Twitter"></a>Twitter Heart Animation
 
 [<img src="images/art_twitter_heart_animation.gif" height="230" title="Demo">](http://codepen.io/thebabydino/pen/RRRRZE)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="BookAnimation"></a>Book Animation
+
+[<img src="images/book_animation.gif" height="350" title="Book Animation">](https://codepen.io/Paras-Shenmare/pen/eYxJpQB)
 
 **[⬆ back to top](#quick-links)**
 
