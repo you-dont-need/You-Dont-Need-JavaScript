@@ -1,0 +1,78 @@
+In html page 
+
+generally 
+1><!DOCTYPE html>: This declaration specifies that the document is an HTML5 document.
+
+2><html>: This is the root element that encloses the entire HTML document.
+
+3><head>: This section contains metadata and links to external resources, such as stylesheets and scripts.
+
+4><title>: Sets the title of the web page, which appears in the browser's title bar or tab.
+
+5><link>: Links an external CSS stylesheet named "Moving_Panda.css" to style the page.
+
+6><body>: The main content of the web page is contained within this element.
+
+7><a>: This is an anchor element. However, it is not properly formatted in your code. The anchor element should have an href attribute pointing to a valid URL.
+
+8><audio>: An HTML5 <audio> element is embedded, which is set to play audio from the specified source with the "loop" attribute, making it continuously loop the audio. The id is set to "audio" to allow JavaScript to access this element.
+
+9><script>: JavaScript code is included within this <script> element. It defines a function called play() which, when invoked, plays the audio associated with the "audio" element.
+
+10><div id="panda">: This <div> element is likely intended to be used for displaying the animated panda walking. However, no details about the animation are provided in the code.
+
+11><div id="street">: This <div> element is also present, possibly intended for displaying the background or environment for the animation.
+
+The code, as it stands, has some issues, such as the improperly formatted <a> tag without a valid href attribute, and it doesn't include any CSS or JavaScript code for creating the actual panda walking animation. To make this code functional, you would need to include the necessary CSS and JavaScript for the animation and provide a valid link or source for the panda walking animation.
+
+CSS code :
+
+The provided CSS code appears to be defining the styles and animations for the "Panda Walking Animation" on the web page. Here's a breakdown of the CSS properties and their effects:
+
+body: These styles are applied to the <body> element of the HTML document.
+
+background: Sets the background of the entire page to an image found at the URL "https://git.io/JUW4t."
+background-size: cover;: Ensures that the background image covers the entire viewport.
+overflow: hidden;: Hides any content that overflows the viewport.
+#panda: These styles are applied to the element with the ID "panda."
+
+position: relative;: Positions the panda element relative to its normal position.
+top: 300px;: Moves the panda 300 pixels down from its normal position.
+background: Sets the background of the panda to an image found at the URL "https://git.io/JUW4L."
+width: 250px; height: 330px;: Specifies the width and height of the panda element.
+animation: Applies two animations to the panda element:
+walking_animation: A keyframe animation named "walking_animation" with a duration of 1 second, divided into 12 steps, and set to run infinitely. It animates the background position to create the walking effect.
+move_forward: A keyframe animation named "move_forward" with a duration of 8 seconds, set to run infinitely. It animates the transformation to make the panda move forward on the x-axis.
+@keyframes walking_animation: This defines a keyframe animation named "walking_animation" for the panda element.
+
+0%: The initial state of the animation.
+100%: The final state of the animation, where the background position shifts 3000 pixels horizontally to create a walking effect.
+@keyframes move_forward: This defines a keyframe animation named "move_forward" for the panda element.
+
+0%: The initial state of the animation, where the panda is translated 100 pixels to the left (negative X direction).
+100%: The final state of the animation, where the panda is translated 1366 pixels to the right (positive X direction).
+#street: These styles are applied to the element with the ID "street."
+
+position: relative;: Positions the street element relative to its normal position.
+top: 300px;: Moves the street element 300 pixels down from its normal position.
+border-bottom: 5px groove green;: Adds a 5-pixel wide green grooved border to the bottom of the street element.
+These styles and animations work together to create a web page with a walking panda animation on a background with a street-like appearance. The panda moves forward as if walking, and the background provides a visual context for the animation.
+
+
+IMage Linking to the html page and then 
+
+Panda.png  is images of panda
+
+4721870824800256.gif is gif of panda
+
+relax.mp3 is background music for the animation
+
+Nature.jpg is background image.
+
+
+
+
+
+
+
+
