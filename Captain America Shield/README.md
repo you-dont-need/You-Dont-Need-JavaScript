@@ -19,4 +19,4 @@ captain-america-shield/
 
 ## Output Of The Code
 
-![Captain America Shield](/Captain%20America%20Shield/images/shield.png)
+![Captain America Shield](https://github.com/abhishekraoas/You-Dont-Need-JavaScript/assets/53809098/44256ce9-7817-4cbb-8810-3ba1595d5ef7)
