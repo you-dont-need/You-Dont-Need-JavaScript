@@ -87,6 +87,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Contributors](#contributors)
 - [Contributing](#contributing)
 - [CSS Toggle](#toggle)
+- [Sliced Button](#slicedbutton)
 
 
 
@@ -828,7 +829,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 =======
 &nbsp;
 
+## <a id="SlicedButton"></a>SlicedButton
 
+![img_source](Button/Sliced-Button/sliced_button.gif)
+
+**[⬆ back to top](#quick-links)**
+
+=======
+&nbsp;
 ---
 
 ## Contributors
