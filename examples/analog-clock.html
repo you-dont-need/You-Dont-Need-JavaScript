@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Animated Clock</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #222;
+        }
+
+        .clock {
+            width: 200px;
+            height: 200px;
+            border: 5px solid #333;
+            border-radius: 50%;
+            position: relative;
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .clock div {
+            position: absolute;
+            transform-origin: 50% 100%;
+        }
+
+        .hour-hand {
+            width: 8px;
+            height: 50px;
+            background-color: #555;
+            top: 75px;
+            left: 96px;
+            border-radius: 8px;
+            transform: rotate(90deg);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .minute-hand {
+            width: 4px;
+            height: 70px;
+            background-color: #555;
+            top: 50px;
+            left: 98px;
+            border-radius: 4px;
+            transform: rotate(90deg);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .second-hand {
+            width: 2px;
+            height: 80px;
+            background-color: #ff3333;
+            top: 40px;
+            left: 99px;
+            border-radius: 2px;
+            transform-origin: 50% 50%;
+            transform: rotate(90deg);
+            box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+            animation: glowing 1.5s linear infinite;
+        }
+
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 20px rgba(255, 51, 51, 0.7);
+            }
+
+            100% {
+                box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+            }
+        }
+    </style>
+    <div class="clock">
+        <div class="hour-hand"></div>
+        <div class="minute-hand"></div>
+        <div class="second-hand"></div>
+    </div>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hour = now.getHours() % 12;
+            const minute = now.getMinutes();
+            const second = now.getSeconds();
+
+            const hourHand = document.querySelector('.hour-hand');
+            const minuteHand = document.querySelector('.minute-hand');
+            const secondHand = document.querySelector('.second-hand');
+
+            const hourDeg = (hour + minute / 60) * 360 / 12;
+            const minuteDeg = (minute + second / 60) * 360 / 60;
+            const secondDeg = (second / 60) * 360;
+
+            hourHand.style.transform = `rotate(${hourDeg}deg)`;
+            minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
+            secondHand.style.transform = `rotate(${secondDeg}deg)`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+
+</html>
