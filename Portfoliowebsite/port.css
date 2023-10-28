@@ -1,0 +1,182 @@
+*{
+    margin:0px;
+    padding:0px;
+    border:0px;
+    
+}
+
+body{
+    background-color: rgb(24, 21, 49);
+    color: aliceblue;
+    overflow:auto;
+}
+.components{
+    display:flex;
+    list-style: none;
+    
+}
+.name{
+    list-style: none;
+    font-size: 1.35rem;
+    
+    
+}
+nav{
+    display:flex;
+    color:aliceblue;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(31, 31, 87);
+    box-shadow: -2px 3px 12px rgb(44, 44, 125);
+    height: 3rem;
+
+}
+ul li a{
+    margin:5px 10px;
+    padding:8px;
+    font-family: 'Mukta', sans-serif;
+    color: aliceblue;
+    text-decoration: none;
+}
+ul li a:hover{
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(144, 144, 223);
+    
+}
+.l1{
+   
+    font-size: 1.9rem;
+    color: aliceblue;
+    width:28rem;
+    font-family: 'Lato', sans-serif;
+    /* span-display is inline we cant set width */
+}
+
+   
+.myname{
+    color: blueviolet;
+}
+#para{
+   
+    width:28rem;
+   
+}
+
+.content{
+    display: flex;
+    justify-content: space-around;
+    margin:81px;
+    padding:77px;
+    height: 290px;
+}
+.right_section img{
+    width:460px;
+    border: 0px ;
+    border-radius:8px ;
+    
+}
+#element{
+    color: blueviolet;
+}
+.divider{
+   background-color: blueviolet;
+   height: 0.1rem;
+   margin:40px;
+   border:0px;
+}
+
+.caption{
+    font-size: 0.8rem;
+    color: darkgrey;
+}
+.heading{
+    font-size: 1.5rem;
+    font-family: 'Mukta', sans-serif;
+    height: 40px;
+}
+.Experience{
+    margin: 40px 150px;
+    height:540px;
+}
+.one{
+    height:65px;
+    border-left: 3px solid white;
+}
+.container{
+    display: flex;
+    justify-content:space-around;
+}
+.container img{
+    width:22px;
+}
+.p{
+    font-size: 0.75rem;
+    margin:8px 0px;
+}
+#skills h4{
+    font-family: 'Merriweather', serif;
+   
+}
+.year{
+   
+    margin:7.5px;
+    font-family: 'Merriweather', serif;
+}
+
+#icon{
+    margin:8px 0px;
+}
+.units{
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+    
+    
+    
+}
+.con{
+    display: flex;
+    justify-content:space-evenly;
+   
+   
+   
+}
+#vertical{
+    height: 70px;
+}
+.btn{
+    padding:7.5px;
+    border:2.5px solid white;
+    margin: 55px 4px;
+    background-color:rgb(51, 3, 129) ;
+    border-radius: 5px;
+    color: aliceblue;
+    
+}
+.btn:hover{
+    color: darkgrey;
+}
+.footer{
+    display:flex;
+    justify-content: space-evenly;
+   
+}
+footer{
+    background-color: black;
+    height:140px;
+    padding: 30px 18px;
+    
+}
+.patent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 10px;
+    padding: 15px 15px;
+    color: darkgrey;
+}
+.division{
+    background-color: blueviolet;
+    height: 0.1rem;
+}
