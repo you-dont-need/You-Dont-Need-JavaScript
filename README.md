@@ -82,10 +82,12 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Tooltips](#tooltips)
 - [Treeview](#treeview)
 - [Twitter Heart Animation](#twitter-heart-animation)
+- [Book Animation](#book-animation)
 - [Zoom when hover](#zoom-when-hover)
 - [Contributors](#contributors)
 - [Contributing](#contributing)
 - [CSS Toggle](#toggle)
+- [Sliced Button](#slicedbutton)
 
 
 
@@ -146,15 +148,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 &nbsp;
-
-
-## <a id="basicprofile"></a>Carousel
-
-[<img src="images/screenshot(39).png" height="230" title="Demo 1">](http://url-to-page)
-[<img src="images/screenshot(40).png" height="230" title="Demo 2">](http://url-to-page)
-[<img src="images/screenshot(42).png" height="230" title="Demo 3">](http://url-to-page)
-
-**[⬆ back to top](#quick-links)**
 
 ## <a id="Flip"></a>Flip on click
 
@@ -408,6 +401,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="Twitter"></a>Twitter Heart Animation
 
 [<img src="images/art_twitter_heart_animation.gif" height="230" title="Demo">](http://codepen.io/thebabydino/pen/RRRRZE)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="BookAnimation"></a>Book Animation
+
+[<img src="images/book_animation.gif" height="350" title="Book Animation">](https://codepen.io/Paras-Shenmare/pen/eYxJpQB)
 
 **[⬆ back to top](#quick-links)**
 
@@ -765,12 +768,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="animated-btn"></a>Animated Button
 
-![btn2](https://github.com/Upendra2003/You-Dont-Need-JavaScript/assets/96371563/db4a8e85-9592-498b-9949-95459f99d8d5)
-![btn1](https://github.com/Upendra2003/You-Dont-Need-JavaScript/assets/96371563/6b04ebd8-2af4-4565-b230-d6e2a8f2f8b2)
-
 **[⬆ back to top](#quick-links)**
-
----
 
 ---
 
@@ -817,7 +815,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 =======
 &nbsp;
 
-
 ## <a id="Pendulum"></a>Pendulum
 
 ![img_source](images/pendulum.png)
@@ -826,6 +823,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 =======
 &nbsp;
 
+
+## <a id="SlicedButton"></a>SlicedButton
+
+![img_source](Button/Sliced-Button/sliced_button.gif)
+
+**[⬆ back to top](#quick-links)**
+=======
+&nbsp;
 
 ---
 
