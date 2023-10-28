@@ -65,10 +65,12 @@ a {
 
 #button-7:hover #dub-arrow {
   left: 0;
+  transform:scale(2,2);
 }
 
 #button-7:hover a {
   left: 150px;
+  transform:scale(2,2);
 }
 
 @media screen and (min-width:1000px) {
