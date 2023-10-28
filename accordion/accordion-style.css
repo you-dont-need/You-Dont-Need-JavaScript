@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    font-family: 'Quicksand', sans-serif;
+    background: hsl(0, 0%, 95%);
+}
+
+.accordion { width: 400px; }
+
+.accordion input { display: none; }
+
+.accordion-item {
+    --hue: 205;
+    --title-color: hsl(var(--hue), 90%, 20%);
+    --icon-color: hsl(var(--hue), 90%, 40%);
+    --bg: hsla(var(--hue), 100%, 90%, 0.8);
+
+    position: relative;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.accordion-head {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px hsla(0, 0, 0%, 0.06);
+}
+
+.accordion-head:hover { border-color: var(--icon-color); }
+
+.accordion-icon {
+    font-size: 30px;
+    margin-right: 15px;
+    color: var(--icon-color);
+}
+
+.accordion-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--title-color);
+}
+
+.accordion-body {
+    height: 0;
+    overflow: hidden;
+}
+
+.accordion-text {
+    background: var(--bg);
+    border: 1px solid var(--bg);
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 15px 20px;
+    color: #0009;
+    font-weight: 600;
+}
+
+.item-2 { --hue: 260; }
+.item-3 { --hue: 330; }
+.item-4 { --hue: 100; }
+
+#logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    color: #000;
+    font-weight: 700;
+}
+
+#logo span {
+    color: hsl(39, 100%, 50%);
+}
+
+.arrow-icon {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 30px;
+    border: 3px solid var(--icon-color);
+    border-radius: 50%;
+    text-align: center;
+}
+
+:is(#item-1, #item-2, #item-3, #item-4):checked + .accordion-item .accordion-body {
+    height: 150px;
+}
+
+:is(#item-1, #item-2, #item-3, #item-4):checked + .accordion-item .accordion-head .arrow-icon{
+    transform: rotate(180deg);
+}
