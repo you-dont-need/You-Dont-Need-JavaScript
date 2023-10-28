@@ -5,11 +5,16 @@
         table {
             border-collapse: collapse;
             width: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px 0;
         }
         
         th, td {
-            padding: 10px;
+            padding: 15px;
             text-align: left;
+            transition: box-shadow 0.3s;
         }
 
         th {
@@ -18,11 +23,15 @@
         }
 
         tr:nth-child(even) {
-            background-color: #f2f2f2;
+            background-color: #f9f9f9;
         }
 
         tr:nth-child(odd) {
-            background-color: #dddddd;
+            background-color: #e9e9e9;
+        }
+
+        .glow:hover {
+            box-shadow: 0 0 10px 5px rgba(52, 152, 219, 0.7);
         }
     </style>
 </head>
@@ -37,19 +46,19 @@
         </thead>
         <tbody>
             <tr>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
+                <td class="glow">Data 1</td>
+                <td class="glow">Data 2</td>
+                <td class="glow">Data 3</td>
             </tr>
             <tr>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
+                <td class="glow">Data 4</td>
+                <td class="glow">Data 5</td>
+                <td class="glow">Data 6</td>
             </tr>
             <tr>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
+                <td class="glow">Data 7</td>
+                <td class="glow">Data 8</td>
+                <td class="glow">Data 9</td>
             </tr>
         </tbody>
     </table>
