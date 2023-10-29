@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image hover effect</title>
+    <style>
+        img {
+            --s: 250px;
+            /* the size of the image */
+            --b: 8px;
+            /* the border thickness*/
+            --g: 14px;
+            /* the gap */
+            --c: #4ECDC4;
+            /* the color */
+
+            width: var(--s);
+            aspect-ratio: 1;
+            outline: calc(var(--s)/2) solid #0009;
+            outline-offset: calc(var(--s)/-2);
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        img:hover {
+            outline: var(--b) solid var(--c);
+            outline-offset: var(--g);
+        }
+
+        img+img {
+            border-radius: 50%;
+        }
+
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            grid-auto-flow: column;
+            gap: 50px;
+            place-content: center;
+            place-items: center;
+            background: #C8C8A9;
+        }
+    </style>
+</head>
+
+<body>
+    <img
+        src="https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fHww">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyWFmi-PztMEiCPYLFbZnY0f9FV7OXeySMMgXSRFB7J3uGwtS8XWzLslbKMyTolL0Du0Y&usqp=CAU"
+        alt="a canyon" style="--g: 20px;--b:5px;--c:#D95B43;">
+</body>
+
+</html>
