@@ -17,7 +17,6 @@
       display: flex;
       background-color: #fff;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       overflow: hidden;
     }
 
@@ -25,6 +24,7 @@
       flex: 1;
       padding: 20px;
       text-align: center;
+      transition: box-shadow 0.3s; /* Added transition for smoother effect */
     }
 
     .section:nth-child(1) {
@@ -45,6 +45,12 @@
 
     p {
       color: #333;
+    }
+
+    /* Added hover effect */
+    .section:hover {
+      box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
+      transform: scale(1.2,1.2);
     }
   </style>
 </head>
