@@ -12,11 +12,22 @@ body {
 }
 
 .sun {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background-color: #fcb34d;
     border-radius: 50%;
     position: relative;
+    animation: rotate-sun 20s linear infinite;
+}
+
+.earth-orbit {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0; 
+    animation: rotate-earth 20s linear infinite;
 }
 
 .earth {
@@ -26,8 +37,9 @@ body {
     border-radius: 50%;
     position: absolute;
     top: 50%;
-    left: -85px;
-    animation: rotate-earth 10s linear infinite;
+    left: -30px;
+    transform-origin: 0 0;
+    animation: rotate-earth 15s linear infinite;
 }
 
 .moon {
@@ -40,6 +52,24 @@ body {
     left: -45px;
     transform: translate(-50%, -50%);
     animation: rotate-moon 2s linear infinite;
+}
+
+@keyframes rotate-sun {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-earth-orbit {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes rotate-earth {
