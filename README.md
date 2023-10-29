@@ -67,6 +67,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Neon Card](#neon-card)
 - [Neumorphism Card Design](#neumorphism-card-design)
 - [Parallax scrolling](#parallax-scrolling)
+- [Pendulum](#Pendulum)
 - [Playing Card Animation](#playing-card-animation)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
 - [Ripple Effect](#ripple-effect)

@@ -1,24 +1,32 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #222;
+}
+
+.pendulum-container {
+    display: flex;
+    align-items: center;
 }
 
 .pendulum {
-    width: 10px;
-    height: 200px;
+    width: 20px; /* Larger pendulum (two times) */
+    height: 400px; /* Larger pendulum (two times) */
     background-color: #222;
     position: relative;
-    border-radius: 5px;
+    border-radius: 10px;
     transform-origin: top center;
-    animation: swing 2s infinite ease-in-out;
+    animation: swing 1s infinite alternate;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7); /* Enhanced shadow */
 }
 
 .bell {
-    width: 50px;
-    height: 50px;
+    width: 120px; /* Larger bell (two times) */
+    height: 120px; /* Larger bell (two times) */
     background-color: #777;
     border-radius: 50%;
     position: absolute;
@@ -27,28 +35,46 @@ body {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 .clapper {
-    width: 5px;
-    height: 60px;
+    width: 16px; /* Wider clapper */
+    height: 140px; /* Longer clapper */
     background-color: #444;
-    border-radius: 5px;
+    border-radius: 10px;
     transform-origin: 50% 0;
     position: relative;
-    animation: swing 2s infinite ease-in-out;
+    animation: swing 1s infinite alternate;
 }
 
+.speed-slider-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.speed-slider-container label {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.speed-slider-container input {
+    width: 150px;
+}
+
+.speed-slider-container #speed-value {
+    color: #fff;
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 10px;
+}
 @keyframes swing {
-    0% {
-        transform: rotate(0deg);
+    0%, 100% {
+        transform: rotate(-20deg);
     }
     50% {
-        transform: rotate(10deg);
-    }
-    100% {
-        transform: rotate(0deg);
+        transform: rotate(20deg);
     }
 }
