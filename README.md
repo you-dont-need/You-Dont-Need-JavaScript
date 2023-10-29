@@ -845,6 +845,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 =======
 &nbsp;
 
+## <a id="Rating Star"></a>Rating Star
+
+![img_source](images/rating-star.png)
+
+**[⬆ back to top](#quick-links)**
+=======
+&nbsp;
+
+
 ---
 
 ## Contributors
