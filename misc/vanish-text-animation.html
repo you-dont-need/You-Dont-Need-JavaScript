@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanish Text Animation</title>
+</head>
+<style>
+    body{
+        background: #000;
+        height: 100vh;
+        font-family: sans-serif;
+        font-size: 12vw;
+        text-transform: uppercase;
+        overflow: hidden;
+    }
+
+    .aishwarya{
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: fit-content;
+        width: 100%;
+        text-align: center;
+    }
+
+    .aishwarya span{
+        display: inline-block;
+        color: transparent;
+        text-shadow: 0px 0px 0px rgb(224, 218, 218);
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    .aishwarya span:nth-child(1){
+        animation-name: aishwaryaleft;
+    }
+
+    .aishwarya span:nth-child(2){
+        animation-name: aishwaryaleft;
+        animation-delay: 0.3s;
+
+    }
+
+    .aishwarya span:nth-child(3){
+        animation-name: aishwaryaleft;
+        animation-delay: 0.3s;
+
+    }
+
+    .aishwarya span:nth-child(4){
+        animation-name: aishwaryaleft;
+        animation-delay: 0.6s;
+
+    }
+
+    .aishwarya span:nth-child(5){
+        animation-name: aishwaryaright;
+        animation-delay: 0.8s;
+
+    }
+
+    .aishwarya span:nth-child(6){
+        animation-name: aishwaryaright;
+        animation-delay: 1s;
+
+    }
+
+    .aishwarya span:nth-child(7){
+        animation-name: aishwaryaright;
+        animation-delay: 1.3s;
+
+    }
+
+    .aishwarya span:nth-child(8){
+        animation-name: aishwaryaleft;
+        animation-delay: 1.6s;
+
+    }
+
+    .aishwarya span:nth-child(9){
+        animation-name: aishwaryaright;
+        animation-delay: 2s;
+
+    }
+
+    .aishwarya span:nth-child(10){
+        animation-name: aishwaryaright;
+        animation-delay: 2.3s;
+
+    }
+
+    @keyframes aishwaryaleft {
+        50%{
+            transform: skew(50deg) translateY(-200%);
+            text-shadow: 0px 0px 50px;
+            opacity: 0;
+
+        }  
+    }
+
+    @keyframes aishwaryaright {
+        50%{
+            transform: skew(-50deg) translateY(-200%);
+            text-shadow: 0px 0px 50px;
+            opacity: 0;
+
+        }
+    }
+</style>
+<body>
+    <div class="aishwarya">
+        <span>A</span>
+        <span>I</span>
+        <span>S</span>
+        <span>H</span>
+        <span>W</span>
+        <span>A</span>
+        <span>R</span>
+        <span>Y</span>
+        <span>A</span>
+    </div>
+</body>
+</html>
