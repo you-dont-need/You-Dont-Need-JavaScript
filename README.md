@@ -90,7 +90,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [CSS Toggle](#toggle)
 - [Sliced Button](#slicedbutton)
 
+## added sliced button in the repository
 
+![Screenshot (448)](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/114504243/8e1a8321-aedd-49e0-8ec6-efe84901b8e0)
+![Screenshot (447)](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/114504243/f824c52a-a335-4f44-aa05-1b4ae45d822f)
 
 ## <a id="toggle"></a>CSS Toggle
 
