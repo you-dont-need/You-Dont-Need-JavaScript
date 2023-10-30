@@ -853,11 +853,11 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 =======
 &nbsp;
 ## <a id="csscursors"></a>CSS Cursors
-<img width="534" alt="cursor5" src="https://github.com/urjabahad/You-Dont-Need-JavaScript/assets/127567639/4a591092-6f01-48eb-9925-44ad07c3cb7a">
-<img width="583" alt="cursor4" src="https://github.com/urjabahad/You-Dont-Need-JavaScript/assets/127567639/64380883-7190-4158-92d5-100784c9f42d">
-<img width="593" alt="cursor3" src="https://github.com/urjabahad/You-Dont-Need-JavaScript/assets/127567639/00d492bc-0b26-41bf-969c-2f518e9cbabf">
-<img width="585" alt="cursor2" src="https://github.com/urjabahad/You-Dont-Need-JavaScript/assets/127567639/cb44187b-781e-4958-a192-ce9271373bdf">
-<img width="592" alt="cursor1" src="https://github.com/urjabahad/You-Dont-Need-JavaScript/assets/127567639/6b28901b-a16c-47b5-85b9-9862f72236b3">
+<img height="230" alt="cursor5" src="https://github.com/urjabahad/You-Dont-Need-JavaScript/assets/127567639/4a591092-6f01-48eb-9925-44ad07c3cb7a">
+<img height="230" alt="cursor4" src="https://github.com/urjabahad/You-Dont-Need-JavaScript/assets/127567639/64380883-7190-4158-92d5-100784c9f42d">
+<img height="230" alt="cursor3" src="https://github.com/urjabahad/You-Dont-Need-JavaScript/assets/127567639/00d492bc-0b26-41bf-969c-2f518e9cbabf">
+<img height="230" alt="cursor2" src="https://github.com/urjabahad/You-Dont-Need-JavaScript/assets/127567639/cb44187b-781e-4958-a192-ce9271373bdf">
+<img height="230" alt="cursor1" src="https://github.com/urjabahad/You-Dont-Need-JavaScript/assets/127567639/6b28901b-a16c-47b5-85b9-9862f72236b3">
 
 **[⬆ back to top](#quick-links)**
 =======
