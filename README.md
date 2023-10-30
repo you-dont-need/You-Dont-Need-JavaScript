@@ -89,7 +89,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Contributing](#contributing)
 - [CSS Toggle](#toggle)
 - [Sliced Button](#slicedbutton)
-
+- [DVD Screen Saver](#dvd-screen-saver)
 
 
 ## <a id="toggle"></a>CSS Toggle
@@ -848,6 +848,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="Rating Star"></a>Rating Star
 
 ![img_source](images/rating-star.png)
+
+**[⬆ back to top](#quick-links)**
+=======
+&nbsp;
+
+## <a id="DVDScreenSaver"></a>DVD Screen Saver
+
+![img_source](images/DVDScreenSaver.png)
 
 **[⬆ back to top](#quick-links)**
 =======
