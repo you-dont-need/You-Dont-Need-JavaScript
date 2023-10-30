@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Todo List</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<form>
+  <fieldset class="todo-list">
+    <legend class="todo-list__title">My Special Todo List</legend>
+    <label class="todo-list__label">
+      <input type="checkbox" name="" id="" />
+      <i class="check"></i>
+      <span>Make awesome CSS animation</span>
+    </label>
+    <label class="todo-list__label">
+      <input type="checkbox" name="" id="" />
+      <i class="check"></i>
+      <span>Watch awesome bangumi</span>
+    </label>
+    <label class="todo-list__label">
+      <input type="checkbox" name="" id="" />
+      <i class="check"></i>
+      <span>Encounter awesome people</span>
+    </label>
+    <label class="todo-list__label">
+      <input type="checkbox" name="" id="" />
+      <i class="check"></i>
+      <span>Be an awesome man</span>
+    </label>
+  </fieldset>
+</form>
+<!-- partial -->
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #1A1E23;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 75px 10px 30px;
+  background: #162740;
+  border: transparent;
+}
+.todo-list .todo-list__title {
+  padding: 3px 6px;
+  color: #f1faee;
+  background-color: #264456;
+}
+.todo-list .todo-list__label {
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+  font-size: 24px;
+  font-family: Lato, sans-serif;
+  color: #f1faee;
+  cursor: pointer;
+}
+.todo-list .todo-list__label input[type=checkbox] {
+  opacity: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.todo-list .todo-list__label input[type=checkbox] + .check {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #f1faee;
+  transition: 0.2s;
+}
+.todo-list .todo-list__label input[type=checkbox]:checked + .check {
+  width: 25px;
+  height: 15px;
+  border-top: transparent;
+  border-right: transparent;
+  transform: rotate(-45deg);
+}
+.todo-list .todo-list__label input[type=checkbox] ~ span {
+  position: relative;
+  left: 40px;
+  white-space: nowrap;
+  transition: 0.5s;
+}
+.todo-list .todo-list__label input[type=checkbox] ~ span::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #f1faee;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+.todo-list .todo-list__label input[type=checkbox]:checked ~ span {
+  color: #585b57;
+}
+.todo-list .todo-list__label input[type=checkbox]:checked ~ span::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
