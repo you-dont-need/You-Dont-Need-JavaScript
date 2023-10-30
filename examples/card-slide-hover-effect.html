@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>card hover effect</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /*apply css properties to body*/
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
+        }
+
+        /*apply css properties to container class*/
+
+        .container {
+            position: relative;
+            width: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 35px;
+        }
+
+        /*apply css properties to card class*/
+
+        .container .card {
+            height: 220px;
+            max-width: 200px;
+            position: relative;
+            margin: 30px 10px;
+            padding: 20px 15px;
+            background: wheat;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 202px black;
+            transition: 0.3s ease-in-out;
+        }
+
+        /*apply css properties to card class when it get pointed by cursor*/
+
+        .container .card:hover {
+            height: 420px;
+        }
+
+        /*apply css properties to imgbox class*/
+
+        .containe .card .imgbox {
+            position: relative;
+            width: 260px;
+            height: 260px;
+            top: -60px;
+            left: 20px;
+        }
+
+        /*apply css properties to img tag*/
+
+        .container .card .imgbox img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        /*apply css properties to content class*/
+
+        .container .card .content {
+            position: relative;
+            margin-top: -100px;
+            padding: 10px 15px;
+            text-align: center;
+            color: #111;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+        }
+
+        /*apply css properties to content when card gets hovered*/
+
+        .container .card:hover .content {
+            visibility: visible;
+            opacity: 1;
+            margin-top: -10px;
+            transition-delay: 0.3s;
+        }
+
+        /* css part completed*/
+    </style>
+
+</head>
+
+<body>
+
+    <!--creating a class container which will hold
+		card class and again card will hold imgbox class-->
+    <div class="container">
+        <div class="card">
+            <div class="imgbox">
+
+                <!--extracting image named gfg.jpg from images folder-->
+                <img
+                    src="https://blog.logrocket.com/wp-content/uploads/2022/05/How-to-create-a-responsive-image-gallery-with-flexbox.png">
+
+            </div>
+            <div class="content">
+
+                <!--heading of the card-->
+                <h1>Cascading style sheet</h1>
+
+                <!--content of the card-->
+                <p>
+                    Cascading Style Sheets is a style sheet language used for describing the presentation of a document
+                    written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide
+                    Web, alongside HTML and JavaScrip.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
