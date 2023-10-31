@@ -91,6 +91,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [CSS Toggle](#toggle)
 - [Sliced Button](#slicedbutton)
 - [DVD Screen Saver](#dvd-screen-saver)
+- [RotateSquare](#RotateSquare)
 
 
 ## <a id="toggle"></a>CSS Toggle
@@ -872,6 +873,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 =======
 &nbsp;
 
+## <a id="RotateSquare"></a>RotateSquare
+
+[<img src="images/rotateSquare" height="230" title="Demo 1">]
+
+**[⬆ back to top](#quick-links)**
+```
+=======
+&nbsp;
 
 ---
 
