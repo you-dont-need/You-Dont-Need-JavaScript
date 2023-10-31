@@ -67,6 +67,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Neon Card](#neon-card)
 - [Neumorphism Card Design](#neumorphism-card-design)
 - [Parallax scrolling](#parallax-scrolling)
+- [Pendulum](#Pendulum)
 - [Playing Card Animation](#playing-card-animation)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
 - [Ripple Effect](#ripple-effect)
@@ -165,6 +166,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="Flip"></a>Flip on click
 
 [<img src="images/flipper.png" height="230" title="Demo">](https://codepen.io/RuudBurger/pen/bwjry)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="Flip"></a>Flip on click
+
+[<img src="images/pendulum.png" height="230" title="Pendulum Animation Demo">](https://codepen.io/TAPAS-SINGHAL/pen/ZEwOGjj)
 
 **[⬆ back to top](#quick-links)**
 
