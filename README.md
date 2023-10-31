@@ -173,6 +173,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+## <a id="Flip"></a>Flip on click
+
+[<img src="images/pendulum.png" height="230" title="Pendulum Animation Demo">](https://codepen.io/TAPAS-SINGHAL/pen/ZEwOGjj)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
 
 ## <a id="Animated Box"></a>Animated Box
 
