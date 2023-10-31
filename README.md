@@ -872,6 +872,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 =======
 &nbsp;
 
+## <a id="Simple Calculator"></a>Simple Calculator
+
+![WhatsApp Image 2023-10-31 at 18 41 41_e7944caf](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/130649178/1adb0758-08ef-4d88-b622-d17286da413c)
+
+
+
+
+**[⬆ back to top](#quick-links)**
+=======
+&nbsp;
+
 
 ---
 
