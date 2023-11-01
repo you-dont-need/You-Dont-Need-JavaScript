@@ -176,6 +176,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="Flip"></a>Flip on click
 
+[<img src="images/cssTable.png" height="230" title="Css Table Demo">](https://codepen.io/TAPAS-SINGHAL/pen/abXZNWR)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="Flip"></a>Flip on click
+
 [<img src="images/pendulum.png" height="230" title="Pendulum Animation Demo">](https://codepen.io/TAPAS-SINGHAL/pen/ZEwOGjj)
 
 **[⬆ back to top](#quick-links)**
