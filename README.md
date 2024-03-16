@@ -27,6 +27,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [You Don't Need JavaScript](#you-dont-need-javascript)
 - [Style Guide:](#style-guide)
 - [Quick links](#quick-links)
+- [Accordion Gallery](#accordion--gallery)
 - [Accordion / Toggle](#accordion--toggle)
 - [Analog-clock](#analogclock)
 - [Animated Button](#animated-btn)
@@ -93,6 +94,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [DVD Screen Saver](#dvd-screen-saver)
 - [RotateSquare](#RotateSquare)
 
+---
 
 ## <a id="toggle"></a>CSS Toggle
 
@@ -101,6 +103,19 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
+---
+
+## <a id="accordion--gallery"></a>Accordion Gallery
+
+<img src="images/accordion-gallery.png" height="230" title="Accordion Gallery">
+
+[`Code for Accordion Gallery`](Accordion Gallery/Accordion Gallery.html)
+
+**[⬆ back to top](#quick-links)**
+
+
+
+---
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -113,8 +128,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
-
 ## <a id="Animated-Buttons"></a>Animated Buttons
 
 <img src="images/Animated-button-1.png" height="230" title="Demo 1">
@@ -126,10 +139,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
----
-
-&nbsp;
-
 ## <a id="captain"></a>Captain America Shield
 
 <img src="Captain America Shield/images/shield.png" height="230" title="Demo 1">
@@ -137,8 +146,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
-
-&nbsp;
 
 ## <a id="Carousel"></a>Carousel
 
@@ -888,8 +895,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/rotateSquare" height="230" title="Demo 1">]
 
 **[⬆ back to top](#quick-links)**
-```
-=======
+
+
 &nbsp;
 
 ---
