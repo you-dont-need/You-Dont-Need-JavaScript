@@ -109,7 +109,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="accordion--gallery"></a>Accordion Gallery
 
-[<img src="images/accordion-gallery.png" height="230" title="Accordion Gallery">](Accordion Gallery/Accordion Gallery.html)
+<img src="images/accordion-gallery.png" height="230" title="Accordion Gallery">
 
 **[⬆ back to top](#quick-links)**
 
