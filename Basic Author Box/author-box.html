@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .author-box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            max-width: 600px;
+            padding: 20px;
+        }
+        .author-avatar {
+            border-radius: 50%;
+            height: 100px;
+            margin-right: 20px;
+            width: 100px;
+        }
+        .author-info {
+            flex: 1;
+        }
+        .author-name {
+            color: #333;
+            font-size: 24px;
+            margin: 0 0 10px;
+        }
+        .author-bio {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 0 15px;
+        }
+        .author-social {
+            display: flex;
+            gap: 10px;
+        }
+        .author-social a {
+            color: #3366cc;
+            text-decoration: none;
+        }
+        .author-social a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="author-box">
+        <img src="/placeholder.svg?height=100&width=100" alt="Author Avatar" class="author-avatar">
+        <div class="author-info">
+            <h2 class="author-name">John Doe</h2>
+            <p class="author-bio">John is a passionate writer and web developer with over 10 years of experience. He loves creating content that helps people learn and grow in their careers.</p>
+            <div class="author-social">
+                <a href="https://twitter.com/johndoe" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
