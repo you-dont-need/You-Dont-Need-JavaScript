@@ -109,3 +109,24 @@ margin: 30px 0;
 .register-link p a :hover{
     text-decoration: underline;
 }
+@media (max-width: 768px) {
+    .Wrapper {
+        width: 300px;
+        padding: 20px;
+    }
+
+    .input-box i {
+        right: 30px;
+    }
+
+    .input-box input {
+        padding: 15px 35px 15px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Wrapper {
+        width: 260px;
+        padding: 15px;
+    }
+}
