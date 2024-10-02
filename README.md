@@ -78,6 +78,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Shuffling squares](#shuffling-squares)
 - [Star Wars Intro](#star-wars-intro)
 - [Switch](#switch)
+- [Tables](#css-tables)
 - [Tabs](#tabs)
 - [Thankyou-Animation](#thankyou-animation)
 - [Todo List](#todo-list)
@@ -167,16 +168,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="Flip"></a>Flip on click
 
 [<img src="images/flipper.png" height="230" title="Demo">](https://codepen.io/RuudBurger/pen/bwjry)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-&nbsp;
-
-## <a id="Flip"></a>Flip on click
-
-[<img src="images/cssTable.png" height="230" title="Css Table Demo">](https://codepen.io/TAPAS-SINGHAL/pen/abXZNWR)
 
 **[⬆ back to top](#quick-links)**
 
@@ -738,8 +729,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 =======
 
-> > > =======
-
 [<img src="images/Scary-animation.gif" height="230" title="scary-animation">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
 
 **[⬆ back to top](#quick-links)**
@@ -793,7 +782,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id= "Css Tables"></a>CSS Tables
 
-## ![Screenshot 2023-10-23 144658](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/d73a9af8-5470-4a88-bfc9-a5e8430aba65)
+## [![Screenshot 2023-10-23 144658](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/d73a9af8-5470-4a88-bfc9-a5e8430aba65)](https://codepen.io/TAPAS-SINGHAL/pen/abXZNWR)
 
 =======
 
