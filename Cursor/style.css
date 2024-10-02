@@ -6,7 +6,7 @@ body {
 
 .cursor-auto {
     cursor: auto;
-    width: 300px;
+    width: 350px;
     height: 50px;
     font-size: 25px;
     transition: color 2s ease-out 100ms;
@@ -42,7 +42,7 @@ body {
 
 .cursor-wait {
     cursor: wait;
-    width: 300px;
+    width: 350px;
     height: 50px;
     font-size: 25px;
     transition: color 2s ease-out 100ms;
@@ -54,7 +54,7 @@ body {
 
 .cursor-text {
     cursor: text;
-    width: 300px;
+    width: 350px;
     height: 50px;
     font-size: 25px;
     transition: color 2s ease-out 100ms;
