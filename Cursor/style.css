@@ -4,64 +4,35 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-.cursor-auto {
-    cursor: auto;
+.cursor-common {
     width: 350px;
     height: 50px;
     font-size: 25px;
     transition: color 2s ease-out 100ms;
 }
 
-.cursor-auto:hover{
+.cursor-common:hover {
     color: #7ae615;
+}
+
+.cursor-auto {
+    cursor: auto;
 }
 
 .cursor-default {
     cursor: default;
-    width: 350px;
-    height: 50px;
-    font-size: 25px;
-    transition: color 2s ease-out 100ms;
-}
-
-.cursor-default:hover{
-    color: #7ae615;
 }
 
 .cursor-crosshair {
     cursor: crosshair;
-    width: 350px;
-    height: 50px;
-    font-size: 25px;
-    transition: color 2s ease-out 100ms;
-}
-
-.cursor-crosshair:hover{
-    color: #7ae615;
 }
 
 .cursor-wait {
     cursor: wait;
-    width: 350px;
-    height: 50px;
-    font-size: 25px;
-    transition: color 2s ease-out 100ms;
-}
-
-.cursor-wait:hover{
-    color: #7ae615;
 }
 
 .cursor-text {
     cursor: text;
-    width: 350px;
-    height: 50px;
-    font-size: 25px;
-    transition: color 2s ease-out 100ms;
-}
-
-.cursor-text:hover{
-    color: #7ae615;
 }
 
 .container {
