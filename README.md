@@ -32,6 +32,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Analog-clock](#analogclock)
 - [Animated Button](#animated-btn)
 - [Animated Buttons](#animated-buttons)
+- [Blog Post Cards](#Blogcard)
 - [Bonfire](#bonfire)
 - [Bubble](#bubble)
 - [Burger Menu](#burger-menu)
@@ -100,6 +101,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 [<img src="images/toggle1.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
 [<img src="images/toggle2.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
+
+**[⬆ back to top](#quick-links)**
+
+## <a id="Blogcards"></a>Blog Post Cards
+
+[<img src="images/neuo.png" height="230" title="Demo 1">](http://url-to-page)
+[<img src="images/claycards.png" height="230" title="Demo 2">](http://url-to-page)
+[<img src="images/glasscards.png" height="230" title="Demo 3">](http://url-to-page)
 
 **[⬆ back to top](#quick-links)**
 
