@@ -11,6 +11,32 @@
 				align-items: center;
 				font-family: Arial, Helvetica, sans-serif;
 			}
+			.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#toggleButton {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #23aa04;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#toggleButton:hover {
+  background-color: #1e8f03;
+}
 			#pageSection {
 				margin: 5px 20px;
 				max-width: 1000px;
@@ -84,6 +110,9 @@
 		</style>
 	</head>
 	<body>
+		<body class="light-mode">
+		<button id="toggleButton">🌙 Dark Mode</button>
+	    </body>
 		<section id="pageSection">
 			<div id="google_element"></div>
 			<!-- Load Google Translate script over HTTPS and handle errors -->
@@ -109,6 +138,21 @@
 				console.error("Error loading Google Translate script:", error);
 			  }
 			</script>
+ <script>
+	const toggleButton = document.getElementById("toggleButton");
+	const body = document.body;
+
+	toggleButton.addEventListener("click", () => {
+	  if (body.classList.contains("light-mode")) {
+		body.classList.replace("light-mode", "dark-mode");
+		toggleButton.textContent = "☀️ Light Mode";
+	  } else {
+		body.classList.replace("dark-mode", "light-mode");
+		toggleButton.textContent = "🌙 Dark Mode";
+	  }
+	});
+  </script>
+
 			<h1>You Dont Need Javascript</h1>
 			<p class="description">a display of pages</p>
 
@@ -202,6 +246,7 @@
 				</tr>
 			</table>
 		</section>
+		
 		<script type="text/javascript">
 			var Tawk_API = Tawk_API || {},
 			  Tawk_LoadStart = new Date();
