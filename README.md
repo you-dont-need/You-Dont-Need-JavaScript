@@ -25,6 +25,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## Quick links
 
 - [You Don't Need JavaScript](#you-dont-need-javascript)
+- [Website Demo Using HTML CSS](#WebsiteDemo)
 - [Style Guide:](#style-guide)
 - [Quick links](#quick-links)
 - [Accordion / Toggle](#accordion--toggle)
@@ -224,6 +225,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 &nbsp;
+
+## <a id="WebsiteDemo"></a>Website Demo
+
+[<img src="images/Website_demo.png" height="230" title="Website_Demo">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/Bonfire.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
 
 ## <a id="Info"></a>Info on hover/ Popover
 
