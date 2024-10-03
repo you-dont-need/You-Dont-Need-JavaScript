@@ -70,6 +70,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Parallax scrolling](#parallax-scrolling)
 - [Pendulum](#Pendulum)
 - [Playing Card Animation](#playing-card-animation)
+- [ProfileCards](#ProfileCards)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
 - [Ripple Effect](#ripple-effect)
 - [Scary animation](#scary-animation)
@@ -881,6 +882,18 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="DVDScreenSaver"></a>DVD Screen Saver
 
 ![img_source](images/DVDScreenSaver.png)
+
+**[⬆ back to top](#quick-links)**
+=======
+&nbsp;
+## <a id="ProfileCards"></a>ProfileCards
+
+![img_source](images/profileCards/card1.png)
+![img_source](images/profileCards/card2.png)
+![img_source](images/profileCards/card3.png)
+![img_source](images/profileCards/card4.png)
+![img_source](images/profileCards/card5.png)
+![img_source](images/profileCards/card6.png)
 
 **[⬆ back to top](#quick-links)**
 =======
