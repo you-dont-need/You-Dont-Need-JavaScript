@@ -1,0 +1,69 @@
+<head>
+
+    <style>
+
+ul {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  padding: 0;
+  flex: calc(0.1 + (var(--active-width, 0) * 0.9));
+  transition: flex 0.4s ease-out;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease-in-out;
+  height: 600px;
+}
+
+ul:is(:hover, :focus-within) img {
+  opacity: calc(0.1 + (var(--active-width, 0) * 0.9));
+  filter: grayscale(calc(1 - var(--active-width, 0)));
+}
+
+li:is(:hover, :focus-within) {
+  --active-width: 1;
+}
+
+li:not(:hover):not(:focus-within) {
+  --active-width: 0.12;
+}
+
+
+    </style>
+</head>
+
+<div class="acc-gallery-container">
+  <ul class="acc-gallery">
+    <li class="acc-gallery-item">
+      <img src="https://images.unsplash.com/photo-1557657043-23eec69b89c9?q=80&w=2673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </li>
+    <li class="acc-gallery-item">
+      <img src="https://images.unsplash.com/photo-1600252278397-5fe47c86d3aa?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </li>
+    <li class="acc-gallery-item">
+      <img src="https://images.unsplash.com/photo-1590787996529-a542c86ca267?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </li>
+    <li class="acc-gallery-item">
+      <img src="https://images.unsplash.com/photo-1586943353950-95bdbe3207a1?q=80&w=2636&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </li>
+    
+ <li class="acc-gallery-item">
+      <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </li>
+         <li class="acc-gallery-item">
+      <img src="https://images.unsplash.com/photo-1511885663737-eea53f6d6187?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </li>
+ <li class="acc-gallery-item">
+      <img src="https://images.unsplash.com/photo-1573289870410-d3bb9adf4221?q=80&w=2703&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </li>
+  </ul>
+</div>
