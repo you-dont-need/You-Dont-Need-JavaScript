@@ -25,6 +25,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## Quick links
 
 - [You Don't Need JavaScript](#you-dont-need-javascript)
+- [Website Demo Using HTML CSS](#WebsiteDemo)
 - [Style Guide:](#style-guide)
 - [Quick links](#quick-links)
 - [Accordion / Toggle](#accordion--toggle)
@@ -224,6 +225,19 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 &nbsp;
+
+## <a id="WebsiteDemo"></a>Website Demo
+
+[<img src="images/Website_demo.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo.png)
+[<img src="images/Website_demo_2.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo_2.png)
+[<img src="images/Website_demo_3.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo_3.png)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
 
 ## <a id="Info"></a>Info on hover/ Popover
 
