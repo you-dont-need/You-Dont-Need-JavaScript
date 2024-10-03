@@ -106,9 +106,9 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="Blogcards"></a>Blog Post Cards
 
-[<img src="blog%20post%20cards/neuo.png" height="230" title="Demo 1">](http://url-to-page)
-[<img src="blog%20post%20cards/claycards.png" height="230" title="Demo 2">](http://url-to-page)
-[<img src="blog%20post%20cards/glasscards.png" height="230" title="Demo 3">](http://url-to-page)
+[<img src="Blog%20Post%20Cards/neuo.png" height="230" title="Demo 1">](http://url-to-page)
+[<img src="Blog%20Post%20Cards/claycards.png" height="230" title="Demo 2">](http://url-to-page)
+[<img src="Blog%20Post%20Cards/glasscards.png" height="230" title="Demo 3">](http://url-to-page)
 
 **[⬆ back to top](#quick-links)**
 
