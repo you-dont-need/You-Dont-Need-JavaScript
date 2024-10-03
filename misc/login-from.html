@@ -8,11 +8,11 @@
         /* CSS styles */
         body {
           display: flex;
-          justify-content: center; 
-          align-items: center; 
-          height: 100vh; 
-          margin: 0; 
-          background-color: rgba(17, 24, 39, 1); 
+          justify-content: center; /* Centers content horizontally */
+          align-items: center; /* Centers content vertically */
+          height: 100vh; /* Full viewport height */
+          margin: 0; /* Removes default margin */
+          background-color: rgba(17, 24, 39, 1); /* Background color for the page */
         }
 
         .form-container {
@@ -54,6 +54,7 @@
           background-color: rgba(17, 24, 39, 1);
           padding: 0.75rem 1rem;
           color: rgba(243, 244, 246, 1);
+          box-sizing: border-box;
         }
 
         .input-group input:focus {
@@ -89,6 +90,7 @@
           border: none;
           border-radius: 0.375rem;
           font-weight: 600;
+          margin-top: 1rem; /* Added to give space between fields and button */
         }
 
         .social-message {
