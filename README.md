@@ -32,6 +32,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Analog-clock](#analogclock)
 - [Animated Button](#animated-btn)
 - [Animated Buttons](#animated-buttons)
+- [Blog Post Cards](#Blogcard)
 - [Bonfire](#bonfire)
 - [Bubble](#bubble)
 - [Burger Menu](#burger-menu)
