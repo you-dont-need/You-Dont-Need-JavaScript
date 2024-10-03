@@ -85,6 +85,30 @@
 	</head>
 	<body>
 		<section id="pageSection">
+			<div id="google_element"></div>
+			<!-- Load Google Translate script over HTTPS and handle errors -->
+			<script
+			  type="text/javascript"
+			  src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"
+			  onerror="handleError(this)"
+			></script>
+		
+			<script type="text/javascript">
+			  function loadGoogleTranslate() {
+				new google.translate.TranslateElement(
+				  {
+					pageLanguage: "en",
+					includedLanguages: "en,hi,pa,sa,mr,ur,bn,es,fr,de,it",
+					layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+				  },
+				  "google_element"
+				);
+			  }
+		
+			  function handleError(error) {
+				console.error("Error loading Google Translate script:", error);
+			  }
+			</script>
 			<h1>You Dont Need Javascript</h1>
 			<p class="description">a display of pages</p>
 
