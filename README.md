@@ -229,8 +229,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="WebsiteDemo"></a>Website Demo
 
 [<img src="images/Website_demo.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo.png)
-[<img src="images/Website_demo_2.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo.png)
-[<img src="images/Website_demo_3.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo.png)
+[<img src="images/Website_demo_2.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo_2.png)
+[<img src="images/Website_demo_3.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo_3.png)
 
 **[⬆ back to top](#quick-links)**
 
