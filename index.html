@@ -11,6 +11,29 @@
 				align-items: center;
 				font-family: Arial, Helvetica, sans-serif;
 			}
+			.dark-mode {
+				background-color: #121212;
+				color: #ffffff;
+			}
+			.light-mode {
+				background-color: #ffffff;
+				color: #000000;
+			}
+			#toggleButton {
+				position: fixed;
+				top: 20px;
+				right: 20px;
+				padding: 10px 20px;
+				background-color: #23aa04;
+				color: white;
+				border: none;
+				border-radius: 20px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+			#toggleButton:hover {
+				background-color: #1e8f03;
+			}
 			#pageSection {
 				margin: 5px 20px;
 				max-width: 1000px;
@@ -35,18 +58,14 @@
 			}
 			#pages td,
 			#pages th {
-				/* border: 1px solid #ddd; */
 				padding: 8px;
 			}
-
 			#pages tr:nth-child(even) {
 				background-color: #f2f2f2;
 			}
-
 			#pages tr:hover {
 				background-color: #ddd;
 			}
-
 			#pages th {
 				padding-top: 12px;
 				padding-bottom: 12px;
@@ -55,7 +74,6 @@
 				color: white;
 			}
 			.pageUrl {
-				/* display: grid; */
 				grid-template-columns: repeat(7, 1fr);
 			}
 			.pageUrl a {
@@ -65,25 +83,36 @@
 				letter-spacing: 0.5px;
 				padding: 5px;
 				margin: 5px 0;
-				/* text-decoration: none; */
 				color: #04aa6d;
 			}
 			@media (max-width: 768px) {
 				.pageUrl a {
 					font-size: 12px;
-
-					/* grid-template-columns: repeat(6, 1fr); */
 				}
 			}
 			@media (max-width: 500px) {
 				.pageUrl a {
 					font-size: 12px;
-					/* grid-template-columns: repeat(2, 1fr); */
 				}
+			}
+			/* Dark mode styles for the table */
+			.dark-mode #pages {
+				background-color: #333;
+				color: #ffffff;
+			}
+			.dark-mode #pages tr:nth-child(even) {
+				background-color: #444;
+			}
+			.dark-mode #pages tr:hover {
+				background-color: #555;
+			}
+			.dark-mode #pages th {
+				background-color: #1e8f03;
 			}
 		</style>
 	</head>
-	<body>
+	<body class="light-mode">
+		<button id="toggleButton">🌙 Dark Mode</button>
 		<section id="pageSection">
 			<div id="google_element"></div>
 			<!-- Load Google Translate script over HTTPS and handle errors -->
@@ -202,7 +231,7 @@
 				</tr>
 			</table>
 		</section>
-		<script type="text/javascript">
+        <script type="text/javascript">
 			var Tawk_API = Tawk_API || {},
 			  Tawk_LoadStart = new Date();
 			(function () {
@@ -218,5 +247,19 @@
 		  <!--End of Tawk.to Script-->
 	  
 		  <noscript>You need to enable JavaScript to run this app.</noscript>
+		<script>
+			const toggleButton = document.getElementById("toggleButton");
+			const body = document.body;
+
+			toggleButton.addEventListener("click", () => {
+				if (body.classList.contains("light-mode")) {
+					body.classList.replace("light-mode", "dark-mode");
+					toggleButton.textContent = "☀️ Light Mode";
+				} else {
+					body.classList.replace("dark-mode", "light-mode");
+					toggleButton.textContent = "🌙 Dark Mode";
+				}
+			});
+		</script>
 	</body>
 </html>
