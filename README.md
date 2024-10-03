@@ -228,7 +228,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="WebsiteDemo"></a>Website Demo
 
-[<img src="images/Website_demo.png" height="230" title="Website_Demo">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/Bonfire.gif)
+[<img src="images/Website_demo.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo.png)
 
 **[⬆ back to top](#quick-links)**
 
