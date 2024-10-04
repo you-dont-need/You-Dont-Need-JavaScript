@@ -159,7 +159,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/slideshow2.png" height="230" title="Demo 1">](http://codepen.io/SitePoint/pen/MyPVdK)
 [<img src="images/slideshow.png" height="230" title="Demo 2">](https://codepen.io/cavico/pen/yOjwya)
 [<img src="images/slideshow3.png" height="230" title="Demo 3">](https://codepen.io/FabianK/pen/zJLLrR)
-[<img src="images/carousel.png" height="230" title="Demo 3">](https://codepen.io/NiklasKnaack/pen/abrOMLY)
+[<img src="images/carousel.png" height="230" title="Demo 4">](https://codepen.io/NiklasKnaack/pen/abrOMLY)
 [<img src="./images/Infinite-carousel-purnasth.gif" alt="Carousel-Nepal" height="230" title="Carousel-Nepal">](https://codepen.io/purnaaa/pen/NWoWeBB)
 
 **[⬆ back to top](#quick-links)**
