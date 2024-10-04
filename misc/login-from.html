@@ -4,13 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Login Form</title>
-    <style class="'text/css">
+    <style>
         /* CSS styles */
+        body {
+          display: flex;
+          justify-content: center; /* Centers content horizontally */
+          align-items: center; /* Centers content vertically */
+          height: 100vh; /* Full viewport height */
+          margin: 0; /* Removes default margin */
+          background-color: rgba(17, 24, 39, 1); /* Background color for the page */
+        }
+
         .form-container {
-          width: 320px;
+          width: 350px;
           border-radius: 0.75rem;
           background-color: rgba(17, 24, 39, 1);
-          padding: 2rem;
+          padding: 4rem;
           color: rgba(243, 244, 246, 1);
         }
 
@@ -22,13 +31,13 @@
         }
 
         .form {
-          margin-top: 1.5rem;
+          margin-top: 1rem;
         }
 
         .input-group {
-          margin-top: 0.25rem;
-          font-size: 0.875rem;
-          line-height: 1.25rem;
+          margin-top: 1rem;
+          font-size: 1rem;
+          line-height: 1.45rem;
         }
 
         .input-group label {
@@ -45,6 +54,7 @@
           background-color: rgba(17, 24, 39, 1);
           padding: 0.75rem 1rem;
           color: rgba(243, 244, 246, 1);
+          box-sizing: border-box;
         }
 
         .input-group input:focus {
@@ -56,7 +66,7 @@
           justify-content: flex-end;
           font-size: 0.75rem;
           line-height: 1rem;
-          color: rgba(156, 163, 175,1);
+          color: rgba(156, 163, 175, 1);
           margin: 8px 0 14px 0;
         }
 
@@ -80,6 +90,7 @@
           border: none;
           border-radius: 0.375rem;
           font-weight: 600;
+          margin-top: 1rem; /* Added to give space between fields and button */
         }
 
         .social-message {
