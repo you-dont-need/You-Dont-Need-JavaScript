@@ -1,0 +1,319 @@
+@import url('https://unpkg.com/normalize.css') layer(normalize);
+
+@layer normalize, base, demo, scroll, debug;
+
+@layer scroll {
+    @supports (animation-timeline: scroll()) {
+        @property --active {
+            initial-value: 0;
+            inherits: true;
+            syntax: '<number>';
+        }
+
+        p span {
+            animation: activate both ease-in-out;
+            animation-timeline: view();
+            opacity: 0;
+        }
+
+        @keyframes activate {
+            50% {
+                opacity: 1;
+            }
+        }
+
+        :root {
+            --scroll-ease: linear(-0 0%,
+                    0.0048 9.8%,
+                    0.0192 19.5%,
+                    0.043 29.02%,
+                    0.0761 38.26%,
+                    0.1181 47.13%,
+                    0.1685 55.56%,
+                    0.227 63.44%,
+                    0.2929 70.71%,
+                    0.3656 77.3%,
+                    0.4445 83.15%,
+                    0.5285 88.19%,
+                    0.6173 92.39%,
+                    0.7099 95.7%,
+                    0.805 98.08%,
+                    0.9021 99.52%,
+                    1 100%);
+        }
+
+        .section__content svg:nth-of-type(1) path {
+            --dest: 0;
+            stroke-dashoffset: 1.025;
+            stroke-dasharray: 1.025;
+            animation: draw both var(--scroll-ease);
+            animation-timeline: view();
+            animation-range: entry 25% entry 75%;
+        }
+
+        .section__content {
+            margin-bottom: 15vh;
+        }
+
+        .section__buffer {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 15vh;
+            background: linear-gradient(canvas, transparent);
+        }
+
+        .section__content svg:nth-of-type(2) {
+            translate: 0 2%;
+        }
+
+        .section__content svg:nth-of-type(2) path {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 1.025;
+            --dest: -1.025;
+            animation: draw both ease-out;
+            animation-timeline: view();
+            animation-range: exit -25% exit 50%;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: var(--dest, 1.025);
+            }
+        }
+
+        footer {
+            view-timeline: --footer;
+        }
+
+        footer h2 {
+            animation: reveal both linear;
+            animation-timeline: --footer;
+            animation-range: entry 75% entry 100%;
+            position: fixed;
+        }
+
+        @keyframes reveal {
+            0% {
+                filter: blur(10px);
+                opacity: 0;
+            }
+        }
+    }
+}
+
+@layer debug {
+    [data-blend='false'] .section__content {
+        mix-blend-mode: normal;
+    }
+
+    [data-debug='true'] .section__content::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border: 10px dashed hotpink;
+    }
+
+    [data-debug='true'] .section__content svg {
+        outline: 10px dashed hotpink;
+    }
+}
+
+@layer demo {
+    :root {
+        --bg: black;
+    }
+
+    header {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(transparent 50%, canvas);
+    }
+
+    section {
+        position: relative;
+    }
+
+    .section__content {
+        background: white;
+        mix-blend-mode: lighten;
+        z-index: 2;
+    }
+
+    .section__text {
+        background: var(--bg);
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .section__stick {
+        position: absolute;
+        inset: 0;
+        top: 0;
+        /* height: 100vh; */
+        place-items: center;
+        z-index: -1;
+    }
+
+    .section__content svg {
+        overflow: visible !important;
+    }
+
+    .section__text p {
+        margin: 0;
+        --font-level: 5;
+        color: white;
+        /* background: black; */
+        display: flex;
+        flex-direction: column;
+        gap: 2lh;
+        font-weight: 600;
+        align-items: center;
+        justify-content: center;
+        text-wrap: balance;
+        text-align: center;
+    }
+
+    footer {
+        height: 100vh;
+        display: grid;
+        align-content: end;
+        position: relative;
+    }
+
+    footer h2 {
+        --font-level: 5;
+        text-transform: none;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: -2;
+    }
+
+    video {
+        position: sticky;
+        top: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+        filter: brightness(1); /* Remove the brightness filter or set it to 1 */
+    }
+
+    footer {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    header {
+        align-content: center;
+    }
+
+    h1 {
+        --font-level: 3;
+        position: relative;
+        margin: 0;
+    }
+
+    h2 {
+        --font-level: 1;
+        margin: 0;
+        opacity: 0.5;
+        text-transform: uppercase;
+    }
+}
+
+@layer base {
+    :root {
+        --font-size-min: 16;
+        --font-size-max: 20;
+        --font-ratio-min: 1.2;
+        --font-ratio-max: 1.33;
+        --font-width-min: 320;
+        --font-width-max: 1500;
+    }
+
+    :where(.fluid) {
+        --fluid-min: calc(var(--font-size-min) * pow(var(--font-ratio-min), var(--font-level, 0)));
+        --fluid-max: calc(var(--font-size-max) * pow(var(--font-ratio-max), var(--font-level, 0)));
+        --fluid-preferred: calc((var(--fluid-max) - var(--fluid-min)) / (var(--font-width-max) - var(--font-width-min)));
+        --fluid-type: clamp((var(--fluid-min) / 16) * 1rem,
+                ((var(--fluid-min) / 16) * 1rem) - (((var(--fluid-preferred) * var(--font-width-min)) / 16) * 1rem) + (var(--fluid-preferred) * var(--variable-unit, 100vi)),
+                (var(--fluid-max) / 16) * 1rem);
+        font-size: var(--fluid-type);
+    }
+
+    *,
+    *:after,
+    *:before {
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        font-family: 'SF Pro Text', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue',
+            Helvetica, Arial, sans-serif, system-ui;
+        /* Remove the background color if any */
+        background-color: transparent;
+    }
+
+    /* Remove the entire body::before block */
+    /* body::before {
+        --size: 45px;
+        --line: color-mix(in lch, canvasText, transparent 70%);
+        content: '';
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        background: linear-gradient(90deg,
+                var(--line) 1px,
+                transparent 1px var(--size)) 50% 50% / var(--size) var(--size),
+            linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% / var(--size) var(--size);
+        mask: linear-gradient(-20deg, transparent 50%, white);
+        top: 0;
+        transform-style: flat;
+        pointer-events: none;
+        z-index: -1;
+    } */
+
+    .bear-link {
+        color: canvasText;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        width: 48px;
+        aspect-ratio: 1;
+        display: grid;
+        place-items: center;
+        opacity: 0.8;
+    }
+
+    :where(.x-link, .bear-link):is(:hover, :focus-visible) {
+        opacity: 1;
+    }
+
+    .bear-link svg {
+        width: 75%;
+    }
+
+    /* Utilities */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+}
+
+div.tp-dfwv {
+    width: 290px;
+}
