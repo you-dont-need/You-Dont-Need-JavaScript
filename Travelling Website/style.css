@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mooli', sans-serif;
+    font-weight: bolder;
+}
+body{
+    background-color: white;
+}
+
+
+.header{
+    height: 80vh;
+    width: 100vw;
+}
+.page1{
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+}
+.navbarleft{
+    width: 100vw;
+    height: 8vh;
+    background-color: #EDC7B7;
+    box-shadow: 0px 2px 50px black;
+    display: flex;
+    
+    padding: 5px 5px;
+    
+    align-items: center;
+
+}
+.navbarleft ul{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbarleft ul li{
+    padding: 0px 10px;
+    list-style: none;
+}
+.navbarleft ul li a{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    color: #123C69;
+}
+.navbarleft a:hover{
+    text-shadow: 0px 0px 0.25px #123C69;
+}
+.navbar2{
+    width: 100vw;
+    height: 7vh;
+    background-color: #123C69;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    
+}
+.navbar2 h1{
+    color: #EDC7B7;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+.heroimg{
+    width: 100vw;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Screenshot\ 2023-09-30\ 163012.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+.bookingpage{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    
+}
+
+
+
+
+
+
+
+.bookingpagelow{
+    height: 40vh;
+    width: 40vw;
+    background-color: #F7F8F9;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 10px black;
+    padding: 20px 20px;
+    
+}
+#input{
+    width: 36vw;
+    height: 60px;
+    border: 0px ;
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+.bookingpagetop{
+    height: 4vh;
+    width: 30vw;
+    background-color: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px black;
+    z-index: 100;
+    justify-content: center;
+    text-align: center;
+    padding: 7px;
+    transform: translateY(2vh);
+}
+.departure i{
+    margin-left: 15px;
+    cursor: pointer;
+}
+#input1{
+    width: 34vw;
+    height: 55px;
+    border: 0px ;
+    
+    cursor: pointer;
+    
+}
+.departure{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid rgb(221, 213, 213);
+    height: 60px;
+    display: flex;
+}
+
+.departure2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 0px;
+    height: 60px;
+}
+.bookingpagetop h1{
+    color: #123C69;
+    font-weight: 400;
+    text-shadow: 0px 5px 10px #EDC7B7;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.account{
+    border: 2px solid #123C69;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.5s;
+}
+.account:hover{
+    background-color: #123C69;
+    color: white;
+}
+
+
+.signin{
+    border: 2px solid ;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.signin:hover{
+    background-color: #123C69;
+    color: white;
+}
+.rightitems{
+    margin-left: 400px;
+}
+
+.arr_date{
+    padding: 10px;
+    width: 12.5vw;
+    height: 60px;
+    background-color: white;
+    border: 2px solid rgb(221, 213, 213);
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.search{
+    z-index: 100;
+    background-color: #123C69;
+    transform: translateY(-4vh);
+    text-align: center;    
+    width: 20vw;
+    height: 8vh;
+    border-radius: 20px;
+    color: #EDC7B7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+
+
+
+
+.search :hover{
+    animation: fill 2s;
+    cursor: pointer;
+}
+
+@keyframes fill{
+    0% {width: 0%; background-color:#123C69;}
+    
+    100% {width: 100%; background-color: #123C69;}
+}
+
+
+
+
+
+
+
+
+.page2{
+    height: 40vh;
+    width: 100vw;
+    background-color: #EDC7B7;
+}
+.page2 .heading{
+    
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.page2 img{
+    max-width: 200px;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-radius: 100px;
+    
+}
+.places{
+    margin: auto;
+    margin-top: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+}
+.delhi{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.page2 img:hover{
+    box-shadow: 0 2px 10px black;
+    
+}
+.delhi h4{
+    margin-top: 10px;
+}
+
+.datedecider{
+    width: 37.5vw;
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+
+.day{
+    color: rgb(221, 213, 213);
+}
+.arr_date:hover{
+    cursor: pointer;
+}
+.departure:hover{
+    cursor: pointer;
+}
+
+
+.page3{
+    margin-top: 20px;
+    width: 100vw;
+    height: 60vh;
+    
+    
+}
+.page3 .hotels:hover{
+    box-shadow: 0 2px 10px black;
+}
+/* @keyframes typing{
+    from {width: 0}
+    to {width: 100%}
+} */
+.page3 .heading{
+    
+    
+    /* overflow: hidden; */
+    /* width: 0; */
+    /* white-space: nowrap; */
+    /* animation: typing 10s forwards; */
+    text-align: center;
+}
+
+
+.page3 .hotels img{
+    width: 300px;
+    height: 300px;
+
+}
+.listhotels{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.type{
+    border: 2px solid rgb(221, 213, 213);;
+    padding: 10px;
+    transform: translateY(-2px);
+    border-bottom: 2px solid #123C69;
+}
+
+
+.page4{
+    height: 27vh;
+    width: 100vw;
+    background-color: rgb(233, 235, 238);
+}
+
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.links ul{
+    margin-top: 30px;
+}
+
+.links ul li{
+    list-style: none;
+}
+.links ul li h4{
+    margin-bottom: 10px;
+}
+
+.links ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(42, 42, 46);
+    font-weight: 300;
+}
+
+
+
+.page5{
+    width: 100vw;
+    height: 20vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 18px;
+    background-image: linear-gradient(to bottom right, #123C69,#EDC7B7);
+    backdrop-filter: brightness(10px);
+    -webkit-backdrop-filter: brightness(10px);
+}
