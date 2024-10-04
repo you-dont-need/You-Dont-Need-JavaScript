@@ -80,6 +80,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Shake Button](#shake-button-1)
 - [Shuffling squares](#shuffling-squares)
 - [Star Wars Intro](#star-wars-intro)
+- [Stickman](#stickman)
 - [Switch](#switch)
 - [Tables](#css-tables)
 - [Tabs](#tabs)
@@ -912,6 +913,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/rotateSquare" height="230" title="Demo 1">]
 
 **[⬆ back to top](#quick-links)**
+
+## <a id="stickman"></a>Stickman Animation 
+[<img src="./images/stickman.png" height="230" title="Demo Image">]
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
 ```
 =======
 &nbsp;
