@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Source+Serif+4&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and general styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Background for the entire page */
+        body {
+            background-image: url('image.webp'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            color: white;
+        }
+
+        /* Navbar styling */
+        .menu {
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            z-index: 2;
+            width: 100%;
+            position: relative;
+        }
+
+        .menu ul {
+            display: inline-flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .menu ul li {
+            list-style: none;
+            margin: 0 20px;
+            cursor: pointer;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .menu ul li:hover {
+            color: #b2b1b1;
+        }
+
+        .active {
+            color: #19dafa;
+        }
+
+        .logo img {
+            width: 80px;
+        }
+
+        /* Signup button */
+        .signup-btn {
+            text-decoration: none;
+            color: white;
+            border: 1px solid transparent;
+            border-radius: 20px;
+            background-image: linear-gradient(#fd00da, #19d7f8), radial-gradient(circle at top left, #fd00da, #19d7f8);
+            padding: 10px 15px;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .signup-btn:hover {
+            transform: scale(1.1);
+            background-image: linear-gradient(#595d7d, #595d7d), radial-gradient(circle at top left, #19d7f8, #fd00da);
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+            color: #19d7f8;
+        }
+
+        /* Banner Section */
+        .banner {
+            display: flex;
+            justify-content: center; /* Horizontal Centering */
+            align-items: center; /* Vertical Centering */
+            height: 100vh; /* Make the banner take the full viewport height */
+            text-align: center; /* Center the text */
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        .banner-content {
+            max-width: 800px; /* Optional: Limit the width of the content */
+            padding: 20px;
+    }
+
+        .app-text h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+            animation: moveBitcoin 4s infinite ease-in-out;
+            text-shadow: 0 0 15px rgba(136, 0, 255, 0.8), 0 0 30px rgba(136, 0, 255, 0.5);
+        }
+
+        @keyframes moveBitcoin {
+            0% {
+                transform: translateX(0px);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+
+        .app-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .play-btn {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+
+        .play-btn-inner {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-image: linear-gradient(#42455a, #42455a), radial-gradient(circle at top left, #fd00da, #19d7f8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .learn-more-btn {
+            margin-left: 20px;
+            font-size: 14px;
+            color: #19d7f8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .learn-more-btn:hover {
+            color: #fd00da;
+        }
+
+        /* About Us Section */
+        .about-us {
+            padding: 60px;
+            background-color:transparent; /* Semi-transparent background */
+            color: white;
+            text-align: center;
+        }
+
+        .about-us h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Features Section with Cards */
+        .features {
+            padding: 60px;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .feature-card {
+            background-color: black;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            margin: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 15px black;
+        }
+
+        .feature-card i {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #19d7f8;
+        }
+
+        .feature-card h3 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Feature Bar Section */
+        .feature-bar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: transparent;
+            padding: 20px;
+        }
+
+        .feature-item {
+            text-align: center;
+            color: white;
+        }
+
+        .feature-item i {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .feature-item span {
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* Footer Section */
+        .footer {
+            padding: 20px;
+            background-color: transparent; /* Semi-transparent */
+            color: white;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .banner {
+                background-attachment: scroll;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="menu">
+        <div class="logo">
+            <img src="logo.png" alt="Logo"> <!-- Replace with your logo -->
+        </div>
+        <ul>
+            <li class="active">Home</li>
+            <li>Service</li>
+            <li>Product</li>
+            <li>Contact</li>
+        </ul>
+        <a href="#" class="signup-btn">Sign_Up</a>
+    </div>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="app-text">
+            <h1>BITCOIN</h1>
+            <p>Bitcoin: The Future of Digital Currency"
+            "Join the revolution of decentralized finance with Bitcoin. A digital currency that's more than just an investment—it's a way to take control of your financial freedom. With Bitcoin, transactions happen directly between peers, eliminating the need for middlemen like banks or governments.Its secure, transparent, and global nature makes it the future of currency."</p><br>
+            <h4>"Start Your Bitcoin Journey Today!"</h4>
+            <div class="play-btn">
+                <div class="play-btn-inner">
+                    <i class="fa fa-play"></i>
+                </div>
+                <a href="#" class="learn-more-btn">LEARN MORE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>We are a team of professionals dedicated to providing top-notch services. Our mission is to enhance your business with innovative solutions and exceptional service.
+            "We are a passionate team of tech enthusiasts, finance experts, and digital pioneers committed to making Bitcoin accessible to everyone. Our goal is to bridge the gap between traditional finance and the new, decentralized world. We believe in the power of blockchain technology to democratize the financial system, offering transparency, security, and efficiency to individuals and businesses alike.
+            At [Your Company Name], we provide education, tools, and support to help people navigate and thrive in the cryptocurrency space. Whether you're new to Bitcoin or a seasoned trader, we're here to assist you every step of the way on your digital finance journey."</p>
+    </section>
+
+    <!-- Features Section with Cards -->
+    <section class="features">
+        <div class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Feature One</h3>
+            <p>High-quality security solutions that safeguard your data and ensure smooth operations.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-cogs"></i>
+            <h3>Feature Two</h3>
+            <p>Custom-built tools designed to streamline your business processes and increase productivity.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-users"></i>
+            <h3>Feature Three</h3>
+            <p>Exceptional customer service, supporting you every step of the way.</p>
+        </div>
+    </section>
+
+    <div class="feature-bar">
+        <div class="feature-item">
+            <i class="fas fa-share-alt"></i>
+            <span>SHARE TO</span>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-newspaper"></i>
+            <span>RECENT NEWS</span>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-chart-line"></i>
+            <span>ANALYTICS</span>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-wallet"></i>
+            <span>WALLET</span>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Your Bitcoin Website. All Rights Reserved.</p>
+    </div>
+
+</body>
+
+</html>
