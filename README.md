@@ -77,6 +77,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Shake Button](#shake-button-1)
 - [Shuffling squares](#shuffling-squares)
 - [Star Wars Intro](#star-wars-intro)
+- [Sticky_Header](#sticky-header)
 - [Switch](#switch)
 - [Tabs](#tabs)
 - [Thankyou-Animation](#thankyou-animation)
@@ -816,6 +817,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="Coffee-Animation"></a>Coffee-Animation
 
 [<img src="https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/7d15c275-5210-4c2e-8530-eb073251a39f" height="230" title="coffee-animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/7d15c275-5210-4c2e-8530-eb073251a39f)
+
+**[⬆ back to top](#quick-links)**
+
+
+=======
+&nbsp;
+
+## <a id="sticky-header"></a>sticky-header
+
+[<img src="https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/master/stickyheader/output.jpg?raw=true" height="230" title="coffee-animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/master/stickyheader/output.jpg?raw=true)
 
 **[⬆ back to top](#quick-links)**
 
