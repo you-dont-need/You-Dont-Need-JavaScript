@@ -32,6 +32,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Analog-clock](#analogclock)
 - [Animated Button](#animated-btn)
 - [Animated Buttons](#animated-buttons)
+- [Blog Post Cards](#Blogcard)
 - [Bonfire](#bonfire)
 - [Bubble](#bubble)
 - [Burger Menu](#burger-menu)
@@ -57,6 +58,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Image Gallery](#image-gallery)
 - [infinite-carousel](#infinite-carousel)
 - [Info on hover/ Popover](#info-on-hover-popover)
+- [Interactive Image Gallery](#interactive-image)
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
 - [Loaders](#loaders)
@@ -100,6 +102,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 [<img src="images/toggle1.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
 [<img src="images/toggle2.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
+
+**[⬆ back to top](#quick-links)**
+
+## <a id="Blogcards"></a>Blog Post Cards
+
+[<img src="images/neuo.png" height="230" title="Demo 1">](http://url-to-page)
+[<img src="images/claycards.png" height="230" title="Demo 2">](http://url-to-page)
+[<img src="images/glasscards.png" height="230" title="Demo 3">](http://url-to-page)
 
 **[⬆ back to top](#quick-links)**
 
@@ -259,6 +269,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/gallery3.png" height="230" title="Demo 2">](https://codepen.io/olgamozejko/pen/yLjwyye)
 [<img src="images/vertical-gallery.gif" height="230" title="Demo 4">]()
 [<img src="./Author/a-img2.jpg" height="230" title="Demo 5">]()
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="interactive-image"></a>Interactive Image Gallery 
+[<img src="./images/interactive-image.png" height="230" title="Demo Image">]
+    <br>
+[<video src="./demo video/interactive-image.mov" height="230" title="Demo Video">]
 
 **[⬆ back to top](#quick-links)**
 
