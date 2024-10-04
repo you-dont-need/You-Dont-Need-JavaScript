@@ -57,6 +57,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Image Gallery](#image-gallery)
 - [infinite-carousel](#infinite-carousel)
 - [Info on hover/ Popover](#info-on-hover-popover)
+- [Interactive Image Gallery](#interactive-image)
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
 - [Loaders](#loaders)
@@ -259,6 +260,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/gallery3.png" height="230" title="Demo 2">](https://codepen.io/olgamozejko/pen/yLjwyye)
 [<img src="images/vertical-gallery.gif" height="230" title="Demo 4">]()
 [<img src="./Author/a-img2.jpg" height="230" title="Demo 5">]()
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="interactive-image"></a>Interactive Image Gallery 
+[<img src="./images/interactive-image.png" height="230" title="Demo Image">]
+    <br>
+[<video src="./demo video/interactive-image.mov" height="230" title="Demo Video">]
 
 **[⬆ back to top](#quick-links)**
 
