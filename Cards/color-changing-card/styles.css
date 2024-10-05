@@ -1,0 +1,48 @@
+.container {
+  background-color: black;
+  animation: colorChange 20s infinite;
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid;
+  border-color: aliceblue;
+  border-width: 4px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large;
+}
+.outer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: lightseagreen;
+  }
+
+  20% {
+    background-color: lightgoldenrodyellow;
+  }
+
+  40% {
+    background-color: lightsalmon;
+  }
+
+  60% {
+    background-color: lightgray;
+  }
+
+  80% {
+    background-color: lightskyblue;
+  }
+
+  100% {
+    background-color: tomato;
+  }
+}
