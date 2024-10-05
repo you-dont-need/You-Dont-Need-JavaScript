@@ -1,19 +1,20 @@
-*{
-    margin:0px;
+* {
+    margin: 0;
     box-sizing: border-box;
-    padding: 0px;
+    padding: 0;
 }
-.container{
+
+.container {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: aliceblue;
-
 }
-.clock{
+
+.clock {
     height: 250px;
-    width:250px;
+    width: 250px;
     background-image: url("clock.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,28 +22,27 @@
     border: 10px solid black;
     box-shadow: 10px 10px 8px 10px #888888;
     position: relative;
-    
-    
-
-
 }
-.clock::before{
+
+.clock::before {
     content: '';
     position: absolute;
-    top:50% ; left: 50%;
-    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: #f0f0f0;
     height: 22px;
-    width:22px;
+    width: 22px;
     border: 5px solid #f0f0f0;
     box-shadow: 10px 10px 8px 10px #888888;
     z-index: 10;
     border-radius: 50%;
 }
 
-.second{
+/* Second hand */
+.second {
     position: absolute;
-    top:27px ;
+    top: 27px;
     left: 50%;
     transform: translateX(-50%);
     height: 115px;
@@ -50,58 +50,63 @@
     background: #ff7675;
     border-radius: 100% 100% 5px 5px;
     animation: second 60s steps(60) infinite;
-    transform-origin: 50% 75%;
-    z-index: 2;
+    transform-origin: bottom;
+    z-index: 3;
 }
-@keyframes second{
-    0%{
+
+@keyframes second {
+    0% {
         transform: translateX(-50%) rotateZ(0deg);
     }
-    100%{
+    100% {
         transform: translateX(-50%) rotateZ(360deg);
     }
- }
+}
 
-
- .minute{
+/* Minute hand */
+.minute {
     position: absolute;
-    top:15px ;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
     height: 100px;
     width: 5px;
     background: #1592d6;
-    border-radius:50px;
-    animation:minute 3600s steps(3600) infinite;
-    transform-origin:bottom;
-    z-index: 1;
+    border-radius: 50px;
+    animation: minute 3600s steps(3600) infinite;
+    transform-origin: bottom;
+    z-index: 2;
 }
-@keyframes minute{
-    0%{
+
+@keyframes minute {
+    0% {
         transform: translateX(-50%) rotateZ(0deg);
     }
-    100%{
+    100% {
         transform: translateX(-50%) rotateZ(360deg);
     }
- }
+}
 
- .hour{
+/* Hour hand */
+.hour {
     position: absolute;
-    top:55px ;
+    top: 55px;
     left: 50%;
     transform: translateX(-50%);
     height: 60px;
     width: 6px;
     background: #d615bc;
-    border-radius:50px;
-    animation:hour 216000s steps(216000) infinite;
-    transform-origin:bottom
+    border-radius: 50px;
+    animation: hour 43200s steps(43200) infinite;
+    transform-origin: bottom;
+    z-index: 1;
 }
-@keyframes hour{
-    0%{
+
+@keyframes hour {
+    0% {
         transform: translateX(-50%) rotateZ(0deg);
     }
-    100%{
+    100% {
         transform: translateX(-50%) rotateZ(360deg);
     }
- }
+}
