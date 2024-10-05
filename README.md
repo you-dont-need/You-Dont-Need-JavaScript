@@ -28,7 +28,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
     - [Style Guide:](#style-guide)
   - [Quick links](#quick-links)
   - [CSS Toggle](#css-toggle)
-  - [Blog Post Cards](#Blogcards)
+  - [Blog Post Cards](#blog-cards)
   - [Accordion / Toggle](#accordion--toggle)
   - [Animated Buttons](#animated-buttons)
   - [Captain America Shield](#captain-america-shield)
@@ -50,7 +50,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Burger Menu](#burger-menu)
   - [Button Animation](#button-animation)
   - [Compass Loader](#compass-loader)
-  - [Faq Section](#Faqsection)
+  - [Faq Section](#Faq-section)
   - [Fancy Menu](#fancy-menu)
   - [Footer](#footer)
   - [Modal/Popup](#modalpopup)
@@ -135,7 +135,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
-## <a id="Blogcards"></a>Blog Post Cards
+## <a id="blog-cards"></a>Blog Post Cards
 
 [<img src="images/neuo.png" height="230" title="Demo 1">](http://url-to-page)
 [<img src="images/claycards.png" height="230" title="Demo 2">](http://url-to-page)
@@ -143,7 +143,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
-## <a id="Faqsection"></a>Faq Section 
+## <a id="Faq-section"></a>Faq Section 
 
 [<img src="images/faqclay.png" height="230" title="Demo 1">](http://url-to-page)
 [<img src="images/faqneuo.png" height="230" title="Demo 2">](http://url-to-page)
