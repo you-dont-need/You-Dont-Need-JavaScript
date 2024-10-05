@@ -12,10 +12,11 @@
 			align-items: center;
 			font-family: Arial, Helvetica, sans-serif;
 			margin: 0;
-			padding: 20px;
+			padding: 80px;
 			box-sizing: border-box;
-			transition: background-color 0.3s, color 0.3s;
+			transition: background-color 0.2s, color 0.2s;
 			min-height: 100vh;
+			font-size: 16px;
 		}
 
 		body.light-mode {
@@ -38,7 +39,7 @@
 			border: none;
 			border-radius: 20px;
 			cursor: pointer;
-			transition: background-color 0.3s ease;
+			transition: background-color 0.2s ease;
 			z-index: 1000;
 		}
 
@@ -47,14 +48,13 @@
 		}
 
 		#pageSection {
-			margin: 5px 20px;
 			max-width: 1200px;
-			width: 100%;
+			width: 95%;
 			border: 5px solid #23aa04;
 			border-radius: 30px;
-			padding: 2%;
+			padding: 20px;
 			text-align: center;
-			transition: background-color, color;
+			transition: background-color 0.2s, color 0.2s, border 0.2s, padding 0.2s, margin 0.2s;
 		}
 
 		.dark-mode #pageSection {
@@ -71,7 +71,7 @@
 			border-collapse: collapse;
 			width: 100%;
 			border-radius: 10px;
-			transition: background-color 0.3s, color 0.3s;
+			transition: background-color 0.2s, color 0.2s;
 		}
 
 		#pages tbody {
@@ -129,7 +129,7 @@
 			background-color: #f0f0f0;
 			border-radius: 5px;
 			text-decoration: none;
-			transition: background-color 0.3s, color 0.3s;
+			transition: background-color 0.2s, color 0.2s;
 			border: 1px solid #c7c7c7;
 		}
 
@@ -150,18 +150,25 @@
 
 		@media (max-width: 768px) {
 			body {
-				padding: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
 				min-height: auto;
+				padding-top: 40px;
+				padding-bottom: 40px;
 			}
 
 			#pageSection {
-				margin: 5px;
-				padding: 15px;
+				border: none;
+				border-radius: 0;
+				padding: 10px;
+				width: 100%;
+				margin: 0;
 			}
 
 			#pages td,
 			#pages th {
 				padding: 8px;
+				font-size: 14px;
 			}
 
 			.pageUrl a {
@@ -187,13 +194,17 @@
 		}
 
 		h1 {
-			font-size: 2.5em;
+			font-size: 2rem;
 			color: #04aa6d;
 			margin-bottom: 10px;
-			margin-top: 10px;
 		}
 
-		.dark-mode h1 {
+		a {
+			text-decoration: none;
+			color: #242424;
+		}
+
+		.dark-mode h1 a {
 			color: #23aa04;
 		}
 
@@ -206,11 +217,72 @@
 		.dark-mode .description {
 			color: #b0b0b0;
 		}
+
+		/* New styles for the dark mode toggle */
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+		.dark-mode-toggle {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			z-index: 1000;
+		}
+
+		.dark-mode-toggle label {
+			position: relative;
+			width: 80px;
+			height: 40px;
+			display: block;
+			background: #d9d9d9;
+			border-radius: 100px;
+			cursor: pointer;
+			box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.2), inset 0px -5px 15px rgba(255, 255, 255, 0.2);
+		}
+
+		.dark-mode-toggle label:after {
+			content: '';
+			position: absolute;
+			height: 34px;
+			width: 34px;
+			background: #f2f2f2;
+			border-radius: 100px;
+			top: 3px;
+			left: 3px;
+			transition: 0.5s;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		.dark-mode-toggle input:checked~label:after {
+			left: 74px;
+			transform: translateX(-100%);
+			background: linear-gradient(180deg, #777, #3a3a3a);
+		}
+
+		.dark-mode-toggle input:checked~label {
+			background: #242424;
+		}
+
+		.dark-mode-toggle input {
+			display: none;
+		}
+
+		/* Remove the old button styles */
+		#toggleButton {
+			display: none;
+		}
 	</style>
 </head>
 
 <body class="light-mode">
-	<button id="toggleButton">🌙 Dark Mode</button>
+	<!-- Remove the old button -->
+	<!-- <button id="toggleButton">🌙 Dark Mode</button> -->
+
+	<!-- Add the new dark mode toggle -->
+	<div class="dark-mode-toggle">
+		<input type="checkbox" id="dark-mode">
+		<label for="dark-mode"></label>
+	</div>
+
 	<section id="pageSection">
 		<div id="google_element"></div>
 		<!-- Load Google Translate script over HTTPS and handle errors -->
@@ -234,7 +306,7 @@
 			}
 		</script>
 		<header>
-			<h1>You Dont Need JavaScript</h1>
+			<h1><a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript">You Dont Need JavaScript</a></h1>
 			<p class="description">Explore the power of pure CSS with our collection of interactive demos and examples.
 			</p>
 		</header>
@@ -383,21 +455,17 @@
 			s0.parentNode.insertBefore(s1, s0);
 		})();
 	</script>
+
 	<!--End of Tawk.to Script-->
 
 	<noscript>You need to enable JavaScript to run this app.</noscript>
 	<script>
-		const toggleButton = document.getElementById("toggleButton");
+		const darkModeToggle = document.getElementById("dark-mode");
 		const body = document.body;
 
-		toggleButton.addEventListener("click", () => {
-			if (body.classList.contains("light-mode")) {
-				body.classList.replace("light-mode", "dark-mode");
-				toggleButton.textContent = "☀️ Light Mode";
-			} else {
-				body.classList.replace("dark-mode", "light-mode");
-				toggleButton.textContent = "🌙 Dark Mode";
-			}
+		darkModeToggle.addEventListener("change", () => {
+			if (darkModeToggle.checked) body.classList.replace("light-mode", "dark-mode");
+			else body.classList.replace("dark-mode", "light-mode");
 		});
 	</script>
 </body>
