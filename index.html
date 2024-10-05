@@ -9,7 +9,9 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				font-family: Arial, Helvetica, sans-serif;
+				font-family: sans-serif;
+				letter-spacing: -1px;
+				font-size: 20px;
 			}
 			.dark-mode {
 				background-color: #121212;
@@ -25,33 +27,35 @@
 				right: 20px;
 				padding: 10px 20px;
 				background-color: #23aa04;
-				color: white;
+				color: black;
 				border: none;
 				border-radius: 20px;
 				cursor: pointer;
-				transition: background-color 0.3s ease;
+				transition: background-color 0.2s ease;
+				font-family:sans-serif;
 			}
 			#toggleButton:hover {
 				background-color: #1e8f03;
 			}
 			#pageSection {
 				margin: 5px 20px;
-				max-width: 1000px;
-				border: 5px solid #23aa04;
-				border-radius: 30px;
-				padding: 2%;
+				max-width: 1200px;
+				border: 2px solid #23aa04;
+				border-radius: 15px;
+				padding: 10px 20px;
 				text-align: center;
 				overflow: auto;
 				max-height: 100vh;
+				padding-bottom: 25px;
 			}
 			#pageSection p {
 				font-size: 18px;
 			}
 			#pages {
-				font-family: Arial, Helvetica, sans-serif;
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
 				border-collapse: collapse;
 				width: 100%;
-				border-radius: 10px;
+				border-radius: 8px;
 			}
 			#pages tbody {
 				border-radius: 10px;
@@ -59,19 +63,21 @@
 			#pages td,
 			#pages th {
 				padding: 8px;
+				font-size: 18px;
 			}
 			#pages tr:nth-child(even) {
-				background-color: #f2f2f2;
-			}
-			#pages tr:hover {
-				background-color: #ddd;
+				/* background-color: #f2f2f2; */
+				background-color: rgba(189, 255, 189, 0.372);
 			}
 			#pages th {
 				padding-top: 12px;
+				padding-left: 20px;
 				padding-bottom: 12px;
 				text-align: left;
 				background-color: #04aa6d;
 				color: white;
+				font-weight: 200;
+				font-size: 18px;
 			}
 			.pageUrl {
 				grid-template-columns: repeat(7, 1fr);
@@ -101,13 +107,36 @@
 				color: #ffffff;
 			}
 			.dark-mode #pages tr:nth-child(even) {
-				background-color: #444;
+				background-color: #272727;
 			}
-			.dark-mode #pages tr:hover {
-				background-color: #555;
+
+			/*New changes*/
+			.pageUrl a{
+				border: 1px solid green;
+				border-radius: 10px;
+				padding: 10px 20px;
+				text-decoration: none;
+				transition: all ease-in-out 0.15s;
+				font-size: 16px;
 			}
-			.dark-mode #pages th {
-				background-color: #1e8f03;
+			.pageUrl a:hover{
+				background-color: rgba(0, 0, 0, 0.7);
+				border: none;
+				color: white;
+			}
+			.description{
+				margin-top: -15px;
+			}
+			.author{
+				background-color: #04aa6d;
+				color: white;
+			}
+			.author a{
+				color:white;
+				border: 1px solid white;
+			}
+			.author a:hover{
+				border: none;
 			}
 		</style>
 	</head>
@@ -225,7 +254,7 @@
 						<a href="./misc/interactive-image-gallery.html">Interactive Image Gallery</a>
 					</td>
 				</tr>
-				<tr>
+				<tr class="author">
 					<td>Author</td>
 					<td class="pageUrl">
 						<a href="./Author/Author-page.html">About</a>
