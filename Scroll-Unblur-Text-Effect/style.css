@@ -1,0 +1,56 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.scroll-container {
+    height: 200vh;
+    scroll-timeline: --section block;
+}
+
+.container {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.word {
+    --pxPerWord: 20vh;
+    --start: calc(var(--i) * var(--pxPerWord));
+    --end: calc((var(--i) + 1) * var(--pxPerWord));
+    display: inline-block;
+    filter: blur(20px);
+    opacity: 0;
+    animation: fx linear both;
+    animation-timeline: scroll(root);
+    animation-range: var(--start) var(--end);
+}
+
+@keyframes fx {
+    to {
+        filter: blur(0);
+        opacity: 1;
+    }
+}

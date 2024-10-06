@@ -25,6 +25,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## Quick links
 
 - [You Don't Need JavaScript](#you-dont-need-javascript)
+- [Website Demo Using HTML CSS](#WebsiteDemo)
 - [Style Guide:](#style-guide)
 - [Quick links](#quick-links)
 - [Accordion / Toggle](#accordion--toggle)
@@ -69,6 +70,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Parallax scrolling](#parallax-scrolling)
 - [Pendulum](#Pendulum)
 - [Playing Card Animation](#playing-card-animation)
+- [ProfileCards](#ProfileCards)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
 - [Ripple Effect](#ripple-effect)
 - [Scary animation](#scary-animation)
@@ -78,6 +80,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Shuffling squares](#shuffling-squares)
 - [Star Wars Intro](#star-wars-intro)
 - [Switch](#switch)
+- [Tables](#css-tables)
 - [Tabs](#tabs)
 - [Thankyou-Animation](#thankyou-animation)
 - [Todo List](#todo-list)
@@ -92,12 +95,130 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Sliced Button](#slicedbutton)
 - [DVD Screen Saver](#dvd-screen-saver)
 - [RotateSquare](#RotateSquare)
+  - [Style Guide:](#style-guide)
+  - [Quick links](#quick-links)
+  - [CSS Toggle](#css-toggle)
+  - [Blog Post Cards](#blog-cards)
+  - [Accordion / Toggle](#accordion--toggle)
+  - [Animated Buttons](#animated-buttons)
+  - [Captain America Shield](#captain-america-shield)
+  - [Carousel](#carousel)
+  - [Counter of checked check-boxes](#counter-of-checked-check-boxes)
+  - [Flip on click](#flip-on-click)
+  - [Flip on click](#flip-on-click-1)
+  - [Animated Box](#animated-box)
+  - [Analog-clock](#analog-clock)
+  - [Font-Face (Latin)](#font-face-latin)
+  - [Website Demo](#website-demo)
+  - [Travelling Website](#travelling-website)
+  - [Info on hover/ Popover](#info-on-hover-popover)
+  - [Image Gallery](#image-gallery)
+  - [Interactive Image Gallery](#interactive-image-gallery)
+  - [Loaders](#loaders)
+  - [Dropdown Menu](#dropdown-menu)
+  - [Mobile menu off canvas](#mobile-menu-off-canvas)
+  - [Burger Menu](#burger-menu)
+  - [Button Animation](#button-animation)
+  - [Compass Loader](#compass-loader)
+  - [Faq Section](#Faq-section)
+  - [Fancy Menu](#fancy-menu)
+  - [Footer](#footer)
+  - [Modal/Popup](#modalpopup)
+  - [Mouse tracking](#mouse-tracking)
+  - [NavBar](#navbar)
+  - [Parallax scrolling](#parallax-scrolling)
+  - [Tabs](#tabs)
+  - [Todo List](#todo-list)
+  - [Tooltips](#tooltips)
+  - [Treeview](#treeview)
+  - [Twitter Heart Animation](#twitter-heart-animation)
+  - [Book Animation](#book-animation)
+  - [Dynamic Image Colorizing](#dynamic-image-colorizing)
+  - [DarkMode](#darkmode)
+  - [Ripple Effect](#ripple-effect)
+  - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
+  - [A login Page with Glassmorphism Effect](#a-login-page-with-glassmorphism-effect)
+  - [Neumorphism Card Design](#neumorphism-card-design)
+  - [Neon Button](#neon-button)
+  - [Neon Card](#neon-card)
+  - [Shake Button](#shake-button)
+  - [Shake Button](#shake-button-1)
+  - [Dog Box Animation](#dog-box-animation)
+  - [Thankyou-Animation](#thankyou-animation)
+  - [Square\_rotation\_animation (Latin)](#square_rotation_animation-latin)
+  - [Switch](#switch)
+  - [Bonfire](#bonfire)
+  - [Scenary](#scenary)
+  - [Bubble](#bubble)
+  - [Flower](#flower)
+  - [Jumping Ball](#jumping-ball)
+  - [Light Bulb Animation](#light-bulb-animation)
+  - [City animation footer](#city-animation-footer)
+  - [Smoke](#smoke)
+  - [Loader](#loader)
+  - [Spiner](#spiner)
+  - [Fire](#fire)
+  - [Flame](#flame)
+  - [Shuffling squares](#shuffling-squares)
+  - [Floating-labelV2](#floating-labelv2)
+  - [scary-animation](#scary-animation)
+  - [infinite-carousel](#infinite-carousel)
+- [](#)
+  - [growing-flower](#growing-flower)
+  - [Playing Card Animation](#playing-card-animation)
+  - [Star Wars Intro](#star-wars-intro)
+  - [Gradient Animation](#gradient-animation)
+  - [Zoom when hover](#zoom-when-hover)
+  - [Floating-labelV2](#floating-labelv2-1)
+  - [CSS Tables](#css-tables)
+  - [](#-1)
+  - [3D Transform](#3d-transform)
+  - [](#-2)
+  - [Animated Button](#animated-button)
+  - [Css FLEX](#css-flex)
+  - [](#-3)
+  - [Coffee-Animation](#coffee-animation)
+  - [Basketball-Animation](#basketball-animation)
+  - [Business-Card](#business-card)
+  - [SolarSystem](#solarsystem)
+- [**⬆ back to top**](#-back-to-top)
+  - [Pendulum](#pendulum)
+- [**⬆ back to top**](#-back-to-top-1)
+  - [SlicedButton](#slicedbutton)
+- [**⬆ back to top**](#-back-to-top-2)
+  - [Rating Star](#rating-star)
+- [**⬆ back to top**](#-back-to-top-3)
+  - [DVD Screen Saver](#dvd-screen-saver)
+- [**⬆ back to top**](#-back-to-top-4)
+  - [RotateSquare](#rotatesquare)
+  - [Stickman Animation](#stickman-animation)
+  - [Clock App](#clock-app)
+  - [3d card flip transition](#3d-card-flip-transition)
+- [\`\`\`](#-4)
+  - [Contributors](#contributors)
+  - [Contributing](#contributing)
 
 
 ## <a id="toggle"></a>CSS Toggle
 
 [<img src="images/toggle1.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
 [<img src="images/toggle2.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
+
+**[⬆ back to top](#quick-links)**
+
+## <a id="blog-cards"></a>Blog Post Cards
+
+[<img src="images/neuo.png" height="230" title="Demo 1">](http://url-to-page)
+[<img src="images/claycards.png" height="230" title="Demo 2">](http://url-to-page)
+[<img src="images/glasscards.png" height="230" title="Demo 3">](http://url-to-page)
+
+**[⬆ back to top](#quick-links)**
+
+## <a id="Faq-section"></a>Faq Section 
+
+[<img src="images/faqclay.png" height="230" title="Demo 1">](http://url-to-page)
+[<img src="images/faqneuo.png" height="230" title="Demo 2">](http://url-to-page)
+[<img src="images/faqglass.png" height="230" title="Demo 3">](http://url-to-page)
 
 **[⬆ back to top](#quick-links)**
 
@@ -145,6 +266,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/slideshow2.png" height="230" title="Demo 1">](http://codepen.io/SitePoint/pen/MyPVdK)
 [<img src="images/slideshow.png" height="230" title="Demo 2">](https://codepen.io/cavico/pen/yOjwya)
 [<img src="images/slideshow3.png" height="230" title="Demo 3">](https://codepen.io/FabianK/pen/zJLLrR)
+[<img src="images/carousel.png" height="230" title="Demo 4">](https://codepen.io/NiklasKnaack/pen/abrOMLY)
 [<img src="./images/Infinite-carousel-purnasth.gif" alt="Carousel-Nepal" height="230" title="Carousel-Nepal">](https://codepen.io/purnaaa/pen/NWoWeBB)
 
 **[⬆ back to top](#quick-links)**
@@ -167,16 +289,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="Flip"></a>Flip on click
 
 [<img src="images/flipper.png" height="230" title="Demo">](https://codepen.io/RuudBurger/pen/bwjry)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-&nbsp;
-
-## <a id="Flip"></a>Flip on click
-
-[<img src="images/cssTable.png" height="230" title="Css Table Demo">](https://codepen.io/TAPAS-SINGHAL/pen/abXZNWR)
 
 **[⬆ back to top](#quick-links)**
 
@@ -234,6 +346,31 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
+## <a id="WebsiteDemo"></a>Website Demo
+
+[<img src="images/Website_demo.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo.png)
+[<img src="images/Website_demo_2.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo_2.png)
+[<img src="images/Website_demo_3.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo_3.png)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="Travel-Website"></a>Travelling Website
+
+[<img src="images/Travel_01.png" height="250" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Travel_01.png)
+[<img src="images/Travel_02.png" height="250" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Travel_02.png)
+[<img src="images/Travel_03.png" height="250" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Travel_03.png)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+
 ## <a id="Info"></a>Info on hover/ Popover
 
 [<img src="images/tooltips.png" height="230" title="Demo 1">](https://codepen.io/monika-sivakumar/pen/rNoqxVX)
@@ -254,6 +391,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/gallery3.png" height="230" title="Demo 2">](https://codepen.io/olgamozejko/pen/yLjwyye)
 [<img src="images/vertical-gallery.gif" height="230" title="Demo 4">]()
 [<img src="./Author/a-img2.jpg" height="230" title="Demo 5">]()
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="interactive-image"></a>Interactive Image Gallery 
+[<img src="./images/interactive-image.png" height="230" title="Demo Image">]
+    <br>
+[<video src="./demo video/interactive-image.mov" height="230" title="Demo Video">]
 
 **[⬆ back to top](#quick-links)**
 
@@ -738,8 +886,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 =======
 
-> > > =======
-
 [<img src="images/Scary-animation.gif" height="230" title="scary-animation">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
 
 **[⬆ back to top](#quick-links)**
@@ -793,7 +939,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id= "Css Tables"></a>CSS Tables
 
-## ![Screenshot 2023-10-23 144658](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/d73a9af8-5470-4a88-bfc9-a5e8430aba65)
+## [![Screenshot 2023-10-23 144658](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/d73a9af8-5470-4a88-bfc9-a5e8430aba65)](https://codepen.io/TAPAS-SINGHAL/pen/abXZNWR)
 
 =======
 
@@ -882,12 +1028,48 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 =======
 &nbsp;
+## <a id="ProfileCards"></a>ProfileCards
+
+![img_source](images/profileCards/card1.png)
+![img_source](images/profileCards/card2.png)
+![img_source](images/profileCards/card3.png)
+![img_source](images/profileCards/card4.png)
+![img_source](images/profileCards/card5.png)
+![img_source](images/profileCards/card6.png)
+
+**[⬆ back to top](#quick-links)**
+=======
+&nbsp;
 
 ## <a id="RotateSquare"></a>RotateSquare
 
 [<img src="images/rotateSquare" height="230" title="Demo 1">]
 
 **[⬆ back to top](#quick-links)**
+
+## <a id="stickman"></a>Stickman Animation 
+<img src="./images/stickman.png" height="200" title="3d card flip transtion demo gif">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="Clock-App"></a>Clock App
+![img_source](image.png)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="3d-card-flip-transition"></a>3D card flip transition
+[<img src="./images/3d-card-flip-transition.gif" height="200" title="Demo Image">]
+
+**[⬆ back to top](#quick-links)**
+
 ```
 =======
 &nbsp;

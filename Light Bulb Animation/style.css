@@ -87,3 +87,21 @@ body {
     opacity: 0; /* Hidden at end */
   }
 }
+
+
+
+.toggle-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #555;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: #777;
+}
+
