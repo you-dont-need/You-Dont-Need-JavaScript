@@ -101,8 +101,9 @@ body {
     height: 22px;
 }
 img.apple {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
+    p
 }
 
 .text-field.lock{
@@ -133,8 +134,8 @@ img.apple {
 
 .email{
     height: 30px;
-    width: 40px;
-    padding-left: -20px;
+    width: 30px;
+    padding-left: -10px;
 }
 
 .lock{

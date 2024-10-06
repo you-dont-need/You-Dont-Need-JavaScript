@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.05), -20px -20px 60px rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-toggle {
+    display: none;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.5);
+    border: 2px solid transparent;
+}
+
+.faq-question:hover,
+.faq-toggle:checked + .faq-question {
+    background-color: #e8e8e8;
+    border-color: #d0d0d0;
+    transform: translateY(-2px);
+}
+
+.faq-question .icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-toggle:checked + .faq-question .icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease, opacity 0.5s ease;
+    background-color: #ffffff;
+    border-radius: 0 0 15px 15px;
+    opacity: 0;
+}
+
+.faq-toggle:checked + .faq-question + .faq-answer {
+    max-height: 1000px;
+    padding: 15px 20px;
+    opacity: 1;
+    box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.05), inset -6px -6px 12px rgba(255, 255, 255, 0.5);
+}
+
+.faq-answer p {
+    color: #333;
+    margin: 0;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.faq-toggle:checked + .faq-question + .faq-answer p {
+    animation: scaleUp 0.5s ease forwards;
+}
