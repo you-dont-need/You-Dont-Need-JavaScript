@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hover slide Card</title>
+  </head>
+  <body class="bg-black p-10">
+    <!-- Component By Anoop2005 -->
+    <!-- component start's here -->
+    <div
+      class="relative overflow-hidden w-60 h-60 shadow-2xl shadow-neutral-600 rounded-lg cursor-not-allowed text-2xl font-bold bg-gradient-to-br from-indigo-400 to-black"
+    >
+      <div class="z-10 absolute w-full h-full peer"></div>
+      <div
+        class="absolute peer-hover:-top-20 peer-hover:-left-16 peer-hover:w-[140%] peer-hover:h-[140%] -top-32 -left-16 w-32 h-44 rounded-full bg-indigo-400 transition-all duration-500"
+      ></div>
+      <div
+        class="absolute flex text-xl text-center items-end justify-end peer-hover:right-0 peer-hover:rounded-b-none peer-hover:bottom-0 peer-hover:items-center peer-hover:justify-center peer-hover:w-full peer-hover:h-full -bottom-32 -right-16 w-36 h-44 rounded-full peer-hover:bg-indigo-400 bg-black transition-all duration-500"
+      >
+        Content Here
+      </div>
+      <div class="w-full h-full items-center justify-center flex">
+        Hover Here
+      </div>
+    </div>
+    <!-- component end's here -->
+  </body>
+</html>
