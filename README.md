@@ -123,6 +123,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [RotateSquare](#rotatesquare)
   - [Stickman Animation](#stickman-animation)
   - [Clock App](#clock-app)
+  - [3d card flip transition](#3d-card-flip-transition)
 - [\`\`\`](#-4)
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -965,7 +966,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ## <a id="stickman"></a>Stickman Animation 
-[<img src="./images/stickman.png" height="230" title="Demo Image">]
+<img src="./images/stickman.png" height="200" title="3d card flip transtion demo gif">
 
 **[⬆ back to top](#quick-links)**
 
@@ -981,6 +982,11 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 &nbsp;
+
+## <a id="3d-card-flip-transition"></a>3D card flip transition
+[<img src="./images/3d-card-flip-transition.gif" height="200" title="Demo Image">]
+
+**[⬆ back to top](#quick-links)**
 
 ```
 =======
