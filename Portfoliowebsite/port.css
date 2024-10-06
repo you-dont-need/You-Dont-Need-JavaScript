@@ -152,10 +152,12 @@ ul li a:hover{
     background-color:rgb(51, 3, 129) ;
     border-radius: 5px;
     color: aliceblue;
+    text-decoration: none;
     
 }
 .btn:hover{
     color: darkgrey;
+    cursor: pointer; ;
 }
 .footer{
     display:flex;
@@ -167,6 +169,12 @@ footer{
     height:140px;
     padding: 30px 18px;
     
+}
+.service{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
 }
 .patent{
     display: flex;
