@@ -1,13 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
-    font-size: 65%;
-}
-body{
+body {
     height: 100vh;
     background-color: black;
     display: flex;
@@ -15,27 +12,30 @@ body{
     align-items: center;
 }
 
-.circle{
+.circle {
     width: 40rem;
     height: 40rem;
-    background-color: white;
+    background-color: #6E6071;
     border-radius: 50%;
-    box-shadow: 0 0 0 5rem red;
+    box-shadow: 0 0 0 5rem #282B59;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
 }
 
-.center{
+.center {
     width: 20rem;
     height: 20rem;
     background-color: blue;
     border-radius: 50%;
-    box-shadow: 0 0 0 5rem red;
+    box-shadow: 0 0 0 5rem #282B59;
     position: relative;
+    transition: all 0.5s ease;
 }
 
-.arrow{
+.arrow {
     width: 0rem;
     height: 0rem;
     position: absolute;
@@ -45,19 +45,95 @@ body{
     left: 0;
 }
 
-.arrow:first-child{
+.arrow:first-child {
     top: 5.5rem;
     left: 1rem;
 }
 
-.arrow:nth-child(2){
+.arrow:nth-child(2) {
     transform: rotate(68deg);
     left: -3.5rem;
     top: 3.5rem;
 }
 
-.arrow:last-child{
+.arrow:last-child {
     transform: rotate(-68deg);
     left: 5.5rem;
     top: 3.5rem;
 }
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.center:hover {
+    animation: rotate 0.5s ease-in-out;
+}
+
+@keyframes circleAnimation {
+    0% {
+        background-color: #6E6071;
+        box-shadow: 0 0 0 5rem #282B59;
+    }
+    100% {
+        background-color: white;
+        box-shadow: 0 0 0 5rem red;
+    }
+}
+
+@keyframes centerAnimation {
+    0% {
+        box-shadow: 0 0 0 5rem #282B59;
+    }
+    100% {
+        box-shadow: 0 0 0 5rem #ff0000;
+    }
+}
+
+#animationTrigger:checked + .circle {
+    animation: circleAnimation 1s ease forwards;
+}
+
+#animationTrigger:checked + .circle .center {
+    animation: centerAnimation 1s ease forwards;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #6E6071;
+    }
+    50% {
+        background-color: white;
+    }
+    100% {
+        background-color: #6E6071;
+    }
+}
+
+@keyframes boxShadowChange {
+    0% {
+        box-shadow: 0 0 0 5rem #282B59;
+    }
+    50% {
+        box-shadow: 0 0 0 5rem red;
+    }
+    100% {
+        box-shadow: 0 0 0 5rem #282B59;
+    }
+}
+
+
+input[type="checkbox"]:checked + label.circle {
+    animation: colorChange 1s ease forwards; 
+}
+
+
+input[type="checkbox"]:checked + label.circle {
+    animation: boxShadowChange 1s ease forwards; 
+}
+
