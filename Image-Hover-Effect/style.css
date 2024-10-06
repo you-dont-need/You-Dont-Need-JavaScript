@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Zoom Effect */
+.zoom img {
+    transform: scale(1);
+}
+.zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* Fade Effect */
+.fade::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.fade:hover::after {
+    opacity: 1;
+}
+
+/* Grayscale Effect */
+.grayscale img {
+    filter: grayscale(0);
+}
+.grayscale:hover img {
+    filter: grayscale(100%);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.effect-name {
+    text-align: center;
+    margin-top: 8px;
+    color: #666;
+    font-size: 12px;
+}
