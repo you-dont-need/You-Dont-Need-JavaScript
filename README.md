@@ -25,7 +25,77 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## Quick links
 
 - [You Don't Need JavaScript](#you-dont-need-javascript)
-    - [Style Guide:](#style-guide)
+- [Website Demo Using HTML CSS](#WebsiteDemo)
+- [Style Guide:](#style-guide)
+- [Quick links](#quick-links)
+- [Accordion / Toggle](#accordion--toggle)
+- [Analog-clock](#analogclock)
+- [Animated Button](#animated-btn)
+- [Animated Buttons](#animated-buttons)
+- [Bonfire](#bonfire)
+- [Bubble](#bubble)
+- [Burger Menu](#burger-menu)
+- [Button Animation](#button_letsgo)
+- [Captain America Shield](#captain)
+- [Carousel](#carousel)
+- [Compass Loader](#compassloader)
+- [City animation footer](#city-animation-footer)
+- [Counter of checked check-boxes](#counter-of-checked-check-boxes)
+- [Dog Box Animation](#dog-box-animation)
+- [Dropdown Menu](#dropdown-menu)
+- [Dynamic Image Colorizing](#dynamic-image-colorizing)
+- [Enable dark mode](#Enable-dark-mode)
+- [Fancy Menu](#fancy-menu)
+- [Flip on click](#flip-on-click)
+- [Floating label on Textfield](#floating-label-on-textfield)
+- [Floating Labels V2](#Floating-labelV2)
+- [Font-Face (Latin)](#font-face-latin)
+- [Footer](#footer)
+- [Gradient Animation](#gradient-animation)
+- [growing-flower](#growing-flower)
+- [growing-flower](#growing-flower)
+- [Image Gallery](#image-gallery)
+- [infinite-carousel](#infinite-carousel)
+- [Info on hover/ Popover](#info-on-hover-popover)
+- [Jumping Ball](#jumping-ball)
+- [Light Bulb Animation](#light-bulb-animation)
+- [Loaders](#loaders)
+- [Mobile menu off canvas](#mobile-menu-off-canvas)
+- [Modal/Popup](#modalpopup)
+- [Mouse tracking](#mouse-tracking)
+- [NavBar](#navbar)
+- [Neon Button](#neon-button)
+- [Neon Card](#neon-card)
+- [Neumorphism Card Design](#neumorphism-card-design)
+- [Parallax scrolling](#parallax-scrolling)
+- [Pendulum](#Pendulum)
+- [Playing Card Animation](#playing-card-animation)
+- [ProfileCards](#ProfileCards)
+- [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
+- [Ripple Effect](#ripple-effect)
+- [Scary animation](#scary-animation)
+- [Scenary](#scenary)
+- [Shake Button](#shake-button)
+- [Shake Button](#shake-button-1)
+- [Shuffling squares](#shuffling-squares)
+- [Star Wars Intro](#star-wars-intro)
+- [Switch](#switch)
+- [Tables](#css-tables)
+- [Tabs](#tabs)
+- [Thankyou-Animation](#thankyou-animation)
+- [Todo List](#todo-list)
+- [Tooltips](#tooltips)
+- [Treeview](#treeview)
+- [Twitter Heart Animation](#twitter-heart-animation)
+- [Book Animation](#book-animation)
+- [Zoom when hover](#zoom-when-hover)
+- [Contributors](#contributors)
+- [Contributing](#contributing)
+- [CSS Toggle](#toggle)
+- [Sliced Button](#slicedbutton)
+- [DVD Screen Saver](#dvd-screen-saver)
+- [RotateSquare](#RotateSquare)
+  - [Style Guide:](#style-guide)
   - [Quick links](#quick-links)
   - [CSS Toggle](#css-toggle)
   - [Blog Post Cards](#blog-cards)
@@ -123,6 +193,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [RotateSquare](#rotatesquare)
   - [Stickman Animation](#stickman-animation)
   - [Clock App](#clock-app)
+  - [3d card flip transition](#3d-card-flip-transition)
 - [\`\`\`](#-4)
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -957,6 +1028,18 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 =======
 &nbsp;
+## <a id="ProfileCards"></a>ProfileCards
+
+![img_source](images/profileCards/card1.png)
+![img_source](images/profileCards/card2.png)
+![img_source](images/profileCards/card3.png)
+![img_source](images/profileCards/card4.png)
+![img_source](images/profileCards/card5.png)
+![img_source](images/profileCards/card6.png)
+
+**[⬆ back to top](#quick-links)**
+=======
+&nbsp;
 
 ## <a id="RotateSquare"></a>RotateSquare
 
@@ -965,7 +1048,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ## <a id="stickman"></a>Stickman Animation 
-[<img src="./images/stickman.png" height="230" title="Demo Image">]
+<img src="./images/stickman.png" height="200" title="3d card flip transtion demo gif">
 
 **[⬆ back to top](#quick-links)**
 
@@ -981,6 +1064,11 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 &nbsp;
+
+## <a id="3d-card-flip-transition"></a>3D card flip transition
+[<img src="./images/3d-card-flip-transition.gif" height="200" title="Demo Image">]
+
+**[⬆ back to top](#quick-links)**
 
 ```
 =======
