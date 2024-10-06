@@ -1,268 +1,486 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>You Dont Need Javascript</title>
-		<style>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>You Dont Need Javascript</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: Arial, Helvetica, sans-serif;
+			margin: 0;
+			padding: 80px;
+			box-sizing: border-box;
+			transition: background-color 0.2s, color 0.2s;
+			min-height: 100vh;
+			font-size: 16px;
+		}
+
+		body.light-mode {
+			background-color: #ffffff;
+			color: #000000;
+		}
+
+		body.dark-mode {
+			background-color: #171717;
+			color: #ffffff;
+		}
+
+		#toggleButton {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			padding: 10px 20px;
+			background-color: #23aa04;
+			color: white;
+			border: none;
+			border-radius: 20px;
+			cursor: pointer;
+			transition: background-color 0.2s ease;
+			z-index: 1000;
+		}
+
+		#toggleButton:hover {
+			background-color: #1e8f03;
+		}
+
+		#pageSection {
+			max-width: 1200px;
+			width: 95%;
+			border: 5px solid #23aa04;
+			border-radius: 15px;
+			padding: 30px;
+			text-align: center;
+			transition: background-color 0.2s, color 0.2s, border 0.2s, padding 0.2s, margin 0.2s;
+		}
+
+		.dark-mode #pageSection {
+			background-color: #1e1e1e;
+			border-color: #1e8f03;
+			border-radius: 15px;
+		}
+
+		#pageSection p {
+			font-size: 18px;
+		}
+
+		#pages {
+			font-family: Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			border-radius: 10px;
+			transition: background-color 0.2s, color 0.2s;
+		}
+
+		#pages tbody {
+			border-radius: 10px;
+		}
+
+		#pages td,
+		#pages th {
+			padding: 12px;
+		}
+
+		#pages td:first-child {
+			width: 20%;
+			min-width: 120px;
+		}
+
+		#pages tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		.dark-mode #pages tr:nth-child(even) {
+			background-color: #2a2a2a;
+		}
+
+		#pages tr:hover {
+			background-color: #ddd;
+		}
+
+		.dark-mode #pages tr:hover {
+			background-color: #3a3a3a;
+		}
+
+		#pages th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #04aa6d;
+			color: white;
+		}
+
+		.pageUrl {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		.pageUrl a {
+			display: inline-flex;
+			text-transform: capitalize;
+			font-size: 16px;
+			letter-spacing: 0.5px;
+			padding: 5px 10px;
+			margin: 2px 0;
+			color: #04aa6d;
+			background-color: #f0f0f0;
+			border-radius: 5px;
+			text-decoration: none;
+			transition: background-color 0.2s, color 0.2s;
+			border: 1px solid #c7c7c7;
+		}
+
+		.dark-mode .pageUrl a {
+			color: #23aa04;
+			background-color: #2a2a2a;
+			border-color: #3a3a3a;
+		}
+
+		.pageUrl a:hover {
+			background-color: #04aa6d;
+			color: white;
+		}
+
+		.dark-mode .pageUrl a:hover {
+			background-color: #23aa04;
+		}
+
+		@media (max-width: 768px) {
 			body {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				font-family: Arial, Helvetica, sans-serif;
+				padding-left: 10px;
+				padding-right: 10px;
+				min-height: auto;
+				padding-top: 40px;
+				padding-bottom: 40px;
 			}
-			.dark-mode {
-				background-color: #121212;
-				color: #ffffff;
-			}
-			.light-mode {
-				background-color: #ffffff;
-				color: #000000;
-			}
-			#toggleButton {
-				position: fixed;
-				top: 20px;
-				right: 20px;
-				padding: 10px 20px;
-				background-color: #23aa04;
-				color: white;
-				border: none;
-				border-radius: 20px;
-				cursor: pointer;
-				transition: background-color 0.3s ease;
-			}
-			#toggleButton:hover {
-				background-color: #1e8f03;
-			}
+
 			#pageSection {
-				margin: 5px 20px;
-				max-width: 1000px;
-				border: 5px solid #23aa04;
-				border-radius: 30px;
-				padding: 2%;
-				text-align: center;
-				overflow: auto;
-				max-height: 100vh;
-			}
-			#pageSection p {
-				font-size: 18px;
-			}
-			#pages {
-				font-family: Arial, Helvetica, sans-serif;
-				border-collapse: collapse;
+				border: none;
+				border-radius: 0;
+				padding: 10px;
 				width: 100%;
-				border-radius: 10px;
+				margin: 0;
 			}
-			#pages tbody {
-				border-radius: 10px;
-			}
+
 			#pages td,
 			#pages th {
 				padding: 8px;
+				font-size: 14px;
 			}
-			#pages tr:nth-child(even) {
-				background-color: #f2f2f2;
-			}
-			#pages tr:hover {
-				background-color: #ddd;
-			}
-			#pages th {
-				padding-top: 12px;
-				padding-bottom: 12px;
-				text-align: left;
-				background-color: #04aa6d;
-				color: white;
-			}
-			.pageUrl {
-				grid-template-columns: repeat(7, 1fr);
-			}
+
 			.pageUrl a {
-				display: inline-flex;
-				text-transform: capitalize;
-				font-size: 16px;
-				letter-spacing: 0.5px;
-				padding: 5px;
-				margin: 5px 0;
-				color: #04aa6d;
+				font-size: 14px;
+				padding: 4px 8px;
 			}
-			@media (max-width: 768px) {
-				.pageUrl a {
-					font-size: 12px;
-				}
+		}
+
+		@media (max-width: 500px) {
+			#pages td:first-child {
+				width: 30%;
+				min-width: 100px;
 			}
-			@media (max-width: 500px) {
-				.pageUrl a {
-					font-size: 12px;
-				}
+
+			.pageUrl a {
+				font-size: 12px;
+				padding: 3px 6px;
 			}
-			/* Dark mode styles for the table */
-			.dark-mode #pages {
-				background-color: #333;
-				color: #ffffff;
-			}
-			.dark-mode #pages tr:nth-child(even) {
-				background-color: #444;
-			}
-			.dark-mode #pages tr:hover {
-				background-color: #555;
-			}
-			.dark-mode #pages th {
-				background-color: #1e8f03;
-			}
-		</style>
-	</head>
-	<body class="light-mode">
-		<button id="toggleButton">🌙 Dark Mode</button>
-		<section id="pageSection">
-			<div id="google_element"></div>
-			<!-- Load Google Translate script over HTTPS and handle errors -->
-			<script
-			  type="text/javascript"
-			  src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"
-			  onerror="handleError(this)"
-			></script>
-		
-			<script type="text/javascript">
-			  function loadGoogleTranslate() {
+		}
+
+		header {
+			margin-bottom: 30px;
+		}
+
+		h1 {
+			font-size: 2rem;
+			color: #04aa6d;
+			margin-bottom: 10px;
+		}
+
+		a {
+			text-decoration: none;
+			color: #242424;
+		}
+
+		.dark-mode h1 a {
+			color: #23aa04;
+		}
+
+		.description {
+			font-size: 1.2em;
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		.dark-mode .description {
+			color: #b0b0b0;
+		}
+
+		/* New styles for the dark mode toggle */
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+		.dark-mode-toggle {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			z-index: 1000;
+		}
+
+		.dark-mode-toggle label {
+			position: relative;
+			width: 80px;
+			height: 40px;
+			display: block;
+			background: #d9d9d9;
+			border-radius: 100px;
+			cursor: pointer;
+			box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.2), inset 0px -5px 15px rgba(255, 255, 255, 0.2);
+		}
+
+		.dark-mode-toggle label:after {
+			content: '';
+			position: absolute;
+			height: 34px;
+			width: 34px;
+			background: #f2f2f2;
+			border-radius: 100px;
+			top: 3px;
+			left: 3px;
+			transition: 0.5s;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		.dark-mode-toggle input:checked~label:after {
+			left: 74px;
+			transform: translateX(-100%);
+			background: linear-gradient(180deg, #777, #3a3a3a);
+		}
+
+		.dark-mode-toggle input:checked~label {
+			background: #242424;
+		}
+
+		.dark-mode-toggle input {
+			display: none;
+		}
+
+		/* Remove the old button styles */
+		#toggleButton {
+			display: none;
+		}
+	</style>
+</head>
+
+<body class="light-mode">
+	<!-- Remove the old button -->
+	<!-- <button id="toggleButton">🌙 Dark Mode</button> -->
+
+	<!-- Add the new dark mode toggle -->
+	<div class="dark-mode-toggle">
+		<input type="checkbox" id="dark-mode">
+		<label for="dark-mode"></label>
+	</div>
+
+	<section id="pageSection">
+		<div id="google_element"></div>
+		<!-- Load Google Translate script over HTTPS and handle errors -->
+		<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"
+			onerror="handleError(this)"></script>
+
+		<script type="text/javascript">
+			function loadGoogleTranslate() {
 				new google.translate.TranslateElement(
-				  {
-					pageLanguage: "en",
-					includedLanguages: "en,hi,pa,sa,mr,ur,bn,es,fr,de,it",
-					layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-				  },
-				  "google_element"
+					{
+						pageLanguage: "en",
+						includedLanguages: "en,hi,pa,sa,mr,ur,bn,es,fr,de,it",
+						layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+					},
+					"google_element"
 				);
-			  }
-		
-			  function handleError(error) {
+			}
+
+			function handleError(error) {
 				console.error("Error loading Google Translate script:", error);
-			  }
-			</script>
-			<h1>You Dont Need Javascript</h1>
-			<p class="description">a display of pages</p>
-
-			<table id="pages">
-				<tr>
-					<th>Folder</th>
-					<th>Pages</th>
-				</tr>
-				<tr>
-					<td>Examples</td>
-					<td class="pageUrl">
-						<a href="./misc/About.html">About</a>
-						<a href="./misc/alert.html">alert</a>
-						<a href="./misc/Animated_Boxes.html">Animated_Boxes</a>
-						<a href="./misc/AnimatedButtons.html">AnimatedButtons</a>
-						<a href="./misc/art.html">art</a>
-						<a href="./misc/author.html">author</a>
-						<a href="./misc/batman-hover-button.html">batman-hover-button</a>
-						<a href="./misc/Bonfire.html">Bonfire</a>
-						<a href="./misc/burger-menu-1.html">burger-menu-1</a>
-						<a href="./misc/Card-flip.html">Card-flip</a>
-						<a href="./misc/card-hover.html">card-hover</a>
-						<a href="./misc/carousel-1.html">carousel-1</a>
-						<a href="./misc/carousel-2.html">carousel-2</a>
-						<a href="./misc/carousel-3.html">carousel-3</a>
-						<a href="./misc/checkbox-counter.html">checkbox-counter</a>
-						<a href="./misc/coffeemachine.html">coffeemachine</a>
-						<a href="./misc/css-toggle-modal.html">css-toggle-modal</a>
-						<a href="./misc/cube.html">cube</a>
-						<a href="./misc/darkmode.html">dark-mode</a>
-						<a href="./misc/faceAnimation.html">faceAnimation</a>
-						<a href="./misc/flip-1.html">flip-1</a>
-						<a href="./misc/flip-2.html">flip-2</a>
-						<a href="./misc/floating-labels-1.html">floating-labels-1</a>
-						<a href="./misc/FloatingImage.html">FloatingImage</a>
-						<a href="./misc/flower-animation.html">flower-animation</a>
-						<a href="./misc/Form_validation.html">Form_validation</a>
-						<a href="./misc/game-1.html">game-1</a>
-						<a href="./misc/game-2.html">game-2</a>
-						<a href="./misc/glassmorphism-card-design.html">glassmorphism-card-design</a>
-						<a href="./misc/hover-1.html">hover-1</a>
-						<a href="./misc/image-gallery-1.html">image-gallery-1</a>
-						<a href="./misc/image-gallery-2.html">image-gallery-2</a>
-						<a href="./misc/input-filed.html">input-filed</a>
-						<a href="./misc/loader-1.html">loader-1</a>
-						<a href="./misc/loader-2.html">loader-2</a>
-						<a href="./misc/loader-3.html">loader-3</a>
-						<a href="./misc/loader-4.html">loader-4</a>
-						<a href="./misc/loader-5.html">loader-5</a>
-						<a href="./misc/loader-6.html">loader-6</a>
-						<a href="./misc/loader-7.html">loader-7</a>
-						<a href="./misc/loader-8.html">loader-8</a>
-						<a href="./misc/loader-9.html">loader-9</a>
-						<a href="./misc/loader-10.html">loader-10</a>
-						<a href="./misc/loader-11.html">loader-11</a>
-						<a href="./misc/login-from.html">login-from</a>
-						<a href="./misc/menu-1.html">menu-1</a>
-						<a href="./misc/modal-1.html">modal-1</a>
-						<a href="./misc/mouse-tracking-2.html">mouse-tracking-2</a>
-						<a href="./misc/mouse-tracking.html">mouse-tracking</a>
-						<a href="./misc/moving-hand.html">moving-hand</a>
-						<a href="./misc/Moving_hand.html">Moving_hand</a>
-						<a href="./misc/Moving-road-animation.html">Moving-road-animation</a>
-						<a href="./misc/movinghand.html">movinghand</a>
-						<a href="./misc/navBar.html">navBar</a>
-						<a href="./misc/neon-button.html">neon-button</a>
-						<a href="./misc/neumorphism-card-design.html">neumorphism-card-design</a>
-						<a href="./misc/openingenvelope.html">openingenvelope</a>
-						<a href="./misc/ProgressBar.html">ProgressBar</a>
-						<a href="./misc/road.html">road</a>
-						<a href="./misc/scroll_button.html">scroll_button</a>
-						<a href="./misc/ScrollingText.html">ScrollingText</a>
-						<a href="./misc/shake-button.html">shake-button</a>
-						<a href="./misc/side-nav-1.html">side-nav-1</a>
-						<a href="./misc/slider-bar.html">slider-bar</a>
-						<a href="./misc/slider.html">slider</a>
-						<a href="./misc/spinner.html">spinner</a>
-						<a href="./misc/stickman.html">Stickman</a>
-						<a href="./misc/tabs-1.html">tabs-1</a>
-						<a href="./misc/tabs-2.html">tabs-2</a>
-						<a href="./misc/template.html">template</a>
-						<a href="./misc/todo-1.html">todo-1</a>
-						<a href="./misc/toggling in css.html">toggling in css</a>
-						<a href="./misc/tree-1.html">tree-1</a>
-						<a href="./misc/Tubelight.html">Tubelight</a>
-						<a href="./misc/interactive-image-gallery.html">Interactive Image Gallery</a>
-					</td>
-				</tr>
-				<tr>
-					<td>Author</td>
-					<td class="pageUrl">
-						<a href="./Author/Author-page.html">About</a>
-					</td>
-				</tr>
-			</table>
-		</section>
-        <script type="text/javascript">
-			var Tawk_API = Tawk_API || {},
-			  Tawk_LoadStart = new Date();
-			(function () {
-			  var s1 = document.createElement("script"),
-				s0 = document.getElementsByTagName("script")[0];
-			  s1.async = true;
-			  s1.src = "https://embed.tawk.to/66891af8eaf3bd8d4d18ca2d/1i24gr9s5";
-			  s1.charset = "UTF-8";
-			  s1.setAttribute("crossorigin", "*");
-			  s0.parentNode.insertBefore(s1, s0);
-			})();
-		  </script>
-		  <!--End of Tawk.to Script-->
-	  
-		  <noscript>You need to enable JavaScript to run this app.</noscript>
-		<script>
-			const toggleButton = document.getElementById("toggleButton");
-			const body = document.body;
-
-			toggleButton.addEventListener("click", () => {
-				if (body.classList.contains("light-mode")) {
-					body.classList.replace("light-mode", "dark-mode");
-					toggleButton.textContent = "☀️ Light Mode";
-				} else {
-					body.classList.replace("dark-mode", "light-mode");
-					toggleButton.textContent = "🌙 Dark Mode";
-				}
-			});
+			}
 		</script>
-	</body>
+		<header>
+			<h1><a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript">You Dont Need JavaScript</a></h1>
+			<p class="description">Explore the power of pure CSS with our collection of interactive demos and examples.
+			</p>
+		</header>
+		<table id="pages">
+			<tr>
+				<th>Category</th>
+				<th>Pages</th>
+			</tr>
+			<tr>
+				<td>3D and Animations</td>
+				<td class="pageUrl">
+					<a href="./3D cube animation/index.html">3D Cube Animation</a>
+					<a href="./3D Rotation Square/animation.html">3D Rotation Square</a>
+					<a href="./3D transform/index.html">3D Transform</a>
+					<a href="./Book Animation/index.html">Book Animation</a>
+					<a href="./CompassLoader/index.html">Compass Loader</a>
+					<a href="./CSS-Loader/purnasth/index.html">CSS Loader</a>
+					<a href="./distorted-text-animation/distorted-text.html">Distorted Text Animation</a>
+					<a href="./DVD Screen Saver/index.html">DVD Screen Saver</a>
+					<a href="./Jumping Ball/index.html">Jumping Ball</a>
+					<a href="./leaf-anim/leaf.html">Leaf Animation</a>
+					<a href="./Light Bulb Animation/bulb.html">Light Bulb Animation</a>
+					<a href="./Newtons Cradle/newtons-cradle.html">Newton's Cradle</a>
+					<a href="./Pendulum/index.html">Pendulum</a>
+					<a href="./ScaryAnimation/scary.html">Scary Animation</a>
+					<a href="./Scroll-Unblur-Text-Effect/index.html">Scroll Unblur Text Effect</a>
+					<a href="./Scroll-Video-Animation/index.html">Scroll Video Animation</a>
+					<a href="./Shuffling squares/shuffling.html">Shuffling Squares</a>
+					<a href="./Square Animation/index.html">Square Animation</a>
+					<a href="./Square_Rotation_Animation/squareAnimation.html">Square Rotation Animation</a>
+				</td>
+			</tr>
+			<tr>
+				<td>CSS Art</td>
+				<td class="pageUrl">
+					<a href="./Captain America Shield/index.html">Captain America Shield</a>
+					<a href="./Growing-flower/growing.html">Growing Flower</a>
+					<a href="./Panda_Animation/Moving_Panda.html">Panda Animation</a>
+					<a href="./SolarSystem/index.html">Solar System</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Layout and Components</td>
+				<td class="pageUrl">
+					<a href="./Accordian_css_radio_rules/index.html">Accordion (CSS Radio Rules)</a>
+					<a href="./accordion/accordion.html">Accordion</a>
+					<a href="./BLOG POST CARDS/neuocards.html">Blog Post Cards - Neuocards</a>
+					<a href="./BLOG POST CARDS/claycard.html">Blog Post Cards - Claycard</a>
+					<a href="./BLOG POST CARDS/Glasscard.html">Blog Post Cards - Glasscard</a>
+					<a href="./Business-Card/index.html">Business Card</a>
+					<a href="./Button/indes.html">Button</a>
+					<a href="./Button/Sliced-Button/index.html">Sliced Button</a>
+					<a href="./carousel/purnasth/index.html">Carousel</a>
+					<a href="./Css Tables/index.html">CSS Tables</a>
+					<a href="./CSS Toggle/index.html">CSS Toggle</a>
+					<a href="./flex Property/new.html">Flex Property</a>
+					<a href="./grid/abc.html">Grid</a>
+					<a href="./infinitecarousel/infinite.html">Infinite Carousel</a>
+					<a href="./Login/Signin.html">Login</a>
+					<a href="./Login_Page/Index.html">Login Page</a>
+					<a href="./Rating-Star/index.html">Rating Star</a>
+					<a href="./Responsive Footer/index.html">Responsive Footer</a>
+					<a href="./responsive_hamburger_navbar/index.html">Responsive Hamburger Navbar</a>
+					<a href="./Search-bar and Tweet/youtube.html">Search Bar and Tweet</a>
+					<a href="./Shapes/index.html">Shapes</a>
+					<a href="./stickyheader/index.html">Sticky Header</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Websites and Projects</td>
+				<td class="pageUrl">
+					<a href="./Bitcoin-website/index.html">Bitcoin Website</a>
+					<a href="./Portfoliowebsite/port.html">Portfolio Website</a>
+					<a href="./RGBcolorgame/RGBcolorgame.html">RGB Color Game</a>
+					<a href="./Travelling Website/index.html">Travelling Website</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Miscellaneous</td>
+				<td class="pageUrl">
+					<a href="./Analog-clock/index.html">Analog Clock</a>
+					<a href="./Cursor/index.html">Cursor</a>
+					<a href="./z indexing/index.html">Z Indexing</a>
+					<a href="./Clock-App/index.html">Clock App</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Examples</td>
+				<td class="pageUrl">
+					<a href="./examples/card-slide-hover-effect.html">Card Slide Hover Effect</a>
+					<a href="./examples/image-border-hover-effect.html">Image Border Hover Effect</a>
+					<a href="./examples/ModernSidebar.html">Modern Sidebar</a>
+					<a href="./examples/profile-card-hover-effect.html">Profile Card Hover Effect</a>
+					<a href="./examples/spin-square-circle.html">Spin Square Circle</a>
+					<a href="./examples/ToDo.html">To-Do List</a>
+				</td>
+			</tr>
+			<tr>
+				<td>V2</td>
+				<td class="pageUrl">
+					<a href="./V2/examples/floatinglabelsV2/floatinglabel.html">Floating Labels V2</a>
+					<a href="./V2/examples/butons.html">Buttons V2</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Misc</td>
+				<td class="pageUrl">
+					<a href="./misc/footer.html">Footer</a>
+					<a href="./misc/card-hover.html">Card Hover</a>
+					<a href="./misc/ExpandableCardDesign.html">Expandable Card Design</a>
+					<a href="./misc/basicprofile.html">Basic Profile</a>
+					<a href="./misc/tree-1.html">Tree 1</a>
+					<a href="./misc/tabs-2.html">Tabs 2</a>
+					<a href="./misc/author.html">Author</a>
+					<a href="./misc/input-filed.html">Input Field</a>
+					<a href="./misc/hover-1.html">Hover 1</a>
+					<a href="./misc/navBar.html">Navbar</a>
+					<a href="./misc/ModernNavbarDesign.html">Modern Navbar Design</a>
+					<a href="./misc/About.html">About</a>
+					<a href="./misc/slider.html">Slider</a>
+					<a href="./misc/menu-1.html">Menu 1</a>
+					<a href="./misc/ImageHoverGallery.html">Image Hover Gallery</a>
+					<a href="./misc/glassmorphism-card-design.html">Glassmorphism Card Design</a>
+					<a href="./misc/todo-1.html">Todo 1</a>
+					<a href="./misc/tabs-1.html">Tabs 1</a>
+					<a href="./misc/carousel-1.html">Carousel 1</a>
+					<a href="./misc/carousel-2.html">Carousel 2</a>
+					<a href="./misc/carousel-3.html">Carousel 3</a>
+				</td>
+			</tr>
+			<tr>
+				<td>FAQ Section</td>
+				<td class="pageUrl">
+					<a href="./FAQ SECTION/claymorphismtheme/clay.html">Claymorphism Theme</a>
+					<a href="./FAQ SECTION/glasstheme/faqglass.html">Glass Theme</a>
+					<a href="./FAQ SECTION/neumorphismtheme/neu.html">Neumorphism Theme</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Other</td>
+				<td class="pageUrl">
+					<a href="./Author/Author-page.html">Author</a>
+					<a href="./Web_Demo/index.html">Web Demo</a>
+				</td>
+			</tr>
+		</table>
+	</section>
+	<script type="text/javascript">
+		var Tawk_API = Tawk_API || {},
+			Tawk_LoadStart = new Date();
+		(function () {
+			var s1 = document.createElement("script"),
+				s0 = document.getElementsByTagName("script")[0];
+			s1.async = true;
+			s1.src = "https://embed.tawk.to/66891af8eaf3bd8d4d18ca2d/1i24gr9s5";
+			s1.charset = "UTF-8";
+			s1.setAttribute("crossorigin", "*");
+			s0.parentNode.insertBefore(s1, s0);
+		})();
+	</script>
+
+	<!--End of Tawk.to Script-->
+
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<script>
+		const darkModeToggle = document.getElementById("dark-mode");
+		const body = document.body;
+
+		darkModeToggle.addEventListener("change", () => {
+			if (darkModeToggle.checked) body.classList.replace("light-mode", "dark-mode");
+			else body.classList.replace("dark-mode", "light-mode");
+		});
+	</script>
+</body>
+
 </html>
