@@ -142,12 +142,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
-## <a id="cofeemachineanimation"></a>Cofee Machine Animation
-
-<img src="images/cofeemachineanimation.png" height="230" title="Demo 1">
-
-**[⬆ back to top](#quick-links)**
-
 ## <a id="Accordion"></a>Accordion / Toggle
 
 [<img src="images/accordion.png" height="230" title="Demo 1">](http://www.mraffaele.com/labs/css-only-accordions/)
