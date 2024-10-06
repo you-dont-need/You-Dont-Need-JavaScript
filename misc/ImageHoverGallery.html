@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery With Hover Effects</title>
     <style>
         * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #1a252c;
-}
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a252c;
+        }
 
-.container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-style: preserve-3d;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #0002);
-}
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0002);
+        }
 
-.container .box {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  transition: 0.5s;
-}
+        .container .box {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            transition: 0.5s;
+        }
 
-.container .box img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+        .container .box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.container:hover > :not(:hover) {
-    margin: 0 -20px;
-    filter: drop-shadow(0 0 25px #000) drop-shadow(0 0 45px #000);
-    transform: perspective(500px) rotateY(45deg) scale(0.95);
-}
+        .container:hover> :not(:hover) {
+            margin: 0 -20px;
+            filter: drop-shadow(0 0 25px #000) drop-shadow(0 0 45px #000);
+            transform: perspective(500px) rotateY(45deg) scale(0.95);
+        }
 
-.container .box:hover ~ .box {
-    transform: perspective(500px) rotateY(-45deg) scale(0.95);
-}
+        .container .box:hover~.box {
+            transform: perspective(500px) rotateY(-45deg) scale(0.95);
+        }
 
-.container .box:hover {
-    transform: perspective(500px) rotateY(0) scale(1.5);
-    z-index: 1000;
-}
+        .container .box:hover {
+            transform: perspective(500px) rotateY(0) scale(1.5);
+            z-index: 1000;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="box">
-            <img src="/images/1.png" alt="">
+            <img src="../images/1.png" alt="">
         </div>
         <div class="box">
-            <img src="/images/4.png" alt="">
+            <img src="../images/4.png" alt="">
         </div>
         <div class="box">
-            <img src="/images/3.png" alt="">
+            <img src="../images/3.png" alt="">
         </div>
         <div class="box">
-            <img src="/images/5.png" alt="">
+            <img src="../images/5.png" alt="">
         </div>
         <div class="box">
-            <img src="/images/2.png" alt="">
+            <img src="../images/2.png" alt="">
         </div>
         <div class="box">
-            <img src="/images/6.png" alt="">
+            <img src="../images/6.png" alt="">
         </div>
     </div>
 </body>
+
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "icon" href="https://image.flaticon.com/icons/png/128/2972/2972531.png">
+    <link rel= "stylesheet" href="./index.css">
+    <title>Clock</title>
+</head>
+<body onload="time()">
+    <div id= "txt"></div>
+
+    
+ <script>
+    function time() {
+    const today = new Date();
+    let hour = today.getHours();
+    let min = today.getMinutes();
+    let sec = today.getSeconds();
+     min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById('txt').innerHTML = hour + ":" + min + ":" + sec;
+    setTimeout(time, 1000);
+}
+
+    function checkTime(x){
+    if (x < 10){
+        x = "0" + x;
+    }
+    return x;
+}
+
+
+</script>
+</body>
+</html>

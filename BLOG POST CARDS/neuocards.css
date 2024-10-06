@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --bg-color: #e0e5ec;
+    --card-bg: #e0e5ec;
+    --shadow-color: #a3b1c6;
+    --highlight-color: #ffffff;
+    --text-color: #333;
+    --accent-color: #4a90e2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 
+        6px 6px 12px var(--shadow-color),
+        -6px -6px 12px var(--highlight-color);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        8px 8px 16px var(--shadow-color),
+        -8px -8px 16px var(--highlight-color);
+}
+
+.card-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.card-excerpt {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: var(--card-bg);
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 
+        4px 4px 8px var(--shadow-color),
+        -4px -4px 8px var(--highlight-color);
+}
+
+.read-more:hover {
+    color: var(--card-bg);
+    background-color: var(--accent-color);
+    box-shadow: inset 
+        4px 4px 8px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
