@@ -1,0 +1,29 @@
+.h2{
+
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.heading{
+
+    font-family: Montserrat;
+    font-weight: bold;
+
+    
+
+}
+.para{
+
+    font-family: Montserrat;
+    font-size: 14px;
+}
+.touch{
+
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+}
+

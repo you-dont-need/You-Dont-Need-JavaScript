@@ -80,7 +80,7 @@ body{
 
 
 body {
-    font-size: 16px;
+    font-size:1em;
 }
 
 * {
@@ -92,7 +92,7 @@ body {
 
 .socials-row {
     display: flex;
-    gap: 16px;
+    gap: 2vh;
     flex-wrap: wrap;
 }
 
@@ -101,8 +101,9 @@ body {
     height: 22px;
 }
 img.apple {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
+    p
 }
 
 .text-field.lock{
@@ -133,8 +134,8 @@ img.apple {
 
 .email{
     height: 30px;
-    width: 40px;
-    padding-left: -20px;
+    width: 30px;
+    padding-left: -10px;
 }
 
 .lock{
@@ -161,14 +162,12 @@ img.apple {
     position: relative;
     display: grid;
     grid-template-columns: 4fr 3fr;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-right: -180px;
+    max-width: 100vw;
+    margin-left: 30vw;
 }
 
 
 .login-side {
-    padding: 20px 32px 48px 32px;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -188,7 +187,7 @@ img.apple {
     gap: 32px;
     max-width: 460px;
     width: 100%;
-    padding: 48px 32px;
+    padding:4vh 4vw;
     height: fit-content;
     box-shadow: 
         rgba(100, 100, 111, 0.2)
@@ -321,10 +320,24 @@ img.apple {
     z-index: 10;
 }
 
-@media (max-width: 640px) {
+@media only screen and (max-width: 640px) {
     .login-wrapper {
         grid-template-columns: 1fr;
         height: 100vh;
+        margin-left:0vw;
+    }
+    
+    .info-side {
+        flex-direction: column-reverse;
+        padding: 48px 48px 48px 32px;
+    }
+}
+
+@media only screen and (max-width: 833px) {
+    .login-wrapper {
+        grid-template-columns: 1fr;
+        height: 100vh;
+        margin-left:0vw;
     }
     
     .info-side {

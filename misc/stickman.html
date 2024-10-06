@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    max-height: 100%;
+    width: 100%;
+    background-color: #d6fffb;
+}
+
+.stickman {
+    position: relative;
+    width: 10px;
+    height: 80px;
+    margin: 100px;
+    background-color: black;
+}
+
+.head {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: -40px;
+    left: -10px;
+}
+
+.body {
+    width: 10px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.left-arm, .right-arm {
+    width: 40px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 20px;
+    transform-origin: 100% 50%;
+}
+
+.left-arm {
+    left: -40px;
+}
+
+.right-arm {
+    right: -40px;
+    transform-origin: 0% 50%;
+}
+
+.left-leg, .right-leg {
+    width: 5px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    top: 80px;
+    transform-origin: 50% 0%;
+}
+
+.left-leg {
+    rotate: 45deg;
+}
+
+.right-leg {
+    left: 5px;
+    rotate: -45deg;
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes swingLeftArm {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes swingRightArm {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes swingLeftLeg {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes swingRightLeg {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+}
+@keyframes waveLeftArm {
+    0%, 100% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(60deg);
+    }
+}
+@keyframes waveRightArm {
+    0%, 100% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(-60deg);
+    }
+}
+
+.jump .stickman{
+    animation: jump 2s ease-in-out infinite;
+}
+
+.jump .stickman .left-arm {
+    animation: swingLeftArm 2s infinite;
+}
+
+.jump .stickman .right-arm {
+    animation: swingRightArm 2s infinite;
+}
+
+.jump .stickman .left-leg {
+    animation: swingLeftLeg 2s infinite;
+}
+
+.jump .stickman .right-leg {
+    animation: swingRightLeg 2s infinite;
+}
+
+.wave .stickman .left-arm{
+    top: 20px;
+    left: -39px;
+    transform: translateX(-10px);
+    animation: waveLeftArm 2s infinite;
+}
+.wave .stickman .right-arm{
+    right: -39px;
+    transform: rotate(45deg);
+    animation: waveRightArm 2s infinite;
+}
+
+/* Walking Animation */
+@keyframes walk {
+        0%,50%,100%{
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(50px); /* Move to the right */
+        }
+        75% {
+            transform: translateX(-50px); /* Move back to the left */
+        }
+      }
+
+      @keyframes swingLeftArmWalk {
+        0%, 100% {
+          transform: rotate(-135deg);
+        }
+        50% {
+          transform: rotate(-45deg);
+        }
+      }
+
+      @keyframes swingRightArmWalk {
+        0%, 100% {
+          transform: rotate(135deg);
+        }
+        50% {
+          transform: rotate(45deg);
+        }
+      }
+
+      @keyframes swingLeftLegWalk {
+        0%, 100% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(-90deg);
+        }
+      }
+
+      @keyframes swingRightLegWalk {
+        0%, 100% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(90deg);
+        }
+      }
+
+      /* Applying the walking motion */
+      .walk .stickman {
+        animation: walk 3s infinite ease-in-out;
+      }
+
+      .walk .left-arm {
+        left: -38px;
+        animation: swingLeftArmWalk 1s infinite;
+      }
+
+      .walk .right-arm {
+        right: -38px;
+        animation: swingRightArmWalk 1s infinite;
+      }
+
+      .walk .left-leg {
+        animation: swingLeftLegWalk 1s infinite;
+      }
+
+      .walk .right-leg {
+        animation: swingRightLegWalk 1s infinite;
+      }
+    </style>
+  </head>
+  <body>
+        <div class="wave">
+            <div class="stickman">
+                <div class="head"></div>
+                <div class="body"></div>
+                <div class="left-arm"></div>
+                <div class="right-arm"></div>
+                <div class="left-leg"></div>
+                <div class="right-leg"></div>
+              </div>
+        </div>
+        <div class="walk">
+            <div class="stickman">
+                <div class="head"></div>
+                <div class="body"></div>
+                <div class="left-arm"></div>
+                <div class="right-arm"></div>
+                <div class="left-leg"></div>
+                <div class="right-leg"></div>
+              </div>
+        </div>
+        <div class="jump">
+            <div class="stickman">
+                <div class="head"></div>
+                <div class="body"></div>
+                <div class="left-arm"></div>
+                <div class="right-arm"></div>
+                <div class="left-leg"></div>
+                <div class="right-leg"></div>
+              </div>
+        </div>
+  </body>
+</html>
