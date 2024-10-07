@@ -32,6 +32,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Analog-clock](#analogclock)
 - [Animated Button](#animated-btn)
 - [Animated Buttons](#animated-buttons)
+- [Badge](#badge)
 - [Bonfire](#bonfire)
 - [Bubble](#bubble)
 - [Burger Menu](#burger-menu)
@@ -145,7 +146,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Shake Button](#shake-button-1)
   - [Dog Box Animation](#dog-box-animation)
   - [Thankyou-Animation](#thankyou-animation)
-  - [Square\_rotation\_animation (Latin)](#square_rotation_animation-latin)
+  - [Square_rotation_animation (Latin)](#square_rotation_animation-latin)
   - [Switch](#switch)
   - [Bonfire](#bonfire)
   - [Scenary](#scenary)
@@ -198,7 +199,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Contributors](#contributors)
   - [Contributing](#contributing)
 
-
 ## <a id="toggle"></a>CSS Toggle
 
 [<img src="images/toggle1.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
@@ -214,14 +214,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
-## <a id="Faq-section"></a>Faq Section 
+## <a id="Faq-section"></a>Faq Section
 
 [<img src="images/faqclay.png" height="230" title="Demo 1">](http://url-to-page)
 [<img src="images/faqneuo.png" height="230" title="Demo 2">](http://url-to-page)
 [<img src="images/faqglass.png" height="230" title="Demo 3">](http://url-to-page)
 
 **[⬆ back to top](#quick-links)**
-
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -306,16 +305,12 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
-
 ## <a id="Animated Box"></a>Animated Box
 
 [<img src="images/AnimatedBox.jpg" height="230" title="Demo">](https://codepen.io/Ayan-Saxena/pen/qBgBYoZ)
 [<img src="images/AnimatedBox2.jpg" height="230" title="Demo">](https://codepen.io/Ayan-Saxena/pen/qBgBYoZ)
 
-
 **[⬆ back to top](#quick-links)**
-
-
 
 ## <a id="analogclock"></a>Analog-clock
 
@@ -327,8 +322,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
-
 [<img src="images/textfields.png" height="230" title="Demo">](http://codepen.io/KtorZ/pen/ZOzdqG)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
+## <a id="badge"></a>Badge
+
+[<img src="images/badge_design1.png" height="230" title="Demo">]
 
 **[⬆ back to top](#quick-links)**
 
@@ -370,7 +374,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
-
 ## <a id="Info"></a>Info on hover/ Popover
 
 [<img src="images/tooltips.png" height="230" title="Demo 1">](https://codepen.io/monika-sivakumar/pen/rNoqxVX)
@@ -398,9 +401,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
-## <a id="interactive-image"></a>Interactive Image Gallery 
+## <a id="interactive-image"></a>Interactive Image Gallery
+
 [<img src="./images/interactive-image.png" height="230" title="Demo Image">]
-    <br>
+<br>
 [<video src="./demo video/interactive-image.mov" height="230" title="Demo Video">]
 
 **[⬆ back to top](#quick-links)**
@@ -560,7 +564,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 [<img src="images/Todo List.png" height="230" title="Demo">](https://codepen.io/SamsShow/pen/NWeerXr)
 
-
 **[⬆ back to top](#quick-links)**
 
 ---
@@ -649,7 +652,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 &nbsp;
 
-
 &nbsp;
 
 ## <a id="NeumorphismCardDesign"></a>Neumorphism Card Design
@@ -714,7 +716,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
-
 
 &nbsp;
 
@@ -965,7 +966,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
-
 =======
 &nbsp;
 
@@ -987,47 +987,46 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 =======
 &nbsp;
 
-
 ## <a id="SolarSystem"></a>SolarSystem
 
 ![img_source](SolarSystem/output.png)
 
-**[⬆ back to top](#quick-links)**
-=======
+# **[⬆ back to top](#quick-links)**
+
 &nbsp;
 
 ## <a id="Pendulum"></a>Pendulum
 
 ![img_source](images/pendulum.png)
 
-**[⬆ back to top](#quick-links)**
-=======
-&nbsp;
+# **[⬆ back to top](#quick-links)**
 
+&nbsp;
 
 ## <a id="SlicedButton"></a>SlicedButton
 
 ![img_source](Button/Sliced-Button/sliced_button.gif)
 
-**[⬆ back to top](#quick-links)**
-=======
+# **[⬆ back to top](#quick-links)**
+
 &nbsp;
 
 ## <a id="Rating Star"></a>Rating Star
 
 ![img_source](images/rating-star.png)
 
-**[⬆ back to top](#quick-links)**
-=======
+# **[⬆ back to top](#quick-links)**
+
 &nbsp;
 
 ## <a id="DVDScreenSaver"></a>DVD Screen Saver
 
 ![img_source](images/DVDScreenSaver.png)
 
-**[⬆ back to top](#quick-links)**
-=======
+# **[⬆ back to top](#quick-links)**
+
 &nbsp;
+
 ## <a id="ProfileCards"></a>ProfileCards
 
 ![img_source](images/profileCards/card1.png)
@@ -1037,8 +1036,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ![img_source](images/profileCards/card5.png)
 ![img_source](images/profileCards/card6.png)
 
-**[⬆ back to top](#quick-links)**
-=======
+# **[⬆ back to top](#quick-links)**
+
 &nbsp;
 
 ## <a id="RotateSquare"></a>RotateSquare
@@ -1047,7 +1046,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
-## <a id="stickman"></a>Stickman Animation 
+## <a id="stickman"></a>Stickman Animation
+
 <img src="./images/stickman.png" height="200" title="3d card flip transtion demo gif">
 
 **[⬆ back to top](#quick-links)**
@@ -1057,6 +1057,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 &nbsp;
 
 ## <a id="Clock-App"></a>Clock App
+
 ![img_source](image.png)
 
 **[⬆ back to top](#quick-links)**
@@ -1066,6 +1067,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 &nbsp;
 
 ## <a id="3d-card-flip-transition"></a>3D card flip transition
+
 [<img src="./images/3d-card-flip-transition.gif" height="200" title="Demo Image">]
 
 **[⬆ back to top](#quick-links)**
@@ -1091,3 +1093,4 @@ We welcome contributions from the community to make this project better. Feel fr
 For detailed guidelines on how to contribute, please refer to our [CONTRIBUTING](CONTRIBUTING.md) file.
 
 Let's build something great together!
+```
