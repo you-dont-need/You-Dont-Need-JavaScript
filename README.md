@@ -20,12 +20,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
-
 ## Quick Links
 
 - [You Don't Need JavaScript](#you-dont-need-javascript)
-- [Website Demo Using HTML CSS](#website-demo-using-html-css)
+- [Website Demo Using HTML CSS](#website-demo)
 - [Style Guide](#style-guide)
 - [Accordion / Toggle](#accordion--toggle)
 - [Analog Clock](#analog-clock)
@@ -41,15 +39,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Carousel](#carousel)
 - [Compass Loader](#compass-loader)
 - [City Animation Footer](#city-animation-footer)
-- [Counter of Checked Checkboxes](#counter-of-checked-checkboxes)
+- [Counter of Checked Checkboxes](#counter-of-checked-check-boxes)
 - [Dog Box Animation](#dog-box-animation)
 - [Dropdown Menu](#dropdown-menu)
 - [Dynamic Image Colorizing](#dynamic-image-colorizing)
-- [Enable Dark Mode](#enable-dark-mode)
+- [Enable Dark Mode](#darkmode)
 - [Fancy Menu](#fancy-menu)
 - [Flip on Click](#flip-on-click)
 - [Floating Label on Textfield](#floating-label-on-textfield)
-- [Floating Labels V2](#floating-labels-v2)
+- [Floating Labels V2](#floating-labelv2)
 - [Font-Face (Latin)](#font-face-latin)
 - [Footer](#footer)
 - [Gradient Animation](#gradient-animation)
@@ -71,18 +69,18 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Parallax Scrolling](#parallax-scrolling)
 - [Pendulum](#pendulum)
 - [Playing Card Animation](#playing-card-animation)
-- [Profile Cards](#profile-cards)
+- [Profile Cards](#profilecards)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
 - [Ripple Effect](#ripple-effect)
 - [Scary Animation](#scary-animation)
-- [Scenery](#scenery)
+- [Scenery](#scenary)
 - [Shake Button](#shake-button)
 - [Shuffling Squares](#shuffling-squares)
 - [Star Wars Intro](#star-wars-intro)
 - [Switch](#switch)
 - [Tables](#css-tables)
 - [Tabs](#tabs)
-- [Thank You Animation](#thank-you-animation)
+- [Thank You Animation](#thankyou-animation)
 - [Todo List](#todo-list)
 - [Tooltips](#tooltips)
 - [Treeview](#treeview)
@@ -92,7 +90,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - **Contribution**
   - [Contributors](#contributors)
   - [Contributing](#contributing)
-
+---
 
 ## <a id="image-hover-effect"></a>Image Hover Effect
 
@@ -100,12 +98,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
+---
+
 ## <a id="toggle"></a>CSS Toggle
 
 [<img src="images/toggle1.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
 [<img src="images/toggle2.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
 
 **[⬆ back to top](#quick-links)**
+
+---
 
 ## <a id="blog-cards"></a>Blog Post Cards
 
@@ -115,6 +117,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
+---
+
 ## <a id="Faq-section"></a>Faq Section
 
 [<img src="images/faqclay.png" height="230" title="Demo 1">](http://url-to-page)
@@ -122,6 +126,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/faqglass.png" height="230" title="Demo 3">](http://url-to-page)
 
 **[⬆ back to top](#quick-links)**
+
+---
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -134,7 +140,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Animated-Buttons"></a>Animated Buttons
 
@@ -147,9 +152,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
----
-
-&nbsp;
 
 ## <a id="captain"></a>Captain America Shield
 
@@ -159,7 +161,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Carousel"></a>Carousel
 
@@ -173,7 +174,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Counter"></a>Counter of checked check-boxes
 
@@ -184,7 +184,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Flip"></a>Flip on click
 
@@ -194,7 +193,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Flip"></a>Flip on click
 
@@ -204,7 +202,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Animated Box"></a>Animated Box
 
@@ -212,6 +209,9 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/AnimatedBox2.jpg" height="230" title="Demo">](https://codepen.io/Ayan-Saxena/pen/qBgBYoZ)
 
 **[⬆ back to top](#quick-links)**
+
+---
+
 
 ## <a id="analogclock"></a>Analog-clock
 
@@ -221,7 +221,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 [<img src="images/textfields.png" height="230" title="Demo">](http://codepen.io/KtorZ/pen/ZOzdqG)
 
@@ -229,7 +228,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="badge"></a>Badge
 
@@ -239,7 +237,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Font"></a>Font-Face (Latin)
 
@@ -249,7 +246,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="WebsiteDemo"></a>Website Demo
 
@@ -261,7 +257,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Travel-Website"></a>Travelling Website
 
@@ -273,7 +268,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Info"></a>Info on hover/ Popover
 
@@ -286,7 +280,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Image"></a>Image Gallery
 
@@ -300,7 +293,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="interactive-image"></a>Interactive Image Gallery
 
@@ -312,7 +304,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Loaders"></a>Loaders
 
@@ -332,7 +323,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="DropdownMenu"></a>Dropdown Menu
 
@@ -343,7 +333,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Mobile"></a>Mobile menu off canvas
 
@@ -353,7 +342,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="BurgerMenu"></a>Burger Menu
 
@@ -363,7 +351,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="button_letsgo"></a>Button Animation
 
@@ -373,7 +360,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="compassloader"></a>Compass Loader
 
@@ -383,7 +369,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="FancyMenu"></a>Fancy Menu
 
@@ -393,7 +378,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="footer"></a>Footer
 
@@ -404,7 +388,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Modal"></a>Modal/Popup
 
@@ -415,7 +398,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Mouse"></a>Mouse tracking
 
@@ -426,9 +408,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
-
----
 
 ## <a id="navBar"></a>NavBar
 
@@ -438,7 +417,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Parallax"></a>Parallax scrolling
 
@@ -448,7 +426,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Tabs"></a>Tabs
 
@@ -459,7 +436,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Todo"></a>Todo List
 
@@ -469,7 +445,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Tooltips"></a>Tooltips
 
@@ -483,7 +458,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Twitter"></a>Twitter Heart Animation
 
@@ -493,7 +467,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="BookAnimation"></a>Book Animation
 
@@ -503,7 +476,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="ImageColorizing"></a>Dynamic Image Colorizing
 
@@ -513,7 +485,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="DarkMode"></a>DarkMode
 
@@ -521,7 +492,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
-&nbsp;
+---
+
 
 ## <a id="RippleEffect"></a>Ripple Effect
 
@@ -531,7 +503,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="ResponsiveItemShowcase"></a>Responsive Counter Showing # of Items That Didn't Fit Screen
 
@@ -541,7 +512,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="login"></a>A login Page with Glassmorphism Effect
 
@@ -551,9 +521,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
-
-&nbsp;
 
 ## <a id="NeumorphismCardDesign"></a>Neumorphism Card Design
 
@@ -563,7 +530,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="neon-button"></a>Neon Button
 
@@ -573,7 +539,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="neon-card"></a>Neon Card
 
@@ -582,13 +547,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="shake-button"></a>Shake Button
 
 [<img src="images/shake-button.gif" height="230" title="Demo">](https://codepen.io/krushnarout/pen/zYyLEmM)
 
 **[⬆ back to top](#quick-links)**
+
+---
+
 
 ## <a id="moving_hand"></a>Shake Button
 
@@ -598,7 +565,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Dog-Animation"></a>Dog Box Animation
 
@@ -608,7 +574,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Thankyou-Animation"></a>Thankyou-Animation
 
@@ -618,7 +583,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Square_roation_animation"></a>Square_rotation_animation (Latin)
 
@@ -628,7 +592,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="Switch"></a>Switch
 
@@ -638,7 +601,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="bonfire"></a>Bonfire
 
@@ -648,7 +610,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="scenary"></a>Scenary
 
@@ -658,7 +619,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="bubble"></a>Bubble
 
@@ -668,7 +628,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="flower"></a>Flower
 
@@ -678,7 +637,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="JumpingBall"></a>Jumping Ball
 
@@ -688,7 +646,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="LightBulbAnimation"></a>Light Bulb Animation
 
@@ -698,7 +655,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="city-animation-footer"></a>City animation footer
 
@@ -708,7 +664,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="smoke"></a>Smoke
 
@@ -718,7 +673,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="loader"></a>Loader
 
@@ -728,7 +682,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="spiner"></a>Spiner
 
@@ -738,7 +691,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="fire"></a>Fire
 
@@ -748,7 +700,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="flame"></a>Flame
 
@@ -758,11 +709,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+
 ## <a id="shuffling-squres"></a>Shuffling squares
 
 [<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
 
+**[⬆ back to top](#quick-links)**
+
 ---
+
 
 ## <a id="Floating-labelV2"></a>Floating-labelV2
 
@@ -771,6 +726,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
 
 ## <a id="scary-animation"></a>scary-animation
 
@@ -780,19 +736,19 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+
 ## <a id="infinite-carousel"></a>infinite-carousel
 
 # [<img src="images/infinite-carousel.gif" height="230" title="infinite-carousel">](https://im4.ezgif.com/tmp/ezgif-4-cf03115fc6.gif)
 
 [<img src="images/Scary-animation.gif" height="230" title="Floating-labelV2">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
 
-=======
-
 [<img src="images/Scary-animation.gif" height="230" title="scary-animation">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
 
 **[⬆ back to top](#quick-links)**
 
 ---
+
 
 ## <a id="growing-flower"></a>growing-flower
 
@@ -802,7 +758,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-&nbsp;
 
 ## <a id="playing-card"></a>Playing Card Animation
 
@@ -812,6 +767,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+
 ## <a id="starwarsintro"></a>Star Wars Intro
 
 [<img src="images/intro1.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
@@ -819,17 +775,26 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
+---
+
+
 ## <a id= "Gradient-Animation"></a>Gradient Animation
 
 [<img src="images/gradient-animation.gif" height="230" title="Gradient Animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/b3b64a1d4a426ab3a8f20fbe34640de18bca14a5/images/gradient-animation.gif)
 
 **[⬆ back to top](#quick-links)**
 
+---
+
+
 ## <a id="zoom-when-hover"></a>Zoom when hover
 
 [<img src="images/zoom-effect.gif" height="230" title="zoom-when-hover">](https://codepen.io/kdwzrjtc-the-animator/pen/gOqOwLx)
 
+**[⬆ back to top](#quick-links)**
+
 ---
+
 
 ## <a id="Floating-labelV2"></a>Floating-labelV2
 
@@ -839,15 +804,23 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+
 ## <a id= "Css Tables"></a>CSS Tables
 
 ## [![Screenshot 2023-10-23 144658](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/d73a9af8-5470-4a88-bfc9-a5e8430aba65)](https://codepen.io/TAPAS-SINGHAL/pen/abXZNWR)
 
-=======
+**[⬆ back to top](#quick-links)**
+
+---
+
 
 ## <a id= "3D Transform"></a>3D Transform
 
 ## ![animation](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/646f9fb9-f003-4bd1-b535-d0b775bc0b04)
+
+**[⬆ back to top](#quick-links)**
+
+---
 
 ## <a id="animated-btn"></a>Animated Button
 
@@ -855,11 +828,11 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+
 ## <a id= "Css FLEX"></a>Css FLEX
 
 ## ![Screenshot 2023-10-23 141538](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113248104/973a1186-de6b-4e07-bc53-424b9b864984)
 
-&nbsp;
 
 ## <a id="Coffee-Animation"></a>Coffee-Animation
 
@@ -867,7 +840,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
-&nbsp;
+---
+
 
 ## <a id="Basketball-Animation"></a>Basketball-Animation
 
@@ -875,7 +849,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
-&nbsp;
+---
+
 
 ## <a id="Business-Card"></a>Business-Card
 
@@ -883,47 +858,53 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
-&nbsp;
+---
+
 
 ## <a id="SolarSystem"></a>SolarSystem
 
 ![img_source](SolarSystem/output.png)
 
-# **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
-&nbsp;
+---
+
 
 ## <a id="Pendulum"></a>Pendulum
 
 ![img_source](images/pendulum.png)
 
-# **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
-&nbsp;
+---
+
 
 ## <a id="SlicedButton"></a>SlicedButton
 
 ![img_source](Button/Sliced-Button/sliced_button.gif)
 
-# **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
-&nbsp;
+---
+
 
 ## <a id="Rating Star"></a>Rating Star
 
 ![img_source](images/rating-star.png)
 
-# **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
-&nbsp;
+---
+
 
 ## <a id="DVDScreenSaver"></a>DVD Screen Saver
 
 ![img_source](images/DVDScreenSaver.png)
 
-# **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
-&nbsp;
+---
+
 
 ## <a id="ProfileCards"></a>ProfileCards
 
@@ -934,9 +915,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ![img_source](images/profileCards/card5.png)
 ![img_source](images/profileCards/card6.png)
 
-# **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
-&nbsp;
+---
+
 
 ## <a id="RotateSquare"></a>RotateSquare
 
@@ -944,13 +926,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
+---
+
+
 ## <a id="stickman"></a>Stickman Animation
 
 <img src="./images/stickman.png" height="200" title="3d card flip transtion demo gif">
 
 **[⬆ back to top](#quick-links)**
 
-&nbsp;
+---
+
 
 ## <a id="Clock-App"></a>Clock App
 
@@ -958,7 +944,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
-&nbsp;
+---
+
 
 ## <a id="3d-card-flip-transition"></a>3D card flip transition
 
@@ -966,7 +953,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 **[⬆ back to top](#quick-links)**
 
-&nbsp;
+---
+
 
 ## Contributors
 
