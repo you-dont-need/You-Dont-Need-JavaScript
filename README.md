@@ -123,6 +123,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [RotateSquare](#rotatesquare)
   - [Stickman Animation](#stickman-animation)
   - [Clock App](#clock-app)
+  - [Website landing page example](#website-landing-page-example)
 - [\`\`\`](#-4)
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -981,6 +982,20 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 &nbsp;
+
+
+## <a id="Website-landing-page-example"></a>Website landing page example
+
+[<img src="images/Website-landing-page-example-1.png" height="230" title="Demo 1">](https://aryanfylo.netlify.app/)
+[<img src="images/Website-landing-page-example-2.png" height="230" title="Demo 2">](https://aryanfylo.netlify.app/)
+[<img src="images/Website-landing-page-example-3.png" height="230" title="Demo 3">](https://aryanfylo.netlify.app/)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+&nbsp;
+
 
 ```
 =======
