@@ -49,6 +49,7 @@
 1. [涟漪效应](#RippleEffect)
 1. [响应计数器 # 显示不适合屏幕的物品](#ResponsiveItemShowcase)
 1. [Neumorphism风格的卡片设计](#neumorphism-card-design)
+1. [尤達寶寶動畫](#baby-yoda-animation-css)
 
 
 ## <a id="Accordion"></a>手风琴 / 切换
@@ -298,6 +299,16 @@
 **[⬆ 回到顶部](#quick-links)**
 
 ***
+&nbsp;
+
+## <a id="babyYoda"></a>尤達寶寶動畫 CSS
+
+[<img src="./images/babyYoda.jpg" title="Baby Yoda Animation">](https://codepen.io/marcelesilv/pen/qBeaOaw)
+
+**[⬆ 回到顶部](#quick-links)**
+
+---
+
 &nbsp;
 
 ## 贡献
