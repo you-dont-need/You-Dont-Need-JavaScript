@@ -41,6 +41,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Compass Loader](#compassloader)
 - [City animation footer](#city-animation-footer)
 - [Counter of checked check-boxes](#counter-of-checked-check-boxes)
+- [Card Show](#card-show)
 - [Dog Box Animation](#dog-box-animation)
 - [Dropdown Menu](#dropdown-menu)
 - [Dynamic Image Colorizing](#dynamic-image-colorizing)
@@ -891,6 +892,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/rotateSquare" height="230" title="Demo 1">]
 
 **[⬆ back to top](#quick-links)**
+=======
+
+&nbsp;
+## <a id="Card-show"></a>Card SHow
+
+[<img src="images/card-shw.gif" height="230" title="Card show">] (https://codepen.io/Sp39/pen/gOEdpeq)
+
+**[⬆ back to top](#quick-links)**
+=======
 ```
 =======
 &nbsp;
