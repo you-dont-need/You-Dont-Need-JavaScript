@@ -411,8 +411,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="navBar"></a>NavBar
 
-[<img src="images/navbar.png" height="230" title="Demo">](https://codepen.io/janup2442/pen/QWzPRQQ)
-[<img src="images/image_navbar.png" height="230" title="Demo">](https://codepen.io/shail-sharma/pen/eYqdyvw)
+[<img src="images/navbar.png" height="230" title="Demo1">](https://codepen.io/janup2442/pen/QWzPRQQ)
+[<img src="images/image_navbar.png" title="Demo2">](https://codepen.io/shail-sharma/pen/eYqdyvw)
 
 **[⬆ back to top](#quick-links)**
 
