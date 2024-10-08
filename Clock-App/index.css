@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+body {
+    background: url('https://cdn.pixabay.com/photo/2016/10/20/18/35/earth-1756274_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+  #txt {
+      color: white;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      justify-content: center;
+      text-align: center;
+      font-size: 100px;
+      letter-spacing: 3px;
+      padding-top: 220px;
+  }

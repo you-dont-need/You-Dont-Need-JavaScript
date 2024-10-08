@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+body {
+  background: #e1e2dd;
+  font-family: 'Raleway', sans-serif;
+}
+
+.cursor-common {
+    width: 350px;
+    height: 50px;
+    font-size: 25px;
+    transition: color 2s ease-out 100ms;
+}
+
+.cursor-common:hover {
+    color: #7ae615;
+}
+
+.cursor-auto {
+    cursor: auto;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.cursor-crosshair {
+    cursor: crosshair;
+}
+
+.cursor-wait {
+    cursor: wait;
+}
+
+.cursor-text {
+    cursor: text;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+}
