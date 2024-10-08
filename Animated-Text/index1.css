@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #203733;
+  }
+  
+  .text1 span {
+    font-size: 60px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: #240707;
+    animation: zoomup 3s linear infinite;
+    animation-delay: calc(70ms * var(--i));
+  }
+  
+  
+  @keyframes zoomup {
+    0%,
+    100% {
+      color: #00c2ba;
+      filter: blur(1px);
+      text-shadow: 0 0 10px #00c2ba, 0 0 20px #541a8b, 0 0 30px #00c2ba,
+        0 0 40px #00c2ba, 0 0 60px #00c2ba, 0 0 80px #00c2ba, 0 0 100px #00c2ba,
+        0 0 120px #00c2ba;
+    }
+  
+    5%,
+    95% {
+      filter: blur(0);
+      color: #ffffff;
+      text-shadow:none;
+    }
+  }
