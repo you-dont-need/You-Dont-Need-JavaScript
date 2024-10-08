@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Courgette&family=Inter:wght@400;700&family=Josefin+Slab:wght@100&family=Kalam:wght@300&family=Lexend+Deca:wght@400;700&family=Neonderthaw&family=Oleo+Script+Swash+Caps:wght@400;700&family=Outfit:wght@300;400;600&family=Pacifico&family=Quicksand:wght@300&family=Rajdhani&family=Teko&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Courgette&family=Inter:wght@400;700&family=Josefin+Slab:wght@100&family=Kalam:wght@300&family=Lexend+Deca&family=Neonderthaw&family=Oleo+Script+Swash+Caps:wght@400;700&family=Outfit:wght@300;400;600&family=Pacifico&family=Quicksand:wght@300&family=Rajdhani&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  
+  <style>
+    .attribution { font-size: 11px; margin-top: 30px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+   
+    
+    .main{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 620px;
+      /* position: relative;
+            margin-top: 200px;
+            left: 30%;   */
+      margin: 0 auto;    
+      padding-top: 200px;
+            
+           
+    }
+
+    .main .c1{
+      width: 300px;
+      height: 350px;
+      background-color: hsl(31, 77%, 52%);
+      border-bottom-left-radius: 7px;
+      border-top-left-radius: 7px;
+    }
+
+    .main .c2{
+      width: 300px;
+      height: 350px;
+      background-color: hsl(184, 100%, 22%);
+    }
+
+    .main .c3{
+      width: 300px;
+      height: 350px;
+      background-color:  hsl(179, 100%, 13%);
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+    }
+
+
+    .main .c1 h1{
+      color: white;
+      font-family: 'Big Shoulders Display', cursive;
+      font-size: 29px;
+      margin-left: 28px;
+      margin-top: 27px;
+      text-transform: uppercase;
+    }
+
+    .main .c2 h1{
+      color: white;
+      font-family: 'Big Shoulders Display', cursive;
+      font-size: 29px;
+      margin-left: 28px;
+      margin-top: 27px;
+      text-transform: uppercase;
+      
+    }
+
+    .main .c3 h1{
+      color: white;
+      font-family: 'Big Shoulders Display', cursive;
+      font-size: 29px;
+      margin-left: 28px;
+      margin-top: 27px;
+      text-transform: uppercase;
+    }
+
+
+
+    .main .c1 p{
+      color: hsla(0, 0%, 100%, 0.75);
+      font-size: 9.8px;
+      margin-left: 28px;
+      font-family: 'Lexend Deca', sans-serif;
+      line-height: 16px;
+
+    }
+    .main .c2 p{
+      color: hsla(0, 0%, 100%, 0.75);
+      font-size: 9.8px;
+      margin-left: 28px;
+      font-family: 'Lexend Deca', sans-serif;
+      line-height: 16px;
+      
+    }
+    .main .c3 p{
+      color: hsla(0, 0%, 100%, 0.75);
+      font-size: 9.8px;
+      margin-left: 28px;
+      font-family: 'Lexend Deca', sans-serif;
+      line-height: 16px;
+     
+    }
+
+    .main .c1 button{
+      color:hsl(31, 77%, 52%);
+      width: 100px;
+      height: 33px;
+      font-size: 11px;
+      border: none;
+      border-radius: 20px;
+      background-color: white;
+      margin-top: 50px;
+      margin-left: 40px;
+      font-family: 'Lexend Deca', sans-serif;
+    }
+
+    .main .c2 button{
+      color:hsl(184, 100%, 22%);
+      width: 100px;
+      height: 33px;
+      font-size: 11px;
+      border: none;
+      border-radius: 20px;
+      background-color: white;
+      margin-top: 50px;
+      margin-left: 40px;
+      font-family: 'Lexend Deca', sans-serif;
+    }
+
+    .main .c3 button{
+      color: hsl(179, 100%, 13%);
+      width: 100px;
+      height: 33px;
+      font-size: 11px;
+      border: none;
+      border-radius: 20px;
+      background-color: white;
+      margin-top: 50px;
+      margin-left: 40px;
+      font-family: 'Lexend Deca', sans-serif;
+    }
+
+
+    .main .c1 button:hover{
+      background-color:transparent;
+      color: white;
+      border: 1px solid white;
+    }
+    .main .c2 button:hover{
+      background-color:transparent;
+      color: white;
+      border: 1px solid white;
+    }
+    .main .c3 button:hover{
+      background-color:transparent;
+      color: white;
+      border: 1px solid white;
+    }
+
+    .main .c1 img{
+      margin-top: 30px;
+      margin-left: 28px;
+    }
+
+    .main .c2 img{
+      margin-top: 30px;
+      margin-left: 28px;
+    }
+    .main .c3 img{
+      margin-top: 30px;
+      margin-left: 28px;
+    }
+
+
+    
+    @media only screen and (max-width:600px)
+    {
+
+
+      .main{
+         display: flex;
+         flex-direction: column;
+         flex-wrap: wrap;
+         position: relative;
+         left:0;
+        padding-bottom: 50px;  
+      }
+
+      .main .c1{
+        width:550px;
+        height: 750px;   
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
+
+      .main .c2{
+        width:550px;
+        height: 750px;
+        border-radius: 0;
+      }
+
+
+     .main .c3{
+      width:550px;
+        height:750px;
+        border-radius: 0;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+     }
+
+     .main .c1 img{
+      height: 90px;
+      width: 150px;
+      margin-top: 90px;
+      margin-left: 78px;
+    
+    }
+
+    .main .c2 img{
+      height: 90px;
+      width: 150px;
+      margin-top: 90px;
+      margin-left: 78px;
+    
+    }.main .c3 img{
+      height: 90px;
+      width: 150px;
+      margin-top: 90px;
+      margin-left: 78px;
+    
+    }
+    .main .c1 p{
+
+      font-size: 24px;
+      margin-left: 28px;
+      font-family: 'Lexend Deca', sans-serif;
+      line-height: 36px;
+      padding-left: 56px;
+    }
+
+
+    .main .c2 p{
+      font-size: 24px;
+      margin-left: 28px;
+      font-family: 'Lexend Deca', sans-serif;
+      line-height: 36px;
+      padding-left: 56px;
+}
+
+    .main .c3 p{
+     font-size: 24px;
+     margin-left: 28px;
+     font-family: 'Lexend Deca', sans-serif;
+     line-height: 36px;
+     padding-left: 56px;
+}
+
+.main .c1 h1{
+      font-size: 69px;
+      margin-left: 78px;
+      margin-top: 27px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+}    
+.main .c2 h1{
+      font-size: 69px;
+      margin-left: 78px;
+      margin-top: 27px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+} 
+.main .c3 h1{
+      font-size: 69px;
+      margin-left: 78px;
+      margin-top: 27px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+} 
+
+.main .c1 button{
+      width: 220px;
+      height: 70px;
+      font-size: 24px;
+      border-radius: 33px;
+      margin-top: 50px;
+      margin-left: 78px;
+    }
+
+    .main .c2 button{
+      width: 220px;
+      height: 70px;
+      font-size: 24px;
+      border-radius: 33px;
+      margin-top: 50px;
+      margin-left: 78px;
+    }
+
+    .main .c3 button{
+      width: 220px;
+      height: 70px;
+      font-size: 24px;
+      border-radius: 33px;
+      margin-top: 50px;
+      margin-left: 78px;
+    }
+
+    }
+
+  </style>
+</head>
+<body> 
+  <div class="main">
+    <div class="c1">
+           <img src="images/icon-sedans.svg" width="40px">
+           <h1>Sedans</h1>
+           <p>Choose a sedan for its<br> affordability and excellent<br> fuel economy. Ideal for<br> cruising in the city 
+            or on<br> your next road trip.</p>
+            <button>Learn More</button>
+    </div>
+
+    <div class="c2">
+             <img src="images/icon-suvs.svg" width="40px">
+             <h1>SUVs</h1>
+             <p>Take an SUV for its spacious<br> interior, power, and<br> versatility. Perfect for your <br>next family vacation 
+              and <br>off-road adventures.</p>
+              <button>Learn More</button>
+    </div> 
+
+    <div class="c3">
+          <img  src="images/icon-luxury.svg" width="40px">
+          <h1>Luxury</h1>
+          <p>Cruise in the best car brands<br> without the bloated prices.<br> Enjoy the enhanced comfort<br> of a luxury 
+            rental and arrive<br> in style.</p>
+            <button>Learn More</button>
+    </div>
+  </div>
+  
+  <!-- Sedans
+  Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+  or on your next road trip.
+
+  SUVs
+  Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+  and off-road adventures.
+
+  Luxury
+  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+  rental and arrive in style. -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Aniket Doke</a>.
+  </div> -->
+</body>
+</html>
