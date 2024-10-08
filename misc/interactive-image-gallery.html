@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .gallery-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.4s ease, filter 0.4s ease;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.75);
+        }
+
+        .gallery-item::after {
+            content: attr(data-caption);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 1.1rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery-container">
+        <h1>Beautiful Image Gallery</h1>
+        <div class="gallery">
+            <div class="gallery-item" data-caption="Mountain Landscape">
+                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
+                    alt="Mountain Landscape" />
+            </div>
+            <div class="gallery-item" data-caption="Forest Path">
+                <img src="https://plus.unsplash.com/premium_photo-1667311649552-2cfab63bdcfc?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Zm9yZXN0JTIwcGF0aHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Forest Path" />
+            </div>
+            <div class="gallery-item" data-caption="Autumn Leaves">
+                <img src="https://plus.unsplash.com/premium_photo-1665772801153-7fb1e433d0e5?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Autumn Leaves" />
+            </div>
+            <div class="gallery-item" data-caption="Snowy Mountains">
+                <img src="https://images.unsplash.com/photo-1548873903-5fc219569c50?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8U25vd3klMjBNb3VudGFpbnN8ZW58MHx8MHx8fDA%3D"
+                    alt="Snowy Mountains" />
+            </div>
+            <div class="gallery-item" data-caption="Desert Dunes">
+                <img src="https://images.unsplash.com/photo-1490723286627-4b66e6b2882a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGVzZXJ0cyUyMGR1bmV8ZW58MHx8MHx8fDA%3D"
+                    alt="Desert Dunes" />
+            </div>
+            <div class="gallery-item" data-caption="Beach Sunset">
+                <img src="https://images.unsplash.com/photo-1708093289686-9697dcfd810d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Beach Sunset" />
+            </div>
+
+            <div class="gallery-item" data-caption="Waterfall">
+                <img src="https://images.unsplash.com/photo-1433878455169-4698e60005b1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdhdGVyZmFsbHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Waterfall" />
+            </div>
+            <div class="gallery-item" data-caption="Raining">
+                <img src="https://images.unsplash.com/photo-1460013477427-b0cce3e30151?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHJhaW58ZW58MHx8MHx8fDA%3D"
+                    alt="Raining" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
