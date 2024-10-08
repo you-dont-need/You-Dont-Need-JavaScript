@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    height: 100vh;
+}
+
+.weather-widget {
+    background-color: #007BFF;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.weather-location {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: black;
+}
+
+.weather-details h3 {
+    font-size: 48px;
+    color: white;
+}
+
+.weather-details p {
+    font-size: 16px;
+    color: white;
+    margin-top: 10px;
+}
+
+.weekly-forecast {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.forecast-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.day-forecast {
+    background-color: #007BFF;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+}
+
+.day-forecast h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.day-forecast p {
+    font-size: 14px;
+    color: whitesmoke;
+}
