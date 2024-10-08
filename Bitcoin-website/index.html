@@ -265,6 +265,110 @@
                 flex-direction: column;
             }
         }
+
+                /* New styles for additional features */
+                .price-ticker {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #19d7f8;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-image: linear-gradient(#fd00da, #19d7f8);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(253, 0, 218, 0.4);
+        }
+
+        .testimonials {
+            padding: 60px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .testimonial-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            max-width: 300px;
+        }
+
+        .testimonial img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .faq-section {
+            padding: 60px 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        .faq-answer {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 0 0 5px 5px;
+        }
+
+        .newsletter {
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            width: 250px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            background-color: #19d7f8;
+            color: black;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -345,6 +449,64 @@
             <span>WALLET</span>
         </div>
     </div>
+    <!-- New Price Ticker -->
+    <div class="price-ticker">
+        <span>Bitcoin Price: $48,234.56 USD</span> | <span>24h Change: +2.5%</span>
+    </div>
+
+    <!-- Existing Banner Section -->
+
+    <!-- New CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Start Your Bitcoin Journey?</h2>
+        <p>Join millions of others in the financial revolution.</p>
+        <button class="cta-button">Get Started Now</button>
+    </section>
+
+    <!-- Existing About Us Section -->
+
+    <!-- New Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <img src="person.jpg" alt="User 1">
+                <p>"Bitcoin changed my perspective on finance. It's empowering to have full control over my money."</p>
+                <h4>- Sarah K.</h4>
+            </div>
+            <div class="testimonial">
+                <img src="person.jpg" alt="User 2">
+                <p>"The security and transparency of Bitcoin transactions give me peace of mind."</p>
+                <h4>- Michael R.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Existing Features Section -->
+
+    <!-- New FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">What is Bitcoin?</div>
+            <div class="faq-answer">Bitcoin is a decentralized digital currency that enables instant payments to anyone, anywhere in the world. It uses peer-to-peer technology to operate with no central authority.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I buy Bitcoin?</div>
+            <div class="faq-answer">You can buy Bitcoin through cryptocurrency exchanges, Bitcoin ATMs, or peer-to-peer platforms. Always ensure you're using a reputable service and follow security best practices.</div>
+        </div>
+    </section>
+
+    <!-- New Newsletter Section -->
+    <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest Bitcoin news and tips.</p>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
 
     <!-- Footer Section -->
     <div class="footer">
