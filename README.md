@@ -35,6 +35,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Bubble](#bubble)
 - [Burger Menu](#burger-menu)
 - [Button Animation](#button-animation)
+- [Baby Yoda Animation](#baby-yoda-animation-css)
 - [Captain America Shield](#captain-america-shield)
 - [Carousel](#carousel)
 - [Compass Loader](#compass-loader)
@@ -411,7 +412,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="navBar"></a>NavBar
 
-[<img src="images/navbar.png" height="230" title="Demo">](https://codepen.io/janup2442/pen/QWzPRQQ)
+[<img src="images/navbar.png" height="230" title="Demo1">](https://codepen.io/janup2442/pen/QWzPRQQ)
+[<img src="images/image_navbar.png" title="Demo2">](https://codepen.io/shail-sharma/pen/eYqdyvw)
 
 **[⬆ back to top](#quick-links)**
 
@@ -488,7 +490,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="DarkMode"></a>DarkMode
 
-[<img src="images/darkmode.gif" title="Dark Mode - Day and nigth">](https://codepen.io/marcelesilv/pen/yLjrEzz)
+[<img src="images/darkmode.gif" title="Dark Mode - Day and nigth">](http://codepen.io/marcelesilv/pen/yLjrEzz)
 
 **[⬆ back to top](#quick-links)**
 
@@ -778,6 +780,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 
+
+
 ## <a id= "Gradient-Animation"></a>Gradient Animation
 
 [<img src="images/gradient-animation.gif" height="230" title="Gradient Animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/b3b64a1d4a426ab3a8f20fbe34640de18bca14a5/images/gradient-animation.gif)
@@ -950,6 +954,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="3d-card-flip-transition"></a>3D card flip transition
 
 [<img src="./images/3d-card-flip-transition.gif" height="200" title="Demo Image">]
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+
+## <a id="babyYoda"></a>Baby Yoda Animation CSS
+
+[<img src="./images/babyYoda.jpg" title="Baby Yoda Animation">](https://codepen.io/marcelesilv/pen/qBeaOaw)
 
 **[⬆ back to top](#quick-links)**
 
