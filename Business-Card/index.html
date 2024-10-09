@@ -7,19 +7,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="business-card">
-        <div class="card-header">
-            <img src="profile-picture.jpg" alt="Your Name">
+    <main class="business-card">
+        <header class="card-header">
+            <img src="profile-picture.jpg" alt="Profile picture of Your Name">
             <h1>Your Name</h1>
-            <p>Job Title</p>
-        </div>
-        <div class="card-details">
-            <p>Email: your@email.com</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Website: www.yourwebsite.com</p>
-            <p>Address: 123 Main St, City, Country</p>
-        </div>
-    </div>
+            <p class="job-title">Job Title</p>
+        </header>
+        <section class="card-details">
+            <p><strong>Email:</strong> <a href="mailto:your@email.com">your@email.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+11234567890">(123) 456-7890</a></p>
+            <p><strong>Website:</strong> <a href="https://www.yourwebsite.com" target="_blank">www.yourwebsite.com</a></p>
+            <p><strong>Address:</strong> 123 Main St, City, Country</p>
+        </section>
+        <section class="card-social">
+            <a href="https://linkedin.com" target="_blank" class="social-icon">
+                <img src="linkedin-icon.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com" target="_blank" class="social-icon">
+                <img src="github-icon.png" alt="GitHub">
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-icon">
+                <img src="twitter-icon.png" alt="Twitter">
+            </a>
+        </section>
+    </main>
 </body>
 </html>
-
