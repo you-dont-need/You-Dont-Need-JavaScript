@@ -2,16 +2,24 @@
 <html>
 <head>
     <style>
+        body{
+            background-color: rgb(10, 3, 29);
+        }
         /* Container for the 3D cube */
         .cube-container {
             perspective: 800px; /* Perspective view to create 3D effect */
             width: 200px;
             height: 200px;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
         }
 
         /* Cube */
         .cube {
             position: relative;
+            margin-left: 1600px;
+            margin-top: 900px;
             width: 100px;
             height: 100px;
             transform-style: preserve-3d; /* Allow child elements to be transformed in 3D space */
@@ -25,28 +33,68 @@
             height: 100px;
             border: 2px solid #3498db;
             background-color: rgba(52, 152, 219, 0.5);
+            /*make the written part of the face in center and changed color*/
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 16px; 
+            color: white;
+            border: 4px solid #f0f3f1;
         }
 
         /* Front face */
-        .front { transform: translateZ(50px); }
+        .front { transform: translateZ(50px); 
+        animation: colorfront 3s infinite;
+        }
+        @keyframes colorfront {
+            0% { background-color: rgba(220, 13, 13, 0.5); }
+            50% { background-color: rgba(105, 50, 43, 0.5); } 
+            100% { background-color: rgba(149, 11, 130, 0.5); } }
 
         /* Back face */
-        .back { transform: rotateY(180deg) translateZ(50px); }
+        .back { transform: rotateY(180deg) translateZ(50px); 
+        animation: colorback 3s infinite;
+        }
+        @keyframes colorback {
+            0% { background-color: rgba(14, 11, 31, 0.5); }
+            50% { background-color: rgba(178, 200, 37, 0.5); } 
+            100% { background-color: #23ffa080; } }
+
 
         /* Right face */
-        .right { transform: rotateY(90deg) translateZ(50px); }
+        .right { transform: rotateY(90deg) translateZ(50px);
+            animation: colorright 3s infinite; }
+        @keyframes colorright {
+            0% { background-color: rgba(206, 135, 35, 0.5); }
+            50% { background-color: rgba(72, 14, 28, 0.5); } 
+            100% { background-color: #0e1c3180; } }
 
         /* Left face */
-        .left { transform: rotateY(-90deg) translateZ(50px); }
+        .left { transform: rotateY(-90deg) translateZ(50px);
+            animation: colorleft 3s infinite; }
+        @keyframes colorleft {
+            0% { background-color: rgba(9, 43, 66, 0.5); }
+            50% { background-color: rgba(183, 148, 21, 0.5); } 
+            100% { background-color: #23ffa080; } }
 
         /* Top face */
-        .top { transform: rotateX(90deg) translateZ(50px); }
+        .top { transform: rotateX(90deg) translateZ(50px);
+            animation: colortopt 3s infinite; }
+        @keyframes colortop {
+            0% { background-color: rgba(14, 11, 31, 0.5); }
+            50% { background-color: rgba(178, 200, 37, 0.5); } 
+            100% { background-color: #8189a480; } }
 
         /* Bottom face */
-        .bottom { transform: rotateX(-90deg) translateZ(50px); }
+        .bottom { transform: rotateX(-90deg) translateZ(50px); 
+            animation: colorbottom 3s infinite;}
+        @keyframes colorbottom {
+            0% { background-color: rgba(208, 207, 216, 0.5); }
+            50% { background-color: rgba(11, 12, 4, 0.5); } 
+            100% { background-color: #03070580; } }
 
         @keyframes rotate {
-            0% { transform: rotateX(0) rotateY(0); }
+            0% { transform: rotateX(0) rotateY(0);  }
             100% { transform: rotateX(360deg) rotateY(360deg); }
         }
     </style>
