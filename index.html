@@ -480,14 +480,23 @@
 
 	<!--End of Tawk.to Script-->
 
-	<noscript>You need to enable JavaScript to run this app.</noscript>
 	<script>
 		const darkModeToggle = document.getElementById("dark-mode");
 		const body = document.body;
-
+	
+		if (localStorage.getItem('darkMode') === 'enabled') {
+			body.classList.replace("light-mode", "dark-mode");
+			darkModeToggle.checked = true;
+		}
+	
 		darkModeToggle.addEventListener("change", () => {
-			if (darkModeToggle.checked) body.classList.replace("light-mode", "dark-mode");
-			else body.classList.replace("dark-mode", "light-mode");
+			if (darkModeToggle.checked) {
+				body.classList.replace("light-mode", "dark-mode");
+				localStorage.setItem('darkMode', 'enabled'); 
+			} else {
+				body.classList.replace("dark-mode", "light-mode");
+				localStorage.setItem('darkMode', 'disabled'); 
+			}
 		});
 	</script>
 </body>
