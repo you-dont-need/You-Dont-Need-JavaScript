@@ -1,0 +1,401 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #1a1a1a;
+    color: white;
+}
+.logo img
+{
+    filter: invert(1);
+}
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Left Box */
+.left-box {
+    width: 18vw;
+    background-color: #252526;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+}
+
+.left-box .menu li {
+    list-style: none;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+.left-box .menu li:hover {
+    /* background-color: #333; */
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #383535;
+    border-radius: 30px;
+    
+}
+.SignUp{
+   
+    margin: 20px 10px;    
+    background: #383535;
+    color: #b3b3b3;
+    font-size: 20px;
+    font-weight: bolder;
+    outline: none;
+    border: none;
+
+}
+.SignUp:hover{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.Login{
+    margin: 20px 10px;    
+    background: #383535;
+    color: #b3b3b3;
+    font-size: 20px;
+    font-weight: bolder;
+    outline: none;
+    border: none;
+
+}
+.Login:hover{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Right Box */
+.right-box {
+    width: 100%;
+    margin-left: 20%;
+    padding: 20px;
+    height: 100%;
+    padding-bottom: 80px;
+}
+
+/* Search Bar */
+.search-bar {
+margin-left: 300px;   
+
+}
+
+.search-bar input {
+    width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #1b1b1b;
+    color: white;
+    font-weight: bolder;
+}
+
+.trending-section .trending-links {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.trending-section .trending-links span {
+    margin: 0 10px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    padding-bottom: 15px;
+    text-decoration: underline;
+}
+.trending-section .trending-links span:hover {
+
+    font-size: 18px;
+}
+
+.list-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+/* Slider Cards */
+.slider-container {
+    padding: 20px 0;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.slider-card {
+    width: 200px;
+    height: 300px;
+    background-color: #444;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.slider-card:hover {
+    transform: scale(1.05);
+}
+
+/* New Releases */
+.new-releases {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.release-card {
+    width: 200px;
+    height: 200px;
+    /* background-color: #444; */
+    /* text-align: center; */
+    /* padding: 10px; */
+    
+}
+.release-card:hover{
+    
+        transform: scale(1.05);
+    
+}
+.release-card img{
+    height: 100%;
+    object-fit: contain;
+}
+.new-releases-info{
+    display: flex;
+    justify-content: space-between;
+}
+.info{
+    width: 200px;
+}
+
+
+
+/* Featured Artists */
+.featured-artists {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 20px 0; */
+}
+.artist-circle:hover{
+     transform: scale(1.05);
+}
+.artist-circle {
+    width: 250px;
+    height: 250px;
+    background-color: #444;
+    border-radius: 50%;
+    
+}
+.artist-circle img{
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 50%;
+
+}
+.featured-artists-info{
+    display: flex;
+    justify-content: space-between;
+}
+.info{
+    padding-top: 15px;
+    width: 200px;
+    text-align: center;
+}
+/* Top Charts */
+.top-charts, .top-hindi-hits, .top-international-hits {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.chart-card {
+    width: 150px;
+    height: 150px;
+    background-color: #444;
+    text-align: center;
+    padding: 10px;
+}
+/* Top Hindi Hits */
+.top-hits {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.hit-card {
+    width: 200px;
+    height: 200px;
+    /* background-color: #444; */
+    /* text-align: center; */
+    /* padding: 10px; */
+}
+.hit-card:hover{
+    transform: scale(1.05);
+}
+.hit-card img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.top-hits-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    width: 200px;
+}
+/* Top International Hits */
+.top-international-hits {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.hit-card {
+    width: 200px;
+    height: 200px;
+    /* background-color: #444; */
+    /* text-align: center; */
+    /* padding: 10px; */
+}
+
+.hit-card img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.top-international-hits-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    width: 200px;
+}
+
+
+/* Fixed Playbar */
+.playbar {
+    position: fixed;
+    bottom: 0;
+    height: 5%;
+    width: 100%;
+    background-color: #222428;
+    padding: 15px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.playbar .song-info {
+    display: flex;
+    align-items: center;
+    width: 460px;
+}
+
+.playbar .album-cover {
+    width: 50px;
+    height: 50px;
+    
+    margin-right: 15px;
+}
+
+.playbar .song-details h3, .playbar .song-details p {
+    margin: 0;
+}
+
+.controls{
+   
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.controls img{
+    filter: invert(1);
+}
+.playbar .play-controls {
+    display: flex;
+    align-items: center;
+}
+
+.playbar .play-controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    
+    cursor: pointer;
+}
+
+.playbar .play-controls input.volume-bar {
+    width: 100px;
+}
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-style: none;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+}
+
+.footer-section h2 {
+    color: #fff; /* Changed color to white */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center; /* Centered heading */
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section.legal {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+}
