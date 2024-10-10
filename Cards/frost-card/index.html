@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frosted Glass Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('https://asset.gecdesigns.com/img/wallpapers/starry-night-sky-reflection-background-hd-wallpaper-sr10012425-1705222416280-cover.webp') no-repeat center center/cover;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .card {
+      width: 350px;
+      height: 450px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+      text-align: center;
+    }
+
+    .card h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 16px;
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      color: #fff;
+      border-radius: 50px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .card a:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #333;
+    }
+
+    .card .card-footer {
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Frosted Glass Effect</h2>
+    <p>This card has a beautiful frosted glass effect that blends into the background, providing a soft and modern look. You can use this design for showcasing content elegantly.</p>
+    <a href="#">Explore More</a>
+    <div class="card-footer">
+      © 2024 - Gaurav Giri
+    </div>
+  </div>
+
+</body>
+</html>
