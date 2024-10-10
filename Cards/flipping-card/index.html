@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Card Flip</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #8360c3, #2ebf91);
+    }
+
+    .card-container {
+      perspective: 1000px;
+    }
+
+    .card {
+      width: 300px;
+      height: 400px;
+      position: relative;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .card-front {
+      background: url('https://source.unsplash.com/random/300x400') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .card-back {
+      background-color: #fff;
+      color: #333;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .card-back h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #2ebf91;
+    }
+
+    .card-back p {
+      margin: 15px 0;
+      font-size: 16px;
+    }
+
+    .card-back a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #2ebf91;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .card-back a:hover {
+      background-color: #2b9e7b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    <div class="card">
+      <!-- Front side of the card -->
+      <div class="card-face card-front">
+        Hello!
+      </div>
+      <!-- Back side of the card -->
+      <div class="card-face card-back">
+        <h1>Card Title</h1>
+        <p>This is the back side of the card. You can put any content here!</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
