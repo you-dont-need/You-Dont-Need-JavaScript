@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Cards in One Row</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('download.jpeg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .container {
+            display: flex;
+            flex-direction: column; /* Stack cards vertically */
+            align-items: center;
+            padding: 20px;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 20px;
+            margin: 20px 0; /* Space between cards */
+            width: 500px; /* Full width with some margin */
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            transition: transform 0.3s; 
+            border: 5px solid black;
+        }
+        .card:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animated Cards - One per Row</h1>
+    <div class="container"> 
+        <h1 style="text-align: center;">Fade</h1>
+        <div class="card" data-aos="fade-up">Card 1</div>
+        <div class="card" data-aos="fade-down">Card 2</div>
+        <div class="card" data-aos="fade-left">Card 3</div>
+        <div class="card" data-aos="fade-right">Card 4</div> 
+        <h1 style="text-align: center;">Zoom</h1>
+        <div class="card" data-aos="zoom-in">Card 5</div>
+        <div class="card" data-aos="zoom-out">Card 6</div> 
+        <h1 style="text-align: center;">Flip</h1> 
+        <div class="card" data-aos="flip-left">Card7</div>
+        <div class="card" data-aos="flip-right">Card8</div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
