@@ -1,41 +1,120 @@
+/* Variables CSS pour une personnalisation facile */
+:root {
+    --primary-color: #333;
+    --secondary-color: #777;
+    --background-color: #009dff;
+    --card-bg-color: #fff;
+    --card-border-color: #ccc;
+    --font-family: 'Open sans', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    transition: background-color 0.3s ease;
 }
 
 .business-card {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 500px;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.business-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card-header img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .card-header h1 {
-    margin: 10px 0;
-    color: #333;
+    margin: 15px 0 5px;
+    color: var(--primary-color);
+    font-size: 1.8rem;
 }
 
-.card-header p {
+.job-title {
     margin: 0;
-    color: #777;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
 }
 
 .card-details p {
-    margin: 10px 0;
-    color: #333;
+    margin: 12px 0;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.card-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.card-details a:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .business-card {
+        padding: 20px 15px;
+    }
+
+    .card-header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .job-title {
+        font-size: 1rem;
+    }
+
+    .card-details p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .business-card {
+        padding: 15px 10px;
+    }
+
+    .card-header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .job-title {
+        font-size: 0.9rem;
+    }
+
+    .card-details p {
+        font-size: 0.85rem;
+    }
 }

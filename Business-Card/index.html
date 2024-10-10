@@ -6,117 +6,139 @@
     <link rel="stylesheet" href="s.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Business Card with Colored Social Icons and QR Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .business-card {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .card-header img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .card-header h1 {
+            margin: 15px 0 5px;
+            color: #333;
+            font-size: 1.8rem;
+        }
+
+        .job-title {
+            margin: 0;
+            color: #777;
+            font-size: 1.2rem;
+        }
+
+        .card-details p {
+            margin: 12px 0;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .social-media {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            font-size: 30px;
+            transition: transform 0.2s;
+        }
+
+        .social-media a:hover {
+            transform: scale(1.1);
+        }
+
+        .bx-linkedin { color: #0077b5; }
+        .bx-github { color: #333; }
+        .bx-twitter { color: #1da1f2; }
+        .bx-facebook { color: #3b5998; }
+        .bx-instagram { color: #c32aa3; }
+
+        .qr-code {
+            margin-top: 20px;
+        }
+
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .contact-us {
+            margin-top: 20px;
+        }
+
+        .contact-us a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .contact-us a:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-  <style>
-    
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.business-card {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 500px;
-    text-align: center;
-    padding: 20px;
-}
-
-.social-media {
-    display: flex;
-    gap: 10px; 
-    justify-content: center; 
-    margin-top: 20px; 
-}
-
-.social-media a {
-    text-decoration: none; 
-    font-size: 30px; 
-    transition: transform 0.2s; 
-}
-
-.social-media a:hover {
-    transform: scale(1.1); 
-}
-
-
-.bx-linkedin { color: #0077b5; }
-.bx-github { color: #333; }
-.bx-twitter { color: #1da1f2; }
-.bx-facebook { color: #3b5998; }
-.bx-instagram { color: #c32aa3; }
-
-.qr-code {
-    margin-top: 20px; 
-}
-
-.qr-code img {
-    width: 150px; 
-    height: 150px; 
-}
-
-
-.contact-us {
-    margin-top: 20px; 
-}
-
-.contact-us a {
-    display: inline-block;
-    padding: 10px 20px; 
-    background-color: #007bff; 
-    color: white; 
-    border-radius: 5px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    transition: background-color 0.3s, transform 0.2s; 
-}
-
-.contact-us a:hover {
-    background-color: #0056b3; 
-    transform: scale(1.05); 
-}
-
-    
-  </style>
     <div class="business-card">
-        <div class="card-header">
-            <p>Your Name</p>
+        <header class="card-header">
+            <img src="profile-picture.jpg" alt="Profile picture of Your Name">
             <h1>Your Name</h1>
-            <p>Job Title</p>
-        </div>
-        <div class="card-details">
-            <p>Email: your@email.com</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Website: www.yourwebsite.com</p>
-            <p>Address: 123 Main St, City, Country</p>
-        </div>
-        <div class="social-media">
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+            <p class="job-title">Job Title</p>
+        </header>
+        <section class="card-details">
+            <p><strong>Email:</strong> <a href="mailto:your@email.com">your@email.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+11234567890">(123) 456-7890</a></p>
+            <p><strong>Website:</strong> <a href="https://www.yourwebsite.com" target="_blank">www.yourwebsite.com</a></p>
+            <p><strong>Address:</strong> 123 Main St, City, Country</p>
+        </section>
+        <section class="social-media">
+            <a href="https://linkedin.com" target="_blank">
                 <i class='bx bxl-linkedin'></i>
             </a>
-            <a href="https://github.com/yourprofile" target="_blank">
+            <a href="https://github.com" target="_blank">
                 <i class='bx bxl-github'></i>
             </a>
-            <a href="https://twitter.com/yourprofile" target="_blank">
+            <a href="https://twitter.com" target="_blank">
                 <i class='bx bxl-twitter'></i>
             </a>
-            <a href="https://www.facebook.com/yourprofile" target="_blank">
+            <a href="https://facebook.com" target="_blank">
                 <i class='bx bxl-facebook'></i>
             </a>
-            <a href="https://www.instagram.com/yourprofile" target="_blank">
+            <a href="https://instagram.com" target="_blank">
                 <i class='bx bxl-instagram'></i>
             </a>
-        </div>
+        </section>
         <div class="qr-code">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.example.com&size=150x150" alt="QR Code" width="150" height="150">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.example.com&size=150x150" alt="QR Code">
         </div>
         <div class="contact-us">
             <a href="mailto:your@email.com">Contact Us</a>
