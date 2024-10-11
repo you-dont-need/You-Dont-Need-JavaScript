@@ -1,3 +1,4 @@
+/* General Reset */
 body, html {
     margin: 0;
     padding: 0;
@@ -5,52 +6,59 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+/* Banner styles */
+.banner {
+    position: absolute; /* Position it relative to text section */
+    top: 20px; /* Space from the top of the text section */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center alignment */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    color: #333; /* Dark text color */
+    padding: 5px 15px; /* Padding for a sleek look */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Bold font */
+    z-index: 10; /* Ensure it’s above other elements */
+}
+
+/* Increased Scroll Container Height */
 .scroll-container {
-    height: 200vh;
-    scroll-timeline: --section block;
+    height: 300vh; /* Adjusted to create more scrollable space */
 }
 
-.container {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Text section remains in the middle */
 .text-section {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: sticky;
-    top: 0;
+    top: 0; /* Align to the top of the viewport */
+    overflow: hidden; /* Prevents overflow of content */
+    background: white; /* Optional: adds a background color */
 }
 
+/* Heading styles */
 h1 {
     font-size: 4rem;
     text-align: center;
 }
 
-h2 {
-    font-size: 2rem;
-}
-
+/* Initial word styles (blurred, low opacity) */
 .word {
-    --pxPerWord: 20vh;
-    --start: calc(var(--i) * var(--pxPerWord));
-    --end: calc((var(--i) + 1) * var(--pxPerWord));
     display: inline-block;
-    filter: blur(20px);
-    opacity: 0;
-    animation: fx linear both;
-    animation-timeline: scroll(root);
-    animation-range: var(--start) var(--end);
+    filter: blur(var(--blur-value, 20px));  /* Use CSS variable for blur */
+    opacity: var(--opacity-value, 0.2);  /* Use CSS variable for opacity */
+    transition: filter 0.2s ease, opacity 0.2s ease; /* Shortened transition duration */
 }
 
-@keyframes fx {
-    to {
-        filter: blur(0);
-        opacity: 1;
-    }
+/* Content container */
+.container {
+    height: 100vh; /* Adjust to the desired height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: lightgray; /* Optional: for visibility */
 }
