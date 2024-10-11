@@ -2,505 +2,501 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>You Dont Need Javascript</title>
-	<style>
-		body {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-family: Arial, Helvetica, sans-serif;
-			margin: 0;
-			padding-top: 50px;
-			box-sizing: border-box;
-			transition: background-color 0.2s, color 0.2s;
-			min-height: 100vh;
-			font-size: 16px;
-			padding-bottom: 60px;
-		}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>You Don’t Need JavaScript</title>
+<style>
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Poppins', sans-serif;
+margin: 0;
+min-height: 100vh;
+background-color: #f0f0f0;
+transition: background-color 0.3s, color 0.3s;
+padding: 80px 20px;
+}
 
-		body.light-mode {
-			background-color: #ffffff;
-			color: #000000;
-		}
+body.dark-mode {
+background-color: #121212;
+color: #f0f0f0;
+}
 
-		body.dark-mode {
-			background-color: #171717;
-			color: #ffffff;
-		}
+.dark-mode-toggle {
+position:absolute;
+top: 20px;
+right: 20px;
+z-index: 1000;
+}
 
-		#toggleButton {
-			position: fixed;
-			top: 20px;
-			right: 20px;
-			padding: 10px 20px;
-			background-color: #23aa04;
-			color: white;
-			border: none;
-			border-radius: 20px;
-			cursor: pointer;
-			transition: background-color 0.2s ease;
-			z-index: 1000;
-		}
+.dark-mode-toggle label {
+position: relative;
+width: 80px;
+height: 40px;
+display: block;
+background: rgba(255, 255, 255, 0.3);
+border-radius: 100px;
+cursor: pointer;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+transition: background 0.3s ease;
+backdrop-filter: blur(10px);
+margin-right: 10px;
+margin-bottom: 13px;
+}
 
-		#toggleButton:hover {
-			background-color: #1e8f03;
-		}
+.dark-mode-toggle label:after {
+content: '';
+position: absolute;
+width: 34px;
+height: 34px;
+background: #ffffff;
+border-radius: 100px;
+top: 3px;
+left: 3px;
+transition: 0.5s;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
 
-		#pageSection {
-			max-width: 1200px;
-			width: 95%;
-			border: 5px solid #23aa04;
-			border-radius: 15px;
-			padding: 30px;
-			text-align: center;
-			transition: background-color 0.2s, color 0.2s, border 0.2s, padding 0.2s, margin 0.2s;
-		}
+.dark-mode-toggle input:checked~label:after {
+left: 44px;
+background: #000000;
+}
 
-		.dark-mode #pageSection {
-			background-color: #1e1e1e;
-			border-color: #1e8f03;
-			border-radius: 15px;
-		}
+.dark-mode-toggle input {
+display: none;
+}
 
-		#pageSection p {
-			font-size: 18px;
-		}
+#pageSection {
+max-width: 1200px;
+width: 100%;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 15px;
+box-shadow: 0 15px 200px rgba(70, 150, 140, 0.2); /* Increased blur and spread for shadow */
+backdrop-filter: blur(60px);
+padding: 30px;
+text-align: center;
+margin-top: 40px;
+transition: background 0.3s, box-shadow 0.3s;
+}
 
-		#pages {
-			font-family: Arial, Helvetica, sans-serif;
-			border-collapse: collapse;
-			width: 100%;
-			border-radius: 10px;
-			transition: background-color 0.2s, color 0.2s;
-		}
+.dark-mode #pageSection {
+background: rgba(255, 255, 255, 0.1);
+box-shadow: 0 10px 200px rgba(70, 150, 140, 0.2); /* Increased shadow in dark mode */}
 
-		#pages tbody {
-			border-radius: 10px;
-		}
+#pages {
+width: 100%;
+margin-top: 20px;
+border-collapse: collapse;
+font-size: 16px;
+}
 
-		#pages td,
-		#pages th {
-			padding: 12px;
-		}
+#pages th,
+#pages td {
+padding: 12px;
+text-align: left;
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 
-		#pages td:first-child {
-			width: 20%;
-			min-width: 120px;
-		}
+#pages th {
+font-size: 1.1rem;
+font-weight: 600;
+background-color: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(10px);
+}
 
-		#pages tr:nth-child(even) {
-			/* background-color: #f2f2f2; */
-			background-color: rgba(189, 255, 189, 0.5);
-		}
+.dark-mode #pages th,
+.dark-mode #pages td {
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-		#pages tr:nth-child(odd) {
-			/* background-color: #f2f2f2; */
-			background-color: rgba(189, 255, 189, 0.25);
-		}
+#pages tr {
+transition: background-color 0.3s;
+}
 
-		.dark-mode #pages tr:nth-child(even) {
-			background-color: #2a2a2a;
-		}
+#pages tr:hover {
+background-color: rgba(0, 0, 0, 0.05);
+}
 
-		/* #pages tr:hover {
-			background-color: rgba(189, 255, 189, 0.372);
-		} */
+.dark-mode #pages tr:hover {
+background-color: rgba(255, 255, 255, 0.1);
+}
 
-		/* .dark-mode #pages tr:hover {
-			background-color: #3a3a3a;
-		} */
+/* Updated pageUrl a styling for inline layout */
+.pageUrl {
+display: flex;
+flex-wrap: wrap; /* Allows wrapping to next line if needed */
+gap: 10px; /* Space between each link */
+justify-content: flex-start; /* Aligns items to the start */
+}
 
-		#pages th {
-			padding-top: 12px;
-			padding-bottom: 12px;
-			text-align: left;
-			background-color: #04aa6d;
-			color: white;
-		}
+.pageUrl a {
+display: inline-block; /* Allows items to be inline */
+text-decoration: none;
+color: #04aa6d;
+padding: 8px 12px; /* Adjusted padding for better appearance */
+border-radius: 8px;
+background: rgba(0, 170, 109, 0.1);
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-		.pageUrl {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 10px;
-		}
+.pageUrl a:hover {
+background-color: #23aa04;
+color: white;
+transform: scale(1.05);
+}
 
-		.pageUrl a {
-			display: inline-flex;
-			text-transform: capitalize;
-			font-size: 16px;
-			letter-spacing: 0.5px;
-			padding: 10px 20px;
-			font-family: Verdana;
-			margin: 2px 0;
-			color: #04aa6d;
-			/* background-color: #f0f0f0; */
-			border-radius: 5px;
-			text-decoration: none;
-			transition: background-color 0.2s, color 0.2s;
-			border: 1px solid #04aa6d;
-		}
+.dark-mode #pages a {
+color: #23aa04;
+background: rgba(0, 170, 109, 0.1);
+}
 
-		.dark-mode .pageUrl a {
-			color: #23aa04;
-			background-color: #2a2a2a;
-			border-color: #3a3a3a;
-		}
+.dark-mode #pages a:hover {
+background-color: black;
+}
 
-		.pageUrl a:hover {
-			background-color: #04aa6d;
-			color: white;
-			border: none;
-		}
 
-		.dark-mode .pageUrl a:hover {
-			background-color: black;
-		}
+header h1 {
+font-size: 2.5rem;
+margin-bottom: 10px;
+color: #979521;
+}
 
-		@media (max-width: 768px) {
-			body {
-				padding-left: 10px;
-				padding-right: 10px;
-				min-height: auto;
-				padding-top: 40px;
-				padding-bottom: 40px;
-			}
+.dark-mode header h1 {
+color: #979521;
+}
 
-			#pageSection {
-				border: none;
-				border-radius: 0;
-				padding: 10px;
-				width: 100%;
-				margin: 0;
-			}
+header p {
+font-size: 1.2rem;
+color: #333;
+}
 
-			#pages td,
-			#pages th {
-				padding: 8px;
-				font-size: 14px;
-			}
+.dark-mode header p {
+color: #ccc;
+}
+/* Fade-in animation for page load */
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(44px); /* Starts slightly lower */
+}
+to {
+opacity: 1;
+transform: translateY(0); /* Moves to its original position */
+}
+}
 
-			.pageUrl a {
-				font-size: 14px;
-				padding: 4px 8px;
-			}
-		}
+/* Apply fade-in animation on page load */
+#google_element {
+display: inline-block;
+margin-top: 20px;
+border-radius: 12px; /* Rounder corners for modern look */
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+overflow: hidden;
+opacity: 0; /* Initially hidden */
+transform: translateY(44px); /* Start slightly lower */
+animation: fadeIn 1s ease-out forwards; /* Smooth fade-in */
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
 
-		@media (max-width: 500px) {
-			#pages td:first-child {
-				width: 30%;
-				min-width: 100px;
-			}
+/* Hover effect for translate box */
+#google_element:hover {
+transform: translateY(-5px); /* Slight upward movement */
+box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
+}
 
-			.pageUrl a {
-				font-size: 12px;
-				padding: 3px 6px;
-			}
-		}
+/* Style the translate text and icons */
+.goog-te-gadget {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 15px; /* Spacing inside the widget */
+background-color: rgba(255, 255, 255, 0.6); /* Slight transparency for sleekness */
+border-radius: 15px; /* Rounded corners */
+backdrop-filter: blur(10px); /* Blur effect for modern glass look */
+transition: background-color 0.3s ease;
+font-size: 1rem;
+}
 
-		header {
-			margin-bottom: 30px;
-		}
+/* Change color in dark mode */
+.dark-mode .goog-te-gadget {
+background-color: rgba(0, 0, 0, 0.6); /* Dark mode background */
+color: #fff; /* White text in dark mode */
+}
 
-		h1 {
-			font-size: 2rem;
-			color: #04aa6d;
-			margin-bottom: 10px;
-		}
+/* Language dropdown (text) color */
+.goog-te-gadget a {
+color: #04aa6d; /* Stylish green for links */
+font-weight: 500; /* Make it slightly bold */
+text-decoration: none;
+transition: color 0.3s ease;
+}
 
-		a {
-			text-decoration: none;
-			color: #242424;
-		}
+.goog-te-gadget a:hover {
+color: #23aa04; /* Brighter green on hover */
+}
 
-		.dark-mode h1 a {
-			color: #23aa04;
-		}
+/* Style the language select box (dropdown) */
+.goog-te-combo {
+padding: 8px 12px;
+background-color: rgba(255, 255, 255, 0.8); /* Light background for select */
+border: 1px solid #ccc; /* Soft border */
+border-radius: 6px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for select dropdown */
+transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-		.description {
-			font-size: 1.2em;
-			color: #333;
-			margin-bottom: 20px;
-		}
+/* Dark mode for dropdown */
+.dark-mode .goog-te-combo {
+background-color: rgba(0, 0, 0, 0.8);
+color: white;
+border: 1px solid #444;
+}
 
-		.dark-mode .description {
-			color: #b0b0b0;
-		}
+.goog-te-combo:hover {
+background-color: rgba(255, 255, 255, 0.9); /* Slightly darker on hover */
+}
 
-		/* New styles for the dark mode toggle */
-		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+/* Dropdown items */
+.goog-te-menu-frame {
+border-radius: 8px !important;
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+overflow: hidden !important;
+}
 
-		.dark-mode-toggle {
-			position: fixed;
-			top: 20px;
-			right: 20px;
-			z-index: 1000;
-		}
+/* Dark mode for dropdown items */
+.dark-mode .goog-te-menu-frame {
+background-color: rgba(0, 0, 0, 0.8) !important;
+}
 
-		.dark-mode-toggle label {
-			position: relative;
-			width: 80px;
-			height: 40px;
-			display: block;
-			background: #d9d9d9;
-			border-radius: 100px;
-			cursor: pointer;
-			box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.2), inset 0px -5px 15px rgba(255, 255, 255, 0.2);
-		}
+/* Hover effects within translate widget */
+#google_element:hover .goog-te-gadget {
+background-color: rgba(255, 255, 255, 0.7); /* Lighter on hover */
+}
 
-		.dark-mode-toggle label:after {
-			content: '';
-			position: absolute;
-			height: 34px;
-			width: 34px;
-			background: #f2f2f2;
-			border-radius: 100px;
-			top: 3px;
-			left: 3px;
-			transition: 0.5s;
-			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-		}
+/* Hover effect for language dropdown */
+.goog-te-combo:hover {
+background-color: rgba(255, 255, 255, 0.85); /* Slightly darker on hover */
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow effect */
+}
 
-		.dark-mode-toggle input:checked~label:after {
-			left: 74px;
-			transform: translateX(-100%);
-			background: linear-gradient(180deg, #777, #3a3a3a);
-		}
 
-		.dark-mode-toggle input:checked~label {
-			background: #242424;
-		}
-
-		.dark-mode-toggle input {
-			display: none;
-		}
-
-		/* Remove the old button styles */
-		#toggleButton {
-			display: none;
-		}
-	</style>
+</style>
 </head>
 
 <body class="light-mode">
-	<!-- Remove the old button -->
-	<!-- <button id="toggleButton">🌙 Dark Mode</button> -->
+<!-- Dark mode toggle -->
+<div class="dark-mode-toggle">
+<input type="checkbox" id="dark-mode">
+<label for="dark-mode"></label>
+<span id="modeText">Dark / Light</span> <!-- This line indicates the current mode -->
+</div>
 
-	<!-- Add the new dark mode toggle -->
-	<div class="dark-mode-toggle">
-		<input type="checkbox" id="dark-mode">
-		<label for="dark-mode"></label>
-	</div>
+<section id="pageSection">
+<div id="google_element"></div>
+<!-- Load Google Translate script over HTTPS and handle errors -->
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"
+onerror="handleError(this)"></script>
 
-	<section id="pageSection">
-		<div id="google_element"></div>
-		<!-- Load Google Translate script over HTTPS and handle errors -->
-		<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"
-			onerror="handleError(this)"></script>
+<script type="text/javascript">
+function loadGoogleTranslate() {
+new google.translate.TranslateElement(
+{
+pageLanguage: "en",
+includedLanguages: "en,hi,pa,sa,mr,ur,bn,es,fr,de,it",
+layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+},
+"google_element"
+);
+}
 
-		<script type="text/javascript">
-			function loadGoogleTranslate() {
-				new google.translate.TranslateElement(
-					{
-						pageLanguage: "en",
-						includedLanguages: "en,hi,pa,sa,mr,ur,bn,es,fr,de,it",
-						layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-					},
-					"google_element"
-				);
-			}
+function handleError(error) {
+console.error("Error loading Google Translate script:", error);
+}
+</script>
+<header>
+<h1><a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript">You Dont Need JavaScript</a></h1> <p>Explore the power of pure CSS with interactive demos and examples</p>
+</header>
+<table id="pages">
+<tr>
+<th>Category</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>3D and Animations</td>
+<td class="pageUrl">
+<a href="./3D cube animation/index.html">3D Cube Animation</a>
+<a href="./3D Rotation Square/animation.html">3D Rotation Square</a>
+<a href="./3D transform/index.html">3D Transform</a>
+<a href="./Book Animation/index.html">Book Animation</a>
+<a href="./CompassLoader/index.html">Compass Loader</a>
+<a href="./CSS-Loader/purnasth/index.html">CSS Loader</a>
+<a href="./distorted-text-animation/distorted-text.html">Distorted Text Animation</a>
+<a href="./DVD Screen Saver/index.html">DVD Screen Saver</a>
+<a href="./Jumping Ball/index.html">Jumping Ball</a>
+<a href="./leaf-anim/leaf.html">Leaf Animation</a>
+<a href="./Light Bulb Animation/bulb.html">Light Bulb Animation</a>
+<a href="./Newtons Cradle/newtons-cradle.html">Newton's Cradle</a>
+<a href="./Pendulum/index.html">Pendulum</a>
+<a href="./ScaryAnimation/scary.html">Scary Animation</a>
+<a href="./Scroll-Unblur-Text-Effect/index.html">Scroll Unblur Text Effect</a>
+<a href="./Scroll-Video-Animation/index.html">Scroll Video Animation</a>
+<a href="./Shuffling squares/shuffling.html">Shuffling Squares</a>
+<a href="./Square Animation/index.html">Square Animation</a>
+<a href="./Square_Rotation_Animation/squareAnimation.html">Square Rotation Animation</a>
+</td>
+</tr>
+<tr>
+<td>CSS Art</td>
+<td class="pageUrl">
+<a href="./Captain America Shield/index.html">Captain America Shield</a>
+<a href="./Growing-flower/growing.html">Growing Flower</a>
+<a href="./Panda_Animation/Moving_Panda.html">Panda Animation</a>
+<a href="./SolarSystem/index.html">Solar System</a>
+</td>
+</tr>
+<tr>
+<td>Layout and Components</td>
+<td class="pageUrl">
+<a href="./Accordian_css_radio_rules/index.html">Accordion (CSS Radio Rules)</a>
+<a href="./accordion/accordion.html">Accordion</a>
+<a href="./BLOG POST CARDS/neuocards.html">Blog Post Cards - Neuocards</a>
+<a href="./BLOG POST CARDS/claycard.html">Blog Post Cards - Claycard</a>
+<a href="./BLOG POST CARDS/Glasscard.html">Blog Post Cards - Glasscard</a>
+<a href="./Business-Card/index.html">Business Card</a>
+<a href="./Button/indes.html">Button</a>
+<a href="./Button/Sliced-Button/index.html">Sliced Button</a>
+<a href="./Slideshow/purnasth/index.html">Slideshow</a>
+<a href="./Css Tables/index.html">CSS Tables</a>
+<a href="./CSS Toggle/index.html">CSS Toggle</a>
+<a href="./flex Property/new.html">Flex Property</a>
+<a href="./grid/abc.html">Grid</a>
+<a href="./infinitecarousel/infinite.html">Infinite Carousel</a>
+<a href="./Login/Signin.html">Login</a>
+<a href="./Login_Page/Index.html">Login Page</a>
+<a href="./Rating-Star/index.html">Rating Star</a>
+<a href="./Responsive Footer/index.html">Responsive Footer</a>
+<a href="./responsive_hamburger_navbar/index.html">Responsive Hamburger Navbar</a>
+<a href="./Search-bar and Tweet/youtube.html">Search Bar and Tweet</a>
+<a href="./Shapes/index.html">Shapes</a>
+<a href="./stickyheader/index.html">Sticky Header</a>
+</td>
+</tr>
+<tr>
+<td>Websites and Projects</td>
+<td class="pageUrl">
+<a href="./Bitcoin-website/index.html">Bitcoin Website</a>
+<a href="./Portfoliowebsite/port.html">Portfolio Website</a>
+<a href="./RGBcolorgame/RGBcolorgame.html">RGB Color Game</a>
+<a href="./Travelling Website/index.html">Travelling Website</a>
+<a href="./Web_Demo/index.html">Real Estate Website</a>
+</td>
+</tr>
+<tr>
+<td>Miscellaneous</td>
+<td class="pageUrl">
+<a href="./Analog-clock/index.html">Analog Clock</a>
+<a href="./Cursor/index.html">Cursor</a>
+<a href="./z indexing/index.html">Z Indexing</a>
+<a href="./Clock-App/index.html">Clock App</a>
+</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td class="pageUrl">
+<a href="./examples/card-slide-hover-effect.html">Card Slide Hover Effect</a>
+<a href="./examples/image-border-hover-effect.html">Image Border Hover Effect</a>
+<a href="./examples/ModernSidebar.html">Modern Sidebar</a>
+<a href="./examples/profile-card-hover-effect.html">Profile Card Hover Effect</a>
+<a href="./examples/spin-square-circle.html">Spin Square Circle</a>
+<a href="./examples/ToDo.html">To-Do List</a>
+</td>
+</tr>
+<tr>
+<td>V2</td>
+<td class="pageUrl">
+<a href="./V2/examples/floatinglabelsV2/floatinglabel.html">Floating Labels V2</a>
+<a href="./V2/examples/butons.html">Buttons V2</a>
+</td>
+</tr>
+<tr>
+<td>Misc</td>
+<td class="pageUrl">
+<a href="./misc/footer.html">Footer</a>
+<a href="./misc/card-hover.html">Card Hover</a>
+<a href="./misc/ExpandableCardDesign.html">Expandable Card Design</a>
+<a href="./misc/basicprofile.html">Basic Profile</a>
+<a href="./misc/tree-1.html">Tree 1</a>
+<a href="./misc/tabs-2.html">Tabs 2</a>
+<a href="./misc/author.html">Author</a>
+<a href="./misc/input-filed.html">Input Field</a>
+<a href="./misc/hover-1.html">Hover 1</a>
+<a href="./misc/navBar.html">Navbar</a>
+<a href="./misc/ModernNavbarDesign.html">Modern Navbar Design</a>
+<a href="./misc/About.html">About</a>
+<a href="./misc/slider.html">Slider</a>
+<a href="./misc/menu-1.html">Menu 1</a>
+<a href="./misc/ImageHoverGallery.html">Image Hover Gallery</a>
+<a href="./misc/glassmorphism-card-design.html">Glassmorphism Card Design</a>
+<a href="./misc/todo-1.html">Todo 1</a>
+<a href="./misc/tabs-1.html">Tabs 1</a>
+<a href="./misc/carousel-1.html">Carousel 1</a>
+<a href="./misc/carousel-2.html">Carousel 2</a>
+<a href="./misc/carousel-3.html">Carousel 3</a>
+<a href="./Glassmorphism login page/index.html">Glassmorphism Login Page</a>
+</td>
+</tr>
+<tr>
+<td>FAQ Section</td>
+<td class="pageUrl">
+<a href="./FAQ SECTION/claymorphismtheme/clay.html">Claymorphism Theme</a>
+<a href="./FAQ SECTION/glasstheme/faqglass.html">Glass Theme</a>
+<a href="./FAQ SECTION/neumorphismtheme/neu.html">Neumorphism Theme</a>
+</td>
+</tr>
+<tr>
+<td>Other</td>
+<td class="pageUrl">
+<a href="./Author/Author-page.html">Author</a>
+<a href="./Web_Demo/index.html">Web Demo</a>
+</td>
+</tr>
+</table>
+</section>
 
-			function handleError(error) {
-				console.error("Error loading Google Translate script:", error);
-			}
-		</script>
-		<header>
-			<h1><a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript">You Dont Need JavaScript</a></h1>
-			<p class="description">Explore the power of pure CSS with our collection of interactive demos and examples.
-			</p>
-		</header>
-		<table id="pages">
-			<tr>
-				<th>Category</th>
-				<th>Pages</th>
-			</tr>
-			<tr>
-				<td>3D and Animations</td>
-				<td class="pageUrl">
-					<a href="./3D cube animation/index.html">3D Cube Animation</a>
-					<a href="./3D Rotation Square/animation.html">3D Rotation Square</a>
-					<a href="./3D transform/index.html">3D Transform</a>
-					<a href="./Book Animation/index.html">Book Animation</a>
-					<a href="./CompassLoader/index.html">Compass Loader</a>
-					<a href="./CSS-Loader/purnasth/index.html">CSS Loader</a>
-					<a href="./distorted-text-animation/distorted-text.html">Distorted Text Animation</a>
-					<a href="./DVD Screen Saver/index.html">DVD Screen Saver</a>
-					<a href="./Jumping Ball/index.html">Jumping Ball</a>
-					<a href="./leaf-anim/leaf.html">Leaf Animation</a>
-					<a href="./Light Bulb Animation/bulb.html">Light Bulb Animation</a>
-					<a href="./Newtons Cradle/newtons-cradle.html">Newton's Cradle</a>
-					<a href="./Pendulum/index.html">Pendulum</a>
-					<a href="./ScaryAnimation/scary.html">Scary Animation</a>
-					<a href="./Scroll-Unblur-Text-Effect/index.html">Scroll Unblur Text Effect</a>
-					<a href="./Scroll-Video-Animation/index.html">Scroll Video Animation</a>
-					<a href="./Shuffling squares/shuffling.html">Shuffling Squares</a>
-					<a href="./Square Animation/index.html">Square Animation</a>
-					<a href="./Square_Rotation_Animation/squareAnimation.html">Square Rotation Animation</a>
-				</td>
-			</tr>
-			<tr>
-				<td>CSS Art</td>
-				<td class="pageUrl">
-					<a href="./Captain America Shield/index.html">Captain America Shield</a>
-					<a href="./Growing-flower/growing.html">Growing Flower</a>
-					<a href="./Panda_Animation/Moving_Panda.html">Panda Animation</a>
-					<a href="./SolarSystem/index.html">Solar System</a>
-				</td>
-			</tr>
-			<tr>
-				<td>Layout and Components</td>
-				<td class="pageUrl">
-					<a href="./Accordian_css_radio_rules/index.html">Accordion (CSS Radio Rules)</a>
-					<a href="./accordion/accordion.html">Accordion</a>
-					<a href="./BLOG POST CARDS/neuocards.html">Blog Post Cards - Neuocards</a>
-					<a href="./BLOG POST CARDS/claycard.html">Blog Post Cards - Claycard</a>
-					<a href="./BLOG POST CARDS/Glasscard.html">Blog Post Cards - Glasscard</a>
-					<a href="./Business-Card/index.html">Business Card</a>
-					<a href="./Button/indes.html">Button</a>
-					<a href="./Button/Sliced-Button/index.html">Sliced Button</a>
-					<a href="./Slideshow/purnasth/index.html">Slideshow</a>
-					<a href="./Css Tables/index.html">CSS Tables</a>
-					<a href="./CSS Toggle/index.html">CSS Toggle</a>
-					<a href="./flex Property/new.html">Flex Property</a>
-					<a href="./grid/abc.html">Grid</a>
-					<a href="./infinitecarousel/infinite.html">Infinite Carousel</a>
-					<a href="./Login/Signin.html">Login</a>
-					<a href="./Login_Page/Index.html">Login Page</a>
-					<a href="./Rating-Star/index.html">Rating Star</a>
-					<a href="./Responsive Footer/index.html">Responsive Footer</a>
-					<a href="./responsive_hamburger_navbar/index.html">Responsive Hamburger Navbar</a>
-					<a href="./Search-bar and Tweet/youtube.html">Search Bar and Tweet</a>
-					<a href="./Shapes/index.html">Shapes</a>
-					<a href="./stickyheader/index.html">Sticky Header</a>
-				</td>
-			</tr>
-			<tr>
-				<td>Websites and Projects</td>
-				<td class="pageUrl">
-					<a href="./Bitcoin-website/index.html">Bitcoin Website</a>
-					<a href="./Portfoliowebsite/port.html">Portfolio Website</a>
-					<a href="./RGBcolorgame/RGBcolorgame.html">RGB Color Game</a>
-					<a href="./Travelling Website/index.html">Travelling Website</a>
-					<a href="./Web_Demo/index.html">Real Estate Website</a>
-				</td>
-			</tr>
-			<tr>
-				<td>Miscellaneous</td>
-				<td class="pageUrl">
-					<a href="./Analog-clock/index.html">Analog Clock</a>
-					<a href="./Cursor/index.html">Cursor</a>
-					<a href="./z indexing/index.html">Z Indexing</a>
-					<a href="./Clock-App/index.html">Clock App</a>
-				</td>
-			</tr>
-			<tr>
-				<td>Examples</td>
-				<td class="pageUrl">
-					<a href="./examples/card-slide-hover-effect.html">Card Slide Hover Effect</a>
-					<a href="./examples/image-border-hover-effect.html">Image Border Hover Effect</a>
-					<a href="./examples/ModernSidebar.html">Modern Sidebar</a>
-					<a href="./examples/profile-card-hover-effect.html">Profile Card Hover Effect</a>
-					<a href="./examples/spin-square-circle.html">Spin Square Circle</a>
-					<a href="./examples/ToDo.html">To-Do List</a>
-				</td>
-			</tr>
-			<tr>
-				<td>V2</td>
-				<td class="pageUrl">
-					<a href="./V2/examples/floatinglabelsV2/floatinglabel.html">Floating Labels V2</a>
-					<a href="./V2/examples/butons.html">Buttons V2</a>
-				</td>
-			</tr>
-			<tr>
-				<td>Misc</td>
-				<td class="pageUrl">
-					<a href="./misc/footer.html">Footer</a>
-					<a href="./misc/card-hover.html">Card Hover</a>
-					<a href="./misc/ExpandableCardDesign.html">Expandable Card Design</a>
-					<a href="./misc/basicprofile.html">Basic Profile</a>
-					<a href="./misc/tree-1.html">Tree 1</a>
-					<a href="./misc/tabs-2.html">Tabs 2</a>
-					<a href="./misc/author.html">Author</a>
-					<a href="./misc/input-filed.html">Input Field</a>
-					<a href="./misc/hover-1.html">Hover 1</a>
-					<a href="./misc/navBar.html">Navbar</a>
-					<a href="./misc/ModernNavbarDesign.html">Modern Navbar Design</a>
-					<a href="./misc/About.html">About</a>
-					<a href="./misc/slider.html">Slider</a>
-					<a href="./misc/menu-1.html">Menu 1</a>
-					<a href="./misc/ImageHoverGallery.html">Image Hover Gallery</a>
-					<a href="./misc/glassmorphism-card-design.html">Glassmorphism Card Design</a>
-					<a href="./misc/todo-1.html">Todo 1</a>
-					<a href="./misc/tabs-1.html">Tabs 1</a>
-					<a href="./misc/carousel-1.html">Carousel 1</a>
-					<a href="./misc/carousel-2.html">Carousel 2</a>
-					<a href="./misc/carousel-3.html">Carousel 3</a>
-					<a href="./Glassmorphism login page/index.html">Glassmorphism Login Page</a>
-				</td>
-			</tr>
-			<tr>
-				<td>FAQ Section</td>
-				<td class="pageUrl">
-					<a href="./FAQ SECTION/claymorphismtheme/clay.html">Claymorphism Theme</a>
-					<a href="./FAQ SECTION/glasstheme/faqglass.html">Glass Theme</a>
-					<a href="./FAQ SECTION/neumorphismtheme/neu.html">Neumorphism Theme</a>
-				</td>
-			</tr>
-			<tr>
-				<td>Other</td>
-				<td class="pageUrl">
-					<a href="./Author/Author-page.html">Author</a>
-					<a href="./Web_Demo/index.html">Web Demo</a>
-				</td>
-			</tr>
-		</table>
-	</section>
-	<script type="text/javascript">
-		var Tawk_API = Tawk_API || {},
-			Tawk_LoadStart = new Date();
-		(function () {
-			var s1 = document.createElement("script"),
-				s0 = document.getElementsByTagName("script")[0];
-			s1.async = true;
-			s1.src = "https://embed.tawk.to/66891af8eaf3bd8d4d18ca2d/1i24gr9s5";
-			s1.charset = "UTF-8";
-			s1.setAttribute("crossorigin", "*");
-			s0.parentNode.insertBefore(s1, s0);
-		})();
-	</script>
+<script type="text/javascript">
+var Tawk_API = Tawk_API || {},
+Tawk_LoadStart = new Date();
+(function () {
+var s1 = document.createElement("script"),
+s0 = document.getElementsByTagName("script")[0];
+s1.async = true;
+s1.src = "https://embed.tawk.to/66891af8eaf3bd8d4d18ca2d/1i24gr9s5";
+s1.charset = "UTF-8";
+s1.setAttribute("crossorigin", "*");
+s0.parentNode.insertBefore(s1, s0);
+})();
+</script>
 
-	<!--End of Tawk.to Script-->
+<script>
+const darkModeToggle = document.getElementById("dark-mode");
+const body = document.body;
 
-	<script>
-		const darkModeToggle = document.getElementById("dark-mode");
-		const body = document.body;
-	
-		if (localStorage.getItem('darkMode') === 'enabled') {
-			body.classList.replace("light-mode", "dark-mode");
-			darkModeToggle.checked = true;
-		}
-	
-		darkModeToggle.addEventListener("change", () => {
-			if (darkModeToggle.checked) {
-				body.classList.replace("light-mode", "dark-mode");
-				localStorage.setItem('darkMode', 'enabled'); 
-			} else {
-				body.classList.replace("dark-mode", "light-mode");
-				localStorage.setItem('darkMode', 'disabled'); 
-			}
-		});
-	</script>
+if (localStorage.getItem('darkMode') === 'enabled') {
+body.classList.replace("light-mode", "dark-mode");
+darkModeToggle.checked = true;
+}
+
+darkModeToggle.addEventListener("change", () => {
+if (darkModeToggle.checked) {
+body.classList.replace("light-mode", "dark-mode");
+localStorage.setItem('darkMode', 'enabled');
+} else {
+body.classList.replace("dark-mode", "light-mode");
+localStorage.setItem('darkMode', 'disabled');
+}
+});
+</script>
 </body>
 
 </html>
