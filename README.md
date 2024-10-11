@@ -61,6 +61,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
 - [Loaders](#loaders)
+- [MasterCard](#mastercard)
 - [Mobile Menu Off Canvas](#mobile-menu-off-canvas)
 - [Modal/Popup](#modalpopup)
 - [Mouse Tracking](#mouse-tracking)
@@ -88,7 +89,9 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Treeview](#treeview)
 - [Twitter Heart Animation](#twitter-heart-animation)
 - [Book Animation](#book-animation)
+- [Zomato](#zomato)
 - [Zoom When Hover](#zoom-when-hover)
+- [Debit Card Hover effect](#debit-card-hover)
 - **Contribution**
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -306,6 +309,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/loader9.png" height="230" title="Demo 9">](http://codepen.io/viduthalai1947/pen/JkhDK)
 [<img src="./images/css-loader-purna.gif" alt="CSS-Loader-Purna" height="230" title="CSS-Loader-Purna">](https://codepen.io/purnaaa/pen/vYVVygB)
 [<img src="images/loader10.png" height="230" title="Demo 10">](https://codepen.io/Sahil-Patil-the-sans/pen/WNPbVqK)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="MasterCard"></a>MasterCard
+
+[<img src="images/screenshot.png" height="230" title="Website_Demo">](https://github.com/2div/You-Dont-Need-JavaScript/MasterCard/images/screenshot.png)
 
 **[⬆ back to top](#quick-links)**
 
@@ -876,6 +887,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="zomato"></a>Zomato
+
+![img_source](Zomato/screenshot.png)
+
+---
+**[⬆ back to top](#quick-links)**
+
 ## <a id="3d-card-flip-transition"></a>3D card flip transition
 
 [<img src="./images/3d-card-flip-transition.gif" height="200" title="Demo Image">]
@@ -892,6 +910,11 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="debit-card-hover"></a>Debit Card Hover Effect
+![Screenshot 2024-10-11 103321](https://github.com/user-attachments/assets/5e8572a6-9328-44fe-8574-d68f2e6b92ca)
+
+**[⬆ back to top](#quick-links)**
+---
 ## Contributors
 
 Thanks to these wonderful people who have contributed to this project!
