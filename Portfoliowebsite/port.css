@@ -71,8 +71,7 @@ ul li a:hover{
     height: 290px;
 }
 .right_section img{
-    margin-top: -30px;
-    width:600px;
+    width:460px;
     border: 0px ;
     border-radius:8px ;
     
@@ -109,7 +108,7 @@ ul li a:hover{
     justify-content:space-around;
 }
 .container img{
-    width:50px;
+    width:22px;
 }
 .p{
     font-size: 0.75rem;
@@ -147,27 +146,18 @@ ul li a:hover{
     height: 70px;
 }
 .btn{
-    
-    font-family: minecraft;
-    background-color: rgb(248, 185, 248);
-    backdrop-filter: blur(3px);
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 10px;
-    padding: 10px 15px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
+    padding:7.5px;
+    border:2.5px solid white;
+    margin: 55px 4px;
+    background-color:rgb(51, 3, 129) ;
+    border-radius: 5px;
+    color: aliceblue;
+    text-decoration: none;
     
 }
 .btn:hover{
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(176, 8, 8, 0.3);
-    background-color: transparent;
-    backdrop-filter: blur(10px);
-    color:white;
+    color: darkgrey;
+    cursor: pointer; ;
 }
 .footer{
     display:flex;
@@ -179,6 +169,12 @@ footer{
     height:140px;
     padding: 30px 18px;
     
+}
+.service{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
 }
 .patent{
     display: flex;

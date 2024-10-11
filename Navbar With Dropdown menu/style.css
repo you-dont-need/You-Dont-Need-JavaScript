@@ -22,6 +22,144 @@ nav {
     position: relative;
 }
 
+
+.logo {
+    width: 120px;
+}
+
+.user-pic {
+    width: 40px;
+    border-radius: 50%; /* Fixed typo: changed border: radius to border-radius */
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+nav ul {
+    width: 100%;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height: 0; /* Changed from max-height: 0px to max-height: 0 for consistency */
+    overflow: hidden;
+    transition: max-height 0.5s ease; /* Added ease for smoother transition */
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 400px; /* Consider adjusting this value based on content */
+}
+
+.sub-menu {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info h3 {
+    font-weight: 500;
+}
+
+.user-info img {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+
+.sub-menu-link p {
+    width: 100%;
+}
+
+.sub-menu-link img {
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.sub-menu-link span {
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span {
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p { /* Fixed typo: removed space before :hover */
+    font-weight: 600;
+}
+      /* Basic styles for demonstration */
+      .hero {
+        background: #f8f9fa;
+        padding: 20px;
+    }
+    .sub-menu-wrap {
+        display: none; /* Hide the submenu by default */
+    }
+    .sub-menu-wrap.open-menu {
+        display: block; /* Show the submenu when open */
+    }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Fixed typo: changed border -box to border-box */
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: #eceaff;
+    color: #525252;
+}
+
+nav {
+    background: #1a1a1a;
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
 .logo {
     width: 120px;
 }

@@ -1,1 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.box {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.box span {
+  position: absolute;
+  inset: 0;
+}
+
+.box span::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 400px;
+  left: 15%;
+  background: url("https://i.ibb.co/C1S9Vwn/bulb-off.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: scale(0.8);
+  animation: animate 2s linear infinite, dimmer 4s linear infinite; /* Dimmer effect */
+  border-bottom: 10px ridge #fff;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    background: url("https://i.ibb.co/C1S9Vwn/bulb-off.jpg");
+  }
+  50% {
+    background: url("https://i.ibb.co/SXmm4cd/bulb-on.jpg");
+  }
+}
+
+@keyframes dimmer {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.5); /* Dims the bulb */
+  }
+  100% {
+    filter: brightness(1); /* Brightens the bulb */
+  }
+}
+
+.light-beam {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 0, 0.2) 0%, rgba(255, 255, 0, 0) 80%);
+  transform: translate(-50%, -50%) scale(0); /* Initially hidden */
+  animation: lightBeam 2s linear infinite; /* Light beam effect */
+}
+
+@keyframes lightBeam {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0; /* Hidden at start */
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1; /* Fully visible */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0; /* Hidden at end */
+  }
+}
+
+.toggle-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #555;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: #777;
+}
