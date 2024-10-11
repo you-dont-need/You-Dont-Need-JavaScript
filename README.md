@@ -88,6 +88,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Treeview](#treeview)
 - [Twitter Heart Animation](#twitter-heart-animation)
 - [Book Animation](#book-animation)
+- [Zomato](#zomato)
 - [Zoom When Hover](#zoom-when-hover)
 - **Contribution**
   - [Contributors](#contributors)
@@ -875,6 +876,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
+## <a id="zomato"></a>Zomato
+
+![img_source](Zomato/screenshot.png)
+
+---
+**[⬆ back to top](#quick-links)**
 
 ## <a id="3d-card-flip-transition"></a>3D card flip transition
 
