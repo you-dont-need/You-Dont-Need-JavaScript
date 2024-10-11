@@ -88,6 +88,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Twitter Heart Animation](#twitter-heart-animation)
 - [Book Animation](#book-animation)
 - [Zoom When Hover](#zoom-when-hover)
+- [Debit Card Hover effect](#debit-card-hover)
 - **Contribution**
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -883,6 +884,11 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="debit-card-hover"></a>Debit Card Hover Effect
+![Screenshot 2024-10-11 103321](https://github.com/user-attachments/assets/5e8572a6-9328-44fe-8574-d68f2e6b92ca)
+
+**[⬆ back to top](#quick-links)**
+---
 ## Contributors
 
 Thanks to these wonderful people who have contributed to this project!
