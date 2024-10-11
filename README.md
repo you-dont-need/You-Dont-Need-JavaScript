@@ -73,6 +73,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Pendulum](#pendulum)
 - [Playing Card Animation](#playing-card-animation)
 - [Profile Cards](#profilecards)
+- [Quizz App](#quizz-app)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
 - [Ripple Effect](#ripple-effect)
 - [Scary Animation](#scary-animation)
@@ -893,6 +894,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ![img_source](Zomato/screenshot.png)
 
 ---
+
 **[⬆ back to top](#quick-links)**
 
 ## <a id="3d-card-flip-transition"></a>3D card flip transition
@@ -912,6 +914,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 ## <a id="debit-card-hover"></a>Debit Card Hover Effect
+
 ![Screenshot 2024-10-11 103321](https://github.com/user-attachments/assets/5e8572a6-9328-44fe-8574-d68f2e6b92ca)
 
 **[⬆ back to top](#quick-links)**
@@ -919,11 +922,23 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 ## <a id="ProgressOnScroll"></a>Progress bar on scroll
+
 [<img src="images/progress_on_scroll_demo.gif" height="230" title="Progress On Scroll Demo">](https://codepen.io/pritam1813/pen/jOgyERQ)
 
 **[⬆ back to top](#quick-links)**
 
 ---
+
+## <a id="quizz-app"></a>Quizz App
+
+<img src='./images/quizz-app2.png'>
+<img src='./images/quizz-app3.png'>
+<img src='./images/quizz-app1.png'>
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## Contributors
 
 Thanks to these wonderful people who have contributed to this project!
