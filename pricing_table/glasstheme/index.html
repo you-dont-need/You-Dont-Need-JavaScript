@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Pricing Table</title>
+    <style>
+        :root {
+            --primary-color: rgba(52, 152, 219, 0.7);
+            --secondary-color: rgba(46, 204, 113, 0.7);
+            --background-color: #2c3e50;
+            --text-color: #ecf0f1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 15px;
+            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .pricing-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .pricing-toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .toggle-label {
+            font-size: 1.1rem;
+            margin: 0 10px;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--primary-color);
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: var(--secondary-color);
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+        }
+
+        .pricing-plans {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 17px;
+        }
+
+        .pricing-plan {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-plan:hover {
+            transform: translateY(-10px);
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .plan-price .currency {
+            font-size: 1.5rem;
+            vertical-align: super;
+        }
+
+        .plan-features {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .plan-features li {
+            margin-bottom: 10px;
+        }
+
+        .plan-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .plan-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .popular {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .popular::before {
+            content: "Popular";
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-plans {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-plan {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-container">
+        <header class="pricing-header">
+            <h1>Choose Your Plan</h1>
+            <p>Select the perfect plan for your needs</p>
+        </header>
+        <div class="pricing-toggle">
+            <span class="toggle-label">Monthly</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="pricing-toggle">
+                <span class="toggle-slider"></span>
+            </label>
+            <span class="toggle-label">Annually</span>
+        </div>
+        <div class="pricing-plans">
+            <div class="pricing-plan">
+                <div class="plan-name">Basic</div>
+                <div class="plan-price">
+                    <span class="currency">$</span>9.99
+                    <span class="period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>1 User</li>
+                    <li>5GB Storage</li>
+                    <li>Basic Support</li>
+                    <li>1 Project</li>
+                </ul>
+                <a href="#" class="plan-button">Choose Plan</a>
+            </div>
+            <div class="pricing-plan popular">
+                <div class="plan-name">Pro</div>
+                <div class="plan-price">
+                    <span class="currency">$</span>19.99
+                    <span class="period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>5 Users</li>
+                    <li>50GB Storage</li>
+                    <li>Priority Support</li>
+                    <li>10 Projects</li>
+                </ul>
+                <a href="#" class="plan-button">Choose Plan</a>
+            </div>
+            <div class="pricing-plan">
+                <div class="plan-name">Enterprise</div>
+                <div class="plan-price">
+                    <span class="currency">$</span>49.99
+                    <span class="period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>Unlimited Users</li>
+                    <li>500GB Storage</li>
+                    <li>24/7 Support</li>
+                    <li>Unlimited Projects</li>
+                </ul>
+                <a href="#" class="plan-button">Choose Plan</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
