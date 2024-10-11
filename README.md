@@ -92,6 +92,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Zomato](#zomato)
 - [Zoom When Hover](#zoom-when-hover)
 - [Debit Card Hover effect](#debit-card-hover)
+- [Progress Bar On Scroll](#ProgressOnScroll)
 - **Contribution**
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -914,6 +915,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ![Screenshot 2024-10-11 103321](https://github.com/user-attachments/assets/5e8572a6-9328-44fe-8574-d68f2e6b92ca)
 
 **[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="ProgressOnScroll"></a>Progress bar on scroll
+[<img src="images/progress_on_scroll_demo.gif" height="230" title="Progress On Scroll Demo">](https://codepen.io/pritam1813/pen/jOgyERQ)
+
+**[⬆ back to top](#quick-links)**
+
 ---
 ## Contributors
 
