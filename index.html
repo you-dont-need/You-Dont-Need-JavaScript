@@ -370,7 +370,7 @@
 					<a href="./Business-Card/index.html">Business Card</a>
 					<a href="./Button/indes.html">Button</a>
 					<a href="./Button/Sliced-Button/index.html">Sliced Button</a>
-					<a href="./carousel/purnasth/index.html">Carousel</a>
+					<a href="./Slideshow/purnasth/index.html">Slideshow</a>
 					<a href="./Css Tables/index.html">CSS Tables</a>
 					<a href="./CSS Toggle/index.html">CSS Toggle</a>
 					<a href="./flex Property/new.html">Flex Property</a>
@@ -393,6 +393,7 @@
 					<a href="./Portfoliowebsite/port.html">Portfolio Website</a>
 					<a href="./RGBcolorgame/RGBcolorgame.html">RGB Color Game</a>
 					<a href="./Travelling Website/index.html">Travelling Website</a>
+					<a href="./Web_Demo/index.html">Real Estate Website</a>
 				</td>
 			</tr>
 			<tr>
@@ -446,6 +447,7 @@
 					<a href="./misc/carousel-1.html">Carousel 1</a>
 					<a href="./misc/carousel-2.html">Carousel 2</a>
 					<a href="./misc/carousel-3.html">Carousel 3</a>
+					<a href="./Glassmorphism login page/index.html">Glassmorphism Login Page</a>
 				</td>
 			</tr>
 			<tr>
@@ -481,14 +483,23 @@
 
 	<!--End of Tawk.to Script-->
 
-	<noscript>You need to enable JavaScript to run this app.</noscript>
 	<script>
 		const darkModeToggle = document.getElementById("dark-mode");
 		const body = document.body;
-
+	
+		if (localStorage.getItem('darkMode') === 'enabled') {
+			body.classList.replace("light-mode", "dark-mode");
+			darkModeToggle.checked = true;
+		}
+	
 		darkModeToggle.addEventListener("change", () => {
-			if (darkModeToggle.checked) body.classList.replace("light-mode", "dark-mode");
-			else body.classList.replace("dark-mode", "light-mode");
+			if (darkModeToggle.checked) {
+				body.classList.replace("light-mode", "dark-mode");
+				localStorage.setItem('darkMode', 'enabled'); 
+			} else {
+				body.classList.replace("dark-mode", "light-mode");
+				localStorage.setItem('darkMode', 'disabled'); 
+			}
 		});
 	</script>
 </body>

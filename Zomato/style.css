@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position:fixed;
+    top: 0;
+    /* height: 3.5em; */
+    width: 100vw;
+    padding-top: 25px;
+    font-size: 1.1rem;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 300;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 300px;
+    margin-top: 6px; */
+}
+.nav li a{
+    text-decoration: none;
+    color: white;
+    margin-left: 28px;
+}
+.heading{
+    font-size: 1.8rem;
+    font-style: italic;
+    text-decoration: none;
+    color: rgb(227, 132, 60);
+}
+.nav-search{
+    display: flex;
+    text-align: right;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 35px;
+    right: 1.5%;
+}
+.line{
+    width: 36px;
+    height: 5px;
+    margin: 4px 4px;
+    background-color: white;
+}
+#search{
+    padding: 4px;
+    font-size: 1.1rem;
+    border: 2px solid green;
+    border-radius: 4px;
+    height: 32px;
+}
+.btn{
+    background-color: green;
+    height: 42px;
+    width: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+.background{
+    background: rgba(0, 0, 0, 0.7) url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-blend-mode:darken;
+}
+.box{
+    display: flex;
+    width: 100vw;
+    font-family: 'Dela Gothic One', cursive;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    color: white;
+    line-height: 39px;
+    margin: auto;
+}
+.first{
+    letter-spacing:1.3px ;
+}
+.firstSec{
+    margin-top: 45px;
+    height: 100vh;
+}
+.btns button{
+    background: none;
+    cursor: pointer;
+    text-align: center;
+    border:none;
+    border-radius: 6px;
+    border: 2px solid black;
+    background-color: white;
+    height: 34px;
+    width: 80px;
+    color: black;
+}
+.btns button:hover{
+    color: white;
+    border: 2px solid white;
+    background: none;
+}
+.seRight,.seLeft{
+    /* height: 435px; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 100%;
+    margin: auto;
+    background-color: rgb(248, 248, 248);
+}
+.para{
+    display: flex;
+    padding: 0 22px;
+    flex-direction: column;
+}
+/* .para p{
+    font-family: 'Dela Gothic One', cursive;
+} */
+.big{
+    font-size: 26px;
+    font-family: 'Dela Gothic One', cursive;
+}
+.small{
+    line-height: 26px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 450;
+    font-size: 1.2rem;
+}
+.food img{
+    border-radius: 10px;
+    height: 330px;
+    width: 450px;
+    margin-top: 10px;
+}
+.contact{
+    background-color:rgb(239, 239, 239) ;
+    padding-top: 13px;
+}
+.contact h2{
+    text-align: center;
+    font-family: 'Dela Gothic One', cursive;
+}
+.form{
+    margin: auto;
+    max-width: 60%;
+}
+.form input{
+    width: 100%;
+    height: 35px;
+    padding: 5px 10px;
+    margin:20px auto;
+    border: 2px solid rgb(78, 78, 78);
+    border-radius: 4px;
+}
+.btms{
+    cursor: pointer;
+}
+footer{
+    background-color: rgb(41, 48, 72);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+@media only screen and (max-width:750px){
+    .nav{
+        flex-direction: column;
+        margin-top: 3px;
+        margin-right: 30px;
+    }
+    .navbar{
+        flex-direction: column;
+        height: 15.8rem;
+        transition: 0.55s all ease-out;
+        padding-top: 5px;
+    }
+    .nav li{
+        margin-top: 5px;
+    }
+    .nav-search{
+        flex-direction: column;
+        margin-top: 6px;
+    }
+    .nav-search button{
+        margin-left: 85px;
+        margin-top: 6px;
+    }
+    .hamburger{
+        display: block;
+    }
+    .nav-h{
+        height: 78px;
+        width: 100vw;
+    }
+    .heading{
+        margin-top: 10px;
+    }
+    .vis-h{
+        opacity: 0;
+    }
+    .first{
+        margin-top: 250px;
+    }
+    .seRight{
+        flex-direction: column-reverse;
+    }
+    .seLeft{
+        flex-direction: column;
+    }
+    .para{
+        padding: 0px 12px;
+    }
+}
