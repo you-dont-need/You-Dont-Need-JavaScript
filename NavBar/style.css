@@ -1,106 +1,131 @@
 * {
-	box-sizing: border-box;
-}
-
-$primary: hsl(260, 100%, 80%);
-
-html,
-body {
-	height: 100vh;
-	width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	display: grid;
-	place-items: center;
-	background-color: #222;
-	font-family: system-ui, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
 }
 
-nav,
+.menu {
+    background-color: #2c3e50;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 20px;
+    align-items: center;
+    position: relative;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+}
+
+.nav-toggle-label span {
+    background-color: #ecf0f1;
+    border-radius: 2px;
+    display: block;
+    height: 4px;
+    width: 100%;
+}
+
+.nav-items {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
 .nav-item {
-	display: flex;
+    position: relative;
+    color: #ecf0f1;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
 }
 
-nav {
-	border-radius: 6px;
-	background-image: linear-gradient(
-		rgb(48, 48, 48) 13%,
-		rgb(30, 30, 30) 40%,
-		#0c0d11 86%
-	);
-	color: rgba(255, 255, 255, 0.6);
-	text-shadow: 0 -2px 0 black;
-	cursor: pointer;
-	box-shadow: 1px 2px 4px rgb(20, 20, 20), 0 4px 12px rgb(10, 10, 10);
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    margin-left: 8px;
 }
 
-.nav-item {
-	flex-direction: row-reverse;
-	font-size: 0.8999rem;
-	line-height: 1rem;
-	align-items: center;
-	min-width: 120px;
-	justify-content: space-between;
-	transition: all 80ms ease;
+.nav-item .icon {
+    margin-right: 8px;
+}
 
-	&.active {
-		color: $primary;
-		text-shadow: 0 0 3px hsla(260, 100%, 70%, 0.7);
-	}
+.nav-item:hover,
+.nav-item.active {
+    background-color: #34495e;
+    border-radius: 5px;
+    padding: 5px;
+}
 
-	&:not(.active):hover {
-		color: rgba(255, 255, 255, 0.87);
-	}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    top: 50px;
+    z-index: 1;
+}
 
-	&:hover > .icon .subicon {
-		height: 32px;
-		width: 32px;
-		border-radius: 32px;
-		top: -16px;
-		right: -16px;
-		border-color: white;
-	}
+.dropdown-content a {
+    color: #333;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+}
 
-	&:not(:first-of-type) {
-		border-left: 1px solid rgb(60, 60, 60);
-	}
-	&:not(:last-of-type) {
-		border-right: 0.1rem solid black;
-	}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
 
-	a {
-		color: inherit;
-		text-decoration: none;
-		padding: 1ch;
-	}
+.nav-item:hover .dropdown-content {
+    display: block;
+}
 
-	.icon {
-		padding: 1ch;
-		position: relative;
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .nav-toggle-label {
+        display: flex;
+    }
 
-		.subicon {
-			text-shadow: none;
-			transition: all 40ms ease;
-			position: absolute;
-			top: -3px;
-			right: -3px;
-			background: red;
-			color: white;
-			box-shadow: 0 0 4px rgba(41, 41, 41, 0.405);
-			width: 18px;
-			height: 18px;
-			border-radius: 14px;
-			font-size: 0.7em;
-			font-weight: 700;
-			display: inline-grid;
-			place-items: center;
-			border: 2px solid mix(white, red);
-		}
-	}
+    .nav-items {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #34495e;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        z-index: 10;
+    }
 
-	.icon > svg {
-		max-width: 16px;
-	}
+    .nav-toggle:checked + .nav-toggle-label + .nav-items {
+        display: flex;
+    }
+
+    .nav-item {
+        padding: 15px;
+        text-align: left;
+        width: 100%;
+        border-top: 1px solid #ecf0f1;
+    }
+
+    .dropdown-content {
+        position: static;
+        background-color: #fff;
+    }
 }

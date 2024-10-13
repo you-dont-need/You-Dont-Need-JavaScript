@@ -3,44 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stylish Responsive Navbar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="menu" id="nav">
-        <span class="nav-item active">
-            <span class="icon">
-                <i data-feather="home"></i>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="nav-items">
+            <span class="nav-item active">
+                <span class="icon">
+                    <i data-feather="home"></i>
+                </span>
+                <a href="#">Home</a>
             </span>
-            <a href="#">Home</a>
-        </span>
-        <span class="nav-item">
-            <span class="icon">
-                <i data-feather="search"></i>
+            <span class="nav-item">
+                <span class="icon">
+                    <i data-feather="search"></i>
+                </span>
+                <a href="#">Search</a>
             </span>
-            <a href="#">Search</a>
-        </span>
-        <span class="nav-item">
-            <span class="icon">
-                <span class="subicon">13</span>
-                <i data-feather="bell"></i>
+            <span class="nav-item dropdown">
+                <span class="icon">
+                    <i data-feather="bell"></i>
+                </span>
+                <a href="#">Notifications</a>
+                <div class="dropdown-content">
+                    <a href="#">All Notifications</a>
+                    <a href="#">Mentions</a>
+                    <a href="#">Settings</a>
+                </div>
             </span>
-            <a href="#">Notifications</a>
-        </span>
-        <span class="nav-item">
-            <span class="icon">
-                <i data-feather="star"></i>
+            <span class="nav-item dropdown">
+                <span class="icon">
+                    <i data-feather="star"></i>
+                </span>
+                <a href="#">Favorites</a>
+                <div class="dropdown-content">
+                    <a href="#">Saved Items</a>
+                    <a href="#">Wishlist</a>
+                </div>
             </span>
-            <a href="#">Favorites</a>
-        </span>
-        <span class="nav-item">
-            <span class="icon">
-                <span class="subicon">1</span>
-                <i data-feather="bell"></i>
+            <span class="nav-item dropdown">
+                <span class="icon">
+                    <i data-feather="user"></i>
+                </span>
+                <a href="#">Profile</a>
+                <div class="dropdown-content">
+                    <a href="#">Your Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
             </span>
-            <a href="#">Your Profile</a>
-        </span>
+        </div>
     </nav>
-    <script src="index.js"></script>
 </body>
 </html>
