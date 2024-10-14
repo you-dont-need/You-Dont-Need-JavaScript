@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.loading-page{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: greenyellow;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+}
+
+.loading-page h1::after{
+    content: "";
+    color: darkgreen;
+    animation: 2s loadingAnim ease-out infinite;
+}
+
+@keyframes loadingAnim {
+    0%{
+        content: "";
+    }
+
+    33%{
+        content: ".";
+    }
+    66%{
+        content: "..";
+    }
+    100%{
+        content: "...";
+    }
+}
+
+.loading-page h1{
+    font-size: 80px;
+    color: rgba(0, 0, 0, 0.6);
+    font-style: oblique;
+}
