@@ -924,6 +924,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
+## <a id="Card-show"></a>Card SHow
+
+[<img src="images/card-shw.gif" height="230" title="Card show">] (https://codepen.io/Sp39/pen/gOEdpeq)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## Contributors
 
 Thanks to these wonderful people who have contributed to this project!

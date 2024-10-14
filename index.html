@@ -372,6 +372,7 @@
 					<a href="./Slideshow/purnasth/index.html">Slideshow</a>
 					<a href="./Css Tables/index.html">CSS Tables</a>
 					<a href="./CSS Toggle/index.html">CSS Toggle</a>
+					<a href="./Card Show/index.html">Card-Show</a>
 					<a href="./flex Property/new.html">Flex Property</a>
 					<a href="./grid/abc.html">Grid</a>
 					<a href="./infinitecarousel/infinite.html">Infinite Carousel</a>
@@ -485,19 +486,19 @@
 	<script>
 		const darkModeToggle = document.getElementById("dark-mode");
 		const body = document.body;
-	
+
 		if (localStorage.getItem('darkMode') === 'enabled') {
 			body.classList.replace("light-mode", "dark-mode");
 			darkModeToggle.checked = true;
 		}
-	
+
 		darkModeToggle.addEventListener("change", () => {
 			if (darkModeToggle.checked) {
 				body.classList.replace("light-mode", "dark-mode");
-				localStorage.setItem('darkMode', 'enabled'); 
+				localStorage.setItem('darkMode', 'enabled');
 			} else {
 				body.classList.replace("dark-mode", "light-mode");
-				localStorage.setItem('darkMode', 'disabled'); 
+				localStorage.setItem('darkMode', 'disabled');
 			}
 		});
 	</script>
