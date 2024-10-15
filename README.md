@@ -42,6 +42,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Counter of Checked Checkboxes](#counter-of-checked-check-boxes)
 - [Dog Box Animation](#dog-box-animation)
 - [Dropdown Menu](#dropdown-menu)
+- [DownLoad](#download)
 - [Dynamic Image Colorizing](#dynamic-image-colorizing)
 - [Enable Dark Mode](#darkmode)
 - [Fancy Menu](#fancy-menu)
@@ -184,6 +185,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="DownLoad"></a>DownLoad
+
+[<img src="images/Download_button.png" height="230" title="Demo 1">](https://codepen.io/shail-sharma/pen/oNKZrEd)
+
+**[⬆ back to top](#quick-links)**
+
+---
 
 ## <a id="Flip"></a>Flip on click
 
