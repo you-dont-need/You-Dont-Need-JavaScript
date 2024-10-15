@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .nav-item {
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, red, green, blue);
+            bottom: -4px;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .nav-item:hover::after {
+            transform: scaleX(1);
+        }
+        .nav-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 0, 255, 0.5);
+        }
+        .navbar {
+            transition: box-shadow 0.3s ease;
+        }
+        .navbar:hover {
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 0, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <nav class="navbar bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Brand</a>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="nav-item px-3 py-2 rounded-md hover:bg-gradient-to-r from-white/10 to-white/20">Home</a></li>
+                <li><a href="#" class="nav-item px-3 py-2 rounded-md hover:bg-gradient-to-r from-white/10 to-white/20">About</a></li>
+                <li><a href="#" class="nav-item px-3 py-2 rounded-md hover:bg-gradient-to-r from-white/10 to-white/20">Services</a></li>
+                <li><a href="#" class="nav-item px-3 py-2 rounded-md hover:bg-gradient-to-r from-white/10 to-white/20">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
