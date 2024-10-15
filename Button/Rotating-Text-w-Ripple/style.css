@@ -1,0 +1,169 @@
+/* Base Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #d0d7d9;
+    user-select: none;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    color: #36393a;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+}
+
+.button-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+/* Button Styles */
+.arrow-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #36393a;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    overflow: hidden;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.arrow-button:hover {
+    transition: 0.3s ease-in all;
+    background-color: #d0d7d9;
+    border: 1px solid #36393a;
+}
+
+
+.arrow-button:active {
+    box-shadow: none;
+}
+
+/* Arrow Animation*/
+.arrow-svg {
+    width: 50px;
+    height: 50px;
+}
+
+.arrow-button:hover .arrow-head {
+    fill: #36393a;
+}
+
+.arrow-button:hover .arrow-tail {
+    stroke: #36393a;
+}
+
+.arrow-tail {
+    animation: tail 2s ease-in-out infinite;
+}
+
+.arrow-head {
+    animation: head 2s ease-in-out infinite;
+}
+
+@keyframes tail {
+    0%, 100% {
+        x2: 70; 
+        transform: translateX(0);
+    }
+    50% {
+        x2: 80; 
+        transform: translateX(10px); 
+    }
+}
+
+@keyframes head {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+/* Rotating Text & Animation */
+.rotating-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+}
+
+.rotating-text svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(0deg);
+    animation: rotate 8s linear infinite;
+}
+
+text {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    fill: #36393a;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Ripple Animation */
+.ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 1);
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    animation: ripple 3s ease-in-out infinite; 
+}
+
+@keyframes ripple {
+    0% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
