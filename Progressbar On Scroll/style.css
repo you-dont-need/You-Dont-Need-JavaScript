@@ -1,0 +1,58 @@
+@font-face {
+  font-family: pressgothic;
+  src: url("fonts/pressgothic.otf");
+}
+@font-face {
+  font-family: NanumGothic-Regular;
+  src: url("fonts/NanumGothic-Regular.ttf");
+}
+
+:root {
+  --body-bg-color: #e4e0e1;
+  --progressbar-color: #493628;
+  --heading-color: #ab886d;
+  --progressbar-height: 10px;
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(
+    to right top,
+    var(--progressbar-color) 50%,
+    var(--body-bg-color) 50%
+  );
+  background-size: 100% calc(100% - 100vh + var(--progressbar-height));
+  background-repeat: no-repeat;
+}
+
+.container {
+  padding: 20px 20px 0;
+  width: 80%;
+  margin: 5% auto 0;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  font-family: "NanumGothic-Regular";
+}
+
+h1,
+h2 {
+  font-family: "pressgothic";
+  letter-spacing: 2px;
+  color: var(--heading-color);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: var(--progressbar-height);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--body-bg-color);
+  z-index: -1;
+}
