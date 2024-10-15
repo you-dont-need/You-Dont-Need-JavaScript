@@ -93,6 +93,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Zoom When Hover](#zoom-when-hover)
 - [Debit Card Hover effect](#debit-card-hover)
 - [Progress Bar On Scroll](#ProgressOnScroll)
+- [Welcome Animation](#Welcome-Animation)
 - **Contribution**
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -922,6 +923,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="ProgressOnScroll"></a>Progress bar on scroll
 [<img src="images/progress_on_scroll_demo.gif" height="230" title="Progress On Scroll Demo">](https://codepen.io/pritam1813/pen/jOgyERQ)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Welcome-Animation"></a>Welcome Animation
+
+[<img src="images/welcome.png" height="230" title="Welcome loader">]
 
 **[⬆ back to top](#quick-links)**
 
