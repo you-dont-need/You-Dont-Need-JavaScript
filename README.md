@@ -44,7 +44,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Counter of Checked Checkboxes](#counter-of-checked-check-boxes)
 - [Dog Box Animation](#dog-box-animation)
 - [Dropdown Menu](#dropdown-menu)
-- [DownLoad](#download)
 - [Dynamic Image Colorizing](#dynamic-image-colorizing)
 - [Enable Dark Mode](#darkmode)
 - [Fancy Menu](#fancy-menu)
