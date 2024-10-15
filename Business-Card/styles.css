@@ -1,41 +1,128 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 0;
+    transition: background 0.5s ease;
 }
 
+/* Business Card Container */
 .business-card {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 500px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    animation: bounce 1s infinite;
+    border: 2px solid #00796b; /* Deep teal border */
 }
 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.business-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Card Header Styling */
 .card-header img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
+    border: 4px solid #ff6f20; /* Vibrant orange */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card-header img:hover {
+    transform: scale(1.1);
 }
 
 .card-header h1 {
-    margin: 10px 0;
-    color: #333;
+    margin: 0;
+    color: #00796b; /* Deep teal */
+    font-size: 28px;
+    font-weight: 700;
 }
 
 .card-header p {
-    margin: 0;
-    color: #777;
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/* Card Details */
+.card-details {
+    margin-top: 20px;
+    padding: 0 10px;
 }
 
 .card-details p {
-    margin: 10px 0;
-    color: #333;
+    color: #444;
+    font-size: 15px;
+    margin: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.card-details p:hover {
+    color: #00796b; /* Deep teal on hover */
+}
+
+/* Contact Button */
+.contact-btn a {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #ff6f20; /* Vibrant orange */
+    color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-btn a:hover {
+    background-color: #e65c00; /* Darker orange */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-media a {
+    font-size: 28px;
+    color: #00796b; /* Deep teal */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #004d40; /* Darker teal */
+    transform: scale(1.2);
 }
