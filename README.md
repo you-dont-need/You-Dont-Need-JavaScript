@@ -648,6 +648,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 [<img src="images/loader.gif" height="230" title="loader">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/97ba01f5-7e85-4c3e-8d60-47374ef3a1f9)
 
+[<img src="images/New_Loader.png" height="230" title="New_Loader">](https://codepen.io/shail-sharma/pen/yLmMyjq)
+
 **[⬆ back to top](#quick-links)**
 
 ---
