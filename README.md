@@ -598,6 +598,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 [<img src="images/Switch.gif" height="230" title="Switch">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/Switch.gif)
 
+[<img src="images/New_Switch.gif" height="230" title="New_Switch">](https://codepen.io/shail-sharma/pen/PoMpvjO)
+
 **[⬆ back to top](#quick-links)**
 
 ---
