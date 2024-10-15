@@ -1,13 +1,106 @@
-<html>
-<head>
-	<title>Color Game</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>	
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Color Game</title>
+	<link rel="stylesheet" type="text/css" href="RGBcolorgame.css">
+	<style>
+		body {
+			background-color: #232323;
+			font-family: "Raleway", sans-serif;
+			font-size: 62.5%;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			text-align: center;
+		}
+
+		h1 {
+			color: white;
+			background-color: #2C8E99;
+			font-size: 4em;
+			padding: 20px;
+			margin-bottom: 30px;
+			width: 100%;
+		}
+
+		#color-display {
+			font-size: 1.8em;
+		}
+
+		#stripe {
+			background-color: white;
+			width: 100%;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 15px;
+			padding: 10px;
+			margin-bottom: 30px;
+		}
+
+		button {
+			outline: none;
+			font-family: "Raleway", sans-serif;
+			text-transform: uppercase;
+			font-size: 1.5em;
+			background-color: white;
+			border: none;
+			padding: 10px 20px;
+			letter-spacing: 1px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		button:hover {
+			background-color: #2C8E99;
+			color: white;
+		}
+
+		button.selected {
+			background-color: #2C8E99;
+			color: white;
+		}
+
+		#container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			max-width: 600px;
+			gap: 20px;
+			margin-bottom: 50px;
+		}
+
+		.square {
+			width: 30%;
+			padding-bottom: 30%;
+			background-color: purple;
+			transition: background-color 0.5s;
+			border-radius: 15%;
+			cursor: pointer;
+		}
+
+		.square:hover {
+			background-color: white;
+		}
+
+		#message {
+			font-size: 1.8em;
+			color: #2C8E99;
+			margin-left: 20px;
+		}
+	</style>
 </head>
+
 <body>
-	<h1>The Great <span id="color-display">RGB</span> Guessing Game</h1>
-	<div id ="stripe">
+	<h1>The Great <span id="color-display">RGB(???, ???, ???)</span> Guessing Game</h1>
+	<div id="stripe">
 		<button id="reset">New Colors</button>
 		<span id="message"></span>
 		<button class="mode">Easy</button>
@@ -22,7 +115,98 @@
 		<div class="square"></div>
 	</div>
 
-	<script type="text/javascript" src="script.js"></script>
-<!-- 	<script type="text/javascript" src="colorGame.js"></script>
- --></body>
+	<script>
+		let numSquares = 6;
+		let colors = [];
+		let pickedColor;
+		const squares = document.querySelectorAll(".square");
+		const colorDisplay = document.getElementById("color-display");
+		const messageDisplay = document.getElementById("message");
+		const resetButton = document.getElementById("reset");
+		const modeButtons = document.querySelectorAll(".mode");
+
+		init();
+
+		function init() {
+			setupModeButtons();
+			setupSquares();
+			reset();
+		}
+
+		function setupModeButtons() {
+			modeButtons.forEach(button => {
+				button.addEventListener("click", function () {
+					modeButtons.forEach(btn => btn.classList.remove("selected"));
+					this.classList.add("selected");
+					numSquares = this.textContent === "Easy" ? 4 : 6;
+					reset();
+				});
+			});
+		}
+
+		function setupSquares() {
+			squares.forEach(square => {
+				square.addEventListener("click", function () {
+					const clickedColor = this.style.backgroundColor;
+					if (clickedColor === pickedColor) {
+						messageDisplay.textContent = "Correct!";
+						changeColors(clickedColor);
+						resetButton.textContent = "Play Again?";
+					} else {
+						this.style.backgroundColor = "#232323";
+						messageDisplay.textContent = "Try Again!";
+					}
+				});
+			});
+		}
+
+		function reset() {
+			colors = generateRandomColors(numSquares);
+			pickedColor = pickColor();
+			colorDisplay.textContent = pickedColor;
+			resetButton.textContent = "New Colors";
+			messageDisplay.textContent = "";
+
+			
+			squares.forEach((square, index) => {
+				if (colors[index]) {
+					square.style.display = "block"; 
+					square.style.backgroundColor = colors[index];
+				} else {
+					square.style.backgroundColor = "transparent"; 
+					square.style.visibility = "hidden"; 
+				}
+			});
+		}
+
+		resetButton.addEventListener("click", reset);
+
+		function changeColors(color) {
+			squares.forEach(square => {
+				square.style.backgroundColor = color;
+			});
+		}
+
+		function pickColor() {
+			const random = Math.floor(Math.random() * colors.length);
+			return colors[random];
+		}
+
+		function generateRandomColors(num) {
+			const arr = [];
+			for (let i = 0; i < num; i++) {
+				arr.push(randomColor());
+			}
+			return arr;
+		}
+
+		function randomColor() {
+			const r = Math.floor(Math.random() * 256);
+			const g = Math.floor(Math.random() * 256);
+			const b = Math.floor(Math.random() * 256);
+			return `rgb(${r}, ${g}, ${b})`;
+		}
+	</script>
+</body>
+
 </html>

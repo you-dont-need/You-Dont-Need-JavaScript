@@ -1,87 +1,70 @@
 body {
-	background-color: #232323;
-	font-family: "Raleway", Sans-serif;
-	font-size: 62.5%; /*1 em = 10px */
-	margin: 0;
+    background-color: #232323;
+    font-family: "Raleway", sans-serif;
+    font-size: 62.5%; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
-
-#container {
-	max-width: 600px;
-	margin: 0 auto;
-	padding-top: 20px;
-
-}
-.square {
-	width: 30%;
-	background-color: purple;
-	padding-bottom: 30%;
-	float: left;
-	margin: 1.66%;
-	transition: background .5s;
-	-webkit-transition: background .5s;
-	-moz-transition: background .5s;
-	o-transition: background .5s;
-} 
 
 h1 {
-	color: white;
-	background-color: #2C8E99;
-	font-size: 3.5em;
-	text-align: center;
-	text-transform: uppercase;
-	margin: 0;
-	padding: 10px 0;
+    color: white;
+    background-color: #2C8E99;
+    font-size: 3.5em;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 #color-display {
-	display: block;
-	font-size: 2em;
+    display: inline;
+    font-size: 1.5em;
 }
 
-#stripe {
-	background: white;
-	height: 30px;
-	text-align: center;
-	color: black;
-}
-
-#message {
-	text-transform: uppercase;
-	color: #2C8E99;
-	font-size: 1.5em;
-	display: inline-block;
-	width: 20%;
-}
-
-button {
-	outline: none;
-	color: #2C8E99;
-	font-family: "Raleway", Sans-serif;
-	text-transform: uppercase;
-	font-size: 1.5em;
-	background-color: white;
-	height: 100%;
-	letter-spacing: 1px;
-	transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	o-transition: all 0.3s;
-}
-
-button:hover {
-	background-color: #2C8E99;
-	color: white;
-}
-
-.selected {
-	background-color: #2C8E99;
-	color: white;
+#container {
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
 .square {
-	border-radius: 20%;
+    width: 30%;
+    padding-bottom: 30%;
+    background-color: purple;
+    transition: background-color 0.5s;
+    border-radius: 15%;
 }
 
-* {
-	border: 0px solid red;
+.color1 {
+    background-color: rgb(255, 0, 0); /* Red */
+}
+
+.color2 {
+    background-color: rgb(0, 255, 0); /* Green */
+}
+
+.color3 {
+    background-color: rgb(0, 0, 255); /* Blue */
+}
+
+.color4 {
+    background-color: rgb(255, 255, 0); /* Yellow */
+}
+
+.color5 {
+    background-color: rgb(255, 0, 255); /* Magenta */
+}
+
+.color6 {
+    background-color: rgb(0, 255, 255); /* Cyan */
+}
+
+.square:hover {
+    background-color: white;
 }
