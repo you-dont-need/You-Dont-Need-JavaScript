@@ -1,18 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Roboto:wght@400&display=swap');
+
 body {
     background: url('https://cdn.pixabay.com/photo/2016/10/20/18/35/earth-1756274_960_720.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+#txt {
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    font-size: 10vw;
+    letter-spacing: 3px;
+    animation: fadeIn 2s ease-in-out;
+}
 
+@media (max-width: 600px) {
+    #txt {
+        font-size: 8vw;
+        padding-top: 100px;
+    }
+}
 
-  #txt {
-      color: white;
-      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      justify-content: center;
-      text-align: center;
-      font-size: 100px;
-      letter-spacing: 3px;
-      padding-top: 220px;
-  }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
