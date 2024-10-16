@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +6,55 @@
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Light Bulb Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      margin: 0;
+    }
+
+    .box {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background: #ffeb3b;
+      border-radius: 50%;
+      box-shadow: 0 0 50px #ffeb3b;
+      transition: box-shadow 0.5s, background 0.5s;
+    }
+
+    .box span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: #000;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + .box {
+      background: #555;
+      box-shadow: 0 0 10px #555;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="box">
-    <span></span>
-  </div>
+  <label>
+    <input type="checkbox">
+    <div class="box">
+      <span></span>
+    </div>
+  </label>
 </body>
 
 </html>
