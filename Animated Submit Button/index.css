@@ -1,0 +1,204 @@
+@-webkit-keyframes extend {
+    0% {
+        width: 600px;
+        height: 200px;
+        border-radius: 100px;
+    }
+
+    10% {
+        width: 610px;
+        height: 210px;
+        background: #fff;
+        margin-left: - 5px;
+        margin-top: - 5px;
+    }
+
+    20% {
+        width: 600px;
+        height: 200px;
+        background: #6fb07f;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        margin-left: 190px;
+        background: #6fb07f;
+    }
+}
+
+@keyframes extend {
+    0% {
+        width: 600px;
+        height: 200px;
+        border-radius: 100px;
+    }
+
+    10% {
+        width: 610px;
+        height: 210px;
+        background: #fff;
+        margin-left: - 5px;
+        margin-top: - 5px;
+    }
+
+    20% {
+        width: 600px;
+        height: 200px;
+        background: #629a70;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        margin-left: 190px;
+        background: #79ba89;
+    }
+}
+
+@-webkit-keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        color: #f28484;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        color: #44bd8b;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+html {
+    background: #ae9e9e
+}
+
+input,
+button,
+submit {
+    border: none
+}
+
+.cont {
+    position: absolute;
+    width: 600px;
+    height: 18px;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -300px
+}
+
+button {
+    border-width: 1px;
+    width: 600px;
+    height: 200px;
+    border-radius: 90px;
+    background: #fff;
+    position: absolute;
+    border: 5px solid #3c834e;
+    -webkit-border-radius: 90px;
+    -moz-border-radius: 90px;
+    -ms-border-radius: 90px;
+    -o-border-radius: 90px;
+}
+
+button>span {
+    font-size: 60px;
+    color: #6fb07f
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    border-radius: 100%;
+    /* mix-blend-mode: luminosity;
+    filter: brightness(0.5) invert(1) const(2.5); */
+    scale: 0;
+    transition-delay: 0.75s;
+    transition-duration: 1.5s;
+    transition-property: all;
+    transition-timing-function: linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%);
+}
+
+button:focus {
+    /*animation*/
+    -webkit-animation: extend 1s ease-in-out;
+    -ms-animation: extend 1s ease-in-out;
+    animation: extend 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+button:focus>span {
+    /*animation*/
+    -webkit-animation: disappear 1s ease-in-out;
+    -ms-animation: disappear 1s ease-in-out;
+    animation: disappear 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+
+    animation-fill-mode: forwards
+}
+
+button:focus>img {
+    /*animation*/
+    -webkit-animation: appear 1.1s ease-in-out;
+    -ms-animation: appear 1.2s ease-in-out;
+    animation: appear 0.9s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    scale: 2.5;
+}
