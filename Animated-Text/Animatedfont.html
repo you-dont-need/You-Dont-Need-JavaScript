@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animations</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Slide In Animation */
+        .slide-in {
+            animation: slideIn 1s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Fade In Animation */
+        .fade-in {
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Bounce Animation */
+        .bounce {
+            animation: bounce 1s ease forwards;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Rotate Animation */
+        .rotate {
+            animation: rotate 2s ease forwards;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Scale Animation */
+        .scale {
+            animation: scale 1s ease forwards;
+        }
+
+        @keyframes scale {
+            from {
+                transform: scale(0.5);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Color Change Animation */
+        .color-change {
+            animation: colorChange 3s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            from {
+                color: #007BFF;
+            }
+            to {
+                color: #FF5733;
+            }
+        }
+
+        /* Glitch Effect */
+        .glitch {
+            color: white;
+            position: relative;
+            font-size: 2rem;
+            animation: glitch 1s infinite;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 1px 1px 0 rgba(255, 0, 0, 0.8),
+                             -1px -1px 0 rgba(0, 0, 255, 0.8);
+            }
+            20% {
+                text-shadow: -1px -1px 0 rgba(255, 255, 0, 0.8),
+                             1px 1px 0 rgba(0, 255, 0, 0.8);
+            }
+            40% {
+                text-shadow: 1px -1px 0 rgba(255, 0, 0, 0.8),
+                             -1px 1px 0 rgba(0, 0, 255, 0.8);
+            }
+            60% {
+                text-shadow: -1px 1px 0 rgba(255, 255, 0, 0.8),
+                             1px -1px 0 rgba(0, 255, 0, 0.8);
+            }
+            100% {
+                text-shadow: 1px 1px 0 rgba(255, 0, 0, 0.8),
+                             -1px -1px 0 rgba(0, 0, 255, 0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="slide-in">Slide In Animation</h1>
+    <h1 class="fade-in">Fade In Animation</h1>
+    <h1 class="bounce">Bounce Animation</h1>
+    <h1 class="rotate">Rotate Animation</h1>
+    <h1 class="scale">Scale Animation</h1>
+    <h1 class="color-change">Color Change Animation</h1>
+    <h1 class="glitch">Glitch Effect</h1>
+</body>
+</html>
