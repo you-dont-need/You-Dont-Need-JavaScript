@@ -1,0 +1,22 @@
+1.) silkscreen regular
+font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+2.) silkscreen bold
+font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+3.)Jaro
+font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+4.)Fredericka the Great
+font-family: "Fredericka the Great", serif;
+  font-weight: 400;
+  font-style: normal;
+5.)font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
