@@ -74,3 +74,6 @@ h5.name {
     justify-content: space-between;
     align-items: flex-end;
 }
+.container:hover {
+    box-shadow: 0 0 20px 10px rgba(255, 215, 0, 0.8); 
+}
