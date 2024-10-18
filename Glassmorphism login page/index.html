@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to the login page</title>
+  </head>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+}
+:root{
+    --font: rgb(57, 57, 57);
+    --font2: rgb(21, 21, 21);
+}
+.body {
+  background: linear-gradient(
+    to top right,
+    rgb(109, 109, 163),
+    rgb(255, 83, 255),
+    rgb(254, 120, 143),
+    rgb(255, 194, 80),
+    rgb(253, 253, 103)
+  );
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.glass {
+  position: absolute;
+  background-color: black;
+  backdrop-filter: blur(50px);
+  opacity: 0.3;
+  width: 100vw;
+  height: 100vh;
+}
+
+.box {
+  background:rgba(255, 254, 254, 0.3);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  z-index: 1;
+  width: 35%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 5px 5px 15px 8px rgba(54, 54, 54, 0.2);
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 85%;
+  height: 50px;
+  margin: 25px;
+  margin-top: 0;
+  font-size: small;
+  font-weight: lighter;
+}
+.sign {
+  background-color: black;
+  color: rgb(172, 172, 172);
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: small;
+  font-weight: lighter;
+}
+.login {
+  background-color: rgb(227, 227, 227);
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: small;
+  font-weight: lighter;
+}
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    font-size: small;
+    border: 1px solid var(--font);
+    width: 70%;
+    height: 32px;
+    margin: 5px;
+    border-radius: 50px;
+    color: var(--font);
+}
+.facebook{
+    margin-top: 25px;
+}
+.divider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    font-weight: lighter;
+    color: var(--font2);
+    margin: 20px;
+}
+.divider hr{
+    width: 40%;
+}
+.form{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 25%;
+    width: 70%;
+}
+.form-box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.form-box input{
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid var(--font2);
+    padding-left: 8px;
+}
+.form label{
+    font-weight: lighter;
+    font-size: small;
+    color: var(--font2);
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 40px;
+    background-color: var(--font);
+    color: white;
+    border-radius: 50px;
+    font-weight: lighter;
+    font-size: small;
+    margin-top: 10px;
+}
+  </style>
+  <body>
+    <div class="body">
+      <div class="glass"></div>
+      <div class="box">
+        <div class="slider">
+          <span class="sign">Sign Up</span>
+          <span class="login">Login</span>
+        </div>
+        <div class="head">Sign Up</div>
+        <div class="option facebook">Sign up with Facebook</div>
+        <div class="option google">Sign up with Google</div>
+        <div class="divider">
+          <hr />
+          OR
+          <hr />
+        </div>
+        <div class="form">
+          <div class="form-box">
+            <label for="name1">First name</label>
+            <input type="text" id="name1" />
+          </div>
+          <div class="form-box">
+            <label for="name2">Last name</label>
+            <input type="text" id="name2" />
+          </div>
+          <div class="form-box">
+            <label for="email">Email address</label>
+            <input type="email" id="email" />
+          </div>
+        </div>
+        <div class="button">Sign Up</div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

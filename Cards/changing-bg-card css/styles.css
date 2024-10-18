@@ -1,0 +1,90 @@
+.divBackground {
+  background-image: url("https://preview.redd.it/hogwarts-legacy-dark-edition-official-pc-wallpaper-v0-potn7vwaxyj91.png?width=1080&crop=smart&auto=webp&s=06c43132256143ee78313b2b576c8ab41b41b086");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: changingFunction 60s infinite;
+  border-radius: 20px;
+}
+.contentDiv {
+  color: rgb(76, 238, 114);
+  font-size: xx-large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 50vh;
+  width: 50wv;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: textColorchangingFunction 60s infinite;
+}
+@keyframes textColorchangingFunction {
+  0% {
+    color: rgb(0, 255, 72);
+  }
+  4% {
+    color: goldenrod;
+  }
+  20% {
+    color: goldenrod;
+  }
+  24% {
+    color: black;
+  }
+  40% {
+    color: black;
+  }
+  44% {
+    color: rgb(197, 168, 0);
+  }
+  60% {
+    color: rgb(197, 168, 0);
+  }
+  64% {
+    color: black;
+  }
+  80% {
+    color: black;
+  }
+  84% {
+    color: rgb(0, 255, 72);
+  }
+  100% {
+    color: rgb(0, 255, 72);
+  }
+}
+
+@keyframes changingFunction {
+  0% {
+    background-image: url(https://preview.redd.it/hogwarts-legacy-dark-edition-official-pc-wallpaper-v0-potn7vwaxyj91.png?width=1080&crop=smart&auto=webp&s=06c43132256143ee78313b2b576c8ab41b41b086);
+  }
+  4% {
+    background-image: url(https://wallpapercave.com/wp/wp8172870.jpg);
+  }
+  20% {
+    background-image: url(https://wallpapercave.com/wp/wp8172870.jpg);
+  }
+  24% {
+    background-image: url(https://wallpapercave.com/wp/wp8172872.jpg);
+  }
+  40% {
+    background-image: url(https://wallpapercave.com/wp/wp8172872.jpg);
+  }
+  44% {
+    background-image: url(https://wallpapercave.com/wp/wp8172899.jpg);
+  }
+  60% {
+    background-image: url(https://wallpapercave.com/wp/wp8172899.jpg);
+  }
+  64% {
+    background-image: url(https://wallpapercave.com/wp/wp8172872.jpg);
+  }
+  80% {
+    background-image: url(https://wallpapercave.com/wp/wp8172872.jpg);
+  }
+  84% {
+    background-image: url(https://preview.redd.it/hogwarts-legacy-dark-edition-official-pc-wallpaper-v0-potn7vwaxyj91.png?width=1080&crop=smart&auto=webp&s=06c43132256143ee78313b2b576c8ab41b41b086);
+  }
+  100% {
+    background-image: url(https://preview.redd.it/hogwarts-legacy-dark-edition-official-pc-wallpaper-v0-potn7vwaxyj91.png?width=1080&crop=smart&auto=webp&s=06c43132256143ee78313b2b576c8ab41b41b086);
+  }
+}
