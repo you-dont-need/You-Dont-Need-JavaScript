@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations Using Css</title> 
+</head>
+<style>
+    :root {
+  --main-bg: #232323;
+  --stroke-width: 0.3rem;
+  --stroke-color: #414141;
+  --roof-color: #dc3b00;
+  --wall-color: #808080;
+  --window-color: #ffa500;
+  --door-color: #0044ff;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 4rem 2rem 2rem;
+  color: #ffffff;
+  background-color: var(--main-bg);
+}
+
+@keyframes vanes {
+  to {
+    rotate: 360deg;
+  }
+}
+
+.windmill {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.windmill::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  display: block;
+  width: 13rem;
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: 0;
+}
+
+.windmill__top {
+  position: relative;
+  width: 6rem;
+}
+
+.windmill__roof-top {
+  width: 90%;
+  height: 2.5rem;
+  margin-inline: auto;
+  border-radius: 100px 100px 0 0;
+  background-color: var(--roof-color);
+  box-shadow: inset -10px 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.windmill__roof-bottom {
+  display: block;
+  margin-top: -1px;
+  width: 100%;
+  height: 2rem;
+  clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+  background-color: var(--roof-color);
+  box-shadow: inset -20px -10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.windmill__vanes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  grid-auto-columns: min-content;
+  justify-content: space-around;
+  align-items: center;
+  width: 20rem;
+  height: 20rem;
+  translate: -50% -50%;
+  animation: vanes 6s linear infinite;
+  z-index: 2;
+}
+
+.windmill__vanes::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border: var(--stroke-width) solid var(--stroke-color);
+  border-radius: 50%;
+}
+
+.windmill__vane {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: var(--stroke-width) solid var(--stroke-color);
+  border-bottom: none;
+}
+
+.windmill__vane::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: var(--stroke-width);
+  height: 3rem;
+  background-color: var(--stroke-color);
+}
+
+.windmill__vane:nth-child(1) {
+  grid-column-start: 2;
+}
+
+.windmill__vane:nth-child(2) {
+  grid-column-start: 3;
+  grid-row-start: 2;
+  rotate: 90deg;
+}
+
+.windmill__vane:nth-child(3) {
+  grid-column-start: 2;
+  grid-row-start: 3;
+  rotate: 180deg;
+}
+
+.windmill__vane:nth-child(4) {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  rotate: -90deg;
+}
+
+.windmill__vane-cell {
+  width: 1rem;
+  height: 1.5rem;
+  border-bottom: none;
+}
+
+.windmill__vane-cell:nth-child(odd) {
+  border-right: var(--stroke-width) solid var(--stroke-color);
+  border-bottom: var(--stroke-width) solid var(--stroke-color);
+}
+
+.windmill__vane-cell:nth-child(even) {
+  margin-left: calc(var(--stroke-width) * -1);
+  border-bottom: var(--stroke-width) solid var(--stroke-color);
+}
+
+.windmill__bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 9rem;
+  height: 9rem;
+  clip-path: polygon(16.5% 0%, 83.5% 0%, 100% 100%, 0% 100%);
+  background-color: var(--wall-color);
+  box-shadow: inset -20px -10px 20px 0 rgba(0, 0, 0, 0.4),
+    inset 0 -10px 20px #135c0e;
+  z-index: 1;
+}
+
+.windmill__window {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--window-color);
+  border: var(--stroke-width) solid var(--stroke-color);
+  border-radius: 100px 100px 0 0;
+}
+
+.windmill__window::before,
+.windmill__window::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: block;
+  width: 100%;
+  height: var(--stroke-width);
+  background-color: var(--stroke-color);
+}
+
+.windmill__window::after {
+  rotate: -90deg;
+}
+
+.windmill__door {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border: var(--stroke-width) solid var(--stroke-color);
+  border-radius: 100px 100px 0 0;
+  background-color: #381e04;
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.07) 50%,
+      transparent 50%
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.17) 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.19) 50%);
+  background-size: 13px, 29px, 37px, 53px;
+  background-position: center;
+}
+
+.windmill__door::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0.2rem;
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--stroke-color);
+}
+
+.hill {
+  width: 30rem;
+  height: 10rem;
+  margin-top: -5rem;
+  background-color: #20601c;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+</style>
+<body>
+    <div class="windmill">
+        <div class="windmill__top">
+          <div class="windmill__roof-top"></div>
+          <div class="windmill__roof-bottom"></div>
+          <div class="windmill__vanes">
+            <div class="windmill__vane">
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+            </div>
+            <div class="windmill__vane">
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+            </div>
+            <div class="windmill__vane">
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+            </div>
+            <div class="windmill__vane">
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+              <div class="windmill__vane-cell"></div>
+            </div>
+          </div>
+        </div>
+        <div class="windmill__bottom">
+          <div class="windmill__window"></div>
+          <div class="windmill__door"></div>
+        </div>
+      </div>
+      <div class="hill"></div>
+</body>
+</html>

@@ -1,50 +1,108 @@
 div {
-    background-color: red;
-    border-radius: 100%;
-    height: 50px;
-    left: calc(50% - 50px);
-    position: absolute;
-    right: calc(50% - 50px);
-    width: 50px;
-    animation: bounce 1s ease-in-out infinite;
-    animation-fill-mode: both;
-    animation-direction: alternate;
+  background: radial-gradient(circle at 25% 25%, #ff0000, #ff4500);
+  border-radius: 100%;
+  height: 50px;
+  left: calc(50% - 50px);
+  position: absolute;
+  right: calc(50% - 50px);
+  width: 50px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 
+              0 15px 30px rgba(0, 0, 0, 0.3), 
+              0 30px 45px rgba(0, 0, 0, 0.4);
+  animation: bounce 1s ease-in-out infinite, 
+             colorChange 2s linear infinite, 
+             ballRotate 1.5s infinite ease-in-out alternate, 
+             pulse 1s infinite;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+
+span {
+  border-radius: 100%;
+  bottom: 32.5%;
+  left: calc(50% - 50px);
+  right: calc(50% - 50px);
+  position: absolute;
+  content: '';
+  background-color: black;
+  filter: blur(5px);
+  width: 50px;
+  height: 5px;
+  animation: shadow 1s ease-in-out infinite, 
+             shadowBlur 1s ease-in-out infinite, 
+             shadowSpread 1s infinite alternate;
+  animation-fill-mode: both;
+  z-index: -1;
+}
+
+@keyframes bounce {
+  from {
+    top: 25%;
+    transform: scaleX(79.5%) scaleY(65%);
   }
-  
-  span {
-    border-radius: 100%;
-    bottom: 32.5%;
-    left: calc(50% - 50px);
-    right: calc(50% - 50px);
-    position: absolute;
-    content: '';
-    background-color: black;
+  to {
+    top: 55%;
+    transform: scale(100%);
+  }
+}
+
+@keyframes shadow {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background: radial-gradient(circle at 25% 25%, #ff0000, #ff4500);
+  }
+  100% {
+    background: radial-gradient(circle at 25% 25%, #00bfff, #1e90ff);
+  }
+}
+
+@keyframes shadowBlur {
+  0% {
     filter: blur(3px);
+  }
+  100% {
+    filter: blur(8px);
+  }
+}
+
+@keyframes shadowSpread {
+  from {
     width: 50px;
     height: 5px;
-    animation: shadow 1s ease-in-out infinite;
-    animation-fill-mode: both;
-    animation-direction: alternate;
-    z-index: -1;
   }
-  
-  @keyframes bounce {
-    from {
-      top: 25%;
-      transform: scaleX(79.5%) scaleY(65%);
-    }
-    to {
-      top: 55%;
-    }
+  to {
+    width: 60px;
+    height: 8px;
   }
-  
-  @keyframes shadow {
-    from {
-      opacity: 0;
-      transform: scale(0);
-    }
-    to {
-      opacity: .5;
-      transform: scale(100%);
-    }
+}
+
+@keyframes ballRotate {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

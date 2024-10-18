@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Badge Design with Font Awesome</title>
+</head>
+<body>
+    <div class="flex flex-col gap-5 mt-10 mx-5 md:mx-80">
+        <!-- Open Status Badge -->
+        <div class="flex gap-3 border p-2 pr-6 rounded-2xl bg-green-200">
+            <div class="bg-green-500 w-12 h-12 flex justify-center items-center rounded-xl">
+                <i class="fas fa-lock-open text-white text-2xl"></i>
+            </div>
+            <div class="flex flex-col justify-center">
+                <p class="text-black font-bold text-sm md:text-base">MARKET remains open today.</p>
+            </div>
+        </div>
+
+        <!-- Closed Status Badge -->
+        <div class="flex gap-3 border p-2 pr-6 rounded-2xl bg-red-200">
+            <div class="bg-red-500 w-12 h-12 flex justify-center items-center rounded-xl">
+                <i class="fas fa-lock text-white text-2xl"></i>
+            </div>
+            <div class="flex flex-col justify-center">
+                <p class="text-black font-bold text-sm md:text-base">MARKET remains closed today.</p>
+            </div>
+        </div>
+
+        <!-- Not Announced Status Badge -->
+        <div class="flex gap-3 border p-2 pr-6 rounded-2xl bg-yellow-200">
+            <div class="bg-yellow-500 w-12 h-12 flex justify-center items-center rounded-xl">
+                <i class="fas fa-question-circle text-white text-2xl"></i>
+            </div>
+            <div class="flex flex-col justify-center">
+                <p class="text-black font-bold text-sm md:text-base">MARKET status is not announced.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

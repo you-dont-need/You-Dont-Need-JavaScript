@@ -1,0 +1,90 @@
+/* Watch this video https://youtu.be/_-IgBj04fog */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-container{
+    margin-bottom: -50px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skewed{
+    width: 250px;
+    height: 320px;
+    margin: 50px 0 -50px 0;
+    border-radius: 30px;
+    transform: skewY(15deg);
+    overflow: hidden;
+}
+
+#img{
+    width: 100%;
+    height: 100%;
+    margin-top: -30px;
+    transform: skewY(-15deg);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy85CghxDgvHub6aPkBf-dwZwK8JKl_2XUjw&s");
+    background-size: 100%;
+    background-position: center;
+    transition: all 0.3s ease;
+}
+
+#img:hover{
+    background-size: 110%;
+}
+
+.content{
+    width: 300px;
+    height: 130px;
+    padding-top: 50px;
+    border-radius: 5px;
+    box-shadow:rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h3{
+    font-size: 25px;
+    color: #353535;
+}
+
+.content p{
+    font-size: 16px;
+    margin-top: 1px;
+    color: #353535;
+}
+
+.content .links{
+    width: 80%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content .links i{
+    color: #b95808;
+    font-size: 30px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.content .links i:hover{
+    transform: scale(1.2);
+}
