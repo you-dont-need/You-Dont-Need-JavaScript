@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book</title>
+    <style>
+      * {
+        border: 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .wrapper {
+        background: #f4f2eb;
+        background-color: #afc7c5;
+        color: #555;
+        font-size: 125%; /* 20px */
+        padding-bottom: 6em;
+      }
+
+      .row:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .col--half {
+        float: left;
+        vertical-align: top;
+        width: 50%;
+      }
+
+      .col--third {
+        float: left;
+        vertical-align: top;
+        width: 33.3%;
+      }
+
+      /* ==========================================
+   Bus
+   ========================================== */
+      .bus {
+        background: transparent;
+        /* Font size set to 5em so that 0.01em = 1px */
+        font-size: 5em;
+        height: 10em;
+        margin: 1em auto;
+        position: relative;
+        width: 10em;
+      }
+
+      .bus--first {
+        margin-top: 0;
+      }
+      .bus--full {
+        font-size: 7vw;
+      }
+      .bus--half {
+        font-size: 4vw;
+      }
+      .bus--third {
+        font-size: 3vw;
+      }
+
+      .bus * {
+        position: absolute;
+      }
+
+      /* ==========================================
+   Body
+   ========================================== */
+      .bus-body {
+        height: 100%;
+        width: 100%;
+        z-index: 20;
+      }
+
+      .bus__body--top {
+        background: #a9a4a2;
+        position: absolute;
+      }
+
+      .bus__body--bottom {
+        background: #a9a4a2;
+        position: absolute;
+      }
+
+      /* Colors */
+      .bus--top-green .bus__body--top,
+      .bus--bottom-green .bus__body--bottom {
+        background: #82a53d;
+      }
+      .bus--top-orange .bus__body--top,
+      .bus--bottom-orange .bus__body--bottom {
+        background: #ee6615;
+      }
+      .bus--top-yellow .bus__body--top,
+      .bus--bottom-yellow .bus__body--bottom {
+        background: #f7c125;
+      }
+      .bus--top-red .bus__body--top,
+      .bus--bottom-red .bus__body--bottom {
+        background: #bb211a;
+      }
+      .bus--top-blue .bus__body--top,
+      .bus--bottom-blue .bus__body--bottom {
+        background: #1f77b5;
+      }
+      .bus--top-tan .bus__body--top,
+      .bus--bottom-tan .bus__body--bottom {
+        background: #c5b889;
+      }
+      .bus--top-white .bus__body--top,
+      .bus--bottom-white .bus__body--bottom {
+        background: #e3e2d8;
+      }
+      .bus--top-brown .bus__body--top,
+      .bus--bottom-brown .bus__body--bottom {
+        background: #684d43;
+      }
+
+      .roof {
+        border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+        height: 1.4em;
+        left: 1.76em;
+        width: 6.48em;
+        top: 1em;
+      }
+
+      .side-top {
+        border-radius: 46% 46% 0 0 / 60% 60% 0 0;
+        height: 2.24em;
+        left: 1.31em;
+        top: 1.67em;
+        transform: rotate(11deg);
+        width: 0.8em;
+      }
+
+      .side-top--right {
+        left: auto;
+        right: 1.31em;
+        transform: rotate(-11deg);
+      }
+
+      .gutter {
+        border-top-left-radius: 0.06em;
+        height: 0.12em;
+        left: 1.72em;
+        top: 1.63em;
+        transform: rotate(-45deg);
+        width: 0.08em;
+      }
+
+      .gutter--right {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0.06em;
+        left: auto;
+        right: 1.72em;
+        transform: rotate(45deg);
+      }
+
+      .mid-top {
+        height: 2em;
+        left: 1.7em;
+        top: 2em;
+        width: 6.6em;
+      }
+
+      .bump {
+        border-radius: 1.5% 1.5% 1.5% 1.5% / 50% 50% 50% 50%;
+        box-shadow: inset 0 -0.18em 0 0 rgba(0, 0, 0, 0.15),
+          inset 0 0.18em 0 0 rgba(255, 255, 255, 0.2);
+        height: 0.36em;
+        left: 1.08em;
+        top: 3.83em;
+        width: 7.84em;
+        z-index: 20;
+      }
+
+      .front {
+        border-radius: 2.5% 2.5% 3.5% 3.5% / 70% 70% 30% 30%;
+        height: 4em;
+        left: 1em;
+        top: 4.1em;
+        width: 8em;
+      }
+
+      .front-middle {
+        border-radius: 20% 20% 0 0 / 100% 100% 0 0;
+        box-shadow: 0 -0.04em 0 0 rgba(255, 255, 255, 0.2);
+        left: 1.6em;
+        height: 0.24em;
+        top: 4.33em;
+        width: 6.8em;
+      }
+
+      .front-middle--bottom {
+        border-radius: 0 0 0.9em 0.9em;
+        box-shadow: 0 0.04em 0 0 rgba(0, 0, 0, 0.15);
+        left: 1.5em;
+        height: 1em;
+        top: 6.1em;
+        width: 7em;
+      }
+
+      .grill {
+        border-radius: 0.06em;
+        box-shadow: inset 0 -0.03em 0 0 rgba(0, 0, 0, 0.15),
+          inset 0 0.03em 0 0 rgba(255, 255, 255, 0.2),
+          0 -0.03em 0 0 rgba(0, 0, 0, 0.15),
+          0 0.03em 0 0 rgba(255, 255, 255, 0.2);
+        height: 0.6em;
+        left: 2.61em;
+        top: 4.51em;
+        width: 4.78em;
+      }
+
+      .grill__hole {
+        background: #333;
+        border-radius: 0.02em;
+        box-shadow: 0.08em 0 0 0 #333, 0.16em 0 0 0 #333, 0.24em 0 0 0 #333,
+          0.32em 0 0 0 #333, 0.4em 0 0 0 #333, 0.48em 0 0 0 #333,
+          0.56em 0 0 0 #333, 0.64em 0 0 0 #333, 0.72em 0 0 0 #333,
+          0.8em 0 0 0 #333, 0.88em 0 0 0 #333, 0.96em 0 0 0 #333,
+          1.04em 0 0 0 #333, 1.12em 0 0 0 #333, 1.2em 0 0 0 #333,
+          1.28em 0 0 0 #333, 1.36em 0 0 0 #333, 1.44em 0 0 0 #333,
+          1.52em 0 0 0 #333, 1.6em 0 0 0 #333, 1.68em 0 0 0 #333,
+          1.76em 0 0 0 #333, 1.84em 0 0 0 #333, 1.92em 0 0 0 #333,
+          2em 0 0 0 #333;
+        height: 0.42em;
+        left: 0.13em;
+        position: absolute;
+        top: 0.09em;
+        width: 0.04em;
+      }
+
+      .grill__hole--right {
+        left: 2.59em;
+      }
+
+      /* ==========================================
+   Windshield
+   ========================================== */
+      .windshield {
+        height: 100%;
+        width: 100%;
+        z-index: 30;
+      }
+
+      .windshield-rubber {
+        background: #8a97a2;
+        border-radius: 50% 50% 0 0 / 34% 34% 0 0;
+        border: 0.14em solid #333;
+        height: 1.4em;
+        left: 1.9em;
+        width: 6.2em;
+        top: 1.32em;
+      }
+
+      .windshield-rubber--bottom {
+        background: #8a97a2;
+        border-radius: 0.16em;
+        border: 0.08em solid #333;
+        height: 0.32em;
+        left: 1.28em;
+        width: 7.44em;
+        top: 3.51em;
+      }
+
+      .windshield-rubber--side {
+        background: #8a97a2;
+        border-radius: 50% 50% 60% 13% / 60% 60% 20% 5%;
+        border: 0.12em solid #333;
+        height: 2.18em;
+        left: 1.46em;
+        top: 1.65em;
+        transform: rotate(11deg);
+        width: 0.8em;
+      }
+
+      .windshield-rubber--side--right {
+        border-radius: 50% 50% 13% 60% / 60% 60% 5% 20%;
+        left: auto;
+        right: 1.46em;
+        transform: rotate(-11deg);
+      }
+
+      .windshield-top {
+        background: #8a97a2;
+        border-radius: 0.4em;
+        height: 2em;
+        left: 1.86em;
+        width: 6.28em;
+        top: 1.68em;
+      }
+
+      .windshield-bottom {
+        background: #8a97a2;
+        border-radius: 0.4em;
+        height: 0.2em;
+        left: 1.4em;
+        width: 7.2em;
+        top: 3.55em;
+      }
+
+      .windshield-bottom:after {
+        background: #8a97a2;
+        content: "";
+        height: 0.3em;
+        left: 0.2em;
+        position: absolute;
+        width: 6.8em;
+        top: -0.2em;
+      }
+
+      /* ==========================================
+   Front Parts
+   ========================================== */
+      .front-parts {
+        height: 100%;
+        width: 100%;
+        z-index: 40;
+      }
+
+      /* Wipers
+   ========================================== */
+      .wiper {
+        height: 0.78em;
+        left: 4.86em;
+        top: 3.24em;
+        transform-origin: 97% 100%;
+        transition: transform 1s ease-in-out;
+        width: 2.4em;
+      }
+
+      .wiper-arm {
+        background: #333;
+        bottom: 0.42em;
+        height: 0.05em;
+        right: 0em;
+        transform: rotate(26deg);
+        width: 1.3em;
+      }
+
+      .wiper-arm:after {
+        background: #333;
+        border-radius: 0.03em;
+        content: "";
+        height: 0.05em;
+        position: absolute;
+        top: -0.02em;
+        transform: rotate(-2deg);
+        width: 1.3em;
+      }
+
+      .wiper-arm:before {
+        background: #333;
+        border-radius: 0.04em;
+        content: "";
+        height: 0.08em;
+        position: absolute;
+        right: 0em;
+        top: 0em;
+        transform: rotate(6deg);
+        width: 0.6em;
+      }
+
+      .wiper-attachment {
+        background: #333;
+        border-radius: 0.06em;
+        bottom: 0.06em;
+        height: 0.12em;
+        right: 0em;
+        transform: rotate(20deg);
+        width: 0.14em;
+      }
+
+      .wiper-attachment:after {
+        background: #333;
+        border-radius: 0.04em;
+        content: "";
+        height: 0.12em;
+        left: 0.02em;
+        position: absolute;
+        top: 0.06em;
+        width: 0.1em;
+      }
+
+      .wiper-blade {
+        background: #333;
+        height: 0.04em;
+        left: 0em;
+        top: 0.12em;
+        transform: rotate(2deg);
+        width: 2.04em;
+      }
+
+      .wiper-blade:after {
+        background: transparent;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        box-shadow: inset 0 0.03em 0 0 #333;
+        content: "";
+        height: 0.14em;
+        left: 0.26em;
+        position: absolute;
+        top: -0.1em;
+        width: 1.5em;
+      }
+
+      .wiper-blade:before {
+        background: #333;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        box-shadow: 0.8em -0.08em 0 0 #333;
+        content: "";
+        height: 0.06em;
+        left: 0.16em;
+        position: absolute;
+        top: -0.04em;
+        width: 0.4em;
+      }
+
+      .wiper-left {
+        left: 1.92em;
+        transform: rotate(-6deg);
+      }
+
+      .wiper-right--on {
+        animation-name: wiper-wiping-right;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes wiper-wiping-right {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(90deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      .wiper-left--on {
+        animation-name: wiper-wiping-left;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transform-origin: 98% 95%;
+      }
+
+      @keyframes wiper-wiping-left {
+        0% {
+          transform: rotate(-6deg);
+        }
+        50% {
+          transform: rotate(84deg);
+        }
+        100% {
+          transform: rotate(-6deg);
+        }
+      }
+
+      /* Logo
+   ========================================== */
+      .vw-logo {
+        border: 0.08em solid #f3e5c0;
+        border-radius: 50%;
+        left: 4.52em;
+        height: 0.96em;
+        position: absolute;
+        top: 5.68em;
+        width: 0.96em;
+      }
+
+      .vw-logo__v {
+        background: #f3e5c0;
+        display: block;
+        height: 0.1em;
+        left: 0.35em;
+        position: absolute;
+        top: 0.29em;
+        width: 0.1em;
+      }
+
+      .vw-logo__v:after,
+      .vw-logo__v:before {
+        background: #f3e5c0;
+        content: "";
+        height: 0.4em;
+        left: -0.08em;
+        position: absolute;
+        top: -0.3em;
+        transform: rotate(-24deg);
+        width: 0.08em;
+      }
+
+      .vw-logo__v:before {
+        left: 0.1em;
+        transform: rotate(24deg);
+      }
+
+      .vw-logo__w {
+        background: #f3e5c0;
+        display: block;
+        height: 0.1em;
+        left: 0.35em;
+        position: absolute;
+        top: 0.41em;
+        width: 0.1em;
+      }
+
+      .vw-logo__w:after,
+      .vw-logo__w:before {
+        background: #f3e5c0;
+        content: "";
+        height: 0.4em;
+        left: -0.08em;
+        position: absolute;
+        top: 0;
+        transform: rotate(24deg);
+        width: 0.08em;
+      }
+
+      .vw-logo__w:before {
+        left: 0.1em;
+        transform: rotate(-24deg);
+      }
+
+      .vw-logo__w__leg-l,
+      .vw-logo__w__leg-r {
+        background: #f3e5c0;
+        display: block;
+        height: 0.6em;
+        left: -0.26em;
+        position: absolute;
+        top: -0.24em;
+        transform: rotate(-24deg);
+        width: 0.08em;
+      }
+
+      .vw-logo__w__leg-r {
+        left: 0.29em;
+        transform: rotate(24deg);
+      }
+
+      .vw-logo--shadow {
+        border-color: rgba(0, 0, 0, 0.15);
+        top: 5.72em;
+      }
+
+      .vw-logo--shadow .vw-logo__v {
+        background: rgba(0, 0, 0, 0.15);
+      }
+
+      .vw-logo--shadow .vw-logo__v:after,
+      .vw-logo--shadow .vw-logo__v:before {
+        background: rgba(0, 0, 0, 0.15);
+      }
+
+      .vw-logo--shadow .vw-logo__w {
+        background: rgba(0, 0, 0, 0.15);
+      }
+
+      .vw-logo--shadow .vw-logo__w:after,
+      .vw-logo--shadow .vw-logo__w:before {
+        background: rgba(0, 0, 0, 0.15);
+      }
+
+      .vw-logo--shadow .vw-logo__w__leg-l,
+      .vw-logo--shadow .vw-logo__w__leg-r {
+        background: rgba(0, 0, 0, 0.15);
+      }
+
+      /* Lights
+   ========================================== */
+      .directional {
+        background: radial-gradient(at bottom right, #f46b0e 58%, #dd5900 59%);
+        border: 0.06em solid #dd5900;
+        border-top-color: #ec8c47;
+        border-bottom-color: #bb4b00;
+        border-radius: 0.06em;
+        height: 0.56em;
+        left: 1.89em;
+        top: 4.55em;
+        position: absolute;
+        width: 0.68em;
+      }
+
+      .directional--right {
+        left: auto;
+        right: 1.89em;
+      }
+
+      .directional--on {
+        animation-name: directional-blinking;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        background: #ffbc00;
+        background: radial-gradient(#ffe7a5, #ffbc00 65%, #ff9c00);
+        border-radius: 0.06em;
+        box-shadow: 0 0 1em #ffbc00;
+        height: 0.56em;
+        left: -0.06em;
+        position: relative;
+        top: -0.06em;
+        width: 0.68em;
+      }
+
+      @keyframes directional-blinking {
+        0% {
+          opacity: 1;
+        }
+        20% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0;
+        }
+        70% {
+          opacity: 1;
+        }
+      }
+
+      .headlight {
+        background: #eee;
+        background: linear-gradient(to bottom, #eee 50%, #555 50%);
+        border-radius: 50%;
+        box-shadow: 0 -0.12em 0 0 rgba(0, 0, 0, 0.15),
+          0 0.12em 0 0 rgba(255, 255, 255, 0.2);
+        height: 1.14em;
+        left: 1.64em;
+        position: absolute;
+        top: 5.66em;
+        width: 1.14em;
+      }
+
+      .headlight:after {
+        background: #eee;
+        background: linear-gradient(to bottom, #aaa 50%, #eee 50%);
+        border-radius: 50%;
+        content: "";
+        height: 0.94em;
+        left: 0.12em;
+        position: absolute;
+        top: 0.1em;
+        width: 0.94em;
+        z-index: 2;
+      }
+
+      .headlight:before {
+        border-radius: 50%;
+        box-shadow: inset 0 0.08em 0 0 #ddd, 0 0.08em 0 0 #ccc;
+        content: "";
+        height: 0.7em;
+        left: 0.24em;
+        position: absolute;
+        top: 0.18em;
+        width: 0.7em;
+        z-index: 3;
+      }
+
+      .headlight--right {
+        left: auto;
+        right: 1.64em;
+      }
+
+      .headlight--right:after {
+        left: 0.08em;
+      }
+
+      .headlight--right:before {
+        left: 0.2em;
+      }
+
+      .headlight--on {
+        animation-name: headlight-blinking;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 1.5em 0.8em #fff;
+        height: 0.94em;
+        left: 0.12em;
+        position: relative;
+        top: 0.1em;
+        width: 0.94em;
+        z-index: 4;
+      }
+
+      .headlight--on:before {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        box-shadow: inset 0 0 0.1em 0.02em rgba(255, 255, 255, 0.3),
+          0 0 0.1em 0.02em rgba(255, 255, 255, 0.3);
+        content: "";
+        height: 0.5em;
+        left: -0.3em;
+        position: absolute;
+        top: -0.2em;
+        width: 0.5em;
+        z-index: 5;
+      }
+
+      .headlight--on:after {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        box-shadow: inset 0 0 0.1em 0.02em rgba(255, 255, 255, 0.3),
+          0 0 0.1em 0.02em rgba(255, 255, 255, 0.3);
+        content: "";
+        height: 0.3em;
+        left: 1em;
+        position: absolute;
+        top: 1em;
+        width: 0.3em;
+        z-index: 5;
+      }
+
+      .headlight--on--right {
+        left: 0.08em;
+      }
+
+      .headlight--on__star {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 30%;
+        height: 3em;
+        left: 0.46em;
+        position: absolute;
+        top: -1.03em;
+        width: 0.05em;
+        z-index: 5;
+      }
+
+      .headlight--on__star:before {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 30%;
+        content: "";
+        height: 3em;
+        position: absolute;
+        transform: rotate(45deg);
+        width: 0.05em;
+        z-index: 5;
+      }
+
+      .headlight--on__star:after {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 30%;
+        content: "";
+        height: 3em;
+        position: absolute;
+        transform: rotate(-45deg);
+        width: 0.05em;
+        z-index: 5;
+      }
+
+      @keyframes headlight-blinking {
+        0% {
+          opacity: 1;
+        }
+        45% {
+          opacity: 1;
+        }
+        55% {
+          opacity: 0;
+        }
+        95% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Bumper
+   ========================================== */
+      .bumper {
+        height: 0.8em;
+        left: 0.98em;
+        top: 7.73em;
+        width: 8.04em;
+      }
+
+      .bumper-curve {
+        background: #ded9d1;
+        border-radius: 0 0 50% 50% / 0 0 100% 100%;
+        height: 0.16em;
+        left: 0;
+        width: 8.04em;
+      }
+
+      .bc-1 {
+        border-bottom: 0.04em solid rgba(0, 0, 0, 0.3);
+        top: 0.63em;
+      }
+
+      .bc-2 {
+        box-shadow: inset 0 -0.04em 0 0 #fff;
+        top: 0.47em;
+      }
+
+      .bc-3 {
+        border-bottom: 0.04em solid rgba(0, 0, 0, 0.3);
+        top: 0.19em;
+      }
+
+      .bc-4 {
+        background: #fff;
+        top: 0.03em;
+      }
+
+      .bumper-straight {
+        background: #ded9d1;
+        height: 0.16em;
+        left: 0;
+        width: 8.04em;
+      }
+
+      .bs-1 {
+        top: 0.47em;
+      }
+
+      .bs-middle {
+        height: 0.32em;
+        left: 0.04em;
+        top: 0.19em;
+        width: 7.96em;
+      }
+
+      .bs-3 {
+        top: 0.03em;
+      }
+
+      .bumper-top {
+        background: #fff;
+        border-radius: 0.06em;
+        height: 0.06em;
+        width: 8.04em;
+      }
+
+      .above-bumper {
+        border-radius: 0 0 50% 50% / 0 0 100% 100%;
+        height: 0.1em;
+        left: 0.22em;
+        top: -0.02em;
+        width: 7.6em;
+      }
+
+      /* Spare Tire
+   ========================================== */
+      .spare-tire {
+        background: #ded9d1;
+        background: linear-gradient(to bottom, #fff 50%, #cac4bb 50%);
+        border-radius: 50%;
+        box-shadow: 0 0.16em 0 0 rgba(0, 0, 0, 0.15);
+        height: 3.6em;
+        left: 3.2em;
+        top: 4.1em;
+        width: 3.6em;
+      }
+
+      .spare-tire:after {
+        background: #ded9d1;
+        border-radius: 50%;
+        content: "";
+        height: 2.86em;
+        left: 0.37em;
+        position: absolute;
+        top: 0.37em;
+        width: 2.86em;
+      }
+
+      /* ==========================================
+   Mirrors
+   ========================================== */
+      .mirrors {
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+      }
+
+      .mirror-glass {
+        background: #666;
+        height: 0.62em;
+        border-radius: 50% 50% 50% 50% / 10% 10% 10% 10%;
+        left: 0.44em;
+        top: 3.26em;
+        width: 0.56em;
+      }
+
+      .mirror-glass:after {
+        background: radial-gradient(at left, #bbb 59%, #666 60%);
+        box-shadow: inset 0.04em 0 0 0 #666;
+        box-sizing: border-box;
+        content: "";
+        height: 0.5em;
+        left: -0.05em;
+        border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+        position: absolute;
+        top: 10%;
+        width: 0.66em;
+      }
+
+      .mirror-arm {
+        background: transparent;
+        box-shadow: 0.04em -0.04em 0 0 #666, 0.08em -0.08em 0 0 #ddd;
+        height: 0.2em;
+        border-radius: 0 20% 0 0 / 0 50% 0 0;
+        left: 0.52em;
+        top: 3.7em;
+        transform: rotate(35deg);
+        width: 0.6em;
+      }
+
+      .mirror-arm:after,
+      .mirror-arm:before {
+        background: linear-gradient(to bottom, #ddd 50%, #666 50%);
+        border-radius: 50%;
+        content: "";
+        height: 0.14em;
+        left: 0.02em;
+        position: absolute;
+        top: -0.1em;
+        width: 0.14em;
+      }
+
+      .mirror-arm:before {
+        background: #666;
+        left: 0.58em;
+        top: 0.03em;
+      }
+
+      .mirror-r {
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+      }
+
+      .mirror-r .mirror-glass {
+        left: auto;
+        right: 0.44em;
+      }
+
+      .mirror-r .mirror-glass:after {
+        background: radial-gradient(at right, #bbb 59%, #666 60%);
+        box-shadow: inset -0.04em 0 0 0 #666;
+        left: -0.05em;
+      }
+
+      .mirror-arm-r {
+        box-shadow: -0.04em -0.04em 0 0 #666, -0.08em -0.08em 0 0 #ddd;
+        border-radius: 20% 0 0 0 / 50% 0 0 0;
+        left: auto;
+        right: 0.52em;
+        transform: rotate(-35deg);
+      }
+
+      .mirror-arm-r:after,
+      .mirror-arm-r:before {
+        background: linear-gradient(to bottom, #ddd 50%, #666 50%);
+        border-radius: 50%;
+        content: "";
+        height: 0.14em;
+        left: auto;
+        right: 0.02em;
+        position: absolute;
+        top: -0.1em;
+        width: 0.14em;
+      }
+
+      .mirror-arm-r:before {
+        background: #666;
+        left: auto;
+        right: 0.58em;
+        top: 0.03em;
+      }
+
+      /* ==========================================
+   Camper Top
+   ========================================== */
+      .campertop {
+        height: 100%;
+        width: 100%;
+        z-index: 35;
+      }
+
+      .poptop-2 {
+        background: transparent;
+        border-radius: 50% 50% 0 0 / 50% 50% 0 0;
+        box-shadow: 0 -0.36em 0 0 #ded9d1, 0 -0.38em 0 0 #fff;
+        height: 0.7em;
+        left: 2.05em;
+        top: 0.84em;
+        width: 5.9em;
+      }
+
+      .poptop-2:after,
+      .poptop-2:before {
+        background: #ded9d1;
+        border-radius: 0.06em;
+        content: "";
+        height: 0.46em;
+        left: -0.04em;
+        position: absolute;
+        top: -0.06em;
+        transform: rotate(14deg);
+        width: 0.2em;
+      }
+
+      .poptop-2:before {
+        left: auto;
+        right: -0.04em;
+        transform: rotate(-14deg);
+      }
+
+      .poptop-1 {
+        background: transparent;
+        border-radius: 50% 50% 0 0 / 50% 50% 0 0;
+        box-shadow: 0 -0.36em 0 0 #ded9d1, 0 -0.4em 0 0 #fff;
+        height: 0.7em;
+        left: 1.95em;
+        top: 1.1em;
+        width: 6.1em;
+      }
+
+      .poptop-1:after,
+      .poptop-1:before {
+        background: #ded9d1;
+        border-radius: 0.06em;
+        content: "";
+        height: 0.46em;
+        left: -0.02em;
+        position: absolute;
+        top: -0.08em;
+        transform: rotate(10deg);
+        width: 0.2em;
+      }
+
+      .poptop-1:before {
+        left: auto;
+        right: -0.02em;
+        transform: rotate(-10deg);
+      }
+
+      .poptop-seal {
+        background: transparent;
+        border-radius: 50% 50% 0 0 / 68% 68% 0 0;
+        box-shadow: 0 -0.1em 0 0 #333, 0 -0.18em 0 0 #fff;
+        height: 0.7em;
+        left: 1.85em;
+        top: 1.22em;
+        width: 6.3em;
+      }
+
+      /* ==========================================
+   Underbody
+   ========================================== */
+      .underbody {
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+      }
+
+      /* Tires
+   ========================================== */
+      .tire {
+        background: #333;
+        border-radius: 0 0 30% 30% / 0 0 50% 50%;
+        bottom: 0.1em;
+        height: 2em;
+        left: 1.43em;
+        width: 1em;
+      }
+
+      .tire--right {
+        left: auto;
+        right: 1.43em;
+      }
+
+      /* Other Parts
+   ========================================== */
+      .mid-parts {
+        height: 100%;
+        width: 100%;
+      }
+
+      .mid-parts--left {
+        background: #333;
+        border-radius: 0 0 40% 40% / 0 0 20% 20%;
+        height: 0.6em;
+        left: 3.76em;
+        top: 8.16em;
+        transform: rotate(6deg);
+        width: 0.8em;
+      }
+
+      .mid-parts--right {
+        left: auto;
+        right: 3.76em;
+        transform: rotate(-6deg);
+      }
+
+      .mid-parts--middle {
+        background: transparent;
+        border-radius: 40% 40% 0 0 / 30% 30% 0 0;
+        box-shadow: 0 -0.2em 0 0 #333;
+        height: 0.4em;
+        left: 4.5em;
+        top: 8.62em;
+        width: 1em;
+      }
+
+      .under-part-1l {
+        background: #333;
+        border-radius: 0 0 0 40% / 0 0 0 20%;
+        height: 0.7em;
+        left: 3.06em;
+        top: 7.94em;
+        transform: rotate(-10deg);
+        width: 0.8em;
+      }
+
+      .under-part-1r {
+        border-radius: 0 0 40% 0 / 0 0 20% 0;
+        left: auto;
+        right: 3.06em;
+        transform: rotate(10deg);
+      }
+
+      .under-part-2 {
+        background: #333;
+        height: 0.4em;
+        left: 2em;
+        top: 8.18em;
+        width: 6em;
+      }
+
+      .shock-l {
+        background: #333;
+        border-radius: 0 0 40% 40% / 0 0 20% 20%;
+        height: 0.7em;
+        left: 2.6em;
+        top: 8.06em;
+        transform: rotate(-10deg);
+        width: 0.36em;
+      }
+
+      .shock-r {
+        left: auto;
+        right: 2.6em;
+        transform: rotate(10deg);
+      }
+
+      .bar-l {
+        background: #333;
+        border-radius: 0 0 100% 0 / 0 0 100% 0;
+        height: 0.1em;
+        left: 2.3em;
+        top: 8.66em;
+        transform: rotate(-15deg);
+        width: 0.5em;
+      }
+
+      .bar-r {
+        border-radius: 0 0 0 100% / 0 0 0 100%;
+        left: auto;
+        right: 2.3em;
+        transform: rotate(15deg);
+      }
+
+      /* ==========================================
+   Love Bus
+   ========================================== */
+
+      .bus--top-love .bus__body--top,
+      .bus--bottom-love .bus__body--bottom {
+        background: #008db0;
+      }
+
+      .bus-flower {
+        background-color: #00394e;
+        box-shadow: 0.32em -0.04em 0 0 #00394e, 0.06em 0.28em 0 0 #00394e,
+          -0.32em 0.17em 0 0 #00394e, -0.32em -0.24em 0 0 #00394e,
+          0.06em -0.36em 0 0 #00394e;
+        border-radius: 50%;
+        height: 0.48em;
+        width: 0.48em;
+      }
+
+      .bus-flower:before {
+        background-color: #ff9d1e;
+        box-shadow: 0.36em 0 0 0 #ffd322, 0.1em 0.32em 0 0 #ffd322,
+          -0.28em 0.21em 0 0 #ffd322, -0.28em -0.2em 0 0 #ffd322,
+          0.1em -0.32em 0 0 #ffd322;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: solid 0.04em #f74f31;
+        content: "";
+        height: 0.4em;
+        width: 0.4em;
+        position: absolute;
+      }
+
+      .bus-flower--1 {
+        left: 1.38em;
+        top: 6.55em;
+      }
+      .bus-flower--2 {
+        left: 2.9em;
+        top: 5.5em;
+      }
+      .bus-flower--3 {
+        left: 3.1em;
+        top: 6.45em;
+      }
+      .bus-flower--4 {
+        left: 6.4em;
+        top: 5.1em;
+      }
+      .bus-flower--5 {
+        left: 6.7em;
+        top: 6.2em;
+      }
+      .bus-flower--6 {
+        left: 8.1em;
+        top: 6.5em;
+      }
+
+      .bus-flower-big {
+        background-color: #f74f31;
+        border-radius: 10%;
+        height: 1em;
+        left: 4.5em;
+        top: 5.67em;
+        width: 1em;
+      }
+
+      .bus-flower-big:before,
+      .bus-flower-big:after {
+        background-color: #f74f31;
+        border-radius: 10%;
+        content: "";
+        height: 1em;
+        position: absolute;
+        transform: rotate(30deg);
+        width: 1em;
+      }
+
+      .bus-flower-big:after {
+        transform: rotate(60deg);
+      }
+
+      .bus-flower-big--2 {
+        background-color: #00394e;
+        height: 1.08em;
+        left: 4.46em;
+        top: 5.63em;
+        width: 1.08em;
+      }
+
+      .bus-flower-big--2:before,
+      .bus-flower-big--2:after {
+        background-color: #00394e;
+        height: 1.08em;
+        width: 1.08em;
+      }
+
+      .bus-flower-big--3 {
+        background-color: #ff9d1e;
+        height: 1.4em;
+        left: 4.3em;
+        top: 5.47em;
+        width: 1.4em;
+      }
+
+      .bus-flower-big--3:before,
+      .bus-flower-big--3:after {
+        background-color: #ff9d1e;
+        height: 1.4em;
+        width: 1.4em;
+      }
+
+      .bus-flower-big--4 {
+        background-color: #00394e;
+        height: 1.48em;
+        left: 4.26em;
+        top: 5.43em;
+        width: 1.48em;
+      }
+
+      .bus-flower-big--4:before,
+      .bus-flower-big--4:after {
+        background-color: #00394e;
+        height: 1.48em;
+        width: 1.48em;
+      }
+
+      .bus-flower-big--5 {
+        background-color: #ffd322;
+        height: 1.8em;
+        left: 4.1em;
+        top: 5.27em;
+        width: 1.8em;
+      }
+
+      .bus-flower-big--5:before,
+      .bus-flower-big--5:after {
+        background-color: #ffd322;
+        height: 1.8em;
+        width: 1.8em;
+      }
+
+      .bus-flower-big--6 {
+        background-color: #00394e;
+        height: 1.88em;
+        left: 4.06em;
+        top: 5.23em;
+        width: 1.88em;
+      }
+
+      .bus-flower-big--6:before,
+      .bus-flower-big--6:after {
+        background-color: #00394e;
+        height: 1.88em;
+        width: 1.88em;
+      }
+
+      .bus-flower-big--7 {
+        background-color: #00c1d5;
+        height: 2.2em;
+        left: 3.9em;
+        top: 5.07em;
+        width: 2.2em;
+      }
+
+      .bus-flower-big--7:before,
+      .bus-flower-big--7:after {
+        background-color: #00c1d5;
+        height: 2.2em;
+        width: 2.2em;
+      }
+
+      .bus-flower-big--8 {
+        background-color: #00394e;
+        height: 2.28em;
+        left: 3.86em;
+        top: 5.03em;
+        width: 2.28em;
+      }
+
+      .bus-flower-big--8:before,
+      .bus-flower-big--8:after {
+        background-color: #00394e;
+        height: 2.28em;
+        width: 2.28em;
+      }
+
+      .bus-shape-a {
+        background-color: #00394e;
+        border-radius: 50%;
+        border: 0.05em solid #00c1d5;
+        box-shadow: inset 0 0 0 0.16em #ffd322;
+        height: 0.6em;
+        left: 1.1em;
+        overflow: hidden;
+        top: 7.03em;
+        width: 0.6em;
+      }
+
+      .bus-shape-a:before {
+        background-color: #f74f31;
+        border-radius: 50%;
+        box-shadow: 0.28em -0.01em 0 0 #f74f31, 0.43em 0.22em 0 0 #f74f31,
+          0.3em 0.47em 0 0 #f74f31, 0.03em 0.49em 0 0 #f74f31,
+          -0.12em 0.25em 0 0 #f74f31;
+        content: "";
+        height: 0.26em;
+        left: -0.03em;
+        position: absolute;
+        top: -0.11em;
+        width: 0.26em;
+      }
+
+      .bus-shape-a:after {
+        background-color: #ff9d1e;
+        border-radius: 50%;
+        content: "";
+        height: 0.13em;
+        left: 0.185em;
+        position: absolute;
+        top: 0.185em;
+        width: 0.13em;
+      }
+
+      .bus-shape-a--2 {
+        left: 1.8em;
+        top: 7.07em;
+      }
+      .bus-shape-a--3 {
+        left: 2.5em;
+        top: 7.09em;
+      }
+      .bus-shape-a--4 {
+        left: 3.2em;
+        top: 7.1em;
+      }
+      .bus-shape-a--5 {
+        left: 3.9em;
+        top: 7.1em;
+      }
+      .bus-shape-a--6 {
+        left: 4.7em;
+        top: 7.1em;
+      }
+      .bus-shape-a--7 {
+        left: 5.5em;
+        top: 7.1em;
+      }
+      .bus-shape-a--8 {
+        left: 6.2em;
+        top: 7.1em;
+      }
+      .bus-shape-a--9 {
+        left: 6.9em;
+        top: 7.09em;
+      }
+      .bus-shape-a--10 {
+        left: 7.6em;
+        top: 7.07em;
+      }
+      .bus-shape-a--11 {
+        left: 8.3em;
+        top: 7.03em;
+      }
+
+      .bus-headlight-circle {
+        background-color: #00c1d5;
+        border-radius: 50%;
+        height: 1.6em;
+        left: 1.55em;
+        top: 5.5em;
+        width: 1.6em;
+      }
+
+      .bus-headlight-circle--2 {
+        left: 6.85em;
+        top: 5.5em;
+      }
+
+      .bus-blinker-circle {
+        background-color: #ffd322;
+        border: 0.15em solid #00c1d5;
+        border-bottom-width: 0.06em;
+        border-top-width: 0.06em;
+        border-radius: 40% 0;
+        height: 1.14em;
+        left: 1.42em;
+        top: 4.26em;
+        transform: rotate(8deg);
+        width: 1.6em;
+      }
+
+      .bus-blinker-circle:before {
+        background-color: #ff9d1e;
+        border-radius: 40% 0;
+        content: "";
+        height: 0.9em;
+        left: 0.1em;
+        position: absolute;
+        top: 0.06em;
+        width: 1.1em;
+      }
+
+      .bus-blinker-circle:after {
+        background-color: #f74f31;
+        border-radius: 40% 0;
+        content: "";
+        height: 0.78em;
+        left: 0.2em;
+        position: absolute;
+        top: 0.12em;
+        width: 0.9em;
+      }
+
+      .bus-blinker-circle--2 {
+        border-radius: 0 40%;
+        left: 6.98em;
+        transform: rotate(-8deg);
+      }
+
+      .bus-blinker-circle--2:before {
+        border-radius: 0 40%;
+      }
+
+      .bus-blinker-circle--2:after {
+        border-radius: 0 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="row">
+        <div class="col--half">
+          <div class="bus bus--half bus--top-orange bus--bottom-orange">
+            <div class="bus-body">
+              <div class="bus__body--top roof"></div>
+              <div class="bus__body--top side-top"></div>
+              <div class="bus__body--top side-top side-top--right"></div>
+              <div class="bus__body--top gutter"></div>
+              <div class="bus__body--top gutter gutter--right"></div>
+              <div class="bus__body--top mid-top"></div>
+              <div class="bus__body--top bump"></div>
+
+              <div class="bus__body--bottom front"></div>
+              <div class="bus__body--bottom front-middle"></div>
+              <div class="bus__body--bottom front-middle--bottom"></div>
+              <div class="bus__body--bottom grill">
+                <div class="grill__hole"></div>
+                <div class="grill__hole grill__hole--right"></div>
+              </div>
+            </div>
+
+            <div class="campertop">
+              <div class="poptop-2"></div>
+              <div class="poptop-1"></div>
+              <div class="poptop-seal"></div>
+            </div>
+
+            <div class="mirrors">
+              <div class="mirror-l">
+                <div class="mirror-glass"></div>
+                <div class="mirror-arm"></div>
+              </div>
+              <div class="mirror-r">
+                <div class="mirror-glass"></div>
+                <div class="mirror-arm mirror-arm-r"></div>
+              </div>
+            </div>
+
+            <div class="windshield">
+              <div class="windshield-rubber"></div>
+              <div class="windshield-rubber--bottom"></div>
+              <div class="windshield-rubber--side"></div>
+              <div
+                class="windshield-rubber--side windshield-rubber--side--right"
+              ></div>
+              <div class="windshield-top"></div>
+              <div class="windshield-bottom"></div>
+            </div>
+
+            <div class="front-parts">
+              <div class="wiper wiper-right--on">
+                <div class="wiper-blade"></div>
+                <div class="wiper-arm"></div>
+                <div class="wiper-attachment"></div>
+              </div>
+              <div class="wiper wiper-left wiper-left--on">
+                <div class="wiper-blade"></div>
+                <div class="wiper-arm"></div>
+                <div class="wiper-attachment"></div>
+              </div>
+
+              <div class="directional">
+                <div class="directional--off"></div>
+              </div>
+              <div class="directional directional--right">
+                <div class="directional--off"></div>
+              </div>
+
+              <div class="vw-logo vw-logo--shadow">
+                <span class="vw-logo__v"></span>
+                <span class="vw-logo__w">
+                  <span class="vw-logo__w__leg-l"></span>
+                  <span class="vw-logo__w__leg-r"></span>
+                </span>
+              </div>
+              <div class="vw-logo">
+                <span class="vw-logo__v"></span>
+                <span class="vw-logo__w">
+                  <span class="vw-logo__w__leg-l"></span>
+                  <span class="vw-logo__w__leg-r"></span>
+                </span>
+              </div>
+
+              <div class="headlight">
+                <div class="headlight--on">
+                  <div class="headlight--on__star"></div>
+                </div>
+              </div>
+              <div class="headlight headlight--right">
+                <div class="headlight--on headlight--on--right">
+                  <div class="headlight--on__star"></div>
+                </div>
+              </div>
+
+              <div class="bumper">
+                <div class="bumper-top"></div>
+                <div class="bumper-straight bs-middle"></div>
+                <div class="bumper-curve bc-1"></div>
+                <div class="bumper-straight bs-1"></div>
+                <div class="bumper-curve bc-2"></div>
+                <div class="bumper-curve bc-3"></div>
+                <div class="bumper-straight bs-3"></div>
+                <div class="bumper-curve bc-4"></div>
+                <div class="bus__body--bottom above-bumper"></div>
+              </div>
+            </div>
+
+            <div class="underbody">
+              <div class="tire"></div>
+              <div class="tire tire--right"></div>
+              <div class="mid-parts">
+                <div class="mid-parts--left"></div>
+                <div class="mid-parts--middle"></div>
+                <div class="mid-parts--left mid-parts--right"></div>
+              </div>
+              <div class="under-part-1l"></div>
+              <div class="under-part-1l under-part-1r"></div>
+              <div class="under-part-2"></div>
+              <div class="shock-l"></div>
+              <div class="shock-l shock-r"></div>
+              <div class="bar-l"></div>
+              <div class="bar-l bar-r"></div>
+            </div>
+          </div>
+          <!-- .bus -->
+        </div>
+        <!-- .col--half -->
+        <div class="col--half">
+          <div class="bus bus--half bus--top-tan bus--bottom-tan">
+            <div class="bus-body">
+              <div class="bus__body--top roof"></div>
+              <div class="bus__body--top side-top"></div>
+              <div class="bus__body--top side-top side-top--right"></div>
+              <div class="bus__body--top gutter"></div>
+              <div class="bus__body--top gutter gutter--right"></div>
+              <div class="bus__body--top mid-top"></div>
+              <div class="bus__body--top bump"></div>
+
+              <div class="bus__body--bottom front"></div>
+              <div class="bus__body--bottom front-middle"></div>
+              <div class="bus__body--bottom front-middle--bottom"></div>
+              <div class="bus__body--bottom grill">
+                <div class="grill__hole"></div>
+                <div class="grill__hole grill__hole--right"></div>
+              </div>
+            </div>
+
+            <div class="campertop">
+              <div class="poptop-2"></div>
+              <div class="poptop-1"></div>
+              <div class="poptop-seal"></div>
+            </div>
+
+            <div class="mirrors">
+              <div class="mirror-l">
+                <div class="mirror-glass"></div>
+                <div class="mirror-arm"></div>
+              </div>
+              <div class="mirror-r">
+                <div class="mirror-glass"></div>
+                <div class="mirror-arm mirror-arm-r"></div>
+              </div>
+            </div>
+
+            <div class="windshield">
+              <div class="windshield-rubber"></div>
+              <div class="windshield-rubber--bottom"></div>
+              <div class="windshield-rubber--side"></div>
+              <div
+                class="windshield-rubber--side windshield-rubber--side--right"
+              ></div>
+              <div class="windshield-top"></div>
+              <div class="windshield-bottom"></div>
+            </div>
+
+            <div class="front-parts">
+              <div class="wiper wiper-right--on">
+                <div class="wiper-blade"></div>
+                <div class="wiper-arm"></div>
+                <div class="wiper-attachment"></div>
+              </div>
+              <div class="wiper wiper-left wiper-left--on">
+                <div class="wiper-blade"></div>
+                <div class="wiper-arm"></div>
+                <div class="wiper-attachment"></div>
+              </div>
+
+              <div class="directional">
+                <div class="directional--off"></div>
+              </div>
+              <div class="directional directional--right">
+                <div class="directional--off"></div>
+              </div>
+
+              <div class="vw-logo vw-logo--shadow">
+                <span class="vw-logo__v"></span>
+                <span class="vw-logo__w">
+                  <span class="vw-logo__w__leg-l"></span>
+                  <span class="vw-logo__w__leg-r"></span>
+                </span>
+              </div>
+              <div class="vw-logo">
+                <span class="vw-logo__v"></span>
+                <span class="vw-logo__w">
+                  <span class="vw-logo__w__leg-l"></span>
+                  <span class="vw-logo__w__leg-r"></span>
+                </span>
+              </div>
+
+              <div class="headlight">
+                <div class="headlight--on">
+                  <div class="headlight--on__star"></div>
+                </div>
+              </div>
+              <div class="headlight headlight--right">
+                <div class="headlight--on headlight--on--right">
+                  <div class="headlight--on__star"></div>
+                </div>
+              </div>
+
+              <div class="bumper">
+                <div class="bumper-top"></div>
+                <div class="bumper-straight bs-middle"></div>
+                <div class="bumper-curve bc-1"></div>
+                <div class="bumper-straight bs-1"></div>
+                <div class="bumper-curve bc-2"></div>
+                <div class="bumper-curve bc-3"></div>
+                <div class="bumper-straight bs-3"></div>
+                <div class="bumper-curve bc-4"></div>
+                <div class="bus__body--bottom above-bumper"></div>
+              </div>
+            </div>
+
+            <div class="underbody">
+              <div class="tire"></div>
+              <div class="tire tire--right"></div>
+              <div class="mid-parts">
+                <div class="mid-parts--left"></div>
+                <div class="mid-parts--middle"></div>
+                <div class="mid-parts--left mid-parts--right"></div>
+              </div>
+              <div class="under-part-1l"></div>
+              <div class="under-part-1l under-part-1r"></div>
+              <div class="under-part-2"></div>
+              <div class="shock-l"></div>
+              <div class="shock-l shock-r"></div>
+              <div class="bar-l"></div>
+              <div class="bar-l bar-r"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
