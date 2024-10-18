@@ -93,6 +93,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Zoom When Hover](#zoom-when-hover)
 - [Debit Card Hover effect](#debit-card-hover)
 - [Progress Bar On Scroll](#ProgressOnScroll)
+- [Pricing Table](#pricing-table)
 - **Contribution**
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -131,6 +132,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/faqclay.png" height="230" title="Demo 1">](http://url-to-page)
 [<img src="images/faqneuo.png" height="230" title="Demo 2">](http://url-to-page)
 [<img src="images/faqglass.png" height="230" title="Demo 3">](http://url-to-page)
+
+**[⬆ back to top](#quick-links)**
+
+---
+## <a id="pricing-table"></a>Pricing Table
+
+[<img src="images/pricingtable1.png" height="230" title="Demo 1">](http://url-to-page)
+[<img src="images/pricingtable2.png" height="230" title="Demo 2">](http://url-to-page)
+[<img src="images/pricingtable3.png" height="230" title="Demo 3">](http://url-to-page)
 
 **[⬆ back to top](#quick-links)**
 
