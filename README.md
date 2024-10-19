@@ -35,6 +35,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Bubble](#bubble)
 - [Burger Menu](#burger-menu)
 - [Button Animation](#button-animation)
+- [Button Hover & Click Animation](#button-hover-click-animation)
 - [Baby Yoda Animation](#baby-yoda-animation-css)
 - [Captain America Shield](#captain-america-shield)
 - [Carousel](#carousel)
@@ -60,6 +61,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
 - [Loaders](#loaders)
+- [MasterCard](#mastercard)
 - [Mobile Menu Off Canvas](#mobile-menu-off-canvas)
 - [Modal/Popup](#modalpopup)
 - [Mouse Tracking](#mouse-tracking)
@@ -87,7 +89,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Treeview](#treeview)
 - [Twitter Heart Animation](#twitter-heart-animation)
 - [Book Animation](#book-animation)
+- [Zomato](#zomato)
 - [Zoom When Hover](#zoom-when-hover)
+- [Debit Card Hover effect](#debit-card-hover)
+- [Progress Bar On Scroll](#ProgressOnScroll)
 - **Contribution**
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -310,6 +315,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="MasterCard"></a>MasterCard
+
+[<img src="images/screenshot.png" height="230" title="Website_Demo">](https://github.com/2div/You-Dont-Need-JavaScript/MasterCard/images/screenshot.png)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="DropdownMenu"></a>Dropdown Menu
 
 [<img src="images/menu2.png" height="230" title="Demo 1">](https://codepen.io/antoniputra/pen/BzyWmb)
@@ -338,6 +351,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="button_letsgo"></a>Button Animation
 
 [<img src="images/ButtonAnimation.gif" height="250" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="buttonEffect"></a>Button Hover Click Animation
+
+[<img src="images/buttonHoverClick.gif" height="250" title="Demo">](https://codepen.io/harsharora1205/pen/oNKYaME)
 
 **[⬆ back to top](#quick-links)**
 
@@ -627,6 +648,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 [<img src="images/loader.gif" height="230" title="loader">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/97ba01f5-7e85-4c3e-8d60-47374ef3a1f9)
 
+[<img src="images/New_Loader.png" height="230" title="New_Loader">](https://codepen.io/shail-sharma/pen/yLmMyjq)
+
 **[⬆ back to top](#quick-links)**
 
 ---
@@ -867,6 +890,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="zomato"></a>Zomato
+
+![img_source](Zomato/screenshot.png)
+
+---
+**[⬆ back to top](#quick-links)**
+
 ## <a id="3d-card-flip-transition"></a>3D card flip transition
 
 [<img src="./images/3d-card-flip-transition.gif" height="200" title="Demo Image">]
@@ -883,6 +913,19 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="debit-card-hover"></a>Debit Card Hover Effect
+![Screenshot 2024-10-11 103321](https://github.com/user-attachments/assets/5e8572a6-9328-44fe-8574-d68f2e6b92ca)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="ProgressOnScroll"></a>Progress bar on scroll
+[<img src="images/progress_on_scroll_demo.gif" height="230" title="Progress On Scroll Demo">](https://codepen.io/pritam1813/pen/jOgyERQ)
+
+**[⬆ back to top](#quick-links)**
+
+---
 ## Contributors
 
 Thanks to these wonderful people who have contributed to this project!
