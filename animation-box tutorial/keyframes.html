@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conatainer{
+            padding:30px;
+        }
+        .Box{
+            display:flex;
+            height:100px;
+            width:100px;
+            background-color: red;
+            align-items: center;
+            justify-content: center;
+            animation-name: box-animation;
+            animation-duration: 4s;
+            animation-iteration-count:infinite;
+            animation-fill-mode: forwards;
+        }
+        @keyframes  box-animation{
+            0%{
+
+                background-color: red;
+
+            }
+
+            25%{
+                background-color: green;
+                border-radius: 50%;
+                transform: translate(200px);
+
+
+            }
+            50%{
+                background-color: yellow;
+                transform: translate(200px , 200px);
+            }
+            75%{
+                background-color: orange;
+                transform: translate(100px , 100px);
+            }
+            100%{
+                background-color: magenta;
+                transform: translate(150px , 150px );
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="Box">Animate!</div>
+
+    </div>
+
+
+
+
+
+
+</body>
+</html>
