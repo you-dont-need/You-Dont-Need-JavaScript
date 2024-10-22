@@ -142,6 +142,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/toggler.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/pyXQrj)
 [<img src="images/toggler2.png" height="230" title="Demo 3">](http://codepen.io/PaulZi/pen/zBbVvV)
 [<img src="images/accordion.gif" height="230" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)
+[<img src="images/AccordionAndFAQ.gif" height="230" title="Demo 5">](https://codepen.io/theslladev/pen/dyxzEqy)
 
 **[⬆ back to top](#quick-links)**
 
