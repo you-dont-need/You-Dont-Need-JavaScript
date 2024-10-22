@@ -1,0 +1,154 @@
+/* Applies Poppins font to all elements except the signature */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Profile Card Styling */
+.profile-card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Profile Picture with hover pop-out effect */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1); 
+}
+
+/* Categories Design (Badges) */
+.badge {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #333;
+    font-size: 14px;
+    padding: 5px 12px;
+    border-radius: 30px;
+    margin: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.badge:hover {
+    background-color: #ff9f43;
+    color: white;
+}
+
+/* Signature Text */
+.signature-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 22px;
+    margin-top: 10px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.signature-text:hover {
+    color: orange;
+}
+
+/* Profile Footer */
+.profile-footer {
+    margin-top: 20px;
+}
+
+/* Action Buttons: Follow and Message */
+.action-btn {
+    background-color: #FE793D;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.action-btn:hover {
+    background-color: #944500; 
+}
+
+
+.follow-btn, .message-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 40px; 
+}
+
+/* Follower and Following Info */
+.follower-info {
+    margin-top: 10px;
+}
+
+.follower-info span {
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+/* Responsive Media Queries */
+
+/* Small screens (up to 600px) */
+@media (max-width: 600px) {
+    .profile-card {
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .badge {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .signature-text {
+        font-size: 18px;
+    }
+
+    .action-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .follower-info span {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+}
+
+/* Tablets (up to 768px) */
+@media (max-width: 768px) {
+    .profile-card {
+        max-width: 90%;
+    }
+    
+    .profile-pic {
+        width: 110px;
+        height: 110px;
+    }
+
+    .action-btn {
+        padding: 10px 25px;
+    }
+    
+    .signature-text {
+        font-size: 20px;
+    }
+}
