@@ -76,7 +76,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
 - [Ripple Effect](#ripple-effect)
 - [Scary Animation](#scary-animation)
-- [Scenery](#scenary)
+- [Scenery](#scenery)
 - [Shake Button](#shake-button)
 - [Shuffling Squares](#shuffling-squares)
 - [Star Wars Intro](#star-wars-intro)
@@ -588,9 +588,9 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-## <a id="scenary"></a>Scenary
+## <a id="scenery"></a>Scenery
 
-[<img src="images/scenary.gif" height="230" title="scenary">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/5943c92d-c9d3-401e-a8dd-88091a1d839d)
+[<img src="images/scenary.gif" height="230" title="scenery">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/5943c92d-c9d3-401e-a8dd-88091a1d839d)
 
 **[⬆ back to top](#quick-links)**
 
@@ -598,7 +598,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="bubble"></a>Bubble
 
-[<img src="images/bubble.gif" height="230" title="scenary">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/17b72752-9010-4433-9d1e-b9a24a8f5222)
+[<img src="images/bubble.gif" height="230" title="bubble">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/17b72752-9010-4433-9d1e-b9a24a8f5222)
 
 **[⬆ back to top](#quick-links)**
 
