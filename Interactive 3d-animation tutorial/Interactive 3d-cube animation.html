@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive 3D Cube Animation</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f0f0;
+            perspective: 800px; /* Adds perspective to the scene */
+        }
+
+        .scene {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d; /* Ensures 3D transformations work */
+            animation: rotate 20s infinite linear; /* Rotating animation */
+        }
+
+        .cube {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d; /* Preserve 3D for child elements */
+        }
+
+        .cube div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .front  { background-color: #ff4757; transform: translateZ(100px); }
+        .back   { background-color: #1e90ff; transform: rotateY(180deg) translateZ(100px); }
+        .right  { background-color: #2ed573; transform: rotateY(90deg) translateZ(100px); }
+        .left   { background-color: #ffa502; transform: rotateY(-90deg) translateZ(100px); }
+        .top    { background-color: #3742fa; transform: rotateX(90deg) translateZ(100px); }
+        .bottom { background-color: #dcdde1; transform: rotateX(-90deg) translateZ(100px); }
+
+        @keyframes rotate {
+            from { transform: rotateX(0) rotateY(0); }
+            to { transform: rotateX(360deg) rotateY(360deg); }
+        }
+
+        /* Rotate on hover */
+        .scene:hover {
+            animation: none; /* Stop automatic rotation on hover */
+            cursor: pointer; /* Show pointer cursor */
+        }
+
+        /* Add 3D rotation on mouse movement */
+        .scene:hover .cube {
+            animation: none; /* Stop automatic rotation */
+            transform: rotateY(20deg) rotateX(20deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scene">
+        <div class="cube">
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="right"></div>
+            <div class="left"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+
+</body>
+</html>
