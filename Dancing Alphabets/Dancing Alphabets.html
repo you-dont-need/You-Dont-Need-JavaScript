@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dancing Alphabets Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .dancing-text {
+            font-size: 3rem;
+            display: flex;
+        }
+
+        .letter {
+            animation: dance 1s ease-in-out infinite;
+            display: inline-block;
+            margin: 0 2px;
+        }
+
+        @keyframes dance {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Delay animation for each letter */
+        .letter:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .letter:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .letter:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .letter:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .letter:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        .letter:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+
+        .letter:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+
+        .letter:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+
+        .letter:nth-child(9) {
+            animation-delay: 0.8s;
+        }
+    </style>
+</head>
+<body>
+    <div class="dancing-text">
+        <span class="letter">D</span>
+        <span class="letter">A</span>
+        <span class="letter">N</span>
+        <span class="letter">C</span>
+        <span class="letter">I</span>
+        <span class="letter">N</span>
+        <span class="letter">G</span>
+        <span class="letter">!</span>
+    </div>
+</body>
+</html>
