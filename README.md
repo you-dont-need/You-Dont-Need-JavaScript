@@ -861,6 +861,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ![img_source](images/profileCards/card4.png)
 ![img_source](images/profileCards/card5.png)
 ![img_source](images/profileCards/card6.png)
+![img_source](images/profileCards/card7.png)
 
 **[⬆ back to top](#quick-links)**
 
