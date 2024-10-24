@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Claymorphism Icons</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212; 
+}
+
+.icon-container {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 24px;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.icon:hover {
+    transform: translateY(-5px);
+}
+
+
+.icon.clay {
+    background: #E0E0E0; 
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2), 
+                -2px -3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.icon.twitter {
+    background: linear-gradient(135deg, #1DA1F2, #1A91DA);
+}
+
+.icon.facebook {
+    background: linear-gradient(135deg, #3b5998, #8b9dc3);
+}
+
+.icon.linkedin {
+    background: linear-gradient(135deg, #0077B5, #00A0DC);
+}
+
+.icon.github {
+    background: linear-gradient(135deg, #333333, #828282);
+}
+
+.icon.youtube {
+    background: linear-gradient(135deg, #FF0000, #FF4444);
+}
+
+.icon.instagram {
+    background: linear-gradient(135deg, #E1306C, #F77737, #FD1D1D, #FDCB6E);
+}
+
+.icon:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 5px 5px 6px rgba(0, 0, 0, 0.4), 
+                inset -5px -5px 6px rgba(255, 255, 255, 0.4);
+    transition: transform 0.3s;
+}
+
+.icon:hover:before {
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body>
+    <div class="icon-container">
+        <a href="#" class="icon clay twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="icon clay facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="icon clay linkedin">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="icon clay github">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="#" class="icon clay youtube">
+            <i class="fab fa-youtube"></i>
+        </a>
+       
+    </div>
+</body>
+</html>
