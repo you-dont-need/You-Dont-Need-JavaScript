@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expanding Circle Navigation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #1e1e1e;
+      font-family: Arial, sans-serif;
+    }
+
+    .circle-menu {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-color: #ff6b6b;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: width 0.5s, height 0.5s, background-color 0.5s;
+      cursor: pointer;
+    }
+
+    .circle-menu:hover {
+      width: 250px;
+      height: 250px;
+      background-color: #4ecdc4;
+    }
+
+    .circle-menu .menu-label {
+      color: #fff;
+      font-size: 18px;
+      text-transform: uppercase;
+      z-index: 2;
+      transition: opacity 0.5s;
+    }
+
+    .circle-menu:hover .menu-label {
+      opacity: 0;
+    }
+
+    .menu-items {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      z-index: 1;
+      transition: width 0.5s, height 0.5s, opacity 0.5s;
+    }
+
+    .circle-menu:hover .menu-items {
+      width: 200px;
+      height: 200px;
+      opacity: 1;
+    }
+
+    .menu-items a {
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      background-color: #ff6b6b;
+      padding: 10px;
+      border-radius: 50px;
+      transition: background-color 0.3s;
+    }
+
+    .menu-items a:hover {
+      background-color: #ffe66d;
+    }
+
+    .menu-items a:nth-child(1) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .menu-items a:nth-child(2) {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .menu-items a:nth-child(3) {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .menu-items a:nth-child(4) {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="circle-menu">
+    <span class="menu-label">Menu</span>
+    <div class="menu-items">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+</body>
+</html>
