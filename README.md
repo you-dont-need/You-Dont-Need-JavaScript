@@ -36,6 +36,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Burger Menu](#burger-menu)
 - [Button Animation](#button-animation)
 - [Button Hover & Click Animation](#button-hover-click-animation)
+- [Button with Rotating Text & Ripple Animation](#button-rotate-and-ripple-animation)
 - [Baby Yoda Animation](#baby-yoda-animation-css)
 - [Captain America Shield](#captain-america-shield)
 - [Carousel](#carousel)
@@ -380,6 +381,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="button_letsgo"></a>Button Animation
 
 [<img src="images/ButtonAnimation.gif" height="250" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="buttonLikeCred"></a>Button Rotate and Ripple Animation
+
+[<img src="images/buttonRotatingRipple.gif" height="250" title="Demo">](https://codepen.io/harsharora1205/pen/ExqZEyw)
 
 **[⬆ back to top](#quick-links)**
 
