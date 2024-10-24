@@ -54,6 +54,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Footer](#footer)
 - [Gradient Animation](#gradient-animation)
 - [Growing Flower](#growing-flower)
+- [Horizontal image slider](#horizontal-image-slider)
 - [Image Gallery](#image-gallery)
 - [Image Hover Effect]()
 - [Infinite Carousel](#infinite-carousel)
@@ -927,6 +928,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
+## <a id="horizontal-image-slider"></a>Horizontal Image Slider
+
+<img src="Horizontal image slider/images/horizontal-image-slider.gif" height="230" title="horizontal-image-slider">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## Contributors
 
 Thanks to these wonderful people who have contributed to this project!
