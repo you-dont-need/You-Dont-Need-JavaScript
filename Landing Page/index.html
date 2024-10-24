@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern E-commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, red, green, blue);
+            bottom: -4px;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .nav-item:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4 transition-shadow duration-300 hover:shadow-lg hover:shadow-red-500/50 hover:shadow-green-500/50 hover:shadow-blue-500/50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">E-Shop</a>
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
+            <label for="menu-toggle" class="menu-button text-white cursor-pointer md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </label>
+            <ul class="nav-links flex-col space-y-4 md:flex md:flex-row md:space-y-0 md:space-x-4 hidden peer-checked:flex">
+                <li><a href="#" class="nav-item relative px-3 py-2 rounded-md hover:bg-gradient-to-r from-white/10 to-white/20 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-red-500/50 hover:shadow-green-500/50 hover:shadow-blue-500/50">Home</a></li>
+                <li><a href="#" class="nav-item relative px-3 py-2 rounded-md hover:bg-gradient-to-r from-white/10 to-white/20 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-red-500/50 hover:shadow-green-500/50 hover:shadow-blue-500/50">Shop</a></li>
+                <li><a href="#" class="nav-item relative px-3 py-2 rounded-md hover:bg-gradient-to-r from-white/10 to-white/20 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-red-500/50 hover:shadow-green-500/50 hover:shadow-blue-500/50">About</a></li>
+                <li><a href="#" class="nav-item relative px-3 py-2 rounded-md hover:bg-gradient-to-r from-white/10 to-white/20 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-red-500/50 hover:shadow-green-500/50 hover:shadow-blue-500/50">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-cover bg-center h-screen fill-current" style="background-image: url('https://t3.ftcdn.net/jpg/05/35/13/82/360_F_535138292_62ZnI4Hcw37J8Jaeg4E9TzJwUciCwSnp.jpg');">
+        <div class="container mx-auto h-full flex items-center justify-center">
+            <div class="text-center animate-fade-in">
+                <h1 class="text-5xl font-bold mb-4">Welcome to E-Shop</h1>
+                <p class="text-xl mb-8">Your one-stop shop for all your needs</p>
+                <a href="#" class="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600">Shop Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 bg-gray-100 text-gray-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8 animate-fade-in">About Us</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <img src="https://kinsta.com/wp-content/uploads/2021/11/about-us-page.png" alt="About Us" class="h-96 w-2/4 mb-8 md:mb-0 md:mr-8 rounded-lg transform transition duration-500 hover:scale-105">
+                <p class="text-lg animate-fade-in text-justify">
+                    Welcome to E-Shop, your number one source for all things [product, ie: shoes, electronics, etc.]. We're dedicated to giving you the very best of [product], with a focus on dependability, customer service, and uniqueness.
+                    Founded in [year] by [founder name], E-Shop has come a long way from its beginnings in a [starting location, ie: home office, toolshed, Houston, TX.]. When [founder name] first started out, [his/her/their] passion for [brand message - ie: "eco-friendly cleaning products"] drove them to [action: quit day job, do tons of research, etc.] so that E-Shop can offer you [competitive differentiator - ie: "the world's most advanced toothbrush"]. We now serve customers all over [place - town, country, the world], and are thrilled that we're able to turn our passion into our own website.
+                    We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us. <br>
+                    Sincerely, [founder name]
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Customer Testimonials -->
+<section class="py-12 bg-white text-gray-900">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8 animate-fade-in">Customer Testimonials</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center">
+            <!-- Testimonial 1 -->
+            <div class="max-w-sm mx-4 mb-8 md:mb-0">
+                <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Customer 1" class="h-24 w-24 rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Jane Doe</h3>
+                <p class="text-lg">"E-Shop has the best products I've ever used. Their customer service is top-notch!"</p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="max-w-sm mx-4 mb-8 md:mb-0">
+                <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Customer 2" class="h-24 w-24 rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">John Smith</h3>
+                <p class="text-lg">"I love shopping at E-Shop. They always have what I need and more!"</p>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="max-w-sm mx-4 mb-8 md:mb-0">
+                <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Customer 3" class="h-24 w-24 rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Emily Johnson</h3>
+                <p class="text-lg">"Fast shipping and great quality products. Highly recommend E-Shop!"</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">Contact us at: <a href="mailto:info@eshop.com" class="text-blue-500">info@eshop.com</a></p>
+            <p>&copy; 2024 E-Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .animate-fade-in {
+            animation: fade-in 2s ease-in-out;
+        }
+    </style>
+</body>
+</html>
