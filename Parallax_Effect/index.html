@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #ff77b4, #a76dff);
+            transform: translateZ(-1px) scale(1.5);
+            will-change: transform;
+        }
+
+        .content {
+            color: #1a1a2e; /* Blue-black color */
+            z-index: 1;
+            padding: 20px;
+            font-weight:bold;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .content:hover {
+            transform: scale(1.05);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+
+        nav a {
+            color: white; /* Blue-black color */
+            padding: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            font-size: 1.25rem; /* Increased font size */
+
+        }
+
+        nav a:hover {
+            color: #feb47b;
+        }
+
+        /* Contact form styles */
+        .contact-input {
+            border: 2px solid rgba(255, 12, 186, 0.8);
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-input:focus {
+            border-color: blue;
+            outline: none;
+        }
+
+        .submit-button {
+            background-color: rgba(255, 12, 186, 0.8);
+            color: white;
+            transition: background-color 0.3s ease;
+            font-size: 1.125rem; /* Increased button font size */
+        }
+
+        .submit-button:hover {
+            background-color: rgba(20, 138, 251, 0.8);
+        }
+
+        /* Animation styles */
+        .fadeIn {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="flex justify-around">
+        <a href="#section1">Home</a>
+        <a href="#section2">About</a>
+        <a href="#section3">Projects</a>
+        <a href="#section4">Skills</a>
+        <a href="#section5">Contact</a>
+    </nav>
+
+    <div id="section1" class="section">
+        <div class="background"></div>
+        <div class="content fadeIn">
+            <h1 class="text-6xl font-bold">Welcome to My Portfolio</h1> <!-- Increased font size -->
+            <p class="mt-4 text-xl">Explore my projects and skills below!</p> <!-- Increased font size -->
+        </div>
+    </div>
+
+    <div id="section2" class="section">
+        <div class="background"></div>
+        <div class="content fadeIn">
+            <h1 class="text-6xl font-bold">About Me</h1> <!-- Increased font size -->
+            <p class="mt-4 text-xl">I am an engineering student with a passion for web development and design.</p> <!-- Increased font size -->
+            <p class="mt-2 text-xl">I love creating beautiful and functional websites using modern technologies.</p> <!-- Increased font size -->
+        </div>
+    </div>
+
+    <div id="section3" class="section">
+        <div class="background"></div>
+        <div class="content fadeIn">
+            <h1 class="text-6xl font-bold">My Projects</h1> <!-- Increased font size -->
+            <p class="mt-4 text-xl">Here are some of the projects I've worked on:</p> <!-- Increased font size -->
+            <ul class="mt-4 text-left text-xl"> <!-- Increased font size -->
+                <li>🌐 Personal Website: A responsive portfolio showcasing my work.</li>
+                <li>📱 Mobile App: An application for managing tasks and notes.</li>
+                <li>💻 E-commerce Site: A full-stack application for buying and selling products.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="section4" class="section">
+        <div class="background"></div>
+        <div class="content fadeIn">
+            <h1 class="text-6xl font-bold">Skills</h1> <!-- Increased font size -->
+            <p class="mt-4 text-xl">I have experience in the following technologies:</p> <!-- Increased font size -->
+            <ul class="mt-4 text-left text-xl"> <!-- Increased font size -->
+                <li>🌟 HTML, CSS, JavaScript</li>
+                <li>🌟 React, Node.js</li>
+                <li>🌟 Python, Flask</li>
+                <li>🌟 Machine Learning</li>
+                <li>🌟 AWS, Git</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="section5" class="section">
+        <div class="background"></div>
+        <div class="content fadeIn">
+            <h1 class="text-6xl font-bold">Contact Me</h1> <!-- Increased font size -->
+            <p class="mt-4 text-xl">I’d love to hear from you! Please fill out the form below:</p> <!-- Increased font size -->
+            <form class="mt-4">
+                <div class="flex flex-col space-y-4">
+                    <input type="text" placeholder="Your Name" class="contact-input p-3 rounded-md w-80 bg-white text-gray-800 shadow-md border-2 border-transparent focus:border-[#feb47b] transition duration-300" required>
+                    <input type="email" placeholder="Your Email" class="contact-input p-3 rounded-md w-80 bg-white text-gray-800 shadow-md border-2 border-transparent focus:border-[#feb47b] transition duration-300" required>
+                    <textarea placeholder="Your Message" class="contact-input p-3 rounded-md w-80 bg-white text-gray-800 shadow-md border-2 border-transparent focus:border-[#feb47b] transition duration-300" rows="4" required></textarea>
+                    <button type="submit" class="submit-button px-6 py-3 rounded-md text-lg font-semibold shadow-lg transform transition duration-300 bg-[#feb47b] text-white hover:bg-[#ff7e5f] hover:scale-105">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
