@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibrant Lightrope Animation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle  at center, #e29d6c, #ee0979);
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    .lightrope {
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      position: absolute;
+      z-index: 1;
+      margin: -15px 0 0 0;
+      padding: 0;
+      pointer-events: none;
+      width: 100%;
+    }
+
+    .lightrope li {
+      position: relative;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: block;
+      width: 12px;
+      height: 28px;
+      border-radius: 50%;
+      margin: 20px;
+      display: inline-block;
+      background: #ff4e50; 
+      box-shadow: 0px 4.66667px 24px 3px #ff4e50;
+      -webkit-animation-name: flash-1;
+      animation-name: flash-1;
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+    }
+
+    .lightrope li:nth-child(2n+1) {
+      background: #f9d423;
+      box-shadow: 0px 4.66667px 24px 3px rgba(249, 212, 35, 0.5);
+      -webkit-animation-name: flash-2;
+      animation-name: flash-2;
+      -webkit-animation-duration: 0.4s;
+      animation-duration: 0.4s;
+    }
+
+    .lightrope li:nth-child(4n+2) {
+      background: #ff5f6d; 
+      box-shadow: 0px 4.66667px 24px 3px #ff5f6d;
+      -webkit-animation-name: flash-3;
+      animation-name: flash-3;
+      -webkit-animation-duration: 1.1s;
+      animation-duration: 1.1s;
+    }
+
+    .lightrope li:nth-child(odd) {
+      -webkit-animation-duration: 1.8s;
+      animation-duration: 1.8s;
+    }
+
+    .lightrope li:nth-child(3n+1) {
+      -webkit-animation-duration: 1.4s;
+      animation-duration: 1.4s;
+    }
+
+    .lightrope li:before {
+      content: "";
+      position: absolute;
+      background: #222;
+      width: 10px;
+      height: 9.33333px;
+      border-radius: 3px;
+      top: -4.66667px;
+      left: 1px;
+    }
+
+    .lightrope li:after {
+      content: "";
+      top: -14px;
+      left: 9px;
+      position: absolute;
+      width: 52px;
+      height: 18.66667px;
+      border-bottom: solid #222 2px;
+      border-radius: 50%;
+    }
+
+    .lightrope li:last-child:after {
+      content: none;
+    }
+
+    .lightrope li:first-child {
+      margin-left: -40px;
+    }
+
+    @-webkit-keyframes flash-1 {
+      0%, 100% {
+        background: #ff4e50;
+        box-shadow: 0px 4.66667px 24px 3px #ff4e50;
+      }
+      50% {
+        background: rgba(255, 78, 80, 0.4);
+        box-shadow: 0px 4.66667px 24px 3px rgba(255, 78, 80, 0.2);
+      }
+    }
+
+    @keyframes flash-1 {
+      0%, 100% {
+        background: #ff4e50;
+        box-shadow: 0px 4.66667px 24px 3px #ff4e50;
+      }
+      50% {
+        background: rgba(255, 78, 80, 0.4);
+        box-shadow: 0px 4.66667px 24px 3px rgba(255, 78, 80, 0.2);
+      }
+    }
+
+    @-webkit-keyframes flash-2 {
+      0%, 100% {
+        background: #f9d423;
+        box-shadow: 0px 4.66667px 24px 3px #f9d423;
+      }
+      50% {
+        background: rgba(249, 212, 35, 0.4);
+        box-shadow: 0px 4.66667px 24px 3px rgba(249, 212, 35, 0.2);
+      }
+    }
+
+    @keyframes flash-2 {
+      0%, 100% {
+        background: #f9d423;
+        box-shadow: 0px 4.66667px 24px 3px #f9d423;
+      }
+      50% {
+        background: rgba(249, 212, 35, 0.4);
+        box-shadow: 0px 4.66667px 24px 3px rgba(249, 212, 35, 0.2);
+      }
+    }
+
+    @-webkit-keyframes flash-3 {
+      0%, 100% {
+        background: #ff5f6d;
+        box-shadow: 0px 4.66667px 24px 3px #ff5f6d;
+      }
+      50% {
+        background: rgba(255, 95, 109, 0.4);
+        box-shadow: 0px 4.66667px 24px 3px rgba(255, 95, 109, 0.2);
+      }
+    }
+
+    @keyframes flash-3 {
+      0%, 100% {
+        background: #ff5f6d;
+        box-shadow: 0px 4.66667px 24px 3px #ff5f6d;
+      }
+      50% {
+        background: rgba(255, 95, 109, 0.4);
+        box-shadow: 0px 4.66667px 24px 3px rgba(255, 95, 109, 0.2);
+      }
+    }
+    h1{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30vh;
+        color: white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8), -1px -1px 5px rgba(0, 0, 0, 0.8);
+        font-size: 3rem; 
+        text-align: center;        
+    }
+  </style>
+</head>
+<body>
+  <ul class="lightrope">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <h1>Happy Diwali</h1>
+
+</body>
+</html>
