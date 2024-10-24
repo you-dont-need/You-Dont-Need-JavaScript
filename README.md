@@ -87,6 +87,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Switch](#switch)
 - [Tables](#css-tables)
 - [Tabs](#tabs)
+- [MakemyTrip](#mmt)
 - [Text Spoiler Effect](#text-spoiler)
 - [Thank You Animation](#thankyou-animation)
 - [Todo List](#todo-list)
@@ -946,6 +947,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
+## <a id="mmt"></a>MakemyTrip
+
+![img_source](MakemyTrip/screenshot.png)
+
+---
+**[⬆ back to top](#quick-links)**
 
 ## <a id="zomato"></a>Zomato
 
