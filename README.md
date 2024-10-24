@@ -43,6 +43,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Compass Loader](#compass-loader)
 - [City Animation Footer](#city-animation-footer)
 - [Counter of Checked Checkboxes](#counter-of-checked-check-boxes)
+- [Download_buttons](#Download_buttons)
 - [Dog Box Animation](#dog-box-animation)
 - [Dropdown Menu](#dropdown-menu)
 - [Dynamic Image Colorizing](#dynamic-image-colorizing)
@@ -581,6 +582,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="moving_hand"></a>Shake Button
 
 [<img src="images/moving_hand.png" height="230" title="image">](examples/Moving_hand.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Download_buttons"></a>Download buttons
+
+[<img src="images/Download_buttons.png" title="Download_buttons">](https://codepen.io/Shail-Sharma-the-animator/pen/rNXYMGx)
 
 **[⬆ back to top](#quick-links)**
 
