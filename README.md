@@ -84,6 +84,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Switch](#switch)
 - [Tables](#css-tables)
 - [Tabs](#tabs)
+- [Text Spoiler Effect](#text-spoiler)
 - [Thank You Animation](#thankyou-animation)
 - [Todo List](#todo-list)
 - [Tooltips](#tooltips)
@@ -116,6 +117,23 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+## <a id="text-spoiler"></a>Text Spoiler Effect
+
+##### Light Theme:
+[<video width="400" height="200" controls>
+    <source src="https://github.com/user-attachments/assets/4786bfb6-78e7-4682-b098-c49f3f518b5f" type="video/mp4">
+    Your browser does not support the video tag.
+</video>](http://url-to-light-theme-page)
+
+##### Dark Theme:
+[<video width="400" height="200" controls>
+    <source src="https://github.com/user-attachments/assets/1b305f75-26b3-41c3-a19a-6f7bd043d393" type="video/mp4">
+    Your browser does not support the video tag.
+</video>](http://url-to-dark-theme-page)
+
+**[⬆ back to top](#quick-links)**
+
+
 
 ## <a id="blog-cards"></a>Blog Post Cards
 
