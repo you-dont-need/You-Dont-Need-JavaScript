@@ -139,7 +139,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="social-icons"></a>Social_media_icons
 
-[<img src="images/icons.png" height="230" title="Pendulum Animation Demo">]
+[<img src="images/icons.png" height="230" title="Social-media-icons">]
 
 **[⬆ back to top](#quick-links)**
 
