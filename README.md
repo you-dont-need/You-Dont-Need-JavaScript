@@ -85,6 +85,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Shuffling Squares](#shuffling-squares)
 - [Star Wars Intro](#star-wars-intro)
 - [Switch](#switch)
+- [Social Media Icons](#social-icons)
 - [Tables](#css-tables)
 - [Tabs](#tabs)
 - [MakemyTrip](#mmt)
@@ -164,6 +165,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/pricingtable1.png" height="230" title="Demo 1">](http://url-to-page)
 [<img src="images/pricingtable2.png" height="230" title="Demo 2">](http://url-to-page)
 [<img src="images/pricingtable3.png" height="230" title="Demo 3">](http://url-to-page)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="social-icons"></a>Social_media_icons
+
+[<img src="images/icons.png" height="230" title="Social-media-icons">]
 
 **[⬆ back to top](#quick-links)**
 
