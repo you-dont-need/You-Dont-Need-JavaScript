@@ -246,8 +246,8 @@
 		
 		.dark-mode-toggle label {
 			position: relative;
-			width: 80px;
-			height: 40px;
+			width: 73px;
+			height: 25px;
 			display: block;
 			background: #d9d9d9;
 			border-radius: 100px;
@@ -260,7 +260,7 @@
 		.dark-mode-toggle label:after {
 			content: '';
 			position: absolute;
-			height: 34px;
+			height: 18px;
 			width: 34px;
 			background: #f2f2f2;
 			border-radius: 100px;
@@ -287,6 +287,32 @@
 		.dark-mode-toggle input {
 			display: none;
 		}
+
+		/* java pic */
+		.java_pic{
+			height: auto;
+			width: 2rem;
+			
+		}
+		.button_java{
+			border: 2px solid black;
+			/* background-color: #000000; */
+			width: 50%;
+			justify-content: center;
+			/* position: absolute; */
+			margin-left: 20rem;
+			background-color: #04aa6d;
+			border-radius: 1rem;
+			display: flex;
+
+		}
+
+    .top{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2px;
+	}
 		
 
 		/* Remove the old button styles */
@@ -330,7 +356,9 @@
 			<label for="dark-mode"></label>
 		</div>
 		<header>
-			<h1><a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript">You Dont Need JavaScript</a></h1>
+			<div class="button_java">
+			<h1><a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript"><div class="top"> You Dont Need JavaScript  <img src="images/java-script.png" alt="java" class = "java_pic"></div></a></h1>
+			</div>
 			<p class="description">Explore the power of pure CSS with our collection of interactive demos and examples.
 			</p>
 		</header>
