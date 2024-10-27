@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripple Animation</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            overflow: hidden;
+        }
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.5), rgba(255,255,255,0));
+            animation: ripple-animation 2s infinite;
+        }
+        @keyframes ripple-animation {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+            100% {
+                width: 500px;
+                height: 500px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+
+    <script>
+        const colors = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#33FFF3'];
+        const ripples = document.querySelectorAll('.ripple');
+
+        ripples.forEach((ripple, index) => {
+            ripple.style.animationDelay = `${index * 0.4}s`;
+            ripple.style.background = `radial-gradient(circle, ${colors[index % colors.length]}, rgba(255,255,255,0))`;
+        });
+    </script>
+</body>
+</html>
