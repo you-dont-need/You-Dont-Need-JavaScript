@@ -42,6 +42,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Captain America Shield](#captain-america-shield)
 - [Carousel](#carousel)
 - [Compass Loader](#compass-loader)
+- [Carousel effect](#carousel_eff)
 - [City Animation Footer](#city-animation-footer)
 - [Counter of Checked Checkboxes](#counter-of-checked-check-boxes)
 - [Download_buttons](#Download_buttons)
@@ -1012,7 +1013,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-## <a id="carousel"></a>Carousel
+## <a id="carousel_eff"></a>Carousel
 
 [<img src="images/c1.jpg" height="230">]
 [<img src="images/c2.jpg" height="230">]
