@@ -1019,7 +1019,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/c2.jpg" height="230">]
 [<img src="images/c3.jpg" height="230">]
 
-
 **[⬆ back to top](#quick-links)**
 
 ---
