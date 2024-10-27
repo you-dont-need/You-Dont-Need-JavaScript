@@ -1,5 +1,4 @@
 /* MAIN */
-
 :root {
     --dark: #030c26;
     --success: #00c853;
@@ -7,191 +6,63 @@
     --danger: #d50000;
 }
 
-/* .btn */
+body {
+    background: var(--dark);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 10px;
+    margin: 0;
+}
+
 .btn {
     cursor: pointer;
-    vertical-align: middle;
     text-align: center;
-    text-decoration: none;
     font-size: 14px;
     letter-spacing: 2px;
     padding: 10px 18px;
     overflow: hidden;
 }
 
-/* .btn.btn-neon */
-.btn.btn-neon {
+.btn-neon {
     position: relative;
-    display: inline-block;
-    border: none;
     background: transparent;
     text-transform: uppercase;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", sans-serif;
+    color: inherit;
+    transition: color 0.2s, box-shadow 0.5s;
 }
 
-.btn.btn-neon:hover {
-    color: #fff !important;
+.btn-neon:hover {
+    color: #fff;
     border-radius: 2px;
-    transition: 0.2s;
-    transition-delay: 0.8s;
 }
 
-.btn.btn-neon>span {
+.btn-neon > span {
     position: absolute;
     display: block;
-}
-
-.btn.btn-neon>span:nth-child(odd) {
-    width: 100%;
-    height: 2px;
-}
-
-.btn.btn-neon>span:nth-child(even) {
-    width: 2px;
-    height: 100%;
-}
-
-.btn.btn-neon>span:nth-child(1) {
-    top: 0;
-    left: -100%;
-}
-
-.btn.btn-neon>span:nth-child(2) {
-    right: 0;
-    top: -100%;
-}
-
-.btn.btn-neon>span:nth-child(3) {
-    bottom: 0;
-    right: -100%;
-}
-
-.btn.btn-neon>span:nth-child(4) {
-    left: 0;
-    bottom: -100%;
-}
-
-.btn.btn-neon:hover>span {
     transition: 0.5s;
 }
 
-.btn.btn-neon:hover>span:nth-child(1) {
-    left: 100%;
-}
+/* Button-specific color and animation */
+.btn-neon.btn-success { color: var(--success); }
+.btn-neon.btn-warning { color: var(--warning); }
+.btn-neon.btn-danger { color: var(--danger); }
 
-.btn.btn-neon:hover>span:nth-child(2) {
-    top: 100%;
-    transition-delay: 0.2s;
-}
-
-.btn.btn-neon:hover>span:nth-child(3) {
-    right: 100%;
-    transition-delay: 0.4s;
-}
-
-.btn.btn-neon:hover>span:nth-child(4) {
-    bottom: 100%;
-    transition-delay: 0.6s;
-}
-
-/* .btn.btn-neon.btn-success */
-.btn.btn-neon.btn-success {
-    color: var(--success);
-}
-
-.btn.btn-neon.btn-success:hover {
+.btn-neon.btn-success:hover {
     background: var(--success);
-    box-shadow: 0 0 10px var(--success), 0 0 20px var(--success),
-        0 0 40px var(--success);
+    box-shadow: 0 0 10px var(--success), 0 0 20px var(--success), 0 0 40px var(--success);
 }
 
-.btn.btn-neon.btn-success>span:nth-child(1) {
-    background: linear-gradient(90deg, transparent, var(--success));
-}
+/* Adjust span animation for each button type */
+.btn-neon > span:nth-child(1) { width: 100%; height: 2px; top: 0; left: -100%; }
+.btn-neon > span:nth-child(2) { width: 2px; height: 100%; right: 0; top: -100%; }
+.btn-neon > span:nth-child(3) { width: 100%; height: 2px; bottom: 0; right: -100%; }
+.btn-neon > span:nth-child(4) { width: 2px; height: 100%; left: 0; bottom: -100%; }
 
-.btn.btn-neon.btn-success>span:nth-child(2) {
-    background: linear-gradient(180deg, transparent, var(--success));
-}
+.btn-neon:hover > span:nth-child(1) { left: 100%; }
+.btn-neon:hover > span:nth-child(2) { top: 100%; transition-delay: 0.2s; }
+.btn-neon:hover > span:nth-child(3) { right: 100%; transition-delay: 0.4s; }
+.btn-neon:hover > span:nth-child(4) { bottom: 100%; transition-delay: 0.6s; }
 
-.btn.btn-neon.btn-success>span:nth-child(3) {
-    background: linear-gradient(270deg, transparent, var(--success));
-}
-
-.btn.btn-neon.btn-success>span:nth-child(4) {
-    background: linear-gradient(0deg, transparent, var(--success));
-}
-
-/* .btn.btn-neon.btn-warning */
-.btn.btn-neon.btn-warning {
-    color: var(--warning);
-}
-
-.btn.btn-neon.btn-warning:hover {
-    background: var(--warning);
-    box-shadow: 0 0 10px var(--warning), 0 0 20px var(--warning),
-        0 0 40px var(--warning);
-}
-
-.btn.btn-neon.btn-warning>span:nth-child(1) {
-    background: linear-gradient(90deg, transparent, var(--warning));
-}
-
-.btn.btn-neon.btn-warning>span:nth-child(2) {
-    background: linear-gradient(180deg, transparent, var(--warning));
-}
-
-.btn.btn-neon.btn-warning>span:nth-child(3) {
-    background: linear-gradient(270deg, transparent, var(--warning));
-}
-
-.btn.btn-neon.btn-warning>span:nth-child(4) {
-    background: linear-gradient(0deg, transparent, var(--warning));
-}
-
-/* .btn.btn-neon.btn-danger */
-.btn.btn-neon.btn-danger {
-    color: var(--danger);
-}
-
-.btn.btn-neon.btn-danger:hover {
-    background: var(--danger);
-    box-shadow: 0 0 10px var(--danger), 0 0 20px var(--danger),
-        0 0 40px var(--danger);
-}
-
-.btn.btn-neon.btn-danger>span:nth-child(1) {
-    background: linear-gradient(90deg, transparent, var(--danger));
-}
-
-.btn.btn-neon.btn-danger>span:nth-child(2) {
-    background: linear-gradient(180deg, transparent, var(--danger));
-}
-
-.btn.btn-neon.btn-danger>span:nth-child(3) {
-    background: linear-gradient(270deg, transparent, var(--danger));
-}
-
-.btn.btn-neon.btn-danger>span:nth-child(4) {
-    background: linear-gradient(0deg, transparent, var(--danger));
-}
-
-
-/* JUST FOR PREVIEW */
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: var(--dark);
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    gap: 10px;
-}
