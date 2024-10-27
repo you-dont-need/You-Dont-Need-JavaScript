@@ -1012,6 +1012,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="carousel"></a>Carousel
+
+[<img src="images/c1.jpg" height="230">]
+[<img src="images/c2.jpg" height="230">]
+[<img src="images/c3.jpg" height="230">]
+
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## Contributors
 
 Thanks to these wonderful people who have contributed to this project!
