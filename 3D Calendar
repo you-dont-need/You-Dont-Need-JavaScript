@@ -1,0 +1,182 @@
+#HTML CODE
+<div class="scene">
+  <div class="tree">
+    <div tabindex="24" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="23" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="22" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="21" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="20" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="19" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="18" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="17" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="16" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="15" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="14" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="13" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="12" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="11" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="10" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="9" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="8" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="7" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="6" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="5" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="4" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="3" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="2" class="box"><p><p><p><p><p><p></div>  
+    <div tabindex="1" class="box"><p><p><p><p><p><p></div>  
+  </div>
+</div>
+
+#CSS CODE
+* { margin: 0; padding: 0; box-sizing: border-box }
+body { 
+  height: 100vh; 
+  display: grid; 
+  place-items: center; 
+  position: relative;
+  overflow: hidden;
+  background-color: #060606;
+}
+body::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(https://images.pexels.com/photos/327472/pexels-photo-327472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+background-size: cover;
+  z-index: -1;
+  transform: scale(1.1);
+  filter: blur(5px);
+  opacity: 0.25; 
+}
+.scene { perspective: 1500px }
+.scene * { transform-style: preserve-3d }
+
+.tree {
+  --width: 80vmin;
+  --gap: 2vmin;
+  --columns: 14;
+  width: var(--width);
+  aspect-ratio: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: var(--gap);
+  --box-size: calc(((var(--width) - (var(--columns) - 1) * var(--gap)) / 14) * 2 + var(--gap));
+  counter-reset: days 25;
+  direction: rtl
+}
+
+.tree > .box {
+  grid-column: var(--gcs, auto) / span 2;
+  display: grid;  
+  outline: 1px solid transparent;
+  counter-increment: days -1;
+}
+
+.tree > .box:nth-child(1) { --gcs: 7 }
+.tree > .box:nth-child(2) { --gcs: 6 }
+.tree > .box:nth-child(4) { --gcs: 5 }
+.tree > .box:nth-child(7) { --gcs: 4 }
+.tree > .box:nth-child(11){ --gcs: 3 }
+.tree > .box:nth-child(16){ --gcs: 2 }
+.tree > .box:nth-child(22){ --gcs: 5 }
+
+/* sides */
+.tree > .box > p { 
+  grid-area: 1/1; 
+  display: grid; 
+  background-color: var(--wrap);
+  --ribbon-grad: 
+    transparent 30%, var(--ribbon) 30% 37%, var(--wrap) 37% 38%, var(--ribbon) 38% 62%, 
+    var(--wrap) 62% 63%, var(--ribbon) 63% 70%, transparent 70%;
+  background-image: 
+    linear-gradient(var(--l1, transparent) 100%, transparent 0),
+    linear-gradient(90deg, var(--ribbon-grad)), 
+    linear-gradient(0deg, var(--ribbon-grad)),
+    repeating-linear-gradient(90deg, transparent 0 3%, rgb(0 0 0 / .125) 3% 5%, transparent 5% 8%);
+  --transform: rotateY(var(--ry, 0deg)) rotateX(var(--rx, 0deg)) translateZ(calc(var(--box-size) * .5));
+  transform: var(--transform); 
+}
+
+.tree > .box > p:nth-child(2) { --ry: 180deg; --l2: .7; --l1: rgb(0 0 0 / .25)  } /* back */
+.tree > .box > p:nth-child(3) { --ry: -90deg; --l2: .5; --l1: rgb(0 0 0 / .125) } /* left */
+.tree > .box > p:nth-child(4) { --ry:  90deg; --l2: .5; --l1: rgb(255 255 255 / .125) } /* right */
+.tree > .box > p:nth-child(5) { --rx:  90deg; --l2: .6; --l1: rgb(255 255 255 / .25) } /* top */
+.tree > .box > p:nth-child(6) { --rx: -90deg; --l2: .6; --l1: rgb(0 0 0 / .25) } /* bottom */
+
+/* front */
+.tree > .box > p:nth-child(1) { transform-origin: left; transition: transform 500ms ease; cursor: pointer } 
+.tree > .box:focus > p:nth-child(1){ transform: var(--transform) rotateY(-90deg) }
+.tree > .box > p:nth-child(1)::after{ 
+  content: counter(days);
+  grid-area: 1/1;
+  place-self: center;
+  
+  display: grid;
+  place-items: center;
+  width: 5vmin;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--wrap);
+
+  font-size: 2vmin;
+  font-family: system-ui, sans-serif;
+  color: var(--color);
+  font-weight: bold;
+}
+
+/* wrappings */
+.tree > .box:nth-child(3n + 1){ --wrap: green; --ribbon: red;   --color: gold }
+.tree > .box:nth-child(3n + 2){ --wrap: red;   --ribbon: gold;  --color: gold }
+.tree > .box:nth-child(3n + 3){ --wrap: gold;  --ribbon: green; --color: red  }
+
+/* inside sides*/
+.tree > .box > p::before { 
+  content: ""; 
+  grid-area: 1/1; 
+  background-color: var(--wrap); 
+  background-image: linear-gradient(rgb(0 0 0 / var(--l2, .25)) 105%, transparent);
+  transform: translateZ(-.1px)
+}
+
+/* content */
+.tree > .box::before {
+  content: "";
+  grid-area: 1/1;
+  place-self: center;
+  width: 75%;
+  aspect-ratio: 1;
+  background-image: var(--img);
+  background-size: contain
+}
+
+/* animations */
+.tree > .box:focus::before{ animation: rotateContent 3s linear infinite }
+@keyframes rotateContent { to { transform: rotateY(360deg) } }
+
+/* contents */
+.tree > .box:nth-child(1) { --img: url(https://cdn-icons-png.flaticon.com/64/744/744546.png)}
+.tree > .box:nth-child(2) { --img: url(https://cdn-icons-png.flaticon.com/64/6278/6278695.png)}
+.tree > .box:nth-child(3) { --img: url(https://cdn-icons-png.flaticon.com/64/2299/2299172.png)}
+.tree > .box:nth-child(4) { --img: url(https://cdn-icons-png.flaticon.com/64/892/892848.png)}
+.tree > .box:nth-child(5) { --img: url(https://cdn-icons-png.flaticon.com/64/6278/6278637.png)}
+.tree > .box:nth-child(6) { --img: url(https://cdn-icons-png.flaticon.com/64/3132/3132705.png)}
+.tree > .box:nth-child(7) { --img: url(https://cdn-icons-png.flaticon.com/64/614/614114.png)}
+.tree > .box:nth-child(8) { --img: url(https://cdn-icons-png.flaticon.com/64/3753/3753480.png)}
+.tree > .box:nth-child(9) { --img: url(https://cdn-icons-png.flaticon.com/64/2299/2299184.png)}
+.tree > .box:nth-child(10) { --img: url(https://cdn-icons-png.flaticon.com/64/3694/3694954.png)}
+.tree > .box:nth-child(11) { --img: url(https://cdn-icons-png.flaticon.com/64/595/595461.png)}
+.tree > .box:nth-child(12) { --img: url(https://cdn-icons-png.flaticon.com/64/3760/3760868.png)}
+.tree > .box:nth-child(13) { --img: url(https://cdn-icons-png.flaticon.com/64/3792/3792003.png)}
+.tree > .box:nth-child(14) { --img: url(https://cdn-icons-png.flaticon.com/64/4122/4122334.png)}
+.tree > .box:nth-child(15) { --img: url(https://cdn-icons-png.flaticon.com/64/2418/2418149.png)}
+.tree > .box:nth-child(16) { --img: url(https://cdn-icons-png.flaticon.com/64/3737/3737935.png)}
+.tree > .box:nth-child(17) { --img: url(https://cdn-icons-png.flaticon.com/64/837/837891.png)}
+.tree > .box:nth-child(18) { --img: url(https://cdn-icons-png.flaticon.com/64/2299/2299189.png)}
+.tree > .box:nth-child(19) { --img: url(https://cdn-icons-png.flaticon.com/64/2367/2367784.png)}
+.tree > .box:nth-child(20) { --img: url(https://cdn-icons-png.flaticon.com/64/658/658342.png)}
+.tree > .box:nth-child(21) { --img: url(https://cdn-icons-png.flaticon.com/64/290/290441.png)}
+.tree > .box:nth-child(22) { --img: url(https://cdn-icons-png.flaticon.com/64/275/275688.png)}
+.tree > .box:nth-child(23) { --img: url(https://cdn-icons-png.flaticon.com/64/614/614105.png)}
+.tree > .box:nth-child(24) { --img: url(https://cdn-icons-png.flaticon.com/64/3706/3706292.png)}
+
