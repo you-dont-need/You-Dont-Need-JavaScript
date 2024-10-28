@@ -1015,9 +1015,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="carousel_eff"></a>Carousel
 
-[<img src="images/c1.jpg" height="230">]
-[<img src="images/c2.jpg" height="230">]
-[<img src="images/c3.jpg" height="230">]
+<video width="300" height="230" controls>
+    <source src="images/carousel_demo.wmv" type="video/mp4">
+  
+</video>
 
 **[⬆ back to top](#quick-links)**
 
