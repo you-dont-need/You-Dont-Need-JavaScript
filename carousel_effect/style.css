@@ -1,0 +1,68 @@
+body{
+    background-color: rgb(163, 193, 163);
+}
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  height: 50vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+ 
+}
+
+.slides {
+  display: flex;
+  width: 800%;
+  height: 100%;
+  transition: transform 1s ease;
+  animation: slideAnimation 12s infinite; 
+}
+
+@keyframes slideAnimation {
+  0%, 33.33% { transform: translateX(0%); } 
+  33.34%, 66.66% { transform: translateX(-100%); } 
+  66.67%, 100% { transform: translateX(-200%); } 
+}
+
+.slide {
+  width: 100%;
+  flex: 1 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.navigation label {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type="radio"]:checked + label {
+  background: #333;
+}
