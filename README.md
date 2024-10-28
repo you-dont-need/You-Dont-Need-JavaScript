@@ -1016,7 +1016,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="carousel-effect"></a>Carousel Effect
 
 <video width="400" height="200" controls>
-    <source src="images/carousel_demo.mp4">
+    <source src="images/carousel_demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
