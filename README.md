@@ -1016,10 +1016,9 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="carousel-effect"></a>Carousel Effect
 
 
-[<video width="400" height="200" controls>
-    <source src="https://raw.githubusercontent.com/amrutha-m206/You-Dont-Need-JavaScript/carousel_effect-feature/images/carousel_demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>]
+[Download the demo video](https://raw.githubusercontent.com/amrutha-m206/You-Dont-Need-JavaScript/carousel_effect-feature/images/carousel_demo.mp4)
+
+
 
 
 **[⬆ back to top](#quick-links)**
