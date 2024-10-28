@@ -43,6 +43,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Carousel](#carousel)
 - [Compass Loader](#compass-loader)
 - [City Animation Footer](#city-animation-footer)
+- [Carousel Effect](#carousel-effect)
 - [Counter of Checked Checkboxes](#counter-of-checked-check-boxes)
 - [Download_buttons](#Download_buttons)
 - [Dog Box Animation](#dog-box-animation)
