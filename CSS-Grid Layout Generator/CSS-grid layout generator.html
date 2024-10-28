@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .controls label {
+            margin: 5px 0;
+        }
+
+        .grid-container {
+            display: grid;
+            width: 80%;
+            max-width: 600px;
+            height: 400px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+        }
+
+        .grid-item {
+            background-color: #4CAF50;
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Grid configuration based on CSS variables */
+        .grid-container {
+            grid-template-rows: repeat(var(--rows, 2), 1fr);
+            grid-template-columns: repeat(var(--columns, 2), 1fr);
+            gap: var(--gap, 10px);
+        }
+
+        /* Slider styling */
+        input[type="range"] {
+            width: 200px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Grid Layout Generator</h1>
+
+    <div class="controls">
+        <label>
+            Rows:
+            <input type="range" min="1" max="6" value="2" oninput="document.documentElement.style.setProperty('--rows', this.value)">
+        </label>
+        <label>
+            Columns:
+            <input type="range" min="1" max="6" value="2" oninput="document.documentElement.style.setProperty('--columns', this.value)">
+        </label>
+        <label>
+            Gap (px):
+            <input type="range" min="0" max="50" value="10" oninput="document.documentElement.style.setProperty('--gap', this.value + 'px')">
+        </label>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+
+</body>
+</html>
