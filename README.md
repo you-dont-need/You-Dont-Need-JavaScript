@@ -73,6 +73,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [NavBar](#navbar)
 - [Neon Button](#neon-button)
 - [Neon Card](#neon-card)
+- [Netlix Clone v2](#Netflix-Clone-v2)
 - [Neumorphism Card Design](#neumorphism-card-design)
 - [Parallax Scrolling](#parallax-scrolling)
 - [Pendulum](#pendulum)
@@ -223,6 +224,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/slideshow3.png" height="230" title="Demo 3">](https://codepen.io/FabianK/pen/zJLLrR)
 [<img src="images/carousel.png" height="230" title="Demo 4">](https://codepen.io/NiklasKnaack/pen/abrOMLY)
 [<img src="./images/Infinite-carousel-purnasth.gif" alt="Carousel-Nepal" height="230" title="Carousel-Nepal">](https://codepen.io/purnaaa/pen/NWoWeBB)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Netflix-Clone-v2"></a>Netflix Clone Demo
+
+[<img src="Netflix Clone v2/images/image1.png" height="230" title="Demo 1">](http://url-to-page)
+[<img src="Netflix Clone v2/images/image2.png" height="230" title="Demo 2">](http://url-to-page)
+[<img src="Netflix Clone v2/images/image3.png" height="230" title="Demo 3">](http://url-to-page)
 
 **[⬆ back to top](#quick-links)**
 
