@@ -61,6 +61,12 @@
             0% { transform: rotateY(0deg); }
             100% { transform: rotateY(360deg); }
         }
+        
+        @keyframes shiftBackground {
+            0%, 25% { background-position: 0% 0; transform: scaleX(1); }
+            26%, 75% { background-position: 100% 0; transform: scaleX(-1); }
+            76%, 100% { background-position: 0% 0; transform: scaleX(1); }
+        }
     </style>
 </head>
 <body>
