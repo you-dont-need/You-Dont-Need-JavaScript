@@ -32,6 +32,7 @@
             transform-style: preserve-3d;
             background: url('https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57735/land_ocean_ice_cloud_2048.jpg');
             background-size: 200%;
+            animation: shiftBackground 20s linear infinite;
         }
 
         .globe::before {
@@ -63,9 +64,9 @@
         }
         
         @keyframes shiftBackground {
-            0%, 25% { background-position: 0% 0; transform: scaleX(1); }
-            26%, 75% { background-position: 100% 0; transform: scaleX(-1); }
-            76%, 100% { background-position: 0% 0; transform: scaleX(1); }
+            0%, 25% { background-position: 0% 0; transform: scaleX(1);}
+            26%, 75% { background-position: 100% 0; transform: scaleX(-1);}
+            76%, 100% { background-position: 0% 0; transform: scaleX(1);}
         }
     </style>
 </head>
