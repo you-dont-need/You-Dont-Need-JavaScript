@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #141414;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative; 
+}
+
+.navbar .logo {
+  position: relative; 
+  top: 20px; 
+  left: 20px;  
+}
+
+
+.navbar .logo img {
+  width: 120px;
+}
+
+.navbar .menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.hero {
+  height: 90vh;
+  background-image: url('hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.content-section {
+  padding: 50px 20px;
+}
+
+.content-section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.content-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  font-size: 14px;
+}
