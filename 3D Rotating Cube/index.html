@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Rotating Cube</title>
+  <title>3D Realistic Rotating Cube</title>
   <style>
     * {
       margin: 0;
@@ -23,7 +23,7 @@
     .scene {
       width: 200px;
       height: 200px;
-      perspective: 600px;
+      perspective: 800px;
     }
 
     .cube {
@@ -31,35 +31,41 @@
       height: 100%;
       position: relative;
       transform-style: preserve-3d;
-      transform: rotateX(-30deg) rotateY(-30deg);
-      transition: transform 1s;
-    }
-
-    .scene:hover .cube {
-      transform: rotateX(30deg) rotateY(180deg);
+      animation: rotateCube 10s infinite ease-in-out;
     }
 
     .cube-face {
       position: absolute;
       width: 200px;
       height: 200px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border: 2px solid #fff;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 2px solid #ccc;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 24px;
       font-weight: bold;
       color: #333;
+      transition: transform 0.6s ease;
+      backface-visibility: hidden;
     }
 
-    .cube-face:nth-child(1) { transform: rotateY(0deg) translateZ(100px); }
-    .cube-face:nth-child(2) { transform: rotateY(90deg) translateZ(100px); }
-    .cube-face:nth-child(3) { transform: rotateY(180deg) translateZ(100px); }
-    .cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(100px); }
-    .cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(100px); }
-    .cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(100px); }
+    .cube-face:nth-child(1) { transform: rotateY(0deg) translateZ(100px); background: #f44336; }
+    .cube-face:nth-child(2) { transform: rotateY(90deg) translateZ(100px); background: #3f51b5; }
+    .cube-face:nth-child(3) { transform: rotateY(180deg) translateZ(100px); background: #4caf50; }
+    .cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(100px); background: #ffeb3b; }
+    .cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(100px); background: #ff9800; }
+    .cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(100px); background: #9c27b0; }
 
+    /* Animations */
+    @keyframes rotateCube {
+      0% { transform: rotateX(-30deg) rotateY(-30deg); }
+      25% { transform: rotateX(30deg) rotateY(-60deg); }
+      50% { transform: rotateX(60deg) rotateY(30deg); }
+      75% { transform: rotateX(-60deg) rotateY(60deg); }
+      100% { transform: rotateX(-30deg) rotateY(-30deg); }
+    }
   </style>
 </head>
 <body>
@@ -77,3 +83,4 @@
 
 </body>
 </html>
+
