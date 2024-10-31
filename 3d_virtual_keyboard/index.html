@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neumorphic Virtual Keyboard</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Include Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
       box-sizing: border-box;
@@ -34,7 +34,7 @@
 
     .row {
       display: grid;
-      grid-template-columns: repeat(14, 1fr); 
+      grid-template-columns: repeat(14, 1fr);
       gap: 10px;
     }
 
@@ -49,79 +49,41 @@
       color: #333;
       cursor: pointer;
       height: 60px;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       user-select: none;
+      position: relative;
     }
 
     .key:active {
       box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
-      transform: scale(0.98);
+      transform: translateY(3px);
+      animation: pop 0.1s;
     }
 
-    .key.tab {
-      grid-column: span 2;
+    @keyframes pop {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.95); }
+      100% { transform: scale(1); }
     }
 
-    .key.caps-lock {
-      grid-column: span 2;
-    }
+    .key.tab { grid-column: span 2; }
+    .key.caps-lock { grid-column: span 2; }
+    .key.shift { grid-column: span 3; }
+    .key.enter { grid-column: span 2; }
+    .key.space { grid-column: span 7; justify-content: center; }
+    .key.ctrl, .key.alt { grid-column: span 1; }
+    .key.backspace { grid-column: span 2; }
+    .key.win { grid-column: span 1; font-size: 24px; }
 
-    .key.shift {
-      grid-column: span 3;
-    }
-
-    .key.enter {
-      grid-column: span 2;
-    }
-
-    .key.space {
-      grid-column: span 7;
-      justify-content: center;
-    }
-
-    .key.ctrl, .key.alt {
-      grid-column: span 1;
-    }
-
-    .key.backspace {
-      grid-column: span 2;
-    }
-
-    .key.win {
-      grid-column: span 1;
-      font-size: 24px; 
-    }
-
-    .key.enter::before {
-      content: '↵';
-      font-size: 24px;
-    }
-
-    .key.space::before {
-      content: ' ';
-    }
-
-    .key.backspace::before {
-      content: '⌫';
-      font-size: 20px;
-    }
+    .key.enter::before { content: '↵'; font-size: 24px; }
+    .key.space::before { content: ' '; }
+    .key.backspace::before { content: '⌫'; font-size: 20px; }
 
     @media screen and (max-width: 600px) {
-      .keyboard-container {
-        width: 100%;
-      }
-
-      .row {
-        grid-template-columns: repeat(5, 1fr);
-      }
-
-      .key.space {
-        grid-column: span 3;
-      }
-
-      .key.enter, .key.backspace {
-        grid-column: span 2;
-      }
+      .keyboard-container { width: 100%; }
+      .row { grid-template-columns: repeat(5, 1fr); }
+      .key.space { grid-column: span 3; }
+      .key.enter, .key.backspace { grid-column: span 2; }
     }
 
   </style>
@@ -176,14 +138,15 @@
     <!-- Fourth row -->
     <div class="row">
       <div class="key ctrl">Ctrl</div>
-      <div class="key win"><i class="fab fa-windows"></i></div> 
+      <div class="key win"><i class="fab fa-windows"></i></div>
       <div class="key alt">Alt</div>
       <div class="key space"></div>
       <div class="key alt">Alt</div>
-      <div class="key win"><i class="fab fa-windows"></i></div> 
+      <div class="key win"><i class="fab fa-windows"></i></div>
       <div class="key ctrl">Ctrl</div>
     </div>
   </div>
 
 </body>
 </html>
+
