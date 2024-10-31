@@ -229,6 +229,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="Netflix-Clone-v2"></a>Netflix Clone Demo
+
+[<img src="Netflix Clone v2/images/image1.png" height="230" title="Demo 1">](http://url-to-page)
+[<img src="Netflix Clone v2/images/image2.png" height="230" title="Demo 2">](http://url-to-page)
+[<img src="Netflix Clone v2/images/image3.png" height="230" title="Demo 3">](http://url-to-page)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="Counter"></a>Counter of checked check-boxes
 
 [<img src="images/checkedcounter.png" height="230" title="Demo 1">](https://codepen.io/anon/pen/eZWXOZ)
