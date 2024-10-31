@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Loading Animation</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+        }
+
+        .loader {
+            border: 10px solid transparent; /* Transparent border for evenness */
+            border-radius: 50%;
+            width: 80px; /* Size of the loader */
+            height: 80px; /* Size of the loader */
+            border-top: 10px solid #ff5733; /* Start color */
+            animation: spin 1s linear infinite, changeColor 4s linear infinite; /* Combine animations */
+        }
+
+        /* Spin Animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Color Change Animation */
+        @keyframes changeColor {
+            0% { border-top-color: #ff5733; } /* Color 1 */
+            25% { border-top-color: #33c1ff; } /* Color 2 */
+            50% { border-top-color: #33ff57; } /* Color 3 */
+            75% { border-top-color: #ff33a6; } /* Color 4 */
+            100% { border-top-color: #ff5733; } /* Loop back to Color 1 */
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+</body>
+</html>
