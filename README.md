@@ -73,6 +73,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [NavBar](#navbar)
 - [Neon Button](#neon-button)
 - [Neon Card](#neon-card)
+- [Netlix Clone v2](#Netflix-Clone-v2)
 - [Neumorphism Card Design](#neumorphism-card-design)
 - [Parallax Scrolling](#parallax-scrolling)
 - [Pendulum](#pendulum)
@@ -361,6 +362,9 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="./images/css-loader-purna.gif" alt="CSS-Loader-Purna" height="230" title="CSS-Loader-Purna">](https://codepen.io/purnaaa/pen/vYVVygB)
 [<img src="images/loader10.png" height="230" title="Demo 10">](https://codepen.io/Sahil-Patil-the-sans/pen/WNPbVqK)
 [<img src="images/loader11.gif" height="230" title="Demo 11">](https://codepen.io/sugeng-sulistiyawan/pen/PoyjPWd)
+[<img src="images/loader12.gif" height="230" title="Demo 12">](https://github.com/TechGenie-awake/You-Dont-Need-JavaScript/blob/patch-1/Loading/loading.gif)
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -588,6 +592,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="neon-card"></a>Neon Card
 
 [<img src="images/neon-card-2.gif" title="Neon Card">](examples/neon-card-2.html)
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Netflix-Clone-v2"></a>Netflix Clone Demo
+
+[<img src="Netflix Clone v2/Screenshot1.png" height="230" title="Demo 1">](http://url-to-page)
+[<img src="Netflix Clone v2/Screenshot2.png" height="230" title="Demo 2">](http://url-to-page)
+[<img src="Netflix Clone v2/Screenshot3.png" height="230" title="Demo 3">](http://url-to-page)
+
 **[⬆ back to top](#quick-links)**
 
 ---
