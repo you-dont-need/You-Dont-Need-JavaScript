@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #111;
+      margin: 0;
+    }
+
+    .iphone {
+      position: relative;
+      width: 250px;
+      height: 480px;
+      background: #222;
+      border-radius: 40px;
+      animation: float 3s ease-in-out infinite, rotate 15s linear infinite;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    }
+
+    .iphone::before {
+      content: '';
+      position: absolute;
+      width: 90%;
+      height: 92%;
+      background: #000;
+      top: 4%;
+      left: 5%;
+      border-radius: 33px;
+    }
+
+    .iphone::after {
+      content: '';
+      position: absolute;
+      width: 45%;
+      height: 4%;
+      background: #222;
+      top: 0;
+      left: 27.5%;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .screen {
+      position: absolute;
+      width: 85%;
+      height: 87%;
+      background: linear-gradient(45deg, #4facfe, #00f2fe);
+      top: 6.5%;
+      left: 7.5%;
+      border-radius: 28px;
+      overflow: hidden;
+      animation: screenGlow 2s ease-in-out infinite;
+    }
+
+    .notch {
+      position: absolute;
+      width: 50%;
+      height: 4%;
+      background: #222;
+      top: 0;
+      left: 25%;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .shine {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.5) 0%,
+        transparent 50%,
+        rgba(255,255,255,0.5) 100%
+      );
+      animation: shine 4s linear infinite;
+    }
+
+    .circles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      animation: moveCircle 8s linear infinite;
+    }
+
+    .circle:nth-child(1) {
+      width: 60px;
+      height: 60px;
+      left: -30px;
+      top: 50%;
+      animation-delay: 0s;
+    }
+
+    .circle:nth-child(2) {
+      width: 80px;
+      height: 80px;
+      right: -40px;
+      top: 20%;
+      animation-delay: -2s;
+    }
+
+    .circle:nth-child(3) {
+      width: 40px;
+      height: 40px;
+      left: 50%;
+      bottom: -20px;
+      animation-delay: -4s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes screenGlow {
+      0%, 100% { box-shadow: 0 0 30px rgba(79,172,254,0.6); }
+      50% { box-shadow: 0 0 50px rgba(0,242,254,0.8); }
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-100%) translateY(-100%); }
+      100% { transform: translateX(100%) translateY(100%); }
+    }
+
+    @keyframes moveCircle {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(50px, 50px); }
+      50% { transform: translate(0, 100px); }
+      75% { transform: translate(-50px, 50px); }
+      100% { transform: translate(0, 0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="iphone">
+    <div class="screen">
+      <div class="notch"></div>
+      <div class="shine"></div>
+      <div class="circles">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
