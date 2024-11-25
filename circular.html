@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Circular Progress Bar</title>
+    <style>
+      /* Global Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background: radial-gradient(circle, #0f0f0f, #1a1a1a, #2a2a2a);
+        font-family: "Arial", sans-serif;
+        color: #fff;
+        gap: 2rem;
+      }
+
+      h3 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        color: #f8f8f8;
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      }
+
+      .progress-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .circle-progress {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(145deg, #333, #444);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+      }
+
+      .circle-progress:hover {
+        transform: scale(1.1);
+      }
+
+      .circle-progress svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: rotate(-90deg); /* Start at top */
+      }
+
+      .circle-progress svg circle {
+        fill: none;
+        stroke-width: 12;
+        stroke-linecap: round;
+      }
+
+      .circle-progress svg circle:nth-child(1) {
+        stroke: rgba(255, 255, 255, 0.1); /* Background circle */
+      }
+
+      .circle-progress svg circle:nth-child(2) {
+        stroke: url(#gradient); /* Progress circle with dynamic gradient */
+        stroke-dasharray: 565; /* Circumference = 2 * PI * r (r = 90) */
+        stroke-dashoffset: calc(565 - (565 * var(--progress)) / 100);
+        animation: progressAnim 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+
+      /* Radial Gradient Definition */
+      .gradient {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        z-index: -1;
+        background: radial-gradient(circle, var(--clr1), var(--clr2));
+        filter: blur(10px);
+        border-radius: 50%;
+        opacity: 0.5;
+        animation: glowAnim 3s ease-in-out infinite;
+      }
+
+      @keyframes glowAnim {
+        0%,
+        100% {
+          opacity: 0.5;
+        }
+        50% {
+          opacity: 0.8;
+        }
+      }
+
+      .number {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      }
+
+      .number h4 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .number h4 span {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+
+      .number p {
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Progress Animation */
+      @keyframes progressAnim {
+        0% {
+          stroke-dashoffset: 565;
+        }
+        100% {
+          stroke-dashoffset: calc(565 - (565 * var(--progress)) / 100);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Advanced Circular Progress</h3>
+
+    <!-- Progress Circle -->
+    <div class="progress-container">
+      <div
+        class="circle-progress"
+        style="--progress: 75; --clr1: #ff6f61; --clr2: #ff2d2d"
+      >
+        <div class="gradient"></div>
+        <svg>
+          <circle cx="100" cy="100" r="90"></circle>
+          <circle cx="100" cy="100" r="90"></circle>
+        </svg>
+        <div class="number">
+          <h4>75<span>%</span></h4>
+          <p>Completion</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
