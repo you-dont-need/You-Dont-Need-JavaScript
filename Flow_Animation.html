@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liquid Text Animation</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #111;
+      overflow: hidden;
+    }
+
+    .liquid-container {
+      position: relative;
+      font-size: 6rem;
+      font-weight: bold;
+      font-family: sans-serif;
+      color: transparent;
+      overflow: hidden;
+      display: inline-block;
+      text-align: center;
+      background: linear-gradient(90deg, #ff7e5f, #feb47b, #86a8e7, #91eae4, #ff7e5f);
+      background-size: 400%; /* Increased for smoother color transitions */
+      -webkit-background-clip: text;
+      animation: color-shift 10s ease-in-out infinite, gradient-flow 5s linear infinite;
+      filter: url(#liquid-filter); /* Apply SVG liquid filter */
+    }
+
+    .liquid-text {
+      position: relative;
+      color: transparent;
+      background: inherit; /* Inherit gradient from container */
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: text-morph 6s ease-in-out infinite;
+    }
+
+    /* Animated Gradient Background Shift */
+    @keyframes color-shift {
+      0% {
+        background-position: 0%;
+        background: linear-gradient(90deg, #ff7e5f, #feb47b, #86a8e7, #91eae4, #ff7e5f);
+      }
+      50% {
+        background: linear-gradient(90deg, #91eae4, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+      }
+      100% {
+        background-position: 400%;
+        background: linear-gradient(90deg, #ff7e5f, #86a8e7, #91eae4, #feb47b, #ff7e5f);
+      }
+    }
+
+    /* Moving Gradient Animation */
+    @keyframes gradient-flow {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 200%;
+      }
+    }
+
+    /* Text Morphing for Liquid Look */
+    @keyframes text-morph {
+      0%, 100% {
+        transform: scale(1) skewX(0deg);
+      }
+      25% {
+        transform: scaleY(1.2) skewX(-5deg);
+      }
+      50% {
+        transform: scaleY(1.1) skewX(5deg);
+      }
+      75% {
+        transform: scaleY(1.2) skewX(-5deg);
+      }
+    }
+
+    /* SVG Filter Animation for Organic Motion */
+    .liquid-container {
+      animation: ripple 8s ease-in-out infinite;
+    }
+
+    @keyframes ripple {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05) rotate(-1deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="liquid-container">
+    <h1 class="liquid-text">Flow</h1>
+  </div>
+
+  <!-- SVG Filter for Liquid Effect -->
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="liquid-filter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="30" />
+      </filter>
+    </defs>
+  </svg>
+</body>
+</html>
