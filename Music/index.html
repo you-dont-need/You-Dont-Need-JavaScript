@@ -4,190 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Website</title>
-    <link rel="stylesheet" href="style.css">
-
+    <title>Jazz Music Hub</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
 </head>
 
 <body>
     <div class="container">
-        <!-- Left box -->
-
-        <div class="left-box">
+        <nav class="sidebar">
             <div class="logo">
-                <img class="logo" src="icons/logo.svg" alt="">
-                <h1>Music player</h1>
+                <img src="icons/logo.svg" alt="Music Hub Logo" class="logo-img">
+                <h1>Jazz Hub</h1>
             </div>
-            <ul class="menu">
-                <li><span></span> Home</li>
-                <li><span></span> Radio</li>
-                <li><span></span> Podcast</li>
-                <li><span></span> Reads</li>
-                <li><span></span> Videos</li>
-                <li><span></span> My Music</li>
-                <li><span></span> Night Mode</li>
-                <li><span></span> Download App</li>
-                <li><span></span> Audio Quality</li>
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Playlists</a></li>
+                <li><a href="#">Artists</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Download App</a></li>
             </ul>
-        </div>
+        </nav>
 
-        <!-- Right box -->
-        <div class="right-box">
-            <!-- Search and Auth buttons -->
-            <div class="nav">
-                <div class="search-bar">
-                    <input type="text" placeholder="Search artists, songs, albums...">
-
+        <main class="main-content">
+            <header class="navigation">
+                <div class="search-container">
+                    <input type="text" placeholder="Search jazz music, artists..." aria-label="Search music">
                 </div>
-
-                <div class="button">
-                    <button class="SignUp">SignUp</button>
-                    <button class="Login">Login</button>
+                <div class="user-profile">
+                    <button class="profile">Profile</button>
+                    <button class="logout">Logout</button>
                 </div>
-            </div>
-            <!-- Trending Section -->
-            <div class="trending-section">
+            </header>
+
+            <section class="trending-section">
+                <h2>Trending Now</h2>
                 <div class="trending-links">
-                    <span>Trending Songs</span>
-                    <span>New Songs</span>
-                    <span>Genres</span>
-                    <span>Albums</span>
-                    <span>Top Artists</span>
-                    <span>Radio</span>
-                    <span>Podcast</span>
-                    <span>Top Playlist</span>
-                    <span>My Playlist</span>
+                    <span><a href="#">Top Tracks</a></span>
+                    <span><a href="#">New Releases</a></span>
+                    <span><a href="#">Genres</a></span>
+                    <span><a href="#">Playlists</a></span>
                 </div>
+            </section>
 
+            <section class="events">
+                <h2>Upcoming Events</h2>
+                <div class="event-card">Concert: Live Jazz Band - Date: 10/15/2023</div>
+                <div class="event-card">Festival: Jazz Fest - Date: 10/20/2023</div>
+            </section>
 
-                <!-- New Releases -->
-                <h2>New Releases</h2>
-                <div class="new-releases">
-                    <div class="release-card"><img src="images/8907212018094.webp" alt=""></div>
-                    <div class="release-card"><img src="images/song2.webp" alt=""></div>
-                    <div class="release-card"><img src="images/song3.webp" alt=""></div>
-                    <div class="release-card"><img src="images/song4.webp" alt=""></div>
-                    <div class="release-card"><img src="images/song5.webp" alt=""></div>
-                </div>
-                <div class="new-releases-info">
-                    <div class="info"><b>Aaj Ki Raat </b></div>
-                    <div class="info"><b>Tumhare rahenge hum</b></div>
-                    <div class="info"><b>Tainu khabar nhi</b></div>
-                    <div class="info"><b>Ishq</b></div>
-                    <div class="info"><b>Nadaaniyan</b></div>
-                </div>
-
-                <!-- Featured Artists -->
+            <section class="featured-artists">
                 <h2>Featured Artists</h2>
-                <div class="featured-artists">
-                    <div class="artist-circle"><img src="images/singer1.webp" alt=""></div>
-                    <div class="artist-circle"><img src="images/singer2.webp" alt=""></div>
-                    <div class="artist-circle"><img src="images/singer3.webp" alt=""></div>
-                    <div class="artist-circle"><img src="images/singer4.webp" alt=""></div>
-                    
-                    
+                <div class="artist-card">Artist 1</div>
+                <div class="artist-card">Artist 2</div>
+                <div class="artist-card">Artist 3</div>
+                <div class="artist-card">Artist 4</div>
+            </section>
+
+            <footer class="footer">
+                <div class="footer-section">
+                    <h2>Contact Us</h2>
+                    <p>Email: <a href="mailto:support@musichub.com">support@musichub.com</a></p>
                 </div>
-                <div class="featured-artists-info">
-                    <div class="info"><b>Arjit Singh </b></div>
-                    <div class="info"><b>Pritam</b></div>
-                    <div class="info"><b>Yo yo Honey Singh</b></div>
-                    <div class="info"><b>Ishq</b></div>
-                    
-            </div>
-                
+                <div class="footer-section legal">
+                    <a href="#">Terms of Service</a> | 
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Help</a>
+                </div>
+            </footer>
+        </main>
 
-            <h2>Top Hindi Hits</h2>
-            <div class="top-hits">
-                <div class="hit-card"><img src="images/hindi1.webp" alt=""></div>
-                <div class="hit-card"><img src="images/hindi2.webp" alt=""></div>
-                <div class="hit-card"><img src="images/hindi3.webp" alt=""></div>
-                <div class="hit-card"><img src="images/hindi4.jpg" alt=""></div>
-                <div class="hit-card"><img src="images/song2.webp" alt=""></div>
-            </div>
-            <div class="top-hits-info">
-                <div class="info"><b>Kesariya</b></div>
-                <div class="info"><b>Raataan Lambiyan</b></div>
-                <div class="info"><b>Ranjha</b></div>
-                <div class="info"><b>Aabaad Barbaad</b></div>
-                <div class="info"><b>Shayad</b></div>
-            </div>
-            
-            <h2>Top International Hits</h2>
-            <div class="top-international-hits">
-                <div class="hit-card"><img src="images/international1.webp" alt=""></div>
-                <div class="hit-card"><img src="images/international2.webp" alt=""></div>
-                <div class="hit-card"><img src="images/international3.webp" alt=""></div>
-                <div class="hit-card"><img src="images/international4.webp" alt=""></div>
-                <div class="hit-card"><img src="images/international5.webp" alt=""></div>
-            </div>
-            <div class="top-international-hits-info">
-                <div class="info"><b>Starboy</b></div>
-                <div class="info"><b>Sorry</b></div>
-                <div class="info"><b>Perfect</b></div>
-                <div class="info"><b>Let me love you</b></div>
-                <div class="info"><b>Bad Habits</b></div>
-            </div>
-            
-            </div>
-            <!-- Footer -->
-<footer class="footer">
-    <!-- T-Series Section -->
-    <div class="footer-section">
-        <h2>@Ashutosh</h2>
-    </div>
-
-
- 
-
-
-    
-
-    <!-- Legal Links Section -->
-    <div class="footer-section legal">
-        <a href="#">Terms of Use</a> | 
-        <a href="#">Privacy Policy</a> | 
-        <a href="#">About Us</a> | 
-        <a href="#">FAQ</a>
-    </div>
-</footer>
-
-        </div>
-
-        <!-- Fixed Playbar -->
         <div class="playbar">
             <div class="song-info">
-                <img src="images/8907212018094.webp" alt="Album" class="album-cover">
+                <img src="images/album-cover.webp" alt="Album Cover" class="album-cover">
                 <div class="song-details">
-                    <h3>Aaj ki Raat</h3>
-                    <p>Sunidhi chauhan,Pritam</p>
+                    <h3>Current Song Title</h3>
+                    <p>Artist Name</p>
                 </div>
             </div>
-
             <div class="play-controls">
-                <ul class="controls">
-                    <li><img width="30px"  src="icons/like.png" alt=""></li>
-                    <li><img width="30px"  src="icons/download.svg" alt=""></li>
-                    <span class="current-time">0:00</span>
-                    <li><img width="30px"  src="icons/shuffle.svg" alt=""></li>
-                    <li><img width="30px"  src="icons/prev.svg" alt=""></li>
-                    <li><img width="30px"  src="icons/play.svg" alt=""></li>
-                    <li><img width="30px"  src="icons/next.svg" alt=""></li>
-                    <input width="200px" type="range" class="volume-bar" min="0" max="100" value="50">
-                </ul>
-                <!-- <button class="download-btn">⬇️</button>
-                <span class="current-time">0:00</span>
-                <button class="shuffle-btn">🔀</button>
-                <button class="prev-btn">⏮️</button>
-                <button class="play-btn">⏯️</button>
-                <button class="next-btn">⏭️</button>
-                <button class="loop-btn">🔁</button>
-                <span class="duration">3:45</span> -->
-             
+                <button aria-label="Previous" class="control-button">⏮</button>
+                <button aria-label="Play" class="control-button">▶</button>
+                <button aria-label="Pause" class="control-button">⏸</button>
+                <button aria-label="Next" class="control-button">⏭</button>
+                <input type="range" class="volume-bar" min="0" max="100" value="50" aria-label="Volume Control">
             </div>
         </div>
     </div>
-
-   
 </body>
 
 </html>
