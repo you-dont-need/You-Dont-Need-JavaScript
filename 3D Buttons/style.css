@@ -1,0 +1,17 @@
+.button-3d {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px #2980b9;
+}
+
+.button-3d:active {
+    box-shadow: 0 2px #2980b9;
+    transform: translateY(3px);
+}
