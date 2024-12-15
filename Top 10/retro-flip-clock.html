@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure CSS Retro Flip Clock</title>
+    <style>
+        :root {
+            --digit-size: 60px;
+            --digit-color: #FFEB3B;
+            --background: #2C3E50;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, var(--background), #1a2634);
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+        }
+
+        .clock {
+            display: flex;
+            gap: 10px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 0 30px var(--shadow-color);
+            position: relative;
+        }
+
+        .clock::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1));
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .digit-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .digit {
+            width: var(--digit-size);
+            height: var(--digit-size);
+            background: #000;
+            border-radius: 8px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: calc(var(--digit-size) * 0.8);
+            color: var(--digit-color);
+            text-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+            margin: 5px;
+            overflow: hidden;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .digit::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            height: 50%;
+            background: linear-gradient(to bottom, 
+                rgba(255, 255, 255, 0.15) 0%,
+                rgba(255, 255, 255, 0.05) 100%);
+            border-radius: 6px 6px 0 0;
+        }
+
+        .separator {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 5px;
+            color: var(--digit-color);
+            font-size: calc(var(--digit-size) * 0.4);
+            animation: blink 1s steps(1) infinite;
+        }
+
+        .label {
+            text-align: center;
+            color: var(--digit-color);
+            font-size: 0.8em;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px rgba(255, 235, 59, 0.2),
+                           inset 0 0 5px rgba(255, 235, 59, 0.1);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(255, 235, 59, 0.4),
+                           inset 0 0 10px rgba(255, 235, 59, 0.2);
+            }
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Ambient light effect */
+        .ambient-light {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at 50% 50%,
+                rgba(255, 235, 59, 0.05),
+                transparent 60%);
+            pointer-events: none;
+            z-index: 1;
+            mix-blend-mode: screen;
+        }
+
+        /* Scan line effect */
+        .scan-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(
+                to bottom,
+                transparent 50%,
+                rgba(0, 0, 0, 0.05) 51%
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-light"></div>
+    <div class="scan-lines"></div>
+    <div class="clock">
+        <div class="digit-group">
+            <div class="digits">
+                <div class="digit">1</div>
+                <div class="digit">2</div>
+            </div>
+            <div class="label">Hours</div>
+        </div>
+        <div class="separator">:</div>
+        <div class="digit-group">
+            <div class="digits">
+                <div class="digit">3</div>
+                <div class="digit">4</div>
+            </div>
+            <div class="label">Minutes</div>
+        </div>
+        <div class="separator">:</div>
+        <div class="digit-group">
+            <div class="digits">
+                <div class="digit">5</div>
+                <div class="digit">6</div>
+            </div>
+            <div class="label">Seconds</div>
+        </div>
+    </div>
+</body>
+</html>
