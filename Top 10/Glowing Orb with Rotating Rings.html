@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Orb with Rotating Rings</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+        }
+        .orb {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: glow 2s infinite alternate;
+        }
+        .ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate 10s linear infinite;
+        }
+        .ring:nth-child(2) {
+            width: 150%;
+            height: 150%;
+            animation-duration: 15s;
+        }
+        .ring:nth-child(3) {
+            width: 200%;
+            height: 200%;
+            animation-duration: 20s;
+        }
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
+        @keyframes rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            overflow: hidden;
+        }
+        .stars::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: transparent;
+            box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.5);
+            animation: twinkle 2s infinite alternate;
+        }
+        @keyframes twinkle {
+            from {
+                opacity: 0.5;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <div class="orb"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+    </div>
+</body>
+</html>
