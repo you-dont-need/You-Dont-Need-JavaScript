@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Reflection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .reflection {
+            font-size: 3em;
+            position: relative;
+            color: #000;
+        }
+        .reflection::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            color: rgba(0, 0, 0, 0.3);
+            transform: scaleY(-1);
+            transform-origin: top;
+            opacity: 0.5;
+            filter: blur(1px);
+            animation: wave 5s infinite;
+        }
+        .reflection:hover::after {
+            animation: wave 1s infinite;
+        }
+        @keyframes wave {
+            0%, 100% {
+                transform: scaleY(-1) translateY(0);
+            }
+            50% {
+                transform: scaleY(-1) translateY(5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reflection" data-text="Mirrored Text">Mirrored Text</div>
+</body>
+</html>
