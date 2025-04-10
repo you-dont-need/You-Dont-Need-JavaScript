@@ -1,0 +1,33 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-container {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 25px dotted black;
+    animation: spin 1.5s ease-in infinite normal;
+}
+
+@keyframes spin {
+    0% {
+        border: 25px dotted rgb(1, 1, 1);
+        transform: rotate(0deg);
+    }
+    25% {
+        border: 25px dotted #3e3b39;
+    }
+    50% {
+        border: 25px dotted #a7a7a7;
+    }
+    75% {
+        border: 25px dotted #b7b7b7;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
