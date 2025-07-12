@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Modern Accordion and FAQs Component Using "details" and "summary" (No JavaScript)</title>
+</head>
+<body>
+	<main>
+		<h1>Example of Accordion Components and FAQs without using JavaScript</h1>
+		<!-- Example of correct usage of <details> and <summary> -->
+		<details open name="example">
+			<summary>Description</summary>
+			<p>
+				With the new <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" target="_blank">"details"</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary" target="_blank">"summary"</a> element tags, it has become simpler, more semantic, and accessible to develop an Accordion and FAQs (Frequently Asked Questions) component without using JavaScript.
+			</p>
+		</details>
+		<!-- In this example, the "open" attribute does not work as expected, as explained below -->
+		<details open name="example">
+			<summary>Attributes</summary>
+			<dl>
+				<dt>Open</dt>
+				<dd>This is a boolean attribute that, when declared on the <code>&lt;details&gt;</code> element, displays the content inside the <code>&lt;details&gt;</code>. When not present, it hides the content. By default, this attribute is absent and does not display the "details".
+					<br />
+					You can use this attribute on more than one <code>&lt;details&gt;</code> element at a time, but when the <code>name="example"</code> attribute values are the same across <code>&lt;details&gt;</code> elements, it only works for the first element with the attribute declared.
+				</dd>
+				<dt>Name</dt>
+				<dd>This attribute groups several <code>&lt;details&gt;</code> elements, allowing only one of them to be opened at a time. This functionality makes the UI and component behave similarly to an accordion.</dd>
+			</dl>
+		</details>
+		<!-- Example of using more than one "open" attribute but without relation to the "name" attribute, and also an element nested within another -->
+		<details open>
+			<summary>FAQs</summary>
+			<ul>
+				<li>Question 1</li>
+				<li>Question 2</li>
+				<li>Question 3</li>
+			</ul>
+			<details>
+				<summary class="toggle">Answer</summary>
+				<p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloribus magni dolorum fugiat maxime corrupti suscipit officiis sequi. Porro nesciunt, amet magnam aliquid odio eaque non est rerum labore ducimus!</p>
+			</details>
+		</details>
+	</main>
+</body>
+</html>

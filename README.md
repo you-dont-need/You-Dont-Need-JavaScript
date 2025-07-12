@@ -33,15 +33,19 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Bonfire](#bonfire)
 - [Book Animation](#book-animation)
 - [Bubble](#bubble)
+- [Bus](#bus)
 - [Burger Menu](#burger-menu)
 - [Button Animation](#button-animation)
 - [Button Hover & Click Animation](#button-hover-click-animation)
+- [Button with Rotating Text & Ripple Animation](#button-rotate-and-ripple-animation)
 - [Baby Yoda Animation](#baby-yoda-animation-css)
 - [Captain America Shield](#captain-america-shield)
 - [Carousel](#carousel)
 - [Compass Loader](#compass-loader)
 - [City Animation Footer](#city-animation-footer)
+- [Carousel Effect](#carousel-effect)
 - [Counter of Checked Checkboxes](#counter-of-checked-check-boxes)
+- [Download_buttons](#Download_buttons)
 - [Dog Box Animation](#dog-box-animation)
 - [Dropdown Menu](#dropdown-menu)
 - [Dynamic Image Colorizing](#dynamic-image-colorizing)
@@ -54,6 +58,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Footer](#footer)
 - [Gradient Animation](#gradient-animation)
 - [Growing Flower](#growing-flower)
+- [Horizontal image slider](#horizontal-image-slider)
 - [Image Gallery](#image-gallery)
 - [Image Hover Effect]()
 - [Infinite Carousel](#infinite-carousel)
@@ -68,6 +73,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [NavBar](#navbar)
 - [Neon Button](#neon-button)
 - [Neon Card](#neon-card)
+- [Netlix Clone v2](#Netflix-Clone-v2)
 - [Neumorphism Card Design](#neumorphism-card-design)
 - [Parallax Scrolling](#parallax-scrolling)
 - [Pendulum](#pendulum)
@@ -76,13 +82,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
 - [Ripple Effect](#ripple-effect)
 - [Scary Animation](#scary-animation)
-- [Scenery](#scenary)
+- [Scenery](#scenery)
 - [Shake Button](#shake-button)
 - [Shuffling Squares](#shuffling-squares)
 - [Star Wars Intro](#star-wars-intro)
 - [Switch](#switch)
+- [Social Media Icons](#social-icons)
 - [Tables](#css-tables)
 - [Tabs](#tabs)
+- [MakemyTrip](#mmt)
+- [Text Spoiler Effect](#text-spoiler)
 - [Thank You Animation](#thankyou-animation)
 - [Todo List](#todo-list)
 - [Tooltips](#tooltips)
@@ -93,6 +102,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Zoom When Hover](#zoom-when-hover)
 - [Debit Card Hover effect](#debit-card-hover)
 - [Progress Bar On Scroll](#ProgressOnScroll)
+- [Pricing Table](#pricing-table)
 - **Contribution**
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -115,6 +125,23 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+## <a id="text-spoiler"></a>Text Spoiler Effect
+
+##### Light Theme:
+[<video width="400" height="200" controls>
+    <source src="https://github.com/user-attachments/assets/4786bfb6-78e7-4682-b098-c49f3f518b5f" type="video/mp4">
+    Your browser does not support the video tag.
+</video>](http://url-to-light-theme-page)
+
+##### Dark Theme:
+[<video width="400" height="200" controls>
+    <source src="https://github.com/user-attachments/assets/1b305f75-26b3-41c3-a19a-6f7bd043d393" type="video/mp4">
+    Your browser does not support the video tag.
+</video>](http://url-to-dark-theme-page)
+
+**[⬆ back to top](#quick-links)**
+
+
 
 ## <a id="blog-cards"></a>Blog Post Cards
 
@@ -135,6 +162,23 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+## <a id="pricing-table"></a>Pricing Table
+
+[<img src="images/pricingtable1.png" height="230" title="Demo 1">](http://url-to-page)
+[<img src="images/pricingtable2.png" height="230" title="Demo 2">](http://url-to-page)
+[<img src="images/pricingtable3.png" height="230" title="Demo 3">](http://url-to-page)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="social-icons"></a>Social_media_icons
+
+[<img src="images/icons.png" height="230" title="Social-media-icons">]
+
+**[⬆ back to top](#quick-links)**
+
+---
 
 ## <a id="Accordion"></a>Accordion / Toggle
 
@@ -142,6 +186,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/toggler.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/pyXQrj)
 [<img src="images/toggler2.png" height="230" title="Demo 3">](http://codepen.io/PaulZi/pen/zBbVvV)
 [<img src="images/accordion.gif" height="230" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)
+[<img src="images/AccordionAndFAQ.gif" height="230" title="Demo 5">](https://codepen.io/theslladev/pen/dyxzEqy)
 
 **[⬆ back to top](#quick-links)**
 
@@ -157,6 +202,12 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+&nbsp;
+
+## <a id="bus"></a>Bus
+
+<img src="images/bus.png" height="230" title="Demo 1">
+
 
 ## <a id="captain"></a>Captain America Shield
 
@@ -310,6 +361,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/loader9.png" height="230" title="Demo 9">](http://codepen.io/viduthalai1947/pen/JkhDK)
 [<img src="./images/css-loader-purna.gif" alt="CSS-Loader-Purna" height="230" title="CSS-Loader-Purna">](https://codepen.io/purnaaa/pen/vYVVygB)
 [<img src="images/loader10.png" height="230" title="Demo 10">](https://codepen.io/Sahil-Patil-the-sans/pen/WNPbVqK)
+[<img src="images/loader11.gif" height="230" title="Demo 11">](https://codepen.io/sugeng-sulistiyawan/pen/PoyjPWd)
+[<img src="images/loader12.gif" height="230" title="Demo 12">](https://github.com/TechGenie-awake/You-Dont-Need-JavaScript/blob/patch-1/Loading/loading.gif)
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -356,9 +411,18 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="buttonLikeCred"></a>Button Rotate and Ripple Animation
+
+[<img src="images/buttonRotatingRipple.gif" height="250" title="Demo">](https://codepen.io/harsharora1205/pen/ExqZEyw)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="buttonEffect"></a>Button Hover Click Animation
 
 [<img src="images/buttonHoverClick.gif" height="250" title="Demo">](https://codepen.io/harsharora1205/pen/oNKYaME)
+[<img src="images/ButtonNeon.gif" height="250" title="Demo">](https://codepen.io/sugeng-sulistiyawan/pen/eYPRpZN)
 
 **[⬆ back to top](#quick-links)**
 
@@ -532,6 +596,16 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="Netflix-Clone-v2"></a>Netflix Clone Demo
+
+[<img src="Netflix Clone v2/Screenshot1.png" height="230" title="Demo 1">](http://url-to-page)
+[<img src="Netflix Clone v2/Screenshot2.png" height="230" title="Demo 2">](http://url-to-page)
+[<img src="Netflix Clone v2/Screenshot3.png" height="230" title="Demo 3">](http://url-to-page)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="shake-button"></a>Shake Button
 
 [<img src="images/shake-button.gif" height="230" title="Demo">](https://codepen.io/krushnarout/pen/zYyLEmM)
@@ -543,6 +617,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="moving_hand"></a>Shake Button
 
 [<img src="images/moving_hand.png" height="230" title="image">](examples/Moving_hand.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Download_buttons"></a>Download buttons
+
+[<img src="images/Download_buttons.png" title="Download_buttons">](https://codepen.io/Shail-Sharma-the-animator/pen/rNXYMGx)
 
 **[⬆ back to top](#quick-links)**
 
@@ -576,6 +658,8 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 [<img src="images/Switch.gif" height="230" title="Switch">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/Switch.gif)
 
+[<img src="images/New_Switch.gif" height="230" title="New_Switch">](https://codepen.io/shail-sharma/pen/PoMpvjO)
+
 **[⬆ back to top](#quick-links)**
 
 ---
@@ -588,9 +672,9 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-## <a id="scenary"></a>Scenary
+## <a id="scenery"></a>Scenery
 
-[<img src="images/scenary.gif" height="230" title="scenary">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/5943c92d-c9d3-401e-a8dd-88091a1d839d)
+[<img src="images/scenary.gif" height="230" title="scenery">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/5943c92d-c9d3-401e-a8dd-88091a1d839d)
 
 **[⬆ back to top](#quick-links)**
 
@@ -598,7 +682,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="bubble"></a>Bubble
 
-[<img src="images/bubble.gif" height="230" title="scenary">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/17b72752-9010-4433-9d1e-b9a24a8f5222)
+[<img src="images/bubble.gif" height="230" title="bubble">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/17b72752-9010-4433-9d1e-b9a24a8f5222)
 
 **[⬆ back to top](#quick-links)**
 
@@ -861,6 +945,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ![img_source](images/profileCards/card4.png)
 ![img_source](images/profileCards/card5.png)
 ![img_source](images/profileCards/card6.png)
+![img_source](images/profileCards/card7.png)
 
 **[⬆ back to top](#quick-links)**
 
@@ -889,6 +974,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
+## <a id="mmt"></a>MakemyTrip
+
+![img_source](MakemyTrip/screenshot.png)
+
+---
+**[⬆ back to top](#quick-links)**
 
 ## <a id="zomato"></a>Zomato
 
@@ -926,6 +1018,25 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
+## <a id="horizontal-image-slider"></a>Horizontal Image Slider
+
+<img src="Horizontal image slider/images/horizontal-image-slider.gif" height="230" title="horizontal-image-slider">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="carousel-effect"></a>Carousel Effect
+
+
+[Download the demo video](https://raw.githubusercontent.com/amrutha-m206/You-Dont-Need-JavaScript/carousel_effect-feature/images/carousel_demo.mp4)
+
+
+
+
+**[⬆ back to top](#quick-links)**
+
 ## Contributors
 
 Thanks to these wonderful people who have contributed to this project!

@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x:hidden;
+}
+header{
+    display: flex;
+    background-color: white;
+    width: 102%;
+    height: 98px;
+    margin: -8px -8px;
+    justify-content: space-between;
+    position: fixed;
+    /* flex-shrink: 2; */
+}
+
+.left{
+    width: 200px;
+    /* height: 150px; */
+    color: yellow;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin:-12px -42px;
+    
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+    /* border: 3px solid green; */
+}
+img{
+    width: 106px;
+    cursor: pointer;
+    position: relative;
+    top: 44px;
+}
+h3{
+    margin: 0px 55px;
+    cursor: pointer;
+}
+.right{
+    width: 700px;
+    background: transparent;
+    /* height: 150px; */
+    /* border: 3px solid red; */
+    color: black;
+}
+.navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin:8px 70px;
+}
+.navbar li{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 19px;
+    margin:35px 32px;
+    cursor: pointer;
+    transition: all 0.6s;
+    
+}
+.navbar li:hover{
+    color: rgb(0, 183, 255);
+    transition: all 0.6s;
+}
+.next{
+    /* border: 3px solid green ; */
+    width: 102%;
+    height: 650px;
+    margin: 8px -8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: column;  */
+    
+    background-image: url('https://cdn.pixabay.com/photo/2016/08/27/15/57/natchez-1624414_1280.jpg');
+}
+.text{
+    /* border: 2px solid red; */
+    color: yellow;
+    margin:0px 55px;
+    width: 800px;
+    height: 95px;
+    padding: 0px 30px;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text h4{
+    color: white;
+    font-size: 28px;
+}
+.back{
+    /* border: 2px solid yellow; */
+    width:1000px;
+    height: 100px;
+    /* background-color: white; */
+    /* opacity: 45%; */
+    
+}
+.back input{
+    height: 32px;
+    width: 170px;
+    border-radius: 12px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    padding: 5px;
+}
+button{
+    border: 1px solid black;
+    width: 100px;
+    cursor: pointer;
+    height: 42px;
+    border-radius: 12px;
+    background-color: rgb(0, 183, 255);
+    transition: all 0.8s;
+}
+button:hover{
+    transition: all 0.8s;
+    background: black;
+    color: rgb(0, 183, 255);
+}
+@media(max-width:768px){
+    .navbar ul li{
+        display: none;
+    }
+    /* .navbar ul{
+
+    } */
+}
+
+

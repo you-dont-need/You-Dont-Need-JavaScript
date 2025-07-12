@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Navigation Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        nav {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+        li {
+            position: relative;
+        }
+
+        a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #007BFF; /* Color change on hover */
+        }
+
+        /* Underline effect */
+        a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background: #007BFF;
+            transition: width 0.3s ease, left 0.3s ease;
+            width: 0;
+            left: 50%;
+            position: absolute;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+
+        /* On hover */
+        a:hover::after {
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            ul {
+                flex-direction: column; /* Stack items vertically on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

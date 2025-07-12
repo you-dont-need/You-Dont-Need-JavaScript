@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Underwater Text Animation</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #000428, #004e92);
+            overflow: hidden;
+            perspective: 1000px;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: #fff;
+            font-size: 3em;
+            font-family: 'Arial', sans-serif;
+            transform-style: preserve-3d;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .ripple {
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            top: -25%;
+            left: -25%;
+            background: 
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 10%, transparent 20%),
+                radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15) 15%, transparent 25%),
+                radial-gradient(circle at 70% 70%, rgba(255,255,255,0.1) 20%, transparent 30%);
+            background-size: 50px 50px, 30px 30px, 40px 40px;
+            pointer-events: none;
+            animation: ripple 8s infinite linear;
+            transform: translateZ(-10px);
+        }
+
+        .text {
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .bubbles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .bubble {
+            position: absolute;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+            border-radius: 50%;
+            animation: rise var(--duration) ease-in infinite;
+            opacity: 0;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotateX(0deg); }
+            50% { transform: translateY(-20px) rotateX(5deg); }
+        }
+
+        @keyframes ripple {
+            0% { transform: translateZ(-10px) rotate(0deg); }
+            100% { transform: translateZ(-10px) rotate(360deg); }
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px rgba(255,255,255,0.5); }
+            100% { text-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 30px rgba(255,255,255,0.6); }
+        }
+
+        @keyframes rise {
+            0% {
+                bottom: -20px;
+                transform: translateX(0) scale(0.3);
+                opacity: 0;
+            }
+            50% {
+                transform: translateX(var(--translate)) scale(1);
+                opacity: 0.8;
+            }
+            100% {
+                bottom: 120%;
+                transform: translateX(calc(var(--translate) * 2)) scale(0.3);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ripple"></div>
+        <div class="bubbles">
+            <div class="bubble" style="--duration: 4s; --translate: 20px; left: 10%;"></div>
+            <div class="bubble" style="--duration: 6s; --translate: -30px; left: 30%;"></div>
+            <div class="bubble" style="--duration: 5s; --translate: 40px; left: 50%;"></div>
+            <div class="bubble" style="--duration: 7s; --translate: -20px; left: 70%;"></div>
+            <div class="bubble" style="--duration: 3s; --translate: 30px; left: 90%;"></div>
+        </div>
+        <div class="text">Underwater Magic</div>
+    </div>
+</body>
+</html>

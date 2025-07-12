@@ -1,43 +1,70 @@
+/* index1.css */
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #00203F, #1A0033, #001F54, #0A2E4C);
+  background-size: 200% 200%;
+  animation: bgShift 10s ease infinite;
+}
+
+@keyframes bgShift {
+  0%, 100% {
+      background-position: 0% 50%;
   }
-  
-  .container {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #203733;
+  50% {
+      background-position: 100% 50%;
   }
-  
-  .text1 span {
-    font-size: 60px;
-    padding: 0 10px;
-    text-transform: uppercase;
-    color: #240707;
-    animation: zoomup 3s linear infinite;
-    animation-delay: calc(70ms * var(--i));
-  }
-  
-  
-  @keyframes zoomup {
-    0%,
-    100% {
-      color: #00c2ba;
+}
+
+.text1 {
+  display: flex;
+}
+
+.text1 span {
+  font-size: 80px;
+  padding: 0 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ff007f;
+  animation: neonGlow 3s ease-in-out infinite, waveEffect 1.5s ease-in-out infinite;
+  animation-delay: calc(100ms * var(--i));
+}
+
+@keyframes neonGlow {
+  0%, 100% {
+      color: #ff007f;
       filter: blur(1px);
-      text-shadow: 0 0 10px #00c2ba, 0 0 20px #541a8b, 0 0 30px #00c2ba,
-        0 0 40px #00c2ba, 0 0 60px #00c2ba, 0 0 80px #00c2ba, 0 0 100px #00c2ba,
-        0 0 120px #00c2ba;
-    }
-  
-    5%,
-    95% {
-      filter: blur(0);
-      color: #ffffff;
-      text-shadow:none;
-    }
+      text-shadow: 0 0 10px #ff007f, 0 0 20px #ff00ff, 0 0 30px #ff007f,
+                   0 0 40px #00c2ff, 0 0 70px #ff007f, 0 0 80px #ff007f,
+                   0 0 100px #ff00ff, 0 0 150px #ff007f;
   }
+  50% {
+      color: #00f9ff;
+      text-shadow: 0 0 10px #00f9ff, 0 0 20px #00ff99, 0 0 30px #00f9ff,
+                   0 0 40px #ff007f, 0 0 70px #00ff99, 0 0 80px #ff007f,
+                   0 0 100px #00f9ff, 0 0 150px #00f9ff;
+  }
+}
+
+@keyframes waveEffect {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}

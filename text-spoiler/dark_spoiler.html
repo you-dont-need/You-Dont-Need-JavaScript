@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Text Spoiler Effect - Dark Theme</title>
+    <style>
+        :root {
+            --spoiler-color: rgb(100, 255, 218);
+            --background-color: rgb(20, 20, 20);
+            --glass-background: rgba(255, 255, 255, 0.1); 
+            --head-c: rgb(173, 216, 230); 
+            --text-color: rgb(173, 216, 230);
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        span {
+            cursor: pointer;
+        }
+
+        .head-t {
+            color: var(--head-c);
+        }
+
+        .head-t:hover {
+            color: rgb(0, 191, 255);
+        }
+
+        .post {
+            background: var(--glass-background);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            line-height: 1.8rem;
+            margin: 10px 0;
+            color: var(--text-color);
+        }
+
+        .spoiler {
+            background: var(--spoiler-color);
+            color: var(--spoiler-color); 
+            transition: all .5s ease-in;
+            padding: 4px 8px;
+            border-radius: 5px;
+        }
+
+        .spoiler:hover {
+            background: initial;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="head-t">
+        Spoiler Effect  
+    </h1>
+    <div class="post">
+        <p>Once upon a time in a land far, far away, there was a chicken named <span class="spoiler">Cluck Norris</span>. Cluck had a reputation for being the toughest chicken in the coop. One day, he challenged a <span class="spoiler">fierce fox</span> to a duel. Everyone gathered to watch the showdown. The fox was confident and said, "<span class="spoiler">You’re just a chicken! What do you think you can do?</span>"</p>
+        <p>Cluck replied, "<span class="spoiler">Well, I’ve mastered the art of egg-fu!</span>" The fox was puzzled but thought it was a joke. However, Cluck didn’t crack under pressure. He simply flapped his wings and did a chicken dance that was so mesmerizing, the fox fell asleep!</p>
+        <p>When the fox woke up, he found himself covered in feathers. Cluck had won! The moral of the story? Sometimes, it’s not about fighting but about dancing your way out of trouble. And if you ever find yourself in a tight spot, just remember: when in doubt, <span class="spoiler">dance it out!</span></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+main {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+}
+
+details {
+	border-bottom: 3px solid purple;
+	max-width: 67ch;
+	width: 100%;
+}
+
+details[open] > summary {
+	background-color: #0a2240;
+	color: white;
+}
+
+summary {
+	background-color: #e3e3e3;
+	cursor: pointer;
+	font-family: "Fira Code", Calibri, sans-serif;
+	font-weight: bold;
+	padding: 10px;
+
+	&:hover {
+		background-color: purple;
+		color: white;
+	}
+}
+
+.toggle,
+.answer {
+	padding-left: 30px;
+}
+
+dt {
+	color: purple;
+	font-weight: bold;
+}
+
+code {
+	background-color: #0a2240;
+	color: white;
+}

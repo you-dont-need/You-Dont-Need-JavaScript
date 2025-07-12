@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Circular Text Button Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>Button with Rotating Text and Ripple Animation</h1>
+
+            <div class="button-container">
+                <!-- Circular button with arrow -->
+                <button class="arrow-button">
+                    <svg viewBox="0 0 100 100" class="arrow-svg">
+
+                        <!-- Arrow -->
+                        <line class="arrow-tail" x1="30" y1="50" x2="70" y2="50" stroke="#d0d7d9" stroke-width="4" />
+                        <polygon class="arrow-head" points="65,45 75,50 65,55" fill="#d0d7d9" />
+
+                    </svg>
+                </button>
+
+                <!-- Rotating Text -->
+                <div class="rotating-text">
+                    <svg viewBox="0 0 200 200">
+                        <defs>
+                            <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
+                        </defs>
+                        <text lengthAdjust="spacingAndGlyphs" textLength="471">
+                            <textPath href="#circlePath" startOffset="0%">
+                                EXPLORE • EXPLORE • EXPLORE • EXPLORE • EXPLORE •&nbsp;
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+
+                <!-- Ripple Animation -->
+                <div class="ripple"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

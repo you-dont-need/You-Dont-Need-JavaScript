@@ -1,59 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Comparison Table</title>
     <style>
+
+
         body {
+            font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            background-color: #ffffff;
         }
-
         .table-container {
-            width: 60%;
-            position: relative;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            box-shadow: 0 0 10px 5px rgba(52, 152, 219, 0.7);
+            width: 90%;
+            max-width: 1200px;
+            overflow-x: auto;
+            background-color: white;
             border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+            background-color: white;
+        }
         th, td {
             padding: 15px;
             text-align: left;
-            font-family: 'Helvetica', Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-            letter-spacing: 1px;
+            border-bottom: 1px solid #e0e0e0;
         }
-
         th {
             background-color: #3498db;
             color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         th:hover {
-            color: #e74c3c;
-            transform: scale(1.1);
-            transition: color 0.3s, transform 0.3s;
+            background-color: #2980b9;
         }
-
         tr:nth-child(even) {
-            background-color: #f2f2f2;
+            background-color: #f8f8f8;
         }
-
-        tr:nth-child(odd) {
-            background-color: #e9e9e9;
-        }
-
         tr:hover {
-            background-color: #3498db;
-            color: white;
-            transition: background-color 0.3s, color 0.3s;
+            background-color: #e8f4fd;
+        }
+        td:first-child {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .price {
+            font-weight: bold;
+            color: #27ae60;
+        }
+        .rating {
+            color: #f39c12;
+        }
+        @media (max-width: 768px) {
+            .table-container {
+                width: 95%;
+            }
+            th, td {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -62,26 +81,56 @@
         <table>
             <thead>
                 <tr>
-                    <th>Header 1</th>
-                    <th>Header 2</th>
-                    <th>Header 3</th>
+                    
+                <th>Product</th>
+                    <th>Brand</th>
+                    <th>Price</th>
+                    <th>Rating</th>
+                    <th>Features</th>
+                    <th>Availability</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                    <td>Data 3</td>
+                    <td>Smartphone X</td>
+                    <td>TechGiant</td>
+                    <td class="price">$999</td>
+                    <td class="rating">★★★★☆</td>
+                    <td>5G, 6.7" OLED, 128GB</td>
+                    <td>In Stock</td>
                 </tr>
                 <tr>
-                    <td>Data 4</td>
-                    <td>Data 5</td>
-                    <td>Data 6</td>
+                    <td>Laptop Pro</td>
+                    <td>MegaBook</td>
+                    <td class="price">$1499</td>
+                    <td class="rating">★★★★★</td>
+                    <td>i7, 16GB RAM, 512GB SSD</td>
+                    <td>2-3 day shipping</td>
                 </tr>
                 <tr>
-                    <td>Data 7</td>
-                    <td>Data 8</td>
-                    <td>Data 9</td>
+                    <td>Smart Watch 3</td>
+                    <td>FitTech</td>
+                    <td class="price">$299</td>
+                    <td class="rating">★★★★☆</td>
+                    <td>Heart rate, GPS, 5ATM</td>
+                    <td>In Stock</td>
+                </tr>
+                <tr>
+                    <td>4K TV 55"</td>
+                    <td>ViewMaster</td>
+                    <td class="price">$699</td>
+                    <td class="rating">★★★★★</td>
+                    <td>HDR, 120Hz, Smart TV</td>
+                    <td>Limited Stock</td>
+                </tr>
+                <tr>
+                    
+                    <td>Wireless Earbuds</td>
+                    <td>AudioPro</td>
+                    <td class="price">$159</td>
+                    <td class="rating">★★★★☆</td>
+                    <td>ANC, 24h battery, IPX4</td>
+                    <td>In Stock</td>
                 </tr>
             </tbody>
         </table>
