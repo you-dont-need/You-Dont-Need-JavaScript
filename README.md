@@ -76,6 +76,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Profile Cards](#profilecards)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
 - [Ripple Effect](#ripple-effect)
+- [Redar Loader](#Redar-Loader)
 - [Scary Animation](#scary-animation)
 - [Scenery](#scenary)
 - [Shake Button](#shake-button)
@@ -497,6 +498,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="ResponsiveItemShowcase"></a>Responsive Counter Showing # of Items That Didn't Fit Screen
 
 [<img src="images/responsive-item-showcase.gif" title="Responsive Item Showcase">](https://codepen.io/pavlovsk/pen/QqrZzv/right/)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Redar Loader"></a>A loading with 3d Readar
+
+[<img src="images/redar_loader.gif" title="Redar Loader">](https://codepen.io/shail2604/pen/JoGKqda)
 
 **[⬆ back to top](#quick-links)**
 
