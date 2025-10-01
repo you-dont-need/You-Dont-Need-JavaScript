@@ -89,6 +89,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Todo List](#todo-list)
 - [Tooltips](#tooltips)
 - [Treeview](#treeview)
+- [Tri Color Loader](#Tri-color-loader)
 - [Twitter Heart Animation](#twitter-heart-animation)
 - [Book Animation](#book-animation)
 - [Zomato](#zomato)
@@ -261,6 +262,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/Travel_01.png" height="250" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Travel_01.png)
 [<img src="images/Travel_02.png" height="250" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Travel_02.png)
 [<img src="images/Travel_03.png" height="250" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Travel_03.png)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Tri color loader"></a>Tri color loader
+
+[<img src="images/tri_color_loader.gif" title="Tri color loader">](https://codepen.io/shail2604/pen/raxLgbo)
 
 **[⬆ back to top](#quick-links)**
 
