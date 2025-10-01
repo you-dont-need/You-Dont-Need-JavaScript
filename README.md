@@ -503,7 +503,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-## <a id="Redar Loader"></a>A loading with 3d Readar
+## <a id="Redar Loader"></a>Readar Loader
 
 [<img src="images/redar_loader.gif" title="Redar Loader">](https://codepen.io/shail2604/pen/JoGKqda)
 
