@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typewriter Effect</title>
+  <style>
+    /* Container for centering the text */
+    .typewriter-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #1a1a1a; /* Dark background for contrast */
+      font-family: 'Courier New', Courier, monospace;
+      color: #ffffff;
+    }
+
+    /* Typewriter text styling */
+    .typewriter {
+      overflow: hidden; /* Hide text beyond the current width */
+      white-space: nowrap; /* Keep text in a single line */
+      font-size: 2.5rem; /* Adjust font size */
+      font-weight: bold;
+      border-right: 0.15em solid #00ff88; /* Blinking cursor color */
+      animation: 
+        typing 4s steps(40, end) forwards, /* Typing effect */
+        blink-cursor 0.75s step-end infinite; /* Blinking cursor */
+    }
+
+    /* Typing animation */
+    @keyframes typing {
+      from {
+        width: 0; /* Start with no width */
+      }
+      to {
+        width: 100%; /* Expand to full width */
+      }
+    }
+
+    /* Blinking cursor animation */
+    @keyframes blink-cursor {
+      0%, 100% {
+        border-color: transparent; /* Hide cursor */
+      }
+      50% {
+        border-color: #00ff88; /* Show cursor */
+      }
+    }
+
+    /* Optional: Responsive font size */
+    @media (max-width: 768px) {
+      .typewriter {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="typewriter-container">
+    <div class="typewriter">Hello, World! I'm typing...</div>
+  </div>
+</body>
+</html>
