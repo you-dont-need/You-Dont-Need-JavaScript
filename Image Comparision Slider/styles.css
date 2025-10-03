@@ -1,0 +1,166 @@
+.image-compare {
+    --splitter-color: hotpink;
+    --splitter-size: 0.125rem;
+    --expand: 0.875rem;
+    --handle-size: calc(var(--expand) + var(--splitter-size));
+    position: relative;
+}
+
+.image-compare span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(-1 * var(--expand));
+    bottom: calc(-1 * var(--expand));
+    width: calc(var(--expand) + 50% + var(--splitter-size) / 2);
+    max-width: calc(var(--expand) + 100%);
+    min-width: var(--handle-size);
+    padding-left: var(--expand);
+    padding-bottom: var(--expand);
+    background: linear-gradient(135deg, transparent 0, transparent 50%, var(--splitter-color) 50%, var(--splitter-color)) 100% 100% / var(--handle-size) var(--handle-size) no-repeat;
+    resize: horizontal;
+    overflow: hidden;
+}
+
+.image-compare img {
+    display: block;
+    height: 100%;
+    user-select: none;
+}
+
+.image-compare>img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-compare span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: var(--expand);
+    border-right: var(--splitter-size) solid var(--splitter-color);
+}
+
+/* Safari Workaround */
+@supports (-webkit-hyphens: none) {
+
+    /* Safari */
+    .image-compare span {
+        width: var(--handle-size);
+    }
+}
+
+/* Accessibility Fallback #1 */
+@keyframes pingpong {
+
+    0%,
+    100% {
+        width: calc(var(--expand) + 50% + var(--splitter-size) / 2);
+    }
+
+    75% {
+        width: var(--handle-size);
+    }
+
+    25% {
+        width: calc(var(--expand) + 100%);
+    }
+}
+
+.image-compare:focus span {
+    background-image: none;
+    animation: pingpong 5s linear infinite;
+    resize: none;
+}
+
+/* Accessibility Fallback #2 */
+@keyframes fade {
+
+    0%,
+    23%,
+    77%,
+    100% {
+        opacity: 1;
+    }
+
+    27%,
+    73% {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .image-compare:focus span {
+        width: calc(var(--expand) + 100%);
+        animation-name: fade;
+    }
+
+    .image-compare:focus span::after {
+        display: none;
+    }
+}
+
+/* Base styles */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:focus {
+    outline: 1px dashed hotpink;
+    outline-offset: 1px;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.5;
+    font-size: 100%;
+}
+
+body {
+    max-width: 24rem;
+    margin: 1rem auto 6rem;
+    background: #f0f0f0;
+}
+
+figure {
+    padding: 1rem;
+    background-color: #ccc;
+}
+
+figure,
+p {
+    margin: 0 0 1rem;
+}
+
+/* Image filter hack - use same image but make span version grayscale */
+span img {
+    filter: grayscale(1);
+}
+
+/* Additional styling for better presentation */
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.instructions {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #e9e9e9;
+    border-radius: 8px;
+    color: #666;
+}
