@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Pomodoro</h1>
+  <div class="main-flex-container">
+    <div class="pomodoro-container">
+      <div class="tabs">
+        <button class="tab active" data-mode="work">Work</button>
+        <button class="tab" data-mode="short">Short Break</button>
+        <button class="tab" data-mode="long">Long Break</button>
+      </div>
+      <div class="timer-display" id="timer">25:00</div>
+      <div class="controls">
+        <button id="start">Start</button>
+        <button id="reset">Reset</button>
+      </div>
+      <audio id="buzzer" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" preload="auto"></audio>
+    </div>
+    <div class="tasks-section">
+      <h2>Tasks</h2>
+      <div class="task-input-container">
+        <input type="text" id="task-input" placeholder="Add a new task...">
+        <button id="add-task">Add</button>
+      </div>
+      <ul id="task-list"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
