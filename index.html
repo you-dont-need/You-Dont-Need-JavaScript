@@ -320,6 +320,40 @@
 		#toggleButton {
 			display: none;
 		}
+
+
+		/* Footer Styling */
+/* Ensure the page takes full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content grows to fill space */
+.author-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Footer styling */
+.author-footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+.author-footer a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.author-footer a:hover {
+  color: #f39c12;
+}
+
+
 	</style>
 </head>
 
@@ -549,6 +583,32 @@
 			}
 		});
 	</script>
+
+
+
+
+		<!-- Author Page Content -->
+<div class="author-content">
+  <h1>About the Author</h1>
+  <p>Author bio goes here. You can add profile photo, social links, and other info.</p>
+</div>
+
+<!-- Footer Section -->
+<footer class="author-footer">
+  <div class="footer-container">
+    <p>&copy; 2025 Your Website Name. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy">Privacy Policy</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</footer>
 </body>
 
 </html>
+
