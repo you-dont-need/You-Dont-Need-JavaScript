@@ -1,0 +1,111 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+/* Container */
+.menu {
+  position: relative;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  margin: 16px;
+  z-index: 2; /* above menu */
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animate to "X" when checked */
+#menu-toggle:checked + .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menu list */
+.menu-items {
+  position: absolute;
+  top: 0;
+  left: -220px;
+  width: 200px;
+  height: 100vh;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 60px 20px;
+  list-style: none;
+  transition: left 0.3s ease;
+}
+
+.menu-items li {
+  margin: 20px 0;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.menu-items a:hover {
+  color: #0077cc;
+}
+
+/* Slide in when checked */
+#menu-toggle:checked ~ .menu-items {
+  left: 0;
+}
+
+/* ========================= */
+/* Dark Mode Styles          */
+/* ========================= */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #eee;
+  }
+
+  .hamburger span {
+    background: #eee;
+  }
+
+  .menu-items {
+    background: #1e1e1e;
+  }
+
+  .menu-items a {
+    color: #eee;
+  }
+
+  .menu-items a:hover {
+    color: #66b2ff;
+  }
+}
