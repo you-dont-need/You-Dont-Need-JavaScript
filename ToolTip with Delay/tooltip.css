@@ -1,0 +1,68 @@
+/* Reset */
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fafafa;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Target element */
+.tooltip-target {
+  padding: 10px 20px;
+  border: none;
+  background: #0077cc;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 6px 12px;
+  border-radius: 4px;
+  
+  position: absolute;
+  bottom: 125%; /* above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  white-space: nowrap;
+  pointer-events: none;
+
+  /* Animation */
+  transition: opacity 0.3s ease;
+  transition-delay: 0s; /* will be updated on hover */
+}
+
+/* Tooltip arrow */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Show tooltip with delay */
+.tooltip-target:hover + .tooltip-text,
+.tooltip-target:focus + .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.5s; /* delay before showing */
+}
