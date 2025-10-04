@@ -61,6 +61,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Horizontal image slider](#horizontal-image-slider)
 - [Image Gallery](#image-gallery)
 - [Image Hover Effect]()
+- [Image Comparison Slider](#image-comparison-slider)
 - [Infinite Carousel](#infinite-carousel)
 - [Info on Hover / Popover](#info-on-hover-popover)
 - [Jumping Ball](#jumping-ball)
@@ -79,6 +80,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Pendulum](#pendulum)
 - [Playing Card Animation](#playing-card-animation)
 - [Profile Cards](#profilecards)
+- [Radial Color Pulsar](#RadialPulsar)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
 - [Ripple Effect](#ripple-effect)
 - [Scary Animation](#scary-animation)
@@ -333,6 +335,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/gallery3.png" height="230" title="Demo 2">](https://codepen.io/olgamozejko/pen/yLjwyye)
 [<img src="images/vertical-gallery.gif" height="230" title="Demo 4">]()
 [<img src="./Author/a-img2.jpg" height="230" title="Demo 5">]()
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="image-comparison-slider"></a>Image Comparison Slider
+
+[<img src="Image Comparision Slider/ss_1.png" height="230" title="Pure CSS Image Comparison Slider Demo 1">](Image%20Comparision%20Slider/index.html)
+[<img src="Image Comparision Slider/ss_2.png" height="230" title="Pure CSS Image Comparison Slider Demo 2">](Image%20Comparision%20Slider/index.html)
 
 **[⬆ back to top](#quick-links)**
 
@@ -900,6 +911,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="SolarSystem"></a>SolarSystem
 
 ![img_source](SolarSystem/output.png)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="RadialPulsar"></a>Radial Color Puslar
+
+[<img src="Radial Color Pulsar/Radial.png" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
 
 **[⬆ back to top](#quick-links)**
 
