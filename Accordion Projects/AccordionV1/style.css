@@ -1,0 +1,132 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+/* Accordion Styles */
+.accordion input[type="checkbox"] {
+  display: none;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  background: #f3f4f6;
+  transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: #e5e7eb;
+}
+
+.icon::before {
+  content: "+";
+  font-size: 1.5rem;
+  color: #2563eb; /* blue icon */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Rotate icon when active */
+input[type="checkbox"]:checked + .accordion-header .icon::before {
+  content: "–";
+  color: #dc2626; /* red when open */
+}
+
+/* Accordion Content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #f9fafb;
+  border-left: 3px solid #2563eb;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+input[type="checkbox"]:checked + .accordion-header + .accordion-content {
+  max-height: 200px;
+  padding: 1rem;
+}
+
+/* Footer credit */
+.credit {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.credit a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.credit a:hover {
+  color: #2563eb;
+}
+
+.github-icon {
+  fill: currentColor;
+}
+
+.author {
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem;
+  }
+  .title {
+    font-size: 1.6rem;
+  }
+  .accordion-header {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+  .author {
+    font-size: 0.95rem;
+  }
+}
