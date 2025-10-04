@@ -106,7 +106,7 @@ img.apple {
     p
 }
 
-.text-field.lock{
+.text-field.lock {
     width:15px;
     height:20px;
 }
@@ -344,4 +344,24 @@ img.apple {
         flex-direction: column-reverse;
         padding: 48px 48px 48px 32px;
     }
+
+    
+    /* .my-form__button {
+        background: linear-gradient(90deg, #19d7f8, #fd00da);
+        border: none;
+        padding: 12px 20px;
+        border-radius: 25px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+
+    .my-form__button:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        opacity: 0.9;
+    } */
+
 }
