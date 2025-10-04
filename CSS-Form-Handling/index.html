@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Only Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>CSS-Only Account Signup</h1>
+            <p class="subtitle">An interactive form validation — zero JavaScript, pure CSS.</p>
+            
+            <!-- Success Message (Hidden by default) -->
+            <div class="success-popup" id="success">
+                <div class="popup-content">
+                    <h2>🎉 Account Created Successfully!</h2>
+                    <p>Welcome! Your account has been created and you're ready to get started.</p>
+                    <a href="./index.html" class="close-btn">Create Another Account</a>
+                </div>
+            </div>
+            
+            <form class="validation-form" action="#success" method="GET">
+                <!-- Name Field -->
+                <div class="input-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required 
+                        minlength="2"
+                        pattern="[A-Z][A-Za-z\s]{2,}"
+                        placeholder="Enter your full name"
+                    />
+                    <div class="error-message">Please enter a valid name (first letter need to be capital, letters only, minimum 2 letters required)</div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="input-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        pattern="^[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$"
+                        required 
+                        placeholder="Enter your email address"
+                    />
+
+                    <div class="error-message">Please enter a valid email address</div>
+                </div>
+
+                <!-- Phone Field -->
+                <div class="input-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        required 
+                        pattern="^(\d{3}-\d{3}-\d{4}|\d{10})$"
+                        placeholder="435-837-2847"
+                    />
+                    <div class="error-message">Please enter a valid phone number in the format XXX-XXX-XXXX</div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="input-group">
+                    <label for="password">Password <span class="required">*</span></label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required 
+                        minlength="6"
+                        placeholder="Enter your password"
+                    />
+                    <div class="error-message">Password must be at least 6 characters long</div>
+                </div>
+
+                <!-- Terms Checkbox -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">
+                        I agree to the <a href="#" target="_blank">Terms and Conditions</a> <span class="required">*</span>
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-button">
+                    Create Account
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
