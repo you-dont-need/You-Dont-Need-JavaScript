@@ -448,4 +448,32 @@ a{
 @keyframes mover {
     to { transform: translateY(-40px); }
 }
+/* Footer Styling */
+.footer {
+    background-color: #111; /* dark background */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer .social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer .social-icons img:hover {
+    transform: scale(1.2);
+}
 
