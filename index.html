@@ -163,7 +163,7 @@
 				padding-left: 10px;
 				padding-right: 10px;
 				min-height: auto;
-				padding-top: 40px;
+				padding-top: 80px;
 				padding-bottom: 40px;
 			}
 
@@ -185,8 +185,60 @@
 				font-size: 14px;
 				padding: 4px 8px;
 			}
-			.dark-mode-toggle{
-				display: none;
+
+			/* Mobile adjustments for controls */
+			#google_element {
+				position: fixed;
+				top: 10px;
+				left: 10px;
+				z-index: 1001;
+			}
+
+			.dark-mode-toggle {
+				position: fixed;
+				top: 10px;
+				right: 10px;
+				z-index: 1001;
+			}
+
+			.dark-mode-toggle label {
+				width: 60px;
+				height: 30px;
+			}
+
+			.dark-mode-toggle label:after {
+				height: 24px;
+				width: 24px;
+				font-size: 10px;
+			}
+
+			.dark-mode-toggle input:checked ~ label:after {
+				left: 34px;
+			}
+
+			.google-translate-section {
+				margin: 20px 0;
+			}
+
+			.goog-te-gadget-simple {
+				padding: 12px 20px !important;
+				font-size: 14px !important;
+				border-radius: 20px !important;
+				min-width: 180px !important;
+			}
+
+			.goog-te-gadget-simple::before {
+				left: 15px !important;
+				font-size: 16px !important;
+			}
+
+			.goog-te-gadget-simple .goog-te-menu-value {
+				margin-left: 25px !important;
+			}
+
+			.goog-te-menu2-item {
+				padding: 12px 20px !important;
+				font-size: 13px !important;
 			}
 		}
 
@@ -232,61 +284,235 @@
 			color: #b0b0b0;
 		}
 
-		/* New styles for the dark mode toggle */
+		/* Enhanced styles for the dark mode toggle and language selector */
 		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-		.dark-mode-toggle {
-			/*display: flex;
-			justify-content: end;*/
-			margin: 10px;
+		/* Enhanced Google Translate Section */
+		.google-translate-section {
+			margin: 30px 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		/* Enhanced Google Translate Styling */
+		.goog-te-gadget {
+			font-family: 'Poppins', sans-serif !important;
+		}
+
+		.goog-te-gadget-simple {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+			border: none !important;
+			border-radius: 25px !important;
+			padding: 15px 25px !important;
+			color: white !important;
+			font-size: 16px !important;
+			font-weight: 600 !important;
+			box-shadow: 
+				0 8px 25px rgba(102, 126, 234, 0.3),
+				0 4px 10px rgba(0, 0, 0, 0.1),
+				inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+			cursor: pointer !important;
+			position: relative !important;
+			overflow: hidden !important;
+			backdrop-filter: blur(10px) !important;
+			border: 1px solid rgba(255, 255, 255, 0.1) !important;
+			min-width: 220px !important;
+		}
+
+		.goog-te-gadget-simple::before {
+			content: '🌐';
 			position: absolute;
-			top: 60px;
+			left: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 18px;
+			z-index: 1;
+		}
+
+		.goog-te-gadget-simple::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+			transition: left 0.6s ease;
+		}
+
+		.goog-te-gadget-simple:hover::after {
+			left: 100%;
+		}
+
+		.goog-te-gadget-simple:hover {
+			transform: translateY(-3px) scale(1.02) !important;
+			box-shadow: 
+				0 12px 35px rgba(102, 126, 234, 0.4),
+				0 6px 15px rgba(0, 0, 0, 0.2),
+				inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+		}
+
+		.goog-te-gadget-simple:active {
+			transform: translateY(-1px) scale(0.98) !important;
+		}
+
+		.goog-te-gadget-simple .goog-te-menu-value {
+			margin-left: 30px !important;
+		}
+
+		.goog-te-gadget-simple .goog-te-menu-value span:first-child {
+			color: white !important;
+			text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+			font-weight: 600 !important;
+		}
+
+		.goog-te-gadget-simple .goog-te-menu-value span:last-child {
+			color: rgba(255, 255, 255, 0.9) !important;
+			margin-left: 8px !important;
+		}
+
+		/* Enhanced dropdown menu styling */
+		.goog-te-menu2 {
+			background: rgba(255, 255, 255, 0.95) !important;
+			backdrop-filter: blur(20px) !important;
+			border-radius: 15px !important;
+			box-shadow: 
+				0 20px 40px rgba(0, 0, 0, 0.1),
+				0 8px 16px rgba(0, 0, 0, 0.05) !important;
+			border: 1px solid rgba(255, 255, 255, 0.2) !important;
+			overflow: hidden !important;
+			margin-top: 10px !important;
+		}
+
+		.goog-te-menu2-item {
+			padding: 15px 25px !important;
+			transition: all 0.3s ease !important;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+			font-size: 14px !important;
+		}
+
+		.goog-te-menu2-item:hover {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+			color: white !important;
+			transform: translateX(5px) !important;
+		}
+
+		.goog-te-menu2-item:last-child {
+			border-bottom: none !important;
+		}
+
+		/* Dark mode styles for Google Translate */
+		.dark-mode .goog-te-gadget-simple {
+			background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%) !important;
+			box-shadow: 
+				0 8px 25px rgba(74, 85, 104, 0.3),
+				0 4px 10px rgba(0, 0, 0, 0.2),
+				inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+			border: 1px solid rgba(255, 255, 255, 0.05) !important;
+		}
+
+		.dark-mode .goog-te-gadget-simple:hover {
+			box-shadow: 
+				0 12px 35px rgba(74, 85, 104, 0.4),
+				0 6px 15px rgba(0, 0, 0, 0.3),
+				inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+		}
+
+		.dark-mode .goog-te-menu2 {
+			background: rgba(30, 30, 30, 0.95) !important;
+			border: 1px solid rgba(255, 255, 255, 0.1) !important;
+		}
+
+		.dark-mode .goog-te-menu2-item {
+			color: #e2e8f0 !important;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+		}
+
+		.dark-mode .goog-te-menu2-item:hover {
+			background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%) !important;
+			color: white !important;
+		}
+
+		/* Dark mode toggle enhanced styling */
+		.dark-mode-toggle {
+			position: absolute;
+			top: 20px;
 			right: 20px;
 			z-index: 1000;
 		}
 		
 		.dark-mode-toggle label {
 			position: relative;
-			width: 73px;
-			height: 25px;
+			width: 80px;
+			height: 35px;
 			display: block;
-			background: #d9d9d9;
-			border-radius: 100px;
+			background: linear-gradient(135deg, #e3e3e3 0%, #f0f0f0 100%);
+			border-radius: 50px;
 			cursor: pointer;
-			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15),
-						-5px -5px 10px rgba(255, 255, 255, 0.7);
-			transition: background 0.3s ease, box-shadow 0.3s ease;
+			box-shadow: 
+				0 4px 15px rgba(0, 0, 0, 0.1),
+				inset 0 1px 0 rgba(255, 255, 255, 0.5);
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			border: 2px solid transparent;
+		}
+
+		.dark-mode-toggle label:hover {
+			transform: scale(1.05);
+			box-shadow: 
+				0 6px 20px rgba(0, 0, 0, 0.15),
+				inset 0 1px 0 rgba(255, 255, 255, 0.6);
 		}
 		
 		.dark-mode-toggle label:after {
-			content: '';
+			content: '☀️';
 			position: absolute;
-			height: 18px;
-			width: 34px;
-			background: #f2f2f2;
-			border-radius: 100px;
-			top: 3px;
+			height: 28px;
+			width: 28px;
+			background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+			border-radius: 50%;
+			top: 2px;
 			left: 3px;
-			transition: left 0.5s ease, background 0.3s ease;
-			box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2),
-						-3px -3px 6px rgba(255, 255, 255, 0.6);
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			box-shadow: 
+				0 2px 8px rgba(0, 0, 0, 0.2),
+				0 1px 3px rgba(0, 0, 0, 0.1);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 12px;
 		}
 		
 		.dark-mode-toggle input:checked ~ label {
-			background: #242424;
-			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4),
-						-5px -5px 10px rgba(255, 255, 255, 0.05);
+			background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+			box-shadow: 
+				0 4px 15px rgba(44, 62, 80, 0.3),
+				inset 0 1px 0 rgba(255, 255, 255, 0.1);
+		}
+
+		.dark-mode-toggle input:checked ~ label:hover {
+			box-shadow: 
+				0 6px 20px rgba(44, 62, 80, 0.4),
+				inset 0 1px 0 rgba(255, 255, 255, 0.15);
 		}
 		
 		.dark-mode-toggle input:checked ~ label:after {
-			left: 43px;
-			background: linear-gradient(180deg, #777, #3a3a3a);
-			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
-						-2px -2px 5px rgba(255, 255, 255, 0.1);
+			left: 47px;
+			background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+			content: '🌙';
+			box-shadow: 
+				0 2px 8px rgba(0, 0, 0, 0.3),
+				0 1px 3px rgba(0, 0, 0, 0.2);
 		}
 		
 		.dark-mode-toggle input {
 			display: none;
+		}
+
+		/* Add smooth transition for the entire page */
+		* {
+			transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 		}
 
 		/* java pic */
@@ -331,27 +557,6 @@
 	
 
 	<section id="pageSection">
-		<div id="google_element"></div>
-		<!-- Load Google Translate script over HTTPS and handle errors -->
-		<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"
-			onerror="handleError(this)"></script>
-
-		<script type="text/javascript">
-			function loadGoogleTranslate() {
-				new google.translate.TranslateElement(
-					{
-						pageLanguage: "en",
-						includedLanguages: "en,hi,pa,sa,mr,ur,bn,es,fr,de,it",
-						layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-					},
-					"google_element"
-				);
-			}
-
-			function handleError(error) {
-				console.error("Error loading Google Translate script:", error);
-			}
-		</script>
 		<div class="dark-mode-toggle">
 			<input type="checkbox" id="dark-mode">
 			<label for="dark-mode"></label>
@@ -362,7 +567,34 @@
 			</div>
 			<p class="description">Explore the power of pure CSS with our collection of interactive demos and examples.
 			</p>
+			
+			<!-- Enhanced Google Translate Section -->
+			<div class="google-translate-section">
+				<div id="google_element"></div>
+			</div>
 		</header>
+		
+		<!-- Load Google Translate script -->
+		<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"
+			onerror="handleError(this)"></script>
+
+		<script type="text/javascript">
+			function loadGoogleTranslate() {
+				new google.translate.TranslateElement(
+					{
+						pageLanguage: "en",
+						includedLanguages: "en,hi,pa,sa,mr,ur,bn,es,fr,de,it,pt,ru,ja,ko,zh,ar",
+						layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+					},
+					"google_element"
+				);
+			}
+
+			function handleError(error) {
+				console.error("Error loading Google Translate script:", error);
+			}
+		</script>
+		
 		<table id="pages">
 			<tr>
 				<th>Category</th>
@@ -548,6 +780,7 @@
 				localStorage.setItem('darkMode', 'disabled'); 
 			}
 		});
+
 	</script>
 </body>
 
