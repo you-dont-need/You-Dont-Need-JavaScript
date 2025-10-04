@@ -1064,3 +1064,6 @@ For detailed guidelines on how to contribute, please refer to our [CONTRIBUTING]
 **[⬆ back to top](#quick-links)**
 
 Let's build something great together!
+
+#License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
