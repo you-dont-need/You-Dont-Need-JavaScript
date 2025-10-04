@@ -80,6 +80,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Pendulum](#pendulum)
 - [Playing Card Animation](#playing-card-animation)
 - [Profile Cards](#profilecards)
+- [Radial Color Pulsar](#RadialPulsar)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
 - [Ripple Effect](#ripple-effect)
 - [Scary Animation](#scary-animation)
@@ -910,6 +911,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="SolarSystem"></a>SolarSystem
 
 ![img_source](SolarSystem/output.png)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="RadialPulsar"></a>Radial Color Puslar
+
+[<img src="Radial Color Pulsar/Radial.png" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
 
 **[⬆ back to top](#quick-links)**
 
