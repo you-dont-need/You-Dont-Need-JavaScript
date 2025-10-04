@@ -1,0 +1,82 @@
+ :root {
+    --bg-dark: #000000;
+    --size: 600px;
+    --blue: #00ffff;
+    --pink: #ff00ff;
+    --yellow: #ffff00;
+    --base-duration: 25s;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-dark);
+    overflow: hidden;
+    user-select: none;
+}
+.pulsar-stage {
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.1) inset, 0 0 20px rgba(0, 0, 0, 0.8);
+    background-color: var(--bg-dark); 
+}
+.pulsar-stage:hover .layer {
+    animation-duration: calc(var(--base-duration) / 8); 
+    filter: brightness(1.5);
+}
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    mix-blend-mode: screen; 
+    animation: rotateA var(--base-duration) linear infinite;
+}
+.layer:nth-child(1) {
+    background: radial-gradient(circle at 70% 30%, var(--blue) 0%, transparent 40%);
+    animation-name: rotateB;
+    animation-duration: calc(var(--base-duration) * 1.5);
+}
+.layer:nth-child(2) {
+    background: radial-gradient(circle at 30% 60%, var(--pink) 0%, transparent 40%);
+    animation-duration: var(--base-duration);
+    animation-delay: -5s;
+}
+.layer:nth-child(3) {
+    background: radial-gradient(circle at 50% 50%, var(--yellow) 0%, transparent 35%);
+    animation-duration: calc(var(--base-duration) / 2);
+    animation-delay: -10s;
+}
+@keyframes rotateA {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes rotateB {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+.info {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1em;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 10;
+}
