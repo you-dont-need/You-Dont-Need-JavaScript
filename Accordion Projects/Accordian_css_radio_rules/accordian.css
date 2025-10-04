@@ -1,0 +1,37 @@
+/* Style for the accordion */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Hide the checkbox inputs */
+.accordion input[type="checkbox"] {
+    display: none;
+}
+
+/* Style for the labels (buttons) */
+.accordion label {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Style for the labels when they are checked */
+.accordion input[type="checkbox"]:checked + label {
+    background-color: #e0e0e0;
+}
+
+/* Style for the content */
+.accordion .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+
+/* Style for the content when the checkbox is checked */
+.accordion input[type="checkbox"]:checked + label + .content {
+    max-height: 1000px; /* Adjust this value to your content's height */
+}
