@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap');
 
 *{
-    margin: 0;
-    padding: 0;
+ 
     box-sizing: border-box;
     background: #000;
 }
@@ -449,14 +448,6 @@ a{
     to { transform: translateY(-40px); }
 }
 
-
-
-        /* * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        } */
-
         body {
             background: #000;
             color: #fff;
@@ -613,8 +604,8 @@ a{
 
         .footer-bottom {
             max-width: 1400px;
-            margin: 0 auto;
-            padding-top: 30px;
+            margin: 0;
+            padding-top: 0;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: space-between;
