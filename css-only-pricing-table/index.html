@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Only Pricing Table</title>
+    <meta
+      name="description"
+      content="A pricing table with a pure CSS monthly/yearly toggle that swaps full plan content per card."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">CSS Only Pricing Table</h1>
+
+      <!-- ✅ The checkbox sits BEFORE both the toggle UI and the pricing table -->
+      <input
+        type="checkbox"
+        id="billing-toggle"
+        class="visually-hidden"
+        aria-hidden="true"
+      />
+
+      <!-- Toggle UI (label targets the hidden checkbox above) -->
+      <div class="toggle-wrapper" aria-label="Billing Period">
+        <span class="label">Monthly</span>
+        <label for="billing-toggle" class="toggle" aria-hidden="true"></label>
+        <span class="label">Yearly</span>
+      </div>
+
+      <!-- Pricing Cards -->
+      <section class="pricing-table" aria-live="polite">
+        <!-- BASIC -->
+        <article class="card">
+          <header>
+            <h2>Basic</h2>
+            <p class="badge">Starter</p>
+          </header>
+
+          <!-- Monthly content -->
+          <div class="plan monthly">
+            <p class="price">$9 <span>/mo</span></p>
+            <ul>
+              <li>✔ 5 Projects</li>
+              <li>✔ 10&nbsp;GB Storage</li>
+              <li>✔ Community Support</li>
+            </ul>
+            <button>Select Monthly</button>
+          </div>
+
+          <!-- Yearly content -->
+          <div class="plan yearly">
+            <p class="price">$90 <span>/yr</span></p>
+            <ul>
+              <li>✔ 5 Projects</li>
+              <li>✔ 20&nbsp;GB Storage</li>
+              <li>✔ Community Support</li>
+              <li>🎁 2 months free</li>
+            </ul>
+            <button>Select Yearly</button>
+          </div>
+        </article>
+
+        <!-- PRO (Popular) -->
+        <article class="card popular">
+          <header>
+            <h2>Pro</h2>
+            <p class="badge">Most Popular</p>
+          </header>
+
+          <div class="plan monthly">
+            <p class="price">$19 <span>/mo</span></p>
+            <ul>
+              <li>✔ 20 Projects</li>
+              <li>✔ 100&nbsp;GB Storage</li>
+              <li>✔ Priority Support</li>
+            </ul>
+            <button>Select Monthly</button>
+          </div>
+
+          <div class="plan yearly">
+            <p class="price">$190 <span>/yr</span></p>
+            <ul>
+              <li>✔ 20 Projects</li>
+              <li>✔ 200&nbsp;GB Storage</li>
+              <li>✔ Priority Support</li>
+              <li>🎁 2 months free</li>
+            </ul>
+            <button>Select Yearly</button>
+          </div>
+        </article>
+
+        <!-- ENTERPRISE -->
+        <article class="card">
+          <header>
+            <h2>Enterprise</h2>
+            <p class="badge">Advanced</p>
+          </header>
+
+          <div class="plan monthly">
+            <p class="price">$49 <span>/mo</span></p>
+            <ul>
+              <li>✔ Unlimited Projects</li>
+              <li>✔ 1&nbsp;TB Storage</li>
+              <li>✔ 24/7 Support</li>
+            </ul>
+            <button>Select Monthly</button>
+          </div>
+
+          <div class="plan yearly">
+            <p class="price">$490 <span>/yr</span></p>
+            <ul>
+              <li>✔ Unlimited Projects</li>
+              <li>✔ 2&nbsp;TB Storage</li>
+              <li>✔ 24/7 Support</li>
+              <li>🎁 2 months free</li>
+            </ul>
+            <button>Select Yearly</button>
+          </div>
+        </article>
+      </section>
+
+      <!-- Footer credit -->
+      <footer class="credit">
+        <a
+          href="https://github.com/aayush105"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            class="github-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.5 1.1 3.1.8.1-.6.3-1.1.6-1.4-2.6-.3-5.4-1.3-5.4-6 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.7-2.8 5.7-5.4 6 .3.2.6.8.6 1.7v2.5c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5Z"
+            />
+          </svg>
+          <span class="author">AAYUSH SHRESTHA</span>
+        </a>
+      </footer>
+    </main>
+  </body>
+</html>
