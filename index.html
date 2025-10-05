@@ -86,12 +86,70 @@
         background-color: #04aa6d;
         color: white;
       }
+
+      header {
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: #04aa6d;
+        margin-bottom: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #242424;
+      }
+
+      .description {
+        font-size: 1.2em;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      /* logo image */
+      .java_pic {
+        height: auto;
+        width: 2rem;
+      }
+
+      .button_java {
+        border: 2px solid black;
+        width: 50%;
+        justify-content: center;
+        margin-left: 20rem;
+        background-color: #04aa6d;
+        border-radius: 1rem;
+        display: flex;
+      }
+
+      .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+      }
     </style>
   </head>
   <body>
     <section id="pageSection">
-      <h1>You Don’t Need JavaScript 🚫</h1>
-      <p>Explore interactive demos built purely with HTML & CSS.</p>
+      <header>
+        <div class="button_java">
+          <h1>
+            <a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript">
+              <div class="top">
+                You Dont Need JavaScript
+                <img src="images/java-script.png" alt="java" class="java_pic" />
+              </div>
+            </a>
+          </h1>
+        </div>
+        <p class="description">
+          Explore the power of pure CSS with our collection of interactive demos
+          and examples.
+        </p>
+      </header>
 
       <table id="pages">
         <tr>
