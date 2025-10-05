@@ -1,0 +1,225 @@
+/* Base / reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #2563eb;
+  --ink: #111827;
+  --muted: #6b7280;
+  --card: #f9fafb;
+  --line: #e5e7eb;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: #f3f4f6;
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+}
+
+/* Hide the real checkbox but keep it accessible to the label */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+/* Toggle UI */
+.toggle-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+}
+.toggle-wrapper .label {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.toggle {
+  width: 54px;
+  height: 28px;
+  border-radius: 20px;
+  background: #d1d5db;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+.toggle::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease;
+}
+/* Knob + color when checked */
+#billing-toggle:checked ~ .toggle-wrapper .toggle {
+  background: var(--primary);
+}
+#billing-toggle:checked ~ .toggle-wrapper .toggle::after {
+  transform: translateX(26px);
+}
+/* Active label tint */
+#billing-toggle:not(:checked) ~ .toggle-wrapper .label:first-of-type {
+  color: var(--ink);
+}
+#billing-toggle:checked ~ .toggle-wrapper .label:last-of-type {
+  color: var(--ink);
+}
+
+/* Pricing grid */
+.pricing-table {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+.card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+  text-align: left;
+  padding: 1.25rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+.card header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+.card h2 {
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+}
+.card.popular {
+  border: 2px solid var(--primary);
+  background: #eef2ff;
+}
+
+.plan {
+  display: none;
+} /* hidden by default, we reveal based on toggle */
+.price {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0.25rem 0 0.5rem;
+}
+.price span {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  margin: 0.6rem 0 1rem;
+  padding-left: 0;
+}
+ul li {
+  margin: 0.35rem 0;
+  color: #1f2937;
+}
+button {
+  width: 100%;
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+button:hover {
+  background: #1e40af;
+}
+
+/* ✅ Toggle logic: show Monthly by default, Yearly when checked */
+#billing-toggle:not(:checked) ~ .pricing-table .plan.monthly {
+  display: block;
+}
+#billing-toggle:checked ~ .pricing-table .plan.yearly {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pricing-table {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 1.25rem;
+  }
+  .pricing-table {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Footer credit */
+.credit {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+.credit a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+}
+.credit a:hover {
+  color: var(--primary);
+}
+.github-icon {
+  fill: currentColor;
+}
