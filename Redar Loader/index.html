@@ -394,53 +394,5 @@
             <div class="percentage" id="percentage">0%</div>
         </div>
     </div>
-
-    <script>
-        // Simulate loading percentage
-        let percentage = 0;
-        const percentageElement = document.getElementById('percentage');
-        
-        const updatePercentage = () => {
-            percentage = (percentage + Math.random() * 3) % 100;
-            percentageElement.textContent = Math.floor(percentage) + '%';
-            
-            // Add some randomness to make it more realistic
-            if (Math.random() > 0.7) {
-                percentageElement.style.color = '#ffff00';
-                setTimeout(() => {
-                    percentageElement.style.color = '#00ff00';
-                }, 200);
-            }
-        };
-        
-        setInterval(updatePercentage, 100);
-        
-        // Add dynamic blips
-        const radarBlips = document.querySelector('.radar-blips');
-        
-        const createDynamicBlip = () => {
-            const blip = document.createElement('div');
-            blip.className = 'blip';
-            blip.style.top = Math.random() * 80 + 10 + '%';
-            blip.style.left = Math.random() * 80 + 10 + '%';
-            blip.style.animationDelay = '0s';
-            radarBlips.appendChild(blip);
-            
-            setTimeout(() => {
-                blip.remove();
-            }, 2000);
-        };
-        
-        setInterval(createDynamicBlip, 1500);
-        
-        // Add sound effect simulation (visual feedback)
-        document.addEventListener('click', () => {
-            const container = document.querySelector('.container');
-            container.style.animation = 'none';
-            setTimeout(() => {
-                container.style.animation = '';
-            }, 10);
-        });
-    </script>
 </body>
 </html>
