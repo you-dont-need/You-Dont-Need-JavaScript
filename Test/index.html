@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Only Step Progress Bar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">CSS Only Step Progress Bar</h1>
+
+      <!-- Step controls -->
+      <div class="steps-control">
+        <input type="radio" name="step" id="step1" />
+        <label for="step1">Step 1</label>
+
+        <input type="radio" name="step" id="step2" />
+        <label for="step2">Step 2</label>
+
+        <input type="radio" name="step" id="step3" checked />
+        <label for="step3">Step 3</label>
+
+        <input type="radio" name="step" id="step4" />
+        <label for="step4">Step 4</label>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="progressbar">
+        <div class="line"></div>
+        <div class="line-fill"></div>
+        <div class="steps">
+          <span class="circle" data-step="1"></span>
+          <span class="circle" data-step="2"></span>
+          <span class="circle" data-step="3"></span>
+          <span class="circle" data-step="4"></span>
+        </div>
+      </div>
+
+      <!-- Step content -->
+      <section class="content">
+        <div class="panel panel1">
+          <h2>Step 1: Account Info</h2>
+          <p>Fill in your basic account details.</p>
+        </div>
+        <div class="panel panel2">
+          <h2>Step 2: Billing Details</h2>
+          <p>Provide your payment information.</p>
+        </div>
+        <div class="panel panel3">
+          <h2>Step 3: Preferences</h2>
+          <p>Select your preferences and settings.</p>
+        </div>
+        <div class="panel panel4">
+          <h2>Step 4: Confirmation</h2>
+          <p>Review and confirm your details.</p>
+        </div>
+      </section>
+
+      <!-- Footer credit -->
+      <footer class="credit">
+        <a
+          href="https://github.com/aayush105"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            class="github-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.5 1.1 3.1.8.1-.6.3-1.1.6-1.4-2.6-.3-5.4-1.3-5.4-6 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.7-2.8 5.7-5.4 6 .3.2.6.8.6 1.7v2.5c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5Z"
+            />
+          </svg>
+          <span class="author">AAYUSH SHRESTHA</span>
+        </a>
+      </footer>
+    </main>
+  </body>
+</html>
