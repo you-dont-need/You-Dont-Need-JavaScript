@@ -45,6 +45,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [City Animation Footer](#city-animation-footer)
 - [Carousel Effect](#carousel-effect)
 - [Counter of Checked Checkboxes](#counter-of-checked-check-boxes)
+- [CSS Form Handling](#css-form-handling)
 - [Download_buttons](#Download_buttons)
 - [Dog Box Animation](#dog-box-animation)
 - [Dropdown Menu](#dropdown-menu)
@@ -80,8 +81,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Pendulum](#pendulum)
 - [Playing Card Animation](#playing-card-animation)
 - [Profile Cards](#profilecards)
+- [Radial Color Pulsar](#RadialPulsar)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
 - [Ripple Effect](#ripple-effect)
+- [Redar Loader](#Redar-Loader)
 - [Scary Animation](#scary-animation)
 - [Scenery](#scenery)
 - [Shake Button](#shake-button)
@@ -575,6 +578,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="Redar Loader"></a>Readar Loader
+
+[<img src="images/redar_loader.gif" title="Redar Loader">](https://codepen.io/shail2604/pen/JoGKqda)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="login"></a>A login Page with Glassmorphism Effect
 
 [<img src="Login_Page/log-in-6398177_1280.png" title="Responsive Login Page with Glassmorphism Effect">]
@@ -627,6 +638,20 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="moving_hand"></a>Shake Button
 
 [<img src="images/moving_hand.png" height="230" title="image">](examples/Moving_hand.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="css-form-handling"></a>CSS Form Handling
+
+[<img src="images/form-preview.png" height="230" title="CSS Form Handling">](CSS-Form-Handling/)
+
+**[⬆ back to top](#quick-links)**
+
+## <a id="Download_buttons"></a>Download_buttons
+
+[<img src="images/Download_buttons.png" title="Download_buttons">](https://codepen.io/Shail-Sharma-the-animator/pen/rNXYMGx)
 
 **[⬆ back to top](#quick-links)**
 
@@ -915,6 +940,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="RadialPulsar"></a>Radial Color Puslar
+
+[<img src="Radial Color Pulsar/Radial.png" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="Pendulum"></a>Pendulum
 
 ![img_source](images/pendulum.png)
@@ -1064,3 +1097,7 @@ For detailed guidelines on how to contribute, please refer to our [CONTRIBUTING]
 **[⬆ back to top](#quick-links)**
 
 Let's build something great together!
+
+## License
+
+This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)** — see the [LICENSE](LICENSE) file for details.

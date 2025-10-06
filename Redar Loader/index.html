@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Radar Loading System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #000;
+            color: #00ff00;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Background grid effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: grid-move 10s linear infinite;
+        }
+
+        @keyframes grid-move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            perspective: 1000px;
+            z-index: 1;
+        }
+
+        .radar-system {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: radar-tilt 6s ease-in-out infinite;
+        }
+
+        @keyframes radar-tilt {
+            0%, 100% { transform: rotateX(20deg) rotateY(0deg); }
+            50% { transform: rotateX(20deg) rotateY(180deg); }
+        }
+
+        .radar-base {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle at center, 
+                rgba(0, 255, 0, 0.1) 0%, 
+                rgba(0, 255, 0, 0.05) 30%, 
+                rgba(0, 0, 0, 0.8) 70%);
+            border: 2px solid rgba(0, 255, 0, 0.3);
+            box-shadow: 
+                0 0 50px rgba(0, 255, 0, 0.5),
+                inset 0 0 50px rgba(0, 255, 0, 0.2);
+        }
+
+        .radar-grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .radar-ring {
+            position: absolute;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .radar-ring:nth-child(1) { width: 25%; height: 25%; }
+        .radar-ring:nth-child(2) { width: 50%; height: 50%; }
+        .radar-ring:nth-child(3) { width: 75%; height: 75%; }
+        .radar-ring:nth-child(4) { width: 100%; height: 100%; }
+
+        .radar-crosshair {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .radar-crosshair::before,
+        .radar-crosshair::after {
+            content: '';
+            position: absolute;
+            background: rgba(0, 255, 0, 0.2);
+        }
+
+        .radar-crosshair::before {
+            width: 1px;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .radar-crosshair::after {
+            width: 100%;
+            height: 1px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .radar-sweep {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            top: 50%;
+            left: 50%;
+            transform-origin: 0% 0%;
+            animation: sweep 3s linear infinite;
+        }
+
+        .radar-sweep::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(0, 255, 0, 0.8) 50%, 
+                transparent 100%);
+            filter: blur(2px);
+        }
+
+        .radar-sweep::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 10px 10px;
+            border-color: transparent transparent #00ff00 transparent;
+            top: -10px;
+            left: 0;
+            filter: drop-shadow(0 0 5px #00ff00);
+        }
+
+        @keyframes sweep {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .radar-blips {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .blip {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #00ff00;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff00;
+            animation: blip-pulse 2s ease-in-out infinite;
+        }
+
+        .blip:nth-child(1) {
+            top: 30%;
+            left: 60%;
+            animation-delay: 0s;
+        }
+
+        .blip:nth-child(2) {
+            top: 70%;
+            left: 40%;
+            animation-delay: 0.5s;
+        }
+
+        .blip:nth-child(3) {
+            top: 50%;
+            left: 80%;
+            animation-delay: 1s;
+        }
+
+        .blip:nth-child(4) {
+            top: 20%;
+            left: 30%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes blip-pulse {
+            0%, 100% { 
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% { 
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+        }
+
+        .loading-info {
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
+        }
+
+        .loading-text {
+            font-size: 14px;
+            color: #00ff00;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: text-flicker 2s ease-in-out infinite;
+        }
+
+        @keyframes text-flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .progress-bar {
+            width: 200px;
+            height: 4px;
+            background: rgba(0, 255, 0, 0.2);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff00, #00aa00);
+            width: 0%;
+            animation: progress-load 5s ease-in-out infinite;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        @keyframes progress-load {
+            0% { width: 0%; }
+            50% { width: 75%; }
+            100% { width: 100%; }
+        }
+
+        .percentage {
+            font-size: 12px;
+            color: #00ff00;
+            margin-top: 5px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .status-indicators {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .indicator {
+            width: 8px;
+            height: 8px;
+            background: #00ff00;
+            border-radius: 50%;
+            animation: indicator-blink 1s ease-in-out infinite;
+        }
+
+        .indicator:nth-child(2) { animation-delay: 0.2s; }
+        .indicator:nth-child(3) { animation-delay: 0.4s; }
+        .indicator:nth-child(4) { animation-delay: 0.6s; }
+
+        @keyframes indicator-blink {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .scan-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .scan-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(0, 255, 0, 0.3), 
+                transparent);
+            animation: scan-line-move 4s linear infinite;
+        }
+
+        .scan-line:nth-child(2) { animation-delay: 1s; }
+        .scan-line:nth-child(3) { animation-delay: 2s; }
+        .scan-line:nth-child(4) { animation-delay: 3s; }
+
+        @keyframes scan-line-move {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .loading-info {
+                bottom: -60px;
+            }
+            
+            .progress-bar {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="radar-system">
+            <div class="radar-base"></div>
+            
+            <div class="radar-grid">
+                <div class="radar-ring"></div>
+                <div class="radar-ring"></div>
+                <div class="radar-ring"></div>
+                <div class="radar-ring"></div>
+                
+                <div class="radar-crosshair"></div>
+                
+                <div class="radar-sweep"></div>
+                
+                <div class="radar-blips">
+                    <div class="blip"></div>
+                    <div class="blip"></div>
+                    <div class="blip"></div>
+                    <div class="blip"></div>
+                </div>
+                
+                <div class="scan-lines">
+                    <div class="scan-line"></div>
+                    <div class="scan-line"></div>
+                    <div class="scan-line"></div>
+                    <div class="scan-line"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-indicators">
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+        </div>
+        
+        <div class="loading-info">
+            <div class="loading-text">Scanning System</div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="percentage" id="percentage">0%</div>
+        </div>
+    </div>
+</body>
+</html>
