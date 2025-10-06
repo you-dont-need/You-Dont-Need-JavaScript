@@ -22,1063 +22,319 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## Quick Links
 
-- [You Don't Need JavaScript](#you-dont-need-javascript)
-- [Website Demo Using HTML CSS](#website-demo)
-- [Style Guide](#style-guide)
-- [Accordion / Toggle](#accordion--toggle)
-- [Analog Clock](#analog-clock)
-- [Animated Button](#animated-button)
-- [Animated Buttons](#animated-buttons)
-- [Badge](#badge)
-- [Bonfire](#bonfire)
-- [Book Animation](#book-animation)
-- [Bubble](#bubble)
-- [Bus](#bus)
-- [Burger Menu](#burger-menu)
-- [Button Animation](#button-animation)
-- [Button Hover & Click Animation](#button-hover-click-animation)
-- [Button with Rotating Text & Ripple Animation](#button-rotate-and-ripple-animation)
-- [Baby Yoda Animation](#baby-yoda-animation-css)
-- [Captain America Shield](#captain-america-shield)
-- [Carousel](#carousel)
-- [Compass Loader](#compass-loader)
-- [City Animation Footer](#city-animation-footer)
-- [Carousel Effect](#carousel-effect)
-- [Counter of Checked Checkboxes](#counter-of-checked-check-boxes)
-- [CSS Form Handling](#css-form-handling)
-- [Download_buttons](#Download_buttons)
-- [Dog Box Animation](#dog-box-animation)
-- [Dropdown Menu](#dropdown-menu)
-- [Dynamic Image Colorizing](#dynamic-image-colorizing)
-- [Enable Dark Mode](#darkmode)
-- [Fancy Menu](#fancy-menu)
-- [Flip on Click](#flip-on-click)
-- [Floating Label on Textfield](#floating-label-on-textfield)
-- [Floating Labels V2](#floating-labelv2)
-- [Font-Face (Latin)](#font-face-latin)
-- [Footer](#footer)
-- [Gradient Animation](#gradient-animation)
-- [Growing Flower](#growing-flower)
-- [Horizontal image slider](#horizontal-image-slider)
-- [Image Gallery](#image-gallery)
-- [Image Hover Effect]()
-- [Image Comparison Slider](#image-comparison-slider)
-- [Infinite Carousel](#infinite-carousel)
-- [Info on Hover / Popover](#info-on-hover-popover)
-- [Jumping Ball](#jumping-ball)
-- [Light Bulb Animation](#light-bulb-animation)
-- [Loaders](#loaders)
-- [MasterCard](#mastercard)
-- [Mobile Menu Off Canvas](#mobile-menu-off-canvas)
-- [Modal/Popup](#modalpopup)
-- [Mouse Tracking](#mouse-tracking)
-- [NavBar](#navbar)
-- [Neon Button](#neon-button)
-- [Neon Card](#neon-card)
-- [Netlix Clone v2](#Netflix-Clone-v2)
-- [Neumorphism Card Design](#neumorphism-card-design)
-- [Parallax Scrolling](#parallax-scrolling)
-- [Pendulum](#pendulum)
-- [Playing Card Animation](#playing-card-animation)
-- [Profile Cards](#profilecards)
-- [Radial Color Pulsar](#RadialPulsar)
-- [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
-- [Ripple Effect](#ripple-effect)
-- [Redar Loader](#Redar-Loader)
-- [Scary Animation](#scary-animation)
-- [Scenery](#scenery)
-- [Shake Button](#shake-button)
-- [Shuffling Squares](#shuffling-squares)
-- [Star Wars Intro](#star-wars-intro)
-- [Switch](#switch)
-- [Social Media Icons](#social-icons)
-- [Tables](#css-tables)
-- [Tabs](#tabs)
-- [MakemyTrip](#mmt)
-- [Text Spoiler Effect](#text-spoiler)
-- [Thank You Animation](#thankyou-animation)
-- [Todo List](#todo-list)
-- [Tooltips](#tooltips)
-- [Treeview](#treeview)
-- [Twitter Heart Animation](#twitter-heart-animation)
-- [Book Animation](#book-animation)
-- [Zomato](#zomato)
-- [Zoom When Hover](#zoom-when-hover)
-- [Debit Card Hover effect](#debit-card-hover)
-- [Progress Bar On Scroll](#ProgressOnScroll)
-- [Pricing Table](#pricing-table)
+- [3D Effects & Animations](#3d-effects--animations)
+- [Buttons & Interactive Elements](#buttons--interactive-elements)
+- [Navigation & Menus](#navigation--menus)
+- [Loaders & Progress Indicators](#loaders--progress-indicators)
+- [CSS-Only Interactive Components](#css-only-interactive-components)
+- [Cards & Layout Components](#cards--layout-components)
+- [Accordions & FAQ Sections](#accordions--faq-sections)
+- [Text Effects & Typography](#text-effects--typography)
+- [Sliders & Carousels](#sliders--carousels)
+- [Layout & Grid Systems](#layout--grid-systems)
+- [Form Elements & Input Effects](#form-elements--input-effects)
+- [Games & Interactive Demos](#games--interactive-demos)
+- [Website Templates & Full Pages](#website-templates--full-pages)
+- [Animation Effects](#animation-effects)
+- [Visual Effects & Graphics](#visual-effects--graphics)
+- [Scroll Effects](#scroll-effects)
+- [Special Components](#special-components)
+- [App Clones & Showcases](#app-clones--showcases)
+- [Physics & Science Animations](#physics--science-animations)
+- [UI Components](#ui-components)
+- [Mobile Design](#mobile-design)
+- [Music & Entertainment](#music--entertainment)
+- [Educational & Tutorials](#educational--tutorials)
+- [Resources](#resources)
 - **Contribution**
   - [Contributors](#contributors)
   - [Contributing](#contributing)
 
 ---
 
-## <a id="image-hover-effect"></a>Image Hover Effect
+## <a id="3d-effects--animations"></a>3D Effects & Animations
 
-[<img src="Image-Hover-Effect\image.png" height="230" title="Image Hover Effect" alt="Image-Hover-Effect">](http://url-to-page)
+[<img src="3D Earth/Untitled video - Made with Clipchamp.mp4" height="230" title="3D Earth">](3D%20Earth/index.html)
+[<img src="3D Flipping Card Component/images/chip.png" height="230" title="3D Flipping Card Component">](3D%20Flipping%20Card%20Component/index.html)
+[<img src="3D Rotating Cube/output.png" height="230" title="3D Rotating Cube">](3D%20Rotating%20Cube/index.html)
+[<img src="3D Rotation Square/Demo.gif" height="230" title="3D Rotation Square">](3D%20Rotation%20Square/index.html)
+[<img src="images/3d-card-flip-transition.gif" height="230" title="3D card flip animation">](3D%20card%20flip%20animation/index.html)
+[<img src="3D transform/animation.gif" height="230" title="3D transform">](3D%20transform/index.html)
+[<img src="3d_virtual_keyboard/virtual_keyboard.jpg" height="230" title="3d virtual keyboard">](3d_virtual_keyboard/index.html)
+[<img src="Cube 360 view/demo.gif" height="230" title="Cube 360 view">](Cube%20360%20view/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="toggle"></a>CSS Toggle
+## <a id="buttons--interactive-elements"></a>Buttons & Interactive Elements
 
-[<img src="images/toggle1.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
-[<img src="images/toggle2.png" height="230" title="CSS Toggle" alt="Toggle">](https://codepen.io/Vikash-Gorai/pen/QWYbpVm)
+[<img src="images/Animated-button-1.png" height="230" title="Animated Submit Button">](Animated%20Submit%20Button/index.html)
+[<img src="images/Animated-button.png" height="230" title="Animated Button">](Button/Animated-Button/index.html)
+[<img src="images/liquidButton.png" height="230" title="Liquid Button">](Button/Liquid-Button/index.html)
+[<img src="Button/Sliced-Button/sliced_button.gif" height="230" title="Sliced Button">](Button/Sliced-Button/index.html)
+[<img src="images/neon-button.gif" height="230" title="Neon Button">](Button%20Neon/index.html)
+[<img src="images/shake-button.gif" height="230" title="Shake Button">](Button/Shake-Button/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
-## <a id="text-spoiler"></a>Text Spoiler Effect
-
-##### Light Theme:
-[<video width="400" height="200" controls>
-    <source src="https://github.com/user-attachments/assets/4786bfb6-78e7-4682-b098-c49f3f518b5f" type="video/mp4">
-    Your browser does not support the video tag.
-</video>](http://url-to-light-theme-page)
-
-##### Dark Theme:
-[<video width="400" height="200" controls>
-    <source src="https://github.com/user-attachments/assets/1b305f75-26b3-41c3-a19a-6f7bd043d393" type="video/mp4">
-    Your browser does not support the video tag.
-</video>](http://url-to-dark-theme-page)
 
-**[⬆ back to top](#quick-links)**
-
-
-
-## <a id="blog-cards"></a>Blog Post Cards
-
-[<img src="images/neuo.png" height="230" title="Demo 1">](http://url-to-page)
-[<img src="images/claycards.png" height="230" title="Demo 2">](http://url-to-page)
-[<img src="images/glasscards.png" height="230" title="Demo 3">](http://url-to-page)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Faq-section"></a>Faq Section
-
-[<img src="images/faqclay.png" height="230" title="Demo 1">](http://url-to-page)
-[<img src="images/faqneuo.png" height="230" title="Demo 2">](http://url-to-page)
-[<img src="images/faqglass.png" height="230" title="Demo 3">](http://url-to-page)
-
-**[⬆ back to top](#quick-links)**
-
----
-## <a id="pricing-table"></a>Pricing Table
-
-[<img src="images/pricingtable1.png" height="230" title="Demo 1">](http://url-to-page)
-[<img src="images/pricingtable2.png" height="230" title="Demo 2">](http://url-to-page)
-[<img src="images/pricingtable3.png" height="230" title="Demo 3">](http://url-to-page)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="social-icons"></a>Social_media_icons
-
-[<img src="images/icons.png" height="230" title="Social-media-icons">]
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Accordion"></a>Accordion / Toggle
-
-[<img src="images/accordion.png" height="230" title="Demo 1">](http://www.mraffaele.com/labs/css-only-accordions/)
-[<img src="images/toggler.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/pyXQrj)
-[<img src="images/toggler2.png" height="230" title="Demo 3">](http://codepen.io/PaulZi/pen/zBbVvV)
-[<img src="images/accordion.gif" height="230" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)
-[<img src="images/AccordionAndFAQ.gif" height="230" title="Demo 5">](https://codepen.io/theslladev/pen/dyxzEqy)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Animated-Buttons"></a>Animated Buttons
-
-<img src="images/Animated-button-1.png" height="230" title="Demo 1">
-<img src="images/Animated-button.png" height="230" title="Demo 2">
-<img src="images/Animated-button-2.png" height="230" title="Demo 2">
-<img src="images/liquidButton.png" height="230" title="Demo 2">
-
-**[⬆ back to top](#quick-links)**
-
----
-&nbsp;
-
-## <a id="bus"></a>Bus
-
-<img src="images/bus.png" height="230" title="Demo 1">
-
-
-## <a id="captain"></a>Captain America Shield
-
-<img src="Captain America Shield/images/shield.png" height="230" title="Demo 1">
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Carousel"></a>Carousel
-
-[<img src="images/slideshow2.png" height="230" title="Demo 1">](http://codepen.io/SitePoint/pen/MyPVdK)
-[<img src="images/slideshow.png" height="230" title="Demo 2">](https://codepen.io/cavico/pen/yOjwya)
-[<img src="images/slideshow3.png" height="230" title="Demo 3">](https://codepen.io/FabianK/pen/zJLLrR)
-[<img src="images/carousel.png" height="230" title="Demo 4">](https://codepen.io/NiklasKnaack/pen/abrOMLY)
-[<img src="./images/Infinite-carousel-purnasth.gif" alt="Carousel-Nepal" height="230" title="Carousel-Nepal">](https://codepen.io/purnaaa/pen/NWoWeBB)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Counter"></a>Counter of checked check-boxes
-
-[<img src="images/checkedcounter.png" height="230" title="Demo 1">](https://codepen.io/anon/pen/eZWXOZ)
-[<img src="images/checkedcounter2.png" height="230" title="Demo 2">](http://codepen.io/lonekorean/pen/wKbzv)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Flip"></a>Flip on click
-
-[<img src="images/flipper.png" height="230" title="Demo">](https://codepen.io/RuudBurger/pen/bwjry)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Flip"></a>Flip on click
-
-[<img src="images/pendulum.png" height="230" title="Pendulum Animation Demo">](https://codepen.io/TAPAS-SINGHAL/pen/ZEwOGjj)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Animated Box"></a>Animated Box
-
-[<img src="images/AnimatedBox.jpg" height="230" title="Demo">](https://codepen.io/Ayan-Saxena/pen/qBgBYoZ)
-[<img src="images/AnimatedBox2.jpg" height="230" title="Demo">](https://codepen.io/Ayan-Saxena/pen/qBgBYoZ)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="analogclock"></a>Analog-clock
-
-[<img src="images/clock.jpg" height="230" title="Analog-clock">](https://codepen.io/himadeepthi-sayani/pen/RwvNqQm)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-[<img src="images/textfields.png" height="230" title="Demo">](http://codepen.io/KtorZ/pen/ZOzdqG)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="badge"></a>Badge
-
-<img src="images/badge_design1.png" height="230" title="Demo">
-
-<img src="images/badge_design2.png" height="230" title="Demo">
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Font"></a>Font-Face (Latin)
-
-[<img src="images/sansfont.png" height="230" title="Demo">](https://yusugomori.com/projects/css-sans/fonts)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="WebsiteDemo"></a>Website Demo
-
-[<img src="images/Website_demo.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo.png)
-[<img src="images/Website_demo_2.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo_2.png)
-[<img src="images/Website_demo_3.png" height="230" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Website_demo_3.png)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Travel-Website"></a>Travelling Website
-
-[<img src="images/Travel_01.png" height="250" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Travel_01.png)
-[<img src="images/Travel_02.png" height="250" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Travel_02.png)
-[<img src="images/Travel_03.png" height="250" title="Website_Demo">](https://github.com/Garv0504/You-Dont-Need-JavaScript/blob/addingWebsite/new-website/images/Travel_03.png)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Info"></a>Info on hover/ Popover
-
-[<img src="images/tooltips.png" height="230" title="Demo 1">](https://codepen.io/monika-sivakumar/pen/rNoqxVX)
-[<img src="images/tooltips2.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
-[<img src="images/info-on-hover.png" height="230" title="Demo 3">](http://codepen.io/SitePoint/pen/akAmPw)
-[<img src="images/tooltips.gif" height="230" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Image"></a>Image Gallery
-
-[<img src="images/gallery.png" height="230" title="Demo 1">](https://codepen.io/shaishgandhi/pen/yJzamw)
-[<img src="images/gallery2.png" height="230" title="Demo 2">](http://codepen.io/pavlovsk/pen/sjubp)
-[<img src="images/gallery3.png" height="230" title="Demo 2">](https://codepen.io/olgamozejko/pen/yLjwyye)
-[<img src="images/vertical-gallery.gif" height="230" title="Demo 4">]()
-[<img src="./Author/a-img2.jpg" height="230" title="Demo 5">]()
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="image-comparison-slider"></a>Image Comparison Slider
-
-[<img src="Image Comparision Slider/ss_1.png" height="230" title="Pure CSS Image Comparison Slider Demo 1">](Image%20Comparision%20Slider/index.html)
-[<img src="Image Comparision Slider/ss_2.png" height="230" title="Pure CSS Image Comparison Slider Demo 2">](Image%20Comparision%20Slider/index.html)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="interactive-image"></a>Interactive Image Gallery
-
-[<img src="./images/interactive-image.png" height="230" title="Demo Image">]
-<br>
-[<video src="./demo video/interactive-image.mov" height="230" title="Demo Video">]
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Loaders"></a>Loaders
-
-[<img src="images/loader.png" height="230" title="Demo 1">](http://codepen.io/lucadem1313/pen/vKWqRV)
-[<img src="images/loader2.png" height="230" title="Demo 2">](http://codepen.io/lucadem1313/pen/XKzLER)
-[<img src="images/loader3.png" height="230" title="Demo 3">](http://codepen.io/brunjo/pen/xbwVXJ)
-[<img src="images/loader4.png" height="230" title="Demo 4">](http://codepen.io/brunjo/pen/ByjRPy)
-[<img src="images/loader5.png" height="230" title="Demo 5">](http://codepen.io/brunjo/pen/LEGyrJ)
-[<img src="images/loader6.png" height="230" title="Demo 6">](http://codepen.io/brunjo/pen/bNEWjV)
-[<img src="images/loader7.png" height="230" title="Demo 7">](http://codepen.io/brunjo/pen/wBKmbm)
-[<img src="images/loader8.png" height="230" title="Demo 8">](http://tobiasahlin.com/spinkit/)
-[<img src="images/loader9.png" height="230" title="Demo 9">](http://codepen.io/viduthalai1947/pen/JkhDK)
-[<img src="./images/css-loader-purna.gif" alt="CSS-Loader-Purna" height="230" title="CSS-Loader-Purna">](https://codepen.io/purnaaa/pen/vYVVygB)
-[<img src="images/loader10.png" height="230" title="Demo 10">](https://codepen.io/Sahil-Patil-the-sans/pen/WNPbVqK)
-[<img src="images/loader11.gif" height="230" title="Demo 11">](https://codepen.io/sugeng-sulistiyawan/pen/PoyjPWd)
-[<img src="images/loader12.gif" height="230" title="Demo 12">](https://github.com/TechGenie-awake/You-Dont-Need-JavaScript/blob/patch-1/Loading/loading.gif)
-
-
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="MasterCard"></a>MasterCard
-
-[<img src="images/screenshot.png" height="230" title="Website_Demo">](https://github.com/2div/You-Dont-Need-JavaScript/MasterCard/images/screenshot.png)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="DropdownMenu"></a>Dropdown Menu
-
-[<img src="images/menu2.png" height="230" title="Demo 1">](https://codepen.io/antoniputra/pen/BzyWmb)
-[<img src="images/menu3.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/NNOodj)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Mobile"></a>Mobile menu off canvas
-
-[<img src="images/menu.png" height="230" title="Demo">](https://codepen.io/fabricionaweb/pen/xOLwxj)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="BurgerMenu"></a>Burger Menu
-
-[<img src="images/menu4.png" height="230" title="Demo">](https://codepen.io/eduardoboucas/pen/BNyKwO)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="button_letsgo"></a>Button Animation
-
-[<img src="images/ButtonAnimation.gif" height="250" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="buttonLikeCred"></a>Button Rotate and Ripple Animation
-
-[<img src="images/buttonRotatingRipple.gif" height="250" title="Demo">](https://codepen.io/harsharora1205/pen/ExqZEyw)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="buttonEffect"></a>Button Hover Click Animation
-
-[<img src="images/buttonHoverClick.gif" height="250" title="Demo">](https://codepen.io/harsharora1205/pen/oNKYaME)
-[<img src="images/ButtonNeon.gif" height="250" title="Demo">](https://codepen.io/sugeng-sulistiyawan/pen/eYPRpZN)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="compassloader"></a>Compass Loader
-
-[<img src="images/CompassLoader.gif" height="230" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/dyaPmrE)>)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="FancyMenu"></a>Fancy Menu
-
-[<img src="images/fancyMenu.gif" height="230" title="Demo">](http://codepen.io/lbebber/pen/RNgBPP)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="footer"></a>Footer
-
-[<img src="images/footer_lg.png" height="230" title="Demo">](https://codepen.io/janup2442/pen/qBgBBKz)
-[<img src="images/footer_sm.png" height="230" title="Demo">](https://codepen.io/janup2442/pen/qBgBBKz)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Modal"></a>Modal/Popup
-
-[<img src="images/modal2.png" height="230" title="Demo 1">](https://codepen.io/peiche/pen/vhqym)
-[<img src="images/modal.png" height="230" title="Demo 2">](https://codepen.io/chrisburnell/pen/scyKF)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Mouse"></a>Mouse tracking
-
-[<img src="images/mousetracking.png" height="230" title="Demo 1">](https://codepen.io/Momciloo/pen/GoGRrQ)
-[<img src="images/mouse-tracking-2.gif" height="230" title="Demo 2">](https://codepen.io/masterujjval/pen/xxmBRJV)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="navBar"></a>NavBar
-
-[<img src="images/navbar.png" height="230" title="Demo1">](https://codepen.io/janup2442/pen/QWzPRQQ)
-[<img src="images/image_navbar.png" title="Demo2">](https://codepen.io/shail-sharma/pen/eYqdyvw)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Parallax"></a>Parallax scrolling
-
-[<img src="images/parallax.png" height="230" title="Demo">](http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Tabs"></a>Tabs
-
-[<img src="images/tabs.png" height="230" title="Demo 1">](https://codepen.io/llgruff/pen/ZGBxOa)
-[<img src="images/tabs2.png" height="230" title="Demo 2">](https://codepen.io/fusco/pen/Wvzjrm)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Todo"></a>Todo List
-
-[<img src="images/Todo List.png" height="230" title="Demo">](https://codepen.io/SamsShow/pen/NWeerXr)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Tooltips"></a>Tooltips
-
-- [Demo](https://kushagragour.in/lab/hint/)
-
-## <a id="Treeview"></a>Treeview
-
-[<img src="images/tree.png" height="230" title="Demo">](https://codepen.io/rgg/pen/WrKyzj)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Twitter"></a>Twitter Heart Animation
-
-[<img src="images/art_twitter_heart_animation.gif" height="230" title="Demo">](http://codepen.io/thebabydino/pen/RRRRZE)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="BookAnimation"></a>Book Animation
-
-[<img src="images/book_animation.gif" height="350" title="Book Animation">](https://codepen.io/Paras-Shenmare/pen/eYxJpQB)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="ImageColorizing"></a>Dynamic Image Colorizing
+## <a id="navigation--menus"></a>Navigation & Menus
 
-[<img src="images/imagecolorizing.png" height="230" title="Demo">](http://codepen.io/noahblon/pen/ZbjmbK)
+[<img src="Hamburger-Menu/HamburgerMenu.png" height="230" title="Hamburger Menu">](Hamburger-Menu/index.html)
+[<img src="images/menu.png" height="230" title="Animated Navigation Menu">](Animated%20Navigation%20Menu-tutorial/index.html)
+[<img src="images/image_navbar.png" height="230" title="Responsive navbar">](Responsive%20navbar/index.html)
+[<img src="images/menu4.png" height="230" title="Burger Menu">](NavBar/Burger-Menu/index.html)
+[<img src="images/fancyMenu.gif" height="230" title="Fancy Menu">](NavBar/Fancy-Menu/index.html)
+[<img src="images/menu2.png" height="230" title="Dropdown Menu">](NavBar/Dropdown-Menu/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="DarkMode"></a>DarkMode
+## <a id="loaders--progress-indicators"></a>Loaders & Progress Indicators
 
-[<img src="images/darkmode.gif" title="Dark Mode - Day and nigth">](http://codepen.io/marcelesilv/pen/yLjrEzz)
+[<img src="images/loader.png" height="230" title="Animated Loading Page">](Animated%20Loading%20Page/index.html)
+[<img src="images/loader2.png" height="230" title="Simple Loader">](Simple%20Loader/index.html)
+[<img src="circular-progress-bar-loader/demo.gif" height="230" title="Circular Progress Bar Loader">](circular-progress-bar-loader/index.html)
+[<img src="images/New_Loader.png" height="230" title="New Loader">](new_Loader/index.html)
+[<img src="images/CompassLoader.gif" height="230" title="Compass Loader">](CompassLoader/index.html)
+[<img src="images/redar_loader.gif" height="230" title="Radar Loader">](Redar%20Loader/index.html)
+[<img src="images/progress_on_scroll_demo.gif" height="230" title="Progress On Scroll">](Progressbar%20On%20Scroll/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="RippleEffect"></a>Ripple Effect
+## <a id="css-only-interactive-components"></a>CSS-Only Interactive Components
 
-[<img src="images/ripple-effect.gif" height="230" title="Ripple EffectDemo">](http://mladenplavsic.github.io/css-ripple-effect/)
+[<img src="css-only-calculator/demo.png" height="230" title="CSS Only Calculator">](css-only-calculator/index.html)
+[<img src="css-only-coin-flip/demo.gif" height="230" title="CSS Only Coin Flip">](css-only-coin-flip/index.html)
+[<img src="css-only-equalizer/demo.gif" height="230" title="CSS Only Equalizer">](css-only-equalizer/index.html)
+[<img src="css-only-modal/demo.png" height="230" title="CSS Only Modal">](css-only-modal/index.html)
+[<img src="css-only-pricing-table/demo.png" height="230" title="CSS Only Pricing Table">](css-only-pricing-table/index.html)
+[<img src="css-only-star-rating/demo.png" height="230" title="CSS Only Star Rating">](css-only-star-rating/index.html)
+[<img src="css-only-step-progress/demo.png" height="230" title="CSS Only Step Progress">](css-only-step-progress/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="ResponsiveItemShowcase"></a>Responsive Counter Showing # of Items That Didn't Fit Screen
+## <a id="cards--layout-components"></a>Cards & Layout Components
 
-[<img src="images/responsive-item-showcase.gif" title="Responsive Item Showcase">](https://codepen.io/pavlovsk/pen/QqrZzv/right/)
+[<img src="Blinking Card/demo.gif" height="230" title="Blinking Card">](Blinking%20Card/index.html)
+[<img src="responsive-card/demo.png" height="230" title="Responsive Card">](responsive-card/index.html)
+[<img src="images/neuo.png" height="230" title="Blog Post Cards - Neuo">](BLOG%20POST%20CARDS/neuo/index.html)
+[<img src="images/claycards.png" height="230" title="Blog Post Cards - Clay">](BLOG%20POST%20CARDS/clay/index.html)
+[<img src="images/glasscards.png" height="230" title="Blog Post Cards - Glass">](BLOG%20POST%20CARDS/glass/index.html)
+[<img src="images/neumorphism-card-design.gif" height="230" title="Neumorphism Card Design">](Cards/Neumorphism-Card/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="Redar Loader"></a>Readar Loader
+## <a id="accordions--faq-sections"></a>Accordions & FAQ Sections
 
-[<img src="images/redar_loader.gif" title="Redar Loader">](https://codepen.io/shail2604/pen/JoGKqda)
+[<img src="Accordion Projects/demo.gif" height="230" title="Accordion Projects">](Accordion%20Projects/index.html)
+[<img src="Modern-Accordion-and-FAQ/demo.gif" height="230" title="Modern Accordion and FAQ">](Modern-Accordion-and-FAQ/index.html)
+[<img src="images/faqclay.png" height="230" title="FAQ Section - Clay">](FAQ%20SECTION/clay/index.html)
+[<img src="images/faqneuo.png" height="230" title="FAQ Section - Neuo">](FAQ%20SECTION/neuo/index.html)
+[<img src="images/faqglass.png" height="230" title="FAQ Section - Glass">](FAQ%20SECTION/glass/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="login"></a>A login Page with Glassmorphism Effect
+## <a id="text-effects--typography"></a>Text Effects & Typography
 
-[<img src="Login_Page/log-in-6398177_1280.png" title="Responsive Login Page with Glassmorphism Effect">]
+[<img src="Animated-Text/demo.gif" height="230" title="Animated Text">](Animated-Text/index.html)
+[<img src="TypeWriter Effect/demo.gif" height="230" title="TypeWriter Effect">](TypeWriter%20Effect/index.html)
+[<img src="distorted-text-animation/demo.gif" height="230" title="Distorted Text Animation">](distorted-text-animation/index.html)
+[<img src="images/sansfont.png" height="230" title="Font Face">](examples/font-face/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="NeumorphismCardDesign"></a>Neumorphism Card Design
+## <a id="sliders--carousels"></a>Sliders & Carousels
 
-[<img src="images/neumorphism-card-design.gif" title="Neumorphism Card Design">](https://codepen.io/saviomartin/pen/LYNgqKW)
+[<img src="Animated Slider/demo.gif" height="230" title="Animated Slider">](Animated%20Slider/index.html)
+[<img src="infinitecarousel/demo.gif" height="230" title="Infinite Carousel">](infinitecarousel/index.html)
+[<img src="images/slideshow2.png" height="230" title="Slideshow">](Slideshow/index.html)
+[<img src="images/carousel.png" height="230" title="Carousel">](carousel_effect/index.html)
+[<img src="Horizontal image slider/images/horizontal-image-slider.gif" height="230" title="Horizontal Image Slider">](Horizontal%20image%20slider/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="neon-button"></a>Neon Button
+## <a id="layout--grid-systems"></a>Layout & Grid Systems
 
-[<img src="images/neon-button.gif" title="Neon Button">](https://codepen.io/nikhilkalburgi/pen/WNyeopW)
-[<img src="images/neon-button-updated.gif" title="Neon Button Updated">](https://codepen.io/masterujjval/pen/MWZMZbw)
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="neon-card"></a>Neon Card
-
-[<img src="images/neon-card-2.gif" title="Neon Card">](examples/neon-card-2.html)
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Netflix-Clone-v2"></a>Netflix Clone Demo
-
-[<img src="Netflix Clone v2/Screenshot1.png" height="230" title="Demo 1">](http://url-to-page)
-[<img src="Netflix Clone v2/Screenshot2.png" height="230" title="Demo 2">](http://url-to-page)
-[<img src="Netflix Clone v2/Screenshot3.png" height="230" title="Demo 3">](http://url-to-page)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="shake-button"></a>Shake Button
-
-[<img src="images/shake-button.gif" height="230" title="Demo">](https://codepen.io/krushnarout/pen/zYyLEmM)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="moving_hand"></a>Shake Button
-
-[<img src="images/moving_hand.png" height="230" title="image">](examples/Moving_hand.html)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="css-form-handling"></a>CSS Form Handling
-
-[<img src="images/form-preview.png" height="230" title="CSS Form Handling">](CSS-Form-Handling/)
-
-**[⬆ back to top](#quick-links)**
-
-## <a id="Download_buttons"></a>Download_buttons
-
-[<img src="images/Download_buttons.png" title="Download_buttons">](https://codepen.io/Shail-Sharma-the-animator/pen/rNXYMGx)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Download_buttons"></a>Download buttons
-
-[<img src="images/Download_buttons.png" title="Download_buttons">](https://codepen.io/Shail-Sharma-the-animator/pen/rNXYMGx)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Dog-Animation"></a>Dog Box Animation
-
-[<img src="images/Dog-box-animation.png" title="Dog-box">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/b8321f82-ee84-4e4a-9010-62a5f4afc45a)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Thankyou-Animation"></a>Thankyou-Animation
-
-[<img src="images/Thankyou-animation.png" height="230" title="Thankyou">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/5e37601d-dce5-4326-b22a-c7d4f1c6d16f)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Square_roation_animation"></a>Square_rotation_animation (Latin)
-
-[<img src="images/Square_rotation_animation (1).png" height="230" title="SqaureRotationAnimation(1)">](demoLink)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Switch"></a>Switch
-
-[<img src="images/Switch.gif" height="230" title="Switch">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/Switch.gif)
-
-[<img src="images/New_Switch.gif" height="230" title="New_Switch">](https://codepen.io/shail-sharma/pen/PoMpvjO)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="bonfire"></a>Bonfire
-
-[<img src="images/Bonfire.gif" height="230" title="Bonfire">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/Bonfire.gif)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="scenery"></a>Scenery
-
-[<img src="images/scenary.gif" height="230" title="scenery">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/5943c92d-c9d3-401e-a8dd-88091a1d839d)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="bubble"></a>Bubble
-
-[<img src="images/bubble.gif" height="230" title="bubble">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/17b72752-9010-4433-9d1e-b9a24a8f5222)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="flower"></a>Flower
-
-[<img src="images/flower.gif" height="230" title="flower">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/4ca880e9-47b9-4df5-b484-6e2a955ec266)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="JumpingBall"></a>Jumping Ball
-
-<img src="images/jumpingBall.png" height="230" title="Jumping Ball">
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="LightBulbAnimation"></a>Light Bulb Animation
-
-<img src="images/LightBulbAnimation.png" height="230" title="Light Bulb animation">
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="city-animation-footer"></a>City animation footer
-
-[<img src="images/City animation footer.gif" height="230" title="City animation footer">](https://github.com/Dreadlord075/You-Dont-Need-JavaScript/blob/d581e4061af20aa2e2dbf0c11a8860c3fe768245/images/City%20animation%20footer.gif)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="smoke"></a>Smoke
-
-[<img src="images/smoke.gif" height="230" title="smoke">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/d6a4f0b5-5345-4a23-85ae-6c371f597c61)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="loader"></a>Loader
-
-[<img src="images/loader.gif" height="230" title="loader">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/97ba01f5-7e85-4c3e-8d60-47374ef3a1f9)
-
-[<img src="images/New_Loader.png" height="230" title="New_Loader">](https://codepen.io/shail-sharma/pen/yLmMyjq)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="spiner"></a>Spiner
-
-[<img src="images/spiner.gif" height="230" title="spiner">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/72b2e6fc-d12b-423b-a1a7-2d705e111e1f)
-
-**[⬆ back to top](#quick-links)**
-
----
+[<img src="CSS-Grid Layout Generator/demo.png" height="230" title="CSS Grid Layout Generator">](CSS-Grid%20Layout%20Generator/index.html)
+[<img src="flex Property/demo.png" height="230" title="Flex Property">](flex%20Property/index.html)
+[<img src="grid/demo.png" height="230" title="Grid">](grid/index.html)
+[<img src="z indexing/demo.png" height="230" title="Z Indexing">](z%20indexing/index.html)
 
-## <a id="fire"></a>Fire
-
-[<img src="images/fire.gif" height="230" title="fire">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/85e70774-0da0-47bf-bbea-1b6d2d6d73e1)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="flame"></a>Flame
-
-[<img src="images/flame.gif" height="230" title="flame">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/97428742/5d8659ea-84e4-481e-bdcd-e5e9fe7d30e9)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="shuffling-squres"></a>Shuffling squares
-
-[<img src="images/shuffling-squares.gif" height="230" title="Shuffling squares">](https://im3.ezgif.com/tmp/ezgif-3-41efb679c2.gif)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Floating-labelV2"></a>Floating-labelV2
-
-[<img src="images/Floatinglabel2.gif" height="230" title="Floating-labelV2">](https://im2.ezgif.com/tmp/ezgif-2-3297933621.gif)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="scary-animation"></a>scary-animation
-
-[<img src="images/Scary-animation.gif" height="230" title="scary-animation">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="infinite-carousel"></a>infinite-carousel
-
-# [<img src="images/infinite-carousel.gif" height="230" title="infinite-carousel">](https://im4.ezgif.com/tmp/ezgif-4-cf03115fc6.gif)
-
-[<img src="images/Scary-animation.gif" height="230" title="Floating-labelV2">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
-
-[<img src="images/Scary-animation.gif" height="230" title="scary-animation">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="growing-flower"></a>growing-flower
-
-[<img src="images/growing-flower.gif" height="230" title="growing-flower">](https://im3.ezgif.com/tmp/ezgif-3-f53ebce80a.gif)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="playing-card"></a>Playing Card Animation
-
-<img src="images/playing-card.png" height="230" title="Playing cacrd animation">
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="starwarsintro"></a>Star Wars Intro
-
-[<img src="images/intro1.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
-[<img src="images/intro2.png" height="230" title="starwarsintro">](https://codepen.io/kdwzrjtc-the-animator/pen/MWLgBRz)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id= "Gradient-Animation"></a>Gradient Animation
-
-[<img src="images/gradient-animation.gif" height="230" title="Gradient Animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/b3b64a1d4a426ab3a8f20fbe34640de18bca14a5/images/gradient-animation.gif)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="zoom-when-hover"></a>Zoom when hover
-
-[<img src="images/zoom-effect.gif" height="230" title="zoom-when-hover">](https://codepen.io/kdwzrjtc-the-animator/pen/gOqOwLx)
-
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="Floating-labelV2"></a>Floating-labelV2
+## <a id="form-elements--input-effects"></a>Form Elements & Input Effects
 
-[<img src="images/Floatinglabel2.gif" height="230" title="Floating-labelV2">](https://im2.ezgif.com/tmp/ezgif-2-3297933621.gif)
+[<img src="Glassmorphism login page/demo.png" height="230" title="Glassmorphism login page">](Glassmorphism%20login%20page/index.html)
+[<img src="images/textfields.png" height="230" title="Floating Label on Textfield">](Login/Floating-Label/index.html)
+[<img src="images/form-preview.png" height="230" title="CSS Form Handling">](CSS-Form-Handling/index.html)
+[<img src="Login_Page/log-in-6398177_1280.png" height="230" title="Login Page with Glassmorphism">](Login_Page/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id= "Css Tables"></a>CSS Tables
+## <a id="games--interactive-demos"></a>Games & Interactive Demos
 
-## [![Screenshot 2023-10-23 144658](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/d73a9af8-5470-4a88-bfc9-a5e8430aba65)](https://codepen.io/TAPAS-SINGHAL/pen/abXZNWR)
+[<img src="RGBcolorgame/demo.png" height="230" title="RGB Color Game">](RGBcolorgame/index.html)
+[<img src="images/Todo List.png" height="230" title="Todo List">](examples/todo-list/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id= "3D Transform"></a>3D Transform
+## <a id="website-templates--full-pages"></a>Website Templates & Full Pages
 
-## ![animation](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113187290/646f9fb9-f003-4bd1-b535-d0b775bc0b04)
+[<img src="Bitcoin-website/demo.png" height="230" title="Bitcoin Website">](Bitcoin-website/index.html)
+[<img src="Landing Page/demo.png" height="230" title="Landing Page">](Landing%20Page/index.html)
+[<img src="Portfoliowebsite/demo.png" height="230" title="Portfolio Website">](Portfoliowebsite/index.html)
+[<img src="Online_Book_Shop/demo.png" height="230" title="Online Book Shop">](Online_Book_Shop/index.html)
+[<img src="Weather/demo.png" height="230" title="Weather">](Weather/index.html)
+[<img src="images/Website_demo.png" height="230" title="Website Demo">](Web_Demo/index.html)
+[<img src="Motivational-quote-wall/demo.png" height="230" title="Motivational Quote Wall">](Motivational-quote-wall/index.html)
+[<img src="images/Travel_01.png" height="230" title="Travelling Website">](Travelling%20Website/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="animated-btn"></a>Animated Button
+## <a id="animation-effects"></a>Animation Effects
 
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id= "Css FLEX"></a>Css FLEX
-
-## ![Screenshot 2023-10-23 141538](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/113248104/973a1186-de6b-4e07-bc53-424b9b864984)
-
-## <a id="Coffee-Animation"></a>Coffee-Animation
-
-[<img src="https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/7d15c275-5210-4c2e-8530-eb073251a39f" height="230" title="coffee-animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/7d15c275-5210-4c2e-8530-eb073251a39f)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Basketball-Animation"></a>Basketball-Animation
-
-[<img src="images/basketball-animation.gif" height="230" title="basketball-animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/assets/101883389/66759afd-9794-408d-92a5-53b793072f98)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Business-Card"></a>Business-Card
-
-![img_source](Business-Card/output.png)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="SolarSystem"></a>SolarSystem
-
-![img_source](SolarSystem/output.png)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="RadialPulsar"></a>Radial Color Puslar
-
-[<img src="Radial Color Pulsar/Radial.png" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Pendulum"></a>Pendulum
-
-![img_source](images/pendulum.png)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="SlicedButton"></a>SlicedButton
-
-![img_source](Button/Sliced-Button/sliced_button.gif)
-
-**[⬆ back to top](#quick-links)**
-
----
-
-## <a id="Rating Star"></a>Rating Star
+[<img src="Advanced Dancing Animation-tutorial/demo.gif" height="230" title="Advanced Dancing Animation">](Advanced%20Dancing%20Animation-tutorial/index.html)
+[<img src="Dancing Alphabets/demo.gif" height="230" title="Dancing Alphabets">](Dancing%20Alphabets/index.html)
+[<img src="CodePenAnimation/demo.gif" height="230" title="CodePen Animation">](CodePenAnimation/index.html)
+[<img src="images/AnimatedBox.jpg" height="230" title="Animation Box Tutorial">](animation-box%20tutorial/index.html)
+[<img src="animations/demo.gif" height="230" title="Animations">](animations/index.html)
+[<img src="leaf-anim/demo.gif" height="230" title="Leaf Animation">](leaf-anim/index.html)
+[<img src="Square Animation/demo.gif" height="230" title="Square Animation">](Square%20Animation/index.html)
+[<img src="images/Square_rotation_animation (1).png" height="230" title="Square Rotation Animation">](Square_Rotation_Animation/index.html)
+[<img src="images/book_animation.gif" height="230" title="Book Animation">](Book%20Animation/index.html)
+[<img src="images/babyYoda.jpg" height="230" title="Baby Yoda Animation">](Baby%20Yoda%20Animation/index.html)
 
-![img_source](images/rating-star.png)
-
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="DVDScreenSaver"></a>DVD Screen Saver
+## <a id="visual-effects--graphics"></a>Visual Effects & Graphics
 
-![img_source](images/DVDScreenSaver.png)
+[<img src="Flowers/demo.gif" height="230" title="Flowers">](Flowers/index.html)
+[<img src="lighting_decor/demo.png" height="230" title="Lighting Decor">](lighting_decor/index.html)
+[<img src="watch_art/demo.png" height="230" title="Watch Art">](watch_art/index.html)
+[<img src="solar system art/demo.png" height="230" title="Solar System Art">](solar%20system%20art/index.html)
+[<img src="SolarSystem/output.png" height="230" title="Solar System">](SolarSystem/index.html)
+[<img src="Captain America Shield/images/shield.png" height="230" title="Captain America Shield">](Captain%20America%20Shield/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="ProfileCards"></a>ProfileCards
+## <a id="scroll-effects"></a>Scroll Effects
 
-![img_source](images/profileCards/card1.png)
-![img_source](images/profileCards/card2.png)
-![img_source](images/profileCards/card3.png)
-![img_source](images/profileCards/card4.png)
-![img_source](images/profileCards/card5.png)
-![img_source](images/profileCards/card6.png)
-![img_source](images/profileCards/card7.png)
+[<img src="Scroll-Unblur-Text-Effect/demo.gif" height="230" title="Scroll Unblur Text Effect">](Scroll-Unblur-Text-Effect/index.html)
+[<img src="Scroll-Video-Animation/demo.gif" height="230" title="Scroll Video Animation">](Scroll-Video-Animation/index.html)
+[<img src="Parallax Effect Scroll/demo.gif" height="230" title="Parallax Effect Scroll">](Parallax%20Effect%20Scroll/index.html)
+[<img src="Parallax_Effect/demo.gif" height="230" title="Parallax Effect">](Parallax_Effect/index.html)
+[<img src="images/parallax.png" height="230" title="Parallax Scrolling">](examples/parallax-scrolling/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="RotateSquare"></a>RotateSquare
+## <a id="special-components"></a>Special Components
 
-[<img src="images/rotateSquare" height="230" title="Demo 1">]
+[<img src="Search-bar and Tweet/demo.png" height="230" title="Search Bar and Tweet">](Search-bar%20and%20Tweet/index.html)
+[<img src="ToolTip with Delay/demo.png" height="230" title="ToolTip with Delay">](ToolTip%20with%20Delay/index.html)
+[<img src="stickyheader/demo.png" height="230" title="Sticky Header">](stickyheader/index.html)
+[<img src="Cursor/demo.gif" height="230" title="Cursor">](Cursor/index.html)
+[<img src="Shapes/demo.png" height="230" title="Shapes">](Shapes/index.html)
+[<img src="images/tooltips.png" height="230" title="Tooltips">](examples/tooltips/index.html)
+[<img src="images/tabs.png" height="230" title="Tabs">](examples/tabs/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="stickman"></a>Stickman Animation
+## <a id="app-clones--showcases"></a>App Clones & Showcases
 
-<img src="./images/stickman.png" height="200" title="3d card flip transtion demo gif">
+[<img src="NETFLIX CLONE/demo.png" height="230" title="Netflix Clone">](NETFLIX%20CLONE/index.html)
+[<img src="Netflix-Clone-v2/Screenshot1.png" height="230" title="Netflix Clone v2">](Netflix-Clone-v2/index.html)
+[<img src="images/screenshot.png" height="230" title="MasterCard">](MasteCard/index.html)
+[<img src="Implement Interactive Tech Showcase Cards/demo.png" height="230" title="Interactive Tech Showcase Cards">](Implement%20Interactive%20Tech%20Showcase%20Cards/index.html)
+[<img src="MakemyTrip/screenshot.png" height="230" title="MakemyTrip">](MakemyTrip/index.html)
+[<img src="Zomato/screenshot.png" height="230" title="Zomato">](Zomato/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="Clock-App"></a>Clock App
+## <a id="physics--science-animations"></a>Physics & Science Animations
 
-![img_source](image.png)
+[<img src="Newtons Cradle/demo.gif" height="230" title="Newtons Cradle">](Newtons%20Cradle/index.html)
+[<img src="images/pendulum.png" height="230" title="Pendulum">](Pendulum/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="mmt"></a>MakemyTrip
+## <a id="ui-components"></a>UI Components
 
-![img_source](MakemyTrip/screenshot.png)
+[<img src="images/badge_design1.png" height="230" title="Badges">](Badges/index.html)
+[<img src="Sliding Images and NavBar/demo.gif" height="230" title="Sliding Images and NavBar">](Sliding%20Images%20and%20NavBar/index.html)
+[<img src="images/icons.png" height="230" title="Social Media Icons">](Social_media_icons/index.html)
+[<img src="images/footer_lg.png" height="230" title="Responsive Footer">](Responsive%20Footer/index.html)
 
----
 **[⬆ back to top](#quick-links)**
-
-## <a id="zomato"></a>Zomato
-
-![img_source](Zomato/screenshot.png)
 
 ---
-**[⬆ back to top](#quick-links)**
 
-## <a id="3d-card-flip-transition"></a>3D card flip transition
+## <a id="mobile-design"></a>Mobile Design
 
-[<img src="./images/3d-card-flip-transition.gif" height="200" title="Demo Image">]
+[<img src="Animated_Iphone_design/demo.png" height="230" title="Animated iPhone Design">](Animated_Iphone_design/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="babyYoda"></a>Baby Yoda Animation CSS
+## <a id="music--entertainment"></a>Music & Entertainment
 
-[<img src="./images/babyYoda.jpg" title="Baby Yoda Animation">](https://codepen.io/marcelesilv/pen/qBeaOaw)
+[<img src="Music/demo.png" height="230" title="Music">](Music/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
-
-## <a id="debit-card-hover"></a>Debit Card Hover Effect
-![Screenshot 2024-10-11 103321](https://github.com/user-attachments/assets/5e8572a6-9328-44fe-8574-d68f2e6b92ca)
-
-**[⬆ back to top](#quick-links)**
 
----
+## <a id="educational--tutorials"></a>Educational & Tutorials
 
-## <a id="ProgressOnScroll"></a>Progress bar on scroll
-[<img src="images/progress_on_scroll_demo.gif" height="230" title="Progress On Scroll Demo">](https://codepen.io/pritam1813/pen/jOgyERQ)
+[<img src="Top 10/demo.png" height="230" title="Top 10">](Top%2010/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
 
-## <a id="horizontal-image-slider"></a>Horizontal Image Slider
+## <a id="resources"></a>Resources
 
-<img src="Horizontal image slider/images/horizontal-image-slider.gif" height="230" title="horizontal-image-slider">
+[<img src="images/Download_buttons.png" height="230" title="Download Buttons">](download_buttons/index.html)
 
 **[⬆ back to top](#quick-links)**
 
 ---
-
-## <a id="carousel-effect"></a>Carousel Effect
-
-
-[Download the demo video](https://raw.githubusercontent.com/amrutha-m206/You-Dont-Need-JavaScript/carousel_effect-feature/images/carousel_demo.mp4)
-
-
-
-
-**[⬆ back to top](#quick-links)**
 
 ## Contributors
 
