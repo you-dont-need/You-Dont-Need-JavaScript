@@ -1,0 +1,151 @@
+/* Reset + base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+/* Open button */
+.open-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+  margin: 0 auto; /* center horizontally */
+}
+.open-btn:hover {
+  background: #1e40af;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+
+/* Show modal when targeted */
+.modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal box */
+.modal-content {
+  position: relative;
+  background: #fff;
+  max-width: 500px;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #dc2626;
+  transition: color 0.3s;
+}
+.close:hover {
+  color: #991b1b;
+}
+
+/* Footer credit */
+.credit {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+.credit a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+.credit a:hover {
+  color: #2563eb;
+}
+.github-icon {
+  fill: currentColor;
+}
+.author {
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem;
+  }
+  .title {
+    font-size: 1.6rem;
+  }
+  .modal-content {
+    margin: 20% auto;
+    padding: 1.5rem;
+  }
+}

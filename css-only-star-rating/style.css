@@ -1,0 +1,100 @@
+/* Reset + base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+/* Star Rating */
+.star-rating {
+  direction: rtl; /* so stars fill from left to right */
+  font-size: 2.5rem;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  color: #d1d5db;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Highlight stars on hover */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #f59e0b;
+}
+
+/* Highlight stars when checked */
+.star-rating input:checked ~ label {
+  color: #fbbf24;
+}
+
+/* Footer credit */
+.credit {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.credit a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.credit a:hover {
+  color: #2563eb;
+}
+
+.github-icon {
+  fill: currentColor;
+}
+
+.author {
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.6rem;
+  }
+  .star-rating {
+    font-size: 2rem;
+  }
+}
