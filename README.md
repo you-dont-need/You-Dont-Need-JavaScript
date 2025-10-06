@@ -54,14 +54,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="3d-effects--animations"></a>3D Effects & Animations
 
-[<img src="3D Earth/Untitled video - Made with Clipchamp.mp4" height="230" title="3D Earth">](3D%20Earth/index.html)
+[3D Earth](3D%20Earth/index.html)
 [<img src="3D Flipping Card Component/images/chip.png" height="230" title="3D Flipping Card Component">](3D%20Flipping%20Card%20Component/index.html)
 [<img src="3D Rotating Cube/output.png" height="230" title="3D Rotating Cube">](3D%20Rotating%20Cube/index.html)
-[<img src="3D Rotation Square/Demo.gif" height="230" title="3D Rotation Square">](3D%20Rotation%20Square/index.html)
+[3D Rotation Square](3D%20Rotation%20Square/index.html)
 [<img src="images/3d-card-flip-transition.gif" height="230" title="3D card flip animation">](3D%20card%20flip%20animation/index.html)
 [<img src="3D transform/animation.gif" height="230" title="3D transform">](3D%20transform/index.html)
 [<img src="3d_virtual_keyboard/virtual_keyboard.jpg" height="230" title="3d virtual keyboard">](3d_virtual_keyboard/index.html)
-[<img src="Cube 360 view/demo.gif" height="230" title="Cube 360 view">](Cube%20360%20view/index.html)
+[Cube 360 view](Cube%20360%20view/index.html)
 
 **[⬆ back to top](#quick-links)**
 
@@ -109,13 +109,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="css-only-interactive-components"></a>CSS-Only Interactive Components
 
-[<img src="css-only-calculator/demo.png" height="230" title="CSS Only Calculator">](css-only-calculator/index.html)
-[<img src="css-only-coin-flip/demo.gif" height="230" title="CSS Only Coin Flip">](css-only-coin-flip/index.html)
-[<img src="css-only-equalizer/demo.gif" height="230" title="CSS Only Equalizer">](css-only-equalizer/index.html)
-[<img src="css-only-modal/demo.png" height="230" title="CSS Only Modal">](css-only-modal/index.html)
-[<img src="css-only-pricing-table/demo.png" height="230" title="CSS Only Pricing Table">](css-only-pricing-table/index.html)
-[<img src="css-only-star-rating/demo.png" height="230" title="CSS Only Star Rating">](css-only-star-rating/index.html)
-[<img src="css-only-step-progress/demo.png" height="230" title="CSS Only Step Progress">](css-only-step-progress/index.html)
+[CSS Only Calculator](css-only-calculator/index.html)
+[CSS Only Coin Flip](css-only-coin-flip/index.html)
+[CSS Only Equalizer](css-only-equalizer/index.html)
+[CSS Only Modal](css-only-modal/index.html)
+[CSS Only Pricing Table](css-only-pricing-table/index.html)
+[CSS Only Star Rating](css-only-star-rating/index.html)
+[CSS Only Step Progress](css-only-step-progress/index.html)
 
 **[⬆ back to top](#quick-links)**
 
