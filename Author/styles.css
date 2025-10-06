@@ -150,34 +150,72 @@ a{
 }
 
 /*author*/
-#authors{
-    background: url(img/background.jpg) no-repeat
-    center center/cover;
-    min-height: 700px;
-    padding-top: 40px;
-    opacity: 0;
-    position: relative;
-    left: -100%;
-    font-size: 1.3rem;
-    color: #333;
-    animation: glideIn 2s ease forwards;
+/* Authors Section */
+#authors {
+  background: url(img/background.jpg) no-repeat center center/cover;
+  padding: 60px 20px;
+  color: #fff;
+  animation: glideIn 2s ease forwards;
 }
 
-.auth{
-    float: left;
-    height: 500px;
-    width: 33%;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin: 20 01;
+.authors-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.auth img{
-    border-radius: 50%;
-    height: 8rem;
-    width: 8rem;
+.auth {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
+
+.auth:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.auth img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 1rem;
+}
+
+.names {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.lead a {
+  color: #f35aca;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.lead a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #f35aca;
+}
+
 
 /*contact*/
 
@@ -448,4 +486,5 @@ a{
 @keyframes mover {
     to { transform: translateY(-40px); }
 }
+
 
