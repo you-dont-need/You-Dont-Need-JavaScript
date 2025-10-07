@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Flip Grid (hover / focus)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap" aria-label="Flip grid demo">
+    <h1 class="sr-only">Flip Grid Demo</h1>
+
+    <section class="grid" role="list">
+      <!-- Repeatable card -->
+      <div class="card" role="listitem" tabindex="0" aria-label="Card 1">
+        <div class="card__inner">
+          <div class="card__face card__face--front">
+            <div class="badge">1</div>
+            <h2 class="card__title">Front</h2>
+            <p class="card__meta">Hover or focus to flip</p>
+          </div>
+          <div class="card__face card__face--back">
+            <h3>Back content</h3>
+            <p>Extra details go here. This side is revealed on hover/focus.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" role="listitem" tabindex="0" aria-label="Card 2">
+        <div class="card__inner">
+          <div class="card__face card__face--front">
+            <div class="badge">2</div>
+            <h2 class="card__title">Design</h2>
+            <p class="card__meta">Pure CSS flip</p>
+          </div>
+          <div class="card__face card__face--back">
+            <h3>Details</h3>
+            <p>Accessible via keyboard: Tab then Enter/Space to interact with content.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" role="listitem" tabindex="0" aria-label="Card 3">
+        <div class="card__inner">
+          <div class="card__face card__face--front">
+            <div class="badge">3</div>
+            <h2 class="card__title">Animation</h2>
+            <p class="card__meta">Smooth and performant</p>
+          </div>
+          <div class="card__face card__face--back">
+            <h3>Notes</h3>
+            <p>Uses transform/opacity for best GPU performance.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- add more cards as needed -->
+    </section>
+  </main>
+</body>
+</html>

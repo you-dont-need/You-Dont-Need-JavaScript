@@ -52,6 +52,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Dynamic Image Colorizing](#dynamic-image-colorizing)
 - [Enable Dark Mode](#darkmode)
 - [Fancy Menu](#fancy-menu)
+- [Flip the grid](#flip-grid)
 - [Flip on Click](#flip-on-click)
 - [Floating Label on Textfield](#floating-label-on-textfield)
 - [Floating Labels V2](#floating-labelv2)
@@ -517,6 +518,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="toast-notifications"></a>Toast Notifications
 
 [<img src="toast-notifications/toast-notif.png" height="230" title="Demo">](https://codepen.io/Rajat-Hegde/pen/bNEqqym)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="flip-grid"></a>Flip grid
+
+[<img src="flip grid animation/flip.gif" height="230" title="Demo">](https://codepen.io/Rajat-Hegde/pen/bNEqjRp)
 
 **[⬆ back to top](#quick-links)**
 
