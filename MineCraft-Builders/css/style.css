@@ -1,0 +1,176 @@
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Minecraft', sans-serif;
+  background-color: #5c913b;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Reusable */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px #2a2a2a;
+}
+
+/* HEADER */
+.site-header {
+  background: url('../images/dirt-texture.png') repeat;
+  padding: 1rem 0;
+  border-bottom: 5px solid #3c2a0e;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  background: #3c2a0e;
+  border-radius: 4px;
+  box-shadow: 2px 2px #222;
+}
+
+.navbar a:hover {
+  background: #745b32;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 2rem 0;
+  background: #79c05a;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 600px;
+  border: 5px solid #3c2a0e;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #3c2a0e;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 1rem;
+  border: 3px solid #2a2a2a;
+  box-shadow: 3px 3px #222;
+}
+
+.btn:hover {
+  background: #745b32;
+}
+
+/* ABOUT */
+.about {
+  background: #3c2a0e;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.about ul {
+  list-style-type: square;
+  display: inline-block;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+/* GALLERY */
+.gallery {
+  background: #79c05a;
+  padding: 2rem 0;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #3c2a0e;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  border: 3px solid #2a2a2a;
+  border-radius: 6px;
+  box-shadow: 3px 3px #111;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* CONTACT */
+.contact {
+  background: #3c2a0e;
+  padding: 2rem 0;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 3px solid #2a2a2a;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-family: 'Minecraft', sans-serif;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #2a2a2a;
+  border-top: 5px solid #3c2a0e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-grid {
+    flex-direction: column;
+  }
+}
