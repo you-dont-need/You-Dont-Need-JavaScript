@@ -187,37 +187,37 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
+  gap: 10px;
 }
 
 .arr_date {
   flex: 1;
-  padding: 10px;
+  padding: 12px 16px;
   height: 60px;
   background-color: white;
   border: 2px solid rgb(221, 213, 213);
   border-radius: 5px;
-  margin: 0 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
-  text-align: center;
-  white-space: nowrap; /* keeps everything in one line */
+  color: #123C69;
+  white-space: nowrap;
+  transition: 0.3s ease;
 }
-
-.arr_date .day {
-  color: rgb(120, 120, 120);
-  font-size: 13px;
-  font-weight: 400;
-}
-
 
 .arr_date:hover {
   cursor: pointer;
   background-color: #f4f4f4;
 }
+
+.day {
+  color: rgb(120, 120, 120);
+  font-size: 13px;
+  margin-left: 6px;
+}
+
 
 .search {
   background-color: #123C69;
