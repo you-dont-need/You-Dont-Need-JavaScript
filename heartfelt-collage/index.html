@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Love Collage Card</title>
+  <style>
+    :root {
+      --card-bg: rgba(255, 255, 255, 0.08);
+      --accent: #ff6b8a;
+      --text: #fff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: url("https://images.unsplash.com/photo-1526588993441-d5c02fff5ffe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80") repeat-x center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      overflow: hidden;
+      position: relative;
+      animation: bgMove 60s linear infinite;
+    }
+
+    /* animate background sky */
+    @keyframes bgMove {
+      0% { background-position-x: 0; }
+      100% { background-position-x: 1000px; }
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 0;
+    }
+
+    .floating-card {
+      position: relative;
+      z-index: 1;
+      width: 900px;
+      max-width: 95%;
+      background: var(--card-bg);
+      border-radius: 24px;
+      padding: 40px;
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .photo-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+      width: 60%;
+    }
+
+    .photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 25px rgba(255, 107, 138, 0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      background: #111;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+    }
+
+    .photo:hover img {
+      transform: scale(1.15);
+    }
+
+    .heart-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 35%;
+      text-align: center;
+      position: relative;
+    }
+
+    .heart-svg {
+      width: 200px;
+      height: 200px;
+      filter: drop-shadow(0 0 18px rgba(255, 107, 138, 0.7));
+      animation: pulse 3s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+
+    .author {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text);
+    }
+
+    .author h1 {
+      font-size: 26px;
+      font-weight: 600;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+
+    .author p {
+      font-size: 18px;
+      color: #ffe1eb;
+      margin-top: 6px;
+    }
+
+    .floating-card::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: 26px;
+      padding: 2px;
+      background: linear-gradient(45deg, #ff6b8a, #ffd6e0, #6bdfff, #ff9d9d);
+      background-size: 400% 400%;
+      animation: borderGlow 8s ease infinite;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      z-index: -1;
+    }
+
+    @keyframes borderGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @media (max-width: 900px) {
+      .floating-card {
+        flex-direction: column;
+        padding: 30px;
+      }
+      .photo-group, .heart-area {
+        width: 100%;
+      }
+      .heart-svg {
+        width: 160px;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-card">
+    <div class="photo-group">
+      <div class="photo"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80" alt=""></div>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80" alt=""></div>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&q=80" alt=""></div>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=600&q=80" alt=""></div>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt=""></div>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&q=80" alt=""></div>
+    </div>
+
+    <div class="heart-area">
+      <svg class="heart-svg" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0%" x2="100%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#ff9bb3" />
+            <stop offset="100%" stop-color="#ff6b8a" />
+          </linearGradient>
+        </defs>
+        <path fill="url(#g1)" d="M23.6 0c-2.6 0-5 1.2-6.6 3.3C15.4 1.2 13 0 10.4 0 4.6 0 0 4.7 0 10.5c0 6.6 5.4 11.9 13.7 18.2L16 29.6l2.3-0.9C26.6 22.4 32 17.1 32 10.5 32 4.7 27.4 0 21.6 0z"/>
+      </svg>
+      <div class="author">
+        <h1>To: Aanya 💖</h1>
+        <p>From: Kasif</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
