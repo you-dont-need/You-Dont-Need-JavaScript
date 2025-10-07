@@ -1,0 +1,234 @@
+/* From Uiverse.io by narmesh_sah */ 
+.loader-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.traffic-light {
+  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 40%, #1e1e1e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.5),
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -2px 20px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  position: relative;
+  width: 100px;
+}
+
+.light-row {
+  margin: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.light-row:first-child {
+  margin-top: 0;
+}
+
+.light-row:last-child {
+  margin-bottom: 0;
+}
+
+.light {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.light::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  width: 28px;
+  height: 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    transparent 60%
+  );
+  border-radius: 50%;
+  filter: blur(6px);
+  opacity: 0.4;
+}
+
+.light::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 35%,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 65%
+  );
+}
+
+.red-light {
+  background: radial-gradient(circle at center, #2d1515 0%, #1a0808 80%),
+    linear-gradient(135deg, #331212, #1a0606);
+  box-shadow:
+    inset 0 6px 12px rgba(0, 0, 0, 0.4),
+    inset 0 -3px 6px rgba(255, 255, 255, 0.02);
+  animation: redSequence 4s ease-in-out infinite;
+}
+
+@keyframes redSequence {
+  0% {
+    background: radial-gradient(circle at center, #ff4444 0%, #cc1111 80%),
+      linear-gradient(135deg, #ff5555, #dd2222);
+    border-color: rgba(255, 68, 68, 0.25);
+    box-shadow:
+      0 0 40px rgba(255, 68, 68, 0.6),
+      0 0 80px rgba(255, 68, 68, 0.3),
+      0 0 120px rgba(255, 68, 68, 0.15),
+      inset 0 3px 6px rgba(255, 255, 255, 0.15),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+  }
+
+  25%,
+  75%,
+  100% {
+    background: radial-gradient(circle at center, #2d1515 0%, #1a0808 80%),
+      linear-gradient(135deg, #331212, #1a0606);
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow:
+      inset 0 6px 12px rgba(0, 0, 0, 0.4),
+      inset 0 -3px 6px rgba(255, 255, 255, 0.02);
+    transform: scale(1);
+  }
+}
+
+.yellow-light {
+  background: radial-gradient(circle at center, #2d2d15 0%, #1a1a08 80%),
+    linear-gradient(135deg, #333312, #1a1a06);
+  box-shadow:
+    inset 0 6px 12px rgba(0, 0, 0, 0.4),
+    inset 0 -3px 6px rgba(255, 255, 255, 0.02);
+  animation: yellowSequence 4s ease-in-out infinite;
+}
+
+@keyframes yellowSequence {
+  0%,
+  50%,
+  100% {
+    background: radial-gradient(circle at center, #2d2d15 0%, #1a1a08 80%),
+      linear-gradient(135deg, #333312, #1a1a06);
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow:
+      inset 0 6px 12px rgba(0, 0, 0, 0.4),
+      inset 0 -3px 6px rgba(255, 255, 255, 0.02);
+    transform: scale(1);
+  }
+
+  25% {
+    background: radial-gradient(circle at center, #ffdd44 0%, #cc9900 80%),
+      linear-gradient(135deg, #ffee55, #ddaa22);
+    border-color: rgba(255, 221, 68, 0.25);
+    box-shadow:
+      0 0 40px rgba(255, 221, 68, 0.6),
+      0 0 80px rgba(255, 221, 68, 0.3),
+      0 0 120px rgba(255, 221, 68, 0.15),
+      inset 0 3px 6px rgba(255, 255, 255, 0.15),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+  }
+}
+
+.green-light {
+  background: radial-gradient(circle at center, #152d15 0%, #081a08 80%),
+    linear-gradient(135deg, #123312, #061a06);
+  box-shadow:
+    inset 0 6px 12px rgba(0, 0, 0, 0.4),
+    inset 0 -3px 6px rgba(255, 255, 255, 0.02);
+  animation: greenSequence 4s ease-in-out infinite;
+}
+
+@keyframes greenSequence {
+  0%,
+  25%,
+  75% {
+    background: radial-gradient(circle at center, #152d15 0%, #081a08 80%),
+      linear-gradient(135deg, #123312, #061a06);
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow:
+      inset 0 6px 12px rgba(0, 0, 0, 0.4),
+      inset 0 -3px 6px rgba(255, 255, 255, 0.02);
+    transform: scale(1);
+  }
+
+  50%,
+  100% {
+    background: radial-gradient(circle at center, #44ff44 0%, #11cc11 80%),
+      linear-gradient(135deg, #55ff55, #22dd22);
+    border-color: rgba(68, 255, 68, 0.25);
+    box-shadow:
+      0 0 40px rgba(68, 255, 68, 0.6),
+      0 0 80px rgba(68, 255, 68, 0.3),
+      0 0 120px rgba(68, 255, 68, 0.15),
+      inset 0 3px 6px rgba(255, 255, 255, 0.15),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+  }
+}
+
+.loading-status {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  animation: statusUpdate 4s ease-in-out infinite;
+}
+
+.loading-status::before {
+  content: "Initializing red signal...";
+  animation: textUpdate 4s ease-in-out infinite;
+}
+
+@keyframes textUpdate {
+  0%,
+  24% {
+    content: "Initializing red signal...";
+  }
+  25%,
+  49% {
+    content: "Preparing yellow transition...";
+  }
+  50%,
+  74% {
+    content: "Activating green protocol...";
+  }
+  75%,
+  100% {
+    content: "Completing traffic sequence...";
+  }
+}
+
+@keyframes statusUpdate {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  12.5%,
+  37.5%,
+  62.5%,
+  87.5% {
+    opacity: 0.5;
+  }
+}
