@@ -1,0 +1,260 @@
+:root{
+  --bg: #0b1220;
+  --card-bg: linear-gradient(180deg,#0f1724 0%, #0b1220 100%);
+  --accent: #7dd3fc;
+  --accent-2: #f472b6;
+  --gap: 1rem;
+  --card-w: 260px;
+  --card-h: 320px;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(2,6,23,0.6);
+  --focus-ring: 3px solid rgba(125,211,252,0.14);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:#e6eef8}
+.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:3rem}
+
+/* visually-hidden helper */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* grid */
+.grid{
+  display:grid;
+  gap:var(--gap);
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  width:min(1100px,100%);
+  align-items:center;
+}
+
+/* card base */
+.card{
+  width:var(--card-w);
+  height:var(--card-h);
+  perspective: 1200px; /* required for 3D flip */
+  margin:auto;
+  outline: none;
+}
+
+/* focus ring for keyboard users */
+.card:focus{
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius);
+}
+
+/* inner wrapper that does the flip */
+.card__inner{
+  position:relative;
+  width:100%;
+  height:100%;
+  transform-style: preserve-3d;
+  transition: transform 600ms cubic-bezier(.2,.9,.3,1);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* flip on hover OR when focused (keyboard) */
+.card:hover .card__inner,
+.card:focus .card__inner,
+.card:focus-within .card__inner{
+  transform: rotateY(180deg);
+}
+
+/* faces */
+.card__face{
+  position:absolute;
+  inset:0;
+  border-radius:var(--radius);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:1.25rem;
+  text-align:center;
+  color: #e6eef8;
+  transform-origin: center;
+}
+
+/* front styling */
+.card__face--front{
+  background:
+    radial-gradient(1200px 400px at 10% 10%, rgba(255,255,255,0.02), transparent 10%),
+    linear-gradient(180deg, rgba(255,255,255,0.02), transparent),
+    var(--card-bg);
+  box-shadow: inset 0 -6px 18px rgba(0,0,0,0.35);
+  font-weight:600;
+}
+
+/* back styling */
+.card__face--back{
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.12)), linear-gradient(135deg, var(--accent), var(--accent-2));
+  transform: rotateY(180deg);
+  color:#051025;
+  padding:1.25rem;
+}
+
+/* small badge */
+.badge{
+  position:absolute;
+  left:1rem;
+  top:1rem;
+  width:36px;height:36px;border-radius:8px;
+  background:linear-gradient(180deg,#fff8 0%,#ffffff22 100%);
+  color:#fff;font-weight:700;display:grid;place-items:center;font-size:.95rem;
+  backdrop-filter: blur(4px);
+}
+
+/* text */
+.card__title{margin:0;font-size:1.35rem}
+.card__meta{margin:.5rem 0 0;font-size:.9rem;color:rgba(230,238,248,0.8)}
+.card__face--back h3{margin:0 0 .4rem}
+.card__face--back p{margin:0;color:rgba(5,16,37,0.9)}
+
+/* slight hover lift */
+.card:hover .card__inner,
+.card:focus .card__inner{
+  box-shadow: 0 18px 40px rgba(1,6,20,0.6);
+}
+
+/* reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .card__inner { transition: none; }
+}
+
+/* responsive adjustments */
+@media (max-width:520px){
+  :root{--card-w: 92vw; --card-h: 360px}
+  .grid{grid-template-columns: 1fr}
+}
+:root{
+  --bg: #0b1220;
+  --card-bg: linear-gradient(180deg,#0f1724 0%, #0b1220 100%);
+  --accent: #7dd3fc;
+  --accent-2: #f472b6;
+  --gap: 1rem;
+  --card-w: 260px;
+  --card-h: 320px;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(2,6,23,0.6);
+  --focus-ring: 3px solid rgba(125,211,252,0.14);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:#e6eef8}
+.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:3rem}
+
+/* visually-hidden helper */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* grid */
+.grid{
+  display:grid;
+  gap:var(--gap);
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  width:min(1100px,100%);
+  align-items:center;
+}
+
+/* card base */
+.card{
+  width:var(--card-w);
+  height:var(--card-h);
+  perspective: 1200px; /* required for 3D flip */
+  margin:auto;
+  outline: none;
+}
+
+/* focus ring for keyboard users */
+.card:focus{
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius);
+}
+
+/* inner wrapper that does the flip */
+.card__inner{
+  position:relative;
+  width:100%;
+  height:100%;
+  transform-style: preserve-3d;
+  transition: transform 600ms cubic-bezier(.2,.9,.3,1);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* flip on hover OR when focused (keyboard) */
+.card:hover .card__inner,
+.card:focus .card__inner,
+.card:focus-within .card__inner{
+  transform: rotateY(180deg);
+}
+
+/* faces */
+.card__face{
+  position:absolute;
+  inset:0;
+  border-radius:var(--radius);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:1.25rem;
+  text-align:center;
+  color: #e6eef8;
+  transform-origin: center;
+}
+
+/* front styling */
+.card__face--front{
+  background:
+    radial-gradient(1200px 400px at 10% 10%, rgba(255,255,255,0.02), transparent 10%),
+    linear-gradient(180deg, rgba(255,255,255,0.02), transparent),
+    var(--card-bg);
+  box-shadow: inset 0 -6px 18px rgba(0,0,0,0.35);
+  font-weight:600;
+}
+
+/* back styling */
+.card__face--back{
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.12)), linear-gradient(135deg, var(--accent), var(--accent-2));
+  transform: rotateY(180deg);
+  color:#051025;
+  padding:1.25rem;
+}
+
+/* small badge */
+.badge{
+  position:absolute;
+  left:1rem;
+  top:1rem;
+  width:36px;height:36px;border-radius:8px;
+  background:linear-gradient(180deg,#fff8 0%,#ffffff22 100%);
+  color:#fff;font-weight:700;display:grid;place-items:center;font-size:.95rem;
+  backdrop-filter: blur(4px);
+}
+
+/* text */
+.card__title{margin:0;font-size:1.35rem}
+.card__meta{margin:.5rem 0 0;font-size:.9rem;color:rgba(230,238,248,0.8)}
+.card__face--back h3{margin:0 0 .4rem}
+.card__face--back p{margin:0;color:rgba(5,16,37,0.9)}
+
+/* slight hover lift */
+.card:hover .card__inner,
+.card:focus .card__inner{
+  box-shadow: 0 18px 40px rgba(1,6,20,0.6);
+}
+
+/* reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .card__inner { transition: none; }
+}
+
+/* responsive adjustments */
+@media (max-width:520px){
+  :root{--card-w: 92vw; --card-h: 360px}
+  .grid{grid-template-columns: 1fr}
+}
