@@ -1,0 +1,185 @@
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: #f3f4f6;
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem;
+}
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Hide radio inputs */
+input[type="radio"] {
+  display: none;
+}
+
+/* Progress bar */
+.progressbar {
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+}
+.line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #e5e7eb;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.line-fill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  background: #10b981;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+.steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+.circle {
+  width: 42px;
+  height: 42px;
+  background: #d1d5db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #111827;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 16px;
+}
+.circle::after {
+  content: attr(data-step);
+}
+.circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Progress line width */
+#step1:checked ~ .progressbar .line-fill {
+  width: 0%;
+}
+#step2:checked ~ .progressbar .line-fill {
+  width: 33.333%;
+}
+#step3:checked ~ .progressbar .line-fill {
+  width: 66.666%;
+}
+#step4:checked ~ .progressbar .line-fill {
+  width: 100%;
+}
+
+/* Step 1 active */
+#step1:checked ~ .progressbar .steps .circle:nth-child(1) {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Step 2 active */
+#step2:checked ~ .progressbar .steps .circle:nth-child(1) {
+  background: #10b981;
+  color: #fff;
+}
+#step2:checked ~ .progressbar .steps .circle:nth-child(2) {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Step 3 active */
+#step3:checked ~ .progressbar .steps .circle:nth-child(1),
+#step3:checked ~ .progressbar .steps .circle:nth-child(2) {
+  background: #10b981;
+  color: #fff;
+}
+#step3:checked ~ .progressbar .steps .circle:nth-child(3) {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Step 4 active */
+#step4:checked ~ .progressbar .steps .circle:nth-child(1),
+#step4:checked ~ .progressbar .steps .circle:nth-child(2),
+#step4:checked ~ .progressbar .steps .circle:nth-child(3) {
+  background: #10b981;
+  color: #fff;
+}
+#step4:checked ~ .progressbar .steps .circle:nth-child(4) {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Panels */
+.content .panel {
+  display: none;
+}
+#step1:checked ~ .content .panel1,
+#step2:checked ~ .content .panel2,
+#step3:checked ~ .content .panel3,
+#step4:checked ~ .content .panel4 {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+.credit {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+.credit a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.credit a:hover {
+  color: #2563eb;
+}
+.github-icon {
+  fill: currentColor;
+}
