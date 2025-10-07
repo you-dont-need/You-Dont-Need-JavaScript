@@ -90,6 +90,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Tooltips](#tooltips)
 - [Treeview](#treeview)
 - [Twitter Heart Animation](#twitter-heart-animation)
+- [Tri Color Loader](#Tri-Color-Loader)
 - [Book Animation](#book-animation)
 - [Zomato](#zomato)
 - [Zoom When Hover](#zoom-when-hover)
@@ -458,6 +459,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="Twitter"></a>Twitter Heart Animation
 
 [<img src="images/art_twitter_heart_animation.gif" height="230" title="Demo">](http://codepen.io/thebabydino/pen/RRRRZE)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+
+## <a id="Tri_Color_Loader"></a>Tri Color Loader
+
+[<img src="images/tri_color_loader.gif" height="230" title="Demo">](https://codepen.io/shail2604/pen/raxLgbo)
 
 **[⬆ back to top](#quick-links)**
 
