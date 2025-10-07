@@ -97,6 +97,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [MakemyTrip](#mmt)
 - [Text Spoiler Effect](#text-spoiler)
 - [Thank You Animation](#thankyou-animation)
+- [Toast Notification](#toast-notifications)
 - [Todo List](#todo-list)
 - [Tooltips](#tooltips)
 - [Treeview](#treeview)
@@ -505,6 +506,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 [<img src="images/tabs.png" height="230" title="Demo 1">](https://codepen.io/llgruff/pen/ZGBxOa)
 [<img src="images/tabs2.png" height="230" title="Demo 2">](https://codepen.io/fusco/pen/Wvzjrm)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="toast-notifications"></a>Toast Notifications
+
+[<img src="toast-notifications/toast-notif.png" height="230" title="Demo">](https://codepen.io/Rajat-Hegde/pen/bNEqqym)
 
 **[⬆ back to top](#quick-links)**
 
