@@ -1,0 +1,29 @@
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.btn-open-popover {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+#container-popover {
+    inset: unset;
+
+    button {
+        align-items: center;
+        display: flex;
+        font-weight: bold;
+        gap: 5px;
+        padding: 10px;
+        width: 100%;
+
+        svg {
+            width: 30px;
+        }
+    }
+}

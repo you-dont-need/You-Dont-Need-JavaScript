@@ -330,6 +330,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/tooltips2.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
 [<img src="images/info-on-hover.png" height="230" title="Demo 3">](http://codepen.io/SitePoint/pen/akAmPw)
 [<img src="images/tooltips.gif" height="230" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)
+[<img src="images/Popover.gif" height="230" title="Demo 4">](https://codepen.io/theslladev/pen/oNKPwro)
 
 **[⬆ back to top](#quick-links)**
 
