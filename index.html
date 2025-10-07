@@ -1,553 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You Dont Need Javascript</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding-top: 50px;
+        box-sizing: border-box;
+        min-height: 100vh;
+        font-size: 16px;
+        padding-bottom: 60px;
+        background-color: #ffffff;
+        color: #000000;
+      }
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>You Dont Need Javascript</title>
-	<style>
-		body {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-family: Arial, Helvetica, sans-serif;
-			margin: 0;
-			padding-top: 50px;
-			box-sizing: border-box;
-			transition: background-color 0.2s, color 0.2s;
-			min-height: 100vh;
-			font-size: 16px;
-			padding-bottom: 60px;
-		}
+      #pageSection {
+        max-width: 1200px;
+        width: 95%;
+        border: 5px solid #23aa04;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+      }
 
-		body.light-mode {
-			background-color: #ffffff;
-			color: #000000;
-		}
+      #pages {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
 
-		body.dark-mode {
-			background-color: #171717;
-			color: #ffffff;
-		}
+      #pages td,
+      #pages th {
+        padding: 12px;
+        vertical-align: top;
+      }
 
-		#toggleButton {
-			position: fixed;
-			top: 20px;
-			right: 20px;
-			padding: 10px 20px;
-			background-color: #23aa04;
-			color: white;
-			border: none;
-			border-radius: 20px;
-			cursor: pointer;
-			transition: background-color 0.2s ease;
-			z-index: 1000;
-		}
+      #pages td:first-child {
+        width: 25%;
+        min-width: 120px;
+        font-weight: bold;
+        color: #04aa6d;
+      }
 
-		#toggleButton:hover {
-			background-color: #1e8f03;
-		}
+      #pages tr:nth-child(even) {
+        background-color: rgba(189, 255, 189, 0.3);
+      }
 
-		#pageSection {
-			max-width: 1200px;
-			width: 95%;
-			border: 5px solid #23aa04;
-			border-radius: 15px;
-			padding: 30px;
-			text-align: center;
-			transition: background-color 0.2s, color 0.2s, border 0.2s, padding 0.2s, margin 0.2s;
-		}
+      #pages tr:nth-child(odd) {
+        background-color: rgba(189, 255, 189, 0.15);
+      }
 
-		.dark-mode #pageSection {
-			background-color: #1e1e1e;
-			border-color: #1e8f03;
-			border-radius: 15px;
-		}
+      #pages th {
+        text-align: left;
+        background-color: #04aa6d;
+        color: white;
+        font-size: 18px;
+      }
 
-		#pageSection p {
-			font-size: 18px;
-		}
+      .pageUrl {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
 
-		#pages {
-			font-family: Arial, Helvetica, sans-serif;
-			border-collapse: collapse;
-			width: 100%;
-			border-radius: 10px;
-			transition: background-color 0.2s, color 0.2s;
-		}
+      .pageUrl a {
+        display: inline-flex;
+        text-transform: capitalize;
+        font-size: 15px;
+        padding: 8px 14px;
+        font-family: Verdana;
+        color: #04aa6d;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.2s, color 0.2s;
+        border: 1px solid #04aa6d;
+      }
 
-		#pages tbody {
-			border-radius: 10px;
-		}
+      .pageUrl a:hover {
+        background-color: #04aa6d;
+        color: white;
+      }
 
-		#pages td,
-		#pages th {
-			padding: 12px;
-		}
+      header {
+        margin-bottom: 30px;
+      }
 
-		#pages td:first-child {
-			width: 20%;
-			min-width: 120px;
-		}
+      h1 {
+        font-size: 2rem;
+        color: #04aa6d;
+        margin-bottom: 10px;
+      }
 
-		#pages tr:nth-child(even) {
-			/* background-color: #f2f2f2; */
-			background-color: rgba(189, 255, 189, 0.5);
-		}
+      a {
+        text-decoration: none;
+        color: #242424;
+      }
 
-		#pages tr:nth-child(odd) {
-			/* background-color: #f2f2f2; */
-			background-color: rgba(189, 255, 189, 0.25);
-		}
+      .description {
+        font-size: 1.2em;
+        color: #333;
+        margin-bottom: 20px;
+      }
 
-		.dark-mode #pages tr:nth-child(even) {
-			background-color: #2a2a2a;
-		}
+      /* logo image */
+      .java_pic {
+        height: auto;
+        width: 2rem;
+      }
 
-		/* #pages tr:hover {
-			background-color: rgba(189, 255, 189, 0.372);
-		} */
+      .button_java {
+        border: 2px solid black;
+        width: 50%;
+        justify-content: center;
+        margin-left: 20rem;
+        background-color: #04aa6d;
+        border-radius: 1rem;
+        display: flex;
+      }
 
-		/* .dark-mode #pages tr:hover {
-			background-color: #3a3a3a;
-		} */
+      .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="pageSection">
+      <header>
+        <div class="button_java">
+          <h1>
+            <a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript">
+              <div class="top">
+                You Dont Need JavaScript
+                <img src="images/java-script.png" alt="java" class="java_pic" />
+              </div>
+            </a>
+          </h1>
+        </div>
+        <p class="description">
+          Explore the power of pure CSS with our collection of interactive demos
+          and examples.
+        </p>
+      </header>
 
-		#pages th {
-			padding-top: 12px;
-			padding-bottom: 12px;
-			text-align: left;
-			background-color: #04aa6d;
-			color: white;
-		}
+      <table id="pages">
+        <tr>
+          <th>Category</th>
+          <th>Projects</th>
+        </tr>
 
-		.pageUrl {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 10px;
-		}
+        <!-- 3D & Animations -->
+        <tr>
+          <td>3D & Animations</td>
+          <td class="pageUrl">
+            <a href="./3D Rotation Square/animation.html">3D Rotation Square</a>
+            <a href="./3D transform/index.html">3D Transform</a>
+            <a href="./3d_virtual_keyboard/index.html">3D Virtual Keyboard</a>
+            <a href="./3D Rotating Cube/index.html">3D Rotating Cube</a>
+            <a href="./3D transform/index.html">3D Transform</a>
+            <a href="./3D card flip animation/index.html"
+              >3D Card Flip Animation</a
+            >
+            <a href="./Baby Yoda Animation/index.html">Baby Yoda Animation</a>
+            <a
+              href="./Advanced Dancing Animation-tutorial/Advanced Dancing Animation.html"
+              >Advanced Dancing Animation</a
+            >
+            <a href="./Blinking Card/index.html">Rotating Card</a>
+            <a href="./Animated_Iphone_design/animatedipne.html"
+              >Animated iPhone</a
+            >
+            <a href="./Book Animation/index.html">Book Animation</a>
+            <a href="./DVD Screen Saver/index.html">DVD Screen Saver</a>
+            <a href="./Jumping Ball/index.html">Jumping Ball</a>
+            <a href="./leaf-anim/leaf.html">Leaf Animation</a>
+            <a href="./Light Bulb Animation/bulb.html">Light Bulb Animation</a>
+            <a href="./Newtons Cradle/newtons-cradle.html">Newton’s Cradle</a>
+            <a href="./Pendulum/index.html">Pendulum</a>
+            <a href="./ScaryAnimation/scary.html">Scary Animation</a>
+            <a href="./Shuffling squares/shuffling.html">Shuffling Squares</a>
+            <a href="./Square Animation/index.html">Square Animation</a>
+            <a href="./Square_Rotation_Animation/squareAnimation.html"
+              >Square Rotation Animation</a
+            >
+            <a href="./Radial Color Pulsar/index.html">Radial Color Pulsar</a>
+            <a href="./Coffee Machine Animation/index.html">Coffee Machine</a>
+            <a href="./Flowers/index.html">Flowers</a>
+            <a href="./animations/Candles/index.html">Candles</a>
+            <a href="./CodePenAnimation/index.html">Windmill</a>
+            <a href="./misc/fire.html">Fire Animation</a>
+            <a href="./misc/Tubelight.html">Tubelight Effect Animation</a>
+            <a href="./3D Earth/index.html">3D Earth</a>
+            <a href="./Animated Slider/index.html">Animated Slider</a>
+            <a href="./Animated-Text/index.html">Animated Text</a>
+          </td>
+        </tr>
 
-		.pageUrl a {
-			display: inline-flex;
-			text-transform: capitalize;
-			font-size: 16px;
-			letter-spacing: 0.5px;
-			padding: 10px 20px;
-			font-family: Verdana;
-			margin: 2px 0;
-			color: #04aa6d;
-			/* background-color: #f0f0f0; */
-			border-radius: 5px;
-			text-decoration: none;
-			transition: background-color 0.2s, color 0.2s;
-			border: 1px solid #04aa6d;
-		}
+        <!-- CSS Art -->
+        <tr>
+          <td>CSS Art</td>
+          <td class="pageUrl">
+            <a href="./Captain America Shield/index.html"
+              >Captain America Shield</a
+            >
+            <a href="./Growing-flower/growing.html">Growing Flower</a>
+            <a href="./SolarSystem/index.html">Solar System</a>
+            <a href="./Parallax_Effect/index.html">Parallax Portfolio</a>
+          </td>
+        </tr>
 
-		.dark-mode .pageUrl a {
-			color: #23aa04;
-			background-color: #2a2a2a;
-			border-color: #3a3a3a;
-		}
+        <!-- Buttons -->
+        <tr>
+          <td>Buttons</td>
+          <td class="pageUrl">
+            <a href="./Button/indes.html">Basic Button</a>
+            <a href="./Button/Sliced-Button/index.html">Sliced Button</a>
+            <a href="./V2/examples/butons.html">Buttons V2</a>
+            <a href="./Animated Submit Button/index.html"
+              >Animated Submit Button</a
+            >
 
-		.pageUrl a:hover {
-			background-color: #04aa6d;
-			color: white;
-			border: none;
-		}
+            <a href="./Button/Hover-Button-Clicks/index.html"
+              >Hover Button Clicks</a
+            >
+            <a href="./Button/Rotating-Text-w-Ripple/index.html"
+              >Rotating-Text-w-Ripple</a
+            >
+            <a href="./Button Neon/index.html">Button Neon 1</a>
+            <a href="./misc/neon-button.html">Button Neon 2</a>
+            <a href="./misc/shake-button.html">Shake Button</a>
+            <a href="./download_buttons/index.html">Download Buttons</a>
+          </td>
+        </tr>
 
-		.dark-mode .pageUrl a:hover {
-			background-color: black;
-		}
+        <!-- Loader -->
+        <tr>
+          <td>Loaders</td>
+          <td class="pageUrl">
+            <a href="./CompassLoader/index.html">Compass Loader</a>
+            <a href="./CSS-Loader/purnasth/index.html">CSS Loader</a>
+            <a href="./Redar Loader/index.html">Redar Loader</a>
+            <a href="./circular-progress-bar-loader/index.html"
+              >Circular Progress Bar Loader</a
+            >
+            <a href="./Loading/index.html">Loading</a>
+            <a href="./Simple Loader/index.html">Simple Loader</a>
+            <a href="./misc/3d-hand-loader.html">3D Hand Loader</a>
+            <a href="./misc/loader-1.html">Loader 1</a>
+            <a href="./misc/loader-2.html">Loader 2</a>
+            <a href="./misc/loader-3.html">Loader 3</a>
+            <a href="./misc/loader-4.html">Loader 4</a>
+            <a href="./misc/loader-5.html">Loader 5</a>
+            <a href="./misc/loader-6.html">Loader 6</a>
+            <a href="./misc/loader-7.html">Loader 7</a>
+            <a href="./misc/loader-8.html">Loader 8</a>
+            <a href="./misc/loader-9.html">Loader 9</a>
+            <a href="./misc/loader-10.html">Loader 10</a>
+            <a href="./misc/loader-11.html">Loader 11</a>
+            <a href="./misc/Spiner.html">Loader 12</a>
+            <a href="./new_Loader/index.html">Loader 13</a>
+          </td>
+        </tr>
 
-		@media (max-width: 768px) {
-			body {
-				padding-left: 10px;
-				padding-right: 10px;
-				min-height: auto;
-				padding-top: 40px;
-				padding-bottom: 40px;
-			}
+        <!-- Badges -->
+        <tr>
+          <td>Badges</td>
+          <td class="pageUrl">
+            <a href="./Badges/index.html">Badge 1</a>
+            <a href="./Badges/Badge-design-2/index.html">Badge 2</a>
+          </td>
+        </tr>
 
-			#pageSection {
-				border: none;
-				border-radius: 0;
-				padding: 10px;
-				width: 100%;
-				margin: 0;
-			}
+        <!-- Accordions -->
+        <tr>
+          <td>Accordions</td>
+          <td class="pageUrl">
+            <a href="./Accordion Projects/Accordian_css_radio_rules/index.html"
+              >Accordion (CSS Radio Rules)</a
+            >
+            <a href="./Accordion Projects/accordion/accordion.html"
+              >Accordion</a
+            >
+            <a href="./Accordion Projects/AccordionV1/index.html"
+              >Accordion V1</a
+            >
+            <a href="./FAQ SECTION/claymorphismtheme/clay.html"
+              >Claymorphism FAQ</a
+            >
+            <a href="./FAQ SECTION/glasstheme/faqglass.html">Glass FAQ</a>
+            <a href="./FAQ SECTION/neumorphismtheme/neu.html"
+              >Neumorphism FAQ</a
+            >
+            <a href="./Modern-Accordion-and-FAQ/index.html">Modern Accordion and FAQ</a>
+          </td>
+        </tr>
 
-			#pages td,
-			#pages th {
-				padding: 8px;
-				font-size: 14px;
-			}
+        <!-- Cards -->
+        <tr>
+          <td>Cards</td>
+          <td class="pageUrl">
+            <a href="./BLOG POST CARDS/neuocards.html">Blog Post - Neuocard</a>
+            <a href="./BLOG POST CARDS/claycard.html">Blog Post - Claycard</a>
+            <a href="./BLOG POST CARDS/Glasscard.html">Blog Post - Glasscard</a>
+            <a href="./misc/card-hover.html">Card Hover</a>
+            <a href="./misc/ExpandableCardDesign.html">Expandable Card</a>
+            <a href="./misc/glassmorphism-card-design.html"
+              >Glassmorphism Card</a
+            >
+            <a href="./MasterCard/index.html">MasterCard</a>
+            <a href="./Business-Card/index.html">Business Card</a>
+            <a href="./Cards/bg-blur-card (green) twcss/index.html"
+              >BG Blur Card</a
+            >
+            <a href="./Cards/flipping-card/index.html">Flipping Card</a>
+            <a href="./Cards/frost-card/index.html">Frost Card</a>
+            <a href="./Debit Card Hover Effect/index.html"
+              >Debit Card Hover Effect</a
+            >
+            <a href="./3D Flipping Card Component/index.html">3D Flipping Card Component</a>
+            <a href="./Implement Interactive Tech Showcase Cards/index.html">Interactive Tech Showcase Cards</a>
+            <a href="./MasteCard/index.html">MasterCard Design</a>
+          </td>
+        </tr>
 
-			.pageUrl a {
-				font-size: 14px;
-				padding: 4px 8px;
-			}
-			.dark-mode-toggle{
-				display: none;
-			}
-		}
+        <!-- Forms & Inputs -->
+        <tr>
+          <td>Forms & Inputs</td>
+          <td class="pageUrl">
+            <a href="./CSS-Form-Handling/index.html">CSS Form Handling</a>
+            <a href="./Login/Signin.html">Login</a>
+            <a href="./Login_Page/Index.html">Login Page</a>
+            <a href="./V2/examples/floatinglabelsV2/floatinglabel.html"
+              >Floating Labels</a
+            >
+            <a href="./misc/input-filed.html">Input Field</a>
+            <a href="./New_Switch/index.html">New Switch</a>
+            <a href="./Glassmorphism login page/index.html">Glassmorphism Login Page</a>
+          </td>
+        </tr>
 
-		@media (max-width: 500px) {
-			#pages td:first-child {
-				width: 30%;
-				min-width: 100px;
-			}
+        <!-- Layout & Components -->
+        <tr>
+          <td>Layout & Components</td>
+          <td class="pageUrl">
+            <a href="./Slideshow/purnasth/index.html">Slideshow</a>
+            <a href="./Css Tables/index.html">CSS Tables</a>
+            <a href="./CSS Toggle/index.html">CSS Toggle</a>
+            <a href="./flex Property/new.html">Flex Property</a>
+            <a href="./grid/abc.html">Grid</a>
+            <a href="./infinitecarousel/infinite.html">Infinite Carousel</a>
+            <a href="./Responsive Footer/index.html">Responsive Footer</a>
+            <a href="./responsive_hamburger_navbar/index.html"
+              >Responsive Navbar</a
+            >
+            <a href="./Hamburger-Menu/hamburgerMenu.html">Hamburger Menu</a>
+            <a href="./misc/navBar.html">Navbar</a>
+            <a href="./misc/ModernNavbarDesign.html">Modern Navbar</a>
+            <a href="./Responsive navbar/index.html">Glowing Navbar</a>
+            <a href="./misc/footer.html">Footer</a>
+            <a href="./carousel_effect/index.html">Carousel Effect</a>
+            <a href="./responsive-card/index.html">Responsive Card</a>
+          </td>
+        </tr>
 
-			.pageUrl a {
-				font-size: 12px;
-				padding: 3px 6px;
-			}
-		}
+        <!-- Websites & Projects -->
+        <tr>
+          <td>Websites & Projects</td>
+          <td class="pageUrl">
+            <a href="./Bitcoin-website/index.html">Bitcoin Website</a>
+            <a href="./Portfoliowebsite/port.html">Portfolio Website</a>
+            <a href="./Travelling Website/index.html">Travelling Website</a>
+            <a href="./Landing Page/index.html">E-Commerce Landing Page</a>
+            <a href="./Web_Demo/index.html">Real Estate Website</a>
+            <a href="./Motivational-quote-wall/index.html"
+              >Motivational Quote Wall</a
+            >
+            <a href="./Animated Loading Page/loading_page.html"
+              >Animated Loading Page</a
+            >
+            <a href="./MakemyTrip/index.html">MakeMyTrip Clone</a>
+            <a href="./Netflix-Clone-v2/index.html">Netflix Clone V2</a>
+            <a href="./Online_Book_Shop/index.html">Online Book Shop</a>
+            <a href="./Zomato/index.html">Zomato Clone</a>
+            <a href="./Weather/index.html">Weather App</a>
+          </td>
+        </tr>
 
-		header {
-			margin-bottom: 30px;
-		}
+        <!-- UI Effects -->
+        <tr>
+          <td>UI Effects</td>
+          <td class="pageUrl">
+            <a href="./ToolTip with Delay/tooltip.html">ToolTip with Delay</a>
+            <a href="./distorted-text-animation/distorted-text.html"
+              >Distorted Text</a
+            >
+            <a href="./Scroll-Unblur-Text-Effect/index.html">Scroll Unblur</a>
+            <a href="./Scroll-Video-Animation/index.html">Scroll Video</a>
+            <a href="./examples/card-slide-hover-effect.html"
+              >Card Slide Hover</a
+            >
+            <a href="./examples/image-border-hover-effect.html"
+              >Image Border Hover</a
+            >
+            <a href="./examples/profile-card-hover-effect.html"
+              >Profile Hover</a
+            >
+            <a href="./examples/spin-square-circle.html">Spin Square Circle</a>
+            <a href="./misc/hover-1.html">Hover Effect</a>
+            <a href="./misc/ImageHoverGallery.html">Image Hover Gallery</a>
+            <a href="./misc/interactive-image-gallery.html"
+              >Interactive Gallery</a
+            >
+            <a href="./misc/slider.html">Slider</a>
+            <a href="./misc/carousel-1.html">Carousel 1</a>
+            <a href="./misc/carousel-2.html">Carousel 2</a>
+            <a href="./misc/carousel-3.html">Carousel 3</a>
+            <a href="./Image-Hover-Effect/index.html">Image Hover Effect</a>
+            <a href="./Rating-Star/index.html">Rating Star</a>
+            <a href="./TypeWriter Effect/index.html">TypeWriter Effect</a>
+            <a href="./Horizontal image slider/index.html">Horizontal Image Slider</a>
+            <a href="./Image Comparision Slider/index.html">Image Comparison Slider</a>
+          </td>
+        </tr>
 
-		h1 {
-			font-size: 2rem;
-			color: #04aa6d;
-			margin-bottom: 10px;
-		}
-
-		a {
-			text-decoration: none;
-			color: #242424;
-		}
-
-		.dark-mode h1 a {
-			color: #0d100c; /* green color that's visible on dark background */
-			text-shadow: 0 0 5px rgba(255,255,255,0.2); /* optional: adds a slight glow for better readability */
-		}
-
-		.description {
-			font-size: 1.2em;
-			color: #333;
-			margin-bottom: 20px;
-		}
-
-		.dark-mode .description {
-			color: #b0b0b0;
-		}
-
-		/* New styles for the dark mode toggle */
-		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-		.dark-mode-toggle {
-			/*display: flex;
-			justify-content: end;*/
-			margin: 10px;
-			position: absolute;
-			top: 60px;
-			right: 20px;
-			z-index: 1000;
-		}
-		
-		.dark-mode-toggle label {
-			position: relative;
-			width: 73px;
-			height: 25px;
-			display: block;
-			background: #d9d9d9;
-			border-radius: 100px;
-			cursor: pointer;
-			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15),
-						-5px -5px 10px rgba(255, 255, 255, 0.7);
-			transition: background 0.3s ease, box-shadow 0.3s ease;
-		}
-		
-		.dark-mode-toggle label:after {
-			content: '';
-			position: absolute;
-			height: 18px;
-			width: 34px;
-			background: #f2f2f2;
-			border-radius: 100px;
-			top: 3px;
-			left: 3px;
-			transition: left 0.5s ease, background 0.3s ease;
-			box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2),
-						-3px -3px 6px rgba(255, 255, 255, 0.6);
-		}
-		
-		.dark-mode-toggle input:checked ~ label {
-			background: #242424;
-			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4),
-						-5px -5px 10px rgba(255, 255, 255, 0.05);
-		}
-		
-		.dark-mode-toggle input:checked ~ label:after {
-			left: 43px;
-			background: linear-gradient(180deg, #777, #3a3a3a);
-			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
-						-2px -2px 5px rgba(255, 255, 255, 0.1);
-		}
-		
-		.dark-mode-toggle input {
-			display: none;
-		}
-
-		/* java pic */
-		.java_pic{
-			height: auto;
-			width: 2rem;
-			
-		}
-		.button_java{
-			border: 2px solid black;
-			/* background-color: #000000; */
-			width: 50%;
-			justify-content: center;
-			/* position: absolute; */
-			margin-left: 20rem;
-			background-color: #04aa6d;
-			border-radius: 1rem;
-			display: flex;
-
-		}
-
-    .top{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 2px;
-	}
-		
-
-		/* Remove the old button styles */
-		#toggleButton {
-			display: none;
-		}
-	</style>
-</head>
-
-<body class="light-mode">
-	<!-- Remove the old button -->
-	<!-- <button id="toggleButton">🌙 Dark Mode</button> -->
-
-	<!-- Add the new dark mode toggle -->
-	
-
-	<section id="pageSection">
-		<div id="google_element"></div>
-		<!-- Load Google Translate script over HTTPS and handle errors -->
-		<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"
-			onerror="handleError(this)"></script>
-
-		<script type="text/javascript">
-			function loadGoogleTranslate() {
-				new google.translate.TranslateElement(
-					{
-						pageLanguage: "en",
-						includedLanguages: "en,hi,pa,sa,mr,ur,bn,es,fr,de,it",
-						layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-					},
-					"google_element"
-				);
-			}
-
-			function handleError(error) {
-				console.error("Error loading Google Translate script:", error);
-			}
-		</script>
-		<div class="dark-mode-toggle">
-			<input type="checkbox" id="dark-mode">
-			<label for="dark-mode"></label>
-		</div>
-		<header>
-			<div class="button_java">
-			<h1><a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript"><div class="top"> You Dont Need JavaScript  <img src="images/java-script.png" alt="java" class = "java_pic"></div></a></h1>
-			</div>
-			<p class="description">Explore the power of pure CSS with our collection of interactive demos and examples.
-			</p>
-		</header>
-		<table id="pages">
-			<tr>
-				<th>Category</th>
-				<th>Pages</th>
-			</tr>
-			<tr>
-				<td>3D and Animations</td>
-				<td class="pageUrl">
-					<a href="./3D cube animation/index.html">3D Cube Animation</a>
-					<a href="./3D Rotation Square/animation.html">3D Rotation Square</a>
-					<a href="./3D transform/index.html">3D Transform</a>
-					<a href="./Book Animation/index.html">Book Animation</a>
-					<a href="./CompassLoader/index.html">Compass Loader</a>
-					<a href="./CSS-Loader/purnasth/index.html">CSS Loader</a>
-					<a href="./distorted-text-animation/distorted-text.html">Distorted Text Animation</a>
-					<a href="./DVD Screen Saver/index.html">DVD Screen Saver</a>
-					<a href="./Jumping Ball/index.html">Jumping Ball</a>
-					<a href="./leaf-anim/leaf.html">Leaf Animation</a>
-					<a href="./Light Bulb Animation/bulb.html">Light Bulb Animation</a>
-					<a href="./Newtons Cradle/newtons-cradle.html">Newton's Cradle</a>
-					<a href="./Pendulum/index.html">Pendulum</a>
-					<a href="./ScaryAnimation/scary.html">Scary Animation</a>
-					<a href="./Scroll-Unblur-Text-Effect/index.html">Scroll Unblur Text Effect</a>
-					<a href="./Scroll-Video-Animation/index.html">Scroll Video Animation</a>
-					<a href="./Shuffling squares/shuffling.html">Shuffling Squares</a>
-					<a href="./Square Animation/index.html">Square Animation</a>
-					<a href="./Square_Rotation_Animation/squareAnimation.html">Square Rotation Animation</a>
-				</td>
-			</tr>
-			<tr>
-				<td>CSS Art</td>
-				<td class="pageUrl">
-					<a href="./Captain America Shield/index.html">Captain America Shield</a>
-					<a href="./Growing-flower/growing.html">Growing Flower</a>
-					<a href="./Panda_Animation/Moving_Panda.html">Panda Animation</a>
-					<a href="./SolarSystem/index.html">Solar System</a>
-					<a href="./Parallax_Effect/index.html">Portfolio using parallax effect</a>
-				</td>
-			</tr>
-			<tr>
-				<td>Layout and Components</td>
-				<td class="pageUrl">
-					<a href="./Accordian_css_radio_rules/index.html">Accordion (CSS Radio Rules)</a>
-					<a href="./accordion/accordion.html">Accordion</a>
-					<a href="./BLOG POST CARDS/neuocards.html">Blog Post Cards - Neuocards</a>
-					<a href="./BLOG POST CARDS/claycard.html">Blog Post Cards - Claycard</a>
-					<a href="./BLOG POST CARDS/Glasscard.html">Blog Post Cards - Glasscard</a>
-					<a href="./Business-Card/index.html">Business Card</a>
-					<a href="./Button/indes.html">Button</a>
-					<a href="./Button/Sliced-Button/index.html">Sliced Button</a>
-					<a href="./Slideshow/purnasth/index.html">Slideshow</a>
-					<a href="./Css Tables/index.html">CSS Tables</a>
-					<a href="./CSS Toggle/index.html">CSS Toggle</a>
-					<a href="./flex Property/new.html">Flex Property</a>
-					<a href="./grid/abc.html">Grid</a>
-					<a href="./infinitecarousel/infinite.html">Infinite Carousel</a>
-					<a href="./Login/Signin.html">Login</a>
-					<a href="./Login_Page/Index.html">Login Page</a>
-					<a href="./Rating-Star/index.html">Rating Star</a>
-					<a href="./Responsive Footer/index.html">Responsive Footer</a>
-					<a href="./responsive_hamburger_navbar/index.html">Responsive Hamburger Navbar</a>
-					<a href="./Search-bar and Tweet/youtube.html">Search Bar and Tweet</a>
-					<a href="./Shapes/index.html">Shapes</a>
-					<a href="./stickyheader/index.html">Sticky Header</a>
-				</td>
-			</tr>
-			<tr>
-				<td>Websites and Projects</td>
-				<td class="pageUrl">
-					<a href="./Bitcoin-website/index.html">Bitcoin Website</a>
-					<a href="./Portfoliowebsite/port.html">Portfolio Website</a>
-					<a href="./RGBcolorgame/RGBcolorgame.html">RGB Color Game</a>
-					<a href="./Travelling Website/index.html">Travelling Website</a>
-					<a href="./Landing Page/index.html">E-Commerce Landing Page</a>
-					<a href="./Web_Demo/index.html">Real Estate Website</a>
-				</td>
-			</tr>
-			<tr>
-				<td>Miscellaneous</td>
-				<td class="pageUrl">
-					<a href="./Analog-clock/index.html">Analog Clock</a>
-					<a href="./Cursor/index.html">Cursor</a>
-					<a href="./z indexing/index.html">Z Indexing</a>
-					<a href="./Clock-App/index.html">Clock App</a>
-				</td>
-			</tr>
-			<tr>
-				<td>Examples</td>
-				<td class="pageUrl">
-					<a href="./examples/card-slide-hover-effect.html">Card Slide Hover Effect</a>
-					<a href="./examples/image-border-hover-effect.html">Image Border Hover Effect</a>
-					<a href="./examples/ModernSidebar.html">Modern Sidebar</a>
-					<a href="./examples/profile-card-hover-effect.html">Profile Card Hover Effect</a>
-					<a href="./examples/spin-square-circle.html">Spin Square Circle</a>
-					<a href="./examples/ToDo.html">To-Do List</a>
-				</td>
-			</tr>
-			<tr>
-				<td>V2</td>
-				<td class="pageUrl">
-					<a href="./V2/examples/floatinglabelsV2/floatinglabel.html">Floating Labels V2</a>
-					<a href="./V2/examples/butons.html">Buttons V2</a>
-				</td>
-			</tr>
-			<tr>
-				<td>Misc</td>
-				<td class="pageUrl">
-					<a href="./misc/footer.html">Footer</a>
-					<a href="./misc/card-hover.html">Card Hover</a>
-					<a href="./misc/ExpandableCardDesign.html">Expandable Card Design</a>
-					<a href="./misc/basicprofile.html">Basic Profile</a>
-					<a href ="./misc/bus.html">Bus</a>
-					<a href="./misc/tree-1.html">Tree 1</a>
-					<a href="./misc/tabs-2.html">Tabs 2</a>
-					<a href="./misc/author.html">Author</a>
-					<a href="./misc/input-filed.html">Input Field</a>
-					<a href="./misc/hover-1.html">Hover 1</a>
-					<a href="./misc/navBar.html">Navbar</a>
-					<a href="./misc/ModernNavbarDesign.html">Modern Navbar Design</a>
-					<a href="./Author/About.html">About</a>
-					<a href="./misc/slider.html">Slider</a>
-					<a href="./misc/menu-1.html">Menu 1</a>
-					<a href="./misc/ImageHoverGallery.html">Image Hover Gallery</a>
-					<a href="./misc/glassmorphism-card-design.html">Glassmorphism Card Design</a>
-					<a href="./misc/todo-1.html">Todo 1</a>
-					<a href="./misc/tabs-1.html">Tabs 1</a>
-					<a href="./misc/carousel-1.html">Carousel 1</a>
-					<a href="./misc/carousel-2.html">Carousel 2</a>
-					<a href="./misc/carousel-3.html">Carousel 3</a>
-					<a href="./Glassmorphism login page/index.html">Glassmorphism Login Page</a>
-					<a href="./Responsive navbar/index.html">Responsive glowing navbar</a>
-				</td>
-			</tr>
-			<tr>
-				<td>FAQ Section</td>
-				<td class="pageUrl">
-					<a href="./FAQ SECTION/claymorphismtheme/clay.html">Claymorphism Theme</a>
-					<a href="./FAQ SECTION/glasstheme/faqglass.html">Glass Theme</a>
-					<a href="./FAQ SECTION/neumorphismtheme/neu.html">Neumorphism Theme</a>
-				</td>
-			</tr>
-			<tr>
-				<td>Other</td>
-				<td class="pageUrl">
-					<a href="./Author/Author-page.html">Author</a>
-					<a href="./Web_Demo/index.html">Web Demo</a>
-				</td>
-			</tr>
-		</table>
-	</section>
-	<script type="text/javascript">
-		var Tawk_API = Tawk_API || {},
-			Tawk_LoadStart = new Date();
-		(function () {
-			var s1 = document.createElement("script"),
-				s0 = document.getElementsByTagName("script")[0];
-			s1.async = true;
-			s1.src = "https://embed.tawk.to/66891af8eaf3bd8d4d18ca2d/1i24gr9s5";
-			s1.charset = "UTF-8";
-			s1.setAttribute("crossorigin", "*");
-			s0.parentNode.insertBefore(s1, s0);
-		})();
-	</script>
-
-	<!--End of Tawk.to Script-->
-
-	<script>
-		const darkModeToggle = document.getElementById("dark-mode");
-		const body = document.body;
-	
-		if (localStorage.getItem('darkMode') === 'enabled') {
-			body.classList.replace("light-mode", "dark-mode");
-			darkModeToggle.checked = true;
-		}
-	
-		darkModeToggle.addEventListener("change", () => {
-			if (darkModeToggle.checked) {
-				body.classList.replace("light-mode", "dark-mode");
-				localStorage.setItem('darkMode', 'enabled'); 
-			} else {
-				body.classList.replace("dark-mode", "light-mode");
-				localStorage.setItem('darkMode', 'disabled'); 
-			}
-		});
-	</script>
-</body>
-
+        <!-- Miscellaneous -->
+        <tr>
+          <td>Miscellaneous</td>
+          <td class="pageUrl">
+            <a href="./Analog-clock/index.html">Analog Clock</a>
+            <a href="./Clock-App/index.html">Clock App</a>
+            <a href="./Cursor/index.html">Cursor</a>
+            <a href="./z indexing/index.html">Z-Indexing</a>
+            <a href="./css-only-calculator/index.html">Calculator</a>
+            <a href="./css-only-coin-flip/index.html">Coin Flip</a>
+            <a href="./css-only-equalizer/index.html">Music Equalizer</a>
+            <a href="./css-only-modal/index.html">Modal</a>
+            <a href="./css-only-pricing-table/index.html">Pricing Table</a>
+            <a href="./css-only-step-progress/index.html">Step Progress</a>
+            <a href="./css-only-star-rating/index.html">Star Rating</a>
+            <a href="./misc/bus.html">Bus</a>
+            <a href="./misc/tree-1.html">Tree</a>
+            <a href="./misc/About.html">About Page</a>
+            <a href="./misc/todo-1.html">Todo</a>
+            <a href="./examples/ToDo.html">To-Do List</a>
+            <a href="./misc/tabs-1.html">Tabs 1</a>
+            <a href="./misc/tabs-2.html">Tabs 2</a>
+            <a href="./misc/author.html">Author</a>
+            <a href="./Author/Author-page.html">Author Page</a>
+            <a href="./Progressbar On Scroll/index.html">Progressbar On Scroll</a>
+            <a href="./Shapes/index.html">Shapes</a>
+            <a href="./lighting_decor/index.html">Lighting Decor</a>
+            <a href="./watch_art/index.html">Watch Art</a>
+            <a href="./stickyheader/index.html">Sticky Header</a>
+            <a href="./Music/index.html">Music Player</a>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </body>
 </html>
