@@ -68,6 +68,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
 - [Loaders](#loaders)
+- [Loading_Css_effect](#Loading-Css-effect)
 - [MasterCard](#mastercard)
 - [Mobile Menu Off Canvas](#mobile-menu-off-canvas)
 - [Modal/Popup](#modalpopup)
@@ -769,6 +770,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="LightBulbAnimation"></a>Light Bulb Animation
 
 <img src="images/LightBulbAnimation.png" height="230" title="Light Bulb animation">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Loading Css effect"></a>Loading Css effect
+
+<img src="images/Loading_Css_effect.gif" height="230" title="Loading Css effect">
 
 **[⬆ back to top](#quick-links)**
 
