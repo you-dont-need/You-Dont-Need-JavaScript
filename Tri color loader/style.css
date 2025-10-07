@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: black;
+}
+.circle {
+  --number: 16;
+  --angle: calc(360deg / var(--number));
+  --hue: 160;
+  --thickness: 15px;
+  --length: calc(var(--thickness) * 10);
+  --distance: calc(var(--thickness) * -4);
+  --duration: 2s;
+
+  grid-area: 1/1;
+  width: var(--length);
+  height: var(--thickness);
+  border-radius: calc(var(--thickness) / 2);
+  background: hsl(160, 100%, 51%);
+  transform: rotate(calc(var(--index) * var(--angle)))
+    translateY(var(--distance));
+  animation: changeColor calc(var(--duration) * 1) linear infinite,
+    changeOpacity var(--duration) linear infinite;
+  animation-delay: calc((var(--duration) / var(--number)) * var(--index) * 0.1),
+    calc((var(--duration) / var(--number)) * var(--index) * 0.5);
+  mix-blend-mode: plus-lighter;
+}
+@keyframes changeColor {
+  0%,
+  100% {
+    background: hsl(var(--hue), 100%, 51%);
+  }
+  50% {
+    background: hsl(calc(var(--hue) + 180), 100%, 51%);
+  }
+}
+@keyframes changeOpacity {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  /* NB : A small amount of opacity gives also good results */
+  30%,
+  80% {
+    opacity: 0;
+  }
+}
