@@ -91,6 +91,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Treeview](#treeview)
 - [Twitter Heart Animation](#twitter-heart-animation)
 - [Tri Color Loader](#Tri-Color-Loader)
+- [Traffic Light Loader](#Traffic-light-loader)
 - [Book Animation](#book-animation)
 - [Zomato](#zomato)
 - [Zoom When Hover](#zoom-when-hover)
@@ -464,10 +465,17 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
-
 ## <a id="Tri_Color_Loader"></a>Tri Color Loader
 
 [<img src="images/tri_color_loader.gif" height="230" title="Demo">](https://codepen.io/shail2604/pen/raxLgbo)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Traffic_Light_Loader"></a>Traffic Light Loader
+
+[<img src="images/Traffic_Light_Loader.gif" height="230" title="Demo">](https://codepen.io/shail2604/pen/KwVWWob)
 
 **[⬆ back to top](#quick-links)**
 
