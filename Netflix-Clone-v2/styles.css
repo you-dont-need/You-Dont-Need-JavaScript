@@ -93,3 +93,86 @@ body {
   color: #fff;
   font-size: 14px;
 }
+
+
+@media (max-width: 768px) {
+
+  
+  body {
+    overflow-x: hidden;
+    background-attachment: scroll;
+    background-position: center;
+  }
+
+  
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu a {
+    font-size: 1rem;
+  }
+
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+
+  
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-size: cover;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .content-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  
+  .content-section h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+}
