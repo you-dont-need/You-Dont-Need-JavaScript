@@ -149,6 +149,12 @@ button {
     -moz-border-radius: 90px;
     -ms-border-radius: 90px;
     -o-border-radius: 90px;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 button>span {
