@@ -63,7 +63,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Light Bulb Animation](#light-bulb-animation)
 - [Loaders](#loaders)
 - [Loading_Css_effect](#Loading-Css-effect)
-- [zClimbing_Loading](#Climbing-Loading)
+- [Climbing_Loading](#Climbing-Loading)
 - [MasterCard](#mastercard)
 - [Mobile Menu Off Canvas](#mobile-menu-off-canvas)
 - [Modal/Popup](#modalpopup)
