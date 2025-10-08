@@ -71,6 +71,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Light Bulb Animation](#light-bulb-animation)
 - [Loaders](#loaders)
 - [Loading_Css_effect](#Loading-Css-effect)
+- [Lego_Loader](#Lego-Loader)
 - [MasterCard](#mastercard)
 - [Mobile Menu Off Canvas](#mobile-menu-off-canvas)
 - [Modal/Popup](#modalpopup)
@@ -797,6 +798,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="Loading Css effect"></a>Loading Css effect
 
 <img src="images/Loading_Css_effect.gif" height="230" title="Loading Css effect">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Lego Loader"></a>Lego Loader
+
+<img src="images/lego_loader.gif" height="230" title="Lego Loader">
 
 **[⬆ back to top](#quick-links)**
 
