@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyMusicStore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Russo+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <span class="logo">🎵 MyMusicStore</span>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#store">Store</a></li>
+          <li><a href="#albums">Albums</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="hero">
+    <div class="container">
+      <div class="hero-text">
+        <h1>All You Need To <span>Become a Star</span></h1>
+        <p>Discover the top albums and best tracks. Experience your music journey here.</p>
+        <a href="#albums" class="cta-btn">Shop Now</a>
+      </div>
+      <div class="hero-bg"></div>
+    </div>
+  </section>
+
+  <main>
+    <section id="albums" class="albums-section container">
+      <h2>Featured Albums</h2>
+      <div class="albums-grid">
+        <article class="album-card">
+          <img src="image2.jpeg" alt="Album Cover" />
+          <h3>That So True</h3>
+          <p class="album-artist">Gracie Adams</p>
+          <div class="controls">
+            <button class="play" aria-label="Play"></button>
+            <button class="stop" aria-label="Stop"></button>
+          </div>
+          <ul class="song-list">
+            <li>us.</li>
+            <li>Close to You</li>
+            <li>Risk</li>
+          </ul>
+        </article>
+        <article class="album-card">
+          <img src="image3.jpeg" alt="Album Cover" />
+          <h3>NIGHT CHANGES</h3>
+          <p class="album-artist">One Direction</p>
+          <div class="controls">
+            <button class="play" aria-label="Play"></button>
+            <button class="stop" aria-label="Stop"></button>
+          </div>
+          <ul class="song-list">
+            <li>Kiss You</li>
+            <li>Best Song Ever</li>
+            <li>Story Of My Life</li>
+          </ul>
+        </article>
+        <article class="album-card">
+          <img src="image4.jpeg" alt="Album Cover" />
+          <h3>Love Story</h3>
+          <p class="album-artist">Taylor Swift</p>
+          <div class="controls">
+            <button class="play" aria-label="Play"></button>
+            <button class="stop" aria-label="Stop"></button>
+          </div>
+          <ul class="song-list">
+            <li>Cruel Summer</li>
+            <li>Blank Space</li>
+            <li>Lover</li>
+          </ul>
+        </article>
+        <!-- Ariana Grande Album -->
+        <article class="album-card">
+          <img src="image5.jpg" alt="Ariana Grande Album Cover" />
+          <h3>Positions</h3>
+          <p class="album-artist">Ariana Grande</p>
+          <div class="controls">
+            <button class="play" aria-label="Play"></button>
+            <button class="stop" aria-label="Stop"></button>
+          </div>
+          <ul class="song-list">
+            <li>positions</li>
+            <li>34+35</li>
+            <li>pov</li>
+          </ul>
+        </article>
+        <!-- Ed Sheeran Album -->
+        <article class="album-card">
+          <img src="image6.jpg" alt="Ed Sheeran Album Cover" />
+          <h3>Divide (÷)</h3>
+          <p class="album-artist">Ed Sheeran</p>
+          <div class="controls">
+            <button class="play" aria-label="Play"></button>
+            <button class="stop" aria-label="Stop"></button>
+          </div>
+          <ul class="song-list">
+            <li>Shape of You</li>
+            <li>Perfect</li>
+            <li>Galway Girl</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section container">
+      <h2>Contact Us</h2>
+      <p>Email: support@mymusicstore.com</p>
+      <p>Phone: +123 456 7890</p>
+      <form id="subscribe" class="subscribe-section">
+        <h3>Subscribe to our newsletter</h3>
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MyMusicStore. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
