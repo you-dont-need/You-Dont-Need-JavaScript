@@ -63,6 +63,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Light Bulb Animation](#light-bulb-animation)
 - [Loaders](#loaders)
 - [Loading_Css_effect](#Loading-Css-effect)
+- [zClimbing_Loading](#Climbing-Loading)
 - [MasterCard](#mastercard)
 - [Mobile Menu Off Canvas](#mobile-menu-off-canvas)
 - [Modal/Popup](#modalpopup)
@@ -477,6 +478,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="Traffic_Light_Loader"></a>Traffic Light Loader
 
 [<img src="images/Traffic_Light_Loader.gif" height="230" title="Demo">](https://codepen.io/shail2604/pen/KwVWWob)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Climbing_Loading"></a>Climbing Loading
+
+[<img src="images/Climbing_Loading.gif" height="230" title="Demo">](https://codepen.io/shail2604/pen/GgoWVym)
 
 **[⬆ back to top](#quick-links)**
 
