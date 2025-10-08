@@ -46,6 +46,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Carousel Effect](#carousel-effect)
 - [Counter of Checked Checkboxes](#counter-of-checked-check-boxes)
 - [CSS Form Handling](#css-form-handling)
+- [Climbing Loading](#Climbing-Loading)
 - [Download_buttons](#Download_buttons)
 - [Dog Box Animation](#dog-box-animation)
 - [Dropdown Menu](#dropdown-menu)
@@ -242,6 +243,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 [<img src="images/checkedcounter.png" height="230" title="Demo 1">](https://codepen.io/anon/pen/eZWXOZ)
 [<img src="images/checkedcounter2.png" height="230" title="Demo 2">](http://codepen.io/lonekorean/pen/wKbzv)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Climbing Loading"></a>Climbing Loading
+
+[<img src="images/Climbing_Loading.gif" height="230" title="Demo">](https://codepen.io/shail2604/pen/GgoWVym)
 
 **[⬆ back to top](#quick-links)**
 
