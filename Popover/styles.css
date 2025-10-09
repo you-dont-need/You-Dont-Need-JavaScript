@@ -1,0 +1,34 @@
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.btn-open-popover {
+    anchor-name: --btn-anchor;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+#container-popover {
+    inset: unset;
+    position-anchor: --btn-anchor;
+    top: anchor(bottom);
+    left: anchor(center);
+    translate: -50% 0;
+
+    button {
+        align-items: center;
+        display: flex;
+        font-weight: bold;
+        gap: 5px;
+        padding: 10px;
+        width: 100%;
+
+        svg {
+            width: 30px;
+        }
+    }
+}
