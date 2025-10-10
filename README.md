@@ -45,12 +45,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [City Animation Footer](#city-animation-footer)
 - [Carousel Effect](#carousel-effect)
 - [Counter of Checked Checkboxes](#counter-of-checked-check-boxes)
+- [CSS Form Handling](#css-form-handling)
+- [Climbing Loading](#Climbing-Loading)
 - [Download_buttons](#Download_buttons)
 - [Dog Box Animation](#dog-box-animation)
 - [Dropdown Menu](#dropdown-menu)
 - [Dynamic Image Colorizing](#dynamic-image-colorizing)
 - [Enable Dark Mode](#darkmode)
 - [Fancy Menu](#fancy-menu)
+- [Flip the grid](#flip-grid)
 - [Flip on Click](#flip-on-click)
 - [Floating Label on Textfield](#floating-label-on-textfield)
 - [Floating Labels V2](#floating-labelv2)
@@ -61,11 +64,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Horizontal image slider](#horizontal-image-slider)
 - [Image Gallery](#image-gallery)
 - [Image Hover Effect]()
+- [Image Comparison Slider](#image-comparison-slider)
 - [Infinite Carousel](#infinite-carousel)
 - [Info on Hover / Popover](#info-on-hover-popover)
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
 - [Loaders](#loaders)
+- [Loading_Css_effect](#Loading-Css-effect)
+- [Lego_Loader](#Lego-Loader)
 - [MasterCard](#mastercard)
 - [Mobile Menu Off Canvas](#mobile-menu-off-canvas)
 - [Modal/Popup](#modalpopup)
@@ -79,8 +85,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Pendulum](#pendulum)
 - [Playing Card Animation](#playing-card-animation)
 - [Profile Cards](#profilecards)
+- [Radial Color Pulsar](#RadialPulsar)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
 - [Ripple Effect](#ripple-effect)
+- [Redar Loader](#Redar-Loader)
 - [Scary Animation](#scary-animation)
 - [Scenery](#scenery)
 - [Shake Button](#shake-button)
@@ -93,10 +101,13 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [MakemyTrip](#mmt)
 - [Text Spoiler Effect](#text-spoiler)
 - [Thank You Animation](#thankyou-animation)
+- [Toast Notification](#toast-notifications)
 - [Todo List](#todo-list)
 - [Tooltips](#tooltips)
 - [Treeview](#treeview)
 - [Twitter Heart Animation](#twitter-heart-animation)
+- [Tri Color Loader](#Tri-Color-Loader)
+- [Traffic Light Loader](#Traffic-light-loader)
 - [Book Animation](#book-animation)
 - [Zomato](#zomato)
 - [Zoom When Hover](#zoom-when-hover)
@@ -238,6 +249,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="Climbing Loading"></a>Climbing Loading
+
+[<img src="images/Climbing_Loading.gif" height="230" title="Demo">](https://codepen.io/shail2604/pen/GgoWVym)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="Flip"></a>Flip on click
 
 [<img src="images/flipper.png" height="230" title="Demo">](https://codepen.io/RuudBurger/pen/bwjry)
@@ -321,6 +340,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/tooltips2.png" height="230" title="Demo 2">](http://codepen.io/cristina-silva/pen/XXOpga)
 [<img src="images/info-on-hover.png" height="230" title="Demo 3">](http://codepen.io/SitePoint/pen/akAmPw)
 [<img src="images/tooltips.gif" height="230" title="Demo 4">](http://codepen.io/ekrof/pen/YqmXdQ)
+[<img src="images/Popover.gif" height="230" title="Demo 4">](https://codepen.io/theslladev/pen/oNKPwro)
 
 **[⬆ back to top](#quick-links)**
 
@@ -333,6 +353,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/gallery3.png" height="230" title="Demo 2">](https://codepen.io/olgamozejko/pen/yLjwyye)
 [<img src="images/vertical-gallery.gif" height="230" title="Demo 4">]()
 [<img src="./Author/a-img2.jpg" height="230" title="Demo 5">]()
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="image-comparison-slider"></a>Image Comparison Slider
+
+[<img src="Image Comparision Slider/ss_1.png" height="230" title="Pure CSS Image Comparison Slider Demo 1">](Image%20Comparision%20Slider/index.html)
+[<img src="Image Comparision Slider/ss_2.png" height="230" title="Pure CSS Image Comparison Slider Demo 2">](Image%20Comparision%20Slider/index.html)
 
 **[⬆ back to top](#quick-links)**
 
@@ -497,6 +526,22 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="toast-notifications"></a>Toast Notifications
+
+[<img src="toast-notifications/toast-notif.png" height="230" title="Demo">](https://codepen.io/Rajat-Hegde/pen/bNEqqym)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="flip-grid"></a>Flip grid
+
+[<img src="flip grid animation/flip.gif" height="230" title="Demo">](https://codepen.io/Rajat-Hegde/pen/bNEqjRp)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="Todo"></a>Todo List
 
 [<img src="images/Todo List.png" height="230" title="Demo">](https://codepen.io/SamsShow/pen/NWeerXr)
@@ -520,6 +565,22 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="Twitter"></a>Twitter Heart Animation
 
 [<img src="images/art_twitter_heart_animation.gif" height="230" title="Demo">](http://codepen.io/thebabydino/pen/RRRRZE)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Tri_Color_Loader"></a>Tri Color Loader
+
+[<img src="images/tri_color_loader.gif" height="230" title="Demo">](https://codepen.io/shail2604/pen/raxLgbo)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Traffic_Light_Loader"></a>Traffic Light Loader
+
+[<img src="images/Traffic_Light_Loader.gif" height="230" title="Demo">](https://codepen.io/shail2604/pen/KwVWWob)
 
 **[⬆ back to top](#quick-links)**
 
@@ -560,6 +621,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="ResponsiveItemShowcase"></a>Responsive Counter Showing # of Items That Didn't Fit Screen
 
 [<img src="images/responsive-item-showcase.gif" title="Responsive Item Showcase">](https://codepen.io/pavlovsk/pen/QqrZzv/right/)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Redar Loader"></a>Readar Loader
+
+[<img src="images/redar_loader.gif" title="Redar Loader">](https://codepen.io/shail2604/pen/JoGKqda)
 
 **[⬆ back to top](#quick-links)**
 
@@ -617,6 +686,20 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="moving_hand"></a>Shake Button
 
 [<img src="images/moving_hand.png" height="230" title="image">](examples/Moving_hand.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="css-form-handling"></a>CSS Form Handling
+
+[<img src="images/form-preview.png" height="230" title="CSS Form Handling">](CSS-Form-Handling/)
+
+**[⬆ back to top](#quick-links)**
+
+## <a id="Download_buttons"></a>Download_buttons
+
+[<img src="images/Download_buttons.png" title="Download_buttons">](https://codepen.io/Shail-Sharma-the-animator/pen/rNXYMGx)
 
 **[⬆ back to top](#quick-links)**
 
@@ -707,6 +790,22 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="LightBulbAnimation"></a>Light Bulb Animation
 
 <img src="images/LightBulbAnimation.png" height="230" title="Light Bulb animation">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Loading Css effect"></a>Loading Css effect
+
+<img src="images/Loading_Css_effect.gif" height="230" title="Loading Css effect">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Lego Loader"></a>Lego Loader
+
+<img src="images/lego_loader.gif" height="230" title="Lego Loader">
 
 **[⬆ back to top](#quick-links)**
 
@@ -905,6 +1004,14 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="RadialPulsar"></a>Radial Color Puslar
+
+[<img src="Radial Color Pulsar/Radial.png" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="Pendulum"></a>Pendulum
 
 ![img_source](images/pendulum.png)
@@ -1054,3 +1161,7 @@ For detailed guidelines on how to contribute, please refer to our [CONTRIBUTING]
 **[⬆ back to top](#quick-links)**
 
 Let's build something great together!
+
+## License
+
+This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)** — see the [LICENSE](LICENSE) file for details.

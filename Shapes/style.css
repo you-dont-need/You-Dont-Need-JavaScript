@@ -1,104 +1,130 @@
-*{
-    margin: 0;
-    padding: 0;
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
-body{
-    background-color: rgb(214, 43, 89);
+/* Header */
+header {
+  text-align: center;
+  background-color: #2b2d42;
+  color: #f8f9fa;
+  padding: 2rem 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-h1{
-    text-align: center;
-    margin: 20px;
-    font-size: 5rem;
+/* Grid Layout */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
+
+/* Card Styling */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.shape-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Shape Styles */
 .square {
-    height: 50px;
-    width: 50px;
-    background-color: #555;
-    margin: 20px auto 5px;
-  }
-
-  .circle {
-    height: 50px;
-    width: 50px;
-    background-color: #555;
-    border-radius: 50%;
-    margin: 20px auto 5px;
-  }
-
-  .rectangle {
-    height: 50px;
-    width: 100px;
-    background-color: #555;
-    margin: 20px auto 5px;
-  }
-
-  .parallelogram {
-	width: 100px;
-	height: 50px;
-	transform: skew(20deg);
-	background: #555;
-    margin: 20px auto 5px;
+  width: 60px;
+  height: 60px;
+  background-color: #495057;
+  margin: auto;
 }
 
+.circle {
+  width: 60px;
+  height: 60px;
+  background-color: #495057;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.rectangle {
+  width: 100px;
+  height: 50px;
+  background-color: #495057;
+  margin: auto;
+}
+
+.parallelogram {
+  width: 100px;
+  height: 50px;
+  background-color: #495057;
+  transform: skew(-20deg);
+  margin: auto;
+}
+
+/* Triangles */
 .triangle-up {
-	width: 0;
-	height: 0;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-	border-bottom: 50px solid #555;
-    margin: 20px auto 5px;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid #495057;
+  margin: auto;
 }
 
 .triangle-down {
-	width: 0;
-	height: 0;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-	border-top: 50px solid #555;
-    margin: 20px auto 5px;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 60px solid #495057;
+  margin: auto;
 }
 
+/* Arrows */
 .arrow {
-    border: solid black;
-    border-width: 0 6px 6px 0;
-    display: inline-block;
-    padding: 6px;
-  }
-  
-  .right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
-  
-  .left {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-  }
-  
-  .up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-  }
-  
-  .down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-  }
+  width: 0;
+  height: 0;
+  margin: auto;
+}
 
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: rgb(214, 43, 89);
-    padding: 10px;
-    text-align: center;
-  }
+.arrow-right {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid #495057;
+}
 
-  .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-  }
+.arrow-left {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 30px solid #495057;
+}
+
+.arrow-up {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid #495057;
+}
+
+.arrow-down {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 30px solid #495057;
+}

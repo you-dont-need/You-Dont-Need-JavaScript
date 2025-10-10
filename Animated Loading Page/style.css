@@ -1,51 +1,96 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.container{
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Georgia', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(#ade8f4, #90e0ef);
+    overflow: hidden;
+}
+
+.loading-page {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-}
-
-.loading-page{
-    display: flex;
-    position: absolute;
     align-items: center;
     justify-content: center;
-    background-color: greenyellow;
-    height: 100vh;
-    width: 100vw;
-    z-index: 10;
+    text-align: center;
+    gap: 30px;
 }
 
-.loading-page h1::after{
+.spinner {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px dashed rgba(0, 131, 212);
+    border-top-color: rgba(0, 131, 212);
+    animation: spin 10s linear infinite;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-page h1 {
+    font-size: 70px;
+    color: rgba(0, 131, 212, 0.7);
+}
+
+.loading-page h1::after {
     content: "";
-    color: darkgreen;
-    animation: 2s loadingAnim ease-out infinite;
+    animation: loadingAnim 2s steps(4) infinite;
+    position: absolute;
 }
 
 @keyframes loadingAnim {
-    0%{
-        content: "";
-    }
-
-    33%{
-        content: ".";
-    }
-    66%{
-        content: "..";
-    }
-    100%{
-        content: "...";
-    }
+    0%   { content: ""; }
+    25%  { content: "."; }
+    50%  { content: ".."; }
+    75%  { content: "..."; }
+    100% { content: ""; }
 }
 
-.loading-page h1{
-    font-size: 80px;
-    color: rgba(0, 0, 0, 0.6);
-    font-style: oblique;
+.container::before,
+.container::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: float 6s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+.container::before {
+    background: #48cae4;
+    top: -100px;
+    left: -100px;
+}
+
+.container::after {
+    background: #48cae4;
+    bottom: -100px;
+    right: -100px;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(30px, -30px); }
 }

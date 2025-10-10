@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CSS-only Toast Notifications</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Toast / Notification Stack — CSS only</h1>
+      
+      <section class="toasts">
+        <!-- Example toast 1: dismissible via checkbox -->
+        <div class="toast">
+          <input type="checkbox" id="t1" class="dismiss">
+          <label for="t1" class="toast-card" role="status" aria-live="polite">
+            <div class="toast-body">
+              <strong>Saved</strong>
+              <p>Your changes were saved successfully.</p>
+            </div>
+            <span class="close" aria-hidden="true">×</span>
+          </label>
+        </div>
+
+        <!-- Example toast 2: persistent until dismissed -->
+        <div class="toast">
+          <input type="checkbox" id="t2" class="dismiss">
+          <label for="t2" class="toast-card" role="status" aria-live="polite">
+            <div class="toast-body">
+              <strong>Upload</strong>
+              <p>Upload complete. 3 files added.</p>
+            </div>
+            <span class="close" aria-hidden="true">×</span>
+          </label>
+        </div>
+
+        <!-- Stack demo: multiple toasts show stacked appearance -->
+        <div class="toast sample-stack">
+          <div class="toast-card small"><strong>Info</strong><p>Autosave enabled</p></div>
+          <div class="toast-card small"><strong>Warning</strong><p>Low storage</p></div>
+        </div>
+
+      </section>
+
+    </main>
+  </body>
+</html>

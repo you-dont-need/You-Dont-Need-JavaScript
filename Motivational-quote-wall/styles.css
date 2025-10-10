@@ -1,0 +1,84 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #e0f7fa; /* Soft overall background color */
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+/* Sections */
+section {
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/* Quote Cards */
+.quote-card {
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Different background colors for variety */
+.quote-card:nth-child(1) { background-color: #ff6b6b; }  /* Red-ish */
+.quote-card:nth-child(2) { background-color: #ffb74d; }  /* Orange */
+.quote-card:nth-child(3) { background-color: #4db6ac; }  /* Teal */
+.quote-card:nth-child(4) { background-color: #64b5f6; }  /* Blue */
+.quote-card:nth-child(5) { background-color: #ba68c8; }  /* Purple */
+.quote-card:nth-child(6) { background-color: #81c784; }  /* Green */
+.quote-card:nth-child(7) { background-color: #f06292; }  /* Pink */
+.quote-card:nth-child(8) { background-color: #ffd54f; }  /* Yellow */
+
+/* Hover effect */
+.quote-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.quote-card p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.quote-card span {
+  font-size: 0.9rem;
+  color: #f0f0f0;
+}

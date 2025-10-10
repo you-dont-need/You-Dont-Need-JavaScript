@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure CSS Image Comparison Slider</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Pure CSS Image Comparison Slider</h1>
+    
+    <div class="instructions">
+        🎯 <strong>Drag the pink line</strong> to compare the colored vs grayscale versions<br>
+        💡 <strong>Click to focus</strong> for automatic animation
+    </div>
+
+    <figure>
+        <p class="image-compare" role="img" tabindex="0" aria-label="When comparing the photos, it becomes noticable that the black-and-white image lacks color." aria-description="This image is actually a set of two images, and when the set is focused, the two contained images are alternated between.">
+            <span>
+                <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Random cat picture, with color taken away.">
+            </span>
+            <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Unaltered random cat picture.">
+        </p>
+        <figcaption>Comparing the black-and-white version of a photo with its colored counterpart.</figcaption>
+    </figure>
+
+    <div class="instructions">
+        ✨ This uses the CSS <code>resize</code> property to create a draggable interface<br>
+        🚫 <strong>Zero JavaScript</strong> - Pure CSS only!
+    </div>
+</body>
+</html>

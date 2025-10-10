@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minecraft Builders Club</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Minecraft Builders Club</h1>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Build. Create. Survive.</h2>
+      <p>Join the community of creative builders crafting worlds block by block!</p>
+      <img src="../Img/hero.png" alt="Minecraft landscape" />
+      <a href="#contact" class="btn">Join Now</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about container">
+    <h2>About Our Club</h2>
+    <p>
+      We are a global group of Minecraft enthusiasts who love to build, explore,
+      and share amazing creations. Whether you're a redstone engineer or a cozy
+      cottage designer — you belong here!
+    </p>
+    <ul>
+      <li>Weekly build challenges</li>
+      <li>Server collaborations</li>
+      <li>Beginner tutorials</li>
+    </ul>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery container">
+    <h2>Block Gallery</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="../Img/castle.png" alt="Castle build" />
+        <h3>Epic Castle</h3>
+        <p>A medieval fortress built with stone and imagination.</p>
+      </div>
+
+      <div class="card">
+        <img src="../Img/house.png" alt="Modern house" />
+        <h3>Modern House</h3>
+        <p>Clean lines, glass walls — luxury Minecraft living!</p>
+      </div>
+
+      <div class="card">
+        <img src="../Img/island.png" alt="Fantasy world" />
+        <h3>Fantasy Realm</h3>
+        <p>Floating islands, dragons, and magic everywhere.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact container">
+    <h2>Join Our World</h2>
+    <form class="contact-form">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Why do you love Minecraft?</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Minecraft Builders Club — Crafted with ❤️ and blocks.</p>
+    </div>
+  </footer>
+</body>
+</html>
