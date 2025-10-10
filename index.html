@@ -102,26 +102,39 @@
         color: #242424;
       }
 
-      .description {
-        font-size: 1.2em;
-        color: #333;
-        margin-bottom: 20px;
-      }
-
-      /* logo image */
-      .java_pic {
-        height: auto;
-        width: 2rem;
-      }
-
       .button_java {
-        border: 2px solid black;
-        width: 50%;
-        justify-content: center;
-        margin-left: 20rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 20px;
         background-color: #04aa6d;
-        border-radius: 1rem;
+        border: 2px solid #000;
+        border-radius: 10px;
+      }
+
+      .button_java h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        color: white;
+      }
+
+      .button_java a {
         display: flex;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .java_pic {
+        width: 2rem;
+        height: auto;
+      }
+
+      .description {
+        font-size: 1.1rem;
+        color: #333;
+        margin-top: 15px;
       }
 
       .top {
@@ -130,20 +143,93 @@
         align-items: center;
         padding: 2px;
       }
+
+      @media (max-width: 768px) {
+        #pages {
+          border-collapse: separate;
+          border-spacing: 0;
+        }
+
+        #pages tr {
+          display: block;
+          margin-bottom: 1.5rem;
+          border: 1px solid #04aa6d;
+          border-radius: 10px;
+          overflow: hidden;
+          background-color: rgba(189, 255, 189, 0.15);
+        }
+
+        #pages th {
+          display: none;
+        }
+
+        #pages td {
+          display: block;
+          width: 100%;
+          padding: 10px 0px 10px 0px;
+          text-align: center;
+        }
+
+        #pages td:first-child {
+          width: 100%;
+          background-color: #04aa6d;
+          color: white;
+          font-size: 1.1rem;
+          font-weight: bold;
+          text-align: center;
+          padding: 12px 0;
+          border-bottom: 1px solid #fff;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+
+        .pageUrl {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 12px;
+          padding: 15px 10px 20px 10px;
+        }
+
+        .pageUrl a {
+          flex: 1 1 45%;
+          text-align: center;
+          border: 1px solid #04aa6d;
+          border-radius: 8px;
+          padding: 8px 10px;
+          font-size: 0.75rem;
+          color: #04aa6d;
+          box-sizing: border-box;
+        }
+
+        .pageUrl a:hover {
+          background-color: #04aa6d;
+          color: white;
+        }
+
+        .description {
+          font-size: 1rem;
+          padding: 0 10px;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        #pageSection {
+          padding: 15px;
+        }
+      }
     </style>
   </head>
   <body>
     <section id="pageSection">
       <header>
         <div class="button_java">
-          <h1>
-            <a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript">
-              <div class="top">
-                You Dont Need JavaScript
-                <img src="images/java-script.png" alt="java" class="java_pic" />
-              </div>
-            </a>
-          </h1>
+          <a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript">
+            <h1>You Dont Need JavaScript</h1>
+            <img src="images/java-script.png" alt="java" class="java_pic" />
+          </a>
         </div>
         <p class="description">
           Explore the power of pure CSS with our collection of interactive demos
@@ -299,7 +385,9 @@
             <a href="./FAQ SECTION/neumorphismtheme/neu.html"
               >Neumorphism FAQ</a
             >
-            <a href="./Modern-Accordion-and-FAQ/index.html">Modern Accordion and FAQ</a>
+            <a href="./Modern-Accordion-and-FAQ/index.html"
+              >Modern Accordion and FAQ</a
+            >
           </td>
         </tr>
 
@@ -325,8 +413,12 @@
             <a href="./Debit Card Hover Effect/index.html"
               >Debit Card Hover Effect</a
             >
-            <a href="./3D Flipping Card Component/index.html">3D Flipping Card Component</a>
-            <a href="./Implement Interactive Tech Showcase Cards/index.html">Interactive Tech Showcase Cards</a>
+            <a href="./3D Flipping Card Component/index.html"
+              >3D Flipping Card Component</a
+            >
+            <a href="./Implement Interactive Tech Showcase Cards/index.html"
+              >Interactive Tech Showcase Cards</a
+            >
             <a href="./MasteCard/index.html">MasterCard Design</a>
           </td>
         </tr>
@@ -343,7 +435,9 @@
             >
             <a href="./misc/input-filed.html">Input Field</a>
             <a href="./New_Switch/index.html">New Switch</a>
-            <a href="./Glassmorphism login page/index.html">Glassmorphism Login Page</a>
+            <a href="./Glassmorphism login page/index.html"
+              >Glassmorphism Login Page</a
+            >
           </td>
         </tr>
 
@@ -426,8 +520,12 @@
             <a href="./Image-Hover-Effect/index.html">Image Hover Effect</a>
             <a href="./Rating-Star/index.html">Rating Star</a>
             <a href="./TypeWriter Effect/index.html">TypeWriter Effect</a>
-            <a href="./Horizontal image slider/index.html">Horizontal Image Slider</a>
-            <a href="./Image Comparision Slider/index.html">Image Comparison Slider</a>
+            <a href="./Horizontal image slider/index.html"
+              >Horizontal Image Slider</a
+            >
+            <a href="./Image Comparision Slider/index.html"
+              >Image Comparison Slider</a
+            >
           </td>
         </tr>
 
@@ -455,7 +553,9 @@
             <a href="./misc/tabs-2.html">Tabs 2</a>
             <a href="./misc/author.html">Author</a>
             <a href="./Author/Author-page.html">Author Page</a>
-            <a href="./Progressbar On Scroll/index.html">Progressbar On Scroll</a>
+            <a href="./Progressbar On Scroll/index.html"
+              >Progressbar On Scroll</a
+            >
             <a href="./Shapes/index.html">Shapes</a>
             <a href="./lighting_decor/index.html">Lighting Decor</a>
             <a href="./watch_art/index.html">Watch Art</a>
