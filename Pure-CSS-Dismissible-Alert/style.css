@@ -1,0 +1,90 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+    margin: 0;
+}
+
+.alert-container {
+    width: 90%;
+    max-width: 600px;
+}
+
+/* --- ALERT BOX STYLES (VISIBLE BY DEFAULT) --- */
+.alert-box {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out, margin-bottom 0.4s ease-out, padding 0.4s ease-out, height 0.4s ease-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.alert-title {
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+.alert-message {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.alert-close {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #155724;
+    text-decoration: none;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.alert-close:hover {
+    opacity: 1;
+}
+
+/* --- THE PURE CSS MAGIC (CHECKBOX HACK) --- */
+
+/* 1. Hide the element by changing its style when the checkbox is checked */
+.alert-toggle:checked + .alert-container .alert-box {
+    opacity: 0;
+    transform: translateY(-10px); /* Move it up slightly for the dismissal animation */
+    /* Collapse the box visually and remove it from flow */
+    height: 0;
+    padding: 0 20px;
+    margin-bottom: 0;
+    border: none;
+    overflow: hidden;
+}
+
+/* 2. Hide any content that should only be visible when the alert is gone */
+.content-after-dismiss {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease-out 0.4s, transform 0.4s ease-out 0.4s;
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* 3. Show the 'after dismiss' content when the checkbox is checked */
+.alert-toggle:checked + .alert-container .content-after-dismiss {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Note: The 'alert-toggle' itself is hidden using the 'hidden' attribute in HTML. */
