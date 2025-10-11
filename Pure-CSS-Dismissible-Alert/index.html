@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure CSS Dismissible Alert</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <input type="checkbox" id="alert-toggle" class="alert-toggle" hidden>
+
+    <div class="alert-container">
+        <div class="alert-box">
+            <h3 class="alert-title">Success! 🎉</h3>
+            <p class="alert-message">
+                Your settings have been saved. This alert is dismissed with **only CSS**!
+            </p>
+            <label for="alert-toggle" class="alert-close" role="button" aria-label="Dismiss alert">
+                &times;
+            </label>
+        </div>
+        <p class="content-after-dismiss">
+            This content becomes visible when the alert is dismissed (via CSS transition).
+        </p>
+    </div>
+
+</body>
+</html>
