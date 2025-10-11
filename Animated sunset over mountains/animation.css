@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+.sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #00111a, #004466, #66ccff);
+    animation: skyAnimation 10s infinite alternate;
+}
+.mountains {
+    position: absolute;
+    bottom: 8%;
+    width: 100%;
+    height: 66%;
+    background: linear-gradient(to top, #3b2b2a 0%, #8c5a45 60%, #c99b7c 100%);
+    clip-path: polygon(0% 100%, 8% 62%, 18% 72%, 28% 58%, 38% 78%, 50% 52%, 62% 76%, 72% 60%, 82% 70%, 92% 50%, 100% 100%, 0% 100%);
+    animation: mountainAnimation 12s infinite alternate;
+    z-index: 1;
+}
+
+.mountains::before,
+.mountains::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+.mountains::before {
+    background: linear-gradient(to top, rgba(58,40,38,0.95) 0%, rgba(140,90,69,0.75) 60%, rgba(201,155,124,0.6) 100%);
+    clip-path: polygon(0% 100%, 6% 70%, 18% 78%, 30% 62%, 44% 82%, 58% 56%, 72% 80%, 86% 64%, 100% 100%, 0% 100%);
+    filter: blur(6px);
+    transform: translateY(3%);
+    opacity: 0.85;
+}
+
+
+.grass {
+    position: absolute;
+    left: 0;
+    bottom: -2%;
+    width: 100%;
+    height: 14%;
+    z-index: 2;
+    background: linear-gradient(180deg, #63c26f 0%, #3b8a44 55%, #2f6b38 100%);
+    clip-path: polygon(0% 26%, 6% 20%, 12% 28%, 20% 18%, 28% 30%, 36% 22%, 44% 34%, 52% 26%, 60% 36%, 68% 24%, 76% 36%, 84% 18%, 92% 30%, 100% 22%, 100% 100%, 0% 100%);
+    box-shadow: inset 0 -12px 28px rgba(0,0,0,0.22);
+    animation: grassSway 6s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+.grass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 6px, transparent 6px 12px);
+    mix-blend-mode: overlay;
+    opacity: 0.45;
+}
+
+@keyframes grassSway {
+    0% { transform: translateX(0) rotate(0deg); }
+    50% { transform: translateX(-2px) rotate(-0.6deg); }
+}
+
+.flower {
+    position: absolute;
+    bottom: 48%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+    transform-origin: center bottom;
+    animation: flowerSway 4.2s ease-in-out infinite;
+}
+.flower::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 2px;
+    height: 12px;
+    background: linear-gradient(#2f6b38, #1f4b28);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+.flower::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+.flower1::after { background: #ff7fbf; }
+.flower2::after { background: #ffd27f; }
+.flower3::after { background: #ff9a5c; }
+.flower4::after { background: #ffd27f; }
+.flower5::after { background: #ff7fbf; }
+.flower6::after { background: #9fe6a8; }
+
+.flower1 { left: 8%; }
+.flower2 { left: 18%; }
+.flower3 { left: 30%; }
+.flower4 { left: 46%; }
+.flower5 { left: 64%; }
+@keyframes flowerSway {
+    0% { transform: rotate(0deg) translateY(0); }
+    30% { transform: rotate(-6deg) translateY(-2px); }
+    60% { transform: rotate(4deg) translateY(0); }
+    100% { transform: rotate(0deg) translateY(0); }
+}
+
+.bird {
+    position: absolute;
+    width: 22px;
+    height: 12px;
+    z-index: 4;
+    pointer-events: none;
+    transform-origin: center;
+}
+.bird::before,
+.bird::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    width: 10px;
+    height: 2px;
+    background: #000;
+    transform-origin: left center;
+    border-radius: 2px;
+}
+.bird::before { 
+    transform: rotate(-30deg);
+    animation: wingFlap 0.6s ease-in-out infinite;
+}
+.bird::after { 
+    transform: rotate(30deg);
+    animation: wingFlap 0.6s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+
+@keyframes birdFlight {
+    0% { transform: translateX(-8vw) translateY(0) scale(0.7); opacity: 0.95; }
+    50% { transform: translateX(60vw) translateY(-8vh) scale(0.85); opacity: 1; }
+    100% { transform: translateX(110vw) translateY(0) scale(0.7); opacity: 0.95; }
+}
+@keyframes wingFlap {
+    0% { transform: rotate(-30deg); }
+    50% { transform: rotate(-22deg); }
+    100% { transform: rotate(-30deg); }
+}
+
+.bird1 { left: 10%; top: 12%; animation: birdFlight 10s linear infinite; }
+.bird2 { left: 22%; top: 18%; animation: birdFlight 12s linear infinite 1.5s; }
+.bird3 { left: 6%; top: 20%; animation: birdFlight 9s linear infinite 0.8s; }
+
+.river-svg {
+    position: absolute;
+    left: 8%;
+    bottom: 0;
+    width: 84%;
+    height: 34%;
+    z-index: 2;
+    overflow: visible;
+    pointer-events: none;
+    transform: translateZ(0);
+}
+.river-svg svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.river-path {
+    transition: transform 0.5s linear;
+    will-change: transform;
+    animation: riverDrift 5s ease-in-out infinite;
+}
+.river-surface {
+    fill: url(#riverGrad);
+}
+.river-reflection {
+    fill: rgba(255,255,255,0.12);
+    mix-blend-mode: overlay;
+}
+
+@keyframes riverDrift {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+.sun {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #ffcc00, #ff6600);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: sunAnimation 10s infinite alternate;
+}
+@keyframes skyAnimation {
+    0% {
+        background: linear-gradient(to top, #00111a, #004466, #66ccff);
+    }
+    100% {
+        background: linear-gradient(to top, #ff6600, #ffcc00, #ffff99);
+    }
+}
+@keyframes sunAnimation {
+    0% {
+        bottom: 20%;
+        background: radial-gradient(circle, #ffcc00, #ff6600);
+    }
+    100% {
+        bottom: 70%;
+        background: radial-gradient(circle, #ffff99, #ffcc00);
+    }
+}
+@keyframes mountainAnimation {
+    0% {
+        background: linear-gradient(to top, #3b2b2a 0%, #8c5a45 60%, #c99b7c 100%);
+    }
+    100% {
+        background: linear-gradient(to top, #4a2f2d 0%, #b06b4c 60%, #e0b79a 100%);
+    }
+}
+
+@keyframes riverFlow {
+    0% { background-position: 0 0; }
+    100% { background-position: -600px 0; }
+}
+
+@keyframes waveMove {
+    0% { transform: translateX(0); opacity: 0.9; }
+    50% { transform: translateX(-60px); opacity: 0.7; }
+    100% { transform: translateX(0); opacity: 0.9; }
+}
+@keyframes waveMove {
+    0% { transform: translateX(0); opacity: 0.9; }
+    50% { transform: translateX(-60px); opacity: 0.7; }
+    100% { transform: translateX(0); opacity: 0.9; }
+}
+
+.tree {
+    position: absolute;
+    bottom: 4%;
+    width: 180px;
+    height: 320px;
+    z-index: 3;
+    pointer-events: none;
+    transform-origin: center bottom;
+    animation: treeSway 8s ease-in-out infinite;
+}
+.tree .trunk {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 36px;
+    height: 120px;
+    transform: translateX(-50%);
+    background: linear-gradient(#6b3f2a, #4a2b18);
+    border-radius: 10px;
+    box-shadow: inset 0 -6px 10px rgba(0,0,0,0.25);
+}
+.tree .foliage {
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 260px;
+    background: radial-gradient(circle at 30% 30%, #77b969 10%, #4f8a37 45%, #2f6b2a 80%);
+    border-radius: 50% 50% 30% 30% / 45% 45% 30% 30%;
+    box-shadow: 0 18px 30px rgba(20,40,20,0.45);
+    filter: blur(0.4px);
+}
+.tree::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 220px;
+    height: 24px;
+    transform: translateX(-50%);
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.22), rgba(0,0,0,0));
+    filter: blur(6px);
+}
+.tree-left { left: 2%; }
+.tree-right { right: 2%; transform: scaleX(-1); }
+
+@keyframes treeSway {
+    0% { transform: translateX(0) rotate(0deg); }
+    50% { transform: translateX(-3px) rotate(-0.8deg); }
+    100% { transform: translateX(0) rotate(0deg); }
+}
+
+@media (max-width: 600px) {
+    .tree { width: 120px; height: 220px; }
+    .tree .trunk { width: 24px; height: 80px; }
+    .tree .foliage { width: 220px; height: 170px; bottom: 60px; }
+}
