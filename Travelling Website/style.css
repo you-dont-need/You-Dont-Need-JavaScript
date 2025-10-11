@@ -2,44 +2,39 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Mooli', sans-serif;
+  font-family: "Mooli", sans-serif;
   font-weight: bolder;
 }
-
 body {
   background-color: white;
+  overflow-x: hidden;
 }
 
-/* ================= HEADER ================= */
+/* Header */
 .header {
+  height: 80vh;
   width: 100vw;
-  height: auto;
 }
-
 .page1 {
-  width: 100%;
+  margin: auto;
   height: 100vh;
-  position: relative;
+  width: 100vw;
 }
 
-/* ---------------- NAVBAR ---------------- */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-evenly;
 }
-
 .navbarleft {
-  width: 100%;
+  width: 100vw;
   height: 8vh;
-  background-color: #EDC7B7;
-  box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.3);
+  background-color: #edc7b7;
+  box-shadow: 0px 2px 50px black;
   display: flex;
   align-items: center;
-  padding: 5px;
-  position: relative;
-  z-index: 10;
+  padding: 5px 10px;
 }
-
 .navbarleft ul {
   display: flex;
   flex-direction: row;
@@ -47,354 +42,225 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-
 .navbarleft ul li {
-  padding: 0 10px;
+  padding: 0px 10px;
   list-style: none;
 }
-
 .navbarleft ul li a {
   text-decoration: none;
+  display: inline-block;
   font-size: 15px;
-  color: #123C69;
-  transition: 0.3s;
+  color: #123c69;
 }
-
 .navbarleft a:hover {
-  text-shadow: 0px 0px 0.5px #123C69;
+  text-shadow: 0px 0px 0.25px #123c69;
 }
 
+/* Right menu */
 .rightitems {
-  margin-left: auto;
-  margin-right: 30px;
+  margin-left: 400px;
 }
-
 .signin,
 .account {
-  border: 2px solid #123C69;
-  padding: 8px 12px;
+  border: 2px solid #123c69;
   border-radius: 5px;
-  margin-left: 10px;
-  transition: 0.3s ease;
+  padding: 8px 10px;
+  margin: 0 5px;
+  transition: 0.5s;
 }
-
 .signin:hover,
 .account:hover {
-  background-color: #123C69;
+  background-color: #123c69;
   color: white;
 }
 
-/* ---------------- SLOGAN BAR ---------------- */
+/* Tagline */
 .navbar2 {
-  width: 100%;
-  min-height: 8vh;
-  background-color: #123C69;
+  width: 100vw;
+  height: 7vh;
+  background-color: #123c69;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  position: relative;
-  z-index: 5;
 }
-
 .navbar2 h1 {
-  color: #EDC7B7;
-  font-size: 26px;
-  font-weight: 500;
-  letter-spacing: 1px;
+  color: #edc7b7;
+  font-size: 28px;
+  font-weight: 100;
 }
 
-/* ---------------- HERO IMAGE + BOOKING ---------------- */
+/* Hero Section */
 .heroimg {
-  width: 100%;
-  height: 70vh;
-  background-image: url('Screenshot 2023-09-30 163012.png');
+  width: 100vw;
+  height: 60vh;
+  background-image: url("Screenshot 2023-09-30 163012.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
+  justify-content: center;
 }
-
 .bookingpage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-top: -50px;
+  padding: 30px;
 }
 
+/* Booking Card */
 .bookingpagetop {
-  background-color: #fff;
-  padding: 12px 30px;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px black;
   text-align: center;
-  transform: translateY(20px);
+  padding: 7px 15px;
+  margin-bottom: 15px;
 }
-
 .bookingpagetop h1 {
-  color: #123C69;
-  font-weight: 600;
-  font-size: 22px;
-  letter-spacing: 1px;
-  text-shadow: none;
+  color: #123c69;
+  font-weight: 400;
+  text-shadow: 0px 5px 10px #edc7b7;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
 .bookingpagelow {
-  width: 420px;
-  background-color: #F7F8F9;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  padding: 25px;
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 40vw;
+  background-color: #f7f8f9;
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px black;
+  padding: 20px 25px;
 }
 
 .departure {
-  margin-top: 20px;
+  margin: 15px 0;
   background-color: white;
-  justify-content: space-between;
-  align-items: center;
   border-radius: 5px;
   border: 2px solid rgb(221, 213, 213);
-  height: 60px;
+  height: 55px;
   display: flex;
-  width: 100%;
+  align-items: center;
 }
-
 .departure i {
   margin-left: 15px;
-  cursor: pointer;
+  color: #123c69;
 }
-
-#input1 {
+.departure input {
   width: 90%;
-  height: 55px;
+  height: 100%;
   border: none;
   outline: none;
-  cursor: pointer;
-  padding-left: 10px;
-  font-size: 15px;
+  padding-left: 15px;
+  font-size: 16px;
 }
 
-.datedecider {
+/* Single wide button */
+.full-btn {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
-  gap: 10px;
-}
-
-.arr_date {
-  flex: 1;
-  padding: 12px 16px;
-  height: 60px;
+  height: 55px;
   background-color: white;
   border: 2px solid rgb(221, 213, 213);
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  font-weight: 500;
-  color: #123C69;
-  white-space: nowrap;
-  transition: 0.3s ease;
-}
-
-.arr_date:hover {
   cursor: pointer;
-  background-color: #f4f4f4;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.day {
-  color: rgb(120, 120, 120);
+.full-btn .day {
+  color: #bbb;
   font-size: 13px;
-  margin-left: 6px;
+  margin-top: 3px;
 }
 
-
+/* Search Button */
 .search {
-  background-color: #123C69;
-  text-align: center;
+  margin-top: 20px;
+}
+.search button {
   width: 200px;
   height: 50px;
+  border: none;
   border-radius: 25px;
-  color: #EDC7B7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #123c69;
+  color: #edc7b7;
   font-size: 18px;
   letter-spacing: 1px;
-  font-weight: 500;
-  margin-top: 20px;
-  transition: all 0.3s ease;
-}
-
-.search:hover {
-  background-color: #0e2f52;
   cursor: pointer;
-  transform: translateY(-3px);
+  transition: 0.3s ease;
 }
-
-/* ================= PAGE 2: TOP DESTINATIONS ================= */
-.page2 {
-  width: 100%;
-  background-color: #EDC7B7;
-  padding: 60px 0;
-  text-align: center;
-}
-
-.page2 .heading h1 {
-  font-size: 2rem;
-  color: #123C69;
-}
-
-.places {
-  margin-top: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-
-.page2 img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: all 0.3s ease;
-}
-
-.page2 img:hover {
-  box-shadow: 0 4px 10px black;
+.search button:hover {
+  background-color: #edc7b7;
+  color: #123c69;
   transform: scale(1.05);
 }
 
-.delhi {
-  text-align: center;
+/* Section 2 */
+.page2 {
+  height: auto;
+  padding: 40px 0;
+  background-color: #edc7b7;
 }
-
+.page2 .heading {
+  text-align: center;
+  font-size: 20px;
+}
+.places {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.delhi img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+.delhi img:hover {
+  box-shadow: 0 2px 10px black;
+  transform: scale(1.05);
+}
 .delhi h4 {
   margin-top: 10px;
-  color: #123C69;
-}
-
-/* ================= PAGE 3: RENTAL PROPERTIES ================= */
-.page3 {
-  margin-top: 80px;
-  width: 100%;
-  background-color: #fff;
-  padding: 60px 0;
   text-align: center;
 }
 
-.page3 .heading h1 {
-  font-size: 2rem;
-  color: #123C69;
-  margin-bottom: 30px;
-}
-
-.listhotels {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 20px;
-}
-
-.hotels {
-  width: 280px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.hotels img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.hotels:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.type {
-  padding: 15px;
-  font-size: 1.1rem;
-  color: #123C69;
-  background-color: #fff;
-  border-top: 1px solid #eee;
-}
-
-/* ================= PAGE 4: FOOTER LINKS ================= */
+/* Footer */
 .page4 {
-  width: 100%;
-  background-color: rgb(233, 235, 238);
-  padding: 40px 0;
+  background-color: #f1f1f1;
+  padding: 30px 0;
 }
-
 .links {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-
 .links ul {
-  margin-top: 20px;
   list-style: none;
+  margin: 10px;
 }
-
-.links ul li {
-  margin-bottom: 8px;
-}
-
 .links ul li h4 {
   margin-bottom: 10px;
-  color: #123C69;
 }
-
 .links ul li a {
   text-decoration: none;
-  font-size: 15px;
-  color: rgb(42, 42, 46);
-  font-weight: 400;
-  transition: 0.3s;
+  color: #2a2a2e;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
-.links ul li a:hover {
-  color: #123C69;
-  text-decoration: underline;
-}
-
-/* ================= PAGE 5: FOOTER COPYRIGHT ================= */
+/* Bottom Text */
 .page5 {
-  width: 100%;
-  height: 15vh;
-  text-align: center;
+  background-image: linear-gradient(to bottom right, #123c69, #edc7b7);
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 400;
   font-size: 18px;
-  background-image: linear-gradient(to bottom right, #123C69, #EDC7B7);
   color: white;
-}
-
-/* ================= GENERAL SPACING ================= */
-section {
-  scroll-margin-top: 60px;
-  padding-top: 40px;
 }
