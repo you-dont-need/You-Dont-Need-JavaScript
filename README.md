@@ -136,23 +136,24 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
 ## <a id="text-spoiler"></a>Text Spoiler Effect
 
 ##### Light Theme:
+
 [<video width="400" height="200" controls>
-    <source src="https://github.com/user-attachments/assets/4786bfb6-78e7-4682-b098-c49f3f518b5f" type="video/mp4">
-    Your browser does not support the video tag.
+<source src="https://github.com/user-attachments/assets/4786bfb6-78e7-4682-b098-c49f3f518b5f" type="video/mp4">
+Your browser does not support the video tag.
 </video>](http://url-to-light-theme-page)
 
 ##### Dark Theme:
+
 [<video width="400" height="200" controls>
-    <source src="https://github.com/user-attachments/assets/1b305f75-26b3-41c3-a19a-6f7bd043d393" type="video/mp4">
-    Your browser does not support the video tag.
+<source src="https://github.com/user-attachments/assets/1b305f75-26b3-41c3-a19a-6f7bd043d393" type="video/mp4">
+Your browser does not support the video tag.
 </video>](http://url-to-dark-theme-page)
 
 **[⬆ back to top](#quick-links)**
-
-
 
 ## <a id="blog-cards"></a>Blog Post Cards
 
@@ -173,6 +174,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
 ## <a id="pricing-table"></a>Pricing Table
 
 [<img src="images/pricingtable1.png" height="230" title="Demo 1">](http://url-to-page)
@@ -213,12 +215,12 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 **[⬆ back to top](#quick-links)**
 
 ---
+
 &nbsp;
 
 ## <a id="bus"></a>Bus
 
 <img src="images/bus.png" height="230" title="Demo 1">
-
 
 ## <a id="captain"></a>Captain America Shield
 
@@ -393,8 +395,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 [<img src="images/loader11.gif" height="230" title="Demo 11">](https://codepen.io/sugeng-sulistiyawan/pen/PoyjPWd)
 [<img src="images/loader12.gif" height="230" title="Demo 12">](https://github.com/TechGenie-awake/You-Dont-Need-JavaScript/blob/patch-1/Loading/loading.gif)
 
-
-
 **[⬆ back to top](#quick-links)**
 
 ---
@@ -553,6 +553,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ## <a id="Tooltips"></a>Tooltips
 
 - [Demo](https://kushagragour.in/lab/hint/)
+- [CSS Tooltip with Animation](https://codepen.io/Elian-Echavarria/pen/XJXgmWN)
 
 ## <a id="Treeview"></a>Treeview
 
@@ -1087,6 +1088,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ![img_source](MakemyTrip/screenshot.png)
 
 ---
+
 **[⬆ back to top](#quick-links)**
 
 ## <a id="zomato"></a>Zomato
@@ -1094,6 +1096,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ![img_source](Zomato/screenshot.png)
 
 ---
+
 **[⬆ back to top](#quick-links)**
 
 ## <a id="3d-card-flip-transition"></a>3D card flip transition
@@ -1113,6 +1116,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 ## <a id="debit-card-hover"></a>Debit Card Hover Effect
+
 ![Screenshot 2024-10-11 103321](https://github.com/user-attachments/assets/5e8572a6-9328-44fe-8574-d68f2e6b92ca)
 
 **[⬆ back to top](#quick-links)**
@@ -1120,6 +1124,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ---
 
 ## <a id="ProgressOnScroll"></a>Progress bar on scroll
+
 [<img src="images/progress_on_scroll_demo.gif" height="230" title="Progress On Scroll Demo">](https://codepen.io/pritam1813/pen/jOgyERQ)
 
 **[⬆ back to top](#quick-links)**
@@ -1136,11 +1141,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ## <a id="carousel-effect"></a>Carousel Effect
 
-
 [Download the demo video](https://raw.githubusercontent.com/amrutha-m206/You-Dont-Need-JavaScript/carousel_effect-feature/images/carousel_demo.mp4)
-
-
-
 
 **[⬆ back to top](#quick-links)**
 
