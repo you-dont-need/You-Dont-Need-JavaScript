@@ -87,6 +87,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Profile Cards](#profilecards)
 - [Radial Color Pulsar](#RadialPulsar)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
+- [Retro Loader](#RetroLoader)
 - [Ripple Effect](#ripple-effect)
 - [Redar Loader](#Redar-Loader)
 - [Scary Animation](#scary-animation)
@@ -1008,6 +1009,14 @@ Your browser does not support the video tag.
 ## <a id="RadialPulsar"></a>Radial Color Puslar
 
 [<img src="Radial Color Pulsar/Radial.png" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="RetroLoader"></a>Retro Loader
+
+[<img src="Retro Loader/Retro.png" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
 
 **[⬆ back to top](#quick-links)**
 
