@@ -229,10 +229,45 @@ body {
   text-align: center;
 }
 
+.page3{
+    margin-top: 20px;
+    width: 100vw;
+    height: 60vh;
+    margin-bottom: 60px;
+    
+    
+}
+.page3 .hotels:hover{
+    box-shadow: 0 2px 10px black;
+}
+
+.page3 .heading{
+    text-align: center;
+}
+
+
+.page3 .hotels img{
+    width: 300px;
+    height: 300px;
+
+}
+.listhotels{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.type{
+    border: 2px solid rgb(221, 213, 213);;
+    padding: 10px;
+    transform: translateY(-2px);
+    border-bottom: 2px solid #123C69;
+}
+
+
 /* Footer */
 .page4 {
   background-color: #f1f1f1;
-  padding: 30px 0;
+  padding: 70px 0;
 }
 .links {
   display: flex;
