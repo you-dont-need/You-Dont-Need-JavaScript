@@ -74,7 +74,7 @@ body{
 
 .heroimg{
     width: 100vw;
-    height: 60vh;
+    height: 80vh;
     justify-content: center;
     align-items: center;
     background-image: url('Screenshot\ 2023-09-30\ 163012.png');
@@ -93,11 +93,6 @@ body{
     padding: 30px;
     
 }
-
-
-
-
-
 
 
 .bookingpagelow{
@@ -120,19 +115,30 @@ body{
     margin-bottom: 10px;
     margin-top: 25px;
 }
-.bookingpagetop{
-    height: 4vh;
+.bookingpagetop {
+    height: auto;
     width: 30vw;
     background-color: white;
-    margin-top: 40px;
+    margin-top: 4px;
+    margin-bottom: 15px; /* adds space below the title box */
     border-radius: 10px;
-    box-shadow: 0px 2px 10px black;
-    z-index: 100;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+    z-index: 10;
+    display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 7px;
-    transform: translateY(2vh);
+    padding: 10px 0;
+    position: relative;
 }
+.bookingpagetop h1 {
+    color: #123C69;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 18px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
 .departure i{
     margin-left: 15px;
     cursor: pointer;
@@ -141,12 +147,11 @@ body{
     width: 34vw;
     height: 55px;
     border: 0px ;
-    
-    cursor: pointer;
-    
+    cursor: pointer;  
 }
+
 .departure{
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 10px;
     background-color: white;
     justify-content: space-between;
@@ -158,7 +163,7 @@ body{
 }
 
 .departure2{
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
     background-color: white;
     justify-content: space-between;
@@ -167,13 +172,7 @@ body{
     border: 0px;
     height: 60px;
 }
-.bookingpagetop h1{
-    color: #123C69;
-    font-weight: 400;
-    text-shadow: 0px 5px 10px #EDC7B7;
-    font-size: 20px;
-    letter-spacing: 2px;
-}
+
 .account{
     border: 2px solid #123C69;
     border-radius: 5px;
@@ -213,10 +212,9 @@ body{
     border-radius: 5px;
 }
 
-.search{
-    z-index: 100;
+.search {
     background-color: #123C69;
-    transform: translateY(-4vh);
+    margin-top: 10px;  /* pushes button below card */
     text-align: center;    
     width: 20vw;
     height: 8vh;
@@ -225,32 +223,23 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     font-size: 20px;
     letter-spacing: 2px;
     font-weight: 500;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
 }
-
-
-
-
-
-.search :hover{
-    animation: fill 2s;
+.search:hover {
+    background-color: #0d2e52;
     cursor: pointer;
 }
+
 
 @keyframes fill{
     0% {width: 0%; background-color:#123C69;}
     
     100% {width: 100%; background-color: #123C69;}
 }
-
-
-
-
-
-
 
 
 .page2{
@@ -297,46 +286,96 @@ body{
     margin-top: 10px;
 }
 
-.datedecider{
-    width: 37.5vw;
-    display: flex;
-    justify-content: space-evenly;
-    
-    
+.datedecider {
+  width: 37.5vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-.day{
-    color: rgb(221, 213, 213);
+.arr_date {
+  flex: 1;
+  height: 70px;
+  background-color: white;
+  border: 2px solid rgb(221, 213, 213);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #123C69;
+  transition: 0.3s ease;
 }
-.arr_date:hover{
-    cursor: pointer;
+
+.arr_date:hover {
+  cursor: pointer;
+  border-color: #123C69;
+  box-shadow: 0 2px 6px rgba(18, 60, 105, 0.2);
+}
+
+.day {
+  color: #a7a7a7;
+  font-weight: normal;
+  font-size: 13px;
 }
 .departure:hover{
     cursor: pointer;
 }
 
 
+.people {
+  border: 2px solid rgb(221, 213, 213);
+}
+
+
+
+/* Section 2 */
+.page2 {
+  height: auto;
+  padding: 40px 0;
+  background-color: #edc7b7;
+}
+.page2 .heading {
+  text-align: center;
+  font-size: 20px;
+}
+.places {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.delhi img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+.delhi img:hover {
+  box-shadow: 0 2px 10px black;
+  transform: scale(1.05);
+}
+.delhi h4 {
+  margin-top: 10px;
+  text-align: center;
+}
+
 .page3{
     margin-top: 20px;
     width: 100vw;
     height: 60vh;
+    margin-bottom: 60px;
     
     
 }
 .page3 .hotels:hover{
     box-shadow: 0 2px 10px black;
 }
-/* @keyframes typing{
-    from {width: 0}
-    to {width: 100%}
-} */
+
 .page3 .heading{
-    
-    
-    /* overflow: hidden; */
-    /* width: 0; */
-    /* white-space: nowrap; */
-    /* animation: typing 10s forwards; */
     text-align: center;
 }
 
@@ -359,48 +398,38 @@ body{
 }
 
 
-.page4{
-    height: 27vh;
-    width: 100vw;
-    background-color: rgb(233, 235, 238);
+/* Footer */
+.page4 {
+  background-color: #f1f1f1;
+  padding: 70px 0;
+}
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.links ul {
+  list-style: none;
+  margin: 10px;
+}
+.links ul li h4 {
+  margin-bottom: 10px;
+}
+.links ul li a {
+  text-decoration: none;
+  color: #2a2a2e;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
-.links{
-    display: flex;
-    justify-content: space-evenly;
-    
-}
-
-.links ul{
-    margin-top: 30px;
-}
-
-.links ul li{
-    list-style: none;
-}
-.links ul li h4{
-    margin-bottom: 10px;
-}
-
-.links ul li a{
-    text-decoration: none;
-    font-size: 15px;
-    color: rgb(42, 42, 46);
-    font-weight: 300;
-}
-
-
-
-.page5{
-    width: 100vw;
-    height: 20vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 300;
-    font-size: 18px;
-    background-image: linear-gradient(to bottom right, #123C69,#EDC7B7);
-    backdrop-filter: brightness(10px);
-    -webkit-backdrop-filter: brightness(10px);
+/* Bottom Text */
+.page5 {
+  background-image: linear-gradient(to bottom right, #123c69, #edc7b7);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
 }
