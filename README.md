@@ -49,6 +49,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Climbing Loading](#Climbing-Loading)
 - [Download_buttons](#Download_buttons)
 - [Dog Box Animation](#dog-box-animation)
+- [Dismissible Alert](#dismissible-alert)
 - [Dropdown Menu](#dropdown-menu)
 - [Dynamic Image Colorizing](#dynamic-image-colorizing)
 - [Enable Dark Mode](#darkmode)
