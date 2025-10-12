@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Screen Slider Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Full-Screen Image Slider -->
+    <section class="slider">
+        <div class="slides">
+            <div class="slide" style="background-image: url('https://via.placeholder.com/1920x1080');"></div>
+            <div class="slide" style="background-image: url('https://via.placeholder.com/1920x1080/ff0000');"></div>
+            <div class="slide" style="background-image: url('https://via.placeholder.com/1920x1080/00ff00');"></div>
+            <div class="slide" style="background-image: url('https://via.placeholder.com/1920x1080/0000ff');"></div>
+        </div>
+    </section>
+
+    <!-- Additional Content Section -->
+    <section class="content">
+        <h2>Welcome to Our Page</h2>
+        <p>This section provides interesting facts and content about the organization.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <!-- Footer with Redirect Links -->
+    <footer>
+        <p>Visit our other pages:</p>
+        <ul>
+            <li><a href="#page1">Page 1</a></li>
+            <li><a href="#page2">Page 2</a></li>
+            <li><a href="#page3">Page 3</a></li>
+        </ul>
+    </footer>
+
+</body>
+<style>
+    /* General Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body,
+    html {
+        font-family: Arial, sans-serif;
+        overflow-x: hidden;
+    }
+
+    /* Navigation Bar */
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 100;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    /* Full-Screen Image Slider */
+    .slider {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .slides {
+        display: flex;
+        width: 400%;
+        height: 100%;
+        animation: slide 12s infinite;
+    }
+
+    .slide {
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Animation to Slide Images */
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+
+        25% {
+            transform: translateX(-100vw);
+        }
+
+        50% {
+            transform: translateX(-200vw);
+        }
+
+        75% {
+            transform: translateX(-300vw);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    /* Additional Content Section */
+    .content {
+        padding: 50px;
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+
+    .content h2 {
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    footer ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    footer ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    footer ul li a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+</html>

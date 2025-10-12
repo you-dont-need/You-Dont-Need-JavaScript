@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: rgba(0, 128, 255, 0.5); /* Oceanic color */
+        }
+
+        .watch-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .apple-logo {
+            position: absolute;
+            font-size: 400px;
+            color: rgba(0, 0, 0, 0.03);
+            z-index: 1;
+            content: "●";
+        }
+
+        .watch {
+            width: 200px;
+            height: 240px;
+            background: silver; /* Changed to silver */
+            border-radius: 40px;
+            position: relative;
+            transform: translateX(-1000px);
+            animation: slideIn 1.5s forwards;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .screen {
+            width: 180px;
+            height: 220px;
+            background: silver; /* Changed to silver */
+            border-radius: 35px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            overflow: hidden;
+        }
+
+        .display {
+            width: 170px;
+            height: 210px;
+            background: #1a1a1a;
+            border-radius: 30px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: box-shadow 0.3s;
+        }
+
+        .watch:hover .display {
+            box-shadow: inset 0 0 20px rgba(0, 128, 255, 0.3);
+        }
+
+        .side-button {
+            width: 5px;
+            height: 40px;
+            background: #444;
+            position: absolute;
+            right: -5px;
+            top: 60px;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .crown {
+            width: 8px;
+            height: 15px;
+            background: #444;
+            position: absolute;
+            right: -8px;
+            top: 110px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .strap-top, .strap-bottom {
+            width: 160px;
+            height: 100px;
+            background: lime; /* Changed to lime yellow */
+            position: absolute;
+            left: 20px;
+        }
+
+        .strap-top {
+            top: -80px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .strap-bottom {
+            bottom: -80px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .default-text {
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 16px;
+            opacity: 1;
+            position: absolute;
+            transition: opacity 0.3s;
+        }
+
+        .time {
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 32px;
+            opacity: 0;
+            position: absolute;
+            transition: opacity 0.3s;
+        }
+
+        .date {
+            color: #888;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 16px;
+            opacity: 0;
+            position: absolute;
+            transform: translateY(30px);
+            transition: opacity 0.3s;
+        }
+
+        .stats {
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 16px;
+            opacity: 0;
+            position: absolute;
+            transform: translateY(60px); /* Adjusted for spacing */
+            transition: opacity 0.3s;
+        }
+
+        .watch:hover .default-text {
+            opacity: 0;
+        }
+
+        .watch:hover .time,
+        .watch:hover .date,
+        .watch:hover .stats {
+            opacity: 1;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="watch-container">
+        <div class="apple-logo">●</div>
+        <div class="watch">
+            <div class="strap-top"></div>
+            <div class="screen">
+                <div class="display">
+                    <div class="default-text">Hover to wake</div>
+                    <div class="time">12:00</div>
+                    <div class="date">Monday, Oct 30</div>
+                    <div class="stats">1276 steps | 348 cal 🔥</div>
+                </div>
+            </div>
+            <div class="side-button"></div>
+            <div class="crown"></div>
+            <div class="strap-bottom"></div>
+        </div>
+    </div>
+</body>
+</html>

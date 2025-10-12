@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Parallax Section -->
+    <section class="parallax-section">
+        <div class="parallax-background"></div>
+        <div class="content">
+            <Br><br>
+            <h1>Parallax Scrolling Effect</h1>
+            <p>Scroll down to see the parallax effect in action!</p>
+        </div>
+    </section>
+
+    <!-- Other Content -->
+    <section class="regular-section">
+        <h2>Other Section</h2>
+        <p>This is a regular section of the page. Add more content here to make the page scrollable.</p>
+    </section>
+
+    <footer>
+        <p>Visit our other pages:</p>
+        <ul>
+            <li><a href="#page1">Page 1</a></li>
+            <li><a href="#page2">Page 2</a></li>
+            <li><a href="#page3">Page 3</a></li>
+        </ul>
+    </footer>
+
+</body>
+<style>
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 100;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    /* Parallax Section */
+    .parallax-section {
+        position: relative;
+        height: 100vh;
+        /* Full viewport height */
+        overflow: hidden;
+    }
+
+    .parallax-background {
+        background-image: url(mountain-lake-forest-nature-scenery-4k-wallpaper-uhdpaper.com-135@0@i.jpg);
+        /* Replace with your image URL */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        /* Send the background behind the content */
+    }
+
+    .content {
+        position: relative;
+        text-align: center;
+        color: white;
+        z-index: 1;
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 4rem;
+    }
+
+    .content p {
+        font-size: 1.5rem;
+    }
+
+    /* Regular Section */
+    .regular-section {
+        padding: 100px 20px;
+        background-color: #f4f4f4;
+    }
+
+    .regular-section h2 {
+        font-size: 2rem;
+    }
+
+    .regular-section p {
+        font-size: 1.25rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .content h1 {
+            font-size: 2.5rem;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+        }
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    footer ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    footer ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    footer ul li a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+</html>

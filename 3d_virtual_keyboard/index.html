@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neumorphic Virtual Keyboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Include Font Awesome -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #e0e0e0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .keyboard-container {
+      display: grid;
+      grid-gap: 10px;
+      padding: 20px;
+      background-color: #e0e0e0;
+      border-radius: 30px;
+      box-shadow: 9px 9px 16px #bebebe, -9px -9px 16px #ffffff;
+      width: 90%;
+      max-width: 1100px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(14, 1fr); 
+      gap: 10px;
+    }
+
+    .key {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      box-shadow: 9px 9px 16px #bebebe, -9px -9px 16px #ffffff;
+      border-radius: 10px;
+      font-size: 18px;
+      color: #333;
+      cursor: pointer;
+      height: 60px;
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+
+    .key:active {
+      box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+      transform: scale(0.98);
+    }
+
+    .key.tab {
+      grid-column: span 2;
+    }
+
+    .key.caps-lock {
+      grid-column: span 2;
+    }
+
+    .key.shift {
+      grid-column: span 3;
+    }
+
+    .key.enter {
+      grid-column: span 2;
+    }
+
+    .key.space {
+      grid-column: span 7;
+      justify-content: center;
+    }
+
+    .key.ctrl, .key.alt {
+      grid-column: span 1;
+    }
+
+    .key.backspace {
+      grid-column: span 2;
+    }
+
+    .key.win {
+      grid-column: span 1;
+      font-size: 24px; 
+    }
+
+    .key.enter::before {
+      content: '↵';
+      font-size: 24px;
+    }
+
+    .key.space::before {
+      content: ' ';
+    }
+
+    .key.backspace::before {
+      content: '⌫';
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .keyboard-container {
+        width: 100%;
+      }
+
+      .row {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .key.space {
+        grid-column: span 3;
+      }
+
+      .key.enter, .key.backspace {
+        grid-column: span 2;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="keyboard-container">
+    <!-- First row -->
+    <div class="row">
+      <div class="key tab">Tab</div>
+      <div class="key">Q</div>
+      <div class="key">W</div>
+      <div class="key">E</div>
+      <div class="key">R</div>
+      <div class="key">T</div>
+      <div class="key">Y</div>
+      <div class="key">U</div>
+      <div class="key">I</div>
+      <div class="key">O</div>
+      <div class="key">P</div>
+      <div class="key backspace"></div>
+    </div>
+
+    <!-- Second row -->
+    <div class="row">
+      <div class="key caps-lock">Caps</div>
+      <div class="key">A</div>
+      <div class="key">S</div>
+      <div class="key">D</div>
+      <div class="key">F</div>
+      <div class="key">G</div>
+      <div class="key">H</div>
+      <div class="key">J</div>
+      <div class="key">K</div>
+      <div class="key">L</div>
+      <div class="key enter"></div>
+    </div>
+
+    <!-- Third row -->
+    <div class="row">
+      <div class="key shift">Shift</div>
+      <div class="key">Z</div>
+      <div class="key">X</div>
+      <div class="key">C</div>
+      <div class="key">V</div>
+      <div class="key">B</div>
+      <div class="key">N</div>
+      <div class="key">M</div>
+      <div class="key shift">Shift</div>
+    </div>
+
+    <!-- Fourth row -->
+    <div class="row">
+      <div class="key ctrl">Ctrl</div>
+      <div class="key win"><i class="fab fa-windows"></i></div> 
+      <div class="key alt">Alt</div>
+      <div class="key space"></div>
+      <div class="key alt">Alt</div>
+      <div class="key win"><i class="fab fa-windows"></i></div> 
+      <div class="key ctrl">Ctrl</div>
+    </div>
+  </div>
+
+</body>
+</html>

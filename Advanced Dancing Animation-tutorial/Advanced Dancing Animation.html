@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Dancing Animation</title>
+    <style>
+        /* Keyframes for the dance animation */
+        @keyframes dance-move {
+            0%, 100% {
+                transform: rotate(0deg) translateY(0);
+            }
+            25% {
+                transform: rotate(-10deg) translateY(-10px);
+            }
+            50% {
+                transform: rotate(0deg) translateY(0);
+            }
+            75% {
+                transform: rotate(10deg) translateY(-10px);
+            }
+        }
+
+        @keyframes arm-move {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(20deg);
+            }
+        }
+
+        @keyframes leg-move {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(-20deg);
+            }
+        }
+
+        /* Container for the character */
+        .character {
+            position: relative;
+            width: 100px;
+            height: 200px;
+            margin: 100px auto;
+            animation: dance-move 1s infinite;
+        }
+
+        /* Head of the character */
+        .head {
+            width: 60px;
+            height: 60px;
+            background-color: #FFD700;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Body of the character */
+        .body {
+            width: 30px;
+            height: 80px;
+            background-color: #4CAF50;
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Arms of the character */
+        .arm {
+            width: 20px;
+            height: 60px;
+            background-color: #4CAF50;
+            position: absolute;
+            top: 60px;
+            transform-origin: top;
+            animation: arm-move 1s infinite;
+        }
+
+        .arm-left {
+            left: 0;
+        }
+
+        .arm-right {
+            right: 0;
+        }
+
+        /* Legs of the character */
+        .leg {
+            width: 20px;
+            height: 80px;
+            background-color: #4CAF50;
+            position: absolute;
+            top: 140px;
+            transform-origin: top;
+            animation: leg-move 1s infinite;
+        }
+
+        .leg-left {
+            left: 20px;
+        }
+
+        .leg-right {
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="character">
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="arm arm-left"></div>
+        <div class="arm arm-right"></div>
+        <div class="leg leg-left"></div>
+        <div class="leg leg-right"></div>
+    </div>
+
+</body>
+</html>

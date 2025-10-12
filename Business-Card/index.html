@@ -3,123 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Business Card with Colored Social Icons and QR Code</title>
 </head>
 <body>
-  <style>
-    
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.business-card {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 500px;
-    text-align: center;
-    padding: 20px;
-}
-
-.social-media {
-    display: flex;
-    gap: 10px; 
-    justify-content: center; 
-    margin-top: 20px; 
-}
-
-.social-media a {
-    text-decoration: none; 
-    font-size: 30px; 
-    transition: transform 0.2s; 
-}
-
-.social-media a:hover {
-    transform: scale(1.1); 
-}
-
-
-.bx-linkedin { color: #0077b5; }
-.bx-github { color: #333; }
-.bx-twitter { color: #1da1f2; }
-.bx-facebook { color: #3b5998; }
-.bx-instagram { color: #c32aa3; }
-
-.qr-code {
-    margin-top: 20px; 
-}
-
-.qr-code img {
-    width: 150px; 
-    height: 150px; 
-}
-
-
-.contact-us {
-    margin-top: 20px; 
-}
-
-.contact-us a {
-    display: inline-block;
-    padding: 10px 20px; 
-    background-color: #007bff; 
-    color: white; 
-    border-radius: 5px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    transition: background-color 0.3s, transform 0.2s; 
-}
-
-.contact-us a:hover {
-    background-color: #0056b3; 
-    transform: scale(1.05); 
-}
-
-    
-  </style>
-    <div class="business-card">
-        <div class="card-header">
-            <p>Your Name</p>
-            <h1>Your Name</h1>
-            <p>Job Title</p>
+    <body>
+        <div class="business-card">
+            <div class="card-header">
+                <img src="img1.png" alt="Profile Picture">
+                <h1>Your Name</h1>
+                <p>Job Title</p>
+            </div>
+            <div class="card-details">
+                <p>Email: your@email.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Website: www.yourwebsite.com</p>
+                <p>Address: 123 Main St, City, Country</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://github.com/yourprofile" target="_blank">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="https://www.facebook.com/yourprofile" target="_blank">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+            </div>
+            <div class="contact-btn">
+                <a href="mailto:your@email.com">Contact Us</a>
+            </div>
         </div>
-        <div class="card-details">
-            <p>Email: your@email.com</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Website: www.yourwebsite.com</p>
-            <p>Address: 123 Main St, City, Country</p>
-        </div>
-        <div class="social-media">
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
-                <i class='bx bxl-linkedin'></i>
-            </a>
-            <a href="https://github.com/yourprofile" target="_blank">
-                <i class='bx bxl-github'></i>
-            </a>
-            <a href="https://twitter.com/yourprofile" target="_blank">
-                <i class='bx bxl-twitter'></i>
-            </a>
-            <a href="https://www.facebook.com/yourprofile" target="_blank">
-                <i class='bx bxl-facebook'></i>
-            </a>
-            <a href="https://www.instagram.com/yourprofile" target="_blank">
-                <i class='bx bxl-instagram'></i>
-            </a>
-        </div>
-        <div class="qr-code">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.example.com&size=150x150" alt="QR Code" width="150" height="150">
-        </div>
-        <div class="contact-us">
-            <a href="mailto:your@email.com">Contact Us</a>
         </div>
     </div>
 </body>

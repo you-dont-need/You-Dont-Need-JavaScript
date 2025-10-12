@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphism Pricing Table</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #e0e5ec;
+            --text-color: #333;
+            --shadow-color: #a3b1c6;
+            --highlight-color: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 15px;
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--background-color);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 
+                10px 10px 20px var(--shadow-color),
+                -10px -10px 20px var(--highlight-color);
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .pricing-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .pricing-toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .toggle-label {
+            font-size: 1.1rem;
+            margin: 0 10px;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--background-color);
+            transition: .4s;
+            border-radius: 34px;
+            box-shadow: 
+                inset 2px 2px 5px var(--shadow-color),
+                inset -2px -2px 5px var(--highlight-color);
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: var(--primary-color);
+            transition: .4s;
+            border-radius: 50%;
+            box-shadow: 
+                2px 2px 5px var(--shadow-color),
+                -2px -2px 5px var(--highlight-color);
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+            background-color: var(--secondary-color);
+        }
+
+        .pricing-plans {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .pricing-plan {
+            background-color: var(--background-color);
+            border-radius: 20px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 
+                8px 8px 16px var(--shadow-color),
+                -8px -8px 16px var(--highlight-color);
+        }
+
+        .pricing-plan:hover {
+            transform: translateY(-10px);
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .plan-price .currency {
+            font-size: 1.5rem;
+            vertical-align: super;
+        }
+
+        .plan-features {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .plan-features li {
+            margin-bottom: 10px;
+        }
+
+        .plan-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 
+                4px 4px 8px var(--shadow-color),
+                -4px -4px 8px var(--highlight-color);
+        }
+
+        .plan-button:hover {
+            box-shadow: 
+                inset 4px 4px 8px var(--shadow-color),
+                inset -4px -4px 8px var(--highlight-color);
+        }
+
+        .popular {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .popular::before {
+            content: "Popular";
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .pricing-plans {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-plan {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-container">
+        <header class="pricing-header">
+            <h1>Choose Your Plan</h1>
+            <p>Select the perfect plan for your needs</p>
+        </header>
+        <div class="pricing-toggle">
+            <span class="toggle-label">Monthly</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="pricing-toggle">
+                <span class="toggle-slider"></span>
+            </label>
+            <span class="toggle-label">Annually</span>
+        </div>
+        <div class="pricing-plans">
+            <div class="pricing-plan">
+                <div class="plan-name">Basic</div>
+                <div class="plan-price">
+                    <span class="currency">$</span>9.99
+                    <span class="period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>1 User</li>
+                    <li>5GB Storage</li>
+                    <li>Basic Support</li>
+                    <li>1 Project</li>
+                </ul>
+                <a href="#" class="plan-button">Choose Plan</a>
+            </div>
+            <div class="pricing-plan popular">
+                <div class="plan-name">Pro</div>
+                <div class="plan-price">
+                    <span class="currency">$</span>19.99
+                    <span class="period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>5 Users</li>
+                    <li>50GB Storage</li>
+                    <li>Priority Support</li>
+                    <li>10 Projects</li>
+                </ul>
+                <a href="#" class="plan-button">Choose Plan</a>
+            </div>
+            <div class="pricing-plan">
+                <div class="plan-name">Enterprise</div>
+                <div class="plan-price">
+                    <span class="currency">$</span>49.99
+                    <span class="period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>Unlimited Users</li>
+                    <li>500GB Storage</li>
+                    <li>24/7 Support</li>
+                    <li>Unlimited Projects</li>
+                </ul>
+                <a href="#" class="plan-button">Choose Plan</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
