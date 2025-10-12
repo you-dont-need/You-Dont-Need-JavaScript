@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighthouse Scene</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: absolute;
+        }
+
+        *:before,
+        *:after {
+            content: "";
+            position: absolute;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .scene {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .background {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            background: linear-gradient(
+                #29284c 0%,
+                #4c4b82 10%,
+                #717ae1 60%,
+                #75e2fa 90%
+            );
+        }
+
+        /* Stars */
+        .stars {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .star {
+            border-radius: 50%;
+            background-color: #b9befa;
+            animation: twinkle 5s linear infinite;
+        }
+
+        @keyframes twinkle {
+            50% { opacity: 0.3; }
+        }
+
+        /* Moon */
+        .moon {
+            width: 80px;
+            height: 80px;
+            top: 25%;
+            right: 10%;
+            border-radius: 50%;
+            z-index: 2;
+            background-color: #d6d9f6;
+            box-shadow: 0 0 10px #d6d9f6, 0 0 20px #d6d9f6, 0 0 30px #d6d9f6,
+                0 0 40px #d6d9f6, 0 0 50px #75e2fa, 0 0 100px #d6d9f6;
+        }
+
+        /* Mountains */
+        .mountains {
+            width: 100%;
+            height: 250px;
+            bottom: 65px;
+            z-index: 3;
+        }
+
+        .mountain {
+            width: 250px;
+            height: 250px;
+            right: 50px;
+            bottom: -40px;
+            background-color: #717ae1;
+            transform: rotate(45deg);
+            border-radius: 3px;
+        }
+
+        .mountain:after {
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+            background: linear-gradient(135deg, #4c4b82 0%, #717ae1 20%, #75e2fa 40%);
+        }
+
+        .mountain:nth-child(2) {
+            width: 240px;
+            height: 240px;
+            right: 220px;
+            z-index: 2;
+        }
+
+        .mountain:nth-child(3) {
+            width: 260px;
+            height: 260px;
+            right: 350px;
+        }
+
+        .mountain:nth-child(4) {
+            width: 200px;
+            height: 200px;
+            right: 130px;
+            bottom: -70px;
+            z-index: 3;
+        }
+
+        .mountain:nth-child(4):after {
+            background: linear-gradient(135deg, #4c4b82 0%, #717ae1 6%, #75e2fa 20%);
+        }
+
+        /* Sea */
+        .sea {
+            width: 100%;
+            height: 170px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to top, #29284c 0%, #4c4b82 30%, #717ae1 60%, #75e2fa 90%);
+            z-index: 4;
+        }
+
+        .wave {
+            height: 3px;
+            background-color: #d6d9f6;
+            border-radius: 100%;
+            opacity: 0.2;
+            animation: wave 5s linear infinite;
+        }
+
+        @keyframes wave {
+            50% { transform: translateX(-10px); }
+        }
+
+        /* Boat */
+        .boat {
+            width: 90px;
+            height: 90px;
+            bottom: 90px;
+            animation: boat 30s linear infinite;
+        }
+
+        .boat:after {
+            background: linear-gradient(90deg, rgba(214, 217, 246, 0.7) 30%, rgba(255, 255, 255, 0) 100%);
+            width: 200px;
+            height: 8px;
+            top: 105px;
+            left: 20px;
+            border-radius: 40%;
+            z-index: -1;
+        }
+
+        .boat:before {
+            width: 92px;
+            height: 50px;
+            left: 25px;
+            bottom: -70px;
+            background: linear-gradient(to bottom, rgba(41, 40, 76, 0.8) 30%, rgba(41, 40, 76, 0) 100%);
+            z-index: -1;
+            animation: boatShadow 30s linear infinite;
+        }
+
+        .boat .base {
+            width: 110px;
+            height: 25px;
+            bottom: -20px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+            background-color: #4c4b82;
+        }
+
+        .boat .sail:nth-child(1) {
+            width: 90px;
+            height: 80px;
+            left: 5px;
+            clip-path: polygon(50% 0%, 0% 100%, 50% 100%);
+            background: linear-gradient(#b9befa 0%, #4c4b82 60%);
+        }
+
+        .boat .sail:nth-child(2) {
+            width: 80px;
+            height: 70px;
+            left: 15px;
+            bottom: 10px;
+            transform: scaleX(-1);
+            clip-path: polygon(50% 0%, 0% 100%, 50% 100%);
+            background: linear-gradient(#b9befa 0%, #4c4b82 60%);
+        }
+
+        @keyframes boat {
+            0% { transform: translateX(120vw) scale(0.8); }
+            100% { transform: translateX(-25vw) scale(0.8); }
+        }
+
+        @keyframes boatShadow {
+            0% { transform: skewX(35deg) translateX(15px); }
+            100% { transform: skewX(-55deg) translateX(-40px); }
+        }
+
+        /* Lighthouse Group */
+        .lighthouse-group {
+            width: 50%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .land {
+            width: 400px;
+            height: 60px;
+            left: -30px;
+            bottom: 0;
+            background: linear-gradient(to top, #29284c 80%, #717ae1 100%);
+            transform: skewX(35deg);
+            border-radius: 10px;
+        }
+
+        .lighthouse-holder {
+            width: 100px;
+            height: 480px;
+            bottom: 80px;
+            left: 180px;
+        }
+
+        .shadow {
+            width: 117px;
+            height: 50px;
+            left: -32px;
+            bottom: -70px;
+            background: #29284c;
+            transform: skewX(-45deg);
+        }
+
+        .lighthouse {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: perspective(600px) rotateX(20deg);
+            background-color: #d6d9f6;
+            background-image: repeating-linear-gradient(
+                -40deg,
+                transparent,
+                transparent 60px,
+                #4c4b82 60px,
+                #4c4b82 120px
+            );
+        }
+
+        .lighthouse:after {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(214, 217, 246, 0.6) 0%, #29284c 8%, transparent 70%, rgba(214, 217, 246, 0.4) 100%);
+        }
+
+        .top {
+            width: 94px;
+            height: 60px;
+            left: 3px;
+            top: -15px;
+        }
+
+        .light-container {
+            height: 40px;
+            min-width: 300px;
+            width: 35vw;
+            bottom: 4px;
+            left: 40px;
+            transform-style: preserve-3d;
+            transform-origin: left bottom;
+            animation: lightRotate 20s linear infinite;
+        }
+
+        .light {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform-origin: left center;
+            transform: perspective(500px) rotateY(-35deg);
+            background: linear-gradient(90deg, #f7f2b4 40%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        @keyframes lightRotate {
+            25% { transform: perspective(500px) rotateY(35deg); }
+            75% { transform: perspective(500px) rotateY(-35deg); }
+        }
+
+        .rail {
+            width: 100%;
+            height: 17px;
+            bottom: 1px;
+            border: 3px solid #29284c;
+            border-radius: 1px;
+            transform: perspective(1000px) rotateX(-35deg);
+            background-image: repeating-linear-gradient(90deg, #29284c, #29284c 3px, #9e9ebe 3px, #f7f2b4 10px);
+            background-position: -2px 0;
+        }
+
+        .middle {
+            width: 88px;
+            height: 35px;
+            left: 3px;
+            bottom: 14px;
+            border: 2px solid #29284c;
+            border-radius: 3px;
+            background-image: repeating-linear-gradient(90deg, #29284c, #29284c 4px, #9e9ebe 4px, rgba(255, 255, 255, 0) 21px);
+            background-position: -2px 0;
+        }
+
+        .middle:before {
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #f7f2b4;
+            box-shadow: 0 0 10px #d6d9f6, 0 0 20px #f7f2b4, 0 0 30px #f7f2b4,
+                0 0 40px #f7f2b4, 0 0 70px #f7f2b4;
+        }
+
+        .roof {
+            width: 0;
+            height: 0;
+            bottom: 45px;
+            left: -3px;
+            border-left: 50px solid rgba(255, 255, 255, 0);
+            border-right: 50px solid rgba(255, 255, 255, 0);
+            border-bottom: 40px solid #29284c;
+        }
+
+        .roof:before {
+            width: 14px;
+            height: 14px;
+            bottom: -7px;
+            left: -7px;
+            background-color: #29284c;
+            border-radius: 50%;
+        }
+
+        .roof:after {
+            width: 4px;
+            height: 14px;
+            left: -2px;
+            bottom: 5px;
+            background-color: #29284c;
+            border-radius: 3px;
+        }
+
+        .roof-light {
+            width: 100px;
+            height: 40px;
+            left: -50px;
+            clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+            background: linear-gradient(135deg, #29284c 40%, rgba(247, 242, 180, 0.5) 100%);
+        }
+
+        .glow {
+            width: 100px;
+            height: 60px;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            border-radius: 50%;
+            background-color: #f7f2b4;
+            box-shadow: 0 0 10px #f7f2b4, 0 0 20px #f7f2b4, 0 0 30px #f7f2b4,
+                0 0 40px #f7f2b4, 0 0 50px #f7f2b4, 0 0 60px #f7f2b4, 0 0 70px #f7f2b4,
+                0 0 80px #f7f2b4;
+            animation: lightGlow 20s linear infinite;
+        }
+
+        @keyframes lightGlow {
+            50% { opacity: 0; }
+            75% { opacity: 1; }
+        }
+
+        .windows {
+            height: 100%;
+            width: 100%;
+        }
+
+        .window {
+            width: 15px;
+            height: 25px;
+            left: 43px;
+            background-color: #29284c;
+            border-bottom: 2px solid rgba(185, 186, 250, 0.7);
+            border-radius: 25px 25px 0 0;
+        }
+
+        .window:nth-of-type(1) { bottom: 90px; }
+        .window:nth-of-type(2) { bottom: 180px; }
+        .window:nth-of-type(3) { bottom: 270px; }
+        .window:nth-of-type(4) { bottom: 360px; }
+
+        .door {
+            width: 25px;
+            height: 40px;
+            background-color: #29284c;
+            left: 38px;
+            bottom: -2px;
+            border-radius: 2px 2px 0 0;
+        }
+
+        .stairs {
+            width: 27px;
+            height: 28px;
+            top: 34px;
+            left: -1px;
+            background-color: #29284c;
+            transform: perspective(100px) rotateX(45deg);
+            background-image: repeating-linear-gradient(
+                to bottom,
+                #29284c,
+                #29284c 4px,
+                #b9befa 4px,
+                rgba(255, 255, 255, 0.1) 5px
+            );
+        }
+
+        @media (max-width: 768px) {
+            .lighthouse-holder {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .moon {
+                width: 60px;
+                height: 60px;
+                right: 5%;
+            }
+            
+            .mountain {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="background">
+            <div class="stars">
+                <div class="star" style="width: 2px; height: 2px; top: 15vh; left: 10vw; animation-delay: 1s;"></div>
+                <div class="star" style="width: 3px; height: 3px; top: 25vh; left: 20vw; animation-delay: 2s;"></div>
+                <div class="star" style="width: 2px; height: 2px; top: 35vh; left: 30vw; animation-delay: 3s;"></div>
+                <div class="star" style="width: 4px; height: 4px; top: 10vh; left: 40vw; animation-delay: 0s;"></div>
+                <div class="star" style="width: 2px; height: 2px; top: 20vh; left: 50vw; animation-delay: 4s;"></div>
+                <div class="star" style="width: 3px; height: 3px; top: 5vh; left: 60vw; animation-delay: 1s;"></div>
+                <div class="star" style="width: 2px; height: 2px; top: 30vh; left: 70vw; animation-delay: 2s;"></div>
+                <div class="star" style="width: 4px; height: 4px; top: 18vh; left: 80vw; animation-delay: 3s;"></div>
+                <div class="star" style="width: 2px; height: 2px; top: 8vh; left: 90vw; animation-delay: 0s;"></div>
+                <div class="star" style="width: 3px; height: 3px; top: 40vh; left: 15vw; animation-delay: 4s;"></div>
+                <div class="star" style="width: 2px; height: 2px; top: 12vh; left: 25vw; animation-delay: 1s;"></div>
+                <div class="star" style="width: 4px; height: 4px; top: 28vh; left: 35vw; animation-delay: 2s;"></div>
+                <div class="star" style="width: 2px; height: 2px; top: 45vh; left: 45vw; animation-delay: 3s;"></div>
+                <div class="star" style="width: 3px; height: 3px; top: 22vh; left: 55vw; animation-delay: 0s;"></div>
+                <div class="star" style="width: 2px; height: 2px; top: 38vh; left: 65vw; animation-delay: 4s;"></div>
+                <div class="star" style="width: 4px; height: 4px; top: 16vh; left: 75vw; animation-delay: 1s;"></div>
+                <div class="star" style="width: 2px; height: 2px; top: 32vh; left: 85vw; animation-delay: 2s;"></div>
+                <div class="star" style="width: 3px; height: 3px; top: 6vh; left: 95vw; animation-delay: 3s;"></div>
+                <div class="star" style="width: 2px; height: 2px; top: 42vh; left: 12vw; animation-delay: 0s;"></div>
+                <div class="star" style="width: 4px; height: 4px; top: 14vh; left: 22vw; animation-delay: 4s;"></div>
+            </div>
+            <div class="moon"></div>
+            <div class="mountains">
+                <div class="mountain"></div>
+                <div class="mountain"></div>
+                <div class="mountain"></div>
+                <div class="mountain"></div>
+            </div>
+            <div class="sea">
+                <div class="wave" style="width: 80px; bottom: 120px; left: 10vw; opacity: 0.3; animation-delay: 1s;"></div>
+                <div class="wave" style="width: 120px; bottom: 80px; left: 25vw; opacity: 0.2; animation-delay: 2s;"></div>
+                <div class="wave" style="width: 90px; bottom: 150px; left: 40vw; opacity: 0.4; animation-delay: 0s;"></div>
+                <div class="wave" style="width: 110px; bottom: 100px; left: 55vw; opacity: 0.3; animation-delay: 3s;"></div>
+                <div class="wave" style="width: 75px; bottom: 130px; left: 70vw; opacity: 0.2; animation-delay: 1s;"></div>
+                <div class="wave" style="width: 95px; bottom: 90px; left: 85vw; opacity: 0.4; animation-delay: 2s;"></div>
+                <div class="wave" style="width: 100px; bottom: 110px; left: 15vw; opacity: 0.3; animation-delay: 0s;"></div>
+                <div class="wave" style="width: 85px; bottom: 140px; left: 30vw; opacity: 0.2; animation-delay: 3s;"></div>
+                <div class="boat">
+                    <div class="sail"></div>
+                    <div class="sail"></div>
+                    <div class="base"></div>
+                </div>
+            </div>
+        </div>
+        <div class="lighthouse-group">
+            <div class="land"></div>
+            <div class="lighthouse-holder">
+                <div class="shadow"></div>
+                <div class="lighthouse"></div>
+                <div class="top">
+                    <div class="light-container">
+                        <div class="light"></div>
+                    </div>
+                    <div class="rail"></div>
+                    <div class="middle"></div>
+                    <div class="roof">
+                        <div class="roof-light"></div>
+                    </div>
+                    <div class="glow"></div>
+                </div>
+                <div class="windows">
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                </div>
+                <div class="door">
+                    <div class="stairs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
