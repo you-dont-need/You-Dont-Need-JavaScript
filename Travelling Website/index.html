@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mooli&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
@@ -18,7 +24,12 @@
       <div class="page1">
         <div class="navbar">
           <div class="navbarleft">
-            <img src="logo-removebg-preview.png" alt="" width="180px" height="180px" />
+            <img
+              src="logo-removebg-preview.png"
+              alt=""
+              width="180px"
+              height="180px"
+            />
             <ul>
               <li><a href="">Flight+Hotel</a></li>
               <li><a href="">Hotel & Homes</a></li>
@@ -40,33 +51,41 @@
         <div class="navbar2">
           <h1>"Explore More, Worry Less"</h1>
         </div>
-
         <div class="heroimg">
           <div class="bookingpage">
             <div class="bookingpagetop">
-              <h1>Book Right Away!</h1>
+              <h1>Book Right Away !</h1>
             </div>
             <div class="bookingpagelow">
               <div class="departure">
                 <i class="fa-solid fa-plane-departure"></i>
-                <input type="search" placeholder="Departure" />
+                <input
+                  type="search"
+                  name=""
+                  id="input1"
+                  placeholder="Departure"
+                />
               </div>
               <div class="departure">
-                <i class="fa-solid fa-plane-arrival"></i>
-                <input type="text" placeholder="Arrival" />
+                <label for=""><i class="fa-solid fa-plane-arrival"></i></label>
+                <input type="text" id="input1" placeholder="Arrival" />
               </div>
-
-              <!-- ONE COMBINED BUTTON for all selections -->
               <div class="departure2">
-                <button class="arr_date full-btn">
-                  From 01 Oct to 05 Oct 2023
-                  <span class="day">Tap to choose</span>
-                </button>
-              </div>
+                <div class="datedecider">
+                    <button class="arr_date full_date">
+                    From 01 Oct to 05 Oct 2023 <br>
+                    <span class="day">(Sunday–Thursday)</span>
+                    </button>
+                    <button class="arr_date people">
+                    Adults 2 <br>
+                    <span class="day">Children 1</span>
+                    </button>
+                </div>
+             </div>
             </div>
 
             <div class="search">
-              <button>SEARCH</button>
+              <buttton>SEARCH</buttton>
             </div>
           </div>
         </div>
