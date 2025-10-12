@@ -51,6 +51,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Dog Box Animation](#dog-box-animation)
 - [Dropdown Menu](#dropdown-menu)
 - [Dynamic Image Colorizing](#dynamic-image-colorizing)
+- [Earth](#earth)
 - [Enable Dark Mode](#darkmode)
 - [Fancy Menu](#fancy-menu)
 - [Flip the grid](#flip-grid)
@@ -120,6 +121,12 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Contributing](#contributing)
 
 ---
+
+## <a id="earth"></a>EARTH
+
+[EARTH](/You-Dont-Need-JavaScript/EARTH/earth.mp4)
+
+**[⬆ back to top](#quick-links)**
 
 ## <a id="image-hover-effect"></a>Image Hover Effect
 
