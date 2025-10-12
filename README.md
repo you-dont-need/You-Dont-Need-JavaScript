@@ -69,6 +69,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Info on Hover / Popover](#info-on-hover-popover)
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
+- [Lighthouse Scene](#lighthouse-scene)
 - [Loaders](#loaders)
 - [Loading_Css_effect](#Loading-Css-effect)
 - [Lego_Loader](#Lego-Loader)
@@ -143,6 +144,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ##### Light Theme:
 
 [<video width="400" height="200" controls>
+
 <source src="https://github.com/user-attachments/assets/4786bfb6-78e7-4682-b098-c49f3f518b5f" type="video/mp4">
 Your browser does not support the video tag.
 </video>](http://url-to-light-theme-page)
@@ -150,6 +152,7 @@ Your browser does not support the video tag.
 ##### Dark Theme:
 
 [<video width="400" height="200" controls>
+
 <source src="https://github.com/user-attachments/assets/1b305f75-26b3-41c3-a19a-6f7bd043d393" type="video/mp4">
 Your browser does not support the video tag.
 </video>](http://url-to-dark-theme-page)
@@ -792,6 +795,14 @@ Your browser does not support the video tag.
 ## <a id="LightBulbAnimation"></a>Light Bulb Animation
 
 <img src="images/LightBulbAnimation.png" height="230" title="Light Bulb animation">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="lighthouse-scene"></a>Lighthouse Scene
+
+[<img src="Lighthouse Scene/Lighthouse_scene.gif" height="230" title="Lighthouse Scene">](Lighthouse%20Scene/lighthouse-scene.html)
 
 **[⬆ back to top](#quick-links)**
 
