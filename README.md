@@ -55,7 +55,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Fancy Menu](#fancy-menu)
 - [Flip the grid](#flip-grid)
 - [Flip on Click](#flip-on-click)
-- [Flipbook Storyboard](#flipbook-storyboard)
 - [Floating Label on Textfield](#floating-label-on-textfield)
 - [Floating Labels V2](#floating-labelv2)
 - [Font-Face (Latin)](#font-face-latin)
@@ -88,6 +87,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Profile Cards](#profilecards)
 - [Radial Color Pulsar](#RadialPulsar)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
+- [Retro Loader](#RetroLoader)
 - [Ripple Effect](#ripple-effect)
 - [Redar Loader](#Redar-Loader)
 - [Scary Animation](#scary-animation)
@@ -545,14 +545,6 @@ Your browser does not support the video tag.
 
 ---
 
-## <a id="flipbook-storyboard"></a>Flipbook Storyboard
-
-[<img src="flipbook-storyboard/preview.png" height="230" title="Flipbook Storyboard Demo - CSS Only Interactive Flipbook with Glassmorphism Design">](./flipbook-storyboard/index.html)
-
-**[⬆ back to top](#quick-links)**
-
----
-
 ## <a id="Todo"></a>Todo List
 
 [<img src="images/Todo List.png" height="230" title="Demo">](https://codepen.io/SamsShow/pen/NWeerXr)
@@ -564,6 +556,7 @@ Your browser does not support the video tag.
 ## <a id="Tooltips"></a>Tooltips
 
 - [Demo](https://kushagragour.in/lab/hint/)
+- [CSS Tooltip with Animation](https://codepen.io/Elian-Echavarria/pen/XJXgmWN)
 
 ## <a id="Treeview"></a>Treeview
 
@@ -1018,6 +1011,14 @@ Your browser does not support the video tag.
 ## <a id="RadialPulsar"></a>Radial Color Puslar
 
 [<img src="Radial Color Pulsar/Radial.png" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="RetroLoader"></a>Retro Loader
+
+[<img src="Retro Loader/Retro.png" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
 
 **[⬆ back to top](#quick-links)**
 
