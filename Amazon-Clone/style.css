@@ -1,9 +1,22 @@
+/* --- General Styles (No changes needed here, except the box-sizing fix) --- */
 * {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    border: border-box; /* Note: This should likely be box-sizing: border-box; */
+    /* FIX: Corrected this property for proper box model calculation */
+    box-sizing: border-box;
 }
 
+.border {
+    border: 1.5px solid transparent;
+    padding: 5px;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+    border-radius: 3px;
+}
+
+/* --- Navbar Styles --- */
 .navbar {
     height: 60px;
     background-color: #0f1111;
@@ -25,17 +38,7 @@
     width: 100%;
 }
 
-.border {
-    border: 1.5px solid transparent;
-    padding: 5px;
-}
-
-.border:hover {
-    border: 1.5px solid white;
-    border-radius: 3px;
-}
-
-/** box2 **/
+/* Address Box */
 .add-first {
     color: #cccccc;
     font-size: 0.85rem;
@@ -52,7 +55,7 @@
     align-items: center;
 }
 
-/** box3 **/
+/* Search Bar */
 .nav-search {
     display: flex;
     justify-content: space-evenly;
@@ -93,7 +96,7 @@
     border: 2px solid orange;
 }
 
-/** box4 **/
+/* Sign in, Returns, Cart */
 span {
     font-size: 0.7rem;
 }
@@ -103,7 +106,6 @@ span {
     font-weight: 700;
 }
 
-/** box6 **/
 .nav-cart i {
     font-size: 30px;
 }
@@ -113,7 +115,7 @@ span {
     font-weight: 700;
 }
 
-/** Panel **/
+/* --- Panel Styles --- */
 .panel {
     height: 40px;
     background-color: #222f3d;
@@ -138,7 +140,7 @@ span {
     font-weight: 700;
 }
 
-/** Hero Section **/
+/* --- Hero Section Styles --- */
 .hero-section {
     background-image: url("assets/hero_image.jpg");
     background-size: cover;
@@ -165,7 +167,7 @@ span {
     text-decoration: none;
 }
 
-/** Shop Section **/
+/* --- Shop Section Styles --- */
 .shop-section {
     display: flex;
     flex-wrap: wrap;
@@ -198,7 +200,7 @@ span {
     color: #007185;
 }
 
-/** Footer **/
+/* --- Footer Styles --- */
 footer {
     margin-top: 15px;
 }
@@ -224,6 +226,7 @@ footer {
 
 ul {
     list-style-type: none;
+    padding-inline-start: 0; /* Remove default padding */
 }
 
 ul p {
@@ -272,4 +275,132 @@ ul a:hover {
 
 .copyright {
     padding-top: 5px;
+}
+
+
+/* =================================== */
+/* --- RESPONSIVE MEDIA QUERIES --- */
+/* =================================== */
+
+/* For Tablet Screens (e.g., iPads) */
+@media (max-width: 900px) {
+    /* --- Navbar Adjustments --- */
+    .nav-search {
+        width: 45%; /* Make search bar smaller */
+    }
+
+    /* Hide less critical items to save space */
+    .nav-signin, .nav-return {
+        display: none;
+    }
+
+    /* --- Panel Adjustments --- */
+    .panel-ops {
+        width: auto;
+    }
+    /* Hide some options in the panel */
+    .panel-ops p:nth-child(n+3) {
+        display: none;
+    }
+    .panel-deals {
+        display: none;
+    }
+
+    /* --- Shop Section Adjustments --- */
+    .shop-section {
+        padding: 10px;
+    }
+    .box {
+        width: 48%; /* Creates a 2-column grid */
+        margin-top: 10px;
+    }
+
+    /* --- Footer Adjustments --- */
+    .foot-panel2 {
+        flex-wrap: wrap;
+        height: auto; 
+        padding: 25px;
+    }
+    .foot-panel2 ul {
+        width: 45%; 
+        margin-bottom: 20px;
+    }
+}
+
+
+/* For Mobile Screens (e.g., iPhones) */
+@media (max-width: 600px) {
+    /* --- Navbar Adjustments --- */
+    .navbar {
+        flex-wrap: wrap; 
+        height: auto; 
+        padding: 10px;
+    }
+
+    .nav-logo, .nav-address, .nav-cart {
+        order: 1; 
+    }
+
+    .nav-search {
+        order: 2;
+        width: 95%; 
+        margin-top: 10px;
+    }
+
+    /* Simplify the delivery text */
+    .add-first {
+        display: none;
+    }
+    .add-second {
+        margin-left: 5px;
+    }
+
+    /* Hide the text "Cart" to only show the icon */
+    .nav-cart {
+        font-size: 0;
+    }
+    .nav-cart i {
+        font-size: 28px;
+    }
+
+    /* --- Panel Adjustments --- */
+    .panel-ops, .panel-deals {
+        display: none; 
+    }
+    .panel {
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
+
+    /* --- Hero Section Adjustments --- */
+    .hero-section {
+        height: 250px;
+    }
+    .hero-message {
+        width: 90%;
+        font-size: 0.75rem; 
+        margin-bottom: 10px;
+        padding: 5px;
+        height: auto;
+    }
+
+    /* --- Shop Section Adjustments --- */
+    .box {
+        width: 95%; 
+    }
+
+    /* --- Footer Adjustments --- */
+    .foot-panel2 {
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding-left: 30px;
+    }
+    .foot-panel2 ul {
+        width: 100%; 
+    }
+
+    .foot-panel4 .pages a {
+        display: block; 
+        padding: 5px;
+    }
 }
