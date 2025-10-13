@@ -77,6 +77,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Mobile Menu Off Canvas](#mobile-menu-off-canvas)
 - [Modal/Popup](#modalpopup)
 - [Mouse Tracking](#mouse-tracking)
+- [Multi Step Checkout](#multi-step-checkout)
 - [NavBar](#navbar)
 - [Neon Button](#neon-button)
 - [Neon Card](#neon-card)
@@ -1161,6 +1162,14 @@ A modern, interactive scroll-driven video animation created with pure CSS. Featu
 ## <a id="horizontal-image-slider"></a>Horizontal Image Slider
 
 <img src="Horizontal image slider/images/horizontal-image-slider.gif" height="230" title="horizontal-image-slider">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="multi-step-checkout"></a>Mutli Step Checkout
+
+<img src="./Multi-Step-Checkout/img/Multi_Step_Checkout.png" height="230" title="multi-step-checkout">
 
 **[⬆ back to top](#quick-links)**
 
