@@ -302,3 +302,64 @@ body {
     width: 100px;
   }
 }
+/* === FINAL RESPONSIVE FIXES FOR MOBILE (<768px) === */
+@media (max-width: 768px) {
+
+  /* Prevent navbar and hero overlap */
+  .hero {
+    margin-top: 80px; /* adds spacing below navbar */
+  }
+
+  /* Keep text readable and centered */
+  .hero-content {
+    max-width: 90%;
+    margin: 0 auto;
+    word-wrap: break-word;
+  }
+
+  /* Fix movie poster grid alignment */
+  .content-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    padding: 0 15px;
+    justify-items: center;
+  }
+
+  .content-grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* Reduce content section padding */
+  .content-section {
+    padding: 30px 10px;
+  }
+
+  /* Prevent footer crowding */
+  .footer {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+}
+
+/* === For extra small phones (<480px) === */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.3rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .cta-btn {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
