@@ -51,6 +51,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Dog Box Animation](#dog-box-animation)
 - [Dropdown Menu](#dropdown-menu)
 - [Dynamic Image Colorizing](#dynamic-image-colorizing)
+- [Earth](#earth)
 - [Enable Dark Mode](#darkmode)
 - [Fancy Menu](#fancy-menu)
 - [Flip the grid](#flip-grid)
@@ -92,6 +93,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Redar Loader](#Redar-Loader)
 - [Scary Animation](#scary-animation)
 - [Scenery](#scenery)
+- [Scroll Video Cinematic Animation](#scroll-video-cinematic)
 - [Shake Button](#shake-button)
 - [Shuffling Squares](#shuffling-squares)
 - [Star Wars Intro](#star-wars-intro)
@@ -120,6 +122,12 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
   - [Contributing](#contributing)
 
 ---
+
+## <a id="earth"></a>EARTH
+
+[EARTH](/You-Dont-Need-JavaScript/EARTH/earth.mp4)
+
+**[⬆ back to top](#quick-links)**
 
 ## <a id="image-hover-effect"></a>Image Hover Effect
 
@@ -884,6 +892,16 @@ Your browser does not support the video tag.
 ## <a id="scary-animation"></a>scary-animation
 
 [<img src="images/Scary-animation.gif" height="230" title="scary-animation">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="scroll-video-cinematic"></a>Scroll Video Cinematic Animation
+
+[<img src="CSS-Scroll-Video-Cinematic/preview.gif" height="230" title="CSS Scroll Video Cinematic Animation">](CSS-Scroll-Video-Cinematic/index.html)
+
+A modern, interactive scroll-driven video animation created with pure CSS. Features cinematic video effects, gradient overlays, and smooth scroll animations - no JavaScript required!
 
 **[⬆ back to top](#quick-links)**
 
