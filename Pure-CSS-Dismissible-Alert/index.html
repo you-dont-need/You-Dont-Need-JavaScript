@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure CSS Dismissible Alerts (Multiple Types)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pure CSS Dismissible Alerts</h1>
+    <p class="instruction">Click the 'X' to dismiss. All functionality is pure HTML/CSS.</p>
+
+    <!-- SUCCESS ALERT -->
+    <input type="checkbox" id="alert-success-toggle" class="alert-toggle" hidden>
+    <div class="alert-container">
+        <div class="alert-box alert--success">
+            <h3 class="alert-title">Success! 🎉</h3>
+            <p class="alert-message">
+                Your settings have been saved successfully. (Dismissed with CSS only)
+            </p>
+            <label for="alert-success-toggle" class="alert-close" role="button" aria-label="Dismiss success alert">
+                &times;
+            </label>
+        </div>
+    </div>
+
+    <!-- ERROR ALERT -->
+    <input type="checkbox" id="alert-error-toggle" class="alert-toggle" hidden>
+    <div class="alert-container">
+        <div class="alert-box alert--error">
+            <h3 class="alert-title">Error! 🚫</h3>
+            <p class="alert-message">
+                File upload failed due to insufficient permissions.
+            </p>
+            <label for="alert-error-toggle" class="alert-close" role="button" aria-label="Dismiss error alert">
+                &times;
+            </label>
+        </div>
+    </div>
+
+    <!-- WARNING ALERT -->
+    <input type="checkbox" id="alert-warning-toggle" class="alert-toggle" hidden>
+    <div class="alert-container">
+        <div class="alert-box alert--warning">
+            <h3 class="alert-title">Warning! ⚠️</h3>
+            <p class="alert-message">
+                Session expiring soon. Please save your work to prevent data loss.
+            </p>
+            <label for="alert-warning-toggle" class="alert-close" role="button" aria-label="Dismiss warning alert">
+                &times;
+            </label>
+        </div>
+    </div>
+
+    <!-- INFO ALERT -->
+    <input type="checkbox" id="alert-info-toggle" class="alert-toggle" hidden>
+    <div class="alert-container">
+        <div class="alert-box alert--info">
+            <h3 class="alert-title">Information 💡</h3>
+            <p class="alert-message">
+                New features are available. Check the changelog for details.
+            </p>
+            <label for="alert-info-toggle" class="alert-close" role="button" aria-label="Dismiss info alert">
+                &times;
+            </label>
+        </div>
+    </div>
+
+</body>
+</html>
