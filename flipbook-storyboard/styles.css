@@ -302,6 +302,104 @@ body {
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
 }
 
+/* Single Prev/Next Navigation */
+.nav-single {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.nav-btn {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  user-select: none;
+}
+
+.nav-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.nav-btn:active {
+  transform: scale(0.95);
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+/* Show appropriate navigation buttons based on current frame */
+/* Frame 1: only show next */
+#f1:checked ~ .flipbook .nav-single .next-to-f2 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* Frame 2: show both prev and next */
+#f2:checked ~ .flipbook .nav-single .prev-to-f1 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+#f2:checked ~ .flipbook .nav-single .next-to-f3 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* Frame 3: show both prev and next */
+#f3:checked ~ .flipbook .nav-single .prev-to-f2 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+#f3:checked ~ .flipbook .nav-single .next-to-f4 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* Frame 4: show both prev and next */
+#f4:checked ~ .flipbook .nav-single .prev-to-f3 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+#f4:checked ~ .flipbook .nav-single .next-to-f5 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* Frame 5: only show prev */
+#f5:checked ~ .flipbook .nav-single .prev-to-f4 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
 /* hide raw radio controls */
 .controls {
   position: absolute;
