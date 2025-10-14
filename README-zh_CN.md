@@ -153,6 +153,7 @@
 [<img src="images/loader7.png" height="230" title="Demo 7">](http://codepen.io/brunjo/pen/wBKmbm)
 [<img src="images/loader8.png" height="230" title="Demo 8">](http://tobiasahlin.com/spinkit/)
 [<img src="images/loader9.png" height="230" title="Demo 9">](http://codepen.io/viduthalai1947/pen/JkhDK)
+[<img src="images/loader12.gif"height="230" title="Demo 10">](https://codepen.io/rcjasub/pen/zxrddOP)
 
 **[⬆ 回到顶部](#quick-links)**
 

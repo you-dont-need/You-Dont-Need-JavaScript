@@ -402,7 +402,7 @@ Your browser does not support the video tag.
 [<img src="./images/css-loader-purna.gif" alt="CSS-Loader-Purna" height="230" title="CSS-Loader-Purna">](https://codepen.io/purnaaa/pen/vYVVygB)
 [<img src="images/loader10.png" height="230" title="Demo 10">](https://codepen.io/Sahil-Patil-the-sans/pen/WNPbVqK)
 [<img src="images/loader11.gif" height="230" title="Demo 11">](https://codepen.io/sugeng-sulistiyawan/pen/PoyjPWd)
-[<img src="images/loader12.gif" height="230" title="Demo 12">](https://github.com/TechGenie-awake/You-Dont-Need-JavaScript/blob/patch-1/Loading/loading.gif)
+[<img src="images/loader12.gif" height="230" title="Demo 12">](http://codepen.io/rcjasub/pen/zxrddOP)
 
 **[⬆ back to top](#quick-links)**
 
