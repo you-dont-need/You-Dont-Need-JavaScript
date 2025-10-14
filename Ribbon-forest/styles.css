@@ -1,0 +1,88 @@
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at bottom, #050505 0%, #000 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+/* Container */
+.ribbon-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Magical floating mist */
+.mist {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.06), transparent 70%);
+  animation: mistFlow 40s linear infinite;
+  filter: blur(60px);
+  z-index: 1;
+}
+
+@keyframes mistFlow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Ribbons */
+.ribbon {
+  position: absolute;
+  left: 50%;
+  width: 300%;
+  height: 20px;
+  border-radius: 10px;
+  transform: translateX(-50%) rotateY(20deg);
+  background: linear-gradient(90deg, #ff0055, #ffdd00, #00ffdd, #5500ff, #ff0055);
+  background-size: 400% 100%;
+  opacity: 0.8;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  animation: wave 8s ease-in-out infinite, glow 3s ease-in-out infinite alternate;
+  z-index: 2;
+}
+
+/* Layers */
+.ribbon:nth-child(2) { top: 10%; animation-delay: 0s; height: 25px; transform: translateX(-50%) rotateY(25deg) scale(1.1); }
+.ribbon:nth-child(3) { top: 25%; animation-delay: 0.8s; height: 18px; transform: translateX(-50%) rotateY(18deg) scale(0.95); opacity: 0.6; }
+.ribbon:nth-child(4) { top: 40%; animation-delay: 1.2s; height: 22px; transform: translateX(-50%) rotateY(15deg) scale(1.2); }
+.ribbon:nth-child(5) { top: 55%; animation-delay: 1.6s; height: 20px; transform: translateX(-50%) rotateY(30deg) scale(0.9); opacity: 0.7; }
+.ribbon:nth-child(6) { top: 70%; animation-delay: 2s; height: 24px; transform: translateX(-50%) rotateY(22deg) scale(1.15); }
+.ribbon:nth-child(7) { top: 85%; animation-delay: 2.4s; height: 19px; transform: translateX(-50%) rotateY(17deg) scale(0.85); opacity: 0.5; }
+
+/* Smooth waving animation */
+@keyframes wave {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) rotateY(20deg);
+    background-position: 0 0;
+  }
+  25% {
+    transform: translateX(-50%) translateY(25px) rotateY(25deg);
+    background-position: 50% 0;
+  }
+  50% {
+    transform: translateX(-50%) translateY(-25px) rotateY(15deg);
+    background-position: 100% 0;
+  }
+  75% {
+    transform: translateX(-50%) translateY(15px) rotateY(22deg);
+    background-position: 75% 0;
+  }
+}
+
+/* Gentle glowing pulse */
+@keyframes glow {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(1.4); }
+}
