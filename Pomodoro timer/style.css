@@ -1,0 +1,212 @@
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #ede4ff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 3rem;
+  color: #d95550;
+  letter-spacing: 2px;
+}
+
+.main-flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.pomodoro-container {
+  background: #fff;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  padding: 32px 24px 24px 24px;
+  position: relative;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  background: #eee;
+  color: #333;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 12px 12px 0 0;
+  margin: 0 2px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab.active {
+  background: #d95550;
+  color: #fff;
+}
+
+.tab[data-mode="short"].active {
+  background: #4c9195;
+}
+
+.tab[data-mode="long"].active {
+  background: #457ca3;
+}
+
+.timer-display {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 32px 0 24px 0;
+  color: #d95550;
+  transition: color 0.2s;
+}
+
+.tab[data-mode="short"].active ~ .timer-display,
+.timer-display.short {
+  color: #4c9195;
+}
+
+.tab[data-mode="long"].active ~ .timer-display,
+.timer-display.long {
+  color: #457ca3;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.controls button {
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: #d95550;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.controls button#reset {
+  background: #888;
+}
+
+.controls button:active {
+  background: #b13b3b;
+}
+
+.controls button#reset:active {
+  background: #555;
+}
+
+/* Tasks Section */
+.tasks-section {
+  width: 340px;
+  min-height: 350px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 24px 20px 32px 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.tasks-section h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #d95550;
+  font-size: 2rem;
+  text-align: center;
+}
+.task-input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+#task-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+#add-task {
+  padding: 10px 18px;
+  font-size: 1rem;
+  background: #d95550;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#add-task:active {
+  background: #b13b3b;
+}
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.task-text {
+  flex: 1;
+  font-size: 1.05rem;
+  margin-right: 10px;
+}
+.task-actions button {
+  margin-left: 6px;
+  padding: 4px 10px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #d95550;
+  color: #fff;
+  transition: background 0.2s;
+}
+.task-actions button.edit {
+  background: #4c9195;
+}
+.task-actions button.delete {
+  background: #888;
+}
+.task-actions button.edit:active {
+  background: #357377;
+}
+.task-actions button.delete:active {
+  background: #555;
+}
+.task-item.editing .task-text {
+  display: none;
+}
+.task-item.editing .edit-input {
+  display: inline-block;
+}
+.edit-input {
+  flex: 1;
+  font-size: 1rem;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  display: none;
+}
