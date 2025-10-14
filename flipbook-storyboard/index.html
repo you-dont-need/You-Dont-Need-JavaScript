@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flipbook / Storyboard — CSS only</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>✨ Flipbook Storyboard ✨</h1>
+      <p class="lead">Navigate frames using the controls below — built with radio inputs and CSS, no JavaScript required.</p>
+    </header>
+
+    <!-- Radio inputs represent the flipbook state (moved out so CSS general-sibling selectors work) -->
+      <input type="radio" name="frame" id="f1" checked>
+      <input type="radio" name="frame" id="f2">
+      <input type="radio" name="frame" id="f3">
+      <input type="radio" name="frame" id="f4">
+      <input type="radio" name="frame" id="f5">
+
+    <section class="flipbook" role="region" aria-label="Flipbook storyboard">
+      <div class="viewport">
+        <article class="frame f1" aria-hidden="false">
+          <h2>Frame 1 — Opening</h2>
+          <p>A quiet morning. The hero wakes up and looks out the window.</p>
+          <img src="./frames/frame1.jpg" alt="Frame 1 image" class="frame-image">
+        </article>
+
+        <article class="frame f2" aria-hidden="true">
+          <h2>Frame 2 — Discovery</h2>
+          <p>They find a curious map on the table that points to a secret place.</p>
+          <img src="frames/frame2.jpg" alt="Frame 2 image" class="frame-image">
+        </article>
+
+        <article class="frame f3" aria-hidden="true">
+          <h2>Frame 3 — Journey</h2>
+          <p>On the way, the landscape changes and the stakes rise.</p>
+          <img src="frames/frame3.jpg" alt="Frame 3 image" class="frame-image">
+        </article>
+
+        <article class="frame f4" aria-hidden="true">
+          <h2>Frame 4 — Confrontation</h2>
+          <p>A shadow blocks the path. Tension grows.</p>
+          <img src="frames/frame4.jpg" alt="Frame 4 image" class="frame-image">
+        </article>
+
+        <article class="frame f5" aria-hidden="true">
+          <h2>Frame 5 — Resolution</h2>
+          <p>The mystery resolved — a calm evening and a new understanding.</p>
+          <img src="frames/frame5.jpg" alt="Frame 5 image" class="frame-image">
+        </article>
+
+      </div>
+
+      <!-- Dots / direct selectors -->
+      <nav class="dots" aria-label="Select frame">
+        <label for="f1" tabindex="0" class="dot" aria-label="Go to frame 1">1</label>
+        <label for="f2" tabindex="0" class="dot" aria-label="Go to frame 2">2</label>
+        <label for="f3" tabindex="0" class="dot" aria-label="Go to frame 3">3</label>
+        <label for="f4" tabindex="0" class="dot" aria-label="Go to frame 4">4</label>
+        <label for="f5" tabindex="0" class="dot" aria-label="Go to frame 5">5</label>
+      </nav>
+
+      <!-- Single Prev/Next Navigation -->
+      <div class="nav-single">
+        <!-- Previous buttons (only show when not on first frame) -->
+        <label for="f1" class="nav-btn prev-btn prev-to-f1" aria-label="Previous frame">◀ Previous</label>
+        <label for="f2" class="nav-btn prev-btn prev-to-f2" aria-label="Previous frame">◀ Previous</label>
+        <label for="f3" class="nav-btn prev-btn prev-to-f3" aria-label="Previous frame">◀ Previous</label>
+        <label for="f4" class="nav-btn prev-btn prev-to-f4" aria-label="Previous frame">◀ Previous</label>
+        
+        <!-- Next buttons (only show when not on last frame) -->
+        <label for="f2" class="nav-btn next-btn next-to-f2" aria-label="Next frame">Next ▶</label>
+        <label for="f3" class="nav-btn next-btn next-to-f3" aria-label="Next frame">Next ▶</label>
+        <label for="f4" class="nav-btn next-btn next-to-f4" aria-label="Next frame">Next ▶</label>
+        <label for="f5" class="nav-btn next-btn next-to-f5" aria-label="Next frame">Next ▶</label>
+      </div>
+
+      <p class="hint">💡 Tip: you can tab to the numbered dots and press Enter to jump to a frame.</p>
+
+    </section>
+
+
+
+    <footer class="foot">
+      <p>🎨 Built with CSS only — keyboard focusable controls; see README for contribution notes.</p>
+    </footer>
+  </main>
+</body>
+</html>
