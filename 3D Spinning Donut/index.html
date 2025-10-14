@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Realistic 3D Donut</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+            perspective: 1000px;
+        }
+
+        .donut-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            animation: spin 8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotateX(-20deg) rotateY(0deg); }
+            100% { transform: rotateX(-20deg) rotateY(360deg); }
+        }
+
+        .donut {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+        }
+
+        /* Create multiple layers for depth */
+        .donut-layer {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 50% 50%, 
+                transparent 90px, 
+                #d4a574 95px, 
+                #c19660 100px, 
+                #b8824d 110px, 
+                #d4a574 150px);
+            box-shadow: 
+                inset 0 10px 30px rgba(0,0,0,0.3),
+                inset 0 -10px 30px rgba(0,0,0,0.2),
+                0 20px 50px rgba(0,0,0,0.4);
+        }
+
+        /* Stack layers for 3D depth */
+        .donut-layer:nth-child(1) { transform: translateZ(0px); }
+        .donut-layer:nth-child(2) { transform: translateZ(5px); }
+        .donut-layer:nth-child(3) { transform: translateZ(10px); }
+        .donut-layer:nth-child(4) { transform: translateZ(15px); }
+        .donut-layer:nth-child(5) { transform: translateZ(20px); }
+        .donut-layer:nth-child(6) { transform: translateZ(25px); }
+        .donut-layer:nth-child(7) { transform: translateZ(30px); }
+        .donut-layer:nth-child(8) { transform: translateZ(35px); }
+
+        /* Frosting layer */
+        .frosting {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            top: 10px;
+            left: 10px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 50% 50%, 
+                transparent 85px,
+                #ff69b4 90px,
+                #ff1493 95px,
+                #ff69b4 100px,
+                #ff1493 135px,
+                transparent 140px);
+            transform: translateZ(40px);
+            box-shadow: 
+                inset 3px 5px 10px rgba(255,255,255,0.5),
+                inset -3px -5px 15px rgba(139,69,19,0.2);
+            opacity: 0.9;
+        }
+
+        /* Glossy effect */
+        .frosting::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, 
+                rgba(255,255,255,0.8) 0%,
+                rgba(255,255,255,0.4) 20%,
+                transparent 50%);
+            transform: translateZ(5px);
+        }
+
+        /* Sprinkles container */
+        .sprinkles {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            top: 10px;
+            left: 10px;
+            transform: translateZ(45px);
+            border-radius: 50%;
+        }
+
+        /* Individual sprinkle */
+        .sprinkle {
+            position: absolute;
+            width: 20px;
+            height: 4px;
+            border-radius: 2px;
+            transform-origin: center;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        /* Position and color sprinkles */
+        .sprinkle:nth-child(1) { 
+            background: #ff0000; 
+            top: 80px; 
+            left: 130px; 
+            transform: rotate(45deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(2) { 
+            background: #00ff00; 
+            top: 100px; 
+            left: 160px; 
+            transform: rotate(-30deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(3) { 
+            background: #ffff00; 
+            top: 120px; 
+            left: 100px; 
+            transform: rotate(75deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(4) { 
+            background: #00ffff; 
+            top: 140px; 
+            left: 130px; 
+            transform: rotate(15deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(5) { 
+            background: #ff00ff; 
+            top: 160px; 
+            left: 165px; 
+            transform: rotate(-60deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(6) { 
+            background: #ffa500; 
+            top: 180px; 
+            left: 120px; 
+            transform: rotate(90deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(7) { 
+            background: #ff0000; 
+            top: 90px; 
+            left: 180px; 
+            transform: rotate(-45deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(8) { 
+            background: #00ff00; 
+            top: 200px; 
+            left: 150px; 
+            transform: rotate(120deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(9) { 
+            background: #ffff00; 
+            top: 110px; 
+            left: 200px; 
+            transform: rotate(-15deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(10) { 
+            background: #00ffff; 
+            top: 150px; 
+            left: 190px; 
+            transform: rotate(60deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(11) { 
+            background: #ff00ff; 
+            top: 170px; 
+            left: 90px; 
+            transform: rotate(-75deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(12) { 
+            background: #ffa500; 
+            top: 130px; 
+            left: 70px; 
+            transform: rotate(30deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(13) { 
+            background: #ff0000; 
+            top: 190px; 
+            left: 180px; 
+            transform: rotate(45deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(14) { 
+            background: #00ff00; 
+            top: 100px; 
+            left: 80px; 
+            transform: rotate(-90deg) translateZ(2px); 
+        }
+        .sprinkle:nth-child(15) { 
+            background: #ffff00; 
+            top: 85px; 
+            left: 155px; 
+            transform: rotate(105deg) translateZ(2px); 
+        }
+
+        /* Shadow on the ground */
+        .shadow {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(ellipse at center, 
+                rgba(0,0,0,0.4) 0%, 
+                rgba(0,0,0,0.2) 40%, 
+                transparent 70%);
+            transform: rotateX(90deg) translateZ(-200px);
+            animation: shadow-spin 8s linear infinite;
+        }
+
+        @keyframes shadow-spin {
+            0% { opacity: 0.6; transform: rotateX(90deg) translateZ(-200px) scale(0.9); }
+            50% { opacity: 0.8; transform: rotateX(90deg) translateZ(-200px) scale(1.1); }
+            100% { opacity: 0.6; transform: rotateX(90deg) translateZ(-200px) scale(0.9); }
+        }
+
+        /* Ambient lighting effect */
+        .donut-container::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            left: -50px;
+            top: -50px;
+            background: radial-gradient(circle at 30% 30%, 
+                rgba(255,255,255,0.1) 0%, 
+                transparent 50%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="donut-container">
+        <div class="shadow"></div>
+        <div class="donut">
+            <!-- Multiple layers for depth -->
+            <div class="donut-layer"></div>
+            <div class="donut-layer"></div>
+            <div class="donut-layer"></div>
+            <div class="donut-layer"></div>
+            <div class="donut-layer"></div>
+            <div class="donut-layer"></div>
+            <div class="donut-layer"></div>
+            <div class="donut-layer"></div>
+            
+            <!-- Frosting -->
+            <div class="frosting"></div>
+            
+            <!-- Sprinkles -->
+            <div class="sprinkles">
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+                <div class="sprinkle"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

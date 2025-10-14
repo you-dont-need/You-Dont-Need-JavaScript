@@ -1,0 +1,106 @@
+:root {
+    --bg: #fafafa;
+    --card: #fff;
+    --accent: #04aa6d;
+    --muted: #666;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    background: var(--bg);
+    margin: 0;
+    color: #222
+}
+
+.wrap {
+    max-width: 880px;
+    margin: 48px auto;
+    padding: 28px
+}
+
+h1 {
+    margin: 0 0 8px
+}
+
+.lead {
+    color: #444;
+    margin-bottom: 18px
+}
+
+.toasts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 27px;
+}
+
+.toast {
+    position: relative;
+}
+
+/* hide the checkbox visually but keep accessible */
+.toast .dismiss {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0
+}
+
+.toast-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background: var(--card);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    cursor: pointer
+}
+
+.toast-card .toast-body p {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: 14px
+}
+
+.toast-card .close {
+    font-size: 20px;
+    line-height: 1;
+    color: var(--muted)
+}
+
+/* when the checkbox is checked (dismissed) hide the toast */
+.toast .dismiss:checked+.toast-card {
+    display: none
+}
+
+/* small stacked toasts */
+.sample-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.toast-card.small {
+    padding: 8px 12px;
+    font-size: 14px;
+    box-shadow: none
+}
+
+.notes {
+    margin-top: 14px;
+    color: #666
+}
+
+@media (max-width:520px) {
+    .wrap {
+        padding: 18px
+    }
+}

@@ -1,0 +1,126 @@
+body {
+    font-family: 'Inter', Arial, sans-serif; /* Using Inter as per instructions */
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.instruction {
+    color: #666;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.alert-container {
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* --- BASE ALERT STYLES (Applies to all) --- */
+.alert-box {
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out, margin-bottom 0.4s ease-out, height 0.4s ease-out, padding 0.4s ease-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid; /* For colored accent */
+    overflow: hidden; /* Crucial for transition */
+    min-height: 80px; /* Ensure consistent initial height */
+}
+
+.alert-title {
+    margin-top: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.alert-message {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.alert-close {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.alert-close:hover {
+    opacity: 1;
+}
+
+/* --- THEME COLORS --- */
+
+/* SUCCESS (Green) */
+.alert--success {
+    background-color: #d4edda;
+    color: #155724;
+    border-left-color: #28a745;
+}
+.alert--success .alert-close { color: #155724; }
+
+/* ERROR (Red) */
+.alert--error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left-color: #dc3545;
+}
+.alert--error .alert-close { color: #721c24; }
+
+/* WARNING (Yellow/Orange) */
+.alert--warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left-color: #ffc107;
+}
+.alert--warning .alert-close { color: #856404; }
+
+/* INFO (Blue) */
+.alert--info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border-left-color: #17a2b8;
+}
+.alert--info .alert-close { color: #0c5460; }
+
+
+/* --- THE PURE CSS MAGIC (DISMISSAL LOGIC) --- */
+
+/* Selects the sibling alert-container when the toggle is checked */
+.alert-toggle:checked + .alert-container {
+    /* Set container height/padding to 0 */
+    max-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    transition: max-height 0.4s ease-out, margin-bottom 0.4s ease-out;
+}
+
+/* Hide the inner content once the container collapses */
+.alert-toggle:checked + .alert-container .alert-box {
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-out 0.1s, transform 0.3s ease-out 0.1s, padding 0.3s ease-out 0.1s;
+}

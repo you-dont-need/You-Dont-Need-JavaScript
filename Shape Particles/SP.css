@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+video {
+  width: 100%;
+  height: 170%;
+  
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+.SP {
+  position: relative;
+  z-index: 30; /* Ensure shapes/particles are on top */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+span {
+  position: relative;
+  font-family: Lato, sans-serif;
+  color: white;
+  font-size: 5rem;
+  text-shadow: 0 1px 0 #b7b7b7, 0 2px 0 #b7b7b7, 0 3px 0 #b7b7b7,
+    0 4px 0 #b7b7b7, 0 5px 0 #b7b7b7, 0 6px 0 #b7b7b7, 0 7px 0 #b7b7b7,
+    0 8px 0 #b7b7b7, 0 9px 0 #b7b7b7, 0 10px 10px rgba(0, 0, 0, 0.5);
+  animation: bounce 0.4s ease infinite alternate;
+}
+h1 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+h1 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+h1 span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.cube-container {
+  width: 200px; /* Or any desired size for the cube */
+  height: 200px;
+  perspective: 1000px; /* Essential for 3D effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 20; /* Put cube below shapes */
+  margin-top: 100px;
+  margin-left: 100px;
+}
+.cube-container.left {
+  position: absolute;
+  left: 40px; /* adjust as needed to move more/less to the left */
+  top: 50%;
+  transform: translateY(-50%); /* vertically center while on the left */
+}
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d; /* Crucial for 3D children */
+  animation: rotateCube 8s linear infinite;
+  transform: rotateX(-20deg) rotateY(45deg); /* Initial rotation for better view */
+}
+.h1 {
+  color: white;
+  display: flex;
+  font-size: 4rem;
+  justify-content: center;
+  text-align: center;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ffe373;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.cube .front {
+  transform: translateZ(100px);
+}
+.cube .back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+.cube .right {
+  transform: translateX(100px) rotateY(90deg);
+}
+.cube .left {
+  transform: translateX(-100px) rotateY(-90deg);
+}
+.cube .top {
+  transform: translateY(-100px) rotateX(90deg);
+}
+.cube .bottom {
+  transform: translateY(100px) rotateX(-90deg);
+}
+
+.Triangle-container {
+  width: 200px;
+  height: 200px;
+  perspective: 800px;
+  perspective-origin: 50% -100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  margin-top: -200px;
+  margin-left: 550px;
+}
+.triangle {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  position: relative;
+  animation: rotateItem 5s infinite linear;
+  transform: rotateX(20deg) rotateY(45deg);
+}
+.sides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ffe373;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100px) rotateX(-90deg);
+}
+.triangle .front {
+  transform: rotateX(30deg) translateZ(46px);
+}
+.triangle .back {
+  transform: rotateX(-30deg) translateZ(-46px);
+}
+.triangle .left {
+  transform: rotateY(90deg) rotateX(-30deg) translateZ(-60px);
+}
+.triangle .right {
+  transform: rotateY(-90deg) rotateX(-30deg) translateZ(-60px);
+}
+.triangle .bottom {
+  position: absolute;
+  transform: rotateX(90deg) translateZ(-55px);
+}
+
+.sphere-container {
+  width: 200px;
+  height: 200px;
+  margin-left: 950px;
+  margin-top: -150px;
+  perspective: 500px; /* Creates a 3D viewing context */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sphere-inner {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid #ffe373;
+  transform-style: preserve-3d; /* Allows child elements to maintain 3D transforms */
+  /* Example animation for rotation */
+  animation: rotateSphere 5s infinite linear;
+}
+
+.oval-outer {
+  width: 400px;
+  height: 200px;
+  margin-left: 50px;
+  margin-top: 200px;
+  perspective: 500px; /* Creates a 3D viewing context */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.oval-inner {
+  width: 300px;
+  height: 150px;
+  border-radius: 100%;
+  border: 2px solid #ffe373;
+  transform-style: preserve-3d; /* Allows child elements to maintain 3D transforms */
+  /* Example animation for rotation */
+  animation: rotateOval 5s infinite linear;
+}
+
+.rectangle {
+    width: 200px;
+    height: 120px;
+    margin-left:550px;
+    margin-top:-200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 5s linear infinite;
+  }
+
+  .block {
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    border: 2px solid #ffe373;
+    background: transparent;
+  }
+
+  .f { 
+    transform: translateZ(60px);
+    width:200px;
+ }
+  .b   { 
+    transform: rotateY(180deg) translateZ(60px);
+    width:200px;
+}
+  .l   { width: 120px; height: 120px; border-width: 2px; 
+    transform: rotateY(-90deg) translateZ(20px); 
+    margin-left: -40px;
+}
+  .r  { width: 120px; height: 120px; border-width: 2px;
+    transform: rotateY(90deg) translateZ(137px); }
+  
+  @keyframes rotate {
+    from {
+      transform: rotateX(20deg) rotateY(0deg);
+    }
+    to {
+      transform: rotateX(20deg) rotateY(360deg);
+    }
+  }
+
+
+@keyframes rotateOval {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotateSphere {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotateItem {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotateCube {
+  from {
+    transform: rotateX(-20deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-20deg) rotateY(360deg);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .SP span {
+    font-size: 2.5rem;
+  }
+
+  .cube-container,
+  .Triangle-container,
+  .sphere-container,
+  .oval-outer,
+  .rectangle {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    transform: none;
+    
+  }
+
+  .h1 {
+    font-size: 2rem;
+  }
+
+  .oval-inner {
+    width: 200px;
+    height: 100px;
+  }
+
+  .sphere-inner {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .SP span {
+    font-size: 3.5rem;
+  }
+
+  .cube-container,
+  .Triangle-container,
+  .sphere-container,
+  .oval-outer,
+  .rectangle {
+    width: 180px;
+    height: 180px;
+    margin: 30px auto;
+    transform: none;
+  }
+
+  .h1 {
+    font-size: 2.5rem;
+  }
+
+  .oval-inner {
+    width: 250px;
+    height: 120px;
+  }
+
+  .sphere-inner {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Small Laptops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .SP span {
+    font-size: 4rem;
+  }
+
+  .cube-container,
+  .Triangle-container,
+  .sphere-container,
+  .oval-outer,
+  .rectangle {
+    margin: 40px auto;
+  }
+
+  .h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Large Screens (1025px and above) */
+@media (min-width: 1025px) {
+  .SP span {
+    font-size: 5rem;
+  }
+
+  .cube-container {
+    margin-left: 100px;
+  }
+
+  .Triangle-container {
+    margin-left: 550px;
+  }
+
+  .sphere-container {
+    margin-left: 950px;
+  }
+
+  .oval-outer {
+    margin-left: 50px;
+  }
+
+  .rectangle {
+    margin-left: 550px;
+  }
+}

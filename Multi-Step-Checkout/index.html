@@ -1,0 +1,337 @@
+><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Step Checkout Page</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wizard-wrapper">
+        <div class="header">
+          <h1>Checkout</h1>
+          <p>Complete your purchase in 4 easy steps</p>
+        </div>
+
+        <div class="wizard">
+          <input type="radio" id="step1" name="checkout" checked />
+          <input type="radio" id="step2" name="checkout" />
+          <input type="radio" id="step3" name="checkout" />
+          <input type="radio" id="step4" name="checkout" />
+
+          <div class="steps-container">
+            <div class="progress-line"></div>
+            <div class="progress-fill"></div>
+
+            <div class="steps">
+              <label class="step" for="step1">
+                <div class="step-circle">1</div>
+                <div class="step-label">Basic Info</div>
+              </label>
+              <label class="step" for="step2">
+                <div class="step-circle">2</div>
+                <div class="step-label">Address</div>
+              </label>
+              <label class="step" for="step3">
+                <div class="step-circle">3</div>
+                <div class="step-label">Payment</div>
+              </label>
+              <label class="step" for="step4">
+                <div class="step-circle">4</div>
+                <div class="step-label">Review</div>
+              </label>
+            </div>
+          </div>
+
+          <div class="content-section content-1">
+            <h2 class="section-title">Basic Information</h2>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Enter first name" required />
+                <div class="error-message">Please fill in your first name</div>
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Enter last name" required />
+                <div class="error-message">Please fill in your last name</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Email Address</label>
+              <input
+                type="email"
+                placeholder="your.email@example.com"
+                required
+              />
+              <div class="error-message">Please enter a valid email</div>
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+1 (555) 000-0000" required />
+              <div class="error-message">Please enter your phone number</div>
+            </div>
+          </div>
+
+          <div class="content-section content-2">
+            <h2 class="section-title">Shipping Address</h2>
+
+            <div class="form-group">
+              <label>Street Address</label>
+              <input type="text" placeholder="123 Main Street" required />
+              <div class="error-message">Please enter your street address</div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>City</label>
+                <input type="text" placeholder="New York" required />
+                <div class="error-message">Please enter your city</div>
+              </div>
+              <div class="form-group">
+                <label>State/Province</label>
+                <input type="text" placeholder="NY" required />
+                <div class="error-message">Please enter your state</div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Postal Code</label>
+                <input type="text" placeholder="10001" required />
+                <div class="error-message">Please enter your postal code</div>
+              </div>
+              <div class="form-group">
+                <label>Country</label>
+                <select required>
+                  <option value="">Select country</option>
+                  <option>Australia</option>
+                  <option>Canada</option>
+                  <option>India</option>
+                  <option>United States</option>
+                  <option>United Kingdom</option>
+                </select>
+                <div class="error-message">Please select a country</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-section content-3">
+            <h2 class="section-title">Payment Method</h2>
+
+            <input
+              type="radio"
+              id="card"
+              name="payment"
+              checked
+              style="display: none"
+            />
+            <input
+              type="radio"
+              id="paypal"
+              name="payment"
+              style="display: none"
+            />
+            <input type="radio" id="upi" name="payment" style="display: none" />
+            <input
+              type="radio"
+              id="google"
+              name="payment"
+              style="display: none"
+            />
+
+            <div class="payment-options">
+              <div class="payment-option">
+                <label for="card" class="payment-label">
+                  <span class="payment-icon">
+                    <img
+                      src="./img/CREDIT_CARD.png"
+                      alt="Credit Card"
+                      style="width: 24px; height: 24px"
+                    />
+                  </span>
+                  Credit Card
+                </label>
+              </div>
+              <div class="payment-option">
+                <label for="paypal" class="payment-label">
+                  <span class="payment-icon">
+                    <img
+                      src="./img/PAYPAL.png"
+                      alt="PayPal"
+                      style="width: 24px; height: 24px"
+                    />
+                  </span>
+                  PayPal
+                </label>
+              </div>
+              <div class="payment-option">
+                <label for="upi" class="payment-label">
+                  <span class="payment-icon">
+                    <img
+                      src="./img/BHIMUPI.png"
+                      alt="BHIM UPI"
+                      style="width: 24px; height: 24px"
+                    />
+                  </span>
+                  BHIM UPI
+                </label>
+              </div>
+              <div class="payment-option">
+                <label for="google" class="payment-label">
+                  <span class="payment-icon">
+                    <img
+                      src="./img/GPAY.png"
+                      alt="Google Pay"
+                      style="width: 24px; height: 24px"
+                    />
+                  </span>
+                  Google Pay
+                </label>
+              </div>
+            </div>
+
+            <div class="payment-fields card-fields">
+              <div class="form-group">
+                <label>Card Number</label>
+                <input type="text" placeholder="1234 5678 9012 3456" required />
+                <div class="error-message">Please enter your card number</div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Expiry Date</label>
+                  <input type="text" placeholder="MM/YY" required />
+                  <div class="error-message">Please enter expiry date</div>
+                </div>
+                <div class="form-group">
+                  <label>CVV</label>
+                  <input type="text" placeholder="123" required />
+                  <div class="error-message">Please enter CVV</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-fields paypal-fields">
+              <div class="form-group">
+                <label>PayPal Email</label>
+                <input type="email" placeholder="paypal@example.com" required />
+                <div class="error-message">Please enter your PayPal email</div>
+              </div>
+            </div>
+
+            <div class="payment-fields upi-fields">
+              <div class="form-group">
+                <label>UPI ID (e.g. name@bank)</label>
+                <input type="text" placeholder="example@upi" required />
+                <div class="error-message">Please enter your UPI ID</div>
+              </div>
+            </div>
+
+            <div class="payment-fields google-fields">
+              <div class="form-group">
+                <label>Google Pay Phone/ID</label>
+                <input
+                  type="text"
+                  placeholder="Google Pay ID or phone"
+                  required
+                />
+                <div class="error-message">Please enter your Google Pay ID</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-section content-4">
+            <h2 class="section-title">Order Review</h2>
+
+            <!-- These are dumb data for representation purpose only. 
+                    In real scenario,  we would get data either by success post request response or js side rendering. -->
+
+            <div class="review-card">
+              <div class="review-label">Customer Name</div>
+              <div class="review-value">John Doe</div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-label">Email</div>
+              <div class="review-value">john.doe@example.com</div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-label">Phone</div>
+              <div class="review-value">+1 (555) 123-4567</div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-label">Shipping Address</div>
+              <div class="review-value">
+                123 Main Street, New York, NY 10001, United States
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-label">Payment Method</div>
+              <div class="review-value">Credit Card ending in 3456</div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-label">Order Total</div>
+              <div
+                class="review-value"
+                style="font-size: 1.3rem; font-weight: 700"
+              >
+                $299.99
+              </div>
+            </div>
+          </div>
+
+          <div class="success-message">
+            <div class="success-icon">✓</div>
+            <h2>Order Confirmed!</h2>
+            <p>
+              Thank you for your purchase. Your order has been successfully
+              submitted.
+            </p>
+          </div>
+
+          <div class="navigation nav-1">
+            <label
+              class="nav-btn back"
+              style="opacity: 0.5; cursor: not-allowed"
+              >← Back</label
+            >
+            <input type="radio" id="validate1" style="display: none" />
+            <label class="nav-btn next" id="next1" for="step2">Next →</label>
+          </div>
+
+          <div class="navigation nav-2">
+            <label class="nav-btn back" for="step1">← Back</label>
+            <label class="nav-btn next" id="next2" for="step3">Next →</label>
+          </div>
+
+          <div class="navigation nav-3">
+            <label class="nav-btn back" for="step2">← Back</label>
+            <label class="nav-btn next" id="next3" for="step4"
+              >Review & Submit →</label
+            >
+          </div>
+
+          <div class="navigation nav-4">
+            <label class="nav-btn back" for="step3">← Back</label>
+            <button
+              type="button"
+              class="nav-btn next"
+              style="cursor: default; border: none"
+            >
+              ✓ Order Complete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
