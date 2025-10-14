@@ -56,6 +56,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Fancy Menu](#fancy-menu)
 - [Flip the grid](#flip-grid)
 - [Flip on Click](#flip-on-click)
+- [Flipbook Storyboard](#flipbook-storyboard)
 - [Floating Label on Textfield](#floating-label-on-textfield)
 - [Floating Labels V2](#floating-labelv2)
 - [Font-Face (Latin)](#font-face-latin)
@@ -77,6 +78,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Mobile Menu Off Canvas](#mobile-menu-off-canvas)
 - [Modal/Popup](#modalpopup)
 - [Mouse Tracking](#mouse-tracking)
+- [Multi Step Checkout](#multi-step-checkout)
 - [NavBar](#navbar)
 - [Neon Button](#neon-button)
 - [Neon Card](#neon-card)
@@ -151,6 +153,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ##### Light Theme:
 
 [<video width="400" height="200" controls>
+
 <source src="https://github.com/user-attachments/assets/4786bfb6-78e7-4682-b098-c49f3f518b5f" type="video/mp4">
 Your browser does not support the video tag.
 </video>](http://url-to-light-theme-page)
@@ -158,6 +161,7 @@ Your browser does not support the video tag.
 ##### Dark Theme:
 
 [<video width="400" height="200" controls>
+
 <source src="https://github.com/user-attachments/assets/1b305f75-26b3-41c3-a19a-6f7bd043d393" type="video/mp4">
 Your browser does not support the video tag.
 </video>](http://url-to-dark-theme-page)
@@ -402,7 +406,7 @@ Your browser does not support the video tag.
 [<img src="./images/css-loader-purna.gif" alt="CSS-Loader-Purna" height="230" title="CSS-Loader-Purna">](https://codepen.io/purnaaa/pen/vYVVygB)
 [<img src="images/loader10.png" height="230" title="Demo 10">](https://codepen.io/Sahil-Patil-the-sans/pen/WNPbVqK)
 [<img src="images/loader11.gif" height="230" title="Demo 11">](https://codepen.io/sugeng-sulistiyawan/pen/PoyjPWd)
-[<img src="images/loader12.gif" height="230" title="Demo 12">](https://github.com/TechGenie-awake/You-Dont-Need-JavaScript/blob/patch-1/Loading/loading.gif)
+[<img src="images/loader12.gif" height="230" title="Demo 12">](http://codepen.io/rcjasub/pen/zxrddOP)
 
 **[⬆ back to top](#quick-links)**
 
@@ -546,6 +550,14 @@ Your browser does not support the video tag.
 ## <a id="flip-grid"></a>Flip grid
 
 [<img src="flip grid animation/flip.gif" height="230" title="Demo">](https://codepen.io/Rajat-Hegde/pen/bNEqjRp)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="flipbook-storyboard"></a>Flipbook Storyboard
+
+[<img src="flipbook-storyboard/preview.png" height="230" title="Flipbook Storyboard Demo - CSS Only Interactive Flipbook with Glassmorphism Design">](./flipbook-storyboard/index.html)
 
 **[⬆ back to top](#quick-links)**
 
@@ -1161,6 +1173,14 @@ A modern, interactive scroll-driven video animation created with pure CSS. Featu
 ## <a id="horizontal-image-slider"></a>Horizontal Image Slider
 
 <img src="Horizontal image slider/images/horizontal-image-slider.gif" height="230" title="horizontal-image-slider">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="multi-step-checkout"></a>Mutli Step Checkout
+
+<img src="./Multi-Step-Checkout/img/Multi_Step_Checkout.png" height="230" title="multi-step-checkout">
 
 **[⬆ back to top](#quick-links)**
 

@@ -1,0 +1,578 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  /* color: #e5e5e5; */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  all: revert;
+}
+
+.wizard-wrapper {
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #b0b0b0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.header p {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.steps-container {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.progress-line {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #333;
+  z-index: 0;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ffffff 0%, #888 100%);
+  z-index: 1;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0%;
+}
+
+#step1:checked ~ .steps-container .progress-fill {
+  width: 0%;
+}
+
+#step2:checked ~ .steps-container .progress-fill {
+  width: 33.33%;
+}
+
+#step3:checked ~ .steps-container .progress-fill {
+  width: 66.66%;
+}
+
+#step4:checked ~ .steps-container .progress-fill {
+  width: 100%;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  cursor: pointer;
+}
+
+.step-circle {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: #2a2a2a;
+  border: 2px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #666;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+  margin-bottom: 0.75rem;
+}
+
+.step-label {
+  font-size: 0.85rem;
+  color: #888;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 100px;
+}
+
+#step1:checked ~ .steps-container .step:nth-child(1) .step-circle,
+#step2:checked ~ .steps-container .step:nth-child(2) .step-circle,
+#step3:checked ~ .steps-container .step:nth-child(3) .step-circle,
+#step4:checked ~ .steps-container .step:nth-child(4) .step-circle {
+  background: linear-gradient(135deg, #ffffff 0%, #d0d0d0 100%);
+  border-color: #ffffff;
+  color: #0f0f0f;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transform: scale(1.15);
+}
+
+#step1:checked ~ .steps-container .step:nth-child(1) .step-label,
+#step2:checked ~ .steps-container .step:nth-child(2) .step-label,
+#step3:checked ~ .steps-container .step:nth-child(3) .step-label,
+#step4:checked ~ .steps-container .step:nth-child(4) .step-label {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.step:hover .step-circle {
+  border-color: #666;
+  background: #333;
+}
+
+.step:focus-within .step-circle {
+  outline: 2px solid #888;
+  outline-offset: 3px;
+}
+
+.content-section {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#step1:checked ~ .content-section.content-1,
+#step2:checked ~ .content-section.content-2,
+#step3:checked ~ .content-section.content-3,
+#step4:checked ~ .content-section.content-4 {
+  display: block;
+  opacity: 1;
+  animation: fadeInContent 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #b0b0b0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #d0d0d0;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 0.5rem;
+  color: #e5e5e5;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #888;
+  background: #333;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.error-message {
+  display: none;
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  font-weight: 500;
+}
+
+.show-errors .form-group input:invalid ~ .error-message,
+.show-errors .form-group select:invalid ~ .error-message {
+  display: block;
+}
+
+.show-errors .form-group input:invalid,
+.show-errors .form-group select:invalid {
+  border-color: #cc0000;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.review-card {
+  background: linear-gradient(135deg, #2a2a2a 0%, #333 100%);
+  border: 1px solid #444;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-label {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.review-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e5e5e5;
+}
+
+.payment-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.payment-option {
+  position: relative;
+}
+
+.payment-option input[type="radio"] {
+  display: none;
+}
+
+.payment-label {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #2a2a2a;
+  border: 2px solid #444;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #d0d0d0;
+}
+
+/* Payment fields hidden by default */
+.payment-fields {
+  display: none;
+  margin-top: 1rem;
+}
+
+/* Show fields when corresponding radio is checked */
+/* use general sibling (~) so any .payment-fields sibling after the radios can be targeted */
+#card:checked ~ .payment-fields.card-fields {
+  display: block;
+}
+#paypal:checked ~ .payment-fields.paypal-fields {
+  display: block;
+}
+#upi:checked ~ .payment-fields.upi-fields {
+  display: block;
+}
+#google:checked ~ .payment-fields.google-fields {
+  display: block;
+}
+
+/* Highlight selected payment label */
+#card:checked ~ .payment-options label[for="card"],
+#paypal:checked ~ .payment-options label[for="paypal"],
+#upi:checked ~ .payment-options label[for="upi"],
+#google:checked ~ .payment-options label[for="google"] {
+  background: linear-gradient(135deg, #ffffff 0%, #d0d0d0 100%);
+  border-color: #ffffff;
+  color: #0f0f0f;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.12);
+}
+
+.payment-option input[type="radio"]:checked + .payment-label {
+  background: linear-gradient(135deg, #ffffff 0%, #d0d0d0 100%);
+  border-color: #ffffff;
+  color: #0f0f0f;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.payment-icon {
+  margin-right: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.navigation {
+  display: none;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+#step1:checked ~ .navigation.nav-1,
+#step2:checked ~ .navigation.nav-2,
+#step3:checked ~ .navigation.nav-3,
+#step4:checked ~ .navigation.nav-4 {
+  display: flex;
+}
+
+.wizard:has(.content-1 input:invalid) .steps label[for="step2"],
+.wizard:has(.content-1 input:invalid) .steps label[for="step3"],
+.wizard:has(.content-1 input:invalid) .steps label[for="step4"],
+.wizard:has(.content-1 select:invalid) .steps label[for="step2"],
+.wizard:has(.content-1 select:invalid) .steps label[for="step3"],
+.wizard:has(.content-1 select:invalid) .steps label[for="step4"] {
+  pointer-events: none;
+  opacity: 0.45;
+}
+.content-1:has(input:invalid) ~ .navigation.nav-1 .nav-btn.next,
+.content-1:has(select:invalid) ~ .navigation.nav-1 .nav-btn.next {
+  pointer-events: none;
+  opacity: 0.5;
+  transform: none;
+  cursor: not-allowed;
+}
+
+.wizard:has(.content-2 input:invalid) .steps label[for="step3"],
+.wizard:has(.content-2 input:invalid) .steps label[for="step4"],
+.wizard:has(.content-2 select:invalid) .steps label[for="step3"],
+.wizard:has(.content-2 select:invalid) .steps label[for="step4"] {
+  pointer-events: none;
+  opacity: 0.45;
+}
+.content-2:has(input:invalid) ~ .navigation.nav-2 .nav-btn.next,
+.content-2:has(select:invalid) ~ .navigation.nav-2 .nav-btn.next {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* For step 3, only consider inputs from the selected payment method. This avoids
+           unrelated required fields (other methods) blocking progress. */
+.wizard:has(#card:checked):has(.card-fields:has(input:invalid))
+  .steps
+  label[for="step4"],
+.wizard:has(#paypal:checked):has(.paypal-fields:has(input:invalid))
+  .steps
+  label[for="step4"],
+.wizard:has(#upi:checked):has(.upi-fields:has(input:invalid))
+  .steps
+  label[for="step4"],
+.wizard:has(#google:checked):has(.google-fields:has(input:invalid))
+  .steps
+  label[for="step4"] {
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+.wizard:has(#card:checked):has(.card-fields:has(input:invalid))
+  .navigation.nav-3
+  .nav-btn.next,
+.wizard:has(#paypal:checked):has(.paypal-fields:has(input:invalid))
+  .navigation.nav-3
+  .nav-btn.next,
+.wizard:has(#upi:checked):has(.upi-fields:has(input:invalid))
+  .navigation.nav-3
+  .nav-btn.next,
+.wizard:has(#google:checked):has(.google-fields:has(input:invalid))
+  .navigation.nav-3
+  .nav-btn.next {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nav-btn {
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-btn.back {
+  background: #2a2a2a;
+  color: #d0d0d0;
+  border: 1px solid #444;
+}
+
+.nav-btn.back:hover:not(:disabled) {
+  background: #333;
+  border-color: #666;
+  transform: translateX(-3px);
+}
+
+.nav-btn.next {
+  background: linear-gradient(135deg, #ffffff 0%, #d0d0d0 100%);
+  color: #0f0f0f;
+  font-weight: 700;
+}
+
+.nav-btn.next:hover:not(:disabled) {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+  transform: translateX(3px);
+}
+
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  pointer-events: none;
+}
+
+.nav-btn.next:disabled {
+  background: #2a2a2a;
+  color: #666;
+  box-shadow: none;
+  border: 1px solid #444;
+}
+
+.success-message {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  animation: celebrateSuccess 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes celebrateSuccess {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#step4:checked ~ .success-message {
+  display: block;
+}
+
+.success-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.success-message h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #b0b0b0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.success-message p {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .wizard-wrapper {
+    padding: 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .step-circle {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  .step-label {
+    font-size: 0.75rem;
+    max-width: 80px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-options {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+}
