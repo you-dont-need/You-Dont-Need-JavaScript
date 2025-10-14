@@ -1,8 +1,7 @@
-/* --- General Styles (No changes needed here, except the box-sizing fix) --- */
+/* --- General Styles --- */
 * {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    /* FIX: Corrected this property for proper box model calculation */
     box-sizing: border-box;
 }
 
@@ -226,7 +225,7 @@ footer {
 
 ul {
     list-style-type: none;
-    padding-inline-start: 0; /* Remove default padding */
+    padding-inline-start: 0;
 }
 
 ul p {
@@ -277,6 +276,98 @@ ul a:hover {
     padding-top: 5px;
 }
 
+/* =================================== */
+/* --- NEW STYLES FOR SIDEBAR MENU --- */
+/* =================================== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #ffffff;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    background-color: #222f3d;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+}
+
+.sidebar-header h3 {
+    font-weight: 700;
+}
+
+.sidebar-links {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-links li {
+    padding: 15px 20px;
+    color: #0f1111;
+    cursor: pointer;
+}
+
+.sidebar-links li:hover {
+    background-color: #f3f3f3;
+}
+
+.sidebar-links hr {
+    border: none;
+    border-top: 1px solid #dddddd;
+    margin: 5px 0;
+}
+
+.sidebar-links p {
+    font-weight: 700;
+    padding: 15px 20px 5px;
+    color: #0f1111;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#hamburger-toggle:checked ~ .sidebar {
+    transform: translateX(0);
+}
+
+#hamburger-toggle:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.panel-all-label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 9px;
+    border: 1.5px solid transparent;
+}
+
+.panel-all-label:hover {
+    border: 1.5px solid white;
+    border-radius: 3px;
+}
+
+.close-sidebar-label {
+    font-weight: 700;
+}
 
 /* =================================== */
 /* --- RESPONSIVE MEDIA QUERIES --- */
@@ -284,38 +375,28 @@ ul a:hover {
 
 /* For Tablet Screens (e.g., iPads) */
 @media (max-width: 900px) {
-    /* --- Navbar Adjustments --- */
     .nav-search {
-        width: 45%; /* Make search bar smaller */
+        width: 45%;
     }
-
-    /* Hide less critical items to save space */
     .nav-signin, .nav-return {
         display: none;
     }
-
-    /* --- Panel Adjustments --- */
     .panel-ops {
         width: auto;
     }
-    /* Hide some options in the panel */
     .panel-ops p:nth-child(n+3) {
         display: none;
     }
     .panel-deals {
         display: none;
     }
-
-    /* --- Shop Section Adjustments --- */
     .shop-section {
         padding: 10px;
     }
     .box {
-        width: 48%; /* Creates a 2-column grid */
+        width: 48%;
         margin-top: 10px;
     }
-
-    /* --- Footer Adjustments --- */
     .foot-panel2 {
         flex-wrap: wrap;
         height: auto; 
@@ -327,52 +408,41 @@ ul a:hover {
     }
 }
 
-
 /* For Mobile Screens (e.g., iPhones) */
 @media (max-width: 600px) {
-    /* --- Navbar Adjustments --- */
     .navbar {
         flex-wrap: wrap; 
         height: auto; 
         padding: 10px;
     }
-
     .nav-logo, .nav-address, .nav-cart {
         order: 1; 
     }
-
     .nav-search {
         order: 2;
         width: 95%; 
         margin-top: 10px;
     }
-
-    /* Simplify the delivery text */
     .add-first {
         display: none;
     }
     .add-second {
         margin-left: 5px;
     }
-
-    /* Hide the text "Cart" to only show the icon */
     .nav-cart {
         font-size: 0;
     }
     .nav-cart i {
         font-size: 28px;
     }
-
-    /* --- Panel Adjustments --- */
     .panel-ops, .panel-deals {
         display: none; 
     }
     .panel {
         justify-content: flex-start;
-        padding-left: 15px;
+        /* The label provides padding now, so this can be adjusted */
+        padding-left: 5px;
     }
-
-    /* --- Hero Section Adjustments --- */
     .hero-section {
         height: 250px;
     }
@@ -383,13 +453,9 @@ ul a:hover {
         padding: 5px;
         height: auto;
     }
-
-    /* --- Shop Section Adjustments --- */
     .box {
         width: 95%; 
     }
-
-    /* --- Footer Adjustments --- */
     .foot-panel2 {
         flex-direction: column; 
         align-items: flex-start; 
@@ -398,7 +464,6 @@ ul a:hover {
     .foot-panel2 ul {
         width: 100%; 
     }
-
     .foot-panel4 .pages a {
         display: block; 
         padding: 5px;

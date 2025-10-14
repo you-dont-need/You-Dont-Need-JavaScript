@@ -4,24 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon Clone</title>
-    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <input type="checkbox" id="hamburger-toggle" style="display: none;">
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3><i class="fa-solid fa-user-circle"></i> Hello, Sign in</h3>
+        </div>
+        <ul class="sidebar-links">
+            <li><a>Today's Deals</a></li>
+            <li><a>Customer Service</a></li>
+            <li><a>Registry</a></li>
+            <li><a>Gift Cards</a></li>
+            <li><a>Sell</a></li>
+            <hr>
+            <p>Shop By Department</p>
+            <li><a>Electronics</a></li>
+            <li><a>Computers</a></li>
+            <li><a>Smart Home</a></li>
+            <hr>
+            <p>Help & Settings</p>
+            <li><a>Your Account</a></li>
+            <li><a>Your Orders</a></li>
+            <li><label for="hamburger-toggle" class="close-sidebar-label">
+                <i class="fa-solid fa-chevron-left"></i> Close Menu
+            </label></li>
+        </ul>
+    </div>
+
+    <label for="hamburger-toggle" class="overlay"></label>
+
     <header>
-        <!-- Navbar -->
         <div class="navbar">
-            <!-- Amazon Logo -->
             <div class="nav-logo border">
                 <div class="logo"></div>
             </div>
 
-            <!-- Delivery Address -->
             <div class="nav-address border">
                 <p class="add-first">Deliver to</p>
                 <div class="add-icon">
@@ -30,7 +53,6 @@
                 </div>
             </div>
 
-            <!-- Search Bar -->
             <div class="nav-search">
                 <select class="search-select">
                     <option>All</option>
@@ -41,7 +63,6 @@
                 </div>
             </div>
 
-            <!-- Language, Sign in, Returns & Orders -->
             <div class="nav-signin border">
                 <p><span>Hello, Sign in</span></p>
                 <p class="nav-second">Account & Lists</p>
@@ -58,12 +79,13 @@
             </div>
         </div>
 
-        <!-- Panel Section -->
         <div class="panel">
-            <div class="panel-all">
-                <i class="fa-solid fa-bars"></i>
-                All
-            </div>
+            <label for="hamburger-toggle" class="panel-all-label">
+                <div class="panel-all">
+                    <i class="fa-solid fa-bars"></i>
+                    All
+                </div>
+            </label>
             <div class="panel-ops">
                 <p>Today's Deals</p>
                 <p>Customer Service</p>
@@ -77,14 +99,12 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <div class="hero-section">
         <div class="hero-message">
             <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a>Click here to go to amazon.in</a></p>
         </div>
     </div>
 
-    <!-- Shop Section -->
     <div class="shop-section">
         <div class="box">
             <div class="box-content">
@@ -144,7 +164,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="foot-panel1">
             Back to top
@@ -207,4 +226,3 @@
 
 </body>
 </html>
-
