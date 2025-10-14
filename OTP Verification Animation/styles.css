@@ -1,0 +1,429 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* OTP Card Styling */
+.otp-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.otp-card h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.otp-card p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* OTP Input Styling */
+.otp-inputs {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.otp-input {
+    width: 50px;
+    height: 60px;
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.otp-input:focus {
+    outline: none;
+    border-color: #667eea;
+    background: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+.otp-input:valid {
+    border-color: #28a745;
+    background: #f8fff9;
+}
+
+/* Verify Button */
+.verify-trigger {
+    display: none;
+}
+
+.verify-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.verify-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* Loading Animation */
+.loading-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(20px);
+    width: 100%;
+}
+
+.verify-trigger:checked ~ .loading-container {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+    animation: showLoading 0.5s ease forwards;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #e1e5e9;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-container p {
+    color: #667eea;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Success Animation */
+.success-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(20px);
+    width: 100%;
+}
+
+.verify-trigger:checked ~ .success-container {
+    animation: showSuccess 3s ease forwards 2s;
+}
+
+@keyframes showSuccess {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(20px);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+}
+
+/* Checkmark Animation */
+.checkmark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 3;
+    stroke: #28a745;
+    stroke-miterlimit: 10;
+    margin: 0 auto 20px;
+    position: relative;
+    animation: checkmarkScale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #28a745;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: checkmarkCircle 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-stem {
+    width: 3px;
+    height: 20px;
+    background: #28a745;
+    position: absolute;
+    left: 32px;
+    top: 40px;
+    transform: rotate(45deg);
+    transform-origin: bottom;
+    animation: checkmarkStem 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.85s both;
+}
+
+.checkmark-kick {
+    width: 3px;
+    height: 12px;
+    background: #28a745;
+    position: absolute;
+    left: 25px;
+    top: 48px;
+    transform: rotate(-45deg);
+    transform-origin: bottom;
+    animation: checkmarkKick 0.2s cubic-bezier(0.65, 0, 0.45, 1) 0.95s both;
+}
+
+@keyframes checkmarkScale {
+    0%, 50% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes checkmarkCircle {
+    0% {
+        stroke-dasharray: 0 251;
+    }
+    100% {
+        stroke-dasharray: 251 251;
+    }
+}
+
+@keyframes checkmarkStem {
+    0% {
+        transform: rotate(45deg) scaleY(0);
+    }
+    100% {
+        transform: rotate(45deg) scaleY(1);
+    }
+}
+
+@keyframes checkmarkKick {
+    0% {
+        transform: rotate(-45deg) scaleY(0);
+    }
+    100% {
+        transform: rotate(-45deg) scaleY(1);
+    }
+}
+
+.success-container h3 {
+    color: #28a745;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.success-container p {
+    color: #666;
+    margin: 0;
+}
+
+/* Hide main content during animations */
+.verify-trigger:checked ~ .otp-inputs,
+.verify-trigger:checked ~ .verify-btn {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+}
+
+/* Demo Section */
+.demo-section {
+    margin-top: 40px;
+    padding-top: 30px;
+}
+
+.demo-section hr {
+    border: none;
+    height: 1px;
+    background: #e1e5e9;
+    margin-bottom: 20px;
+}
+
+.demo-text {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.demo-trigger {
+    display: none;
+}
+
+.demo-btn {
+    display: inline-block;
+    background: #f8f9fa;
+    color: #667eea;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #667eea;
+}
+
+.demo-btn:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* Demo Auto-fill Animation */
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(1) {
+    animation: autoFill 0.3s ease forwards 0.5s;
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(2) {
+    animation: autoFill 0.3s ease forwards 0.7s;
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(3) {
+    animation: autoFill 0.3s ease forwards 0.9s;
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(4) {
+    animation: autoFill 0.3s ease forwards 1.1s;
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(5) {
+    animation: autoFill 0.3s ease forwards 1.3s;
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(6) {
+    animation: autoFill 0.3s ease forwards 1.5s;
+}
+
+@keyframes autoFill {
+    0% {
+        background: #f8f9fa;
+    }
+    50% {
+        background: #fff3cd;
+        transform: scale(1.1);
+    }
+    100% {
+        background: #f8fff9;
+        border-color: #28a745;
+        transform: scale(1);
+    }
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(1):after {
+    content: "1";
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(2):after {
+    content: "2";
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(3):after {
+    content: "3";
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(4):after {
+    content: "4";
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(5):after {
+    content: "5";
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(6):after {
+    content: "6";
+}
+
+/* Auto-trigger verification after demo */
+.demo-trigger:checked ~ .otp-card .verify-trigger {
+    animation: autoVerify 0.1s linear forwards 2.5s;
+}
+
+@keyframes autoVerify {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .otp-card {
+        padding: 30px 20px;
+    }
+    
+    .otp-inputs {
+        gap: 10px;
+    }
+    
+    .otp-input {
+        width: 45px;
+        height: 55px;
+        font-size: 20px;
+    }
+    
+    .otp-card h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .otp-inputs {
+        gap: 8px;
+    }
+    
+    .otp-input {
+        width: 40px;
+        height: 50px;
+        font-size: 18px;
+    }
+}

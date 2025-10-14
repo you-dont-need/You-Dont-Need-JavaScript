@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Only OTP Verification Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="otp-card">
+            <h2>Enter Verification Code</h2>
+            <p>Please enter the 6-digit code sent to your phone</p>
+            
+            <!-- OTP Input Form -->
+            <form class="otp-form">
+                <div class="otp-inputs">
+                    <input type="text" maxlength="1" pattern="[0-9]" class="otp-input" id="otp1">
+                    <input type="text" maxlength="1" pattern="[0-9]" class="otp-input" id="otp2">
+                    <input type="text" maxlength="1" pattern="[0-9]" class="otp-input" id="otp3">
+                    <input type="text" maxlength="1" pattern="[0-9]" class="otp-input" id="otp4">
+                    <input type="text" maxlength="1" pattern="[0-9]" class="otp-input" id="otp5">
+                    <input type="text" maxlength="1" pattern="[0-9]" class="otp-input" id="otp6">
+                </div>
+                
+                <!-- Hidden checkbox to trigger verification animation -->
+                <input type="checkbox" id="verify-trigger" class="verify-trigger">
+                <label for="verify-trigger" class="verify-btn">Verify Code</label>
+                
+                <!-- Loading Animation -->
+                <div class="loading-container">
+                    <div class="loading-spinner"></div>
+                    <p>Verifying your code...</p>
+                </div>
+                
+                <!-- Success Animation -->
+                <div class="success-container">
+                    <div class="checkmark">
+                        <div class="checkmark-circle"></div>
+                        <div class="checkmark-stem"></div>
+                        <div class="checkmark-kick"></div>
+                    </div>
+                    <h3>Verification Successful!</h3>
+                    <p>Your account has been verified</p>
+                </div>
+            </form>
+            
+            <!-- Auto-complete demo trigger -->
+            <div class="demo-section">
+                <hr>
+                <p class="demo-text">Demo: Auto-fill and verify</p>
+                <input type="checkbox" id="demo-trigger" class="demo-trigger">
+                <label for="demo-trigger" class="demo-btn">Try Demo</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
