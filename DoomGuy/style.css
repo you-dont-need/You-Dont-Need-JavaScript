@@ -1,0 +1,32 @@
+/* style.css */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #000; /* dark background fits Doom vibe */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+img {
+  width: 150px;
+  height: auto;
+  border-radius: 20px;
+  animation: float 1.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
