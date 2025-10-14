@@ -302,64 +302,6 @@ body {
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
 }
 
-/* Prev/Next Navigation */
-.nav {
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-  margin-top: 1.5rem;
-  padding: 0 1rem;
-}
-
-.nav .prev,
-.nav .next {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 50%;
-  width: 3.5rem;
-  height: 3.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
-  font-size: 1.2rem;
-  color: var(--text);
-  position: relative;
-  overflow: hidden;
-}
-
-.nav .prev::before,
-.nav .next::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: var(--gradient-primary);
-  transition: left 0.3s ease;
-  z-index: -1;
-}
-
-.nav .prev:hover,
-.nav .next:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-  color: white;
-}
-
-.nav .prev:hover::before,
-.nav .next:hover::before {
-  left: 0;
-}
-
-.nav .prev:active,
-.nav .next:active {
-  transform: scale(0.95);
-}
-
 /* hide raw radio controls */
 .controls {
   position: absolute;
