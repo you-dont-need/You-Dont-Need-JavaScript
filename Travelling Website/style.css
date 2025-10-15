@@ -7,73 +7,75 @@
 }
 body{
     background-color: white;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 
 .header{
     height: 80vh;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
 }
 .page1{
     margin: auto;
     height: 100vh;
-    width: 100vw;
-    
+    width: 100%;
+    max-width: 100%;
 }
 .navbar{
     display: flex;
     justify-content: space-evenly;
 }
 .navbarleft{
-    width: 100vw;
+    width: 100%;
     height: 8vh;
     background-color: #EDC7B7;
     box-shadow: 0px 2px 50px black;
     display: flex;
-    
     padding: 5px 5px;
-    
     align-items: center;
-
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .navbarleft ul{
     display: flex;
     flex-direction: row;
-    padding: 20px;
+    padding: 10px;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 .navbarleft ul li{
-    padding: 0px 10px;
+    padding: 0px 5px;
     list-style: none;
 }
 .navbarleft ul li a{
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
+    font-size: 14px;
     color: #123C69;
 }
 .navbarleft a:hover{
     text-shadow: 0px 0px 0.25px #123C69;
 }
 .navbar2{
-    width: 100vw;
+    width: 100%;
     height: 7vh;
     background-color: #123C69;
     align-items: center;
     justify-content: center;
     display: flex;
     padding: 10px;
-    
 }
 .navbar2 h1{
     color: #EDC7B7;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 100;
+    text-align: center;
 }
 
 .heroimg{
-    width: 100vw;
+    width: 100%;
     height: 80vh;
     justify-content: center;
     align-items: center;
@@ -84,20 +86,23 @@ body{
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
+    display: flex;
 }
 .bookingpage{
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    padding: 30px;
-    
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
 }
 
 
 .bookingpagelow{
-    height: 40vh;
-    width: 40vw;
+    height: auto;
+    width: 100%;
+    max-width: 500px;
     background-color: #F7F8F9;
     border-radius: 20px;
     align-items: center;
@@ -107,20 +112,21 @@ body{
     
 }
 #input{
-    width: 36vw;
+    width: 100%;
     height: 60px;
     border: 0px ;
     border-radius: 5px;
-    padding: 30px;
+    padding: 20px;
     margin-bottom: 10px;
     margin-top: 25px;
 }
 .bookingpagetop {
     height: auto;
-    width: 30vw;
+    width: 100%;
+    max-width: 400px;
     background-color: white;
     margin-top: 4px;
-    margin-bottom: 15px; /* adds space below the title box */
+    margin-bottom: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
     z-index: 10;
@@ -128,7 +134,7 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 10px;
     position: relative;
 }
 .bookingpagetop h1 {
@@ -144,10 +150,11 @@ body{
     cursor: pointer;
 }
 #input1{
-    width: 34vw;
+    width: 100%;
     height: 55px;
     border: 0px ;
     cursor: pointer;  
+    padding: 0 15px;
 }
 
 .departure{
@@ -160,6 +167,7 @@ body{
     border: 2px solid rgb(221, 213, 213);
     height: 60px;
     display: flex;
+    width: 100%;
 }
 
 .departure2{
@@ -197,12 +205,15 @@ body{
     color: white;
 }
 .rightitems{
-    margin-left: 400px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .arr_date{
     padding: 10px;
-    width: 12.5vw;
+    width: 100%;
     height: 60px;
     background-color: white;
     border: 2px solid rgb(221, 213, 213);
@@ -210,20 +221,23 @@ body{
     display: flex;
     flex-direction: column;
     border-radius: 5px;
+    flex: 1;
 }
 
 .search {
     background-color: #123C69;
-    margin-top: 10px;  /* pushes button below card */
+    margin-top: 10px;
     text-align: center;    
-    width: 20vw;
+    width: 100%;
+    max-width: 300px;
     height: 8vh;
+    min-height: 50px;
     border-radius: 20px;
     color: #EDC7B7;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 2px;
     font-weight: 500;
     box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
@@ -243,9 +257,11 @@ body{
 
 
 .page2{
-    height: 40vh;
-    width: 100vw;
+    height: auto;
+    min-height: 40vh;
+    width: 100%;
     background-color: #EDC7B7;
+    padding: 40px 20px;
 }
 .page2 .heading{
     
@@ -287,10 +303,11 @@ body{
 }
 
 .datedecider {
-  width: 37.5vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .arr_date {
@@ -365,11 +382,11 @@ body{
 
 .page3{
     margin-top: 20px;
-    width: 100vw;
-    height: 60vh;
+    width: 100%;
+    height: auto;
+    min-height: 60vh;
     margin-bottom: 60px;
-    
-    
+    padding: 20px;
 }
 .page3 .hotels:hover{
     box-shadow: 0 2px 10px black;
@@ -389,6 +406,8 @@ body{
     margin-top: 40px;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .type{
     border: 2px solid rgb(221, 213, 213);;
@@ -432,4 +451,208 @@ body{
   font-weight: 400;
   font-size: 18px;
   color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  /* Navigation fixes */
+  .navbarleft {
+    height: auto;
+    min-height: 8vh;
+    flex-direction: column;
+    padding: 10px 5px;
+  }
+  
+  .navbarleft ul {
+    padding: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .navbarleft ul li {
+    padding: 2px 5px;
+  }
+  
+  .navbarleft ul li a {
+    font-size: 12px;
+  }
+  
+  .rightitems {
+    margin-left: 0;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  
+  .navbar2 h1 {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+  
+  /* Hero section fixes */
+  .heroimg {
+    background-attachment: scroll;
+    height: auto;
+    min-height: 70vh;
+    padding: 20px 10px;
+  }
+  
+  .bookingpage {
+    padding: 10px;
+    width: 95%;
+  }
+  
+  .bookingpagelow {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .bookingpagetop {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .bookingpagetop h1 {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  /* Input fixes */
+  .departure {
+    height: auto;
+    min-height: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  
+  .departure i {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+  
+  #input1 {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  
+  .datedecider {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .arr_date {
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  .search {
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+  }
+  
+  /* Places section */
+  .places {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .delhi img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  /* Hotels section */
+  .page3 .hotels img {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .listhotels {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  /* Footer */
+  .links {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .links ul {
+    margin: 20px 0;
+  }
+  
+  .page5 {
+    font-size: 14px;
+    height: auto;
+    min-height: 8vh;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens */
+  .navbarleft ul li a {
+    font-size: 11px;
+  }
+  
+  .navbar2 h1 {
+    font-size: 18px;
+  }
+  
+  .bookingpagetop h1 {
+    font-size: 14px;
+  }
+  
+  .delhi img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .page3 .hotels img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .search {
+    font-size: 14px;
+  }
+  
+  .page5 {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet responsiveness */
+  .bookingpagelow {
+    max-width: 600px;
+  }
+  
+  .places {
+    gap: 20px;
+  }
+  
+  .listhotels {
+    gap: 15px;
+  }
+  
+  .page3 .hotels img {
+    width: 280px;
+    height: 280px;
+  }
 }
