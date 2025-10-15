@@ -1,5 +1,6 @@
 body {
-    font-family: 'Inter', Arial, sans-serif; /* Using Inter as per instructions */
+    /* Using Inter font for modern aesthetics as per standard practice */
+    font-family: 'Inter', Arial, sans-serif; 
     background-color: #f4f7f6;
     display: flex;
     flex-direction: column;
@@ -21,10 +22,14 @@ h1 {
     font-style: italic;
 }
 
+/* Container for each alert wrapper (used to manage spacing) */
 .alert-container {
     width: 90%;
     max-width: 600px;
     margin-bottom: 20px;
+    /* Necessary for the collapse transition */
+    max-height: 200px; 
+    transition: max-height 0.4s ease-out, margin-bottom 0.4s ease-out;
 }
 
 /* --- BASE ALERT STYLES (Applies to all) --- */
@@ -32,13 +37,19 @@ h1 {
     border-radius: 8px;
     padding: 20px;
     position: relative;
+    
+    /* Initial state */
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.4s ease-out, transform 0.4s ease-out, margin-bottom 0.4s ease-out, height 0.4s ease-out, padding 0.4s ease-out;
+    
+    /* Transitions for smooth fade-out/collapse */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out, 
+                height 0.4s ease-out, padding 0.4s ease-out;
+    
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid; /* For colored accent */
-    overflow: hidden; /* Crucial for transition */
-    min-height: 80px; /* Ensure consistent initial height */
+    border-left: 5px solid; 
+    overflow: hidden; 
+    min-height: 80px; 
 }
 
 .alert-title {
@@ -52,6 +63,7 @@ h1 {
     line-height: 1.5;
 }
 
+/* The 'X' close button */
 .alert-close {
     position: absolute;
     top: 50%;
@@ -103,24 +115,44 @@ h1 {
 }
 .alert--info .alert-close { color: #0c5460; }
 
+/* SECONDARY (Gray/Neutral) */
+.alert--secondary {
+    background-color: #e2e3e5;
+    color: #383d41;
+    border-left-color: #6c757d;
+}
+.alert--secondary .alert-close { color: #383d41; }
+
+/* LIGHT (Subtle/White) */
+.alert--light {
+    background-color: #fdfdfe;
+    color: #818182;
+    border-left-color: #f8f9fa; /* Very subtle light gray accent */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.alert--light .alert-close { color: #818182; }
+
 
 /* --- THE PURE CSS MAGIC (DISMISSAL LOGIC) --- */
 
-/* Selects the sibling alert-container when the toggle is checked */
+/* The checkbox is hidden in HTML. When checked, use the adjacent sibling selector (+)
+   to target the alert-container and collapse it. */
 .alert-toggle:checked + .alert-container {
-    /* Set container height/padding to 0 */
+    /* Collapse height, padding, and margin of the container */
     max-height: 0;
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
+    /* Transition max-height and margin over time */
     transition: max-height 0.4s ease-out, margin-bottom 0.4s ease-out;
 }
 
-/* Hide the inner content once the container collapses */
+/* Hide the inner alert content (fade and slide up) */
 .alert-toggle:checked + .alert-container .alert-box {
     opacity: 0;
     padding-top: 0;
     padding-bottom: 0;
     transform: translateY(-10px);
+    /* Start fading slightly AFTER the container collapse starts */
     transition: opacity 0.3s ease-out 0.1s, transform 0.3s ease-out 0.1s, padding 0.3s ease-out 0.1s;
 }

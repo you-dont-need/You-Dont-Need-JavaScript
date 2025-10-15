@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure CSS Dismissible Alerts (Multiple Types)</title>
+    <title>Pure CSS Dismissible Alerts (Expanded Types)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -61,6 +61,34 @@
                 New features are available. Check the changelog for details.
             </p>
             <label for="alert-info-toggle" class="alert-close" role="button" aria-label="Dismiss info alert">
+                &times;
+            </label>
+        </div>
+    </div>
+    
+    <!-- SECONDARY (Neutral/Gray) ALERT -->
+    <input type="checkbox" id="alert-secondary-toggle" class="alert-toggle" hidden>
+    <div class="alert-container">
+        <div class="alert-box alert--secondary">
+            <h3 class="alert-title">Neutral Message 💬</h3>
+            <p class="alert-message">
+                This is a general status update with no specific importance.
+            </p>
+            <label for="alert-secondary-toggle" class="alert-close" role="button" aria-label="Dismiss secondary alert">
+                &times;
+            </label>
+        </div>
+    </div>
+
+    <!-- LIGHT (Subtle/Almost White) ALERT -->
+    <input type="checkbox" id="alert-light-toggle" class="alert-toggle" hidden>
+    <div class="alert-container">
+        <div class="alert-box alert--light">
+            <h3 class="alert-title">Subtle Note 📄</h3>
+            <p class="alert-message">
+                This message is a background process notification.
+            </p>
+            <label for="alert-light-toggle" class="alert-close" role="button" aria-label="Dismiss light alert">
                 &times;
             </label>
         </div>
