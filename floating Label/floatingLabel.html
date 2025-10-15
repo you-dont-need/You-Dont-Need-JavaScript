@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Floating Label Inputs — CSS only</title>
+  <link rel="stylesheet" href="flaotingLabel.css" />
+</head>
+<body>
+  <main class="demo-page">
+    <h1>Floating Label Inputs (CSS only)</h1>
+
+    <form class="form" novalidate>
+      <!-- Text input -->
+      <div class="input-group">
+        <input id="name" name="name" type="text" placeholder=" " required />
+        <label for="name">Full name</label>
+        <div class="bar" aria-hidden="true"></div>
+    
+    </div>
+    <p class="helper" id="name-help">Enter your full name</p>
+
+      <!-- Email with validation -->
+      <div class="input-group">
+        <input id="email" name="email" type="email" placeholder=" " required
+               pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" aria-describedby="email-help" />
+        <label for="email">Email address</label>
+        <div class="bar" aria-hidden="true"></div>
+    </div>
+    <p class="helper" id="email-help">We'll never share your email.</p>
+
+      <!-- Password with show of invalid style (minlength) -->
+      <div class="input-group">
+        <input id="password" name="password" type="password" placeholder=" " required minlength="8" />
+        <label for="password">Password (min 8 chars)</label>
+        <div class="bar" aria-hidden="true"></div>
+    </div>
+    <p class="helper error">Password must be at least 8 characters.</p>
+
+      <!-- Textarea -->
+      <div class="input-group input-group--textarea">
+        <textarea id="message" name="message" rows="4" placeholder=" "></textarea>
+        <label for="message">Message</label>
+        <div class="bar" aria-hidden="true"></div>
+    </div>
+    <p class="helper">Optional message</p>
+
+      <!-- Submit -->
+      <div class="actions">
+        <button type="submit" class="btn">Submit</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
