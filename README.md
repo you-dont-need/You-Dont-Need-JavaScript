@@ -1192,6 +1192,16 @@ A modern, interactive scroll-driven video animation created with pure CSS. Featu
 
 **[⬆ back to top](#quick-links)**
 
+---
+
+## <a id="piano"></a>Piano
+
+[<img src="images/piano.png" height="230" title="Piano">](Piano/index.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## Contributors
 
 Thanks to these wonderful people who have contributed to this project!
