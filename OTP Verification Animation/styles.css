@@ -40,8 +40,19 @@ body {
 
 .otp-card p {
     color: #718096;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     font-size: 15px;
+}
+
+.instruction {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.instruction small {
+    color: #a0aec0;
+    font-size: 12px;
+    font-style: italic;
 }
 
 /* OTP Input Styling */
@@ -113,6 +124,18 @@ body {
 .verify-trigger:checked ~ .loading-container {
     opacity: 1;
     transform: translate(-50%, -50%) translateY(0);
+    animation: hideLoading 0.3s ease forwards 2.5s;
+}
+
+@keyframes hideLoading {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(-10px);
+    }
 }
 
 .loading-dots {
@@ -166,7 +189,7 @@ body {
 }
 
 .verify-trigger:checked ~ .success-container {
-    animation: showSuccess 2s ease forwards 2s;
+    animation: showSuccess 0.5s ease forwards 3s;
 }
 
 @keyframes showSuccess {
@@ -229,79 +252,159 @@ body {
 
 /* Demo Section */
 .demo-section {
-    margin-top: 32px;
-    padding-top: 24px;
+    margin-top: 24px;
+    padding-top: 20px;
     border-top: 1px solid #e2e8f0;
+    text-align: center;
 }
 
 .demo-text {
     color: #a0aec0;
     font-size: 13px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
-.demo-trigger {
+.demo-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Demo Controls (hidden) */
+.demo-controls {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.demo-trigger,
+.reset-trigger {
     display: none;
 }
 
 .demo-btn {
     display: inline-block;
-    background: #edf2f7;
-    color: #4a5568;
-    padding: 8px 20px;
-    border-radius: 4px;
-    font-size: 13px;
+    background: #e6fffa;
+    color: #234e52;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.2s ease;
-    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+    border: 2px solid #81e6d9;
+    user-select: none;
 }
 
 .demo-btn:hover {
-    background: #e2e8f0;
+    background: #b2f5ea;
+    transform: translateY(-1px);
 }
 
-/* Demo Auto-fill Animation */
-.demo-trigger:checked ~ .otp-card .otp-input:nth-child(1) {
-    animation: autoFill 0.2s ease forwards 0.3s;
+.demo-trigger:checked ~ .otp-card .demo-btn {
+    background: #4fd1c7;
+    color: white;
+    border-color: #38b2ac;
 }
 
-.demo-trigger:checked ~ .otp-card .otp-input:nth-child(2) {
-    animation: autoFill 0.2s ease forwards 0.4s;
+.reset-btn {
+    display: inline-block;
+    background: #fed7d7;
+    color: #c53030;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid #feb2b2;
+    user-select: none;
 }
 
-.demo-trigger:checked ~ .otp-card .otp-input:nth-child(3) {
-    animation: autoFill 0.2s ease forwards 0.5s;
+.reset-btn:hover {
+    background: #feb2b2;
+    transform: translateY(-1px);
 }
 
-.demo-trigger:checked ~ .otp-card .otp-input:nth-child(4) {
-    animation: autoFill 0.2s ease forwards 0.6s;
+.reset-trigger:checked ~ .otp-card .reset-btn {
+    background: #e53e3e;
+    color: white;
+    border-color: #c53030;
 }
 
-.demo-trigger:checked ~ .otp-card .otp-input:nth-child(5) {
-    animation: autoFill 0.2s ease forwards 0.7s;
+/* Demo functionality - simulate filled inputs */
+.demo-trigger:checked ~ .otp-card .otp-input {
+    background-color: #f0fff4;
+    border-color: #48bb78;
+    color: #2d3748;
+    position: relative;
 }
 
-.demo-trigger:checked ~ .otp-card .otp-input:nth-child(6) {
-    animation: autoFill 0.2s ease forwards 0.8s;
+.demo-trigger:checked ~ .otp-card #otp1:after { content: "1"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: 600; }
+.demo-trigger:checked ~ .otp-card #otp2:after { content: "2"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: 600; }
+.demo-trigger:checked ~ .otp-card #otp3:after { content: "3"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: 600; }
+.demo-trigger:checked ~ .otp-card #otp4:after { content: "4"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: 600; }
+.demo-trigger:checked ~ .otp-card #otp5:after { content: "5"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: 600; }
+.demo-trigger:checked ~ .otp-card #otp6:after { content: "6"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: 600; }
+
+/* Reset functionality */
+.reset-trigger:checked ~ .otp-card .otp-input {
+    background-color: #fdfdfd;
+    border-color: #e2e8f0;
 }
 
-@keyframes autoFill {
-    0% {
-        background: #fdfdfd;
+.reset-trigger:checked ~ .otp-card .otp-input:after {
+    content: "";
+}
+
+.reset-trigger:checked ~ .otp-card .loading-container,
+.reset-trigger:checked ~ .otp-card .success-container {
+    opacity: 0 !important;
+    transform: translate(-50%, -50%) translateY(10px) !important;
+    animation: none !important;
+}
+
+.reset-trigger:checked ~ .otp-card .verify-trigger {
+    visibility: visible;
+}
+
+.reset-trigger:checked ~ .otp-card .otp-inputs,
+.reset-trigger:checked ~ .otp-card .verify-btn {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding: 16px;
     }
-    50% {
-        background: #bee3f8;
-        border-color: #4299e1;
+    
+    .otp-card {
+        padding: 24px 20px;
     }
-    100% {
-        background: #f0fff4;
-        border-color: #48bb78;
+    
+    .otp-inputs {
+        gap: 8px;
     }
-}
-
-.demo-trigger:checked ~ .otp-card .otp-input:nth-child(1):after {
-    content: "1";
+    
+    .otp-input {
+        width: 40px;
+        height: 48px;
+        font-size: 16px;
+    }
+    
+    .demo-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .demo-btn,
+    .reset-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
 }
 
 .demo-trigger:checked ~ .otp-card .otp-input:nth-child(2):after {
