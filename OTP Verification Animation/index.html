@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS-Only OTP Verification Animation</title>
+    <title>OTP Verification</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="otp-card">
-            <h2>Enter Verification Code</h2>
-            <p>Please enter the 6-digit code sent to your phone</p>
+            <h2>Verify Your Phone</h2>
+            <p>We sent a code to your mobile number</p>
             
             <!-- OTP Input Form -->
             <form class="otp-form">
@@ -29,28 +29,27 @@
                 
                 <!-- Loading Animation -->
                 <div class="loading-container">
-                    <div class="loading-spinner"></div>
-                    <p>Verifying your code...</p>
+                    <div class="loading-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p>Checking code...</p>
                 </div>
                 
                 <!-- Success Animation -->
                 <div class="success-container">
-                    <div class="checkmark">
-                        <div class="checkmark-circle"></div>
-                        <div class="checkmark-stem"></div>
-                        <div class="checkmark-kick"></div>
-                    </div>
-                    <h3>Verification Successful!</h3>
-                    <p>Your account has been verified</p>
+                    <div class="success-icon">✓</div>
+                    <h3>Phone Verified!</h3>
+                    <p>You're all set</p>
                 </div>
             </form>
             
-            <!-- Auto-complete demo trigger -->
+            <!-- Demo section -->
             <div class="demo-section">
-                <hr>
-                <p class="demo-text">Demo: Auto-fill and verify</p>
+                <p class="demo-text">Click to test: 123456</p>
                 <input type="checkbox" id="demo-trigger" class="demo-trigger">
-                <label for="demo-trigger" class="demo-btn">Try Demo</label>
+                <label for="demo-trigger" class="demo-btn">Test it</label>
             </div>
         </div>
     </div>
