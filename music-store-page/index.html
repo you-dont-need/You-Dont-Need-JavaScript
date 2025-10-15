@@ -9,26 +9,25 @@
 </head>
 <body>
   <header>
-  <div class="container header-inner">
-    <span class="logo">🎵 MyMusicStore</span>
-    <!-- ✅ Added: checkbox + label for hamburger -->
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="menu-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-    <nav>
-      <ul class="nav-list">
-        <li><a href="#store">Store</a></li>
-        <li><a href="#albums">Albums</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <div class="container header-inner">
+      <span class="logo">🎵 MyMusicStore</span>
+      <!-- Pure CSS hamburger toggle -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#store">Store</a></li>
+          <li><a href="#albums">Albums</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  
   <section id="hero">
     <div class="container">
       <div class="hero-text">
@@ -86,7 +85,6 @@
             <li>Lover</li>
           </ul>
         </article>
-        <!-- Ariana Grande Album -->
         <article class="album-card">
           <img src="image5.jpg" alt="Ariana Grande Album Cover" />
           <h3>Positions</h3>
@@ -101,7 +99,6 @@
             <li>pov</li>
           </ul>
         </article>
-        <!-- Ed Sheeran Album -->
         <article class="album-card">
           <img src="image6.jpg" alt="Ed Sheeran Album Cover" />
           <h3>Divide (÷)</h3>
@@ -134,5 +131,17 @@
   <footer>
     <p>&copy; 2025 MyMusicStore. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelectorAll('nav .nav-list a');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.checked = false;
+      });
+    });
+  </script>
 </body>
 </html>
+
