@@ -1,0 +1,353 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f7fa;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* OTP Card Styling */
+.otp-card {
+    background: white;
+    border-radius: 8px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    position: relative;
+    border: 1px solid #e9ecef;
+}
+
+.otp-card h2 {
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.otp-card p {
+    color: #718096;
+    margin-bottom: 24px;
+    font-size: 15px;
+}
+
+/* OTP Input Styling */
+.otp-inputs {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.otp-input {
+    width: 48px;
+    height: 56px;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #2d3748;
+    transition: border-color 0.2s ease;
+    background: #fdfdfd;
+}
+
+.otp-input:focus {
+    outline: none;
+    border-color: #4299e1;
+    background: white;
+}
+
+.otp-input:valid {
+    border-color: #48bb78;
+}
+
+/* Verify Button */
+.verify-trigger {
+    display: none;
+}
+
+.verify-btn {
+    display: inline-block;
+    background: #4299e1;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: none;
+}
+
+.verify-btn:hover {
+    background: #3182ce;
+}
+
+/* Loading Animation */
+.loading-container {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(10px);
+    width: 100%;
+}
+
+.verify-trigger:checked ~ .loading-container {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+}
+
+.loading-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 6px;
+}
+
+.loading-dots span {
+    width: 8px;
+    height: 8px;
+    background: #4299e1;
+    border-radius: 50%;
+    animation: bounce 1.4s ease-in-out infinite both;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+.loading-dots span:nth-child(3) { animation-delay: 0s; }
+
+@keyframes bounce {
+    0%, 80%, 100% { 
+        transform: scale(0.8);
+        opacity: 0.5;
+    } 
+    40% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.loading-container p {
+    color: #718096;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Success Animation */
+.success-container {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(10px);
+    width: 100%;
+}
+
+.verify-trigger:checked ~ .success-container {
+    animation: showSuccess 2s ease forwards 2s;
+}
+
+@keyframes showSuccess {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(10px);
+    }
+    50%, 100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+}
+
+.success-icon {
+    width: 64px;
+    height: 64px;
+    background: #48bb78;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+    animation: popIn 0.4s ease-out 0.2s both;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-container h3 {
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.success-container p {
+    color: #718096;
+    margin: 0;
+    font-size: 15px;
+}
+
+/* Hide main content during animations */
+.verify-trigger:checked ~ .otp-inputs,
+.verify-trigger:checked ~ .verify-btn {
+    opacity: 0.3;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+/* Demo Section */
+.demo-section {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.demo-text {
+    color: #a0aec0;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.demo-trigger {
+    display: none;
+}
+
+.demo-btn {
+    display: inline-block;
+    background: #edf2f7;
+    color: #4a5568;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.demo-btn:hover {
+    background: #e2e8f0;
+}
+
+/* Demo Auto-fill Animation */
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(1) {
+    animation: autoFill 0.2s ease forwards 0.3s;
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(2) {
+    animation: autoFill 0.2s ease forwards 0.4s;
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(3) {
+    animation: autoFill 0.2s ease forwards 0.5s;
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(4) {
+    animation: autoFill 0.2s ease forwards 0.6s;
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(5) {
+    animation: autoFill 0.2s ease forwards 0.7s;
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(6) {
+    animation: autoFill 0.2s ease forwards 0.8s;
+}
+
+@keyframes autoFill {
+    0% {
+        background: #fdfdfd;
+    }
+    50% {
+        background: #bee3f8;
+        border-color: #4299e1;
+    }
+    100% {
+        background: #f0fff4;
+        border-color: #48bb78;
+    }
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(1):after {
+    content: "1";
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(2):after {
+    content: "2";
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(3):after {
+    content: "3";
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(4):after {
+    content: "4";
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(5):after {
+    content: "5";
+}
+
+.demo-trigger:checked ~ .otp-card .otp-input:nth-child(6):after {
+    content: "6";
+}
+
+/* Auto-trigger verification after demo */
+.demo-trigger:checked ~ .otp-card .verify-trigger {
+    animation: autoVerify 0.1s linear forwards 1.5s;
+}
+
+@keyframes autoVerify {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .otp-card {
+        padding: 24px 16px;
+    }
+    
+    .otp-inputs {
+        gap: 8px;
+    }
+    
+    .otp-input {
+        width: 44px;
+        height: 52px;
+        font-size: 18px;
+    }
+}
