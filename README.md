@@ -49,6 +49,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Climbing Loading](#Climbing-Loading)
 - [Download_buttons](#Download_buttons)
 - [Dog Box Animation](#dog-box-animation)
+- [Dismissible Alert](#dismissible-alert)
 - [Dropdown Menu](#dropdown-menu)
 - [Dynamic Image Colorizing](#dynamic-image-colorizing)
 - [Earth](#earth)
@@ -1191,6 +1192,16 @@ A modern, interactive scroll-driven video animation created with pure CSS. Featu
 [Download the demo video](https://raw.githubusercontent.com/amrutha-m206/You-Dont-Need-JavaScript/carousel_effect-feature/images/carousel_demo.mp4)
 
 **[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="piano"></a>Piano
+
+[<img src="images/piano.png" height="230" title="Piano">](Piano/index.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
 
 ## Contributors
 
