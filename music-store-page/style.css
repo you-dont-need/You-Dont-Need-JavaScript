@@ -46,6 +46,7 @@ nav .nav-list {
   margin: 0;
   padding: 0;
 }
+
 nav .nav-list li a {
   color: var(--light);
   text-decoration: none;
@@ -55,12 +56,14 @@ nav .nav-list li a {
   border-radius: 3px;
   transition: background 0.3s, color 0.3s;
 }
+
 nav .nav-list li a:hover,
 nav .nav-list li a:focus-visible {
   color: var(--accent2);
   background: var(--deep);
 }
 
+/* Hero Section */
 #hero {
   background: linear-gradient(120deg, rgba(170,0,255,0.07) 0, #16151f9f 70%);
   padding: 2.7rem 0 3.2rem;
@@ -81,9 +84,7 @@ nav .nav-list li a:focus-visible {
   margin-bottom: 0.6rem;
   text-shadow: 0 4px 24px #AA00FF66;
 }
-.hero-text h1 span {
-  color: var(--accent2);
-}
+.hero-text h1 span { color: var(--accent2); }
 .hero-text p {
   color: var(--light);
   font-size: 1.1rem;
@@ -107,7 +108,7 @@ nav .nav-list li a:focus-visible {
   color: var(--light);
 }
 
-/* Album Grid */
+/* Albums */
 .albums-section {
   margin-top: 1.5rem;
 }
@@ -119,7 +120,6 @@ nav .nav-list li a:focus-visible {
   letter-spacing: 0.04em;
   text-align: left;
 }
-
 .albums-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -127,7 +127,7 @@ nav .nav-list li a:focus-visible {
   margin-top: 1.5rem;
 }
 
-
+/* Album Card */
 .album-card {
   background: linear-gradient(130deg, #20185a 0, #2d2037 90%);
   border-radius: 18px;
@@ -136,13 +136,8 @@ nav .nav-list li a:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.33s cubic-bezier(.93,.13,.67,1), box-shadow 0.25s;
-  will-change: transform, box-shadow;
+  transition: transform 0.33s, box-shadow 0.25s;
 }
-.album-card:focus-within,
 .album-card:hover {
   transform: translateY(-14px) scale(1.03);
   box-shadow: 0 20px 50px #AA00FFaa;
@@ -153,94 +148,9 @@ nav .nav-list li a:focus-visible {
   object-fit: cover;
   border-radius: 17px;
   margin-bottom: 1.1rem;
-  box-shadow: 0 4px 18px #001b4444;
-  transition: transform 0.4s cubic-bezier(.93,.13,.67,1), box-shadow 0.2s;
-}
-.album-card:hover img,
-.album-card:focus-within img {
-  transform: scale(1.08) rotate(-2deg);
-  box-shadow: 0 8px 32px #00B8FF88;
 }
 
-.album-card h3 {
-  margin: 0.3rem 0 0.25rem;
-  font-weight: 700;
-  font-size: 1.22rem;
-  color: var(--accent);
-  text-align: center;
-}
-.album-artist { color: #a3a4d8; margin-bottom: 0.6em; font-weight: 600; }
-
-/* Controls */
-.controls {
-  display: flex;
-  gap: 1.3rem;
-  margin-bottom: 1rem;
-}
-.controls button {
-  background: var(--accent2);
-  border: none;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-  box-shadow: 0 4px 17px #AA00FF99;
-  position: relative;
-  transition: background 0.3s, box-shadow 0.3s;
-  outline: none;
-}
-.controls button:focus-visible,
-.controls button:hover {
-  background: var(--accent);
-  box-shadow: 0 8px 25px #AA00FFbe;
-}
-.controls button.play::before {
-  content: '';
-  position: absolute;
-  left: 15px;
-  top: 11px;
-  width: 0;
-  height: 0;
-  border-left: 14px solid #fff;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-}
-.controls button.stop::before {
-  content: '';
-  width: 14px;
-  height: 14px;
-  background: #fff;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  border-radius: 3px;
-}
-
-.song-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 95%;
-  max-height: 102px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent2) transparent;
-}
-.song-list::-webkit-scrollbar {
-  width: 6px;
-}
-.song-list::-webkit-scrollbar-thumb {
-  background-color: var(--accent2);
-  border-radius: 3px;
-}
-.song-list li {
-  padding: 0.29rem 0.5rem;
-  border-bottom: 1px solid #251e36;
-  font-size: 1rem;
-  color: #d2d1ed;
-}
-
-/* Contact, Subscribe */
+/* Contact */
 .contact-section {
   background: linear-gradient(110deg, #2d2037 20%, #20185a 80%);
   border-radius: 24px;
@@ -248,50 +158,10 @@ nav .nav-list li a:focus-visible {
   margin-top: 4rem;
   text-align: center;
   color: #e4e7ff;
-  box-shadow: 0 8px 40px #0d0d0d88;
 }
 .contact-section h2 { color: var(--accent2); font-weight: 700; }
-.subscribe-section {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-.subscribe-section input {
-  padding: 0.7rem 1rem;
-  border-radius: 30px;
-  border: none;
-  width: 270px;
-  font-size: 1em;
-  background: #120d22;
-  color: #eef;
-  margin-bottom: 0.7em;
-  box-shadow: 0 2px 12px #AA00FF22;
-  transition: box-shadow 0.3s;
-}
-.subscribe-section input:focus {
-  box-shadow: 0 0 8px 2px var(--accent2);
-  outline: none;
-}
-.subscribe-section button {
-  background: var(--accent2);
-  border: none;
-  color: var(--dark);
-  border-radius: 30px;
-  padding: 0.8em 2.2em;
-  font-weight: 700;
-  font-size: 1.1em;
-  cursor: pointer;
-  box-shadow: 0 4px 12px #AA00FF33;
-  transition: background 0.3s, color 0.3s;
-}
-.subscribe-section button:hover,
-.subscribe-section button:focus {
-  background: var(--accent);
-  color: var(--light);
-}
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1.3rem;
@@ -301,6 +171,7 @@ footer {
   background: linear-gradient(90deg, var(--accent2), var(--accent));
   border-radius: 16px 16px 0 0;
 }
+
 /* ===== Responsive Navbar (Pure CSS Hamburger) ===== */
 @media (max-width: 700px) {
   .header-inner {
@@ -350,7 +221,6 @@ footer {
     transition: all 0.3s ease;
   }
 
-  /* Transform bars into X when checked */
   #menu-toggle:checked + .menu-icon span:nth-child(1) {
     transform: rotate(45deg) translateY(8px);
   }
@@ -361,7 +231,6 @@ footer {
     transform: rotate(-45deg) translateY(-8px);
   }
 
-  /* Slide nav open */
   #menu-toggle:checked ~ nav {
     right: 0;
   }
@@ -371,11 +240,9 @@ footer {
     font-weight: 700;
   }
 
-  /* Keep album grid responsive too */
   .albums-grid {
     grid-template-columns: 1fr;
     gap: 1.3rem;
   }
 }
-
 
