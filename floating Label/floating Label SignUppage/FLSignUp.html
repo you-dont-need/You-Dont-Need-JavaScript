@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Label Input with Validation</title>
+  <link rel="stylesheet" href="FLSignUp.css".css">
+</head>
+<body>
+
+  <main class="demo-page">
+    <h1>Floating Label Input- Sign Up </h1>
+
+    <form class="form" novalidate>
+      <!-- Email Field -->
+      <div class="input-group">
+        <input id="email" type="email" placeholder=" " required>
+        <label for="email">Email address</label>
+        <div class="bar"></div>
+
+        <!-- Validation messages -->
+        <div class="validation-msg success">Looks good!</div>
+        <div class="validation-msg error">Please enter a valid email.</div>
+        <br>
+
+        <p class="helper">We'll never share your email.</p>
+        <br>
+        
+      </div>
+
+      <!-- Password Field -->
+      <div class="input-group">
+        <input id="password" type="password" placeholder=" " minlength="8" required>
+        <label for="password">Password</label>
+        <div class="bar"></div>
+
+        <!-- Validation messages -->
+        <div class="validation-msg success">Strong password!</div>
+        <div class="validation-msg error">Must be at least 8 characters.</div>
+        <br>
+        <p class="helper">Use a mix of letters and numbers.</p>
+        <br>
+      </div>
+
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+  </main>
+
+</body>
+</html>

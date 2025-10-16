@@ -94,6 +94,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Retro Loader](#RetroLoader)
 - [Ripple Effect](#ripple-effect)
 - [Redar Loader](#Redar-Loader)
+- [Resizable Split Panel](#resizable-split-panel)
 - [Scary Animation](#scary-animation)
 - [Scenery](#scenery)
 - [Scroll Video Cinematic Animation](#scroll-video-cinematic)
@@ -657,6 +658,14 @@ Your browser does not support the video tag.
 
 ---
 
+## <a id="resizable-split-panel"></a>Resizable Split Panel
+
+[<img src="images/resizable_panel_demo.gif" title="Resizable Split Panel Demo">](https://codepen.io/VINAY-MADIVAL/pen/ogboooB)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="login"></a>A login Page with Glassmorphism Effect
 
 [<img src="Login_Page/log-in-6398177_1280.png" title="Responsive Login Page with Glassmorphism Effect">]
@@ -1198,6 +1207,14 @@ A modern, interactive scroll-driven video animation created with pure CSS. Featu
 ## <a id="piano"></a>Piano
 
 [<img src="images/piano.png" height="230" title="Piano">](Piano/index.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="mewtwo-card"></a>Mewtwo Pokémon Card
+
+[<img src="images/mewtwo-card.png" height="230" title="Mewtwo Pokémon Card">](Pokemon-Mewtwo-Card/mewtwo.html)
 
 **[⬆ back to top](#quick-links)**
 
