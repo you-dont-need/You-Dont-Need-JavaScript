@@ -78,6 +78,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [MasterCard](#mastercard)
 - [Mobile Menu Off Canvas](#mobile-menu-off-canvas)
 - [Modal/Popup](#modalpopup)
+- [Mondrian Composition](#mondrian-composition)
 - [Mouse Tracking](#mouse-tracking)
 - [Multi Step Checkout](#multi-step-checkout)
 - [NavBar](#navbar)
@@ -501,6 +502,13 @@ Your browser does not support the video tag.
 
 [<img src="images/modal2.png" height="230" title="Demo 1">](https://codepen.io/peiche/pen/vhqym)
 [<img src="images/modal.png" height="230" title="Demo 2">](https://codepen.io/chrisburnell/pen/scyKF)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="mondrian-composition"></a>Mondrian Composition
+[<img src="images/mondrian_composition.png" height="230" title="Mondrian Art Demo">](https://codepen.io/VINAY-MADIVAL/pen/VYerdxY)
 
 **[⬆ back to top](#quick-links)**
 
