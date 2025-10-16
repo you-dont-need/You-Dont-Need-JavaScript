@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resizable Split Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input class="sr-only" type="radio" name="pos" id="p20" />
+  <input class="sr-only" type="radio" name="pos" id="p40" checked />
+  <input class="sr-only" type="radio" name="pos" id="p60" />
+  <input class="sr-only" type="radio" name="pos" id="p80" />
+
+  <main class="viewport">
+    <div class="card" role="group" aria-label="Resizable split panel (CSS only)">
+      <div class="split">
+        <section class="panel left" aria-label="Left panel">
+          <h2>Left panel</h2>
+          <p class="muted">Adjustable sidebar area</p>
+        </section>
+
+        <aside class="gutter" aria-hidden="false">
+          <div class="vertical-controls" role="toolbar" aria-label="Resize controls">
+            <label for="p20" class="btn btn-20" tabindex="0" aria-label="Set split to 20 percent">20%</label>
+            <label for="p40" class="btn btn-40" tabindex="0" aria-label="Set split to 40 percent">40%</label>
+            <label for="p60" class="btn btn-60" tabindex="0" aria-label="Set split to 60 percent">60%</label>
+            <label for="p80" class="btn btn-80" tabindex="0" aria-label="Set split to 80 percent">80%</label>
+          </div>
+        </aside>
+
+        <section class="panel right" aria-label="Right panel">
+          <h2>Right panel</h2>
+          <p class="muted">Main content area</p>
+        </section>
+      </div>
+
+      <p class="instructions">Click a button on the divider to resize the panels.</p>
+      <p class="instructions">Arrow-key navigation: use ← / → (or ↑ / ↓) to change the split.</p>
+  </main>
+</body>
+</html>

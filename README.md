@@ -94,6 +94,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Retro Loader](#RetroLoader)
 - [Ripple Effect](#ripple-effect)
 - [Redar Loader](#Redar-Loader)
+- [Resizable Split Panel](#resizable-split-panel)
 - [Scary Animation](#scary-animation)
 - [Scenery](#scenery)
 - [Scroll Video Cinematic Animation](#scroll-video-cinematic)
@@ -652,6 +653,14 @@ Your browser does not support the video tag.
 ## <a id="Redar Loader"></a>Readar Loader
 
 [<img src="images/redar_loader.gif" title="Redar Loader">](https://codepen.io/shail2604/pen/JoGKqda)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="resizable-split-panel"></a>Resizable Split Panel
+
+[<img src="images/resizable_panel_demo.gif" title="Resizable Split Panel Demo">](https://codepen.io/VINAY-MADIVAL/pen/ogboooB)
 
 **[⬆ back to top](#quick-links)**
 
