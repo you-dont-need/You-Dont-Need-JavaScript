@@ -3,7 +3,7 @@
   --surface: #fff;
   --text: #1f2937;
   --muted: #6b7280;
-  --accent: #2563eb;
+  --accent: #abb9d6;
   --danger: #dc2626;
   --radius: 8px;
   --transition: 0.28s cubic-bezier(.2,.9,.2,1);
@@ -33,19 +33,23 @@ body{
   background:var(--surface);
   border-radius:12px;
   padding:28px;
-  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+  box-shadow: 0 6px 18px rgba(41, 45, 56, 0.06);
+  
 }
 
 h1{
-  margin:0 0 20px;
-  font-size:20px;
+  margin:0 0 32px;
+  font-size:24px;
   color:var(--text);
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 16px;
 }
 
 /* Form layout */
 .form{
   display:grid;
-  gap:18px;
+  gap:40px;
 }
 
 /* Input group wrapper */
@@ -64,7 +68,7 @@ h1{
   padding:18px 12px 6px 12px; /* top padding leaves room for label */
   font-size:16px;
   border-radius:8px;
-  border:1px solid transparent;
+  border:1px solid #515d6c;
   background:transparent;
   outline:none;
   color:var(--text);
@@ -80,7 +84,12 @@ h1{
 .input-group--textarea textarea{
   height:auto;
   min-height:88px;
-  padding:22px 12px 12px 12px;
+  padding:35px 12px 12px 12px; /* Increased top padding to match the floating label spacing */
+}
+
+.input-group--textarea label {
+  background-color: var(--surface); /* Match the background color */
+  z-index: 3; /* Ensure label stays above the textarea */
 }
 
 /* Invisible placeholder trick — MUST have placeholder=" " in HTML */
@@ -96,7 +105,7 @@ h1{
   top: 20px;
   transform-origin:left top;
   font-size:16px;
-  color:var(--muted);
+  color:var(--accent);
   pointer-events:none;
   transition: transform var(--transition), color var(--transition), top var(--transition), font-size var(--transition);
   background:transparent;
@@ -155,9 +164,20 @@ h1{
 .input-group textarea:not(:placeholder-shown) + label,
 .input-group input:valid + label,
 .input-group textarea:valid + label {
-  transform: translateY(-10px) scale(var(--label-scale));
-  color:var(--accent);
-  top:8px;
+  transform: translateY(-24px) scale(var(--label-scale));
+  color: var(--muted);
+  top: 8px;
+  letter-spacing: 0.3px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  background-color: var(--surface);
+  padding: 0 4px;
+}
+
+/* Change label color to accent only when focused */
+.input-group input:focus + label,
+.input-group textarea:focus + label {
+  color: var(--accent);
 }
 
 /* Focused input: show accent */
@@ -198,8 +218,49 @@ h1{
 
 /* improve click / focus area */
 .input-group input:focus,
+
+/* Submit button styles */
+.actions {
+  margin-top: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: var(--input-height);
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: var(--radius);
+  background: #22c55e;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.16s, opacity 0.16s, background-color 0.2s;
+  box-shadow: 0 2px 4px rgba(34, 197, 94, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  background: #16a34a;
+  box-shadow: 0 4px 6px rgba(34, 197, 94, 0.25);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  opacity: 1;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+}
+
+.input-group input:focus,
 .input-group textarea:focus{
-  border-color:transparent;
+  border-color:rgb(164, 208, 255);
 }
 
 /* small screens */
@@ -220,3 +281,6 @@ h1{
     background: linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
   }
 }
+
+
+
