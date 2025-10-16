@@ -1,0 +1,286 @@
+:root{
+  --bg: #f7f8fb;
+  --surface: #fff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #abb9d6;
+  --danger: #dc2626;
+  --radius: 8px;
+  --transition: 0.28s cubic-bezier(.2,.9,.2,1);
+  --input-height: 48px;
+  --label-scale: 0.78;
+}
+
+/* Page reset / layout */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:40px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+.demo-page{
+  width:100%;
+  max-width:720px;
+  background:var(--surface);
+  border-radius:12px;
+  padding:28px;
+  box-shadow: 0 6px 18px rgba(41, 45, 56, 0.06);
+  
+}
+
+h1{
+  margin:0 0 32px;
+  font-size:24px;
+  color:var(--text);
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 16px;
+}
+
+/* Form layout */
+.form{
+  display:grid;
+  gap:40px;
+}
+
+/* Input group wrapper */
+.input-group{
+  position:relative;
+  display:block;
+  background:transparent;
+  padding-top:10px;
+}
+
+/* common for inputs and textarea */
+.input-group input,
+.input-group textarea{
+  width:100%;
+  height:var(--input-height);
+  padding:18px 12px 6px 12px; /* top padding leaves room for label */
+  font-size:16px;
+  border-radius:8px;
+  border:1px solid #515d6c;
+  background:transparent;
+  outline:none;
+  color:var(--text);
+  caret-color:var(--accent);
+  transition: box-shadow var(--transition), border-color var(--transition);
+  /* put on top of the bar */
+  position:relative;
+  z-index:1;
+  resize:vertical;
+}
+
+/* make textarea taller visually */
+.input-group--textarea textarea{
+  height:auto;
+  min-height:88px;
+  padding:35px 12px 12px 12px; /* Increased top padding to match the floating label spacing */
+}
+
+.input-group--textarea label {
+  background-color: var(--surface); /* Match the background color */
+  z-index: 3; /* Ensure label stays above the textarea */
+}
+
+/* Invisible placeholder trick — MUST have placeholder=" " in HTML */
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+  color:transparent;
+}
+
+/* floating label */
+.input-group label{
+  position:absolute;
+  left:12px;
+  top: 20px;
+  transform-origin:left top;
+  font-size:16px;
+  color:var(--accent);
+  pointer-events:none;
+  transition: transform var(--transition), color var(--transition), top var(--transition), font-size var(--transition);
+  background:transparent;
+  padding:0 6px;
+  z-index:2;
+}
+
+/* underline / accent bar */
+.input-group .bar{
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:8px;
+  height:2px;
+  background:linear-gradient(90deg, rgba(0,0,0,0.08), rgba(0,0,0,0.02));
+  border-radius:2px;
+  overflow:hidden;
+  transform-origin:left center;
+  z-index:0;
+}
+
+/* animated accent line (pseudo) */
+.input-group .bar::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:0%;
+  background:linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 70%, white));
+  transition: width 0.32s cubic-bezier(.2,.9,.2,1);
+}
+
+/* Helper text */
+.helper{
+  margin:8px 0 0 12px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* error helper */
+.helper.error{
+  color:var(--danger);
+  display:none; /* shown only when invalid */
+}
+
+/* ========== Interaction: float label & accent ==========
+   We use :focus, :placeholder-shown (when empty), and :valid/:invalid for validation.
+   The input should include placeholder=" " in HTML for :placeholder-shown to toggle correctly.
+   ========== */
+
+/* When input is focused OR has content (not placeholder-shown) -> float */
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:not(:placeholder-shown) + label,
+.input-group input:valid + label,
+.input-group textarea:valid + label {
+  transform: translateY(-24px) scale(var(--label-scale));
+  color: var(--muted);
+  top: 8px;
+  letter-spacing: 0.3px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  background-color: var(--surface);
+  padding: 0 4px;
+}
+
+/* Change label color to accent only when focused */
+.input-group input:focus + label,
+.input-group textarea:focus + label {
+  color: var(--accent);
+}
+
+/* Focused input: show accent */
+.input-group input:focus ~ .bar::after,
+.input-group textarea:focus ~ .bar::after{
+  width:100%;
+}
+
+/* Valid input: subtle accent */
+.input-group input:valid ~ .bar::after,
+.input-group textarea:valid ~ .bar::after{
+  width:100%;
+  background: linear-gradient(90deg, #16a34a, color-mix(in srgb, #16a34a 60%, white));
+}
+
+/* Invalid input: highlight border and show helper error */
+.input-group input:invalid,
+.input-group textarea:invalid{
+  box-shadow: 0 0 0 4px rgba(220,38,38,0.06);
+}
+
+.input-group input:invalid ~ .bar::after,
+.input-group textarea:invalid ~ .bar::after{
+  width:100%;
+  background: linear-gradient(90deg, var(--danger), color-mix(in srgb, var(--danger) 70%, white));
+}
+
+.input-group input:invalid + label,
+.input-group textarea:invalid + label{
+  color:var(--danger);
+}
+
+/* show error helper when invalid */
+.input-group input:invalid ~ .helper.error,
+.input-group textarea:invalid ~ .helper.error{
+  display:block;
+}
+
+/* improve click / focus area */
+.input-group input:focus,
+
+/* Submit button styles */
+.actions {
+  margin-top: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: var(--input-height);
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: var(--radius);
+  background: #22c55e;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.16s, opacity 0.16s, background-color 0.2s;
+  box-shadow: 0 2px 4px rgba(34, 197, 94, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  background: #16a34a;
+  box-shadow: 0 4px 6px rgba(34, 197, 94, 0.25);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  opacity: 1;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+  border-color:rgb(164, 208, 255);
+}
+
+/* small screens */
+@media (max-width:420px){
+  .demo-page{padding:18px}
+}
+
+/* Optional dark mode */
+@media (prefers-color-scheme: dark) {
+  :root{
+    --bg: #0b1220;
+    --surface: #071127;
+    --text: #e6eef8;
+    --muted: #9aa7bd;
+  }
+  .demo-page{box-shadow: 0 10px 30px rgba(0,0,0,0.6)}
+  .input-group .bar{
+    background: linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  }
+}
+
+
+
