@@ -1210,6 +1210,14 @@ A modern, interactive scroll-driven video animation created with pure CSS. Featu
 
 ---
 
+## <a id="kaleidoscope"></a>Kaleidoscope
+
+[<img src="images/kaleidoscope.png" height="230" title="Kaleidoscope">](Kaleidoscope/index.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## Contributors
 
 Thanks to these wonderful people who have contributed to this project!

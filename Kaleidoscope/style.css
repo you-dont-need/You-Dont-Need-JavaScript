@@ -1,0 +1,153 @@
+:root {
+    --bg: #07080d;
+    --c1: #6ee7ff;
+    --c2: #98f39a;
+    --c3: #d2a8ff;
+    --c4: #ffd166;
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/fi%3E%3Crect width='100' height='100' filter='url(%23f)' opacity='.6'/%3E%3C/svg%3E");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: radial-gradient(1200px 800px at 50% 15%, #0a0d18 0%, #060711 60%, #04050b 100%);
+    color: #cbd5e1;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.viewport {
+    width: min(92vw, 900px);
+    aspect-ratio: 1/1;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, .55);
+    background: #000;
+    display: grid;
+    place-items: center;
+}
+
+.scope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    isolation: isolate;
+}
+
+/* base radial mask for a soft vignette */
+.scope::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(75% 75% at 50% 50%, transparent 60%, rgba(0, 0, 0, .5) 90%, rgba(0, 0, 0, .85));
+    mix-blend-mode: multiply;
+}
+
+/* Layers: repeating-conic-gradients rotated and masked to create kaleidoscope wedges */
+.layer {
+    position: absolute;
+    inset: -10%;
+    filter: blur(2px) saturate(130%);
+    mix-blend-mode: screen;
+}
+
+/* mask to keep pattern in a circle */
+.layer {
+    -webkit-mask: radial-gradient(closest-side, #000 98%, transparent 100%);
+    mask: radial-gradient(closest-side, #000 98%, transparent 100%);
+}
+
+.l1 {
+    background:
+        repeating-conic-gradient(from 0deg,
+            var(--c1) 0 6deg,
+            transparent 6deg 12deg,
+            var(--c2) 12deg 18deg,
+            transparent 18deg 24deg,
+            var(--c3) 24deg 30deg,
+            transparent 30deg 36deg);
+    animation: spin 28s linear infinite;
+}
+
+.l2 {
+    background:
+        repeating-conic-gradient(from 15deg,
+            var(--c3) 0 8deg,
+            transparent 8deg 16deg,
+            var(--c4) 16deg 22deg,
+            transparent 22deg 28deg,
+            var(--c1) 28deg 34deg,
+            transparent 34deg 40deg);
+    transform: scale(1.02);
+    animation: spin-rev 36s linear infinite;
+}
+
+.l3 {
+    background:
+        repeating-conic-gradient(from -10deg,
+            var(--c2) 0 10deg,
+            transparent 10deg 20deg,
+            var(--c1) 20deg 26deg,
+            transparent 26deg 32deg,
+            var(--c4) 32deg 38deg,
+            transparent 38deg 44deg);
+    transform: scale(1.08);
+    filter: blur(4px) saturate(150%);
+    animation: pulse 5s ease-in-out infinite, spin 60s linear infinite;
+}
+
+/* tiny film grain for texture */
+.grain {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .35;
+    mix-blend-mode: soft-light;
+    background: var(--grain);
+    background-size: 140px 140px;
+    animation: film 12s steps(12) infinite;
+}
+
+@keyframes film {
+    to {
+        background-position: 140px 140px;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-rev {
+    to {
+        transform: rotate(-360deg) scale(1.02);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .l1, .l2, .l3, .grain {
+        animation: none;
+    }
+}
