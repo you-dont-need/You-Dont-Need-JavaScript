@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Only Password Strength Meter</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+     input:invalid ~ .strength::before {
+      width: 30%;
+      background: #ff4d4d;
+    }
+
+    input:valid ~ .strength::before {
+      width: 100%;
+      background: #4caf50;
+    }
+   
+    input:not(:placeholder-shown):not(:valid):not(:invalid) ~ .strength::before {
+      width: 60%;
+      background: #fbc02d;
+    }
+
+    .hint {
+      font-size: 13px;
+      color: #666;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    input:valid {
+      border-color: #4caf50;
+      box-shadow: 0 0 8px rgba(76,175,80,0.3);
+    }
+
+    input:invalid {
+      border-color: #ff4d4d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Create Password</h2>
+    <form>
+      <input type="password" placeholder="Enter password"
+             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" required>
+      <div class="strength"></div>
+      <div class="hint">
+        Must contain at least 8 characters, including<br>
+        1 uppercase, 1 lowercase, 1 number, and 1 symbol.
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
