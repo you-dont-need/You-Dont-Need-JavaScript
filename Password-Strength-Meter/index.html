@@ -1,60 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Only Password Strength Meter</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Only Password Strength Checker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+        <h2><s>No</s><br>JavaScript</h2>
+    </div>
+    <div class="container">
+        
+      <h2>Password Strength Checker</h2>
+      <form>
+        <div class="password-box">
+          <input
+            id="pwd"
+            type="password"
+            placeholder="Enter your password"
+            required
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}"
+          />
+          <div class="strength"></div>
+          <!-- <div class="strength-text">Weak</div> -->
+        </div>
 
-     input:invalid ~ .strength::before {
-      width: 30%;
-      background: #ff4d4d;
-    }
-
-    input:valid ~ .strength::before {
-      width: 100%;
-      background: #4caf50;
-    }
-   
-    input:not(:placeholder-shown):not(:valid):not(:invalid) ~ .strength::before {
-      width: 60%;
-      background: #fbc02d;
-    }
-
-    .hint {
-      font-size: 13px;
-      color: #666;
-      margin-top: 10px;
-      text-align: left;
-    }
-
-    input:valid {
-      border-color: #4caf50;
-      box-shadow: 0 0 8px rgba(76,175,80,0.3);
-    }
-
-    input:invalid {
-      border-color: #ff4d4d;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <h2>Create Password</h2>
-    <form>
-      <input type="password" placeholder="Enter password"
-             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" required>
-      <div class="strength"></div>
-      <div class="hint">
-        Must contain at least 8 characters, including<br>
-        1 uppercase, 1 lowercase, 1 number, and 1 symbol.
-      </div>
-    </form>
-  </div>
-
-</body>
+        <div class="hint">
+          <strong>Requirements:</strong> 8+ characters with uppercase, lowercase, numbers, and symbols (@$!%*?&)
+        </div>
+      </form>
+    </div>
+  </body>
 </html>

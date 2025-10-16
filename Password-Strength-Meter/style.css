@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", "Poppins", sans-serif;
+  background: #fffbf0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 60px;
+  padding: 40px;
+}
+
+.wrapper {
+  background: #fff;
+  padding: 50px 40px;
+  border: 3px solid #f4c430;
+  max-width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.wrapper::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: #f4c430;
+  z-index: -1;
+  transform: rotate(2deg);
+}
+
+.wrapper h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #2c2c2c;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.wrapper h2 s {
+  color: #d32f2f;
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+}
+
+/* Checker Section */
+.container {
+  background: #fff;
+  padding: 50px 40px;
+  border: 3px solid #ffcc02;
+  max-width: 450px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: #ffcc02;
+  z-index: -1;
+  transform: rotate(-1deg);
+}
+
+.container h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #2c2c2c;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.password-box {
+  width: 100%;
+  margin: 0;
+  font-family: inherit;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #2c2c2c;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 18px 20px;
+  border: 2px solid #f0f0f0;
+  background: #fefefe;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  transition: all 0.2s ease;
+  color: #2c2c2c;
+  font-family: 'Courier New', monospace;
+}
+
+input[type="password"]:focus {
+  border-color: #f4c430;
+  background: #fffef8;
+}
+
+input[type="password"]::placeholder {
+  color: #999;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+.strength {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  margin-top: 15px;
+  background: #f0f0f0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Strength levels with solid colors */
+input:not(:placeholder-shown):not(:valid):not(:invalid) ~ .strength {
+  background: #ffe0e0;
+}
+
+input:invalid:not(:placeholder-shown) ~ .strength {
+  background: #fff8e1;
+}
+
+input:valid ~ .strength {
+  background: #f0f8e1;
+}
+
+.strength::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+/* Optional */
+input:not(:placeholder-shown):not(:valid):not(:invalid) ~ .strength::after {
+  background: #f57c00;
+}
+
+input:invalid:not(:placeholder-shown) ~ .strength::after {
+  background: #d32f2f;
+}
+
+input:valid ~ .strength::after {
+  background: #388e3c;
+}
+
+/* Trigger animation when password is being typed */
+input:not(:placeholder-shown) ~ .strength::after {
+  transform: scaleX(1);
+}
+
+
+.strength-text {
+  font-size: 12px;
+  margin-top: 8px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+input:not(:placeholder-shown):not(:valid):not(:invalid) ~ .strength-text {
+  opacity: 1;
+  color: #d32f2f;
+}
+
+input:invalid:not(:placeholder-shown) ~ .strength-text {
+  opacity: 1;
+  color: #f57c00;
+}
+
+input:valid ~ .strength-text {
+  opacity: 1;
+  color: #388e3c;
+}
+
+.hint {
+  font-size: 13px;
+  color: #666;
+  margin-top: 25px;
+  line-height: 1.5;
+  padding: 20px;
+  background: #fffbf0;
+  border-left: 4px solid #f4c430;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 20px;
+  }
+  
+  .wrapper, .container {
+    max-width: 100%;
+  }
+  
+  .wrapper {
+    padding: 40px 30px;
+  }
+  
+  .wrapper h2 {
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding: 40px 30px;
+  }
+  
+  .container h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper h2 {
+    font-size: 1.8rem;
+  }
+  
+  .container h2 {
+    font-size: 1.3rem;
+  }
+  
+  input[type="password"] {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+}
