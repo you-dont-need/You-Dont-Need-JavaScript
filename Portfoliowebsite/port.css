@@ -10,10 +10,11 @@ body{
     color: aliceblue;
     overflow:auto;
 }
+
 .components{
     display:flex;
     list-style: none;
-    
+    height: 40px;
 }
 .name{
     list-style: none;
@@ -31,9 +32,12 @@ nav{
     height: 3rem;
 
 }
+ul li {
+    margin: auto;
+}
 ul li a{
     margin:5px 10px;
-    padding:8px;
+    /* padding:8px; */
     font-family: 'Mukta', sans-serif;
     color: aliceblue;
     text-decoration: none;
@@ -101,7 +105,7 @@ ul li a:hover{
     height:540px;
 }
 .one{
-    height:65px;
+    height:40px;
     border-left: 3px solid white;
 }
 .container{
@@ -118,11 +122,6 @@ ul li a:hover{
 #skills h4{
     font-family: 'Merriweather', serif;
    
-}
-.year{
-   
-    margin:7.5px;
-    font-family: 'Merriweather', serif;
 }
 
 #icon{
@@ -144,7 +143,7 @@ ul li a:hover{
    
 }
 #vertical{
-    height: 70px;
+    height: 50px;
 }
 .btn{
     
@@ -171,12 +170,18 @@ ul li a:hover{
 }
 .footer{
     display:flex;
-    justify-content: space-evenly;
-   
+    justify-content: space-around;
+    position: relative;
+}
+.service{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 footer{
+    margin-top: 50px;
     background-color: black;
-    height:140px;
+    /* height:140px; */
     padding: 30px 18px;
     
 }
@@ -191,4 +196,82 @@ footer{
 .division{
     background-color: blueviolet;
     height: 0.1rem;
+}
+
+@media (max-width: 950px){
+    .con{
+        flex-direction: column;
+    }
+
+    .container{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .exp{
+        display: flex;
+    }
+
+    .one{
+        width: 50px;
+        height: 2px;
+        background-color: aliceblue;
+    }
+
+    #vertical{
+        height: auto;
+        margin: 10px;
+    }
+
+    .Experience{
+        margin: 40px 100px;
+        height: auto;
+    }
+
+    .service{
+        gap: 30px;
+    }
+    
+    .box{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .components{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 650px){
+    .one{
+        width: 20px;
+        height: 2px;
+        background-color: aliceblue;
+    }
+
+    .Experience{
+        margin: 40px 60px;
+    }
+
+    .service{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .box{
+        justify-content: space-around;
+        height: 80px;
+        /* margin-top: 0px; */
+    }
+    
+    
+    .components{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-top: -27px;
+        font-size: 13px;
+    }
+
+    
 }
