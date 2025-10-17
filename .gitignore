@@ -1,2 +1,2 @@
 *.vscode/settings.json
-/ .history
+/ .history.DS_Store

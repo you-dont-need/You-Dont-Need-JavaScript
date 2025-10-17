@@ -1,0 +1,203 @@
+:root {
+  --bg: #f7f8fb;
+  --surface: #fff;
+  --text: #afb9c4;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --radius: 8px;
+  --transition: 0.28s cubic-bezier(.2, .9, .2, 1);
+  --label-scale: 0.78;
+}
+
+/* Layout */
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.demo-page {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Input Group */
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input */
+.input-group input {
+  color : white;
+  font-size: 16px;
+  padding: 14px 12px 6px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  background: transparent;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+/* Hide placeholder text */
+.input-group input::placeholder {
+  color: transparent;
+}
+
+/* Label */
+.input-group label {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  color: var(--muted);
+  font-size: 16px;
+  pointer-events: none;
+  background: var(--surface);
+  transition: all var(--transition);
+  padding: 0 4px;
+}
+
+/* Floating effect */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 8px;
+  font-size: 12px;
+  color: var(--accent);
+}
+
+/* Bar effect */
+.bar {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 8px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width var(--transition);
+}
+
+/* Focus underline animation */
+.input-group input:focus ~ .bar::after {
+  width: 100%;
+}
+
+/* Validation Messages */
+.validation-msg {
+  font-size: 13px;
+  margin: 6px 0 0 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  line-height: 1.4;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.validation-msg.success {
+  background: rgba(22, 163, 74, 0.15);
+  color: var(--success);
+}
+
+.validation-msg.error {
+  background: rgba(220, 38, 38, 0.15);
+  color: var(--danger);
+}
+
+/* Show validation feedback below input */
+.input-group input:valid ~ .validation-msg.success {
+  display: block;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.input-group input:invalid:not(:placeholder-shown) ~ .validation-msg.error {
+  display: block;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Helper Text */
+.helper {
+  margin: 6px 0 0 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Submit Button */
+.btn {
+  padding: 10px 16px;
+  font-size: 16px;
+  color: white;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #1e40af;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --surface: #071127;
+    --text: #e6eef8;
+    --muted: #9aa7bd;
+  }
+
+  .demo-page {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  }
+
+  .bar {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
