@@ -20,29 +20,85 @@
         .nav-item:hover::after {
             transform: scaleX(1);
         }
+
+        /* --- CSS FOR MOBILE SIDEBAR (TOP-RIGHT ALIGNED) --- */
+
+        @media (max-width: 767px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                /* MODIFICATION 1: Position back to the right edge */
+                right: 0; 
+                height: 100vh;
+                width: 75%; 
+                max-width: 300px;
+                background-color: #111827;
+                z-index: 50;
+                display: flex;
+                flex-direction: column;
+                
+                /* MODIFICATION 2: Align items to the start (left) of the sidebar */
+                align-items: flex-start; 
+                
+                /* MODIFICATION 3: Justify content to the start (top) */
+                justify-content: flex-start;
+                
+                /* MODIFICATION 4: Add padding for spacing */
+                padding-top: 5rem;
+                padding-left: 2rem;
+                
+                /* MODIFICATION 5: Change transform back to horizontal slide */
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            #menu-toggle:checked ~ .nav-links {
+                /* MODIFICATION 6: Show menu by sliding it in from the right */
+                transform: translateX(0);
+            }
+
+            .nav-links li {
+                width: 80%;
+                /* MODIFICATION 7: Align text to the left for readability */
+                text-align: left; 
+                padding-bottom: 0.75rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+            .nav-links li a {
+                display: inline-block;
+                padding-top: 0.75rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
-    <!-- Navbar -->
-    <nav class="bg-gray-800 p-4 transition-shadow duration-300 hover:shadow-lg hover:shadow-red-500/50 hover:shadow-green-500/50 hover:shadow-blue-500/50">
+    <nav class="bg-gray-800 p-4 sticky top-0 z-10">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl font-bold">E-Shop</a>
-            <input type="checkbox" id="menu-toggle" class="hidden peer">
+            <input type="checkbox" id="menu-toggle" class="hidden">
             <label for="menu-toggle" class="menu-button text-white cursor-pointer md:hidden">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </label>
-            <ul class="nav-links flex-col space-y-4 md:flex md:flex-row md:space-y-0 md:space-x-4 hidden peer-checked:flex">
-                <li><a href="#" class="nav-item relative px-3 py-2 rounded-md hover:bg-gradient-to-r from-white/10 to-white/20 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-red-500/50 hover:shadow-green-500/50 hover:shadow-blue-500/50">Home</a></li>
-                <li><a href="#" class="nav-item relative px-3 py-2 rounded-md hover:bg-gradient-to-r from-white/10 to-white/20 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-red-500/50 hover:shadow-green-500/50 hover:shadow-blue-500/50">Shop</a></li>
-                <li><a href="#" class="nav-item relative px-3 py-2 rounded-md hover:bg-gradient-to-r from-white/10 to-white/20 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-red-500/50 hover:shadow-green-500/50 hover:shadow-blue-500/50">About</a></li>
-                <li><a href="#" class="nav-item relative px-3 py-2 rounded-md hover:bg-gradient-to-r from-white/10 to-white/20 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-red-500/50 hover:shadow-green-500/50 hover:shadow-blue-500/50">Contact</a></li>
+
+            <ul class="nav-links md:flex md:flex-row md:space-x-4">
+                <li class="absolute top-5 left-5 md:hidden">
+                    <label for="menu-toggle" class="cursor-pointer">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </label>
+                </li>
+                <li><a href="#" class="nav-item relative px-3 py-2 rounded-md text-xl md:text-base hover:bg-gradient-to-r from-white/10 to-white/20 transition-transform duration-300 hover:scale-110">Home</a></li>
+                <li><a href="#" class="nav-item relative px-3 py-2 rounded-md text-xl md:text-base hover:bg-gradient-to-r from-white/10 to-white/20 transition-transform duration-300 hover:scale-110">Shop</a></li>
+                <li><a href="#" class="nav-item relative px-3 py-2 rounded-md text-xl md:text-base hover:bg-gradient-to-r from-white/10 to-white/20 transition-transform duration-300 hover:scale-110">About</a></li>
+                <li><a href="#" class="nav-item relative px-3 py-2 rounded-md text-xl md:text-base hover:bg-gradient-to-r from-white/10 to-white/20 transition-transform duration-300 hover:scale-110">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Header -->
     <header class="bg-cover bg-center h-screen fill-current" style="background-image: url('https://t3.ftcdn.net/jpg/05/35/13/82/360_F_535138292_62ZnI4Hcw37J8Jaeg4E9TzJwUciCwSnp.jpg');">
         <div class="container mx-auto h-full flex items-center justify-center">
             <div class="text-center animate-fade-in">
@@ -53,12 +109,11 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="py-12 bg-gray-100 text-gray-900">
-        <div class="container mx-auto text-center">
+        <div class="container mx-auto text-center px-4">
             <h2 class="text-3xl font-bold mb-8 animate-fade-in">About Us</h2>
             <div class="flex flex-col md:flex-row items-center">
-                <img src="https://kinsta.com/wp-content/uploads/2021/11/about-us-page.png" alt="About Us" class="h-96 w-2/4 mb-8 md:mb-0 md:mr-8 rounded-lg transform transition duration-500 hover:scale-105">
+                <img src="https://kinsta.com/wp-content/uploads/2021/11/about-us-page.png" alt="About Us" class="w-full md:w-1/2 mb-8 md:mb-0 md:mr-8 rounded-lg transform transition duration-500 hover:scale-105">
                 <p class="text-lg animate-fade-in text-justify">
                     Welcome to E-Shop, your number one source for all things [product, ie: shoes, electronics, etc.]. We're dedicated to giving you the very best of [product], with a focus on dependability, customer service, and uniqueness.
                     Founded in [year] by [founder name], E-Shop has come a long way from its beginnings in a [starting location, ie: home office, toolshed, Houston, TX.]. When [founder name] first started out, [his/her/their] passion for [brand message - ie: "eco-friendly cleaning products"] drove them to [action: quit day job, do tons of research, etc.] so that E-Shop can offer you [competitive differentiator - ie: "the world's most advanced toothbrush"]. We now serve customers all over [place - town, country, the world], and are thrilled that we're able to turn our passion into our own website.
@@ -69,34 +124,29 @@
         </div>
     </main>
 
-    <!-- Customer Testimonials -->
-<section class="py-12 bg-white text-gray-900">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8 animate-fade-in">Customer Testimonials</h2>
-        <div class="flex flex-col md:flex-row items-center justify-center">
-            <!-- Testimonial 1 -->
-            <div class="max-w-sm mx-4 mb-8 md:mb-0">
-                <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Customer 1" class="h-24 w-24 rounded-full mx-auto mb-4">
-                <h3 class="text-xl font-semibold mb-2">Jane Doe</h3>
-                <p class="text-lg">"E-Shop has the best products I've ever used. Their customer service is top-notch!"</p>
-            </div>
-            <!-- Testimonial 2 -->
-            <div class="max-w-sm mx-4 mb-8 md:mb-0">
-                <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Customer 2" class="h-24 w-24 rounded-full mx-auto mb-4">
-                <h3 class="text-xl font-semibold mb-2">John Smith</h3>
-                <p class="text-lg">"I love shopping at E-Shop. They always have what I need and more!"</p>
-            </div>
-            <!-- Testimonial 3 -->
-            <div class="max-w-sm mx-4 mb-8 md:mb-0">
-                <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Customer 3" class="h-24 w-24 rounded-full mx-auto mb-4">
-                <h3 class="text-xl font-semibold mb-2">Emily Johnson</h3>
-                <p class="text-lg">"Fast shipping and great quality products. Highly recommend E-Shop!"</p>
+    <section class="py-12 bg-white text-gray-900">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold mb-8 animate-fade-in">Customer Testimonials</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center">
+                <div class="max-w-sm mx-4 mb-8 md:mb-0">
+                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Customer 1" class="h-24 w-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Jane Doe</h3>
+                    <p class="text-lg">"E-Shop has the best products I've ever used. Their customer service is top-notch!"</p>
+                </div>
+                <div class="max-w-sm mx-4 mb-8 md:mb-0">
+                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Customer 2" class="h-24 w-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">John Smith</h3>
+                    <p class="text-lg">"I love shopping at E-Shop. They always have what I need and more!"</p>
+                </div>
+                <div class="max-w-sm mx-4 mb-8 md:mb-0">
+                    <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Customer 3" class="h-24 w-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Emily Johnson</h3>
+                    <p class="text-lg">"Fast shipping and great quality products. Highly recommend E-Shop!"</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 py-6">
         <div class="container mx-auto text-center">
             <p class="mb-4">Contact us at: <a href="mailto:info@eshop.com" class="text-blue-500">info@eshop.com</a></p>
