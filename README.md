@@ -70,6 +70,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Image Comparison Slider](#image-comparison-slider)
 - [Infinite Carousel](#infinite-carousel)
 - [Info on Hover / Popover](#info-on-hover-popover)
+- [Interactive Resume](#interactive-resume)
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
 - [Loaders](#loaders)
@@ -1207,6 +1208,21 @@ A modern, interactive scroll-driven video animation created with pure CSS. Featu
 ## <a id="piano"></a>Piano
 
 [<img src="images/piano.png" height="230" title="Piano">](Piano/index.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+---
+
+## <a id="interactive-resume"></a>Interactive Resume
+
+An interactive resume built entirely using **HTML and CSS** — featuring animations, hover effects, and smooth transitions that bring your profile to life.  
+**No JavaScript used.**
+
+[<img src="./Interactive Resume/preview-images/i1.png" width="32%">](./Interactive%20Resume/index.html)
+[<img src="./Interactive Resume/preview-images/i2.png" width="32%">](./Interactive%20Resume/index.html)
+[<img src="./Interactive Resume/preview-images/i3.png" width="32%">](./Interactive%20Resume/index.html)
 
 **[⬆ back to top](#quick-links)**
 
