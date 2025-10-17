@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Save Button (HTML + CSS)</title>
+<style>
+  :root{
+    --bg:#0b74de;
+    --bg-dark:#0a63b8;
+    --text:#fff;
+    --radius:10px;
+    --pad:12px 18px;
+  }
+
+  .save-btn{
+    display:inline-flex;
+    gap:10px;
+    align-items:center;
+    background:linear-gradient(180deg,var(--bg),var(--bg-dark));
+    color:var(--text);
+    border:0;
+    padding:var(--pad);
+    font:600 16px/1.1 system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+    border-radius:var(--radius);
+    cursor:pointer;
+    box-shadow:0 6px 18px rgba(11,116,222,0.18), inset 0 -2px 0 rgba(255,255,255,0.06);
+    transition:transform .08s ease, box-shadow .12s ease, opacity .12s;
+    user-select:none;
+  }
+
+  .save-btn svg{ width:18px; height:18px; flex:0 0 18px; transform:translateY(0); transition:transform .12s ease; }
+
+  .save-btn:hover{ transform:translateY(-2px); box-shadow:0 10px 26px rgba(11,116,222,0.18); }
+  .save-btn:active{ transform:translateY(0); box-shadow:0 4px 12px rgba(0,0,0,0.12) inset; }
+  .save-btn:focus{ outline:3px solid rgba(11,116,222,0.18); outline-offset:3px; }
+
+  /* small variant */
+  .save-btn.small{ padding:8px 12px; font-size:14px; border-radius:8px; }
+
+  /* disabled appearance (works with disabled attribute) */
+  .save-btn[disabled]{ opacity:.55; cursor:not-allowed; transform:none; box-shadow:none; filter:grayscale(.05); }
+</style>
+</head>
+<body style="display:flex;gap:12px;align-items:center;padding:24px;">
+
+<!-- Normal save button -->
+<button class="save-btn" aria-label="Save">
+  <!-- simple disk/save SVG icon -->
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M5 4h14v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7 4v4h10V4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 11.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" fill="currentColor"/>
+  </svg>
+  Save
+</button>
+
+<!-- small variant -->
+<button class="save-btn small" aria-label="Save (small)">
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M5 4h14v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7 4v4h10V4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 11.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" fill="currentColor"/>
+  </svg>
+  Save
+</button>
+
+<!-- disabled example -->
+<button class="save-btn" disabled aria-label="Save (disabled)">
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M5 4h14v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7 4v4h10V4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 11.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" fill="currentColor"/>
+  </svg>
+  Save
+</button>
+
+</body>
+</html>
