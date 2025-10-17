@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Art</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      display: inline-grid;
+      background-color: black;
+      gap: 9px;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 11px;
+    }
+    
+    .red{
+      background-color: #E72F24;
+    }
+    .item{
+      background-color: #F0F1EC;
+    }
+    .white1{
+      grid-area: 1/2/2/5;
+    }
+    .white2{
+      grid-area: 2/1/4/2;
+    }
+    .white3{
+      grid-area: 4/1/6/2;
+    }
+    .white4{
+      grid-area: 2/2/4/4;
+    }
+    .white5{
+      grid-area: 3/4/6/5;
+      margin-top: 10px;
+    }
+    .yellow{
+      background-color: #F9D01E ;
+      grid-area: 4/2/6/3;
+    }
+    .blue{
+      background-color: #004592 ;
+      grid-area: 2/4/3/5;
+    }
+    .black{
+      background-color:#232629 ;
+      grid-area: 4/3/6/4;
+    }
+    @media (max-width:1250px){
+      .container{
+        grid-template-columns: 160px 99px 76px 25px;
+        grid-template-rows: 207px 65px 78px 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+   <div class="container">
+    <div class="red"></div>
+    <div class="item white1"></div>
+    <div class="item white2"></div>
+    <div class="item white3"></div>
+    <div class="item white4"></div>
+    <div class="item white5"></div>
+    <div class="black"></div>
+    <div class="yellow"></div>
+    <div class="blue"></div>
+   </div>
+</body>
+
+</html>
