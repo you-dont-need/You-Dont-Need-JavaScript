@@ -146,43 +146,11 @@
             </div>
 
             <div class="form-stats">
-                <div class="stat-item">Form Status: <strong id="status" style="color: #999;">Incomplete</strong></div>
-                <div class="field-counter">
-                    <span id="validCount">0</span>/6 Complete
+                <div class="stat-item">Form Status: <span class="status-indicator">Incomplete</span></div>
+                <div class="field-counter">Complete
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        const form = document.getElementById('validationForm');
-        const inputs = form.querySelectorAll('input[required], textarea[required]');
-        const validCount = document.getElementById('validCount');
-        const status = document.getElementById('status');
-
-        function updateStats() {
-            const valid = Array.from(inputs).filter(input => input.validity.valid).length;
-            const termsChecked = document.getElementById('terms').checked;
-            
-            validCount.textContent = valid;
-            
-            if (form.checkValidity() && termsChecked) {
-                status.textContent = '✓ Complete';
-                status.style.color = '#4caf50';
-            } else {
-                status.textContent = 'Incomplete';
-                status.style.color = '#999';
-            }
-        }
-
-        inputs.forEach(input => {
-            input.addEventListener('input', updateStats);
-            input.addEventListener('change', updateStats);
-        });
-
-        document.getElementById('terms').addEventListener('change', updateStats);
-        
-        updateStats();
-    </script>
 </body>
 </html>
