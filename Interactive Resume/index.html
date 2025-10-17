@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Resume - John Doe</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+  <div class="container">
+    <!-- Animated Header -->
+    <header>
+      <div class="profile-card">
+        <div class="avatar" contenteditable="true" spellcheck="false">JD</div>
+        <h1 class="gradient-text" contenteditable="true" spellcheck="false">John Doe</h1>
+        <p class="subtitle" contenteditable="true" spellcheck="false">Web Developer | C++ Programmer | Tech Enthusiast</p>
+        <div class="contact-info">
+          <span class="contact-item" contenteditable="true" spellcheck="false">john.doe@email.com</span>
+          <span class="contact-item" contenteditable="true" spellcheck="false">+1 234-567-8900</span>
+          <span class="contact-item" contenteditable="true" spellcheck="false">johndoe.dev</span>
+        </div>
+        <div class="social-links">
+        </div>
+      </div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <div class="tabs">
+      <input type="radio" name="tab" id="tab1" checked>
+      <input type="radio" name="tab" id="tab2">
+      <input type="radio" name="tab" id="tab3">
+      <input type="radio" name="tab" id="tab4">
+      <div class="tab-labels">
+        <label for="tab1" class="tab-label">Skills</label>
+        <label for="tab2" class="tab-label">Projects</label>
+        <label for="tab3" class="tab-label">Education</label>
+        <label for="tab4" class="tab-label">Achievements</label>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="tab-content">
+        <!-- Skills Tab -->
+        <div class="tab-panel" id="panel1">
+          <h2 contenteditable="true" spellcheck="false">Technical Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3 contenteditable="true" spellcheck="false">Programming Languages</h3>
+              <div class="skill-item">
+                <span class="skill-name" contenteditable="true" spellcheck="false">C++</span>
+                <div class="progress-bar">
+                  <div class="progress" style="--progress: 90%"></div>
+                </div>
+                <span class="skill-level" contenteditable="true" spellcheck="false">Expert</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name" contenteditable="true" spellcheck="false">JavaScript</span>
+                <div class="progress-bar">
+                  <div class="progress" style="--progress: 80%"></div>
+                </div>
+                <span class="skill-level" contenteditable="true" spellcheck="false">Advanced</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name" contenteditable="true" spellcheck="false">Python</span>
+                <div class="progress-bar">
+                  <div class="progress" style="--progress: 75%"></div>
+                </div>
+                <span class="skill-level" contenteditable="true" spellcheck="false">Advanced</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3 contenteditable="true" spellcheck="false">Web Technologies</h3>
+              <div class="skill-item">
+                <span class="skill-name" contenteditable="true" spellcheck="false">HTML & CSS</span>
+                <div class="progress-bar">
+                  <div class="progress" style="--progress: 95%"></div>
+                </div>
+                <span class="skill-level" contenteditable="true" spellcheck="false">Expert</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name" contenteditable="true" spellcheck="false">React</span>
+                <div class="progress-bar">
+                  <div class="progress" style="--progress: 70%"></div>
+                </div>
+                <span class="skill-level" contenteditable="true" spellcheck="false">Intermediate</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name" contenteditable="true" spellcheck="false">Node.js</span>
+                <div class="progress-bar">
+                  <div class="progress" style="--progress: 65%"></div>
+                </div>
+                <span class="skill-level" contenteditable="true" spellcheck="false">Intermediate</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3 contenteditable="true" spellcheck="false">Tools & Frameworks</h3>
+              <div class="skill-item">
+                <span class="skill-name" contenteditable="true" spellcheck="false">Git & GitHub</span>
+                <div class="progress-bar">
+                  <div class="progress" style="--progress: 85%"></div>
+                </div>
+                <span class="skill-level" contenteditable="true" spellcheck="false">Advanced</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name" contenteditable="true" spellcheck="false">SQL & Databases</span>
+                <div class="progress-bar">
+                  <div class="progress" style="--progress: 75%"></div>
+                </div>
+                <span class="skill-level" contenteditable="true" spellcheck="false">Advanced</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name" contenteditable="true" spellcheck="false">Docker</span>
+                <div class="progress-bar">
+                  <div class="progress" style="--progress: 60%"></div>
+                </div>
+                <span class="skill-level" contenteditable="true" spellcheck="false">Intermediate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Skills (editable) -->
+          <div class="soft-skills" contenteditable="true" spellcheck="false">
+            <span class="badge">Problem Solving</span>
+            <span class="badge">Team Collaboration</span>
+            <span class="badge">Critical Thinking</span>
+            <span class="badge">Communication</span>
+            <span class="badge">Time Management</span>
+            <span class="badge">Adaptability</span>
+          </div>
+        </div>
+
+        <!-- Projects Tab -->
+        <div class="tab-panel" id="panel2">
+          <h2>Featured Projects</h2>
+          
+          <div class="projects-grid">
+            <div class="project-card" contenteditable="true" spellcheck="false">
+              <div class="project-icon">🧠</div>
+              <h3>AI-based Deepfake Detector</h3>
+              <p class="project-desc">Advanced machine learning model that detects manipulated videos with 95% accuracy using deep neural networks.</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">OpenCV</span>
+              </div>
+            </div>
+
+            <div class="project-card" contenteditable="true" spellcheck="false">
+              <div class="project-icon">🏛️</div>
+              <h3>E-Governance Website</h3>
+              <p class="project-desc">Full-stack web application helping citizens access government services seamlessly with secure authentication.</p>
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+              </div>
+            </div>
+
+            <div class="project-card" contenteditable="true" spellcheck="false">
+              <div class="project-icon">📝</div>
+              <h3>Online Quiz System</h3>
+              <p class="project-desc">Interactive quiz platform built with C++ and OOP principles, featuring real-time scoring and analytics.</p>
+              <div class="project-tags">
+                <span class="tag">C++</span>
+                <span class="tag">OOP</span>
+                <span class="tag">SQLite</span>
+              </div>
+            </div>
+
+            <div class="project-card" contenteditable="true" spellcheck="false">
+              <div class="project-icon">🎨</div>
+              <h3>Portfolio Website</h3>
+              <p class="project-desc">Responsive portfolio showcase with modern design patterns and smooth animations, built without JavaScript.</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Responsive</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Tab -->
+        <div class="tab-panel" id="panel3">
+          <h2>Educational Background</h2>
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content" contenteditable="true" spellcheck="false">
+                <div class="timeline-date">2021 - Present</div>
+                <h3>B.Tech in Computer Science</h3>
+                <p class="institution">University of Technology</p>
+                <p class="description">Specializing in Software Engineering and Artificial Intelligence. Current GPA: 3.8/4.0</p>
+                <div class="courses">
+                  <h4>Key Courses:</h4>
+                  <ul>
+                    <li>Data Structures & Algorithms</li>
+                    <li>Object-Oriented Programming</li>
+                    <li>Database Management Systems</li>
+                    <li>Machine Learning Fundamentals</li>
+                    <li>Web Development</li>
+                    <li>Software Engineering Principles</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content" contenteditable="true" spellcheck="false">
+                <div class="timeline-date">2019 - 2021</div>
+                <h3>Higher Secondary Education</h3>
+                <p class="institution">St. Mary's High School</p>
+                <p class="description">Completed with distinction in Science stream. Top 5% of the class.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content" contenteditable="true" spellcheck="false">
+                <div class="timeline-date">2023</div>
+                <h3>Full Stack Web Development</h3>
+                <p class="institution">Online Certification - Coursera</p>
+                <p class="description">Comprehensive course covering modern web development technologies and best practices.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="certifications">
+            <h3>Certifications & Courses</h3>
+            <div class="cert-grid">
+              <div class="cert-card" contenteditable="true" spellcheck="false">
+                <div class="cert-icon">🏅</div>
+                <h4>AWS Cloud Practitioner</h4>
+                <p>Amazon Web Services</p>
+              </div>
+              <div class="cert-card" contenteditable="true" spellcheck="false">
+                <div class="cert-icon">🏅</div>
+                <h4>React Developer</h4>
+                <p>Meta Frontend Course</p>
+              </div>
+              <div class="cert-card" contenteditable="true" spellcheck="false">
+                <div class="cert-icon">🏅</div>
+                <h4>C++ Programming</h4>
+                <p>University Certification</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievements Tab -->
+        <div class="tab-panel" id="panel4">
+          <h2>Achievements & Awards</h2>
+          
+          <div class="achievements-grid">
+            <div class="achievement-card" contenteditable="true" spellcheck="false">
+              <div class="achievement-icon">🥇</div>
+              <h3>Hackathon Winner</h3>
+              <p>First place at University Tech Fest 2024 for AI-based solution</p>
+              <span class="achievement-date">March 2024</span>
+            </div>
+
+            <div class="achievement-card" contenteditable="true" spellcheck="false">
+              <div class="achievement-icon">⭐</div>
+              <h3>Open Source Contributor</h3>
+              <p>Active contributor to multiple GitHub projects with 500+ contributions</p>
+              <span class="achievement-date">Ongoing</span>
+            </div>
+
+            <div class="achievement-card" contenteditable="true" spellcheck="false">
+              <div class="achievement-icon">🎯</div>
+              <h3>Coding Competition</h3>
+              <p>Top 10% in National Coding Championship 2023</p>
+              <span class="achievement-date">November 2023</span>
+            </div>
+
+            <div class="achievement-card" contenteditable="true" spellcheck="false">
+              <div class="achievement-icon">📚</div>
+              <h3>Research Paper</h3>
+              <p>Published research on "Deepfake Detection using CNN" in IEEE Conference</p>
+              <span class="achievement-date">January 2024</span>
+            </div>
+
+            <div class="achievement-card" contenteditable="true" spellcheck="false">
+              <div class="achievement-icon">👥</div>
+              <h3>Team Leadership</h3>
+              <p>Led a team of 5 developers in building E-Governance platform</p>
+              <span class="achievement-date">2023-2024</span>
+            </div>
+
+            <div class="achievement-card" contenteditable="true" spellcheck="false">
+              <div class="achievement-icon">💡</div>
+              <h3>Innovation Award</h3>
+              <p>Recognized for innovative approach in solving complex algorithms</p>
+              <span class="achievement-date">June 2023</span>
+            </div>
+          </div>
+
+          <!-- Stats Section -->
+          <div class="stats-section">
+            <h3>Statistics</h3>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Projects Completed</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Git Contributions</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">3.8</div>
+                <div class="stat-label">GPA</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Certifications</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer>
+      <p>Crafted with HTML & CSS only. You can edit your details directly in the resume above.</p>
+      <p class="footer-note">Last Updated: October 2025</p>
+    </footer>
+  </div>
+
+</body>
+</html>
