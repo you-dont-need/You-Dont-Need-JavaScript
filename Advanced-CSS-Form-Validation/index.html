@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Form Validation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+
+        <div class="form-container">
+            <h1 class="title-animate">Join Us</h1>
+            <p class="subtitle fade-in-delay">Create your account with instant validation</p>
+            
+            <form id="validationForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            placeholder="Choose your username"
+                            pattern="^[a-zA-Z0-9_]{3,20}$"
+                            required
+                            class="input-error"
+                        >
+                    </div>
+                    <div class="validation-message error">✕ 3-20 characters (letters, numbers, underscore)</div>
+                    <div class="validation-message success">✓ Username is available</div>
+                    <div class="hint">💡 Make it memorable and unique</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="your@email.com"
+                            required
+                            class="input-error"
+                        >
+                    </div>
+                    <div class="validation-message error">✕ Please enter a valid email</div>
+                    <div class="validation-message success">✓ Email verified</div>
+                    <div class="hint">📧 We'll never share your email</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="+1 (555) 123-4567"
+                            pattern="^[+]?[0-9\s\-()]{10,}$"
+                            required
+                            class="input-error"
+                        >
+                    </div>
+                    <div class="validation-message error">✕ Invalid phone format</div>
+                    <div class="validation-message success">✓ Phone looks good</div>
+                    <div class="hint">📱 Include country code or area code</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Create a strong password"
+                            minlength="8"
+                            required
+                            class="input-error"
+                        >
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                        <div class="strength-bar"></div>
+                        <div class="strength-bar"></div>
+                    </div>
+                    <div class="validation-message error">✕ Minimum 8 characters required</div>
+                    <div class="validation-message success">✓ Strong password</div>
+                    <div class="hint">🔐 Use uppercase, numbers, and symbols for better security</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">About You</label>
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            placeholder="Tell us about yourself..."
+                            minlength="10"
+                            maxlength="300"
+                            required
+                            class="input-error"
+                        ></textarea>
+                    </div>
+                    <div class="validation-message error">✕ Please write at least 10 characters</div>
+                    <div class="validation-message success">✓ Great bio!</div>
+                    <div class="hint">📝 10-300 characters • Be creative!</div>
+                </div>
+
+                <div class="form-group checkbox-wrapper">
+                    <div class="checkbox-group">
+                        <input 
+                            type="checkbox" 
+                            id="terms" 
+                            name="terms" 
+                            required
+                        >
+                        <label for="terms">I agree to the terms, privacy policy, and marketing communications</label>
+                    </div>
+                </div>
+
+                <div class="form-progress">
+                    <div class="progress-dot" data-index="0"></div>
+                    <div class="progress-dot" data-index="1"></div>
+                    <div class="progress-dot" data-index="2"></div>
+                    <div class="progress-dot" data-index="3"></div>
+                    <div class="progress-dot" data-index="4"></div>
+                    <div class="progress-dot" data-index="5"></div>
+                </div>
+
+                <button type="submit" id="submitBtn" class="button-animate">
+                    <span class="button-text">Create Account</span>
+                    <span class="button-glow"></span>
+                </button>
+            </form>
+
+            <div class="success-message">
+                <span class="success-icon">🎉</span>
+                All set! Ready to create your account.
+            </div>
+
+            <div class="form-stats">
+                <div class="stat-item">Form Status: <strong id="status" style="color: #999;">Incomplete</strong></div>
+                <div class="field-counter">
+                    <span id="validCount">0</span>/6 Complete
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('validationForm');
+        const inputs = form.querySelectorAll('input[required], textarea[required]');
+        const validCount = document.getElementById('validCount');
+        const status = document.getElementById('status');
+
+        function updateStats() {
+            const valid = Array.from(inputs).filter(input => input.validity.valid).length;
+            const termsChecked = document.getElementById('terms').checked;
+            
+            validCount.textContent = valid;
+            
+            if (form.checkValidity() && termsChecked) {
+                status.textContent = '✓ Complete';
+                status.style.color = '#4caf50';
+            } else {
+                status.textContent = 'Incomplete';
+                status.style.color = '#999';
+            }
+        }
+
+        inputs.forEach(input => {
+            input.addEventListener('input', updateStats);
+            input.addEventListener('change', updateStats);
+        });
+
+        document.getElementById('terms').addEventListener('change', updateStats);
+        
+        updateStats();
+    </script>
+</body>
+</html>
