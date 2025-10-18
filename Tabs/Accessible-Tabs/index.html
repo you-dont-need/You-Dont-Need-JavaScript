@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Accessible CSS-only Tabs — You Don't Need JavaScript</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="demo">
+    <h1 class="title">Accessible CSS-only Tabs</h1>
+
+    <div class="tabs" role="tablist" aria-label="Sample tabs">
+      <!-- Radio controls (visually hidden but focusable) -->
+      <input type="radio" name="tabs" id="tab1" checked>
+      <label for="tab1" role="tab" aria-controls="panel1" class="tab">Overview</label>
+
+      <input type="radio" name="tabs" id="tab2">
+      <label for="tab2" role="tab" aria-controls="panel2" class="tab">Features</label>
+
+      <input type="radio" name="tabs" id="tab3">
+      <label for="tab3" role="tab" aria-controls="panel3" class="tab">Accessibility</label>
+
+      <!-- Panels -->
+      <section id="panel1" class="panel" role="tabpanel" tabindex="0" aria-labelledby="tab1">
+        <h2>Overview</h2>
+        <p>This demo shows how to implement tabbed content with only HTML and CSS using radio buttons and labels. Switching tabs uses :checked state; no JavaScript required.</p>
+      </section>
+
+      <section id="panel2" class="panel" role="tabpanel" tabindex="0" aria-labelledby="tab2" hidden>
+        <h2>Features</h2>
+        <ul>
+          <li>Pure HTML + CSS (no JavaScript)</li>
+          <li>Responsive layout</li>
+          <li>Visible focus styles for keyboard users</li>
+        </ul>
+      </section>
+
+      <section id="panel3" class="panel" role="tabpanel" tabindex="0" aria-labelledby="tab3" hidden>
+        <h2>Accessibility</h2>
+        <p>This pattern uses semantic roles: <code>role="tablist"</code>, <code>role="tab"</code> and <code>role="tabpanel"</code>. Note: full WAI-ARIA tab keyboard support (arrow key navigation & roving focus) requires JS; this demo documents that limitation.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
