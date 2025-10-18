@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUMBLED WORDS - Retro Edition</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Press Start 2P', 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #00ff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        /* CRT scanline effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.15),
+                rgba(0, 0, 0, 0.15) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        /* CRT screen glow */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, 
+                rgba(0, 255, 0, 0.1) 0%, 
+                rgba(0, 0, 0, 0.3) 100%);
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            display: none;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .monitor {
+            background: #1a1a1a;
+            border: 20px solid #2a2a2a;
+            border-radius: 20px;
+            box-shadow: 
+                0 0 50px rgba(0, 255, 0, 0.3),
+                inset 0 0 30px rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            position: relative;
+        }
+
+        .screen {
+            background: #000;
+            border: 3px solid #00ff00;
+            padding: 30px;
+            box-shadow: inset 0 0 20px rgba(0, 255, 0, 0.2);
+            min-height: 500px;
+        }
+
+        /* Blinking cursor effect */
+        .cursor {
+            display: inline-block;
+            width: 12px;
+            height: 16px;
+            background: #00ff00;
+            animation: blink 1s infinite;
+            margin-left: 5px;
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px double #00ff00;
+            padding-bottom: 20px;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #00ff00;
+            animation: flicker 3s infinite;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            41.99% { opacity: 1; }
+            42% { opacity: 0.8; }
+            43% { opacity: 1; }
+            45.99% { opacity: 1; }
+            46% { opacity: 0.9; }
+            46.5% { opacity: 1; }
+        }
+
+        .subtitle {
+            font-size: 10px;
+            color: #00cc00;
+        }
+
+        .game-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            font-size: 10px;
+            padding: 10px;
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid #00ff00;
+        }
+
+        .level-section {
+            margin-bottom: 40px;
+        }
+
+        .level-header {
+            font-size: 12px;
+            margin-bottom: 15px;
+            color: #00ffff;
+            text-shadow: 0 0 5px #00ffff;
+        }
+
+        .clue-box {
+            background: rgba(0, 100, 0, 0.3);
+            border: 2px solid #00ff00;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 10px;
+            line-height: 1.8;
+        }
+
+        .jumbled-word {
+            font-size: 18px;
+            letter-spacing: 8px;
+            text-align: center;
+            margin: 20px 0;
+            color: #ffff00;
+            text-shadow: 0 0 10px #ffff00;
+        }
+
+        .answer-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            background: #001100;
+            border: 2px solid #00ff00;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 12px;
+            position: relative;
+            display: block;
+        }
+
+        .option::before {
+            content: '[ ]';
+            margin-right: 10px;
+            color: #00ff00;
+        }
+
+        .option:hover {
+            background: #003300;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+            transform: translateX(5px);
+        }
+
+        /* Level 1 - PLANET */
+        #l1-correct:checked ~ .container .level-1 .option-correct {
+            background: #004400;
+            border-color: #00ff00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+        }
+
+        #l1-correct:checked ~ .container .level-1 .option-correct::before {
+            content: '[✓]';
+            color: #00ff00;
+        }
+
+        #l1-correct:checked ~ .container .level-2 {
+            display: block;
+        }
+
+        #l1-wrong1:checked ~ .container .level-1 .option-wrong1,
+        #l1-wrong2:checked ~ .container .level-1 .option-wrong2 {
+            background: #440000;
+            border-color: #ff0000;
+            animation: shake 0.5s;
+        }
+
+        #l1-wrong1:checked ~ .container .level-1 .option-wrong1::before,
+        #l1-wrong2:checked ~ .container .level-1 .option-wrong2::before {
+            content: '[✗]';
+            color: #ff0000;
+        }
+
+        /* Level 2 - COMPUTER */
+        .level-2 {
+            display: none;
+        }
+
+        #l1-correct:checked ~ #l2-correct:checked ~ .container .level-2 .option-correct {
+            background: #004400;
+            border-color: #00ff00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+        }
+
+        #l1-correct:checked ~ #l2-correct:checked ~ .container .level-2 .option-correct::before {
+            content: '[✓]';
+        }
+
+        #l1-correct:checked ~ #l2-correct:checked ~ .container .level-3 {
+            display: block;
+        }
+
+        #l1-correct:checked ~ #l2-wrong1:checked ~ .container .level-2 .option-wrong1,
+        #l1-correct:checked ~ #l2-wrong2:checked ~ .container .level-2 .option-wrong2 {
+            background: #440000;
+            border-color: #ff0000;
+            animation: shake 0.5s;
+        }
+
+        #l1-correct:checked ~ #l2-wrong1:checked ~ .container .level-2 .option-wrong1::before,
+        #l1-correct:checked ~ #l2-wrong2:checked ~ .container .level-2 .option-wrong2::before {
+            content: '[✗]';
+            color: #ff0000;
+        }
+
+        /* Level 3 - KEYBOARD */
+        .level-3 {
+            display: none;
+        }
+
+        #l1-correct:checked ~ #l2-correct:checked ~ #l3-correct:checked ~ .container .level-3 .option-correct {
+            background: #004400;
+            border-color: #00ff00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+        }
+
+        #l1-correct:checked ~ #l2-correct:checked ~ #l3-correct:checked ~ .container .level-3 .option-correct::before {
+            content: '[✓]';
+        }
+
+        #l1-correct:checked ~ #l2-correct:checked ~ #l3-correct:checked ~ .container .win-screen {
+            display: block;
+        }
+
+        #l1-correct:checked ~ #l2-correct:checked ~ #l3-wrong1:checked ~ .container .level-3 .option-wrong1,
+        #l1-correct:checked ~ #l2-correct:checked ~ #l3-wrong2:checked ~ .container .level-3 .option-wrong2 {
+            background: #440000;
+            border-color: #ff0000;
+            animation: shake 0.5s;
+        }
+
+        #l1-correct:checked ~ #l2-correct:checked ~ #l3-wrong1:checked ~ .container .level-3 .option-wrong1::before,
+        #l1-correct:checked ~ #l2-correct:checked ~ #l3-wrong2:checked ~ .container .level-3 .option-wrong2::before {
+            content: '[✗]';
+            color: #ff0000;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        /* Win screen */
+        .win-screen {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            border: 3px double #00ff00;
+            background: rgba(0, 255, 0, 0.1);
+            margin-top: 30px;
+            animation: victory 1s;
+        }
+
+        @keyframes victory {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .win-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ffff00;
+            text-shadow: 0 0 20px #ffff00;
+        }
+
+        .win-message {
+            font-size: 10px;
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        .score-display {
+            font-size: 14px;
+            color: #00ffff;
+            margin: 20px 0;
+        }
+
+        .restart-btn {
+            background: #00ff00;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+            transition: all 0.2s;
+        }
+
+        .restart-btn:hover {
+            background: #00ffff;
+            transform: scale(1.1);
+        }
+
+        .power-light {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 15px;
+            height: 15px;
+            background: #ff0000;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ff0000;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Score tracking */
+        .score {
+            color: #ffff00;
+        }
+
+        #l1-correct:checked ~ .container .game-info .score::after {
+            content: ' +100';
+        }
+
+        #l1-correct:checked ~ #l2-correct:checked ~ .container .game-info .score::after {
+            content: ' +200';
+        }
+
+        #l1-correct:checked ~ #l2-correct:checked ~ #l3-correct:checked ~ .container .game-info .score::after {
+            content: ' +300';
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #001100;
+            border: 1px solid #00ff00;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #00ff00;
+            width: 0%;
+            transition: width 0.5s;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        #l1-correct:checked ~ .container .progress-fill {
+            width: 33%;
+        }
+
+        #l1-correct:checked ~ #l2-correct:checked ~ .container .progress-fill {
+            width: 66%;
+        }
+
+        #l1-correct:checked ~ #l2-correct:checked ~ #l3-correct:checked ~ .container .progress-fill {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- State management - Must be at root level -->
+    <input type="checkbox" id="l1-correct">
+    <input type="checkbox" id="l1-wrong1">
+    <input type="checkbox" id="l1-wrong2">
+    
+    <input type="checkbox" id="l2-correct">
+    <input type="checkbox" id="l2-wrong1">
+    <input type="checkbox" id="l2-wrong2">
+    
+    <input type="checkbox" id="l3-correct">
+    <input type="checkbox" id="l3-wrong1">
+    <input type="checkbox" id="l3-wrong2">
+
+    <div class="container">
+        <div class="monitor">
+            <div class="screen">
+                <div class="header">
+                    <div class="title">
+                        ░J░U░M░B░L░E░D░ ░W░O░R░D░S░
+                    </div>
+                    <div class="subtitle">
+                        -= RETRO EDITION v1.0 =-<span class="cursor"></span>
+                    </div>
+                </div>
+
+                <div class="game-info">
+                    <div>PLAYER: GUEST</div>
+                    <div>SCORE: <span class="score">0</span></div>
+                    <div>LEVEL: 1/3</div>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+
+                <!-- Level 1 -->
+                <div class="level-section level-1">
+                    <div class="level-header">
+                        &gt;&gt; LEVEL 1: SPACE THEME
+                    </div>
+                    <div class="clue-box">
+                        CLUE: A celestial body that orbits<br>
+                        around a star. Earth is one of these.
+                    </div>
+                    <div class="jumbled-word">
+                        ★ T E N A L P ★
+                    </div>
+                    <div class="answer-options">
+                        <label for="l1-correct" class="option option-correct">PLANET</label>
+                        <label for="l1-wrong1" class="option option-wrong1">MENTAL</label>
+                        <label for="l1-wrong2" class="option option-wrong2">TALENT</label>
+                    </div>
+                </div>
+
+                <!-- Level 2 -->
+                <div class="level-section level-2">
+                    <div class="level-header">
+                        &gt;&gt; LEVEL 2: TECHNOLOGY
+                    </div>
+                    <div class="clue-box">
+                        CLUE: An electronic device that<br>
+                        processes data and runs programs.
+                    </div>
+                    <div class="jumbled-word">
+                        ◆ R E T U P M O C ◆
+                    </div>
+                    <div class="answer-options">
+                        <label for="l2-wrong1" class="option option-wrong1">COMMUTER</label>
+                        <label for="l2-correct" class="option option-correct">COMPUTER</label>
+                        <label for="l2-wrong2" class="option option-wrong2">PROMOTER</label>
+                    </div>
+                </div>
+
+                <!-- Level 3 -->
+                <div class="level-section level-3">
+                    <div class="level-header">
+                        &gt;&gt; LEVEL 3: INPUT DEVICE
+                    </div>
+                    <div class="clue-box">
+                        CLUE: A set of keys used to type<br>
+                        text into a computer.
+                    </div>
+                    <div class="jumbled-word">
+                        ▲ D R A O B Y E K ▲
+                    </div>
+                    <div class="answer-options">
+                        <label for="l3-wrong1" class="option option-wrong1">BORDERED</label>
+                        <label for="l3-wrong2" class="option option-wrong2">KEYSTONE</label>
+                        <label for="l3-correct" class="option option-correct">KEYBOARD</label>
+                    </div>
+                </div>
+
+                <!-- Win Screen -->
+                <div class="win-screen">
+                    <div class="win-title">
+                        ═══ VICTORY! ═══
+                    </div>
+                    <div class="win-message">
+                        CONGRATULATIONS!<br>
+                        YOU HAVE SUCCESSFULLY<br>
+                        UNSCRAMBLED ALL WORDS!
+                    </div>
+                    <div class="score-display">
+                        FINAL SCORE: 300 PTS
+                    </div>
+                    <div class="win-message">
+                        ░░░░░░░░░░░░░░░░░░░░<br>
+                        PRESS BUTTON TO RESTART<br>
+                        ░░░░░░░░░░░░░░░░░░░░
+                    </div>
+                    <button class="restart-btn">
+                        &gt; Thanks &lt;
+                    </button>
+                </div>
+            </div>
+            <div class="power-light"></div>
+        </div>
+    </div>
+</body>
+
+</html>
