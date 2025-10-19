@@ -106,10 +106,6 @@ header {
     color: white;
 }
 
-/* .rightitems {
-    align-items: end;
-    justify-content: end;
-} */
  .flight-booking {
     background: #f9fbff;
     border-radius: 16px;
@@ -261,98 +257,6 @@ header {
     font-size: 18px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
-
-/* 
-.bookingpagelow {
-    height: 40vh;
-    width: 40vw;
-    background-color: #F7F8F9;
-    border-radius: 20px;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 10px black;
-    padding: 20px 20px;
-
-}
-
-#input {
-    width: 36vw;
-    height: 60px;
-    border: 0px;
-    border-radius: 5px;
-    padding: 30px;
-    margin-bottom: 10px;
-    margin-top: 25px;
-}
-
-.bookingpagetop {
-    height: auto;
-    width: 30vw;
-    background-color: white;
-    margin-top: 4px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-}
-
-.bookingpagetop h1 {
-    color: #123C69;
-    font-weight: 500;
-    letter-spacing: 2px;
-    font-size: 18px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-}
-
-.departure i {
-    margin-left: 15px;
-    cursor: pointer;
-} */
-
-/* #input1 {
-    width: 34vw;
-    height: 55px;
-    border: 0px;
-    cursor: pointer;
-} */
-/* .booking-input {
-    width: 100%;
-    height: 55px;
-    border: 0px;
-    outline: none;
-    cursor: pointer;
-    padding-left: 10px;
-    font-size: 16px;
-}
-
-.departure {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: white;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    border: 2px solid rgb(221, 213, 213);
-    height: 60px;
-    display: flex;
-}
-
-.departure2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: white;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    border: 0px;
-    height: 60px;
-} */
 
 .account {
     border: 2px solid #123C69;
@@ -616,9 +520,6 @@ header {
     font-size: 18px;
 }
 
-/* === ADD THIS ENTIRE BLOCK TO THE END OF YOUR CSS FILE === */
-/* === ADD THIS ENTIRE BLOCK TO THE END OF YOUR CSS FILE === */
-
 /* For Tablets */
 @media (max-width: 992px) {
     .navbarleft > ul:first-of-type {
@@ -644,25 +545,21 @@ header {
 /* For Mobile Phones */
 @media (max-width: 768px) {
     .heroimg {
-        /* Adds space on the left/right of the entire form area */
         padding-left: 15px;
         padding-right: 15px;
-        background-attachment: scroll; /* Fixes background on mobile */
+        background-attachment: scroll;
     }
 
     .bookingpage {
-        /* Remove original padding to prevent double-padding */
         padding: 30px 0;
     }
 
     .bookingpagetop,
     .flight-booking {
-        /* Forces both the title and the form to fit the screen */
         width: 100%;
     }
 
     .booking-grid {
-        /* Stacks all form fields vertically */
         grid-template-columns: 1fr;
     }
 
