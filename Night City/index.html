@@ -8,7 +8,7 @@
 </head>
 <body>
   <!-- Scene: City (default active) -->
-  <div class="scene scene--city scene--active">
+  <div id="city" class="scene scene--city">
     <div class="sky">
       <div class="moon"></div>
       <div class="stars stars-layer-1"></div>
@@ -115,11 +115,11 @@
     </div>
 
     <!-- Signboard on the right side of buildings above the road -->
-    <div id="sideBoard" class="side-board" role="button" tabindex="0" aria-label="View road scene">
+    <a href="#road" class="side-board" role="button" tabindex="0" aria-label="View road scene">
       <div class="sb-title">CITY BOARD</div>
       <div class="sb-line">Traffic Live</div>
       <div class="sb-line small">Click to view road</div>
-    </div>
+    </a>
 
     <div class="ground"></div>
 
@@ -134,10 +134,45 @@
   </div>
 
   <!-- Scene: Road with moving cars -->
-  <div class="scene scene--road">
+  <div id="road" class="scene scene--road">
     <div class="road-scene">
       <div class="sky road-sky"></div>
       <div class="road">
+        <!-- Background Buildings -->
+        <div class="background-buildings">
+          <div class="bg-building b1"></div>
+          <div class="bg-building b2"></div>
+          <div class="bg-building b3"></div>
+          <div class="bg-building b4"></div>
+          <div class="bg-building b5"></div>
+        </div>
+
+        <!-- Lamp Posts -->
+        <div class="lamp-posts">
+          <div class="lamp-post l1">
+            <div class="post"></div>
+            <div class="light"></div>
+          </div>
+          <div class="lamp-post l2">
+            <div class="post"></div>
+            <div class="light"></div>
+          </div>
+          <div class="lamp-post l3">
+            <div class="post"></div>
+            <div class="light"></div>
+          </div>
+          <div class="lamp-post l4">
+            <div class="post"></div>
+            <div class="light"></div>
+          </div>
+        </div>
+
+        <!-- Street Signs -->
+        <div class="street-signs">
+          <div class="sign s1">SPEED<br>LIMIT<br>60</div>
+          <div class="sign s2">NIGHT<br>CITY<br>→</div>
+        </div>
+
         <div class="lane"></div>
 
           <!-- Vehicle: small car -->
@@ -200,57 +235,11 @@
             <div class="headlight"></div>
           </div>
         <!-- Road signboard to go back to the city scene -->
-        <div id="roadBoard" class="road-board" role="button" tabindex="0" aria-label="Back to city scene">
+        <a href="#city" class="road-board" role="button" tabindex="0" aria-label="Back to city scene">
           <div class="rb-line">Back to City</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="info">
-      <h1>🛣️ Night Road</h1>
-      <p>CSS Cars Driving Along a Road</p>
-      <p class="subtitle">Switch back to the city when ready</p>
-      <div class="controls">
-        <button id="btnCity2">City</button>
-        <button id="btnRoad2">Road</button>
+        </a>
       </div>
     </div>
   </div>
-
-  <script>
-    // Scene switcher
-    function switchScene(name) {
-      document.querySelectorAll('.scene').forEach(s => s.classList.remove('scene--active'));
-      const target = document.querySelector('.scene--' + name);
-      if (target) target.classList.add('scene--active');
-    }
-
-    // City info display (non-interactive)
-    // const board = document.getElementById('displayBoard');
-    // intentionally left non-interactive per user request
-
-    // Side board on the right of buildings
-    const side = document.getElementById('sideBoard');
-    if (side) {
-      side.addEventListener('click', () => switchScene('road'));
-      side.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') switchScene('road'); });
-    }
-
-    // Road scene board to go back to city
-    const roadBoard = document.getElementById('roadBoard');
-    if (roadBoard) {
-      roadBoard.addEventListener('click', () => switchScene('city'));
-      roadBoard.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') switchScene('city'); });
-    }
-
-    document.getElementById('btnCity2').addEventListener('click', () => switchScene('city'));
-    document.getElementById('btnRoad2').addEventListener('click', () => switchScene('road'));
-
-    // Optional: allow keyboard navigation: 1 = city, 2 = road
-    document.addEventListener('keydown', (e) => {
-      if (e.key === '1') switchScene('city');
-      if (e.key === '2') switchScene('road');
-    });
-  </script>
 </body>
 </html>

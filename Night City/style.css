@@ -6,14 +6,60 @@
 }
 
 body {
+  margin: 0;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #0a0e27 0%, #1a1a3e 40%, #2d1b4e 70%, #3d2660 100%);
+  background: #0a0e27;
   overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  position: relative;
+}
+
+/* Scene Management */
+.scene {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1; /* Base z-index for scenes */
+}
+
+/* Default city scene */
+#city {
+  background: linear-gradient(to bottom, #0a0e27 0%, #1a1a3e 40%, #2d1b4e 70%, #3d2660 100%);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2; /* Higher z-index when not targeted */
+}
+
+#city:not(:target) {
+  display: flex;
+}
+
+/* Show targeted scene */
+.scene:target {
+  display: block !important;
+  z-index: 3; /* Highest z-index when targeted */
+}
+
+/* Road scene specific */
+#road {
+  background: #0a0e27;
+  display: none;
+}
+
+#road:target {
+  display: block;
+}
+
+/* Hide non-targeted scenes when a scene is targeted */
+.scene:target ~ .scene {
+  display: none !important;
+  z-index: 1;
 }
 
 /* ===== SKY ===== */
@@ -804,9 +850,164 @@ body {
 .scene--active { display: block; }
 
 /* ===== ROAD SCENE ===== */
-.road-scene { position: relative; width: 100%; height: 100%; overflow: hidden; }
-.road-sky { position: absolute; top: 0; left: 0; width: 100%; height: 65%; background: linear-gradient(to bottom, #0a0e27 0%, #16213e 100%); z-index: 1; }
-.road { position: absolute; bottom: 0; left: 0; width: 100%; height: 35%; background: linear-gradient(to bottom, #111 0%, #050508 100%); z-index: 2; display: flex; align-items: center; justify-content: center; }
+.road-scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #0a0e27;
+}
+
+.scene--road {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.road-sky { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100vw; 
+  height: 65vh; 
+  background: linear-gradient(to bottom, #0a0e27 0%, #16213e 100%); 
+  z-index: 1; 
+}
+
+/* Background Buildings */
+.background-buildings {
+  position: absolute;
+  top: -100px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+.bg-building {
+  width: 60px;
+  height: 120px;
+  background: linear-gradient(to bottom, #2d1b4e 0%, #3d2660 100%);
+  position: relative;
+}
+
+.bg-building::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 10%,
+    rgba(255, 255, 0, 0.1) 10%,
+    rgba(255, 255, 0, 0.1) 12%
+  );
+}
+
+.bg-building.b1 { height: 140px; }
+.bg-building.b2 { height: 100px; }
+.bg-building.b3 { height: 160px; }
+.bg-building.b4 { height: 120px; }
+.bg-building.b5 { height: 130px; }
+
+/* Lamp Posts */
+.lamp-posts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.lamp-post {
+  position: absolute;
+  bottom: 0;
+}
+
+.lamp-post .post {
+  width: 4px;
+  height: 80px;
+  background: #333;
+  position: relative;
+}
+
+.lamp-post .light {
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 20px;
+  height: 10px;
+  background: #ffeb3b;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #ffeb3b;
+  animation: lampGlow 4s infinite alternate;
+}
+
+@keyframes lampGlow {
+  from { opacity: 0.7; box-shadow: 0 0 20px #ffeb3b; }
+  to { opacity: 1; box-shadow: 0 0 30px #ffeb3b; }
+}
+
+.lamp-post.l1 { left: 10%; }
+.lamp-post.l2 { left: 30%; }
+.lamp-post.l3 { left: 60%; }
+.lamp-post.l4 { left: 80%; }
+
+/* Street Signs */
+.street-signs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.sign {
+  position: absolute;
+  padding: 10px;
+  background: #f4f4f4;
+  border: 2px solid #333;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.2;
+  transform: scale(0.8);
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+}
+
+.sign.s1 {
+  left: 15%;
+  top: 20%;
+  transform: rotate(-5deg);
+}
+
+.sign.s2 {
+  right: 15%;
+  top: 30%;
+  transform: rotate(5deg);
+}
+
+/* Road elements */
+.road { 
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  width: 100vw; 
+  height: 35vh; 
+  background: linear-gradient(to bottom, #111 0%, #050508 100%); 
+  z-index: 2; 
+}
 .lane { position: absolute; top: 50%; left: 0; width: 100%; height: 6px; background: repeating-linear-gradient(90deg, #fff 0 30px, transparent 30px 60px); transform: translateY(-50%); opacity: 0.25; }
 
 .car { position: absolute; bottom: 18%; width: 120px; height: 44px; display: flex; align-items: center; justify-content: center; }
@@ -893,10 +1094,17 @@ body {
   cursor: pointer;
   text-align: center;
   z-index: 30;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 .side-board .sb-title { color: #ffd400; font-weight: 800; margin-bottom: 4px; }
 .side-board .sb-line { font-size: 0.9rem; }
-.side-board:focus, .side-board:hover { transform: translateY(-6px); }
+.side-board:focus, .side-board:hover { 
+  transform: translateY(-6px);
+  background: linear-gradient(180deg, rgba(15,15,30,0.9), rgba(5,5,10,0.7));
+  outline: none;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.7), 0 0 25px rgba(255, 212, 0, 0.1) inset;
+}
 
 /* ===== ROAD BOARD ===== */
 .road-board {
@@ -911,8 +1119,16 @@ body {
   cursor: pointer;
   z-index: 40;
   box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 .road-board .rb-line { font-weight: 700; color: #ffd400; }
+.road-board:focus, .road-board:hover {
+  background: rgba(0,0,0,0.75);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+  outline: none;
+}
 
 @media (max-width: 768px) {
   .side-board { right: 20px; bottom: 120px; width: 130px; }
