@@ -123,6 +123,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Debit Card Hover effect](#debit-card-hover)
 - [Progress Bar On Scroll](#ProgressOnScroll)
 - [Pricing Table](#pricing-table)
+- [Glide to Reveal](#glide-to-reveal)
 - **Contribution**
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -1247,6 +1248,14 @@ An interactive resume built entirely using **HTML and CSS** — featuring animat
 ## <a id="kaleidoscope"></a>Kaleidoscope
 
 [<img src="images/kaleidoscope.png" height="230" title="Kaleidoscope">](Kaleidoscope/index.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="Glide to Reveal"></a>Glide to Reveal
+
+[<img src="images/glidetoreveal.png" height="230" title="Glide-to-reveal">](Glide-to-reveal/index.html)
 
 **[⬆ back to top](#quick-links)**
 
