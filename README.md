@@ -411,6 +411,7 @@ Your browser does not support the video tag.
 [<img src="images/loader10.png" height="230" title="Demo 10">](https://codepen.io/Sahil-Patil-the-sans/pen/WNPbVqK)
 [<img src="images/loader11.gif" height="230" title="Demo 11">](https://codepen.io/sugeng-sulistiyawan/pen/PoyjPWd)
 [<img src="images/loader12.gif" height="230" title="Demo 12">](http://codepen.io/rcjasub/pen/zxrddOP)
+[<img src="images/loader12.gif" height="230" title="Demo 13">](https://codepen.io/Guarionex-Tavares/pen/emJVdgN)
 
 **[⬆ back to top](#quick-links)**
 
@@ -509,6 +510,7 @@ Your browser does not support the video tag.
 ---
 
 ## <a id="mondrian-composition"></a>Mondrian Composition
+
 [<img src="images/mondrian_composition.png" height="230" title="Mondrian Art Demo">](https://codepen.io/VINAY-MADIVAL/pen/VYerdxY)
 
 **[⬆ back to top](#quick-links)**
