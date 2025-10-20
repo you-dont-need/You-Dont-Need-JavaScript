@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Signup Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="tabs">
+      <input type="radio" name="tab" id="login-tab" checked>
+      <label for="login-tab" class="tab-label">Login</label>
+
+      <input type="radio" name="tab" id="signup-tab">
+      <label for="signup-tab" class="tab-label">Sign Up</label>
+
+      <div class="content">
+        <div class="content-inner" id="login-content">
+          <h2>Welcome Back</h2>
+          <form>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+
+        <div class="content-inner" id="signup-content">
+          <h2>Create Account</h2>
+          <form>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

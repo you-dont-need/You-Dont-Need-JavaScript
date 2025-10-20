@@ -1,0 +1,471 @@
+/* --- General Styles --- */
+* {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.border {
+    border: 1.5px solid transparent;
+    padding: 5px;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+    border-radius: 3px;
+}
+
+/* --- Navbar Styles --- */
+.navbar {
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 100px;
+}
+
+.logo {
+    background-image: url("assets/amazon_logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+}
+
+/* Address Box */
+.add-first {
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin-left: 15px;
+}
+
+.add-second {
+    font-size: 1rem;
+    margin-left: 3px;
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+/* Search Bar */
+.nav-search {
+    display: flex;
+    justify-content: space-evenly;
+    width: 620px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.search-select {
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    padding-left: 10px;
+}
+
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #febd68;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #0f1111;
+}
+
+.nav-search:hover {
+    border: 2px solid orange;
+}
+
+/* Sign in, Returns, Cart */
+span {
+    font-size: 0.7rem;
+}
+
+.nav-second {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart i {
+    font-size: 30px;
+}
+
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* --- Panel Styles --- */
+.panel {
+    height: 40px;
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.panel-ops p {
+    display: inline;
+    margin-left: 15px;
+}
+
+.panel-ops {
+    width: 70%;
+    font-size: 0.85rem;
+}
+
+.panel-deals {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* --- Hero Section Styles --- */
+.hero-section {
+    background-image: url("assets/hero_image.jpg");
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-message {
+    background-color: white;
+    color: black;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    width: 80%;
+    margin-bottom: 25px;
+}
+
+.hero-message a {
+    color: #007185;
+    text-decoration: none;
+}
+
+/* --- Shop Section Styles --- */
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+}
+
+.box {
+    height: 400px;
+    width: 23%;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.box-img {
+    height: 300px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.box-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.box-content p {
+    color: #007185;
+}
+
+/* --- Footer Styles --- */
+footer {
+    margin-top: 15px;
+}
+
+.foot-panel1 {
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.foot-panel2 {
+    background-color: #222f3d;
+    color: white;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 25px;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+ul p {
+    font-weight: 700;
+}
+
+ul a {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+    text-decoration: none;
+}
+
+ul a:hover {
+    text-decoration: underline;
+}
+
+.foot-panel3 {
+    background-color: #222f3d;
+    color: white;
+    border-top: 0.5px solid white;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-panel4 {
+    background-color: #0f1111;
+    color: white;
+    height: 80px;
+    font-size: 0.7rem;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.pages {
+    padding-top: 25px;
+}
+.pages a{
+    text-decoration: none;
+    color: white;
+    padding: 0 5px;
+}
+
+.copyright {
+    padding-top: 5px;
+}
+
+/* =================================== */
+/* --- NEW STYLES FOR SIDEBAR MENU --- */
+/* =================================== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #ffffff;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    background-color: #222f3d;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+}
+
+.sidebar-header h3 {
+    font-weight: 700;
+}
+
+.sidebar-links {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-links li {
+    padding: 15px 20px;
+    color: #0f1111;
+    cursor: pointer;
+}
+
+.sidebar-links li:hover {
+    background-color: #f3f3f3;
+}
+
+.sidebar-links hr {
+    border: none;
+    border-top: 1px solid #dddddd;
+    margin: 5px 0;
+}
+
+.sidebar-links p {
+    font-weight: 700;
+    padding: 15px 20px 5px;
+    color: #0f1111;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#hamburger-toggle:checked ~ .sidebar {
+    transform: translateX(0);
+}
+
+#hamburger-toggle:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.panel-all-label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 9px;
+    border: 1.5px solid transparent;
+}
+
+.panel-all-label:hover {
+    border: 1.5px solid white;
+    border-radius: 3px;
+}
+
+.close-sidebar-label {
+    font-weight: 700;
+}
+
+/* =================================== */
+/* --- RESPONSIVE MEDIA QUERIES --- */
+/* =================================== */
+
+/* For Tablet Screens (e.g., iPads) */
+@media (max-width: 900px) {
+    .nav-search {
+        width: 45%;
+    }
+    .nav-signin, .nav-return {
+        display: none;
+    }
+    .panel-ops {
+        width: auto;
+    }
+    .panel-ops p:nth-child(n+3) {
+        display: none;
+    }
+    .panel-deals {
+        display: none;
+    }
+    .shop-section {
+        padding: 10px;
+    }
+    .box {
+        width: 48%;
+        margin-top: 10px;
+    }
+    .foot-panel2 {
+        flex-wrap: wrap;
+        height: auto; 
+        padding: 25px;
+    }
+    .foot-panel2 ul {
+        width: 45%; 
+        margin-bottom: 20px;
+    }
+}
+
+/* For Mobile Screens (e.g., iPhones) */
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap; 
+        height: auto; 
+        padding: 10px;
+    }
+    .nav-logo, .nav-address, .nav-cart {
+        order: 1; 
+    }
+    .nav-search {
+        order: 2;
+        width: 95%; 
+        margin-top: 10px;
+    }
+    .add-first {
+        display: none;
+    }
+    .add-second {
+        margin-left: 5px;
+    }
+    .nav-cart {
+        font-size: 0;
+    }
+    .nav-cart i {
+        font-size: 28px;
+    }
+    .panel-ops, .panel-deals {
+        display: none; 
+    }
+    .panel {
+        justify-content: flex-start;
+        /* The label provides padding now, so this can be adjusted */
+        padding-left: 5px;
+    }
+    .hero-section {
+        height: 250px;
+    }
+    .hero-message {
+        width: 90%;
+        font-size: 0.75rem; 
+        margin-bottom: 10px;
+        padding: 5px;
+        height: auto;
+    }
+    .box {
+        width: 95%; 
+    }
+    .foot-panel2 {
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding-left: 30px;
+    }
+    .foot-panel2 ul {
+        width: 100%; 
+    }
+    .foot-panel4 .pages a {
+        display: block; 
+        padding: 5px;
+    }
+}

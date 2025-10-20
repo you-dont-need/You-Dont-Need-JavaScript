@@ -1,0 +1,283 @@
+@font-face {
+    font-family: 'Forte';
+    src: url('./fonts/forte-webfont.woff2') format('woff2'),
+         url('./fonts/forte-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Lucida Sans';
+    src: url('./fonts/lsans-webfont.woff2') format('woff2'),
+         url('./fonts/lsans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eras ITC';
+    src: url('./fonts/erasbd-webfont.woff2') format('woff2'),
+         url('./fonts/erasbd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sriracha';
+    src: url('./fonts/sriracha-regular-webfont.woff2') format('woff2'),
+         url('./fonts/sriracha-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url('./fonts/comic-webfont.woff2') format('woff2'),
+         url('./fonts/comic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background-image: url(dark.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(72, 27, 131);
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin-top: 20px;
+    height: 460px;
+    width: 300px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+.tophead {
+    position: relative;
+    bottom: 445px;
+    display: flex;
+    z-index: 1;
+}
+
+.headtext {
+    margin: 4px;
+    margin-left: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana;
+    color: white;
+    font-size: large;
+    text-shadow: 2px 1px 2px yellow;
+    letter-spacing: 0.3px;
+}
+
+.facts {
+    margin-left: 7px;
+}
+
+h6 {
+    font-family: 'Forte', 'Cambria', 'Lucida Sans', 'Lucida Sans Regular', Verdana;
+    font-size: small;
+    letter-spacing: 1px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px 20px 10px 30px;
+    width: min-content;
+    padding: 3px;
+    margin: 2.5px;
+    margin-right: 0;
+    color: white;
+}
+
+h3 {
+    margin-top: auto;
+    margin-left: 34px;
+    margin-right: 3px;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+    color: white;
+    text-shadow: 2px 1px 2px rgb(125, 125, 33);
+}
+
+.hp {
+    font-size: larger;
+    margin: auto;
+    margin-right: 4px;
+    margin-left: 0px;
+    margin-top: 5px;
+    color: white;
+    text-shadow: 2px 1px 3px yellow;
+}
+
+.circle {
+    border: 8px solid rgb(175, 55, 208);
+    border-radius: 50px;
+    width: 8px;
+    height: 8px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    margin-top: 2px;
+}
+
+.card img {
+    border: 0;
+    border-radius: 15px;
+    width: 270px;
+    margin-left: 5px;
+    margin-top: 5px;
+    object-fit: cover;
+    border: 5px solid rgb(53, 7, 74);
+    padding: 5px;
+}
+
+.description {
+    position: relative;
+    bottom: 255px;
+    background: black;
+    height: 200px;
+    width: 264px;
+    opacity: 50%;
+    margin: auto;
+    border: 0;
+    border-radius: 50px 50px 0 0;
+    z-index: 1;
+}
+
+.desc_facts {
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    top: 15px;
+    left: 15px;
+}
+
+.ability {
+    margin-left: auto;
+    font-family: 'Eras ITC', Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 6px;
+    border-radius: 20px 5px;
+    width: min-content;
+    padding: 3px;
+    margin: 2.5px;
+    margin-right: 0;
+}
+
+.recover {
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana;
+    margin: 4px;
+    margin-left: 10px;
+    letter-spacing: 0.3px;
+}
+
+.recover_desc {
+    position: absolute;
+    color: white;
+    top: 35px;
+    font-size: x-small;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.slash {
+    position: absolute;
+    top: 55px;
+    width: 150px;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana;
+    margin: 4px;
+    margin-left: 72px;
+    letter-spacing: 0.3px;
+}
+
+.slash_desc {
+    position: absolute;
+    color: white;
+    top: 85px;
+    font-size: x-small;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.divide {
+    position: absolute;
+    top: 115px;
+    color: white;
+    width: 90%;
+    border: 2px solid rgb(105, 23, 23);
+    margin-left: 15px;
+    z-index: 2;
+}
+
+.dark_gx {
+    position: absolute;
+    top: 130px;
+    margin-left: 30px;
+    width: 200px;
+    height: 20px;
+    border: 2px solid white;
+    background-color: black;
+    z-index: 3;
+}
+
+.nova {
+    position: absolute;
+    margin: auto;
+    margin-top: -6px;
+    margin-left: 44px;
+    font-size: large;
+    font-family: 'Sriracha', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 3;
+}
+
+.gx_attack {
+    position: absolute;
+    color: white;
+    top: 150px;
+    font-size: x-small;
+    margin-top: 9px;
+    margin-left: 10px;
+    margin-right: 8px;
+}
+
+.g {
+    position: absolute;
+    width: 20px;
+    top: 280px;
+    left: 760px;
+    z-index: 2;
+}
+
+.X {
+    position: absolute;
+    width: 40px;
+    top: 280px;
+    left: 765px;
+}
+
+.credit{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 16px;
+    margin: 0 auto;
+    width: max-content;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(0,0,0,.6);
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.35);
+    backdrop-filter: blur(4px);
+}
+.credit a{ color: #ffd166; text-decoration: none; }
+.credit a:hover{ text-decoration: underline; }

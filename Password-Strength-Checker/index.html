@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Only Password Strength Checker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+        <h2><s>No</s><br>JavaScript</h2>
+    </div>
+    <div class="container">
+        
+      <h2>Password Strength Checker</h2>
+      <form>
+        <div class="password-box">
+          <input
+            id="pwd"
+            type="password"
+            placeholder="Enter your password"
+            required
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}"
+          />
+          <div class="strength"></div>
+          <!-- <div class="strength-text">Weak</div> -->
+        </div>
+
+        <div class="hint">
+          <strong>Requirements:</strong> 8+ characters with uppercase, lowercase, numbers, and symbols (@$!%*?&)
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitcoin Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Source+Serif+4&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Reset and general styles */
+        /* --- General Resets & Body Styling --- */
         * {
             margin: 0;
             padding: 0;
@@ -16,123 +16,159 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        html, body {
-            height: 100%;
-            margin: 0;
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* Background for the entire page */
         body {
-            background-image: url('image.webp'); /* Replace with your background image */
+            background-image: url('https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2832&auto=format&fit=crop&ixlib-rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            background-repeat: no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            color: white;
+            color: #e0e0e0;
+            position: relative;
+            font-weight: 400; /* Set base font weight */
         }
 
-        /* Navbar styling */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(10, 10, 25, 0.8), rgba(10, 10, 25, 0.9));
+            z-index: -1;
+        }
+        
+        /* Removed h1, h2, h3 from global shadow for specific styling */
+        p, li, span, a {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- Navbar --- */
         .menu {
             padding: 20px 50px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            background-color: transparent;
-            z-index: 2;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
             width: 100%;
-            position: relative;
+            z-index: 100;
         }
 
-        .menu ul {
-            display: inline-flex;
+        .nav-links {
+            display: flex;
             align-items: center;
-            width: 100%;
+            gap: 20px;
         }
 
-        .menu ul li {
+        .menu .main-nav {
+            display: flex;
             list-style: none;
+        }
+        
+        .menu .main-nav li a {
+            text-decoration: none;
+            color: #e0e0e0;
             margin: 0 20px;
-            cursor: pointer;
-            color: #ffffff;
-            transition: color 0.3s ease;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+            white-space: nowrap;
         }
 
-        .menu ul li:hover {
+        .menu .main-nav li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
             background: linear-gradient(90deg, #19d7f8, #fd00da);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            transition: all 0.3s ease;
+            transition: width 0.3s ease;
         }
 
-        .active {
-            color: #19dafa;
+        .menu .main-nav li a:hover::after {
+            width: 100%;
         }
 
         .logo img {
-            width: 80px;
+            width: 70px;
         }
 
-        /* Signup button */
         .signup-btn {
             text-decoration: none;
             color: white;
-            border: 1px solid transparent;
             border-radius: 20px;
-            background-image: linear-gradient(#fd00da, #19d7f8), radial-gradient(circle at top left, #fd00da, #19d7f8);
-            padding: 10px 15px;
-            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            background: linear-gradient(90deg, #fd00da, #19d7f8);
+            padding: 10px 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            white-space: nowrap;
         }
 
         .signup-btn:hover {
-            transform: scale(1.1);
-            background-image: linear-gradient(#595d7d, #595d7d), radial-gradient(circle at top left, #19d7f8, #fd00da);
-            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
-            color: #19d7f8;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Banner Section */
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            color: #e0e0e0;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        /* --- Banner Section --- */
         .banner {
             display: flex;
-            justify-content: center; /* Horizontal Centering */
-            align-items: center; /* Vertical Centering */
-            height: 100vh; /* Make the banner take the full viewport height */
-            text-align: center; /* Center the text */
-            flex-direction: column; /* Stack elements vertically */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 0 20px;
         }
-
-        .banner-content {
-            max-width: 800px; /* Optional: Limit the width of the content */
-            padding: 20px;
-    }
 
         .app-text h1 {
-            font-size: 55px;
+            font-size: 4rem;
+            font-weight: 700;
             margin-bottom: 20px;
-            animation: moveBitcoin 4s infinite ease-in-out;
-            text-shadow: 0 0 15px rgba(136, 0, 255, 0.8), 0 0 30px rgba(136, 0, 255, 0.5);
+            background: linear-gradient(90deg, #19d7f8, #fd00da);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(25, 215, 248, 0.5), 0 0 20px rgba(253, 0, 218, 0.5);
+            animation: pulseGlow 3s infinite ease-in-out alternate;
         }
 
-        @keyframes moveBitcoin {
-            0% {
-                transform: translateX(0px);
+        @keyframes pulseGlow {
+            from {
+                text-shadow: 0 0 10px rgba(25, 215, 248, 0.3), 0 0 20px rgba(253, 0, 218, 0.3);
             }
-            50% {
-                transform: translateX(10px);
-            }
-            100% {
-                transform: translateX(0px);
+            to {
+                text-shadow: 0 0 20px rgba(25, 215, 248, 0.7), 0 0 40px rgba(253, 0, 218, 0.7);
             }
         }
 
         .app-text p {
-            font-size: 18px;
+            font-size: 1.1rem;
             line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            color: #ccc; /* MODIFICATION: Softer text color */
+        }
+        
+        .app-text h4 {
+            font-weight: 500;
+            color: #e0e0e0;
         }
 
         .play-btn {
@@ -140,231 +176,347 @@
             align-items: center;
             margin-top: 30px;
             cursor: pointer;
+            gap: 20px; /* MODIFICATION: Added gap for spacing */
         }
 
         .play-btn-inner {
             height: 60px;
             width: 60px;
             border-radius: 50%;
-            background-image: linear-gradient(#42455a, #42455a), radial-gradient(circle at top left, #fd00da, #19d7f8);
+            border: 2px solid #fd00da;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-        .play-btn-inner:hover{
-            color: #FD00DAFF;
-
-        }
-        .learn-more-btn {
-            margin-left: 20px;
-            font-size: 14px;
-            color: #19d7f8;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .learn-more-btn:hover {
             color: #fd00da;
+            transition: all 0.3s ease;
         }
-
-        /* About Us Section */
-        .about-us {
-            padding: 60px;
-            background-color:transparent; /* Semi-transparent background */
+        
+        .play-btn-inner:hover {
+            background-color: #fd00da;
             color: white;
+            box-shadow: 0 0 20px #fd00da;
+        }
+        
+        /* MODIFICATION: New style for "Learn More" button */
+        .btn-secondary {
+            text-decoration: none;
+            color: #e0e0e0;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            padding: 8px 20px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #19d7f8;
+            border-color: #19d7f8;
+            color: #10101a;
+            transform: translateY(-3px);
+            text-shadow: none; /* Remove shadow on hover */
+        }
+        
+        /* --- Content Sections --- */
+        .content-section {
+            padding: 80px 20px;
             text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            margin: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .about-us h2 {
-            font-size: 40px;
+        .content-section h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
             margin-bottom: 20px;
+            color: #19d7f8; /* MODIFICATION: Branded section headers */
         }
 
-        .about-us p {
-            font-size: 18px;
+        .content-section p {
+            font-size: 1.1rem;
             line-height: 1.8;
             max-width: 800px;
             margin: 0 auto;
+            color: #ccc; /* MODIFICATION: Softer text color */
         }
 
-        /* Features Section with Cards */
         .features {
-            padding: 60px;
-            background-color: transparent;
+            /* MODIFICATION: Added top padding for breathing room */
+            padding: 80px 20px; 
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            gap: 30px;
         }
-
+        
         .feature-card {
-            background-color: black;
-            padding: 30px;
-            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            padding: 40px 30px;
+            border-radius: 15px;
             text-align: center;
-            width: 300px;
-            margin: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 320px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .feature-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 10px 15px black;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .feature-card i { font-size: 40px; margin-bottom: 20px; color: #19d7f8; transition: color 0.3s ease; }
+        .feature-card:hover i { color: #fd00da; }
+        
+        .feature-card h3 { 
+            font-size: 1.5rem; 
+            font-weight: 600;
+            margin-bottom: 15px; 
+            color: #19d7f8; /* MODIFICATION: Branded card headers */
+        }
+        
+        .feature-card p { 
+            font-size: 1rem; 
+            color: #ccc; /* MODIFICATION: Softer text color */
+            line-height: 1.7; 
         }
 
-        .feature-card i {
-            font-size: 40px;
-            margin-bottom: 20px;
-            color: #19d7f8;
-        }
-        .feature-card i:hover{
-            color: white;
-        }
-        .feature-card h3 {
-            font-size: 30px;
-            margin-bottom: 10px;
-            color: white;
-        }
-
-        .feature-card p {
-            font-size: 16px;
-            color: #ddd;
-            line-height: 1.6;
-        }
-
-        /* Feature Bar Section */
         .feature-bar {
             display: flex;
             justify-content: space-around;
-            align-items: center;
-            background: transparent;
-            padding: 20px;
+            /* MODIFICATION: Increased padding for breathing room */
+            padding: 60px 20px;
         }
 
-        .feature-item {
-            text-align: center;
-            color: white;
+        .feature-item { text-align: center; cursor: pointer; transition: all 0.3s ease; }
+        .feature-item:hover { color: #fd00da; transform: translateY(-5px); }
+        .feature-item i { 
+            font-size: 40px; 
+            transition: text-shadow 0.3s ease; 
+        }
+        
+        /* MODIFICATION: Added glow hover to icons */
+        .feature-item:hover i {
+            text-shadow: 0 0 15px #fd00da;
         }
 
-        .feature-item i {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
+        .feature-item span { display: block; margin-top: 10px; font-weight: 600; }
 
-        .feature-item span {
-            display: block;
-            margin-top: 5px;
-        }
-        .feature-item:hover{
-            color: #fd00da;
-        }
-        /* Footer Section */
         .footer {
-            padding: 20px;
-            background-color: transparent; /* Semi-transparent */
-            color: white;
+            /* MODIFICATION: Increased padding */
+            padding: 60px 20px;
             text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .footer:hover{
-            color: #fd00da;
-        }
-
-        /* Responsive Design */
+        
+        /* --- Responsive Styles --- */
         @media (max-width: 768px) {
-            .banner {
-                background-attachment: scroll;
+            .menu {
+                padding: 20px 30px;
             }
 
-            .features {
+            .menu .main-nav {
+                display: none; 
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                max-width: 300px;
+                height: 100vh;
+                background: rgba(10, 10, 25, 0.9);
+                backdrop-filter: blur(15px);
                 flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: right 0.4s ease-in-out;
+                z-index: 99;
+                border-left: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            #menu-toggle:checked ~ .nav-links {
+                right: 0;
+            }
+
+            .nav-links .main-nav {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                width: 100%;
+                padding: 0;
+            }
+
+            .nav-links .main-nav li {
+                margin: 20px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links .main-nav li a {
+                display: block;
+                padding: 10px 0;
+                margin: 0;
+                font-size: 1.2rem;
+                color: #e0e0e0;
+            }
+
+            .nav-links .main-nav li a:hover::after {
+                width: 50%;
+            }
+            
+            .nav-links .signup-btn {
+                margin-top: 30px;
+                font-size: 1.1rem;
+                padding: 12px 30px;
+            }
+
+            .hamburger-menu {
+                display: block;
+                z-index: 101;
+            }
+
+            .app-text h1 {
+                font-size: 3rem;
+            }
+
+            .content-section {
+                padding: 60px 20px;
+                margin: 20px;
+            }
+
+            .content-section h2 {
+                font-size: 2rem;
+            }
+            
+            .features {
+                padding: 40px 10px;
+            }
+
+            .feature-card {
+                width: 90%;
+                max-width: 320px;
+                margin: 15px 0;
+            }
+
+            .feature-bar {
+                flex-wrap: wrap;
+                row-gap: 30px;
+                padding: 40px 20px;
+            }
+
+            .feature-item {
+                flex-basis: 50%;
+            }
+            
+            .footer {
+                padding: 40px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu {
+                padding: 20px;
+            }
+
+            .app-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .app-text p {
+                font-size: 1rem;
+            }
+            
+            /* MODIFICATION: Made play/learn buttons stack */
+            .play-btn {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .content-section {
+                margin: 20px 10px;
+                padding: 40px 15px;
+            }
+
+            .feature-item {
+                flex-basis: 100%;
             }
         }
     </style>
 </head>
 
 <body>
-
-    <!-- Navbar -->
-    <div class="menu">
-        <div class="logo">
-            <img src="logo.png" alt="Logo"> <!-- Replace with your logo -->
+    <nav class="menu">
+        <a href="#" class="logo"><img src="logo.png" alt="Logo"></a>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger-menu">
+            <i class="fas fa-bars fa-2x"></i>
+        </label>
+        
+        <div class="nav-links">
+            <ul class="main-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="signup-btn">Sign Up</a>
         </div>
-        <ul>
-            <li class="active">Home</li>
-            <li>Service</li>
-            <li>Product</li>
-            <li>Contact</li>
-        </ul>
-        <a href="#" class="signup-btn">Sign_Up</a>
-    </div>
+    </nav>
 
-    <!-- Banner Section -->
-    <div class="banner">
+    <main class="banner">
         <div class="app-text">
             <h1>BITCOIN</h1>
-            <p>Bitcoin: The Future of Digital Currency"
-            "Join the revolution of decentralized finance with Bitcoin. A digital currency that's more than just an investment—it's a way to take control of your financial freedom. With Bitcoin, transactions happen directly between peers, eliminating the need for middlemen like banks or governments.Its secure, transparent, and global nature makes it the future of currency."</p><br>
-            <h4>"Start Your Bitcoin Journey Today!"</h4>
+            <p>"Join the revolution of decentralized finance. Bitcoin is more than an investment—it's your key to financial freedom. Secure, transparent, and global, it is the future of currency."</p>
+            <h4>Start Your Bitcoin Journey Today!</h4>
             <div class="play-btn">
                 <div class="play-btn-inner">
                     <i class="fa fa-play"></i>
                 </div>
-                <a href="#" class="learn-more-btn">LEARN MORE</a>
+                <a href="#" class="btn-secondary">LEARN MORE</a>
             </div>
         </div>
-    </div>
+    </main>
 
-    <!-- About Us Section -->
-    <section class="about-us">
+    <section id="about" class="content-section">
         <h2>About Us</h2>
-        <p>We are a team of professionals dedicated to providing top-notch services. Our mission is to enhance your business with innovative solutions and exceptional service.
-            "We are a passionate team of tech enthusiasts, finance experts, and digital pioneers committed to making Bitcoin accessible to everyone. Our goal is to bridge the gap between traditional finance and the new, decentralized world. We believe in the power of blockchain technology to democratize the financial system, offering transparency, security, and efficiency to individuals and businesses alike.
-            At [Your Company Name], we provide education, tools, and support to help people navigate and thrive in the cryptocurrency space. Whether you're new to Bitcoin or a seasoned trader, we're here to assist you every step of the way on your digital finance journey."</p>
+        <p>We are a passionate team of tech enthusiasts and finance experts committed to making Bitcoin accessible to everyone. We provide the education, tools, and support to help you navigate and thrive in the cryptocurrency space, bridging the gap between traditional finance and the new, decentralized world.</p>
     </section>
 
-    <!-- Features Section with Cards -->
-    <section class="features">
+    <section id="features" class="features">
         <div class="feature-card">
             <i class="fas fa-shield-alt"></i>
-            <h3>Feature One</h3>
+            <h3>Unmatched Security</h3>
             <p>High-quality security solutions that safeguard your data and ensure smooth operations.</p>
         </div>
         <div class="feature-card">
             <i class="fas fa-cogs"></i>
-            <h3>Feature Two</h3>
+            <h3>Seamless Integration</h3>
             <p>Custom-built tools designed to streamline your business processes and increase productivity.</p>
         </div>
         <div class="feature-card">
             <i class="fas fa-users"></i>
-            <h3>Feature Three</h3>
-            <p>Exceptional customer service, supporting you every step of the way.</p>
+            <h3>Dedicated Support</h3>
+            <p>Exceptional customer service, supporting you every step of the way on your journey.</p>
         </div>
     </section>
 
     <div class="feature-bar">
-        <div class="feature-item">
-            <i class="fas fa-share-alt"></i>
-            <span>SHARE TO</span>
-        </div>
-        <div class="feature-item">
-            <i class="fas fa-newspaper"></i>
-            <span>RECENT NEWS</span>
-        </div>
-        <div class="feature-item">
-            <i class="fas fa-chart-line"></i>
-            <span>ANALYTICS</span>
-        </div>
-        <div class="feature-item">
-            <i class="fas fa-wallet"></i>
-            <span>WALLET</span>
-        </div>
+        <div class="feature-item"> <i class="fas fa-share-alt"></i> <span>SHARE</span> </div>
+        <div class="feature-item"> <i class="fas fa-newspaper"></i> <span>NEWS</span> </div>
+        <div class="feature-item"> <i class="fas fa-chart-line"></i> <span>ANALYTICS</span> </div>
+        <div class="feature-item"> <i class="fas fa-wallet"></i> <span>WALLET</span> </div>
     </div>
 
-    <!-- Footer Section -->
-    <div class="footer">
-        <p>&copy; 2024 Your Bitcoin Website. All Rights Reserved.</p>
-    </div>
+    <footer class="footer">
+        <p>&copy; 2025 Bitcoin Website. All Rights Reserved.</p>
+    </footer>
 
 </body>
-
 </html>

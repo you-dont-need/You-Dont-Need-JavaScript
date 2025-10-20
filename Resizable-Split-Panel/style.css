@@ -1,0 +1,136 @@
+:root{
+  --gutter: 64px;        /* width reserved for vertical buttons */
+  --left: 40%;
+  --bg: #071027;
+  --card-bg: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  --muted: rgba(255,255,255,0.7);
+}
+
+/* Basic page layout */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;background:linear-gradient(180deg,#071027,#051023);color:#e6eef8}
+.viewport{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:36px}
+
+.sr-only{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; border:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+
+/* card container */
+.card{
+  width:88%;
+  max-width:1100px;
+  height:62vh;
+  min-height:420px;
+  padding:14px;
+  border-radius:12px;
+  background:var(--card-bg);
+  box-shadow: 0 14px 50px rgba(2,6,23,0.7);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* split layout: left | gutter | right */
+.split{
+  flex:1;
+  display:grid;
+  grid-template-columns: var(--left) var(--gutter) 1fr;
+  gap:0;
+  align-items:stretch;
+  width:100%;
+  height:100%;
+}
+
+/* panels */
+.panel{
+  padding:28px;
+  border-radius:8px;
+  overflow:auto;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.left{ background: linear-gradient(180deg,#0f1724,#0b1a26) }
+.right{ background: linear-gradient(180deg,#08111b,#06121a) }
+
+h2{ margin:0; font-size:20px; color:#dff7f3 }
+.muted{ color:var(--muted); margin:0; }
+
+/* gutter visuals */
+.gutter{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  user-select:none;
+  -webkit-user-select:none;
+}
+
+/* vertical control column (stack of buttons) */
+.vertical-controls{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  height:70%;
+  pointer-events:auto;
+}
+
+/* button labels (styled) */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:36px;
+  border-radius:8px;
+  background:transparent;
+  color:var(--muted);
+  border:1px solid rgba(255,255,255,0.04);
+  cursor:pointer;
+  user-select:none;
+  transition: background 120ms, transform 120ms, color 120ms;
+  text-decoration:none;
+  font-weight:600;
+  font-size:13px;
+  outline: none;
+}
+
+/* hover / focus */
+.btn:hover,
+.btn:focus{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.035);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.35);
+}
+
+/* visually indicate active button using radio checked + selector */
+#p20:checked ~ .viewport .card .btn-20,
+#p40:checked ~ .viewport .card .btn-40,
+#p60:checked ~ .viewport .card .btn-60,
+#p80:checked ~ .viewport .card .btn-80{
+  background: linear-gradient(180deg, #e6fff7, #c5fff0);
+  color:#02121a;
+  border-color: rgba(0,0,0,0.06);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* set --left based on checked radio */
+#p20:checked ~ .viewport .card .split { --left:20%; }
+#p40:checked ~ .viewport .card .split { --left:40%; }
+#p60:checked ~ .viewport .card .split { --left:60%; }
+#p80:checked ~ .viewport .card .split { --left:80%; }
+
+/* default */
+.split { --left:40%; }
+
+/* instructions */
+.instructions{ margin:0; font-size:13px; color:var(--muted) }
+
+/* small-screen fallback: stacked panels, hide gutter controls */
+@media (max-width:720px){
+  .split{ grid-template-columns: 1fr; grid-auto-rows: 1fr; }
+  .gutter, .vertical-controls { display:none; }
+  .card { height: auto; min-height: 60vh; }
+}

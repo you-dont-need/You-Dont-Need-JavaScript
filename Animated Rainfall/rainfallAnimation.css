@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 100%, #0b0b0b 0%, #111 80%);
+  overflow: hidden;
+  position: relative;
+}
+
+.rain {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.rain span {
+  position: absolute;
+  top: -10%;
+  left: calc(var(--x) * 1%);
+  width: 2px;
+  height: calc(20px + var(--s) * 4px); 
+  background: linear-gradient(to bottom, rgba(173,216,230,0), rgba(173,216,230,0.9));
+  border-radius: 1px;
+  filter: blur(calc(var(--s) * 0.6px));
+  opacity: 0.8;
+  animation: fall linear infinite;
+  animation-duration: calc(1s + var(--s) * 0.3s);
+  animation-delay: calc(var(--x) * -0.07s);
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) scaleY(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) scaleY(0.4);
+    opacity: 0;
+  }
+}
+
+.rain span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -2px;
+  width: 6px;
+  height: 2px;
+  background: rgba(173, 216, 230, 0.6);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: splash linear infinite;
+  animation-duration: inherit;
+  animation-delay: inherit;
+}
+
+@keyframes splash {
+  0%, 90% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  95% {
+    transform: scale(1.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
