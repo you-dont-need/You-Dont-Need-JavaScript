@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Roaster Machine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+	<div class="toaster">
+		<!-- Checkbox for the handle switch -->
+		<input type="checkbox" id="toaster-switch" class="toaster__switch">
+
+		<!-- The actual toaster -->
+		<label for="toaster-switch" class="toaster__body">
+			<!-- Main toaster body -->
+			<div class="toaster__main">
+				<!-- Left side integrated handle (lever) -->
+				<div class="toaster__handle">
+					<div class="toaster__handle-top"></div>
+					<div class="toaster__handle-stick"></div>
+				</div>
+
+				<!-- Top part with slots -->
+				<div class="toaster__top">
+					<div class="toaster__slot"></div>
+				</div>
+
+				<!-- Front face with controls -->
+				<div class="toaster__front">
+					<div class="toaster__panel">
+						<div class="toaster__knob"></div>
+						<div class="toaster__logo">ToastMaster - Click Me</div>
+						<div class="toaster__light"></div>
+					</div>
+				</div>
+			</div>
+		</label>
+
+		<!-- The bread that goes in the toaster -->
+		<div class="clipper">
+			<div class="bread">
+				<div class="bread__crust"></div>
+				<div class="bread__texture"></div>
+			</div>
+		</div>
+
+		<!-- Toast notification UI -->
+		<div class="toast-notification">
+			<div class="toast-notification__content">
+				Your bread is cooked, please wait, I beg you, please...
+			</div>
+			<div class="toast-notification__close">×</div>
+		</div>
+
+		<!-- Snackbar UI -->
+		<div class="snackbar">
+			<div class="snackbar__content">
+				Your bread is done, ready to serve. You happy now?
+			</div>
+			<button type="button" class="snackbar__button">Okay</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>
