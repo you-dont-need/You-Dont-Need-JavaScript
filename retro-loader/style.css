@@ -3,6 +3,8 @@ body {
   height: 100%;
   margin: 0;
   background-color: #f3a5f9;
+
+  /* Center content horizontally and vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +14,11 @@ body {
   background: white;
   padding: 20px;
   border-radius: 25px;
+
+  /* Shadow for depth */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+  /* Smooth pop animation: scales up and down forever */
   animation: pop 1.5s ease-in-out infinite alternate;
 }
 
