@@ -7,3 +7,26 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.loader-container {
+  background: white;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  animation: pop 1.5s ease-in-out infinite alternate;
+}
+
+img {
+  width: 220px;
+  height: auto;
+  border-radius: 12px;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
