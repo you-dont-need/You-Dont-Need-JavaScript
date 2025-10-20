@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Night City - Pure CSS Animation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Scene: City (default active) -->
+  <div class="scene scene--city scene--active">
+    <div class="sky">
+      <div class="moon"></div>
+      <div class="stars stars-layer-1"></div>
+      <div class="stars stars-layer-2"></div>
+      <div class="stars stars-layer-3"></div>
+      <div class="clouds">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+      </div>
+    </div>
+
+    <div class="neon-signs">
+      <div class="neon-sign neon-pink">NIGHT CITY</div>
+    </div>
+
+    <div class="city">
+      <div class="building b1">
+        <div class="antenna"></div>
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+      <div class="building b2">
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+      <div class="building b3">
+        <div class="antenna antenna-tall"></div>
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+      <div class="building b4">
+        <div class="rooftop"></div>
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+      <div class="building b5">
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+      <div class="building b6">
+        <div class="antenna"></div>
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+      <div class="building b7">
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Signboard on the right side of buildings above the road -->
+    <div id="sideBoard" class="side-board" role="button" tabindex="0" aria-label="View road scene">
+      <div class="sb-title">CITY BOARD</div>
+      <div class="sb-line">Traffic Live</div>
+      <div class="sb-line small">Click to view road</div>
+    </div>
+
+    <div class="ground"></div>
+
+    <div class="info">
+      <h1>🌃 Night City</h1>
+      <p>Pure CSS Animation</p>
+      <p class="subtitle">No JavaScript Required</p>
+      <div class="controls">
+        <!-- left display removed per request -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene: Road with moving cars -->
+  <div class="scene scene--road">
+    <div class="road-scene">
+      <div class="sky road-sky"></div>
+      <div class="road">
+        <div class="lane"></div>
+
+          <!-- Vehicle: small car -->
+          <div class="vehicle car car-1">
+            <div class="body"></div>
+            <div class="wheel front"></div>
+            <div class="wheel back"></div>
+            <div class="headlight left"></div>
+            <div class="headlight right"></div>
+            <div class="taillight left"></div>
+            <div class="taillight right"></div>
+          </div>
+
+          <!-- Vehicle: bike (small, nimble) -->
+          <div class="vehicle bike bike-1">
+            <div class="body"></div>
+            <div class="wheel front"></div>
+            <div class="wheel back"></div>
+            <div class="headlight"></div>
+          </div>
+
+          <!-- Vehicle: medium car (opposite direction) -->
+          <div class="vehicle car car-2">
+            <div class="body"></div>
+            <div class="wheel front"></div>
+            <div class="wheel back"></div>
+            <div class="headlight left"></div>
+            <div class="headlight right"></div>
+            <div class="taillight left"></div>
+            <div class="taillight right"></div>
+          </div>
+
+          <!-- Vehicle: bus (large, slower) -->
+          <div class="vehicle bus bus-1">
+            <div class="body"></div>
+            <div class="wheel front"></div>
+            <div class="wheel back"></div>
+            <div class="headlight left"></div>
+            <div class="headlight right"></div>
+            <div class="taillight left"></div>
+            <div class="taillight right"></div>
+          </div>
+
+          <!-- Vehicle: larger car -->
+          <div class="vehicle car car-3">
+            <div class="body"></div>
+            <div class="wheel front"></div>
+            <div class="wheel back"></div>
+            <div class="headlight left"></div>
+            <div class="headlight right"></div>
+            <div class="taillight left"></div>
+            <div class="taillight right"></div>
+          </div>
+
+          <!-- Vehicle: bike (opposite) -->
+          <div class="vehicle bike bike-2">
+            <div class="body"></div>
+            <div class="wheel front"></div>
+            <div class="wheel back"></div>
+            <div class="headlight"></div>
+          </div>
+        <!-- Road signboard to go back to the city scene -->
+        <div id="roadBoard" class="road-board" role="button" tabindex="0" aria-label="Back to city scene">
+          <div class="rb-line">Back to City</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info">
+      <h1>🛣️ Night Road</h1>
+      <p>CSS Cars Driving Along a Road</p>
+      <p class="subtitle">Switch back to the city when ready</p>
+      <div class="controls">
+        <button id="btnCity2">City</button>
+        <button id="btnRoad2">Road</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Scene switcher
+    function switchScene(name) {
+      document.querySelectorAll('.scene').forEach(s => s.classList.remove('scene--active'));
+      const target = document.querySelector('.scene--' + name);
+      if (target) target.classList.add('scene--active');
+    }
+
+    // City info display (non-interactive)
+    // const board = document.getElementById('displayBoard');
+    // intentionally left non-interactive per user request
+
+    // Side board on the right of buildings
+    const side = document.getElementById('sideBoard');
+    if (side) {
+      side.addEventListener('click', () => switchScene('road'));
+      side.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') switchScene('road'); });
+    }
+
+    // Road scene board to go back to city
+    const roadBoard = document.getElementById('roadBoard');
+    if (roadBoard) {
+      roadBoard.addEventListener('click', () => switchScene('city'));
+      roadBoard.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') switchScene('city'); });
+    }
+
+    document.getElementById('btnCity2').addEventListener('click', () => switchScene('city'));
+    document.getElementById('btnRoad2').addEventListener('click', () => switchScene('road'));
+
+    // Optional: allow keyboard navigation: 1 = city, 2 = road
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '1') switchScene('city');
+      if (e.key === '2') switchScene('road');
+    });
+  </script>
+</body>
+</html>
