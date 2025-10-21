@@ -3,178 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Watch</title>
     <style>
+        :root {
+            --bg-color: #1a1d2d;
+            --highlight-color: #3d52a0;
+            --watch-body: #4a4a4a;
+            --watch-body-highlight: #6b6b6b;
+            --strap-color: #ff6b6b;
+            --text-color: #ffffff;
+            --text-secondary: #a0a0a0;
+            --screen-bg: #000000;
+            --accent-green: #34c759;
+            --accent-blue: #007aff;
+            --accent-red: #ff3b30;
+        }
+
         body {
             margin: 0;
             overflow: hidden;
-            background-color: rgba(0, 128, 255, 0.5); /* Oceanic color */
-        }
-
-        .watch-container {
+            background: radial-gradient(circle, var(--highlight-color), var(--bg-color));
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            position: relative;
-            overflow: hidden;
-            z-index: 10;
         }
-
-        .apple-logo {
+        
+        .watch-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .watch-container::before {
+            content: "";
             position: absolute;
             font-size: 400px;
-            color: rgba(0, 0, 0, 0.03);
-            z-index: 1;
-            content: "●";
+            color: rgba(255, 255, 255, 0.02);
+            z-index: -2;
         }
 
         .watch {
             width: 200px;
             height: 240px;
-            background: silver; /* Changed to silver */
+            background: linear-gradient(145deg, var(--watch-body-highlight), var(--watch-body));
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             border-radius: 40px;
             position: relative;
-            transform: translateX(-1000px);
-            animation: slideIn 1.5s forwards;
-            cursor: pointer;
+            cursor: default;
             z-index: 2;
+            animation: slideIn 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .watch:hover {
+            transform: scale(1.05) translateY(-10px);
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
         }
 
         .screen {
             width: 180px;
             height: 220px;
-            background: silver; /* Changed to silver */
+            background: var(--watch-body);
             border-radius: 35px;
             position: absolute;
             top: 10px;
             left: 10px;
             overflow: hidden;
+            box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .display {
-            width: 170px;
-            height: 210px;
-            background: #1a1a1a;
+            width: 100%;
+            height: 100%;
+            background: var(--screen-bg);
             border-radius: 30px;
+            position: relative;
+            transition: box-shadow 0.4s ease;
+        }
+        
+        .side-button, .crown {
+            background: linear-gradient(to right, var(--watch-body), var(--watch-body-highlight));
             position: absolute;
-            top: 5px;
-            left: 5px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .side-button { width: 5px; height: 40px; right: -5px; top: 60px; border-radius: 0 3px 3px 0; }
+        .crown { width: 8px; height: 25px; right: -8px; top: 110px; border-radius: 0 5px 5px 0; }
+
+        .strap-top, .strap-bottom { width: 160px; height: 100px; background: var(--strap-color); position: absolute; left: 20px; z-index: -1; }
+        .strap-top { top: -80px; border-radius: 20px 20px 0 0; }
+        .strap-bottom { bottom: -80px; border-radius: 0 0 20px 20px; }
+        
+        .time-container {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.4s ease 0.1s, top 0.4s ease;
+            z-index: 5;
+        }
+        .time {
+            color: var(--text-color);
+            font-size: 38px;
+            font-weight: 600;
+        }
+        .date {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+        
+        .watch:hover .display {
+            box-shadow: inset 0 0 15px rgba(0, 122, 255, 0.3);
+        }
+
+        .watch:hover .time-container, .watch:hover .stats-container {
+            opacity: 1;
+        }
+        
+        .stats-container {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease 0.2s;
+        }
+        
+        .icon-group {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
-            transition: box-shadow 0.3s;
+            font-size: 22px;
+            cursor: pointer;
+            color: var(--text-color);
+            transition: color 0.3s ease;
+            z-index: 10;
         }
 
-        .watch:hover .display {
-            box-shadow: inset 0 0 20px rgba(0, 128, 255, 0.3);
-        }
-
-        .side-button {
-            width: 5px;
-            height: 40px;
-            background: #444;
+        .detail-text {
             position: absolute;
-            right: -5px;
-            top: 60px;
-            border-radius: 0 3px 3px 0;
+            top: -65px; 
+            width: 150px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            transform: translateY(10px);
+        }
+        
+        .sleep .detail-text { left: 5px; }
+        .steps .detail-text { left: -55px; }
+        .heart .detail-text { left: -115px; }
+
+
+        .detail-text small {
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: block;
         }
 
-        .crown {
-            width: 8px;
-            height: 15px;
-            background: #444;
-            position: absolute;
-            right: -8px;
-            top: 110px;
-            border-radius: 0 5px 5px 0;
+        .sleep-detail { color: var(--accent-blue); }
+        .heart-detail { color: var(--accent-red); }
+        .steps-detail { color: var(--accent-green); }
+
+        .stats-container:hover ~ .time-container {
+            top: 20px;
+            opacity: 0.6;
         }
 
-        .strap-top, .strap-bottom {
-            width: 160px;
-            height: 100px;
-            background: lime; /* Changed to lime yellow */
-            position: absolute;
-            left: 20px;
-        }
-
-        .strap-top {
-            top: -80px;
-            border-radius: 10px 10px 0 0;
-        }
-
-        .strap-bottom {
-            bottom: -80px;
-            border-radius: 0 0 10px 10px;
-        }
-
-        .default-text {
-            color: #fff;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 16px;
+        .icon-group:hover .detail-text {
             opacity: 1;
-            position: absolute;
-            transition: opacity 0.3s;
+            transform: translateY(0);
+        }
+        
+        .icon-group.sleep:hover { color: var(--accent-blue); }
+        .icon-group.heart:hover { color: var(--accent-red); }
+        .icon-group.steps:hover { color: var(--accent-green); }
+
+        /* --- New animation for the heartbeat --- */
+        .heart-detail::before {
+            content: "68 BPM"; /* Default starting content */
+            animation: heartbeat-flicker 4s linear infinite;
         }
 
-        .time {
-            color: #fff;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 32px;
-            opacity: 0;
-            position: absolute;
-            transition: opacity 0.3s;
+        @keyframes heartbeat-flicker {
+            0%   { content: "68 BPM"; }
+            25%  { content: "71 BPM"; }
+            50%  { content: "67 BPM"; }
+            75%  { content: "70 BPM"; }
+            100% { content: "68 BPM"; }
         }
-
-        .date {
-            color: #888;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 16px;
-            opacity: 0;
-            position: absolute;
-            transform: translateY(30px);
-            transition: opacity 0.3s;
-        }
-
-        .stats {
-            color: #fff;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 16px;
-            opacity: 0;
-            position: absolute;
-            transform: translateY(60px); /* Adjusted for spacing */
-            transition: opacity 0.3s;
-        }
-
-        .watch:hover .default-text {
-            opacity: 0;
-        }
-
-        .watch:hover .time,
-        .watch:hover .date,
-        .watch:hover .stats {
-            opacity: 1;
-        }
-
-        @keyframes slideIn {
-            to {
-                transform: translateX(0);
-            }
-        }
+        
+        @keyframes slideIn { to { transform: translateX(0); } }
     </style>
 </head>
 <body>
+
     <div class="watch-container">
-        <div class="apple-logo">●</div>
         <div class="watch">
             <div class="strap-top"></div>
             <div class="screen">
                 <div class="display">
-                    <div class="default-text">Hover to wake</div>
-                    <div class="time">12:00</div>
-                    <div class="date">Monday, Oct 30</div>
-                    <div class="stats">1276 steps | 348 cal 🔥</div>
+                    
+                    <div class="stats-container">
+                        <div class="icon-group sleep">
+                            <span>🌙</span>
+                            <div class="detail-text sleep-detail">8h 15m <small>Sleep</small></div>
+                        </div>
+                        
+                        <div class="icon-group steps">
+                            <span>🚶‍♂</span>
+                            <div class="detail-text steps-detail">8,124 <small>Steps</small></div>
+                        </div>
+
+                        <div class="icon-group heart">
+                            <span>❤️</span>
+                            <div class="detail-text heart-detail"></div>
+                        </div>
+                    </div>
+
+                    <div class="time-container">
+                        <div class="time">11:47</div>
+                        <div class="date">Tue, Oct 14</div>
+                    </div>
                 </div>
             </div>
             <div class="side-button"></div>
@@ -182,5 +247,6 @@
             <div class="strap-bottom"></div>
         </div>
     </div>
+
 </body>
 </html>
