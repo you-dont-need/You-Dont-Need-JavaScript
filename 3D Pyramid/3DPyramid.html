@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Pyramid</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #0b132b, #1c2541);
+    perspective: 800px;
+  }
+
+  .pyramid {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(30deg);
+    animation: spin 10s linear infinite;
+  }
+
+  .pyramid-face {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 173.2px solid gold;
+    transform-origin: bottom center;
+    opacity: 0.95;
+  }
+
+  /* Properly aligned faces */
+  .front {
+    transform: rotateY(0deg) translateZ(95px) rotateX(30deg);
+  }
+
+  .right {
+    transform: rotateY(90deg) translateZ(95px) rotateX(30deg);
+  }
+
+  .back {
+    transform: rotateY(180deg) translateZ(95px) rotateX(30deg);
+  }
+
+  .left {
+    transform: rotateY(-90deg) translateZ(95px) rotateX(30deg);
+  }
+
+  /* Base (square) */
+  .base {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(218, 165, 32, 0.8);
+    transform: rotateX(90deg) translateZ(-75px);
+  }
+
+  @keyframes spin {
+    from { transform: rotateX(-20deg) rotateY(0deg); }
+    to { transform: rotateX(-20deg) rotateY(360deg); }
+  }
+</style>
+</head>
+<body>
+  <div class="pyramid">
+    <div class="pyramid-face front"></div>
+    <div class="pyramid-face right"></div>
+    <div class="pyramid-face back"></div>
+    <div class="pyramid-face left"></div>
+    <div class="base"></div>
+  </div>
+</body>
+</html>

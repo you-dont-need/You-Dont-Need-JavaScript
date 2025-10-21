@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Night City - Pure CSS Animation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Scene: City (default active) -->
+  <div id="city" class="scene scene--city">
+    <div class="sky">
+      <div class="moon"></div>
+      <div class="stars stars-layer-1"></div>
+      <div class="stars stars-layer-2"></div>
+      <div class="stars stars-layer-3"></div>
+      <div class="clouds">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+      </div>
+    </div>
+
+    <div class="neon-signs">
+      <div class="neon-sign neon-pink">NIGHT CITY</div>
+    </div>
+
+    <div class="city">
+      <div class="building b1">
+        <div class="antenna"></div>
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+      <div class="building b2">
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+      <div class="building b3">
+        <div class="antenna antenna-tall"></div>
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+      <div class="building b4">
+        <div class="rooftop"></div>
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+      <div class="building b5">
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+      <div class="building b6">
+        <div class="antenna"></div>
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+      <div class="building b7">
+        <div class="windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Signboard on the right side of buildings above the road -->
+    <a href="#road" class="side-board" role="button" tabindex="0" aria-label="View road scene">
+      <div class="sb-title">CITY BOARD</div>
+      <div class="sb-line">Traffic Live</div>
+      <div class="sb-line small">Click to view road</div>
+    </a>
+
+    <div class="ground"></div>
+
+    <div class="info">
+      <h1>🌃 Night City</h1>
+      <p>Pure CSS Animation</p>
+      <p class="subtitle">No JavaScript Required</p>
+      <div class="controls">
+        <!-- left display removed per request -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene: Road with moving cars -->
+  <div id="road" class="scene scene--road">
+    <div class="road-scene">
+      <div class="sky road-sky"></div>
+      <div class="road">
+        <!-- Background Buildings -->
+        <div class="background-buildings">
+          <div class="bg-building b1"></div>
+          <div class="bg-building b2"></div>
+          <div class="bg-building b3"></div>
+          <div class="bg-building b4"></div>
+          <div class="bg-building b5"></div>
+        </div>
+
+        <!-- Lamp Posts -->
+        <div class="lamp-posts">
+          <div class="lamp-post l1">
+            <div class="post"></div>
+            <div class="light"></div>
+          </div>
+          <div class="lamp-post l2">
+            <div class="post"></div>
+            <div class="light"></div>
+          </div>
+          <div class="lamp-post l3">
+            <div class="post"></div>
+            <div class="light"></div>
+          </div>
+          <div class="lamp-post l4">
+            <div class="post"></div>
+            <div class="light"></div>
+          </div>
+        </div>
+
+        <!-- Street Signs -->
+        <div class="street-signs">
+          <div class="sign s1">SPEED<br>LIMIT<br>60</div>
+          <div class="sign s2">NIGHT<br>CITY<br>→</div>
+        </div>
+
+        <div class="lane"></div>
+
+          <!-- Vehicle: small car -->
+          <div class="vehicle car car-1">
+            <div class="body"></div>
+            <div class="wheel front"></div>
+            <div class="wheel back"></div>
+            <div class="headlight left"></div>
+            <div class="headlight right"></div>
+            <div class="taillight left"></div>
+            <div class="taillight right"></div>
+          </div>
+
+          <!-- Vehicle: bike (small, nimble) -->
+          <div class="vehicle bike bike-1">
+            <div class="body"></div>
+            <div class="wheel front"></div>
+            <div class="wheel back"></div>
+            <div class="headlight"></div>
+          </div>
+
+          <!-- Vehicle: medium car (opposite direction) -->
+          <div class="vehicle car car-2">
+            <div class="body"></div>
+            <div class="wheel front"></div>
+            <div class="wheel back"></div>
+            <div class="headlight left"></div>
+            <div class="headlight right"></div>
+            <div class="taillight left"></div>
+            <div class="taillight right"></div>
+          </div>
+
+          <!-- Vehicle: bus (large, slower) -->
+          <div class="vehicle bus bus-1">
+            <div class="body"></div>
+            <div class="wheel front"></div>
+            <div class="wheel back"></div>
+            <div class="headlight left"></div>
+            <div class="headlight right"></div>
+            <div class="taillight left"></div>
+            <div class="taillight right"></div>
+          </div>
+
+          <!-- Vehicle: larger car -->
+          <div class="vehicle car car-3">
+            <div class="body"></div>
+            <div class="wheel front"></div>
+            <div class="wheel back"></div>
+            <div class="headlight left"></div>
+            <div class="headlight right"></div>
+            <div class="taillight left"></div>
+            <div class="taillight right"></div>
+          </div>
+
+          <!-- Vehicle: bike (opposite) -->
+          <div class="vehicle bike bike-2">
+            <div class="body"></div>
+            <div class="wheel front"></div>
+            <div class="wheel back"></div>
+            <div class="headlight"></div>
+          </div>
+        <!-- Road signboard to go back to the city scene -->
+        <a href="#city" class="road-board" role="button" tabindex="0" aria-label="Back to city scene">
+          <div class="rb-line">Back to City</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

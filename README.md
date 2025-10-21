@@ -73,6 +73,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Interactive Resume](#interactive-resume)
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
+- [Lighthouse Scene](#lighthouse-scene)
 - [Loaders](#loaders)
 - [Loading_Css_effect](#Loading-Css-effect)
 - [Lego_Loader](#Lego-Loader)
@@ -87,6 +88,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Neon Card](#neon-card)
 - [Netlix Clone v2](#Netflix-Clone-v2)
 - [Neumorphism Card Design](#neumorphism-card-design)
+- [Night City](#night-city)
 - [Parallax Scrolling](#parallax-scrolling)
 - [Pendulum](#pendulum)
 - [Playing Card Animation](#playing-card-animation)
@@ -124,6 +126,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Zoom When Hover](#zoom-when-hover)
 - [Debit Card Hover effect](#debit-card-hover)
 - [Progress Bar On Scroll](#ProgressOnScroll)
+- [Password Strength Checker](#password-strength-checker)
 - [Pricing Table](#pricing-table)
 - **Contribution**
   - [Contributors](#contributors)
@@ -710,6 +713,17 @@ Your browser does not support the video tag.
 
 ---
 
+## <a id="night-city"></a>Night City
+
+[<img src="Night City/preview1.png" height="230" title="Night City - City View">](<Night City>)
+[<img src="Night City/preview2.png" height="230" title="Night City - Road View">](<Night City>)
+
+A pure CSS animation showcasing a dynamic night city scene with interactive views. Features a detailed cityscape with animated elements and a road scene with moving vehicles, all without JavaScript.
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="Netflix-Clone-v2"></a>Netflix Clone Demo
 
 [<img src="Netflix Clone v2/Screenshot1.png" height="230" title="Demo 1">](http://url-to-page)
@@ -835,6 +849,14 @@ Your browser does not support the video tag.
 ## <a id="LightBulbAnimation"></a>Light Bulb Animation
 
 <img src="images/LightBulbAnimation.png" height="230" title="Light Bulb animation">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="lighthouse-scene"></a>Lighthouse Scene
+
+[<img src="Lighthouse Scene/Lighthouse_scene.gif" height="230" title="Lighthouse Scene">](Lighthouse%20Scene/lighthouse-scene.html)
 
 **[⬆ back to top](#quick-links)**
 
@@ -1203,6 +1225,14 @@ A modern, interactive scroll-driven video animation created with pure CSS. Featu
 ## <a id="ProgressOnScroll"></a>Progress bar on scroll
 
 [<img src="images/progress_on_scroll_demo.gif" height="230" title="Progress On Scroll Demo">](https://codepen.io/pritam1813/pen/jOgyERQ)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="password-strength-checker"></a>Password Strength Checker
+
+[<img src="images/Password-Strength-Checker.png" height="230" title="password-strength-checker">](https://sudhanshu-raj.github.io/You-Dont-Need-JavaScript/)
 
 **[⬆ back to top](#quick-links)**
 
