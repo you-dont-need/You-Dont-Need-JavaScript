@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline - Pure CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 50px 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInDown 1s ease;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2em;
+            margin-bottom: 60px;
+            animation: fadeInDown 1s ease 0.2s both;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 50px 0;
+        }
+
+        /* Center line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+                rgba(255,255,255,0.3),
+                rgba(255,255,255,0.8),
+                rgba(255,255,255,0.3)
+            );
+            animation: lineGrow 2s ease;
+        }
+
+        /* Timeline item */
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            width: 100%;
+            animation: fadeIn 0.8s ease backwards;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.5s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.7s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.9s; }
+        .timeline-item:nth-child(5) { animation-delay: 1.1s; }
+        .timeline-item:nth-child(6) { animation-delay: 1.3s; }
+
+        /* Content positioning - Left and Right */
+        .timeline-item:nth-child(odd) .content {
+            left: 0;
+            text-align: right;
+            padding-right: 60px;
+        }
+
+        .timeline-item:nth-child(even) .content {
+            left: 50%;
+            text-align: left;
+            padding-left: 60px;
+        }
+
+        .content {
+            position: relative;
+            width: 50%;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Center dot */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 4px solid #667eea;
+            border-radius: 50%;
+            z-index: 1;
+            top: 30px;
+            box-shadow: 0 0 0 4px rgba(255,255,255,0.3);
+            animation: pulse 2s ease infinite;
+        }
+
+        /* Connector line from dot to content */
+        .content::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            width: 30px;
+            height: 2px;
+            background: rgba(255,255,255,0.5);
+        }
+
+        .timeline-item:nth-child(odd) .content::before {
+            right: 30px;
+        }
+
+        .timeline-item:nth-child(even) .content::before {
+            left: 30px;
+        }
+
+        .date {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .content h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background: #f0f0f0;
+            border-radius: 15px;
+            font-size: 0.8em;
+            color: #667eea;
+            margin-right: 8px;
+            margin-top: 10px;
+        }
+
+        /* Icon in content */
+        .icon {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            margin-bottom: 15px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .icon::before {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item::before {
+                left: 30px;
+            }
+
+            .timeline-item:nth-child(odd) .content,
+            .timeline-item:nth-child(even) .content {
+                width: calc(100% - 80px);
+                left: 80px;
+                text-align: left;
+                padding: 20px;
+                padding-left: 20px;
+            }
+
+            .content::before {
+                left: -30px !important;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes lineGrow {
+            from {
+                height: 0;
+            }
+            to {
+                height: 100%;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 4px rgba(255,255,255,0.3);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(255,255,255,0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Project Timeline</h1>
+        <p class="subtitle">A Journey Through Development Milestones</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="content">
+                    <div class="icon"></div>
+                    <span class="date">January 2024</span>
+                    <h2>Project Inception</h2>
+                    <p>Initial concept and planning phase. Gathered requirements and assembled the core team for the project kickoff.</p>
+                    <span class="tag">Planning</span>
+                    <span class="tag">Research</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="content">
+                    <div class="icon"></div>
+                    <span class="date">March 2024</span>
+                    <h2>Design Phase</h2>
+                    <p>Created wireframes, mockups, and finalized the user interface design. Established design system and brand guidelines.</p>
+                    <span class="tag">UI/UX</span>
+                    <span class="tag">Design</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="content">
+                    <div class="icon"></div>
+                    <span class="date">May 2024</span>
+                    <h2>Development Begins</h2>
+                    <p>Started frontend and backend development. Implemented core features and established development workflows.</p>
+                    <span class="tag">Coding</span>
+                    <span class="tag">Testing</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="content">
+                    <div class="icon"></div>
+                    <span class="date">July 2024</span>
+                    <h2>Beta Testing</h2>
+                    <p>Launched beta version to select users. Collected feedback and fixed critical bugs based on user testing.</p>
+                    <span class="tag">QA</span>
+                    <span class="tag">Feedback</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="content">
+                    <div class="icon"></div>
+                    <span class="date">September 2024</span>
+                    <h2>Product Launch</h2>
+                    <p>Official public release of version 1.0. Marketing campaign launched across multiple channels.</p>
+                    <span class="tag">Release</span>
+                    <span class="tag">Marketing</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="content">
+                    <div class="icon"></div>
+                    <span class="date">October 2024</span>
+                    <h2>Future Updates</h2>
+                    <p>Planning next features based on user feedback. Continuous improvement and optimization ongoing.</p>
+                    <span class="tag">Updates</span>
+                    <span class="tag">Growth</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
