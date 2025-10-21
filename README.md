@@ -122,6 +122,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Zoom When Hover](#zoom-when-hover)
 - [Debit Card Hover effect](#debit-card-hover)
 - [Progress Bar On Scroll](#ProgressOnScroll)
+- [Password Strength Checker](#password-strength-checker)
 - [Pricing Table](#pricing-table)
 - **Contribution**
   - [Contributors](#contributors)
@@ -1184,6 +1185,14 @@ A modern, interactive scroll-driven video animation created with pure CSS. Featu
 ## <a id="ProgressOnScroll"></a>Progress bar on scroll
 
 [<img src="images/progress_on_scroll_demo.gif" height="230" title="Progress On Scroll Demo">](https://codepen.io/pritam1813/pen/jOgyERQ)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="password-strength-checker"></a>Password Strength Checker
+
+[<img src="images/Password-Strength-Checker.png" height="230" title="password-strength-checker">](https://sudhanshu-raj.github.io/You-Dont-Need-JavaScript/)
 
 **[⬆ back to top](#quick-links)**
 
