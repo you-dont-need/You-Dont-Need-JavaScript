@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Amazon Prime</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg" alt="Amazon Prime">
+        </div>
+
+        <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle-checkbox">
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Channels</a></li>
+        </ul>
+
+        <div class="user-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <i class="fas fa-search"></i>
+            </div>
+            <i class="fas fa-user"></i>
+            <i class="fas fa-globe"></i>
+
+            <label class="hamburger-menu" for="hamburger-toggle">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </label>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Prime Video</h1>
+            <p>Watch the latest movies, TV shows, and award-winning Amazon Originals</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary">Start your free trial</button>
+                <button class="btn btn-secondary">Sign in</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2 class="section-title">
+            Popular Movies
+            <a href="#">See all</a>
+        </h2>
+        <div class="movies-grid">
+            <div class="movie-card">
+                <img
+                  src="https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+                  alt="Movie 1"
+                  loading="lazy"
+                  onerror="this.onerror=null;this.src='https://via.placeholder.com/600x900?text=No+Image+Available';"
+                />
+                <div class="movie-info">
+                    <div class="movie-title">The Tomorrow War</div>
+                    <div class="movie-meta">2021 • Action • 2h 18m</div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img
+                  src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                  alt="Movie 2"
+                  loading="lazy"
+                  onerror="this.onerror=null;this.src='https://via.placeholder.com/600x900?text=No+Image+Available';"
+                />
+                <div class="movie-info">
+                    <div class="movie-title">The Grand Tour</div>
+                    <div class="movie-meta">2016 • Adventure • 3 Seasons</div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img
+                  src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1450&q=80"
+                  alt="Movie 3"
+                  loading="lazy"
+                  onerror="this.onerror=null;this.src='https://via.placeholder.com/600x900?text=No+Image+Available';"
+                />
+                <div class="movie-info">
+                    <div class="movie-title">Cinema Paradiso</div>
+                    <div class="movie-meta">1988 • Drama • 2h 35m</div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img
+                  src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRXef9DJnZiq5az0UnjkmvkQufOQ5MFnF7HATYRUXN913swRuH1"
+                  alt="Avengers: Endgame movie poster"
+                  loading="lazy"
+                  onerror="this.onerror=null;this.src='https://via.placeholder.com/600x900?text=No+Image+Available';"
+                />
+                <div class="movie-info">
+                    <div class="movie-title">Avengers: Endgame</div>
+                    <div class="movie-meta">2019 • Action • 3h 2m</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2 class="section-title">
+            TV Shows
+            <a href="#">See all</a>
+        </h2>
+        <div class="movies-grid">
+            <div class="movie-card">
+                <img
+                  src="https://images.unsplash.com/photo-1609743522653-52354461eb27?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+                  alt="TV Show 1"
+                  loading="lazy"
+                  onerror="this.onerror=null;this.src='https://via.placeholder.com/600x900?text=No+Image+Available';"
+                />
+                <div class="movie-info">
+                    <div class="movie-title">The Boys</div>
+                    <div class="movie-meta">2019 • Action • 3 Seasons</div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img
+                  src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                  alt="TV Show 2"
+                  loading="lazy"
+                  onerror="this.onerror=null;this.src='https://via.placeholder.com/600x900?text=No+Image+Available';"
+                />
+                <div class="movie-info">
+                    <div class="movie-title">The Marvelous Mrs. Maisel</div>
+                    <div class="movie-meta">2017 • Comedy • 4 Seasons</div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img
+                  src="https://images.unsplash.com/photo-1595769816263-9b910be24d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1479&q=80"
+                  alt="Invincible TV Show poster"
+                  loading="lazy"
+                  onerror="this.onerror=null;this.src='https://via.placeholder.com/600x900?text=No+Image+Available';"
+                />
+                <div class="movie-info">
+                    <div class="movie-title">Invincible</div>
+                    <div class="movie-meta">2021 • Animation • 2 Seasons</div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img
+                  src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80"
+                  alt="Fleabag TV Show poster"
+                  loading="lazy"
+                  onerror="this.onerror=null;this.src='https://via.placeholder.com/600x900?text=No+Image+Available';"
+                />
+                <div class="movie-info">
+                    <div class="movie-title">Fleabag</div>
+                    <div class="movie-meta">2016 • Comedy • 2 Seasons</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="channels">
+        <h2 class="section-title">
+            Your Favorite Channels
+            <a href="#">See all</a>
+        </h2>
+        <div class="channels-grid">
+            <div class="channel-card">
+                <div class="channel-logo">
+                    <i class="fas fa-film"></i>
+                </div>
+                <div class="channel-name">MGM</div>
+            </div>
+            <div class="channel-card">
+                <div class="channel-logo">
+                    <i class="fas fa-tv"></i>
+                </div>
+                <div class="channel-name">Lionsgate</div>
+            </div>
+            <div class="channel-card">
+                <div class="channel-logo">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="channel-name">Paramount+</div>
+            </div>
+            <div class="channel-card">
+                <div class="channel-logo">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <div class="channel-name">Discovery</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Devices</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Amazon Prime</h3>
+                <ul>
+                    <li><a href="#">What is Prime Video?</a></li>
+                    <li><a href="#">Browse Channels</a></li>
+                    <li><a href="#">Prime Video Mobile</a></li>
+                    <li><a href="#">Terms & Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Account & Settings</h3>
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Parental Controls</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Watch Anywhere</h3>
+                <ul>
+                    <li><a href="#">Amazon Fire TV</a></li>
+                    <li><a href="#">Android Devices</a></li>
+                    <li><a href="#">iPhone & iPad</a></li>
+                    <li><a href="#">LG Smart TV</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 1996-2023, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+</body>
+</html>
