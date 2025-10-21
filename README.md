@@ -99,6 +99,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Ripple Effect](#ripple-effect)
 - [Redar Loader](#Redar-Loader)
 - [Resizable Split Panel](#resizable-split-panel)
+- [Rotating Text](#rotating-text) 
 - [Scary Animation](#scary-animation)
 - [Scenery](#scenery)
 - [Scroll Video Cinematic Animation](#scroll-video-cinematic)
@@ -107,6 +108,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Star Wars Intro](#star-wars-intro)
 - [Switch](#switch)
 - [Social Media Icons](#social-icons)
+- [Spaceship](#spaceship)
 - [Tables](#css-tables)
 - [Tabs](#tabs)
 - [MakemyTrip](#mmt)
@@ -378,6 +380,8 @@ Your browser does not support the video tag.
 [<img src="images/gallery3.png" height="230" title="Demo 2">](https://codepen.io/olgamozejko/pen/yLjwyye)
 [<img src="images/vertical-gallery.gif" height="230" title="Demo 4">]()
 [<img src="./Author/a-img2.jpg" height="230" title="Demo 5">]()
+[<img src="images/infinite-slider.png" height="230" title="Demo 6">]()
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1299,6 +1303,12 @@ An interactive resume built entirely using **HTML and CSS** — featuring animat
 **[⬆ back to top](#quick-links)**
 
 ---
+
+## <a id="rotating-text"></a>Rotating Text
+
+[<img src="images/rotating_text.mp4" height="230" title="Demo">]()
+
+**[⬆ back to top](#quick-links)**
 
 ## Contributors
 
