@@ -1,0 +1,61 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #111;
+  --highlight-color: pink;
+  --font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+}
+
+
+.card {
+  background-color: var(--bg-color);
+  border: 2px solid var(--highlight-color);
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
+}
+
+.loader {
+  display: flex;
+  align-items: baseline; 
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.loader p {
+  color: var(--text-color);
+  margin: 0;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+  height: 1.2em;
+  margin-left: 0.5rem;
+}
+
+.words::after {
+  display: none;
+}
+
+.word {
+  display: block;
+  color: var(--highlight-color);
+  animation: spin 5s infinite;
+}
+
+@keyframes spin {
+  0%, 20%   { transform: translateY(0); }
+  25%, 40%  { transform: translateY(-100%); }
+  45%, 60%  { transform: translateY(-200%); }
+  65%, 80%  { transform: translateY(-300%); }
+  85%, 100% { transform: translateY(-400%); }
+}

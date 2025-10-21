@@ -99,6 +99,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Ripple Effect](#ripple-effect)
 - [Redar Loader](#Redar-Loader)
 - [Resizable Split Panel](#resizable-split-panel)
+- [Rotating Text](#rotating-text) 
 - [Scary Animation](#scary-animation)
 - [Scenery](#scenery)
 - [Scroll Video Cinematic Animation](#scroll-video-cinematic)
@@ -1292,6 +1293,12 @@ An interactive resume built entirely using **HTML and CSS** — featuring animat
 **[⬆ back to top](#quick-links)**
 
 ---
+
+## <a id="rotating-text"></a>Rotating Text
+
+[<img src="images/rotating_text.mp4" height="230" title="Demo">]()
+
+**[⬆ back to top](#quick-links)**
 
 ## Contributors
 
