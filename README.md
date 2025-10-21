@@ -88,6 +88,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Neon Card](#neon-card)
 - [Netlix Clone v2](#Netflix-Clone-v2)
 - [Neumorphism Card Design](#neumorphism-card-design)
+- [Night City](#night-city)
 - [Parallax Scrolling](#parallax-scrolling)
 - [Pendulum](#pendulum)
 - [Playing Card Animation](#playing-card-animation)
@@ -704,6 +705,17 @@ Your browser does not support the video tag.
 ## <a id="neon-card"></a>Neon Card
 
 [<img src="images/neon-card-2.gif" title="Neon Card">](examples/neon-card-2.html)
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="night-city"></a>Night City
+
+[<img src="Night City/preview1.png" height="230" title="Night City - City View">](<Night City>)
+[<img src="Night City/preview2.png" height="230" title="Night City - Road View">](<Night City>)
+
+A pure CSS animation showcasing a dynamic night city scene with interactive views. Features a detailed cityscape with animated elements and a road scene with moving vehicles, all without JavaScript.
+
 **[⬆ back to top](#quick-links)**
 
 ---
