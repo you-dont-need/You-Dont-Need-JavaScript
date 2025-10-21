@@ -372,6 +372,8 @@ Your browser does not support the video tag.
 [<img src="images/gallery3.png" height="230" title="Demo 2">](https://codepen.io/olgamozejko/pen/yLjwyye)
 [<img src="images/vertical-gallery.gif" height="230" title="Demo 4">]()
 [<img src="./Author/a-img2.jpg" height="230" title="Demo 5">]()
+[<img src="images/infinite-slider.png" height="230" title="Demo 6">]()
+
 
 **[⬆ back to top](#quick-links)**
 
