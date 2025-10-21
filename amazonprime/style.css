@@ -17,6 +17,7 @@ header {
     background-color: #0c111b;
     padding: 15px 5%;
     position: fixed;
+    top: 0; /* <-- FIX 2: Added top: 0 */
     width: 100%;
     z-index: 100;
     border-bottom: 1px solid #222;
@@ -314,7 +315,7 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 992px) { /* <-- FIX 1: Changed from 768px */
     .nav-links {
         position: fixed;
         top: 60px;
