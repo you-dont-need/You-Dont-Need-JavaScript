@@ -73,6 +73,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Interactive Resume](#interactive-resume)
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
+- [Lighthouse Scene](#lighthouse-scene)
 - [Loaders](#loaders)
 - [Loading_Css_effect](#Loading-Css-effect)
 - [Lego_Loader](#Lego-Loader)
@@ -832,6 +833,14 @@ Your browser does not support the video tag.
 ## <a id="LightBulbAnimation"></a>Light Bulb Animation
 
 <img src="images/LightBulbAnimation.png" height="230" title="Light Bulb animation">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="lighthouse-scene"></a>Lighthouse Scene
+
+[<img src="Lighthouse Scene/Lighthouse_scene.gif" height="230" title="Lighthouse Scene">](Lighthouse%20Scene/lighthouse-scene.html)
 
 **[⬆ back to top](#quick-links)**
 
