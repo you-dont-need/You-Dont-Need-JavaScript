@@ -304,12 +304,14 @@ footer{
         right: 0;
         bottom: 0;
         width: 40%;
-        height: 40%;
+        height: 70%;
         /* basic menu styling*/
         list-style: none;
-        background: black;
+        background: rgb(31, 31, 87);
         display: flex;
 
+        box-shadow: 10px 0px 13px rgb(44, 44, 125);
+        border-bottom-left-radius: 40px;
         flex-direction: column;
         /* animate slide up/down */
         transform: translateY(-100%);
