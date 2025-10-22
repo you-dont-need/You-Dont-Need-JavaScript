@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Robot</title>
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(to bottom, #87ceeb, #e0f6ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .robot {
+            width: 200px;
+        }
+
+        .head {
+            width: 120px;
+            height: 100px;
+            background: #4a90e2;
+            margin: 0 auto 10px;
+            border-radius: 15px;
+        }
+
+        .antenna {
+            width: 4px;
+            height: 30px;
+            background: #333;
+            margin: 0 auto;
+        }
+
+        .antenna-ball {
+            width: 12px;
+            height: 12px;
+            background: red;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .eyes {
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .eye {
+            width: 25px;
+            height: 25px;
+            background: white;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 10px;
+            border: 3px solid #333;
+        }
+
+        .mouth {
+            width: 60px;
+            height: 20px;
+            background: #333;
+            margin: 15px auto 0;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .body {
+            width: 140px;
+            height: 120px;
+            background: #5fa3e8;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .chest {
+            width: 60px;
+            height: 60px;
+            background: #7fb8f0;
+            margin: 0 auto;
+            padding-top: 20px;
+            border-radius: 10px;
+        }
+
+        .button {
+            width: 15px;
+            height: 15px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            margin: 5px auto;
+        }
+
+        .arms {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -100px;
+        }
+
+        .arm {
+            width: 30px;
+            height: 90px;
+            background: #4a90e2;
+            border-radius: 15px;
+        }
+
+        .arm-left {
+            margin-left: -40px;
+        }
+
+        .arm-right {
+            margin-right: -40px;
+        }
+
+        .hand {
+            width: 35px;
+            height: 35px;
+            background: #3a7bc8;
+            border-radius: 50%;
+            margin-top: 5px;
+            margin-left: -2px;
+        }
+
+        .legs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .leg {
+            width: 35px;
+            height: 70px;
+            background: #4a90e2;
+            border-radius: 8px;
+        }
+
+        .foot {
+            width: 45px;
+            height: 20px;
+            background: #3a7bc8;
+            border-radius: 10px;
+            margin-left: -5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="robot">
+        <div class="antenna-ball"></div>
+        <div class="antenna"></div>
+        
+        <div class="head">
+            <div class="eyes">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+
+        <div class="arms">
+            <div class="arm arm-left">
+                <div class="hand"></div>
+            </div>
+            <div class="arm arm-right">
+                <div class="hand"></div>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="chest">
+                <div class="button"></div>
+                <div class="button"></div>
+                <div class="button"></div>
+            </div>
+        </div>
+
+        <div class="legs">
+            <div class="leg">
+                <div class="foot"></div>
+            </div>
+            <div class="leg">
+                <div class="foot"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
