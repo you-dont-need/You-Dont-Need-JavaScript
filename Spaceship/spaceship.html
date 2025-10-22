@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaceship - Pure CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(to bottom, #000428, #004e92);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated Stars Background */
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .stars::before,
+        .stars::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            box-shadow: 
+                100px 200px white, 300px 100px white, 500px 300px white,
+                700px 150px white, 200px 400px white, 600px 250px white,
+                150px 500px white, 450px 450px white, 800px 400px white,
+                250px 150px white, 550px 50px white, 350px 350px white,
+                50px 100px white, 650px 500px white, 900px 200px white,
+                400px 600px white, 750px 100px white, 100px 350px white,
+                850px 550px white, 950px 300px white, 200px 50px white,
+                500px 150px white, 300px 450px white, 700px 350px white,
+                150px 250px white, 450px 200px white, 600px 450px white,
+                800px 150px white, 250px 550px white, 550px 350px white;
+            animation: twinkle 3s infinite alternate;
+        }
+
+        .stars::after {
+            animation-delay: 1.5s;
+            box-shadow: 
+                180px 280px white, 380px 180px white, 580px 380px white,
+                780px 230px white, 280px 480px white, 680px 330px white,
+                230px 580px white, 530px 530px white, 880px 480px white,
+                330px 230px white, 630px 130px white, 430px 430px white,
+                130px 180px white, 730px 580px white, 980px 280px white,
+                480px 680px white, 830px 180px white, 180px 430px white,
+                930px 630px white, 1030px 380px white, 280px 130px white,
+                580px 230px white, 380px 530px white, 780px 430px white;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Spaceship Container */
+        .spaceship-container {
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(-5deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        /* Main Spaceship Body */
+        .spaceship {
+            position: relative;
+            width: 200px;
+            height: 300px;
+        }
+
+        /* Cockpit/Top */
+        .cockpit {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #00d4ff, #0066cc);
+            border-radius: 50% 50% 20px 20px;
+            border: 3px solid #003d66;
+            box-shadow: 
+                inset 0 -20px 30px rgba(0, 100, 200, 0.5),
+                0 0 30px rgba(0, 212, 255, 0.6);
+            animation: cockpitGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes cockpitGlow {
+            0%, 100% { box-shadow: inset 0 -20px 30px rgba(0, 100, 200, 0.5), 0 0 30px rgba(0, 212, 255, 0.6); }
+            50% { box-shadow: inset 0 -20px 30px rgba(0, 150, 255, 0.7), 0 0 50px rgba(0, 212, 255, 0.9); }
+        }
+
+        /* Window Detail */
+        .window {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 35px;
+            height: 35px;
+            background: radial-gradient(circle, rgba(255,255,255,0.3), transparent);
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Body */
+        .body {
+            position: absolute;
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 140px;
+            background: linear-gradient(180deg, #4a5568, #2d3748);
+            border-radius: 10px;
+            border: 3px solid #1a202c;
+            box-shadow: 
+                inset 0 -20px 40px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Body Panels */
+        .panel {
+            position: absolute;
+            width: 30px;
+            height: 60px;
+            background: linear-gradient(90deg, #2d3748, #1a202c);
+            border: 1px solid #4a5568;
+            border-radius: 3px;
+            top: 40px;
+        }
+
+        .panel-left {
+            left: 10px;
+        }
+
+        .panel-right {
+            right: 10px;
+        }
+
+        /* Indicator Lights */
+        .light {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #ff0000;
+            border-radius: 50%;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px #ff0000;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0.2; }
+        }
+
+        .light-green {
+            background: #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+            top: 35px;
+            animation-delay: 0.5s;
+        }
+
+        /* Wings */
+        .wing {
+            position: absolute;
+            top: 140px;
+            width: 80px;
+            height: 60px;
+            background: linear-gradient(135deg, #4a5568, #2d3748);
+            border: 3px solid #1a202c;
+            clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 80%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .wing-left {
+            left: -70px;
+            transform: scaleX(-1);
+        }
+
+        .wing-right {
+            right: -70px;
+        }
+
+        /* Wing Lights */
+        .wing-light {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #00ff00;
+            border-radius: 50%;
+            top: 25px;
+            right: 15px;
+            box-shadow: 0 0 15px #00ff00;
+            animation: blink 1.5s infinite;
+        }
+
+        /* Engines */
+        .engine-container {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .engine {
+            width: 35px;
+            height: 50px;
+            background: linear-gradient(180deg, #2d3748, #1a202c);
+            border: 2px solid #4a5568;
+            border-radius: 5px 5px 50% 50%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Engine Glow */
+        .engine-glow {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 60px;
+            background: linear-gradient(to bottom, 
+                transparent,
+                rgba(255, 140, 0, 0.8),
+                rgba(255, 69, 0, 0.9),
+                rgba(255, 0, 0, 1));
+            border-radius: 50%;
+            filter: blur(5px);
+            animation: enginePulse 0.3s ease-in-out infinite alternate;
+        }
+
+        @keyframes enginePulse {
+            0% { 
+                height: 60px;
+                opacity: 1;
+            }
+            100% { 
+                height: 80px;
+                opacity: 0.7;
+            }
+        }
+
+        /* Exhaust Trail */
+        .exhaust {
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(ellipse at top, 
+                rgba(255, 140, 0, 0.5),
+                rgba(255, 69, 0, 0.3),
+                transparent);
+            border-radius: 50%;
+            filter: blur(10px);
+            animation: exhaustFlow 0.5s ease-in-out infinite;
+        }
+
+        @keyframes exhaustFlow {
+            0% {
+                transform: translateX(-50%) translateY(0) scale(1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateX(-50%) translateY(20px) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Title */
+        .title {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #00d4ff;
+            font-family: 'Arial', sans-serif;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <div class="title">SPACESHIP</div>
+    
+    <div class="spaceship-container">
+        <div class="spaceship">
+            <!-- Cockpit -->
+            <div class="cockpit">
+                <div class="window"></div>
+            </div>
+            
+            <!-- Main Body -->
+            <div class="body">
+                <div class="panel panel-left"></div>
+                <div class="panel panel-right"></div>
+                <div class="light"></div>
+                <div class="light light-green"></div>
+            </div>
+            
+            <!-- Wings -->
+            <div class="wing wing-left">
+                <div class="wing-light"></div>
+            </div>
+            <div class="wing wing-right">
+                <div class="wing-light"></div>
+            </div>
+            
+            <!-- Engines -->
+            <div class="engine-container">
+                <div class="engine">
+                    <div class="engine-glow"></div>
+                </div>
+                <div class="engine">
+                    <div class="engine-glow"></div>
+                </div>
+                <div class="engine">
+                    <div class="engine-glow"></div>
+                </div>
+            </div>
+            
+            <!-- Exhaust Trail -->
+            <div class="exhaust"></div>
+        </div>
+    </div>
+</body>
+</html>
