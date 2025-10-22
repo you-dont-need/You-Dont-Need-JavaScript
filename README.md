@@ -73,6 +73,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Interactive Resume](#interactive-resume)
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
+- [Lighthouse Scene](#lighthouse-scene)
 - [Loaders](#loaders)
 - [Loading_Css_effect](#Loading-Css-effect)
 - [Lego_Loader](#Lego-Loader)
@@ -87,6 +88,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Neon Card](#neon-card)
 - [Netlix Clone v2](#Netflix-Clone-v2)
 - [Neumorphism Card Design](#neumorphism-card-design)
+- [Night City](#night-city)
 - [Parallax Scrolling](#parallax-scrolling)
 - [Pendulum](#pendulum)
 - [Playing Card Animation](#playing-card-animation)
@@ -97,6 +99,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Ripple Effect](#ripple-effect)
 - [Redar Loader](#Redar-Loader)
 - [Resizable Split Panel](#resizable-split-panel)
+- [Rotating Text](#rotating-text) 
 - [Scary Animation](#scary-animation)
 - [Scenery](#scenery)
 - [Scroll Video Cinematic Animation](#scroll-video-cinematic)
@@ -105,10 +108,12 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Star Wars Intro](#star-wars-intro)
 - [Switch](#switch)
 - [Social Media Icons](#social-icons)
+- [Spaceship](#spaceship)
 - [Tables](#css-tables)
 - [Tabs](#tabs)
 - [MakemyTrip](#mmt)
 - [Text Spoiler Effect](#text-spoiler)
+- [Timeline](#timeline)
 - [Thank You Animation](#thankyou-animation)
 - [Toast Notification](#toast-notifications)
 - [Todo List](#todo-list)
@@ -172,6 +177,8 @@ Your browser does not support the video tag.
 </video>](http://url-to-dark-theme-page)
 
 **[⬆ back to top](#quick-links)**
+
+
 
 ## <a id="blog-cards"></a>Blog Post Cards
 
@@ -373,6 +380,8 @@ Your browser does not support the video tag.
 [<img src="images/gallery3.png" height="230" title="Demo 2">](https://codepen.io/olgamozejko/pen/yLjwyye)
 [<img src="images/vertical-gallery.gif" height="230" title="Demo 4">]()
 [<img src="./Author/a-img2.jpg" height="230" title="Demo 5">]()
+[<img src="images/infinite-slider.png" height="230" title="Demo 6">]()
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -707,6 +716,17 @@ Your browser does not support the video tag.
 
 ---
 
+## <a id="night-city"></a>Night City
+
+[<img src="Night City/preview1.png" height="230" title="Night City - City View">](<Night City>)
+[<img src="Night City/preview2.png" height="230" title="Night City - Road View">](<Night City>)
+
+A pure CSS animation showcasing a dynamic night city scene with interactive views. Features a detailed cityscape with animated elements and a road scene with moving vehicles, all without JavaScript.
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="Netflix-Clone-v2"></a>Netflix Clone Demo
 
 [<img src="Netflix Clone v2/Screenshot1.png" height="230" title="Demo 1">](http://url-to-page)
@@ -832,6 +852,14 @@ Your browser does not support the video tag.
 ## <a id="LightBulbAnimation"></a>Light Bulb Animation
 
 <img src="images/LightBulbAnimation.png" height="230" title="Light Bulb animation">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="lighthouse-scene"></a>Lighthouse Scene
+
+[<img src="Lighthouse Scene/Lighthouse_scene.gif" height="230" title="Lighthouse Scene">](Lighthouse%20Scene/lighthouse-scene.html)
 
 **[⬆ back to top](#quick-links)**
 
@@ -1056,6 +1084,21 @@ A modern, interactive scroll-driven video animation created with pure CSS. Featu
 
 ---
 
+## <a id="Spaceship"></a>Spaceship
+
+![img_source](Spaceship/Spaceship.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
+## <a id="Timeline"></a>Timeline
+
+![img_source](Timeline/Timeline.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="RadialPulsar"></a>Radial Color Puslar
 
 [<img src="Radial Color Pulsar/Radial.png" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/MWLYNNx)>)
@@ -1260,6 +1303,12 @@ An interactive resume built entirely using **HTML and CSS** — featuring animat
 **[⬆ back to top](#quick-links)**
 
 ---
+
+## <a id="rotating-text"></a>Rotating Text
+
+[<img src="images/rotating_text.mp4" height="230" title="Demo">]()
+
+**[⬆ back to top](#quick-links)**
 
 ## Contributors
 
