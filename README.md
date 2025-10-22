@@ -76,7 +76,6 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Lighthouse Scene](#lighthouse-scene)
 - [Loader Diamond Animation](#loader-diamond)
 - [Loaders](#loaders)
-- [Loader Diamond Animation](#loader-diamond)
 - [Loading_Css_effect](#Loading-Css-effect)
 - [Lego_Loader](#Lego-Loader)
 - [MasterCard](#mastercard)
