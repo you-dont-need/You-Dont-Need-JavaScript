@@ -70,6 +70,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Image Comparison Slider](#image-comparison-slider)
 - [Infinite Carousel](#infinite-carousel)
 - [Info on Hover / Popover](#info-on-hover-popover)
+- [Input Text Field](#input-text)
 - [Interactive Resume](#interactive-resume)
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
@@ -1307,6 +1308,18 @@ An interactive resume built entirely using **HTML and CSS** — featuring animat
 ## <a id="rotating-text"></a>Rotating Text
 
 [<img src="images/rotating_text.mp4" height="230" title="Demo">]()
+
+## <a id="input-text"></a>Input Text Field
+
+[<video height="230" width="230" controls> 
+<source src="images/input-text.mp4" type="video/mp4">
+</video>
+]()
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 
 **[⬆ back to top](#quick-links)**
 
