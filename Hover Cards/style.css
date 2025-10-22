@@ -1,0 +1,66 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f7fb;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ====== CARD CONTAINER ====== */
+.card {
+  width: 400px;
+  height: 400px;
+  border-radius: 8px;
+  background: #f4f7fb;
+  display: flex;
+  gap: 6px;
+  padding: 2em;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== PANELS ====== */
+.card p {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+  background: #1a1a2e;
+  border: 1px solid #6c63ff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Expand on hover */
+.card p:hover {
+  flex: 4;
+  background: #2f2fa2;
+}
+
+/* ====== TEXT ====== */
+.card p span {
+  min-width: 14em;
+  padding: 0.5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+  color: #6c63ff;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+/* Rotate text on hover */
+.card p:hover span {
+  transform: rotate(0);
+  color: #ffffff;
+}
