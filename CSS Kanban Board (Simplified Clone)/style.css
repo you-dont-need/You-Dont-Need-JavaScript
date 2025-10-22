@@ -40,6 +40,10 @@
     z-index: 5000;
     transition: background-color 0.3s;
 }
+.dark-mode-label:hover {
+    background-color: var(--text-primary);
+}
+
 .theme-controller { display: none; }
 .dark-icon { display: none; }
 .theme-controller:checked ~ .dark-mode-label .light-icon { display: none; }
@@ -59,14 +63,13 @@ header {
     background-color: var(--bg-header);
     color: white;
     padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 60px;
+    display: block;
+    padding-left: 55px;
 }
 
 .header-right {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     gap: 15px;
 }
@@ -370,4 +373,20 @@ header {
 }
 .modal-content form button:hover {
     background-color: #2777d9;
+}
+
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 180px; 
+        padding-bottom: 15px; /* Restore original padding */
+    }
+
+    .header-right {
+        border-top: none;
+        padding-top: 0;
+    }
+
 }
