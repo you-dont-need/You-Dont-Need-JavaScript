@@ -1,0 +1,462 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #0a0a0f 0%, #050508 50%, #0a0a0f 100%);
+  position: relative;
+}
+
+.sky {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      1.5px 1.5px at 12% 18%,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    ),
+    radial-gradient(1px 1px at 78% 12%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(
+      1.2px 1.2px at 42% 25%,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 88% 32%,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    ),
+    radial-gradient(1px 1px at 22% 42%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(
+      1.3px 1.3px at 65% 8%,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    ),
+    radial-gradient(1px 1px at 35% 35%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(
+      1.2px 1.2px at 92% 48%,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+  opacity: 0.4;
+  animation: stars-dim 5s infinite;
+}
+
+@keyframes stars-dim {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.moon {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(
+    circle at 45% 45%,
+    #e8e8e8 0%,
+    #b8b8b8 60%,
+    rgba(150, 150, 150, 0) 100%
+  );
+  border-radius: 50%;
+  top: 12%;
+  right: 15%;
+  opacity: 0.3;
+  box-shadow: 0 0 30px rgba(200, 200, 200, 0.15);
+}
+
+.city {
+  position: absolute;
+  bottom: 22%;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  display: flex;
+  align-items: flex-end;
+  gap: 3%;
+  padding: 0 2%;
+}
+
+.tower {
+  background: linear-gradient(to right, #080810 0%, #101018 50%, #080810 100%);
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+  border-radius: 2px 2px 0 0;
+}
+
+.tower:nth-child(1) {
+  width: 8%;
+  height: 60%;
+}
+
+.tower:nth-child(2) {
+  width: 10%;
+  height: 85%;
+}
+
+.tower:nth-child(3) {
+  width: 7%;
+  height: 50%;
+}
+
+.tower:nth-child(4) {
+  width: 12%;
+  height: 95%;
+}
+
+.tower:nth-child(5) {
+  width: 9%;
+  height: 70%;
+}
+
+.tower:nth-child(6) {
+  width: 8%;
+  height: 55%;
+}
+
+.tower:nth-child(7) {
+  width: 11%;
+  height: 90%;
+}
+
+.tower:nth-child(8) {
+  width: 7%;
+  height: 45%;
+}
+
+.tower::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 5%;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 15px,
+      rgba(180, 150, 80, 0.08) 15px,
+      rgba(180, 150, 80, 0.08) 17px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 12px,
+      rgba(180, 150, 80, 0.08) 12px,
+      rgba(180, 150, 80, 0.08) 14px
+    );
+  animation: lights-dim 6s infinite;
+}
+
+@keyframes lights-dim {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.highway {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 22%;
+  background: linear-gradient(to bottom, #0f0f0f 0%, #080808 100%);
+  border-top: 2px solid #1a1a1a;
+  overflow: hidden;
+}
+
+.lanes {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200%;
+  height: 4px;
+  background: repeating-linear-gradient(
+    to right,
+    #666 0%,
+    #666 50px,
+    transparent 50px,
+    transparent 100px
+  );
+  animation: road-move 2s linear infinite;
+  opacity: 0;
+}
+
+@keyframes road-move {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+.vehicle {
+  position: absolute;
+  bottom: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 80px;
+  animation: car-hover 0.4s ease-in-out infinite;
+}
+
+@keyframes car-hover {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0px);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-3px);
+  }
+}
+
+.chassis {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  width: 170px;
+  height: 48px;
+  background: linear-gradient(180deg, #2a2a3e 0%, #1a1a2e 50%, #0f0f1a 100%);
+  border-radius: 8px 8px 4px 4px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8),
+    inset 0 2px 5px rgba(255, 255, 255, 0.1),
+    inset 0 -3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.chassis::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 45%;
+  height: 60%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(50, 50, 70, 0.4) 100%
+  );
+  border-radius: 0 8px 4px 0;
+}
+
+.chassis::after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(100, 100, 120, 0.6) 20%,
+    rgba(100, 100, 120, 0.6) 80%,
+    transparent 100%
+  );
+  box-shadow: 0 0 4px rgba(150, 150, 180, 0.3);
+}
+
+.cabin {
+  position: absolute;
+  bottom: 54px;
+  left: 50px;
+  width: 100px;
+  height: 38px;
+  background: linear-gradient(180deg, #3a3a4e 0%, #2a2a3e 60%, #1a1a2e 100%);
+  border-radius: 12px 12px 6px 6px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.7),
+    inset 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.glass {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  width: 45px;
+  height: 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(100, 150, 200, 0.3) 0%,
+    rgba(50, 80, 120, 0.5) 100%
+  );
+  border-radius: 8px 8px 4px 2px;
+  border: 1px solid rgba(80, 120, 160, 0.4);
+  box-shadow: inset 2px 2px 6px rgba(150, 180, 220, 0.2);
+}
+
+.glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -38px;
+  width: 35px;
+  height: 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(100, 150, 200, 0.3) 0%,
+    rgba(50, 80, 120, 0.5) 100%
+  );
+  border-radius: 8px 8px 2px 4px;
+  border: 1px solid rgba(80, 120, 160, 0.4);
+  box-shadow: inset 2px 2px 6px rgba(150, 180, 220, 0.2);
+}
+
+.wing {
+  position: absolute;
+  bottom: 64px;
+  left: 18px;
+  width: 50px;
+  height: 5px;
+  background: linear-gradient(180deg, #3a3a4e 0%, #1a1a2e 100%);
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.wing::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 5px;
+  right: 5px;
+  height: 2px;
+  background: #2a2a3e;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.door-line {
+  position: absolute;
+  width: 2px;
+  height: 35px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(50, 50, 70, 0.6) 50%,
+    transparent 100%
+  );
+  bottom: 25px;
+  left: 90px;
+}
+
+.mirror {
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background: linear-gradient(135deg, #3a3a4e 0%, #1a1a2e 100%);
+  border-radius: 3px;
+  bottom: 58px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.mirror-left {
+  left: 48px;
+}
+
+.mirror-right {
+  right: 28px;
+}
+
+.rim {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  bottom: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    #1a1a1a 0%,
+    #000 60%,
+    #0a0a0a 100%
+  );
+  border: 3px solid #333;
+  box-shadow: 0 0 15px rgba(100, 100, 255, 0.5),
+    inset 0 0 10px rgba(0, 0, 0, 0.8);
+  animation: wheel-rotation 0.3s linear infinite;
+}
+
+.rim::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, #444 0%, #222 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(100, 100, 255, 0.4);
+}
+
+.rim-front {
+  right: 18px;
+}
+
+.rim-back {
+  left: 18px;
+}
+
+@keyframes wheel-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.beam {
+  position: absolute;
+  width: 10px;
+  height: 8px;
+  bottom: 28px;
+  right: 10px;
+  background: radial-gradient(ellipse at center, #ffffcc 0%, #ffff99 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 255, 200, 0.6);
+}
+
+.beam::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 200, 0.3) 0%,
+    rgba(255, 255, 200, 0.1) 50%,
+    transparent 100%
+  );
+  clip-path: polygon(0% 30%, 100% 0%, 100% 100%, 0% 70%);
+  filter: blur(6px);
+}
+
+.tail {
+  position: absolute;
+  width: 8px;
+  height: 6px;
+  bottom: 28px;
+  left: 10px;
+  background: radial-gradient(ellipse at center, #ff4444 0%, #cc0000 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
