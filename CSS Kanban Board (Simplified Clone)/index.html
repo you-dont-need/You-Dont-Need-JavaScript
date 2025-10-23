@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Don't Need JavaScript Kanban</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <input type="checkbox" id="dark-mode-toggle" class="theme-controller">
+    
+    <label for="dark-mode-toggle" class="dark-mode-label">
+        <span class="light-icon">☀️</span>
+        <span class="dark-icon">🌙</span>
+    </label>
+
+    <header>
+        <h1>Pure CSS Kanban Board</h1>
+        <div class="header-right">
+            <a href="#new-task-modal" class="add-button">
+                + Add New Task (Open Modal)
+            </a>
+            
+            <div class="user-menu">
+                <input type="checkbox" id="user-menu-toggle" class="menu-toggle-control">
+                <label for="user-menu-toggle" class="user-avatar-btn">
+                    <span>JD</span> 
+                </label>
+
+                <div class="dropdown-menu">
+                    <div class="menu-header">Logged in as **Jane Doe**</div>
+                    <ul>
+                        <li><a href="#">Profile & Settings</a></li>
+                        <li class="has-submenu">
+                            <a href="#">Notifications</a> 
+                            <ul class="submenu">
+                                <li><a href="#">Email Settings</a></li>
+                                <li><a href="#">Browser Alerts</a></li>
+                                <li><a href="#">Manage Subscriptions</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Help & Feedback</a></li>
+                        <li class="menu-divider"></li>
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="board">
+        
+        <input type="radio" id="cardA-todo" name="cardA-state" checked class="card-controller todo-controller">
+        <input type="radio" id="cardA-progress" name="cardA-state" class="card-controller progress-controller">
+        <input type="radio" id="cardA-done" name="cardA-state" class="card-controller done-controller">
+
+            <div class="column todo-col">
+            <h2>To Do</h2>
+            
+            <div id="cardA-original" class="card card-A card-style-1">
+                <h3>Design Landing Page</h3>
+                <p>Focus on mobile-first approach. Add vibrant color palette.</p>
+                <div class="move-controls">
+                    <label for="cardA-progress" class="move-btn">Move to Progress</label>
+                </div>
+            </div>
+
+            <div class="card card-style-2">
+                <h3>Write Project Proposal</h3>
+                <p>Finalize scope and budget.</p>
+            </div>
+        </div>
+
+
+        <div class="column progress-col">
+            <h2>In Progress</h2>
+
+            <div id="cardA-progress-target" class="card card-A card-target card-style-1">
+                <h3>Design Landing Page</h3>
+                <p>Focus on mobile-first approach. Add vibrant color palette.</p>
+                <div class="move-controls">
+                    <label for="cardA-todo" class="move-btn">$\leftarrow$ Move to To Do</label>
+                    <label for="cardA-done" class="move-btn">Move to Done </label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="column done-col">
+            <h2>Done</h2>
+
+            <div id="cardA-done-target" class="card card-A card-target card-style-1">
+                <h3>Design Landing Page</h3>
+                <p>Focus on mobile-first approach. Add vibrant color palette.</p>
+                <div class="move-controls">
+                    <label for="cardA-progress" class="move-btn">Move to Progress</label>
+                </div>
+            </div>
+
+            <div class="card card-style-3">
+                <h3>Setup Git Repo</h3>
+                <p>Initialize project and push initial commit.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="new-task-modal" class="modal-wrapper">
+        <div class="modal-content">
+            <h2>Add New Task</h2>
+            <form>
+                <input type="text" placeholder="Task Title">
+                <textarea placeholder="Description"></textarea>
+                <select>
+                    <option>Select Column</option>
+                    <option>To Do</option>
+                    <option>In Progress</option>
+                    <option>Done</option>
+                </select>
+                <button type="submit">Create Task (Visual Only)</button>
+            </form>
+            <a href="#" class="modal-close-btn">&times;</a>
+        </div>
+        <a href="#" class="modal-backdrop"></a>
+    </div>
+
+</body>
+</html>

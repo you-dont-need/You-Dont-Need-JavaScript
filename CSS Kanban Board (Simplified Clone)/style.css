@@ -1,0 +1,392 @@
+:root {
+    --bg-primary: #f8f8f8; /* Light gray for body */
+    --bg-board: #e9e9f2; /* Subtle board background */
+    --bg-header: #3388ff; /* Vibrant blue header */
+    --bg-column: #ffffff; /* White columns */
+    --text-primary: #172b4d; /* Dark text */
+    --text-secondary: #5e6c84; /* Gray text */
+    --card-text-light: #5e6c84; /* For card description */
+    --card-bg: #ffffff;
+    --color-success: #33cc66; 
+    --color-accent: #ff8800; 
+    --card-shadow: 0 1px 3px rgba(9, 30, 66, 0.1);
+}
+
+.theme-controller:checked ~ .dark-mode-label ~ header,
+.theme-controller:checked ~ .dark-mode-label ~ .board {
+    --bg-primary: #1a1b26; 
+    --bg-board: #27283d; 
+    --bg-header: #3a416e; 
+    --bg-column: #2e2f47; 
+    --text-primary: #ebecf0; 
+    --text-secondary: #9aa8b9; 
+    --card-text-light: #c1c1d8; 
+    --card-bg: #373850; 
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode-label {
+    position: absolute;
+    top: 40px;
+    left: 10px; 
+    width: 35px;
+    height: 35px;
+    background-color: var(--text-secondary);
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 35px;
+    font-size: 18px;
+    z-index: 5000;
+    transition: background-color 0.3s;
+}
+.dark-mode-label:hover {
+    background-color: var(--text-primary);
+}
+
+.theme-controller { display: none; }
+.dark-icon { display: none; }
+.theme-controller:checked ~ .dark-mode-label .light-icon { display: none; }
+.theme-controller:checked ~ .dark-mode-label .dark-icon { display: inline; }
+
+
+/* Base Styles - Using Variables */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--bg-header);
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    padding-left: 55px;
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.add-button {
+    background-color: var(--color-success);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+}
+.add-button:hover {
+    background-color: #27a855;
+}
+
+/* ================================================= */
+/* 1. COLUMN ALIGNMENT FIX (Flexbox) & Layout */
+/* ================================================= */
+.main-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.board {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    overflow-x: auto;
+    background-color: var(--bg-board); /* Board BG color */
+    height: calc(100vh - 65px); /* Full height minus header */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    min-width: 280px; 
+    max-width: 350px; /* Max width for a clean look */
+    background-color: var(--bg-column);
+    border-radius: 8px;
+    padding: 60px;
+    max-height: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 40px;
+}
+
+.column h2 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--text-secondary); 
+}
+
+/* ================================================= */
+/* 2. VIBRANT CARD STYLING & DRAG MIMIC */
+/* ================================================= */
+
+.card {
+    background-color: var(--bg-column);
+    border-radius: 5px;
+    box-shadow: var(--card-shadow);
+    padding: 20px;
+    margin-bottom: 10px;
+    cursor: grab;
+    border-left: 5px solid transparent; 
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s; 
+    padding-left: 30px; 
+    padding-right: 30px;
+}
+
+/* Vibrant Color Accents (Simulating Labels/Priorities) */
+.card-style-1 { border-left-color: #e76f51; } /* Salmon */
+.card-style-2 { border-left-color: #2a9d8f; } /* Teal */
+.card-style-3 { border-left-color: #f4a261; } /* Orange */
+
+
+/* New: Mimic "lifting" the card on hover */
+.card:hover {
+    transform: translateY(-3px) scale(1.01); 
+    box-shadow: 0 6px 12px rgba(9, 30, 66, 0.2); 
+    cursor: grabbing;
+    background-color: var(--bg-board); /* Subtle change on hover */
+}
+
+.card h3 {
+    font-size: 15px;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    color: var(--card-text-light);
+}
+
+.card p {
+    font-size: 13px;
+    color: var(--card-text-light);
+    margin: 0;
+}
+
+.move-controls {
+    margin-top: 10px;
+    padding-top: 5px;
+}
+
+.move-btn {
+    display: inline-block;
+    cursor: pointer;
+    color: var(--color-accent);
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: color 0.2s;
+    text-decoration: underline; /* Make it look clickable */
+}
+
+.card-controller { display: none; }
+.card-target { display: none; }
+
+/* LOGIC: Initial State (To Do) */
+.todo-controller:checked ~ .board .todo-col .card-A { display: block; }
+.todo-controller:checked ~ .board .progress-col .card-A.card-target { display: none; }
+.todo-controller:checked ~ .board .done-col .card-A.card-target { display: none; }
+
+/* LOGIC: State 2 (In Progress) */
+.progress-controller:checked ~ .board .todo-col .card-A { display: none; }
+.progress-controller:checked ~ .board .progress-col .card-A.card-target { display: block; }
+.progress-controller:checked ~ .board .done-col .card-A.card-target { display: none; }
+
+/* LOGIC: State 3 (Done) */
+.done-controller:checked ~ .board .todo-col .card-A { display: none; }
+.done-controller:checked ~ .board .progress-col .card-A.card-target { display: none; }
+.done-controller:checked ~ .board .done-col .card-A.card-target { display: block; }
+
+
+/* ================================================= */
+/* 4. USER MENU & NESTED SUBMENU LOGIC */
+/* ================================================= */
+
+.user-menu {
+    position: relative;
+}
+
+.menu-toggle-control {
+    display: none; 
+}
+
+.user-avatar-btn {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-color: #f6b353;
+    border-radius: 50%;
+    color: var(--text-primary);
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px white;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 250px;
+    background: var(--bg-column);
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 5px 0;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.2s, transform 0.2s;
+    border: 1px solid var(--text-secondary);
+}
+
+.menu-toggle-control:checked ~ .user-avatar-btn ~ .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: background-color 0.1s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--bg-board);
+    color: var(--bg-header);
+}
+
+.menu-header {
+    padding: 10px 15px 5px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--bg-board);
+    margin-bottom: 5px;
+}
+
+/* Nested Sub-Menu Logic */
+.has-submenu {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 200px;
+    background: var(--bg-column);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 5px 0;
+    opacity: 0;
+    visibility: hidden;
+    border: 1px solid var(--text-secondary);
+    transition: opacity 0.2s;
+}
+
+.has-submenu:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ================================================= */
+/* 5. PURE CSS MODAL LOGIC (Using :target) */
+/* ================================================= */
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 5000;
+}
+
+.modal-wrapper:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: var(--bg-column);
+    width: 450px;
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Form Styles */
+.modal-content form input, 
+.modal-content form textarea,
+.modal-content form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--text-secondary);
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--bg-primary); /* Use a lighter background for form fields */
+    color: var(--text-primary);
+}
+
+.modal-content form button {
+    background-color: var(--bg-header);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+.modal-content form button:hover {
+    background-color: #2777d9;
+}
+
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 180px; 
+        padding-bottom: 15px; /* Restore original padding */
+    }
+
+    .header-right {
+        border-top: none;
+        padding-top: 0;
+    }
+
+}
