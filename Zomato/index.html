@@ -14,6 +14,9 @@
   <nav class="navbar background">
     <div class="nav-container">
       <a href="#" class="heading">Zomato</a>
+      
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
       <div class="nav-menu" id="navMenu">
         <ul type="none" class="nav">
           <li><a href="#home">Home</a></li>
@@ -26,11 +29,12 @@
           <button type="submit" class="btn"><i class="fas fa-search"></i></button>
         </form>
       </div>
-      <div class="hamburger" id="hamburger">
+      
+      <label for="nav-toggle" class="hamburger" id="hamburger">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
-      </div>
+      </label>
     </div>
   </nav>
 
@@ -228,23 +232,5 @@
     </div>
   </footer>
 
-  <script>
-    // Hamburger menu functionality
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('navMenu');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-  </script>
-</body>
+  </body>
 </html>

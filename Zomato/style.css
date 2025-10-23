@@ -117,6 +117,8 @@ body{
     cursor: pointer;
     flex-direction: column;
     gap: 4px;
+    /* Ensure hamburger is above other content */
+    z-index: 1001; 
 }
 
 .line{
@@ -126,9 +128,15 @@ body{
     transition: all 0.3s ease;
 }
 
+/* 1. ADD THIS RULE TO HIDE THE CHECKBOX */
+.nav-toggle {
+    display: none;
+}
+
+
 /* Hero Section */
 .background{
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%D%D');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -602,12 +610,12 @@ footer{
     color: #e74c3c;
 }
 
-/* Responsive Design */
+/* 2. UPDATE THE RESPONSIVE DESIGN SECTION */
 @media only screen and (max-width: 768px){
     .nav-menu{
         position: fixed;
         top: 70px;
-        right: -100%;
+        right: -100%; /* Start hidden off-screen */
         background: rgba(0, 0, 0, 0.95);
         width: 100%;
         height: calc(100vh - 70px);
@@ -618,7 +626,9 @@ footer{
         gap: 30px;
     }
 
-    .nav-menu.active{
+    /* REMOVE .nav-menu.active */
+    /* ADD this: When checkbox is checked, show the menu */
+    .nav-toggle:checked ~ .nav-menu {
         right: 0;
     }
 
@@ -641,17 +651,21 @@ footer{
         display: flex;
     }
 
-    .hamburger.active .line:nth-child(1){
+    /* REMOVE .hamburger.active rules */
+    /* ADD these: Animate hamburger to 'X' when checkbox is checked */
+    .nav-toggle:checked ~ .hamburger .line:nth-child(1){
         transform: rotate(45deg) translate(6px, 6px);
     }
 
-    .hamburger.active .line:nth-child(2){
+    .nav-toggle:checked ~ .hamburger .line:nth-child(2){
         opacity: 0;
     }
 
-    .hamburger.active .line:nth-child(3){
+    .nav-toggle:checked ~ .hamburger .line:nth-child(3){
         transform: rotate(-45deg) translate(6px, -6px);
     }
+
+    /* ... all other responsive styles remain the same ... */
 
     .first h1{
         font-size: 2.5rem;
