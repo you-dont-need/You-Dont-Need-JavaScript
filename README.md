@@ -65,15 +65,18 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Gradient Animation](#gradient-animation)
 - [Growing Flower](#growing-flower)
 - [Horizontal image slider](#horizontal-image-slider)
+- [Hover Animation](#hover-animation)
 - [Image Gallery](#image-gallery)
 - [Image Hover Effect]()
 - [Image Comparison Slider](#image-comparison-slider)
 - [Infinite Carousel](#infinite-carousel)
 - [Info on Hover / Popover](#info-on-hover-popover)
+- [Input Text Field](#input-text)
 - [Interactive Resume](#interactive-resume)
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
 - [Lighthouse Scene](#lighthouse-scene)
+- [Loader Diamond Animation](#loader-diamond)
 - [Loaders](#loaders)
 - [Loading_Css_effect](#Loading-Css-effect)
 - [Lego_Loader](#Lego-Loader)
@@ -92,6 +95,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Parallax Scrolling](#parallax-scrolling)
 - [Pendulum](#pendulum)
 - [Playing Card Animation](#playing-card-animation)
+- [Product Cards](#product-cards)
 - [Profile Cards](#profilecards)
 - [Radial Color Pulsar](#RadialPulsar)
 - [Responsive Counter Showing # of Items That Didn't Fit Screen](#responsive-counter-showing--of-items-that-didnt-fit-screen)
@@ -129,6 +133,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Progress Bar On Scroll](#ProgressOnScroll)
 - [Password Strength Checker](#password-strength-checker)
 - [Pricing Table](#pricing-table)
+- [Glide to Reveal](#glide-to-reveal)
 - **Contribution**
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -1304,9 +1309,29 @@ An interactive resume built entirely using **HTML and CSS** — featuring animat
 
 ---
 
+## <a id="Glide to Reveal"></a>Glide to Reveal
+
+[<img src="images/glidetoreveal.png" height="230" title="Glide-to-reveal">](Glide-to-reveal/index.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="rotating-text"></a>Rotating Text
 
 [<img src="images/rotating_text.mp4" height="230" title="Demo">]()
+
+## <a id="input-text"></a>Input Text Field
+
+[<video height="230" width="230" controls> 
+<source src="images/input-text.mp4" type="video/mp4">
+</video>
+]()
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 
 **[⬆ back to top](#quick-links)**
 
