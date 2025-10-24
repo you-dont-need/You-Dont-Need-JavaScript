@@ -1,0 +1,181 @@
+/*import font*/
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+/*declare variables*/
+:root{
+    /*Color scheme*/
+    --old-lace: #F8F0E0ff;
+    --white: #FFFFFF; 
+    --black: #000000;
+
+    /*Typography*/
+    --font-family: "Bona Nova", serif;
+    -fs-normal: 0.8rem;
+}
+
+/*responsive typography*/
+@media screen and (min-width: 1120px){
+    :root{
+        --fs-normal: 1rem
+    }
+    
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: var(--font-family);
+    font-size: var(--fs-normal);
+    background-color: var(--black);
+    color: var(--old-lace);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*card*/
+.container{
+    display: grid;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 348px));
+    justify-content: center;
+    gap: 2rem;
+}
+
+.cardArticle{
+    position: relative;
+    background-color: var(--black);
+    border: 2px solid var(--old-lace);
+    padding: 3rem 1.5rem 1.5rem;
+    display: grid;
+    row-gap: 1rem;
+    overflow: hidden;
+}
+
+.cardImg{
+    width: 200px;
+    justify-self: center;
+    filter: drop-shadow(0 8px 24px --black);
+}
+
+.cardData{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: transform, 4s, opacity;
+}
+
+.cardTitle{
+    font-size: var(--fs-normal);
+    font-weight: 400;  
+}
+
+.cardBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1, 3);
+    z-index: -1;
+    transition: transform 4s;
+}
+
+.cardButton{
+    background-color: var(--black);
+    padding: 0.75rem 1rem;
+    color: var(--old-lace);
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    justify-self: center;
+    box-shadow: 0 8px 24px --black;
+    position: absolute;
+    bottom: -1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+.cardButton:hover{
+    border: 2px solid var(--black);
+    color: var(--black);
+    background-color: var(--old-lace);
+}
+
+.cardButton i{
+    font-size: 1.25rem;
+    transition: transform 0.4s;
+}
+
+.cardButton:hover i{
+    font-size: 1.25rem;
+    transition: transform 0.4s;
+}
+
+/*card animation*/
+.cardArticle:hover .cardImg{
+    transform: translateY(-1.5rem);
+}
+
+.cardArticle:hover .cardData{
+    transform: translateY(-4.5rem);
+    opacity: 0;
+}
+
+.cardArticle:hover{
+    background-color: transparent;
+}
+
+.cardArticle:hover .cardBg{
+    transform: scale(1);
+}
+
+.cardArticle:hover .cardButton{
+    transform: translateY(-3.75rem);
+    opacity: 1;
+    pointer-events: initial;
+}
+
+/*breakpoints*/
+@media screen and (max-width: 300px){
+    .container{
+        margin-inline: 1rem;
+    }
+
+    .cardContainer{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+@media screen and (min-width: 1120px){
+    .container{
+        height: 100vh;
+        display: grid;
+        align-items: center;
+    }
+
+    .cardImg{
+        width: 220px;
+    }
+}
