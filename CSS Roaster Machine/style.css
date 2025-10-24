@@ -1,0 +1,417 @@
+:root {
+  /* Colors */
+  --color-background: #c1abce;
+  --color-toaster-main: #e8594e;
+  --color-toaster-dark: #d14036;
+  --color-toaster-light: #fb6a5c;
+  --color-toaster-chrome: #e0e0e0;
+  --color-toaster-chrome-dark: #b0b0b0;
+  --color-toaster-slot: #4a3c39;
+  --color-bread-crust: #d2914d;
+  --color-bread-inside: #f0c896;
+  --color-bread-texture: rgba(210, 145, 77, 0.2);
+  --color-notification: #333333;
+  --color-notification-text: #ffffff;
+  --color-button: #4CAF50;
+  --color-button-hover: #3e8e41;
+  
+  /* Dimensions */
+  --toaster-width: 280px;
+  --toaster-height: 180px;
+  --toaster-slot-height: 40px;
+  --handle-width: 20px;
+  --handle-height: 30px;
+  --handle-stick-height: 60px;
+  --bread-width: 80px;
+  --bread-height: 100px;
+  
+  /* Animation timings */
+  --toast-time: 0.5s;
+  --toast-delay: 3s;
+  --notification-time: 0.5s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+  background: linear-gradient(135deg, var(--color-background) 0%, #ffecd2 100%);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: 
+    radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10%),
+    radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10%);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+/* Toaster component */
+.toaster {
+  position: relative;
+  width: var(--toaster-width);
+  height: calc(var(--toaster-height) + 100px); /* Extra space for bread */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.toaster__switch {
+  display: none; /* Hide the actual checkbox */
+}
+
+.toaster__body {
+  position: relative;
+  width: var(--toaster-width);
+  height: var(--toaster-height);
+  cursor: pointer;
+}
+
+/* Toaster main body */
+.toaster__main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 
+    0 10px 25px rgba(0,0,0,0.2),
+    0 6px 10px rgba(0,0,0,0.15);
+  overflow: visible;
+}
+
+/* Toaster top section with slot */
+.toaster__top {
+  position: absolute;
+  width: 100%;
+  height: var(--toaster-slot-height);
+  background: linear-gradient(to right, var(--color-toaster-dark), var(--color-toaster-main));
+  border-radius: 15px 15px 0 0;
+  top: 0;
+  overflow: hidden;
+}
+
+/* Bread slot */
+.toaster__slot {
+  position: absolute;
+  width: calc(var(--bread-width) + 10px);
+  height: calc(var(--toaster-slot-height) - 10px);
+  background-color: var(--color-toaster-slot);
+  left: 50%;
+  top: 5px;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  box-shadow: inset 0 3px 10px rgba(0,0,0,0.5);
+}
+
+/* Toaster front panel */
+.toaster__front {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - var(--toaster-slot-height));
+  background: linear-gradient(135deg, var(--color-toaster-light) 0%, var(--color-toaster-main) 50%, var(--color-toaster-dark) 100%);
+  border-radius: 0 0 15px 15px;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/* Control panel at bottom of toaster */
+.toaster__panel {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, var(--color-toaster-chrome), var(--color-toaster-chrome-dark));
+  bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Toaster knob */
+.toaster__knob {
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(135deg, #ffffff, var(--color-toaster-chrome-dark));
+  border-radius: 50%;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+/* Toaster branding */
+.toaster__logo {
+  font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--color-toaster-dark);
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+}
+
+/* Indicator light */
+.toaster__light {
+  width: 15px;
+  height: 15px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+  transition: background-color 0.3s;
+}
+
+/* Handle (lever) section - redesigned as integrated part of toaster */
+.toaster__handle {
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: var(--handle-width);
+  height: var(--handle-stick-height);
+  transform-origin: 50% 0;
+  transform: rotate(135deg);
+  transition: transform var(--toast-time) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 5;
+}
+
+.toaster__handle-top {
+  width: var(--handle-width);
+  height: var(--handle-height);
+  background: linear-gradient(to right, var(--color-toaster-chrome-dark), var(--color-toaster-chrome));
+  border-radius: 5px;
+  box-shadow: -1px 2px 4px rgba(0,0,0,0.2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.toaster__handle-stick {
+  position: absolute;
+  width: 8px;
+  height: calc(var(--handle-stick-height) - var(--handle-height));
+  background: linear-gradient(to right, var(--color-toaster-chrome-dark), var(--color-toaster-chrome));
+  left: 50%;
+  bottom: var(--handle-height);
+  transform: translateX(-50%);
+  border-radius: 4px 4px 0 0;
+  box-shadow: -1px 0px 3px rgba(0,0,0,0.15);
+}
+
+/* clipper styling to clip the bread */
+.clipper {
+  position: absolute;
+  width: var(--toaster-width);
+  height: calc(var(--toaster-height) - var(--toaster-slot-height));
+  top: calc(var(--toaster-slot-height) - 50px);
+  left: 0;
+  overflow: hidden;
+  border-radius: 0 0 15px 15px;
+  background-color: transparent;
+}
+/* Bread styling */
+.bread {
+  position: absolute;
+  width: var(--bread-width);
+  height: var(--bread-height);
+  top: 15px;  /* Initially slightly in the toaster */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: top var(--toast-time) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 10;
+}
+
+.bread__crust {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-bread-inside) 0%, var(--color-bread-crust) 100%);
+  border: 3px solid var(--color-bread-crust);
+  border-radius: 5px 5px 0 0;
+}
+
+.bread__texture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, var(--color-bread-texture) 1px, transparent 3px),
+    radial-gradient(circle at 60% 70%, var(--color-bread-texture) 1px, transparent 3px),
+    radial-gradient(circle at 40% 50%, var(--color-bread-texture) 1px, transparent 3px),
+    radial-gradient(circle at 80% 20%, var(--color-bread-texture) 1px, transparent 2px);
+  background-size: 12px 12px, 14px 14px, 16px 16px, 20px 20px;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Toast notification styling */
+.toast-notification {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-notification);
+  color: var(--color-notification-text);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: all var(--notification-time) ease;
+  min-width: 300px;
+}
+
+.toast-notification__content {
+  flex-grow: 1;
+}
+
+.toast-notification__close {
+  margin-left: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Snackbar styling */
+.snackbar {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-notification);
+  color: var(--color-notification-text);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: all var(--notification-time) ease;
+  min-width: 300px;
+}
+
+.snackbar__content {
+  flex-grow: 1;
+}
+
+.snackbar__button {
+  margin-left: 15px;
+  padding: 5px 15px;
+  background-color: var(--color-button);
+  color: var(--color-notification-text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.snackbar__button:hover {
+  background-color: var(--color-button-hover);
+}
+
+/* ===== ANIMATIONS & STATE CHANGES ===== */
+
+/* When toaster switch is checked (handle down) */
+.toaster__switch:checked ~ .toaster__body .toaster__handle {
+  transform: rotate(65deg);
+}
+
+/* Bread goes down when switch is checked */
+.toaster__switch:checked ~ .clipper .bread {
+  top: 70px;
+}
+
+/* Toast notification appears when switch is checked */
+.toaster__switch:checked ~ .toast-notification {
+  top: 30px;
+  opacity: 1;
+}
+
+/* The toaster light turns on */
+.toaster__switch:checked ~ .toaster__body .toaster__light {
+  background-color: #2ecc71;
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.8);
+}
+
+/* Toast notification disappears after delay */
+@keyframes hide-notification {
+  0% {
+    top: 30px;
+    opacity: 1;
+  }
+  100% {
+    top: -100px;
+    opacity: 0;
+  }
+}
+
+/* Handle returns after delay */
+@keyframes return-handle {
+  0% {
+    transform: rotate(65deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+/* Bread returns and changes texture after delay */
+@keyframes return-toast {
+  0% {
+    top: 70px;
+    filter: brightness(0.8);
+  }
+  100% {
+    top: 15px;
+    filter: brightness(0.8);
+  }
+}
+
+/* Show snackbar after delay */
+@keyframes show-snackbar {
+  0% {
+    bottom: -100px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+/* Apply animations with delay */
+.toaster__switch:checked ~ .toaster__body .toaster__handle {
+  animation: return-handle 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) var(--toast-delay) forwards;
+}
+
+.toaster__switch:checked ~ .clipper .bread {
+  animation: return-toast 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) var(--toast-delay) forwards;
+}
+
+.toaster__switch:checked ~ .toast-notification {
+  animation: hide-notification 0.5s ease var(--toast-delay) forwards;
+}
+
+.toaster__switch:checked ~ .snackbar {
+  animation: show-snackbar 0.5s ease calc(var(--toast-delay) + 0.5s) forwards;
+}
+
+/* When bread is toasted (after delay) */
+.toaster__switch:checked ~ .clipper .bread .bread__crust {
+  transition: background var(--toast-delay);
+  background: linear-gradient(135deg, #d2914d 0%, #b37840 100%);
+}
+
+/* Toast grain pattern gets darker when toasted */
+.toaster__switch:checked ~ .clipper .bread .bread__texture {
+  transition: background-color var(--toast-delay);
+  background-color: rgba(165, 42, 42, 0.2);
+}
