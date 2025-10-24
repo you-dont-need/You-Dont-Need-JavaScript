@@ -1,0 +1,77 @@
+/* */
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #222
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+ 
+}
+
+/* for the animations duration */
+button, button span {
+  transition: 200ms;
+}
+
+button .text {
+/* move on the X axis or horizontal axis to the right */
+transform: translateX(35px);
+color: white;
+font-weight: bold;
+}
+
+button .icon {
+position: absolute;
+border-left: 1px solid #c41b1b;
+transform: translateX(110px);
+
+/* moved to the right on X Axis */
+
+height: 40px;
+width: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* select the SVG */
+button svg {
+width: 15px;
+fill: #eee;
+}
+
+/* Hover Effects (on button) */
+button:hover{
+background: #ff3636;
+}
+/* Text Disapears when we hover on the button */
+button:hover .text {
+color: transparent;
+}
+button:hover .icon {
+width: 150px;
+/* remove the border on the side */
+border-left: none;
+/* move to the left */
+transform: translate(0);
+}
+button:focus {
+outline: none;
+}
+/* click effect (make the svg smaller when clicked) */
+button:active icon svg {
+transform: scale(0.8);
+}
