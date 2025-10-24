@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Man - JARVIS Interface</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            overflow: hidden;
+            color: #00d4ff;
+        }
+
+        .hud {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(ellipse at center, rgba(0, 50, 100, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
+        }
+
+        /* Helmet Overlay */
+        .helmet-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .helmet-frame {
+            position: absolute;
+            border: 3px solid rgba(0, 212, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5), inset 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .frame-top {
+            top: 5%;
+            left: 20%;
+            width: 60%;
+            height: 40%;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .frame-left {
+            top: 20%;
+            left: 5%;
+            width: 30%;
+            height: 60%;
+            border-radius: 20px 0 0 20px;
+        }
+
+        .frame-right {
+            top: 20%;
+            right: 5%;
+            width: 30%;
+            height: 60%;
+            border-radius: 0 20px 20px 0;
+        }
+
+        /* Crosshair */
+        .crosshair {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            border: 2px solid #ff0000;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .crosshair::before,
+        .crosshair::after {
+            content: '';
+            position: absolute;
+            background: #ff0000;
+        }
+
+        .crosshair::before {
+            top: 50%;
+            left: -20px;
+            width: 120px;
+            height: 2px;
+            transform: translateY(-50%);
+        }
+
+        .crosshair::after {
+            left: 50%;
+            top: -20px;
+            width: 2px;
+            height: 120px;
+            transform: translateX(-50%);
+        }
+
+        /* Status Panels */
+        .status-panel {
+            position: absolute;
+            background: rgba(0, 20, 40, 0.7);
+            border: 2px solid rgba(0, 212, 255, 0.5);
+            padding: 15px;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .top-left {
+            top: 20px;
+            left: 20px;
+            width: 250px;
+        }
+
+        .top-right {
+            top: 20px;
+            right: 20px;
+            width: 250px;
+        }
+
+        .bottom-left {
+            bottom: 20px;
+            left: 20px;
+            width: 300px;
+        }
+
+        .bottom-right {
+            bottom: 20px;
+            right: 20px;
+            width: 250px;
+        }
+
+        h3 {
+            color: #00d4ff;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .stat-line {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+            font-size: 12px;
+        }
+
+        .stat-label {
+            color: #00d4ff;
+        }
+
+        .stat-value {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        .stat-value.warning {
+            color: #ffaa00;
+        }
+
+        .stat-value.critical {
+            color: #ff0000;
+        }
+
+        /* Progress bars */
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(0, 50, 100, 0.5);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 5px 0;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00d4ff, #00ff88);
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+            animation: shimmer 2s infinite;
+        }
+
+        .progress-fill.warning {
+            background: linear-gradient(90deg, #ffaa00, #ffff00);
+        }
+
+        /* JARVIS Console */
+        .jarvis-console {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            background: rgba(0, 20, 40, 0.8);
+            border: 2px solid rgba(0, 212, 255, 0.5);
+            padding: 15px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .jarvis-text {
+            color: #00d4ff;
+            font-size: 14px;
+            line-height: 1.6;
+            animation: typewriter 4s steps(60) infinite;
+        }
+
+        /* Radar */
+        .radar {
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+            width: 150px;
+            height: 150px;
+            border: 2px solid rgba(0, 212, 255, 0.5);
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 50, 100, 0.3), transparent);
+        }
+
+        .radar::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 2px;
+            height: 50%;
+            background: linear-gradient(to bottom, #00d4ff, transparent);
+            transform-origin: top center;
+            animation: radar-sweep 3s linear infinite;
+        }
+
+        .radar-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: rgba(0, 212, 255, 0.2);
+        }
+
+        .radar-line:nth-child(2) {
+            transform: rotate(90deg);
+        }
+
+        /* Target markers */
+        .target {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ff0000;
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+
+        .target::before,
+        .target::after {
+            content: '';
+            position: absolute;
+            background: #ff0000;
+        }
+
+        .target::before {
+            top: 50%;
+            left: -5px;
+            width: 50px;
+            height: 1px;
+            transform: translateY(-50%);
+        }
+
+        .target::after {
+            left: 50%;
+            top: -5px;
+            width: 1px;
+            height: 50px;
+            transform: translateX(-50%);
+        }
+
+        .target-1 { top: 30%; left: 40%; }
+        .target-2 { top: 60%; left: 70%; }
+        .target-3 { top: 40%; right: 30%; }
+
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.7; }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -100% 0; }
+            100% { background-position: 100% 0; }
+        }
+
+        @keyframes typewriter {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes radar-sweep {
+            0% { transform: translate(-50%, -100%) rotate(0deg); }
+            100% { transform: translate(-50%, -100%) rotate(360deg); }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes scanline {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+
+        /* Scanline effect */
+        .scanline {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to bottom, transparent, rgba(0, 212, 255, 0.5), transparent);
+            animation: scanline 3s linear infinite;
+        }
+
+        /* Grid overlay */
+        .grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="hud">
+        <!-- Grid overlay -->
+        <div class="grid"></div>
+        
+        <!-- Scanline effect -->
+        <div class="scanline"></div>
+        
+        <!-- Helmet frames -->
+        <div class="helmet-overlay">
+            <div class="helmet-frame frame-top"></div>
+            <div class="helmet-frame frame-left"></div>
+            <div class="helmet-frame frame-right"></div>
+        </div>
+        
+        <!-- Crosshair -->
+        <div class="crosshair"></div>
+        
+        <!-- Status Panels -->
+        <div class="status-panel top-left">
+            <h3>⚡ Power Systems</h3>
+            <div class="stat-line">
+                <span class="stat-label">Arc Reactor:</span>
+                <span class="stat-value">100%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <div class="stat-line">
+                <span class="stat-label">Repulsors:</span>
+                <span class="stat-value">ONLINE</span>
+            </div>
+            <div class="stat-line">
+                <span class="stat-label">Flight Stabilizers:</span>
+                <span class="stat-value">ACTIVE</span>
+            </div>
+        </div>
+        
+        <div class="status-panel top-right">
+            <h3>🛡️ Defense Systems</h3>
+            <div class="stat-line">
+                <span class="stat-label">Armor Integrity:</span>
+                <span class="stat-value">98%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 98%"></div>
+            </div>
+            <div class="stat-line">
+                <span class="stat-label">Shield Status:</span>
+                <span class="stat-value warning">CHARGING</span>
+            </div>
+            <div class="stat-line">
+                <span class="stat-label">Countermeasures:</span>
+                <span class="stat-value">READY</span>
+            </div>
+        </div>
+        
+        <div class="status-panel bottom-left">
+            <h3>📡 Tactical Data</h3>
+            <div class="stat-line">
+                <span class="stat-label">Location:</span>
+                <span class="stat-value">NEW YORK, NY</span>
+            </div>
+            <div class="stat-line">
+                <span class="stat-label">Altitude:</span>
+                <span class="stat-value">1,247 FT</span>
+            </div>
+            <div class="stat-line">
+                <span class="stat-label">Velocity:</span>
+                <span class="stat-value">0 MPH</span>
+            </div>
+            <div class="stat-line">
+                <span class="stat-label">Targets Detected:</span>
+                <span class="stat-value warning">3</span>
+            </div>
+        </div>
+        
+        <div class="status-panel bottom-right">
+            <h3>⚙️ Suit Status</h3>
+            <div class="stat-line">
+                <span class="stat-label">Mark:</span>
+                <span class="stat-value">MARK L</span>
+            </div>
+            <div class="stat-line">
+                <span class="stat-label">Temperature:</span>
+                <span class="stat-value">72°F</span>
+            </div>
+            <div class="stat-line">
+                <span class="stat-label">O2 Levels:</span>
+                <span class="stat-value">100%</span>
+            </div>
+            <div class="stat-line">
+                <span class="stat-label">System Status:</span>
+                <span class="stat-value">OPTIMAL</span>
+            </div>
+        </div>
+        
+        <!-- JARVIS Console -->
+        <div class="jarvis-console">
+            <div class="jarvis-text">
+                > JARVIS: Good evening, Sir. All systems operational.<br>
+                > Suit diagnostics complete. Ready for deployment.<br>
+                > Scanning for threats in vicinity...
+            </div>
+        </div>
+        
+        <!-- Radar -->
+        <div class="radar">
+            <div class="radar-line"></div>
+            <div class="radar-line"></div>
+        </div>
+        
+        <!-- Target markers -->
+        <div class="target target-1"></div>
+        <div class="target target-2"></div>
+        <div class="target target-3"></div>
+    </div>
+</body>
+</html>
