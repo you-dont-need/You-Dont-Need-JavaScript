@@ -76,6 +76,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
 - [Lighthouse Scene](#lighthouse-scene)
+- [Loader Diamond Animation](#loader-diamond)
 - [Loaders](#loaders)
 - [Loading_Css_effect](#Loading-Css-effect)
 - [Lego_Loader](#Lego-Loader)
