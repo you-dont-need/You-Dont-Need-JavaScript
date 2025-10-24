@@ -1,227 +1,742 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 html{
     scroll-behavior: smooth;
 }
+
 body{
     height: 100vh;
     width: 100vw;
+    font-family: "Quicksand", sans-serif;
+    line-height: 1.6;
 }
+
+/* Navigation */
 .navbar{
+    background: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.heading{
+    font-size: 2rem;
+    font-family: "Protest Guerrilla", sans-serif;
+    text-decoration: none;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.nav-menu{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    position:fixed;
-    top: 0;
-    /* height: 3.5em; */
-    width: 100vw;
-    padding-top: 25px;
-    font-size: 1.1rem;
-    font-family: "Protest Guerrilla", sans-serif;
-    font-weight: 300;
+    gap: 30px;
 }
+
 .nav{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /* width: 300px;
-    margin-top: 6px; */
+    list-style: none;
+    gap: 25px;
 }
+
 .nav li a{
     text-decoration: none;
     color: white;
-    margin-left: 28px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
 }
-.heading{
-    font-size: 1.8rem;
-    font-style: italic;
-    text-decoration: none;
-    color: rgb(227, 132, 60);
+
+.nav li a:hover{
+    color: #e74c3c;
 }
+
+.nav li a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #e74c3c;
+    transition: width 0.3s ease;
+}
+
+.nav li a:hover::after{
+    width: 100%;
+}
+
 .nav-search{
     display: flex;
-    text-align: right;
+    align-items: center;
 }
-.hamburger{
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 35px;
-    right: 1.5%;
-}
-.line{
-    width: 36px;
-    height: 5px;
-    margin: 4px 4px;
-    background-color: white;
-}
+
 #search{
-    padding: 4px;
-    font-size: 1.1rem;
-    border: 2px solid green;
-    border-radius: 4px;
-    height: 32px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #27ae60;
+    border-radius: 25px 0 0 25px;
+    height: 42px;
+    width: 300px;
+    outline: none;
 }
+
 .btn{
-    background-color: green;
+    background-color: #27ae60;
     height: 42px;
     width: 50px;
     cursor: pointer;
     border: none;
-    border-radius: 4px;
+    border-radius: 0 25px 25px 0;
+    color: white;
+    transition: background-color 0.3s ease;
 }
+
+.btn:hover{
+    background-color: #219653;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    /* Ensure hamburger is above other content */
+    z-index: 1001; 
+}
+
+.line{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* 1. ADD THIS RULE TO HIDE THE CHECKBOX */
+.nav-toggle {
+    display: none;
+}
+
+
+/* Hero Section */
 .background{
-    background: rgba(0, 0, 0, 0.7) url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%D%D');
     background-size: cover;
-    background-blend-mode:darken;
+    background-position: center;
+    background-attachment: fixed;
 }
+
 .box{
     display: flex;
-    width: 100vw;
+    width: 100%;
     font-family: 'Dela Gothic One', cursive;
-    height: 300px;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
     color: white;
-    line-height: 39px;
+    line-height: 1.8;
     margin: auto;
 }
+
 .first{
-    letter-spacing:1.3px ;
+    letter-spacing: 1.3px;
+    max-width: 800px;
+    padding: 0 20px;
 }
-.firstSec{
-    margin-top: 45px;
-    height: 100vh;
+
+.first h1{
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
-.btns button{
-    background: none;
-    cursor: pointer;
-    text-align: center;
-    border:none;
-    border-radius: 6px;
-    border: 2px solid black;
-    background-color: white;
-    height: 34px;
-    width: 80px;
-    color: black;
-}
-.btns button:hover{
-    color: white;
-    border: 2px solid white;
-    background: none;
-}
-.seRight,.seLeft{
-    /* height: 435px; */
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    max-width: 100%;
-    margin: auto;
-    background-color: rgb(248, 248, 248);
-}
-.para{
-    display: flex;
-    padding: 0 22px;
-    flex-direction: column;
-}
-/* .para p{
-    font-family: 'Dela Gothic One', cursive;
-} */
-.big{
-    font-size: 26px;
-    font-family: 'Dela Gothic One', cursive;
-}
-.small{
-    line-height: 26px;
+
+.first p{
+    font-size: 1.3rem;
+    margin-bottom: 30px;
     font-family: "Quicksand", sans-serif;
-    font-weight: 450;
+}
+
+.btns{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btns button{
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.order-btn{
+    background: #e74c3c;
+    color: white;
+}
+
+.order-btn:hover{
+    background: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.explore-btn{
+    background: transparent;
+    color: white;
+    border: 2px solid white !important;
+}
+
+.explore-btn:hover{
+    background: white;
+    color: #333;
+    transform: translateY(-3px);
+}
+
+/* Content Sections */
+.seRight, .seLeft{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    gap: 50px;
+}
+
+.para{
+    flex: 1;
+    padding: 0 20px;
+}
+
+.big{
+    font-size: 2.5rem;
+    font-family: 'Dela Gothic One', cursive;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.small{
+    line-height: 1.8;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.food img{
+    border-radius: 15px;
+    height: 400px;
+    width: 500px;
+    object-fit: cover;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.food img:hover{
+    transform: scale(1.02);
+}
+
+/* Stats Section */
+.stats{
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stat-item{
+    text-align: center;
+}
+
+.stat-item h3{
+    font-size: 2rem;
+    color: #e74c3c;
+    margin-bottom: 5px;
+}
+
+.stat-item p{
+    color: #666;
+    font-weight: 600;
+}
+
+/* Features List */
+.features{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.features li{
+    padding: 10px 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.features li i{
+    color: #e74c3c;
+    width: 20px;
+}
+
+/* Restaurant Types */
+.restaurant-types{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.type-card{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.type-card:hover{
+    background: #e74c3c;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.type-card:hover i{
+    color: white;
+}
+
+.type-card i{
+    color: #e74c3c;
     font-size: 1.2rem;
 }
-.food img{
-    border-radius: 10px;
-    height: 330px;
-    width: 450px;
-    margin-top: 10px;
+
+/* Testimonials */
+.testimonials{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
 }
+
+.testimonials h2{
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.testimonial-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card{
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover{
+    transform: translateY(-10px);
+}
+
+.rating{
+    color: #f1c40f;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p{
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.customer{
+    text-align: left;
+}
+
+.customer strong{
+    display: block;
+    font-size: 1.1rem;
+}
+
+.customer span{
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Contact Section */
 .contact{
-    background-color:rgb(239, 239, 239) ;
-    padding-top: 13px;
+    background: #f8f9fa;
+    padding: 80px 20px;
 }
-.contact h2{
+
+.contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.contact-info h2{
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.contact-info > p{
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item i{
+    background: #e74c3c;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.contact-item h4{
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.form{
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.form h3{
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
     text-align: center;
     font-family: 'Dela Gothic One', cursive;
 }
-.form{
-    margin: auto;
-    max-width: 60%;
-}
-.form input{
+
+.form input, .form textarea{
     width: 100%;
-    height: 35px;
-    padding: 5px 10px;
-    margin:20px auto;
-    border: 2px solid rgb(78, 78, 78);
-    border-radius: 4px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    font-family: "Quicksand", sans-serif;
 }
-.btms{
-    cursor: pointer;
+
+.form input:focus, .form textarea:focus{
+    outline: none;
+    border-color: #e74c3c;
 }
-footer{
-    background-color: rgb(41, 48, 72);
+
+.submit-btn{
+    width: 100%;
+    padding: 15px;
+    background: #e74c3c;
     color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-btn:hover{
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* Footer */
+footer{
+    background: #2c3e50;
+    color: white;
+    padding: 50px 0 0;
+}
+
+.footer-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section h3, .footer-section h4{
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.footer-section ul{
+    list-style: none;
+}
+
+.footer-section ul li{
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a{
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover{
+    color: #e74c3c;
+}
+
+.social-links{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a{
+    color: white;
+    background: #34495e;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover{
+    background: #e74c3c;
+    transform: translateY(-3px);
+}
+
+.app-download{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app-btn{
+    padding: 12px 20px;
+    background: #34495e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.app-btn:hover{
+    background: #e74c3c;
+    transform: translateY(-2px);
+}
+
+.footer-bottom{
     text-align: center;
     padding: 25px 0;
+    margin-top: 50px;
+    border-top: 1px solid #34495e;
 }
-@media only screen and (max-width:750px){
+
+.footer-bottom a{
+    color: #bdc3c7;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover{
+    color: #e74c3c;
+}
+
+/* 2. UPDATE THE RESPONSIVE DESIGN SECTION */
+@media only screen and (max-width: 768px){
+    .nav-menu{
+        position: fixed;
+        top: 70px;
+        right: -100%; /* Start hidden off-screen */
+        background: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 50px 20px;
+        transition: right 0.3s ease;
+        gap: 30px;
+    }
+
+    /* REMOVE .nav-menu.active */
+    /* ADD this: When checkbox is checked, show the menu */
+    .nav-toggle:checked ~ .nav-menu {
+        right: 0;
+    }
+
     .nav{
         flex-direction: column;
-        margin-top: 3px;
-        margin-right: 30px;
+        gap: 20px;
+        text-align: center;
     }
-    .navbar{
-        flex-direction: column;
-        height: 15.8rem;
-        transition: 0.55s all ease-out;
-        padding-top: 5px;
-    }
-    .nav li{
-        margin-top: 5px;
-    }
+
     .nav-search{
-        flex-direction: column;
-        margin-top: 6px;
+        width: 100%;
+        max-width: 300px;
     }
-    .nav-search button{
-        margin-left: 85px;
-        margin-top: 6px;
+
+    #search{
+        width: 100%;
     }
+
     .hamburger{
-        display: block;
+        display: flex;
     }
-    .nav-h{
-        height: 78px;
-        width: 100vw;
+
+    /* REMOVE .hamburger.active rules */
+    /* ADD these: Animate hamburger to 'X' when checkbox is checked */
+    .nav-toggle:checked ~ .hamburger .line:nth-child(1){
+        transform: rotate(45deg) translate(6px, 6px);
     }
-    .heading{
-        margin-top: 10px;
-    }
-    .vis-h{
+
+    .nav-toggle:checked ~ .hamburger .line:nth-child(2){
         opacity: 0;
     }
-    .first{
-        margin-top: 250px;
+
+    .nav-toggle:checked ~ .hamburger .line:nth-child(3){
+        transform: rotate(-45deg) translate(6px, -6px);
     }
-    .seRight{
-        flex-direction: column-reverse;
+
+    /* ... all other responsive styles remain the same ... */
+
+    .first h1{
+        font-size: 2.5rem;
     }
-    .seLeft{
+
+    .first p{
+        font-size: 1.1rem;
+    }
+
+    .seRight, .seLeft{
         flex-direction: column;
+        text-align: center;
+        margin: 50px auto;
     }
-    .para{
-        padding: 0px 12px;
+
+    .seRight .food, .seLeft .food{
+        order: -1;
+    }
+
+    .big{
+        font-size: 2rem;
+    }
+
+    .food img{
+        width: 100%;
+        height: 300px;
+    }
+
+    .stats{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .restaurant-types{
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container{
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .btns{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btns button{
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .first h1{
+        font-size: 2rem;
+    }
+
+    .big{
+        font-size: 1.8rem;
+    }
+
+    .form{
+        padding: 25px;
+    }
+
+    .footer-content{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-links{
+        justify-content: center;
     }
 }

@@ -3,89 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zomato</title>
+    <title>Zomato - Food Delivery</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar background nav-h">
-    <a href="#" class="heading">Zomato</a>
-    <ul type="none" class="nav vis-h">
-      <li>
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a href="#about">About</a>
-      </li>
-      <li>
-        <a href="#services">Services</a>
-      </li>
-      <li>
-        <a href="#contact">Contact Us</a>
-      </li>
-    </ul>
-    <form class="nav-search vis-h">
-      <input placeholder="Search" aria-label="Search" id="search">
-      <button type="submit" class="btn">Search</button>
-    </form>
-    <div class="hamburger">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
+  <nav class="navbar background">
+    <div class="nav-container">
+      <a href="#" class="heading">Zomato</a>
+      
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+      <div class="nav-menu" id="navMenu">
+        <ul type="none" class="nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <form class="nav-search">
+          <input placeholder="Search restaurants or food..." aria-label="Search" id="search">
+          <button type="submit" class="btn"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      
+      <label for="nav-toggle" class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
     </div>
   </nav>
-  <section class="background firstSec">
+
+  <section class="background firstSec" id="home">
     <div class="box">
       <div class="first">
-        <h1>Welcome to <span style="color: orange;">Zomato</span></h1>
-        <p>Your delicious meal awaits you! </p>
+        <h1>Welcome to <span style="color: #e74c3c;">Zomato</span></h1>
+        <p>Your delicious meal awaits you! Discover the best food around you.</p>
         <div class="btns">
-          <button>Order Now</button>
+          <button class="order-btn">Order Now</button>
+          <button class="explore-btn">Explore Restaurants</button>
         </div>
       </div>
     </div>
   </section>
+
   <section class="seRight" id="about">
     <div class="para">
       <p class="big">We build your trust.</p>
-      <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur totam doloremque cumque vel, eos facilis sint ad quidem fuga voluptatem ullam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptatum laborum quas optio consectetur velit reiciendis magni dignissimos dolorem, repellendus dolores sunt.</p>
+      <p class="small">At Zomato, we believe in delivering not just food, but experiences. With over 5 years in the industry, we've connected millions of food lovers with their favorite restaurants. Our commitment to quality and timely delivery has made us the most trusted food delivery platform.</p>
+      <div class="stats">
+        <div class="stat-item">
+          <h3>10M+</h3>
+          <p>Happy Customers</p>
+        </div>
+        <div class="stat-item">
+          <h3>50K+</h3>
+          <p>Restaurant Partners</p>
+        </div>
+        <div class="stat-item">
+          <h3>100+</h3>
+          <p>Cities</p>
+        </div>
+      </div>
     </div>
     <div class="food">
-      <img src="./images/cake-1971552_1280.jpg" alt="cake" srcset="">
+      <img src="./images/cake-1971552_1280.jpg" alt="Delicious Cake" loading="lazy">
     </div>
   </section>
+
   <section class="seLeft" id="services">
     <div class="food">
-      <img src="./images/pizza-3010062_1280.jpg" alt="cake" srcset="">
+      <img src="./images/pizza-3010062_1280.jpg" alt="Fresh Pizza" loading="lazy">
     </div>
     <div class="para">
       <p class="big">How we are different?</p>
-      <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur totam doloremque cumque vel, eos facilis sint ad quidem fuga voluptatem ullam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptatum laborum quas optio consectetur velit reiciendis magni dignissimos dolorem, repellendus dolores sunt.</p>
+      <p class="small">We stand out with our innovative approach to food delivery. Real-time order tracking, curated restaurant recommendations, and exclusive deals make your dining experience exceptional. Our AI-powered suggestions help you discover new favorites based on your taste preferences.</p>
+      <ul class="features">
+        <li><i class="fas fa-bolt"></i> Lightning Fast Delivery</li>
+        <li><i class="fas fa-shield-alt"></i> 100% Quality Assurance</li>
+        <li><i class="fas fa-tags"></i> Best Price Guarantee</li>
+        <li><i class="fas fa-utensils"></i> Wide Variety of Cuisines</li>
+      </ul>
     </div>
   </section>
+
   <section class="seRight">
     <div class="para">
-      <p class="big">Available at more than 1500+ restraunts and food places.</p>
-      <p class="small">Lorem ipsum dolor sit amet consectetur adipam doloremque cumque vel, eos facilis sint ad quidem fuga voluptatem ullam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptatum laborum quas optio consectetur velit reiciendis magni dignissimos dolorem, repellendus dolores sunt.</p>
+      <p class="big">Available at 1500+ restaurants</p>
+      <p class="small">From fine dining to quick bites, we partner with the best restaurants in your city. Whether you're craving traditional dishes or want to try something new, Zomato brings the finest culinary experiences right to your doorstep.</p>
+      <div class="restaurant-types">
+        <div class="type-card">
+          <i class="fas fa-star"></i>
+          <span>Fine Dining</span>
+        </div>
+        <div class="type-card">
+          <i class="fas fa-pizza-slice"></i>
+          <span>Casual Dining</span>
+        </div>
+        <div class="type-card">
+          <i class="fas fa-coffee"></i>
+          <span>Cafés</span>
+        </div>
+        <div class="type-card">
+          <i class="fas fa-birthday-cake"></i>
+          <span>Dessert Spots</span>
+        </div>
+      </div>
     </div>
     <div class="food">
-      <img src="./images/strawberry-dessert-2191973_1280.jpg" alt="cake" srcset="">
+      <img src="./images/strawberry-dessert-2191973_1280.jpg" alt="Strawberry Dessert" loading="lazy">
     </div>
   </section>
-  <hr>
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <form action="" class="form">
-      <input type="text" placeholder="Enter your name" id="name">
-      <input type="email" name="" id="" placeholder="Enter your email">
-      <input type="text" placeholder="Enter your phone number">
-      <button type="submit" class="btms">Submit</button>
-    </form>
+
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-card">
+        <div class="rating">★★★★★</div>
+        <p>"Zomato has revolutionized how I order food. The app is intuitive and delivery is always on time!"</p>
+        <div class="customer">
+          <strong>Sarah M.</strong>
+          <span>Regular Customer</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="rating">★★★★★</div>
+        <p>"Amazing variety of restaurants and the search filters make it so easy to find exactly what I'm craving."</p>
+        <div class="customer">
+          <strong>Raj K.</strong>
+          <span>Food Enthusiast</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="rating">★★★★☆</div>
+        <p>"Great service and the customer support team is very responsive. Highly recommended!"</p>
+        <div class="customer">
+          <strong>Priya S.</strong>
+          <span>Premium Member</span>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+        <p>Have questions or feedback? We'd love to hear from you!</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Call Us</h4>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email Us</h4>
+              <p>support@zomato.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Visit Us</h4>
+              <p>123 Food Street, Culinary City</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="form">
+        <h3>Send us a Message</h3>
+        <input type="text" placeholder="Enter your name" id="name" required>
+        <input type="email" placeholder="Enter your email" required>
+        <input type="tel" placeholder="Enter your phone number">
+        <textarea placeholder="Your message..." rows="4"></textarea>
+        <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </section>
+
   <footer>
-    Copyright &copy; 2024 www.zomato.in-All rights reserved.
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Zomato</h3>
+        <p>Delivering happiness through food</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Food Delivery</a></li>
+          <li><a href="#">Restaurant Booking</a></li>
+          <li><a href="#">Catering</a></li>
+          <li><a href="#">Premium Dining</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Download App</h4>
+        <div class="app-download">
+          <button class="app-btn"><i class="fab fa-google-play"></i> Google Play</button>
+          <button class="app-btn"><i class="fab fa-apple"></i> App Store</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Zomato. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
   </footer>
-</body>
+
+  </body>
 </html>
