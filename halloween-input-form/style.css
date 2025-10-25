@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #1a0000 100%);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Glowing pumpkin overlay */
+.pumpkin-bg::before {
+  content: "🎃";
+  font-size: 25rem;
+  color: rgba(255, 140, 0, 0.05);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Floating fog animation */
+.pumpkin-bg::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at bottom, rgba(255, 140, 0, 0.15), transparent);
+  animation: fog 15s infinite linear;
+  z-index: 0;
+}
+
+@keyframes fog {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Form container */
+.form-container {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 2.5rem;
+  border: 2px solid orange;
+  border-radius: 20px;
+  box-shadow: 0 0 25px orange;
+  width: 320px;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.form-container:hover {
+  box-shadow: 0 0 40px #ff6600;
+  transform: scale(1.03);
+}
+
+/* Title */
+h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 2rem;
+  color: #ff6600;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px #ff6600, 0 0 20px #ff3300;
+}
+
+/* Inputs */
+.input-group {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffa500;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  background: #1a0000;
+  border: 2px solid #ff6600;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #ff9933;
+  box-shadow: 0 0 10px #ff9933;
+}
+
+/* Button */
+.submit-btn {
+  background: linear-gradient(45deg, #ff6600, #ff3300);
+  border: none;
+  color: black;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 12px 18px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  font-family: 'Creepster', cursive;
+  font-size: 1.1rem;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(45deg, #ff9933, #ff3300);
+  box-shadow: 0 0 25px #ff6600;
+  transform: scale(1.05);
+}
