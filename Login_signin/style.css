@@ -1,0 +1,84 @@
+body {
+  width: 100vh;
+  height: 100vh;
+  background-image: url(https://img.freepik.com/premium-vector/geometric-gradient-technology-background_23-2149110132.jpg?semt=ais_hybrid&w=740&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+fieldset {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 20px;
+}
+h1 {
+  translate: 20%;
+}
+input,
+label,
+button,
+h4 {
+  position: relative;
+  left: 25%;
+}
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-size: 50px;
+  color: antiquewhite;
+}
+label {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+  color: azure;
+  font-size: 20px;
+  left: 20px;
+}
+input[type="text"],
+input[type="password"] {
+  width: 80%;
+  left: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+input[type="checkbox"] {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  margin-right: 0px;
+  left: 10px;
+}
+
+h4 {
+  color: white;
+}
+a {
+  color: chartreuse;
+}
+a:hover {
+  color: chocolate;
+}
+button {
+  width: 85%;
+  border-radius: 10px;
+  background-color: greenyellow;
+  padding: 10px;
+  margin: 10px;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  font-size: large;
+  left: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+button:hover {
+  background-color: blanchedalmond;
+  color: brown;
+  cursor: pointer;
+}
