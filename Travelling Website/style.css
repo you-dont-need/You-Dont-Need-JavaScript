@@ -24,89 +24,112 @@ header {
     width: 100%;
 }
 
-
 .navbar {
-    display: flex;
-    justify-content: space-evenly;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 1000;
 }
 
-.navbarleft {
+.logo img {
+  width: 150px;
+  height: 60px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--dark-text-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-actions a {
+  color: var(--dark-text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signin,
+.account {
+  border: 2px solid var(--primary-color);
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.signin:hover,
+.account:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--dark-text-color);
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
     width: 100%;
-    height: 8vh;
-    background-color: #EDC7B7;
-    box-shadow: 0px 2px 50px black;
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    text-align: center;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
     display: flex;
-    padding: 5px 25px;
-    align-items: center;
-    justify-content: space-between;
-}
+  }
 
-.navbarleft ul {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    justify-content: space-around;
-    align-items: center;
-}
+  .menu-icon {
+    display: block;
+  }
 
-.navbarleft ul li {
-    padding: 0px 10px;
-    list-style: none;
-}
-
-.navbarleft ul li a {
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    color: #123C69;
-}
-
-.navbarleft a:hover {
-    text-shadow: 0px 0px 0.25px #123C69;
+  .nav-actions {
+    display: none;
+  }
 }
 
 .navbar2 {
-    width: 100%;
-    height: 7vh;
-    background-color: #123C69;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    padding: 10px;
-
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 10px 0;
 }
 
-.navbar2 h1 {
-    color: #EDC7B7;
-    font-size: 28px;
-    font-weight: 100;
-}
-
-.signin {
-    border: 2px solid;
-    padding: 10px;
-    border-radius: 5px;
-    transition: 0.5s;
-}
-
-.signin:hover {
-    background-color: #123C69;
-    color: white;
-}
-
-.account {
-    border: 2px solid #123C69;
-    border-radius: 5px;
-    padding: 10px;
-    transition: 0.5s;
-}
-
-.account:hover {
-    background-color: #123C69;
-    color: white;
-}
-
- .flight-booking {
+.flight-booking {
     background: #f9fbff;
     border-radius: 16px;
     padding: 25px;
