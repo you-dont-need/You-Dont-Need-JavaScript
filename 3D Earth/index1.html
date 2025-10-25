@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Realistic Earth Sphere</title>
+  <style>
+    body {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .earth {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #3a9bdc, #1c3f5f 70%);
+      box-shadow:
+        inset -10px -10px 30px rgba(0, 0, 0, 0.4),
+        inset 10px 10px 20px rgba(255, 255, 255, 0.1),
+        0 0 20px rgba(0, 0, 255, 0.3);
+      position: relative;
+    }
+
+    .earth::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      width: 60%;
+      height: 60%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 60%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="earth"></div>
+</body>
+</html>
