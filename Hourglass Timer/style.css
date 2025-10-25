@@ -1,0 +1,388 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    background: #bdb7f7;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hourglass {
+    position: relative;
+    height: 500px;
+    width: 500px;
+}
+
+.hourglass::before {
+    position: absolute;
+    display: block;
+    content: '';
+    bottom: 39.8%;
+    left: 32%;
+    height: 3%;
+    width: 35%;
+    border-radius: 50%;
+    background-image: radial-gradient(#191919 5%, transparent 75%);
+}
+
+.glassUpper,
+.glassBottom {
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    left: 40%;
+    background: rgba(201, 233, 252, .8);
+    border-radius: 100% 100% 100% 0%;
+    box-shadow: inset 8px 0px 0 rgba(162, 196, 212, .4);
+    z-index: 2;
+}
+
+.glassUpper {
+    top: 10%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.glassBottom {
+    top: 36%;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.sandUpper,
+.sandBottom {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    left: 10%;
+    top: 10%;
+    border-radius: 100% 100% 100% 0%;
+    z-index: 2;
+    box-shadow:
+        0 0 10px rgba(255, 255, 100, 0.7),
+        -5px -5px 15px rgba(255, 255, 200, 0.5),
+        5px 5px 15px rgba(200, 150, 0, 0.5);
+}
+
+.sandUpper::after,
+.sandBottom::after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 100% 100% 100% 0%;
+    box-shadow: inset -5px 0px 0px rgba(239, 250, 255, .8);
+    background: rgba(201, 233, 252, .4);
+}
+
+.sandUpper {
+    -webkit-animation: sandDown 10s linear infinite 0s;
+    -moz-animation: sandDown 10s linear infinite 0s;
+    -ms-animation: sandDown 10s linear infinite 0s;
+    animation: sandDown 10s linear infinite 0s;
+}
+
+.sandBottom {
+    -webkit-animation: sandUp 10s linear infinite 0s;
+    -moz-animation: sandUp 10s linear infinite 0s;
+    -ms-animation: sandUp 10s linear infinite 0s;
+    animation: sandUp 10s linear infinite 0s;
+}
+
+.fillet {
+    position: absolute;
+    height: 115%;
+    width: 4px;
+    background: #fcc45c;
+    -webkit-animation: fillet 1s linear infinite 0s;
+    -moz-animation: fillet 1s linear infinite 0s;
+    -ms-animation: fillet 1s linear infinite 0s;
+    animation: fillet 1s linear infinite 0s;
+    left: -2%;
+    top: 105%;
+}
+
+.frame {
+    position: absolute;
+    height: 52%;
+    width: 30%;
+    top: 7%;
+    left: 34.7%;
+    border-top: 15px solid #4a1c10;
+    border-bottom: 15px solid #4a1c10;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    z-index: 0;
+}
+
+.frame::before {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 100%;
+    width: 75%;
+    left: 49%;
+    border-left: 6px solid #7a2d18;
+}
+
+.frame::after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 100%;
+    width: 90%;
+    left: 1%;
+    border-left: 6px solid #7a2d18;
+    border-right: 6px solid #7a2d18;
+}
+    
+/* keyframes */
+@-webkit-keyframes sandDown {
+
+    0% { background-image: linear-gradient(45deg, #fcc45c 100%, transparent 0%); }
+    5% { background-image: linear-gradient(45deg, #fcc45c 95%, transparent 0%); }
+    10% { background-image: linear-gradient(45deg, #fcc45c 90%, transparent 0%); }
+    15% { background-image: linear-gradient(45deg, #fcc45c 85%, transparent 0%); }
+    20% { background-image: linear-gradient(45deg, #fcc45c 80%, transparent 0%); }
+    25% { background-image: linear-gradient(45deg, #fcc45c 75%, transparent 0%); }
+    30% { background-image: linear-gradient(45deg, #fcc45c 70%, transparent 0%); }
+    35% { background-image: linear-gradient(45deg, #fcc45c 65%, transparent 0%); }
+    40% { background-image: linear-gradient(45deg, #fcc45c 60%, transparent 0%); }
+    45% { background-image: linear-gradient(45deg, #fcc45c 55%, transparent 0%); }
+    50% { background-image: linear-gradient(45deg, #fcc45c 50%, transparent 0%); }
+    55% { background-image: linear-gradient(45deg, #fcc45c 45%, transparent 0%); }
+    60% { background-image: linear-gradient(45deg, #fcc45c 40%, transparent 0%); }
+    65% { background-image: linear-gradient(45deg, #fcc45c 35%, transparent 0%); }
+    70% { background-image: linear-gradient(45deg, #fcc45c 30%, transparent 0%); }
+    75% { background-image: linear-gradient(45deg, #fcc45c 25%, transparent 0%); }
+    80% { background-image: linear-gradient(45deg, #fcc45c 20%, transparent 0%); }
+    85% { background-image: linear-gradient(45deg, #fcc45c 15%, transparent 0%); }
+    90% { background-image: linear-gradient(45deg, #fcc45c 10%, transparent 0%); }
+    95% { background-image: linear-gradient(45deg, #fcc45c 5%, transparent 0%); }
+    100% { background-image: linear-gradient(45deg, #fcc45c 0%, transparent 0%); }
+}
+@-moz-keyframes sandDown {
+
+    0% { background-image: linear-gradient(45deg, #fcc45c 100%, transparent 0%); }
+    5% { background-image: linear-gradient(45deg, #fcc45c 95%, transparent 0%); }
+    10% { background-image: linear-gradient(45deg, #fcc45c 90%, transparent 0%); }
+    15% { background-image: linear-gradient(45deg, #fcc45c 85%, transparent 0%); }
+    20% { background-image: linear-gradient(45deg, #fcc45c 80%, transparent 0%); }
+    25% { background-image: linear-gradient(45deg, #fcc45c 75%, transparent 0%); }
+    30% { background-image: linear-gradient(45deg, #fcc45c 70%, transparent 0%); }
+    35% { background-image: linear-gradient(45deg, #fcc45c 65%, transparent 0%); }
+    40% { background-image: linear-gradient(45deg, #fcc45c 60%, transparent 0%); }
+    45% { background-image: linear-gradient(45deg, #fcc45c 55%, transparent 0%); }
+    50% { background-image: linear-gradient(45deg, #fcc45c 50%, transparent 0%); }
+    55% { background-image: linear-gradient(45deg, #fcc45c 45%, transparent 0%); }
+    60% { background-image: linear-gradient(45deg, #fcc45c 40%, transparent 0%); }
+    65% { background-image: linear-gradient(45deg, #fcc45c 35%, transparent 0%); }
+    70% { background-image: linear-gradient(45deg, #fcc45c 30%, transparent 0%); }
+    75% { background-image: linear-gradient(45deg, #fcc45c 25%, transparent 0%); }
+    80% { background-image: linear-gradient(45deg, #fcc45c 20%, transparent 0%); }
+    85% { background-image: linear-gradient(45deg, #fcc45c 15%, transparent 0%); }
+    90% { background-image: linear-gradient(45deg, #fcc45c 10%, transparent 0%); }
+    95% { background-image: linear-gradient(45deg, #fcc45c 5%, transparent 0%); }
+    100% { background-image: linear-gradient(45deg, #fcc45c 0%, transparent 0%); }
+}
+@-ms-keyframes sandDown {
+
+    0% { background-image: linear-gradient(45deg, #fcc45c 100%, transparent 0%); }
+    5% { background-image: linear-gradient(45deg, #fcc45c 95%, transparent 0%); }
+    10% { background-image: linear-gradient(45deg, #fcc45c 90%, transparent 0%); }
+    15% { background-image: linear-gradient(45deg, #fcc45c 85%, transparent 0%); }
+    20% { background-image: linear-gradient(45deg, #fcc45c 80%, transparent 0%); }
+    25% { background-image: linear-gradient(45deg, #fcc45c 75%, transparent 0%); }
+    30% { background-image: linear-gradient(45deg, #fcc45c 70%, transparent 0%); }
+    35% { background-image: linear-gradient(45deg, #fcc45c 65%, transparent 0%); }
+    40% { background-image: linear-gradient(45deg, #fcc45c 60%, transparent 0%); }
+    45% { background-image: linear-gradient(45deg, #fcc45c 55%, transparent 0%); }
+    50% { background-image: linear-gradient(45deg, #fcc45c 50%, transparent 0%); }
+    55% { background-image: linear-gradient(45deg, #fcc45c 45%, transparent 0%); }
+    60% { background-image: linear-gradient(45deg, #fcc45c 40%, transparent 0%); }
+    65% { background-image: linear-gradient(45deg, #fcc45c 35%, transparent 0%); }
+    70% { background-image: linear-gradient(45deg, #fcc45c 30%, transparent 0%); }
+    75% { background-image: linear-gradient(45deg, #fcc45c 25%, transparent 0%); }
+    80% { background-image: linear-gradient(45deg, #fcc45c 20%, transparent 0%); }
+    85% { background-image: linear-gradient(45deg, #fcc45c 15%, transparent 0%); }
+    90% { background-image: linear-gradient(45deg, #fcc45c 10%, transparent 0%); }
+    95% { background-image: linear-gradient(45deg, #fcc45c 5%, transparent 0%); }
+    100% { background-image: linear-gradient(45deg, #fcc45c 0%, transparent 0%); }
+}
+@keyframes sandDown {
+
+    0% { background-image: linear-gradient(45deg, #fcc45c 100%, transparent 0%); }
+    5% { background-image: linear-gradient(45deg, #fcc45c 95%, transparent 0%); }
+    10% { background-image: linear-gradient(45deg, #fcc45c 90%, transparent 0%); }
+    15% { background-image: linear-gradient(45deg, #fcc45c 85%, transparent 0%); }
+    20% { background-image: linear-gradient(45deg, #fcc45c 80%, transparent 0%); }
+    25% { background-image: linear-gradient(45deg, #fcc45c 75%, transparent 0%); }
+    30% { background-image: linear-gradient(45deg, #fcc45c 70%, transparent 0%); }
+    35% { background-image: linear-gradient(45deg, #fcc45c 65%, transparent 0%); }
+    40% { background-image: linear-gradient(45deg, #fcc45c 60%, transparent 0%); }
+    45% { background-image: linear-gradient(45deg, #fcc45c 55%, transparent 0%); }
+    50% { background-image: linear-gradient(45deg, #fcc45c 50%, transparent 0%); }
+    55% { background-image: linear-gradient(45deg, #fcc45c 45%, transparent 0%); }
+    60% { background-image: linear-gradient(45deg, #fcc45c 40%, transparent 0%); }
+    65% { background-image: linear-gradient(45deg, #fcc45c 35%, transparent 0%); }
+    70% { background-image: linear-gradient(45deg, #fcc45c 30%, transparent 0%); }
+    75% { background-image: linear-gradient(45deg, #fcc45c 25%, transparent 0%); }
+    80% { background-image: linear-gradient(45deg, #fcc45c 20%, transparent 0%); }
+    85% { background-image: linear-gradient(45deg, #fcc45c 15%, transparent 0%); }
+    90% { background-image: linear-gradient(45deg, #fcc45c 10%, transparent 0%); }
+    95% { background-image: linear-gradient(45deg, #fcc45c 5%, transparent 0%); }
+    100% { background-image: linear-gradient(45deg, #fcc45c 0%, transparent 0%); }
+}
+
+@-webkit-keyframes sandUp {
+    0% { background-image: linear-gradient(45deg, transparent 100%, #fcc45c 0%); }
+    5% { background-image: linear-gradient(45deg, transparent 95%, #fcc45c 0%); }
+    10% { background-image: linear-gradient(45deg, transparent 90%, #fcc45c 0%); }
+    15% { background-image: linear-gradient(45deg, transparent 85%, #fcc45c 0%); }
+    20% { background-image: linear-gradient(45deg, transparent 80%, #fcc45c 0%); }
+    25% { background-image: linear-gradient(45deg, transparent 75%, #fcc45c 0%); }
+    30% { background-image: linear-gradient(45deg, transparent 70%, #fcc45c 0%); }
+    35% { background-image: linear-gradient(45deg, transparent 65%, #fcc45c 0%); }
+    40% { background-image: linear-gradient(45deg, transparent 60%, #fcc45c 0%); }
+    45% { background-image: linear-gradient(45deg, transparent 55%, #fcc45c 0%); }
+    50% { background-image: linear-gradient(45deg, transparent 50%, #fcc45c 0%); }
+    55% { background-image: linear-gradient(45deg, transparent 45%, #fcc45c 0%); }
+    60% { background-image: linear-gradient(45deg, transparent 40%, #fcc45c 0%); }
+    65% { background-image: linear-gradient(45deg, transparent 35%, #fcc45c 0%); }
+    70% { background-image: linear-gradient(45deg, transparent 30%, #fcc45c 0%); }
+    75% { background-image: linear-gradient(45deg, transparent 25%, #fcc45c 0%); }
+    80% { background-image: linear-gradient(45deg, transparent 20%, #fcc45c 0%); }
+    85% { background-image: linear-gradient(45deg, transparent 15%, #fcc45c 0%); }
+    90% { background-image: linear-gradient(45deg, transparent 10%, #fcc45c 0%); }
+    95% { background-image: linear-gradient(45deg, transparent 5%, #fcc45c 0%); }
+    100% { background-image: linear-gradient(45deg, transparent 0%, #fcc45c 0%); }
+}
+@-moz-keyframes sandUp {
+    0% { background-image: linear-gradient(45deg, transparent 100%, #fcc45c 0%); }
+    5% { background-image: linear-gradient(45deg, transparent 95%, #fcc45c 0%); }
+    10% { background-image: linear-gradient(45deg, transparent 90%, #fcc45c 0%); }
+    15% { background-image: linear-gradient(45deg, transparent 85%, #fcc45c 0%); }
+    20% { background-image: linear-gradient(45deg, transparent 80%, #fcc45c 0%); }
+    25% { background-image: linear-gradient(45deg, transparent 75%, #fcc45c 0%); }
+    30% { background-image: linear-gradient(45deg, transparent 70%, #fcc45c 0%); }
+    35% { background-image: linear-gradient(45deg, transparent 65%, #fcc45c 0%); }
+    40% { background-image: linear-gradient(45deg, transparent 60%, #fcc45c 0%); }
+    45% { background-image: linear-gradient(45deg, transparent 55%, #fcc45c 0%); }
+    50% { background-image: linear-gradient(45deg, transparent 50%, #fcc45c 0%); }
+    55% { background-image: linear-gradient(45deg, transparent 45%, #fcc45c 0%); }
+    60% { background-image: linear-gradient(45deg, transparent 40%, #fcc45c 0%); }
+    65% { background-image: linear-gradient(45deg, transparent 35%, #fcc45c 0%); }
+    70% { background-image: linear-gradient(45deg, transparent 30%, #fcc45c 0%); }
+    75% { background-image: linear-gradient(45deg, transparent 25%, #fcc45c 0%); }
+    80% { background-image: linear-gradient(45deg, transparent 20%, #fcc45c 0%); }
+    85% { background-image: linear-gradient(45deg, transparent 15%, #fcc45c 0%); }
+    90% { background-image: linear-gradient(45deg, transparent 10%, #fcc45c 0%); }
+    95% { background-image: linear-gradient(45deg, transparent 5%, #fcc45c 0%); }
+    100% { background-image: linear-gradient(45deg, transparent 0%, #fcc45c 0%); }
+}
+@-ms-keyframes sandUp {
+    0% { background-image: linear-gradient(45deg, transparent 100%, #fcc45c 0%); }
+    5% { background-image: linear-gradient(45deg, transparent 95%, #fcc45c 0%); }
+    10% { background-image: linear-gradient(45deg, transparent 90%, #fcc45c 0%); }
+    15% { background-image: linear-gradient(45deg, transparent 85%, #fcc45c 0%); }
+    20% { background-image: linear-gradient(45deg, transparent 80%, #fcc45c 0%); }
+    25% { background-image: linear-gradient(45deg, transparent 75%, #fcc45c 0%); }
+    30% { background-image: linear-gradient(45deg, transparent 70%, #fcc45c 0%); }
+    35% { background-image: linear-gradient(45deg, transparent 65%, #fcc45c 0%); }
+    40% { background-image: linear-gradient(45deg, transparent 60%, #fcc45c 0%); }
+    45% { background-image: linear-gradient(45deg, transparent 55%, #fcc45c 0%); }
+    50% { background-image: linear-gradient(45deg, transparent 50%, #fcc45c 0%); }
+    55% { background-image: linear-gradient(45deg, transparent 45%, #fcc45c 0%); }
+    60% { background-image: linear-gradient(45deg, transparent 40%, #fcc45c 0%); }
+    65% { background-image: linear-gradient(45deg, transparent 35%, #fcc45c 0%); }
+    70% { background-image: linear-gradient(45deg, transparent 30%, #fcc45c 0%); }
+    75% { background-image: linear-gradient(45deg, transparent 25%, #fcc45c 0%); }
+    80% { background-image: linear-gradient(45deg, transparent 20%, #fcc45c 0%); }
+    85% { background-image: linear-gradient(45deg, transparent 15%, #fcc45c 0%); }
+    90% { background-image: linear-gradient(45deg, transparent 10%, #fcc45c 0%); }
+    95% { background-image: linear-gradient(45deg, transparent 5%, #fcc45c 0%); }
+    100% { background-image: linear-gradient(45deg, transparent 0%, #fcc45c 0%); }
+}
+@keyframes sandUp {
+    0% { background-image: linear-gradient(45deg, transparent 100%, #fcc45c 0%); }
+    5% { background-image: linear-gradient(45deg, transparent 95%, #fcc45c 0%); }
+    10% { background-image: linear-gradient(45deg, transparent 90%, #fcc45c 0%); }
+    15% { background-image: linear-gradient(45deg, transparent 85%, #fcc45c 0%); }
+    20% { background-image: linear-gradient(45deg, transparent 80%, #fcc45c 0%); }
+    25% { background-image: linear-gradient(45deg, transparent 75%, #fcc45c 0%); }
+    30% { background-image: linear-gradient(45deg, transparent 70%, #fcc45c 0%); }
+    35% { background-image: linear-gradient(45deg, transparent 65%, #fcc45c 0%); }
+    40% { background-image: linear-gradient(45deg, transparent 60%, #fcc45c 0%); }
+    45% { background-image: linear-gradient(45deg, transparent 55%, #fcc45c 0%); }
+    50% { background-image: linear-gradient(45deg, transparent 50%, #fcc45c 0%); }
+    55% { background-image: linear-gradient(45deg, transparent 45%, #fcc45c 0%); }
+    60% { background-image: linear-gradient(45deg, transparent 40%, #fcc45c 0%); }
+    65% { background-image: linear-gradient(45deg, transparent 35%, #fcc45c 0%); }
+    70% { background-image: linear-gradient(45deg, transparent 30%, #fcc45c 0%); }
+    75% { background-image: linear-gradient(45deg, transparent 25%, #fcc45c 0%); }
+    80% { background-image: linear-gradient(45deg, transparent 20%, #fcc45c 0%); }
+    85% { background-image: linear-gradient(45deg, transparent 15%, #fcc45c 0%); }
+    90% { background-image: linear-gradient(45deg, transparent 10%, #fcc45c 0%); }
+    95% { background-image: linear-gradient(45deg, transparent 5%, #fcc45c 0%); }
+    100% { background-image: linear-gradient(45deg, transparent 0%, #fcc45c 0%); }
+}
+
+@-webkit-keyframes fillet {
+    0% {
+        -webkit-transform: rotate(-135deg) scale(1, 0.1);
+        transform-origin: top left;
+    }
+
+    100% {
+        -webkit-transform: rotate(-135deg) scale(1, 1);
+        transform-origin: top left;
+    }
+}
+
+@-moz-keyframes fillet {
+    0% {
+        -moz-transform: rotate(-135deg) scale(1, 0.1);
+        transform-origin: top left;
+    }
+
+    100% {
+        -moz-transform: rotate(-135deg) scale(1, 1);
+        transform-origin: top left;
+    }
+}
+
+@-ms-keyframes fillet {
+    0% {
+        -ms-transform: rotate(-135deg) scale(1, 0.1);
+        transform-origin: top left;
+    }
+
+    100% {
+        -ms-transform: rotate(-135deg) scale(1, 1);
+        transform-origin: top left;
+    }
+}
+
+@keyframes fillet {
+    0% {
+        transform: rotate(-135deg) scale(1, 0.1);
+        transform-origin: top left;
+    }
+
+    100% {
+        transform: rotate(-135deg) scale(1, 1);
+        transform-origin: top left;
+    }
+}
