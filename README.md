@@ -65,6 +65,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Gradient Animation](#gradient-animation)
 - [Growing Flower](#growing-flower)
 - [Horizontal image slider](#horizontal-image-slider)
+- [Hourglass Sand Timer](#hourglass-sand-timer)
 - [Hover Animation](#hover-animation)
 - [Image Gallery](#image-gallery)
 - [Image Hover Effect]()
