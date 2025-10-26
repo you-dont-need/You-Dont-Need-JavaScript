@@ -3,100 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Author page</title>
+    <title>Indian Literary Heritage - Celebrating Indian Authors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;600;700&family=Hind:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="main">
-        <header>
-            <!--navbar -->
-            <div class="header">
-                <nav class="navbar">
-                    <a class="navlink" href="#">Home</a>
-                    <a class="navlink" href="#authors">About Author</a>
-                    <a class="navlink" href="#project">Projects</a>
-                    <a class="navlink" href="#skills">Skills</a>
-                    <a class="navlink" href="#achievements">Acheivements</a>
-                    <a class="navlink" href="#connect">Connect</a>
-                </nav>
+    <header>
+        <nav>
+            <a href="#" class="logo">Indian Literary Heritage</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#genres">Genres</a></li>
+                <li><a href="#authors">Authors</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <!--navbar closed-->
-    
-            <!--showcase-->
-            <div id="showcase" class="showcase">
-                <div class="left-content">
+        </nav>
+    </header>
 
-                    <div class="icon1">
-                        <img class="item1" src="img/poem.png" alt="poem-icon">
-                    </div>
-                    <div class="icon2">
-                        <img class="item2" src="img/ink.png" alt="ink-icon">
-                    </div>
-                    <div class="icon3">
-                        <img class="item3" src="img/feather.png" alt="feather-icon">
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="showcase-content">
-                        <h2 class="unique1">Dynamic Quotes</h2>
-                        <p class="unique2">
-                            Hello Guys...
-                        </p>
-                        <a href="#" class="btn" id="read-more">Read More</a>
-                    </div>
-                </div>
-                <div class="right-content">
-                    <div class="icon4">
-                        <img class="item4" src="img/quotes.png" alt="quote-icon">
-                    </div>
-                    <div class="icon5">
-                        <img class="item5" src="img/script.png" alt="script-icon">
-                    </div>
-                    <div class="icon6">
-                        <img class="item6" src="img/book.png" alt="book-icon">
-                    </div>                   
-                </div>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Indian Literary Heritage</h1>
+            <p>Discover the rich tapestry of Indian literature through celebrated authors who have shaped the nation's literary landscape across centuries of storytelling.</p>
+            <a href="#authors" class="cta-button">
+                <span>Explore Authors</span>
+                <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="genres">
+        <div class="section-header">
+            <h2>Explore Literary Genres</h2>
+            <p>Journey through the diverse voices of Indian storytelling</p>
+        </div>
+
+        <div class="genres-showcase">
+            <div class="genre-card">
+                <div class="genre-icon"><i class="fas fa-feather-alt"></i></div>
+                <h3>Literary Fiction</h3>
+                <p>Profound narratives exploring the Indian experience with depth and artistry.</p>
             </div>
-            <!--showcase close-->
-        </header>
-        <!--Authors-->
-<div id="authors">
- <div class="container">  
-    <h3 class="bg-primary"><span class="bg-primary-1">Authors</span></h3>
-    <div class="authors-grid">
-      
-      <div class="auth">
-        <img src="img/r-img1.jpg" alt="">
-        <p class="names">Rabindranath Tagore</p>
-        <p class="quote">“You cannot cross the sea merely by standing and staring at the water.”</p>
-        <p class="lead"><a href="rabindranath_tagore.html">About the author</a></p> 
-      </div>
 
-      <div class="auth">
-        <img src="./a-img2.jpg" alt="">
-        <p class="names">A.P.J.Abdul Kalam</p>
-        <p class="quote">“Failure will never overtake me if my determination to succeed is strong enough.”</p>
-        <p class="lead"><a href="APJ_abdul_kalam.html">About the author</a></p>
-      </div>
+            <div class="genre-card">
+                <div class="genre-icon"><i class="fas fa-landmark"></i></div>
+                <h3>Historical Fiction</h3>
+                <p>Vivid tales bringing India's rich history and heritage to life.</p>
+            </div>
 
-      <div class="auth">
-        <img src="img/img3.jpg" alt="">
-        <p class="names">William Shakespeare</p>
-        <p class="quote">“Our doubts are traitors, and make us lose the good we oft might win by fearing to attempt.”</p>
-        <p class="lead"><a href="William.html">About the author</a></p>
-      </div>
-      
+            <div class="genre-card">
+                <div class="genre-icon"><i class="fas fa-book-open"></i></div>
+                <h3>Contemporary Fiction</h3>
+                <p>Modern stories reflecting the changing face of India today.</p>
+            </div>
+
+            <div class="genre-card">
+                <div class="genre-icon"><i class="fas fa-om"></i></div>
+                <h3>Mythology & Folklore</h3>
+                <p>Ancient wisdom and timeless tales retold for new generations.</p>
+            </div>
+
+            <div class="genre-card">
+                <div class="genre-icon"><i class="fas fa-heart"></i></div>
+                <h3>Romance & Drama</h3>
+                <p>Emotional journeys through love, loss, and human connections.</p>
+            </div>
+
+            <div class="genre-card">
+                <div class="genre-icon"><i class="fas fa-scroll"></i></div>
+                <h3>Poetry & Essays</h3>
+                <p>Lyrical expressions and thoughtful reflections on life and society.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="authors">
+    <div class="section-header">
+        <h2>Celebrated Indian Authors</h2>
+        <p>Meet the literary giants who have enriched Indian literature</p>
     </div>
-  </div>
-</div>
 
-        <!--Authors close-->
+    <div class="authors-grid">
+        <div class="author-card">
+            <div class="author-image">
+                <img src="images/rabindranath tagore.jpg" alt="Rabindranath Tagore">
+            </div>
+            <div class="author-info">
+                <h3>Rabindranath Tagore</h3>
+                <div class="author-genre">
+                    <span class="genre-tag">Poetry</span>
+                    <span class="genre-tag">Fiction</span>
+                </div>
+                <p class="author-bio">Nobel laureate who reshaped Bengali literature and music. His profound works like Gitanjali continue to inspire generations worldwide.</p>
+            </div>
+        </div>
+
+        <div class="author-card">
+            <div class="author-image">
+                <img src="images/r.k. narayan.jpg" alt="R.K. Narayan">
+            </div>
+            <div class="author-info">
+                <h3>R.K. Narayan</h3>
+                <div class="author-genre">
+                    <span class="genre-tag">Fiction</span>
+                    <span class="genre-tag">Humor</span>
+                </div>
+                <p class="author-bio">Creator of the beloved fictional town of Malgudi, known for his simple yet profound storytelling that captures the essence of Indian life.</p>
+            </div>
+        </div>
+
+        <div class="author-card">
+            <div class="author-image">
+                <img src="images/Arundhati Roy.avif" alt="Arundhati Roy">
+            </div>
+            <div class="author-info">
+                <h3>Arundhati Roy</h3>
+                <div class="author-genre">
+                    <span class="genre-tag">Literary Fiction</span>
+                    <span class="genre-tag">Social Commentary</span>
+                </div>
+                <p class="author-bio">Booker Prize winner for "The God of Small Things," renowned for her lyrical prose and powerful exploration of social issues.</p>
+            </div>
+        </div>
+
+        <div class="author-card">
+            <div class="author-image">
+                <img src="images/Vikram Seth.jpg" alt="Vikram Seth">
+            </div>
+            <div class="author-info">
+                <h3>Vikram Seth</h3>
+                <div class="author-genre">
+                    <span class="genre-tag">Fiction</span>
+                    <span class="genre-tag">Poetry</span>
+                </div>
+                <p class="author-bio">Author of the epic "A Suitable Boy," celebrated for his meticulous detail and masterful portrayal of post-independence India.</p>
+            </div>
+        </div>
+
+        <div class="author-card">
+            <div class="author-image">
+                <img src="images/Amitav Ghosh.jpg" alt="Amitav Ghosh">
+            </div>
+            <div class="author-info">
+                <h3>Amitav Ghosh</h3>
+                <div class="author-genre">
+                    <span class="genre-tag">Historical Fiction</span>
+                    <span class="genre-tag">Adventure</span>
+                </div>
+                <p class="author-bio">Master storyteller of historical epics like "The Ibis Trilogy," blending rigorous research with compelling narratives.</p>
+            </div>
+        </div>
+
+        <div class="author-card">
+            <div class="author-image">
+                <img src="images/Salman Rushdie.avif" alt="Salman Rushdie">
+            </div>
+            <div class="author-info">
+                <h3>Salman Rushdie</h3>
+                <div class="author-genre">
+                    <span class="genre-tag">Magical Realism</span>
+                    <span class="genre-tag">Literary Fiction</span>
+                </div>
+                <p class="author-bio">Internationally acclaimed for "Midnight's Children," known for his innovative narrative style and magical realism.</p>
+            </div>
+        </div>
+
+        <div class="author-card">
+            <div class="author-image">
+                <img src="images/Chetan Bhagat.jpg" alt="Chetan Bhagat">
+            </div>
+            <div class="author-info">
+                <h3>Chetan Bhagat</h3>
+                <div class="author-genre">
+                    <span class="genre-tag">Contemporary</span>
+                    <span class="genre-tag">Youth Fiction</span>
+                </div>
+                <p class="author-bio">Bestselling author who brought Indian English writing to mainstream audiences with relatable stories of modern India.</p>
+            </div>
+        </div>
+
+        <div class="author-card">
+            <div class="author-image">
+                <img src="images/Ruskin Bond.jpg" alt="Ruskin Bond">
+            </div>
+            <div class="author-info">
+                <h3>Ruskin Bond</h3>
+                <div class="author-genre">
+                    <span class="genre-tag">Children's Literature</span>
+                    <span class="genre-tag">Nature</span>
+                </div>
+                <p class="author-bio">Beloved children's author and nature enthusiast, capturing the beauty of the Himalayas and simple life with warmth.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Connect with us and celebrate Indian literature</p>
+        </div>
+
+        <div class="contact">
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject">
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Connect With Us</h3>
+                    <p>Join our community of literature enthusiasts and stay updated with the latest news, author insights, and literary events.</p>
+                    <p><i class="fas fa-envelope"></i> hello@indianliteraryheritage.in</p>
+                    <p><i class="fas fa-phone"></i> +91 (22) 1234-5678</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Celebrating Indian literature and connecting readers with the rich literary heritage of India since 2025.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#authors">Authors</a></li>
+                    <li><a href="#genres">Genres</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Literary Blog</a></li>
+                    <li><a href="#">Book Reviews</a></li>
+                    <li><a href="#">Author Interviews</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-goodreads"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Indian Literary Heritage. All rights reserved. | Celebrating the voices of India</p>
+            <p class="developer-credit">Developed by <a href="https://github.com/tushaar-05" target="_blank" rel="noopener noreferrer">Tushar</a></p>
+        </div>
+    </footer>
 </body>
 </html>
-
-
-
-
-
-
-
