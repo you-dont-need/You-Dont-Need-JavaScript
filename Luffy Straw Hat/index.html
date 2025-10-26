@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luffy's Straw Hat</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #89CFF0 0%, #4A90E2 100%);
+        }
+
+        .hat-container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+        }
+
+        .hat-crown {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 120px;
+            background: linear-gradient(to bottom, #f4d03f 0%, #c7a02d 100%);
+            border-radius: 90px 90px 20px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .hat-crown::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            height: 15px;
+            background: linear-gradient(90deg, transparent 0%, transparent 48%, #d4af37 48%, #d4af37 52%, transparent 52%, transparent 100%);
+        }
+
+        .weave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(90deg, transparent, transparent 8px, rgba(199, 160, 45, 0.3) 8px, rgba(199, 160, 45, 0.3) 10px),
+                repeating-linear-gradient(0deg, transparent, transparent 8px, rgba(199, 160, 45, 0.3) 8px, rgba(199, 160, 45, 0.3) 10px);
+            border-radius: 90px 90px 20px 20px;
+        }
+
+        .hat-brim {
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 350px;
+            height: 80px;
+            background: linear-gradient(to bottom, #f4d03f 0%, #e6c84a 50%, #c7a02d 100%);
+            border-radius: 50%;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+        }
+
+        .brim-weave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(199, 160, 45, 0.3) 10px, rgba(199, 160, 45, 0.3) 12px),
+                repeating-linear-gradient(45deg, transparent, transparent 12px, rgba(199, 160, 45, 0.2) 12px, rgba(199, 160, 45, 0.2) 14px);
+            border-radius: 50%;
+        }
+
+        .hat-brim::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 10%;
+            right: 10%;
+            height: 8px;
+            background: #a0822a;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .ribbon {
+            position: absolute;
+            top: 160px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 20px;
+            background: linear-gradient(to right, #c41e3a 0%, #8b0000 50%, #c41e3a 100%);
+            border-radius: 3px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+        .ribbon::before,
+        .ribbon::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+
+        .ribbon::before {
+            left: -15px;
+            border-width: 10px 15px 10px 0;
+            border-color: transparent #8b0000 transparent transparent;
+        }
+
+        .ribbon::after {
+            right: -15px;
+            border-width: 10px 0 10px 15px;
+            border-color: transparent transparent transparent #8b0000;
+        }
+
+        .ribbon-shine {
+            position: absolute;
+            top: 3px;
+            left: 20%;
+            right: 20%;
+            height: 6px;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hat-container">
+        <div class="hat-brim">
+            <div class="brim-weave"></div>
+        </div>
+        <div class="ribbon">
+            <div class="ribbon-shine"></div>
+        </div>
+        <div class="hat-crown">
+            <div class="weave"></div>
+        </div>
+    </div>
+</body>
+</html>
