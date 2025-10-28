@@ -144,6 +144,7 @@ nav {
   margin: 3px 0;
   transition: 0.3s;
 }
+
 .hero {
   position: relative;
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/You-Dont-Need-JavaScript/Author/images/image.png');
