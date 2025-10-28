@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>WebGL Rotating 3D Triangle</title>
+<style>
+  html,body { height:100%; margin:0; background:#071029; display:flex; align-items:center; justify-content:center; }
+  canvas { width: 720px; height: 480px; max-width: 95vw; border-radius:10px; box-shadow: 0 10px 30px rgba(0,0,0,.6); }
+  .note { position: absolute; top: 18px; left: 18px; color: #bfe9ff; font-family: monospace; font-size:13px; }
+</style>
+</head>
+<body>
+  <div class="note">WebGL rotating triangle — GPU</div>
+  <canvas id="gl"></canvas>
+
+<script>
+(() => {
+  const canvas = document.getElementById('gl');
+  const gl = canvas.getContext('webgl', { antialias: true });
+  if (!gl) { alert('WebGL not supported'); return; }
+
+  
+  function resize() {
+    const dpr = window.devicePixelRatio || 1;
+    const width = Math.floor(canvas.clientWidth * dpr);
+    const height = Math.floor(canvas.clientHeight * dpr);
+    if (canvas.width !== width || canvas.height !== height) {
+      canvas.width = width; canvas.height = height;
+      gl.viewport(0,0, width, height);
+    }
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  
+  const vsSource = `
+    attribute vec3 aPosition;
+    attribute vec3 aColor;
+    uniform mat4 uMVP;
+    varying vec3 vColor;
+    void main() {
+      gl_Position = uMVP * vec4(aPosition, 1.0);
+      vColor = aColor;
+    }
+  `;
+
+  
+  const fsSource = `
+    precision mediump float;
+    varying vec3 vColor;
+    void main() {
+      gl_FragColor = vec4(vColor, 1.0);
+    }
+  `;
+
+  function compile(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+      console.error(gl.getShaderInfoLog(s)); gl.deleteShader(s); return null;
+    }
+    return s;
+  }
+
+  const vs = compile(gl.VERTEX_SHADER, vsSource);
+  const fs = compile(gl.FRAGMENT_SHADER, fsSource);
+  const prog = gl.createProgram();
+  gl.attachShader(prog, vs); gl.attachShader(prog, fs);
+  gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
+    console.error(gl.getProgramInfoLog(prog)); return;
+  }
+  gl.useProgram(prog);
+
+  
+  const vertices = new Float32Array([
+    // x,    y,    z,     r,   g,   b
+     0.0,  0.8,  0.0,   1.0, 0.5, 0.2,   // top (orange)
+    -0.9, -0.6,  0.3,   0.2, 0.7, 1.0,   // left (blue)
+     0.9, -0.6, -0.2,   0.6, 1.0, 0.3    // right (green)
+  ]);
+
+  const STRIDE = 6 * Float32Array.BYTES_PER_ELEMENT;
+
+  const vbo = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
+  gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+
+  const aPosition = gl.getAttribLocation(prog, 'aPosition');
+  const aColor = gl.getAttribLocation(prog, 'aColor');
+
+  gl.enableVertexAttribArray(aPosition);
+  gl.vertexAttribPointer(aPosition, 3, gl.FLOAT, false, STRIDE, 0);
+
+  gl.enableVertexAttribArray(aColor);
+  gl.vertexAttribPointer(aColor, 3, gl.FLOAT, false, STRIDE, 3 * Float32Array.BYTES_PER_ELEMENT);
+
+  const uMVP = gl.getUniformLocation(prog, 'uMVP');
+
+  
+  function multiplyMat4(a, b) {
+    const out = new Float32Array(16);
+    for (let i=0;i<4;i++){
+      for (let j=0;j<4;j++){
+        let s=0;
+        for (let k=0;k<4;k++) s += a[k*4 + j] * b[i*4 + k];
+        out[i*4 + j] = s;
+      }
+    }
+    return out;
+  }
+
+  function perspective(fovy, aspect, near, far) {
+    const f = 1.0 / Math.tan(fovy/2);
+    const nf = 1/(near - far);
+    const out = new Float32Array(16);
+    out[0]=f/aspect; out[1]=0; out[2]=0; out[3]=0;
+    out[4]=0; out[5]=f; out[6]=0; out[7]=0;
+    out[8]=0; out[9]=0; out[10]=(far+near)*nf; out[11]=-1;
+    out[12]=0; out[13]=0; out[14]=(2*far*near)*nf; out[15]=0;
+    return out;
+  }
+
+  function translation(tx,ty,tz) {
+    const m = new Float32Array(16);
+    m.set([1,0,0,0, 0,1,0,0, 0,0,1,0, tx,ty,tz,1]);
+    return m;
+  }
+
+  function rotationY(a) {
+    const c = Math.cos(a), s = Math.sin(a);
+    return new Float32Array([ c,0,-s,0, 0,1,0,0, s,0,c,0, 0,0,0,1 ]);
+  }
+  function rotationX(a) {
+    const c = Math.cos(a), s = Math.sin(a);
+    return new Float32Array([1,0,0,0, 0,c,s,0, 0,-s,c,0, 0,0,0,1]);
+  }
+
+  function lookAt(eye, center, up) {
+    const fx = center[0]-eye[0], fy = center[1]-eye[1], fz = center[2]-eye[2];
+    const rlf = 1/Math.hypot(fx,fy,fz);
+    const f = [fx*rlf, fy*rlf, fz*rlf];
+    const s = [
+      f[1]*up[2] - f[2]*up[1],
+      f[2]*up[0] - f[0]*up[2],
+      f[0]*up[1] - f[1]*up[0]
+    ];
+    const rls = 1/Math.hypot(s[0],s[1],s[2]);
+    const ss = [s[0]*rls, s[1]*rls, s[2]*rls];
+    const u = [
+      ss[1]*f[2] - ss[2]*f[1],
+      ss[2]*f[0] - ss[0]*f[2],
+      ss[0]*f[1] - ss[1]*f[0]
+    ];
+    const out = new Float32Array(16);
+    out.set([ ss[0], u[0], -f[0], 0,
+              ss[1], u[1], -f[1], 0,
+              ss[2], u[2], -f[2], 0,
+              0,     0,     0,     1 ]);
+    
+    const t = new Float32Array(16);
+    t.set([1,0,0,0, 0,1,0,0, 0,0,1,0, -eye[0], -eye[1], -eye[2], 1]);
+    return multiplyMat4(t, out);
+  }
+
+  
+  gl.clearColor(0.03, 0.08, 0.16, 1);
+  gl.enable(gl.DEPTH_TEST);
+
+  let then = 0;
+  function render(now) {
+    resize();
+    now *= 0.001;
+    const dt = now - then;
+    then = now;
+
+    
+    const angleY = now * 0.9;
+    const angleX = now * 0.55;
+
+    const proj = perspective(45 * Math.PI/180, canvas.width/canvas.height, 0.1, 100.0);
+    const eye = [0, 0, 2.2];
+    const center = [0, 0, 0];
+    const up = [0, 1, 0];
+    const view = lookAt(eye, center, up);
+
+    const rotY = rotationY(angleY);
+    const rotX = rotationX(angleX);
+    const model = multiplyMat4(rotY, rotX); 
+
+    
+    const mv = multiplyMat4(view, model);
+    const mvp = multiplyMat4(proj, mv);
+
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    gl.uniformMatrix4fv(uMVP, false, mvp);
+
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+    requestAnimationFrame(render);
+  }
+
+  requestAnimationFrame(render);
+})();
+</script>
+</body>
+</html>
