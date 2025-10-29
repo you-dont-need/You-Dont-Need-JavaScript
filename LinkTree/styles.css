@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('back.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color:burlywood;
+    color: white;
+    text-align: center;
+    padding: 1px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    margin-bottom: 10px;
+}
+
+.links li a {
+    display: block;
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #333;
+    background-color:antiquewhite;
+    transition: transform 0.3s;
+}
+
+.links li a:hover {
+    background-color: burlywood;
+    color: #fff;
+    transform: scale(1.1);
+}
