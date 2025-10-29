@@ -1,12 +1,202 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Piano</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="piano.css">
     <link rel="icon" href="piano-logo.png">
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        /* 🌈 Animated gradient background */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+            background-size: 400% 400%;
+            animation: gradientFlow 12s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* 🎹 Piano Box */
+        #piano {
+            background: linear-gradient(145deg, #7b2ff7, #f107a3);
+            width: 992px;
+            height: 290px;
+            margin: auto;
+            padding: 90px 20px 0 20px;
+            position: relative;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 0, 204, 0.7);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* 🎶 Animated border glow */
+        #piano::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            padding: 3px;
+            background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #8a2be2);
+            background-size: 400% 400%;
+            animation: borderFlow 8s linear infinite;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
+        @keyframes borderFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Keys area */
+        .keys {
+            background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
+            width: 949px;
+            height: 180px;
+            padding-left: 2px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        /* White key */
+        .key {
+            background: linear-gradient(180deg, #ffffff, #e2e2e2);
+            position: relative;
+            width: 41px;
+            height: 175px;
+            margin: 2px;
+            float: left;
+            border-radius: 0 0 5px 5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .key:hover {
+            box-shadow: 0 0 20px #00e5ff;
+            transform: translateY(-3px);
+        }
+
+        .key:active {
+            background: linear-gradient(180deg, #d1d1d1, #fafafa);
+            transform: scale(0.96);
+            box-shadow: 0 0 30px #ff00ff, 0 0 40px #00fff2;
+        }
+
+        /* Black key styling */
+        .key.black-key::after {
+            background: linear-gradient(180deg, #111, #000);
+            content: "";
+            position: absolute;
+            left: -18px;
+            width: 32px;
+            height: 100px;
+            border-radius: 0 0 3px 3px;
+            transition: all 0.2s ease;
+        }
+
+        .key.black-key::after:hover {
+            box-shadow: 0 0 15px #ffa500;
+            transform: translateY(-3px);
+        }
+
+        .key.black-key:active::after {
+            background: linear-gradient(180deg, #2b2b2b, #000);
+            box-shadow: 0 0 30px #ff0077, 0 0 40px #00fff2;
+            transform: scale(0.95);
+        }
+
+        /* Header */
+        .head {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .title {
+            width: 400px;
+            position: absolute;
+            top: 23px;
+            margin-top: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-shadow: 0 0 10px #ff9f43, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+        }
+
+        .logo {
+            width: 35px;
+            margin-right: 8px;
+            vertical-align: middle;
+            filter: drop-shadow(0 0 10px #fff);
+            animation: pulseLogo 2.5s infinite ease-in-out;
+        }
+
+        @keyframes pulseLogo {
+            0% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 0px #fff);
+            }
+            50% {
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 15px #00ffff);
+            }
+            100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 0px #fff);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            #piano {
+                width: 358px;
+            }
+            .keys {
+                width: 318px;
+            }
+        }
+
+        @media (max-width: 1199px) and (min-width: 769px) {
+            #piano {
+                width: 675px;
+            }
+            .keys {
+                width: 633px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +204,7 @@
         <div class="head">
             <h1 class="title"><img class="logo" src="piano-logo.png" alt="logo">Piano</h1>
         </div>
-        
+
         <div class="keys">
             <div class="key"></div>
             <div class="key black-key"></div>
@@ -41,6 +231,5 @@
             <div class="key black-key"></div>
         </div>
     </div>
-
 </body>
 </html>

@@ -3,119 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to the Login Page</title>
+  <title>Glassmorphism Login & Sign Up</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    :root {
-      --font: rgb(57, 57, 57);
-      --font2: rgb(21, 21, 21);
-      --accent: rgb(255, 120, 150);
+      font-family: "Poppins", sans-serif;
     }
 
     body {
-      background: linear-gradient(
-        to top right,
-        rgb(109, 109, 163),
-        rgb(255, 83, 255),
-        rgb(254, 120, 143),
-        rgb(255, 194, 80),
-        rgb(253, 253, 103)
-      );
-      min-height: 100vh;
-      width: 100%;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-      overflow-y: auto;
-      padding: 40px 10px; /* prevent overflow on smaller screens */
+      background: linear-gradient(135deg, #ff70a6, #ffd670, #a0e7e5, #b4f8c8);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
     }
 
-    .glass {
-      position: fixed;
-      background-color: black;
-      backdrop-filter: blur(50px);
-      opacity: 0.3;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 0;
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    .box {
-      background: rgba(255, 254, 254, 0.3);
-      backdrop-filter: blur(40px);
-      border-radius: 15px;
-      z-index: 1;
-      width: 100%;
-      max-width: 420px;
-      padding: 25px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      box-shadow: 5px 5px 20px rgba(54, 54, 54, 0.3);
-      transition: transform 0.3s ease;
-    }
-
-    .box:hover {
-      transform: scale(1.01);
-    }
-
-    .slider {
-      display: flex;
-      width: 100%;
+    .container {
+      width: 400px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(25px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
       overflow: hidden;
-      border-radius: 10px;
-      margin-bottom: 15px;
+      position: relative;
+      transition: 0.5s ease;
     }
 
-    .sign,
-    .login {
-      flex: 1;
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 12px 0;
+    }
+
+    .tab {
+      width: 50%;
       text-align: center;
-      padding: 12px;
-      font-size: small;
+      font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.3s, color 0.3s;
+      color: #222;
+      padding: 10px 0;
+      border-radius: 10px;
+      transition: 0.3s ease;
     }
 
-    .sign {
-      background-color: black;
-      color: rgb(172, 172, 172);
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
+    .tab:hover {
+      background: rgba(0,0,0,0.1);
     }
 
-    .sign:hover {
-      background-color: var(--accent);
-      color: white;
+    input[type="radio"], input[type="checkbox"] {
+      display: none;
     }
 
-    .login {
-      background-color: rgb(227, 227, 227);
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
+    .forms {
+      display: flex;
+      width: 200%;
+      transition: transform 0.6s ease;
     }
 
-    .login:hover {
-      background-color: black;
-      color: white;
+    #signup:checked ~ .forms {
+      transform: translateX(0);
     }
 
-    .head {
-      margin: 20px 0;
+    #login:checked ~ .forms {
+      transform: translateX(-50%);
+    }
+
+    form {
+      width: 50%;
+      padding: 30px;
+    }
+
+    .form-title {
       font-size: 1.4rem;
-      font-weight: bold;
-      color: var(--font2);
+      font-weight: 700;
       text-align: center;
+      margin-bottom: 20px;
+      color: #222;
     }
 
     .option {
@@ -124,19 +98,19 @@
       align-items: center;
       font-weight: 500;
       font-size: 0.9rem;
-      border: 1px solid var(--font);
-      width: 85%;
+      border: 1px solid #333;
+      width: 100%;
       height: 38px;
       margin: 8px 0;
       border-radius: 50px;
-      color: var(--font);
+      color: #333;
       background-color: rgba(255, 255, 255, 0.3);
       cursor: pointer;
       transition: all 0.3s ease;
     }
 
     .option:hover {
-      background-color: var(--font);
+      background-color: #333;
       color: white;
       transform: translateY(-2px);
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -146,127 +120,180 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 85%;
+      width: 100%;
       font-weight: lighter;
-      color: var(--font2);
-      margin: 15px 0;
+      color: #333;
+      margin: 10px 0;
     }
 
     .divider hr {
       flex: 1;
       border: none;
       height: 1px;
-      background-color: var(--font2);
+      background-color: #333;
       margin: 0 10px;
-      opacity: 0.5;
+      opacity: 0.4;
     }
 
-    .form {
+    .input-box {
       display: flex;
       flex-direction: column;
-      width: 85%;
-      gap: 15px;
+      margin-bottom: 15px;
     }
 
-    .form-box {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-
-    .form-box label {
-      font-size: 0.85rem;
-      color: var(--font2);
+    .input-box label {
+      font-size: 0.9rem;
+      color: #333;
       margin-bottom: 5px;
     }
 
-    .form-box input {
-      height: 42px;
-      border-radius: 8px;
-      border: 1px solid var(--font2);
+    .input-box input {
+      height: 40px;
+      border: none;
+      border-radius: 10px;
       padding-left: 10px;
-      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.6);
       transition: all 0.3s ease;
       outline: none;
     }
 
-    .form-box input:hover {
-      border-color: var(--accent);
+    .input-box input:focus {
+      box-shadow: 0 0 10px rgba(255, 120, 150, 0.6);
+      background: #fff;
     }
 
-    .form-box input:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 5px rgba(255, 120, 150, 0.5);
-    }
-
-    .button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 85%;
+    .btn {
+      width: 100%;
       height: 45px;
-      background-color: var(--font);
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #222, #ff7898);
       color: white;
-      border-radius: 50px;
-      font-weight: lighter;
       font-size: 1rem;
-      margin-top: 20px;
+      font-weight: 600;
       cursor: pointer;
-      transition: all 0.3s ease;
+      margin-top: 10px;
+      transition: 0.3s ease;
     }
 
-    .button:hover {
-      background-color: var(--accent);
+    .btn:hover {
       transform: translateY(-2px);
+      background: linear-gradient(135deg, #ff7898, #222);
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
-    /* Responsive adjustments */
+    .link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .link a {
+      color: #ff477e;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .link a:hover {
+      text-decoration: underline;
+    }
+
+    .success-msg {
+      display: none;
+      text-align: center;
+      font-weight: 600;
+      color: #28a745;
+      margin-top: 10px;
+      animation: fadeIn 0.6s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #show-success:checked ~ .container .success-msg {
+      display: block;
+    }
+
     @media (max-width: 480px) {
-      .box {
-        padding: 20px 15px;
-      }
-
-      .option, .form, .button {
-        width: 95%;
-      }
-
-      .head {
-        font-size: 1.2rem;
+      .container {
+        width: 90%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="glass"></div>
-  <div class="box">
-    <div class="slider">
-      <span class="sign">Sign Up</span>
-      <span class="login">Login</span>
+  <input type="checkbox" id="show-success" hidden>
+
+  <div class="container">
+    <input type="radio" name="tab" id="signup" checked>
+    <input type="radio" name="tab" id="login">
+
+    <div class="tabs">
+      <label class="tab" for="signup">Sign Up</label>
+      <label class="tab" for="login">Login</label>
     </div>
-    <div class="head">Create an Account</div>
-    <div class="option facebook">Continue with Facebook</div>
-    <div class="option google">Continue with Google</div>
-    <div class="divider"><hr /> OR <hr /></div>
-    <div class="form">
-      <div class="form-box">
-        <label for="name1">First Name</label>
-        <input type="text" id="name1" placeholder="Enter your first name" />
-      </div>
-      <div class="form-box">
-        <label for="name2">Last Name</label>
-        <input type="text" id="name2" placeholder="Enter your last name" />
-      </div>
-      <div class="form-box">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="example@email.com" />
-      </div>
-      <div class="form-box">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Create a password" />
-      </div>
+
+    <div class="forms">
+      <!-- Sign Up Form -->
+      <form>
+        <div class="form-title">Create Account</div>
+        <div class="option">Continue with Facebook</div>
+        <div class="option">Continue with Google</div>
+        <div class="divider"><hr>OR<hr></div>
+
+        <div class="input-box">
+          <label>First Name</label>
+          <input type="text" placeholder="Enter first name">
+        </div>
+        <div class="input-box">
+          <label>Last Name</label>
+          <input type="text" placeholder="Enter last name">
+        </div>
+        <div class="input-box">
+          <label>Email</label>
+          <input type="email" placeholder="Enter email">
+        </div>
+        <div class="input-box">
+          <label>Password</label>
+          <input type="password" placeholder="Create password">
+        </div>
+
+        <label for="show-success">
+          <button type="button" class="btn">Sign Up</button>
+        </label>
+        <div class="link">
+          <p>Already have an account? <label for="login"><a>Login</a></label></p>
+        </div>
+      </form>
+
+      <!-- Login Form -->
+      <form>
+        <div class="form-title">Welcome Back</div>
+        <div class="option">Continue with Facebook</div>
+        <div class="option">Continue with Google</div>
+        <div class="divider"><hr>OR<hr></div>
+
+        <div class="input-box">
+          <label>Email</label>
+          <input type="email" placeholder="Enter email">
+        </div>
+        <div class="input-box">
+          <label>Password</label>
+          <input type="password" placeholder="Enter password">
+        </div>
+
+        <button type="button" class="btn">Login</button>
+        <div class="link">
+          <p>Don’t have an account? <label for="signup"><a>Sign Up</a></label></p>
+        </div>
+      </form>
     </div>
-    <div class="button">Sign Up</div>
+
+    <div class="success-msg">✅ Sign Up Successful! You can now Login.</div>
   </div>
 </body>
 </html>
