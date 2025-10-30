@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse Effect Button (Hover)</title>
+<style>
+  body {
+    background: linear-gradient(135deg, #141E30, #243B55);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pulse-btn {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+  }
+
+  .pulse-btn:hover {
+    background-color: #0199a9;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 188, 212, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 20px rgba(0, 188, 212, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 188, 212, 0);
+    }
+  }
+</style>
+</head>
+<body>
+
+  <button class="pulse-btn">Hover Me</button>
+
+</body>
+</html>

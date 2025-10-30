@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.main-box {
+    position: relative;
+    background: url('image.jpeg') right no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.sidebar-menu {
+    position: fixed;
+    height: 100vh;
+    width: 280px;
+    left: -280px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.logo a {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    position: absolute;
+    left: 50px;
+    line-height: 60px;
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+
+.menu li {
+    margin-top: 6px;
+    padding: 14px 20px;
+    transition: all 0.3s linear;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu i {
+    color: #fff;
+    font-size: 20px;
+    padding-right: 8px;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu li:hover {
+    border-left: 1px solid #fff;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.social-media {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.social-media i {
+    padding: 0 5px;
+    color: #fff;
+    opacity: 0.6;
+    font-size: 20px;
+    transition: all 0.2s linear;
+}
+
+.social-media i:hover {
+    opacity: 1;
+}
+
+#check {
+    display: none;
+}
+
+.btn1 i {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 30px;
+    line-height: 60px;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.3s linear;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn2 i {
+    color: #fff;
+    font-size: 25px;
+    line-height: 60px;
+    position: absolute;
+    left: 240px;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.3s linear;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#check:checked~.sidebar-menu {
+    left: 0%;
+}
+
+#check:checked~.btn1 i {
+    opacity: 0;
+}
+
+#check:checked~.btn2 i {
+    opacity: 1;
+}
+
+/* responsiveness */
+
+@media (max-width: 1245px) {
+
+    .menu li {
+        margin-top: 0;
+    }
+}

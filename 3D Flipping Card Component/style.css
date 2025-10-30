@@ -39,16 +39,22 @@ section::after {
     transform: translate(150px, 100px);
 }
 
-.container {
+.card-wrapper {
     height: 230px;
     width: 380px;
     position: relative;
     z-index: 10;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    position: relative;
     transition: 0.6s;
     transform-style: preserve-3d;
 }
 
-.container:hover{
+.card-wrapper:hover .container {
     transform: rotateY(180deg);
 }
 

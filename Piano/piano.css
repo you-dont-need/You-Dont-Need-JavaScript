@@ -1,53 +1,241 @@
+
 html {
     box-sizing: border-box;
 }
-  
+
 *, *::before, *::after {
     box-sizing: inherit;
 }
 
+/* 🌈 Animated gradient background */
 body {
-    background-color:bisque;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientFlow 12s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
-  
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 🎹 Piano Box */
 #piano {
-    background-color: #63369a;
+    background: linear-gradient(145deg, #7b2ff7, #f107a3);
     width: 992px;
-    height: 290px;
-    margin: 100px auto;
+    height: 320px;
+    margin: auto;
     padding: 90px 20px 0 20px;
     position: relative;
-    border-radius: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 0, 204, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
 }
-  
+
+#piano:hover {
+    transform: translateY(-5px);
+}
+
+/* 🎶 Animated border glow */
+#piano::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 3px;
+    background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #8a2be2);
+    background-size: 400% 400%;
+    animation: borderFlow 8s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+@keyframes borderFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Keys area */
 .keys {
-    background-color: #040404;
+    background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
     width: 949px;
     height: 180px;
     padding-left: 2px;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
 }
-  
+
+/* White key */
 .key {
-    background-color: #ffffff;
+    background: linear-gradient(180deg, #ffffff, #e2e2e2);
     position: relative;
     width: 41px;
     height: 175px;
     margin: 2px;
     float: left;
-    border-radius: 0 0 3px 3px;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    overflow: hidden;
 }
-  
+
+.key:hover {
+    box-shadow: 0 0 20px #00e5ff;
+    transform: translateY(-3px);
+}
+
+.key:active {
+    background: linear-gradient(180deg, #ff6b6b, #ffa500);
+    transform: scale(0.96) translateY(2px);
+    box-shadow: 0 0 30px #ff00ff, 0 0 40px #00fff2;
+    animation: whiteKeyPress 0.3s ease;
+}
+
+@keyframes whiteKeyPress {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+    50% {
+        transform: scale(0.94) translateY(4px);
+    }
+    100% {
+        transform: scale(0.96) translateY(2px);
+    }
+}
+
+/* Black key styling */
 .key.black-key::after {
-    background-color: #1d1e22;
+    background: linear-gradient(180deg, #111, #000);
     content: "";
     position: absolute;
     left: -18px;
     width: 32px;
     height: 100px;
-    border-radius: 0 0 3px 3px;
+    border-radius: 0 0 5px 5px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    z-index: 2;
 }
-  
+
+.key.black-key:hover::after {
+    box-shadow: 0 0 15px #ffa500;
+    transform: translateY(-3px);
+}
+
+.key.black-key:active::after {
+    background: linear-gradient(180deg, #ff4444, #cc0000);
+    box-shadow: 0 0 30px #ff0077, 0 0 40px #ff4444;
+    transform: scale(0.95) translateY(2px);
+    animation: blackKeyPress 0.3s ease;
+}
+
+@keyframes blackKeyPress {
+    0% {
+        transform: scale(1) translateY(0);
+        background: linear-gradient(180deg, #111, #000);
+    }
+    50% {
+        transform: scale(0.93) translateY(4px);
+        background: linear-gradient(180deg, #ff2222, #aa0000);
+    }
+    100% {
+        transform: scale(0.95) translateY(2px);
+        background: linear-gradient(180deg, #ff4444, #cc0000);
+    }
+}
+
+/* Key effects */
+.key-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.key:active .key-effect {
+    animation: keyPulse 0.6s ease-out;
+}
+
+.key:active .key-effect {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.key.black-key:active .key-effect {
+    background: radial-gradient(circle, rgba(255, 68, 68, 0.8) 0%, rgba(255, 68, 68, 0) 70%);
+}
+
+@keyframes keyPulse {
+    0% {
+        width: 20px;
+        height: 20px;
+        opacity: 0.8;
+    }
+    100% {
+        width: 120px;
+        height: 120px;
+        opacity: 0;
+    }
+}
+
+/* Note symbols */
+.note-symbol {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.key:active .note-symbol {
+    animation: noteFloat 1.2s ease-out forwards;
+}
+
+@keyframes noteFloat {
+    0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-80px);
+        opacity: 0;
+    }
+}
+
+/* Header */
 .head {
     display: flex;
     align-items: center;
@@ -59,33 +247,65 @@ body {
     position: absolute;
     top: 23px;
     margin-top: 0px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    letter-spacing: 1px;
-}
-  
-.logo {
-    width: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #ff9f43, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+    display: flex;
+    align-items: center;
 }
 
-@media (max-width: 768px) {
-    #piano {
-      width: 358px;
+.logo {
+    width: 35px;
+    margin-right: 8px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 10px #fff);
+    animation: pulseLogo 2.5s infinite ease-in-out;
+}
+
+@keyframes pulseLogo {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px #fff);
     }
-  
-    .keys {
-      width: 318px;
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 15px #00ffff);
     }
-  
-    .logo {
-      width: 150px;
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px #fff);
     }
 }
-  
+
+/* Responsive */
+@media (max-width: 768px) {
+    #piano {
+        width: 358px;
+        height: 250px;
+        padding: 70px 15px 0 15px;
+    }
+    
+    .keys {
+        width: 318px;
+        height: 140px;
+    }
+    
+    .key {
+        height: 135px;
+    }
+    
+    .key.black-key::after {
+        height: 80px;
+    }
+}
+
 @media (max-width: 1199px) and (min-width: 769px) {
-      #piano {
+    #piano {
         width: 675px;
-      }
+    }
+    
     .keys {
         width: 633px;
-      }
+    }
 }
