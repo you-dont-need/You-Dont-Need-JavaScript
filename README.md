@@ -105,7 +105,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Ripple Effect](#ripple-effect)
 - [Redar Loader](#Redar-Loader)
 - [Resizable Split Panel](#resizable-split-panel)
-- [Rotating Text](#rotating-text) 
+- [Rotating Text](#rotating-text)
 - [Scary Animation](#scary-animation)
 - [Scenery](#scenery)
 - [Scroll Video Cinematic Animation](#scroll-video-cinematic)
@@ -186,8 +186,6 @@ Your browser does not support the video tag.
 </video>](http://url-to-dark-theme-page)
 
 **[⬆ back to top](#quick-links)**
-
-
 
 ## <a id="blog-cards"></a>Blog Post Cards
 
@@ -399,7 +397,6 @@ Your browser does not support the video tag.
 [<img src="./Author/a-img2.jpg" height="230" title="Demo 5">]()
 [<img src="images/infinite-slider.png" height="230" title="Demo 6">]()
 
-
 **[⬆ back to top](#quick-links)**
 
 ---
@@ -445,7 +442,7 @@ Your browser does not support the video tag.
 
 ## <a id="MasterCard"></a>MasterCard
 
-[<img src="images/screenshot.png" height="230" title="Website_Demo">](https://github.com/2div/You-Dont-Need-JavaScript/MasterCard/images/screenshot.png)
+[<img src="images/screenshot.png" height="230" title="Website_Demo">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/master/MasteCard/screenshot.PNG)
 
 **[⬆ back to top](#quick-links)**
 
@@ -544,6 +541,7 @@ Your browser does not support the video tag.
 ---
 
 ## <a id="mondrian-composition"></a>Mondrian Composition
+
 [<img src="images/mondrian_composition.png" height="230" title="Mondrian Art Demo">](https://codepen.io/VINAY-MADIVAL/pen/VYerdxY)
 
 **[⬆ back to top](#quick-links)**
@@ -1126,6 +1124,7 @@ A modern, interactive scroll-driven video animation created with pure CSS. Featu
 **[⬆ back to top](#quick-links)**
 
 ---
+
 ## <a id="Timeline"></a>Timeline
 
 ![img_source](Timeline/Timeline.gif)
@@ -1353,23 +1352,23 @@ An interactive resume built entirely using **HTML and CSS** — featuring animat
 
 ## <a id="input-text"></a>Input Text Field
 
-[<video height="230" width="230" controls> 
+[<video height="230" width="230" controls>
+
 <source src="images/input-text.mp4" type="video/mp4">
 </video>
 ]()
 
 ## <a id="night-fire-camp"></a>Night fire camp
 
-[<video height="230" width="230" controls> 
+[<video height="230" width="230" controls>
+
 <source src="images/nightfirecamp.mp4" type="video/mp4">
 </video>
 ]()
 
-
 **[⬆ back to top](#quick-links)**
 
 ---
-
 
 **[⬆ back to top](#quick-links)**
 
