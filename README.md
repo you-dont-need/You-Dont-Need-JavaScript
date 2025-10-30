@@ -442,7 +442,7 @@ Your browser does not support the video tag.
 
 ## <a id="MasterCard"></a>MasterCard
 
-[<img src="images/screenshot.png" height="230" title="Website_Demo">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/master/MasteCard/screenshot.PNG)
+[<img src="screenshot.PNG" height="230" title="Website_Demo">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/master/MasteCard/screenshot.PNG)
 
 **[⬆ back to top](#quick-links)**
 
