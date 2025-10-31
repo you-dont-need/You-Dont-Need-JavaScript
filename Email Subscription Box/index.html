@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Subscription Box</title>
+    <meta name="description" content="A responsive email subscription box built entirely with HTML and CSS - no JavaScript required. Perfect for newsletters and landing pages.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Example 1: Classic Subscription Box -->
+    <section class="subscription-section classic">
+        <div class="subscription-container">
+            <div class="subscription-content">
+                <i class="fas fa-envelope subscription-icon"></i>
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates, news, and exclusive offers delivered straight to your inbox.</p>
+            </div>
+            <form class="subscription-form" action="#" method="GET">
+                <div class="input-wrapper">
+                    <i class="fas fa-envelope input-icon"></i>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="email1" 
+                        placeholder="Enter your email address" 
+                        required 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    >
+                </div>
+                <button type="submit" class="subscribe-btn">
+                    <span>Subscribe</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+            <p class="privacy-note">
+                <i class="fas fa-shield-alt"></i>
+                We respect your privacy. Unsubscribe at any time.
+            </p>
+        </div>
+    </section>
+
+    <!-- Example 2: Modern Card Style -->
+    <section class="subscription-section modern">
+        <div class="subscription-container">
+            <div class="subscription-content">
+                <div class="icon-wrapper">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <h2>Stay in the Loop</h2>
+                <p>Join thousands of subscribers and never miss an update!</p>
+                <div class="feature-list">
+                    <span><i class="fas fa-check-circle"></i> Weekly Newsletter</span>
+                    <span><i class="fas fa-check-circle"></i> Exclusive Content</span>
+                    <span><i class="fas fa-check-circle"></i> No Spam</span>
+                </div>
+            </div>
+            <form class="subscription-form" action="#" method="GET">
+                <div class="input-wrapper">
+                    <i class="fas fa-at input-icon"></i>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="email2" 
+                        placeholder="your.email@example.com" 
+                        required 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    >
+                </div>
+                <button type="submit" class="subscribe-btn">
+                    <span>Subscribe Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Example 3: Minimalist Style -->
+    <section class="subscription-section minimalist">
+        <div class="subscription-container">
+            <div class="subscription-content">
+                <h2>Never Miss an Update</h2>
+                <p>Get notified about our latest features and blog posts.</p>
+            </div>
+            <form class="subscription-form" action="#" method="GET">
+                <div class="input-wrapper">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="email3" 
+                        placeholder="Enter your email" 
+                        required 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    >
+                </div>
+                <button type="submit" class="subscribe-btn">
+                    Subscribe
+                </button>
+            </form>
+            <p class="privacy-note">
+                <i class="fas fa-lock"></i>
+                Your email is safe with us. We'll never share it with third parties.
+            </p>
+        </div>
+    </section>
+</body>
+</html>
+
