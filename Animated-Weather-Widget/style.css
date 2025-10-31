@@ -1,0 +1,593 @@
+/* ============================================
+   ANIMATED WEATHER WIDGET - PURE CSS
+   No JavaScript Required!
+   ============================================ */
+
+/* CSS Variables for easy theming */
+:root {
+    --sunny-sky: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --cloudy-sky: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    --rainy-sky: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    --snowy-sky: linear-gradient(135deg, #d7e1ec 0%, #ffffff 100%);
+    --night-sky: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    
+    --sun-color: #ffd700;
+    --cloud-color: rgba(255, 255, 255, 0.9);
+    --rain-color: rgba(173, 216, 230, 0.6);
+    --snow-color: #ffffff;
+    --moon-color: #f0f0f0;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+/* ============================================
+   WEATHER SELECTOR (Radio Buttons)
+   ============================================ */
+.weather-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.weather-selector input[type="radio"] {
+    display: none;
+}
+
+.weather-selector label {
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.weather-selector label:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.weather-selector input[type="radio"]:checked + label {
+    background: white;
+    color: #667eea;
+    border-color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   WEATHER WIDGET CONTAINER
+   ============================================ */
+.weather-widget {
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* ============================================
+   SKY BACKGROUND (Changes with weather)
+   ============================================ */
+.sky {
+    height: 300px;
+    background: var(--sunny-sky);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.8s ease;
+}
+
+/* Sunny Sky (Default) */
+#sunny:checked ~ .weather-widget .sky {
+    background: var(--sunny-sky);
+}
+
+/* Cloudy Sky */
+#cloudy:checked ~ .weather-widget .sky {
+    background: var(--cloudy-sky);
+}
+
+/* Rainy Sky */
+#rainy:checked ~ .weather-widget .sky {
+    background: var(--rainy-sky);
+}
+
+/* Snowy Sky */
+#snowy:checked ~ .weather-widget .sky {
+    background: var(--snowy-sky);
+}
+
+/* Night Sky */
+#night:checked ~ .weather-widget .sky {
+    background: var(--night-sky);
+}
+
+/* ============================================
+   SUN ANIMATION
+   ============================================ */
+.sun {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    width: 80px;
+    height: 80px;
+    background: var(--sun-color);
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#sunny:checked ~ .weather-widget .sun {
+    opacity: 1;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Sun Rays */
+.sun-rays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin: -60px 0 0 -60px;
+    animation: rotate 20s linear infinite;
+}
+
+.sun-rays::before,
+.sun-rays::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(transparent, var(--sun-color), transparent);
+    transform-origin: center;
+}
+
+.sun-rays::before { transform: rotate(0deg); }
+.sun-rays::after { transform: rotate(90deg); }
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   MOON AND STARS (Night Mode)
+   ============================================ */
+.moon {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    width: 80px;
+    height: 80px;
+    background: var(--moon-color);
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(240, 240, 240, 0.6);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#night:checked ~ .weather-widget .moon {
+    opacity: 1;
+    animation: moonGlow 4s ease-in-out infinite;
+}
+
+@keyframes moonGlow {
+    0%, 100% { box-shadow: 0 0 40px rgba(240, 240, 240, 0.6); }
+    50% { box-shadow: 0 0 60px rgba(240, 240, 240, 0.9); }
+}
+
+/* Moon Craters */
+.crater {
+    position: absolute;
+    background: rgba(200, 200, 200, 0.3);
+    border-radius: 50%;
+}
+
+.crater1 { width: 15px; height: 15px; top: 20px; left: 25px; }
+.crater2 { width: 10px; height: 10px; top: 45px; left: 50px; }
+.crater3 { width: 12px; height: 12px; top: 55px; left: 20px; }
+
+/* Stars */
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#night:checked ~ .weather-widget .stars {
+    opacity: 1;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.star1 { top: 30px; left: 50px; animation-delay: 0s; }
+.star2 { top: 70px; left: 150px; animation-delay: 0.3s; }
+.star3 { top: 100px; left: 80px; animation-delay: 0.6s; }
+.star4 { top: 50px; left: 200px; animation-delay: 0.9s; }
+.star5 { top: 120px; left: 250px; animation-delay: 1.2s; }
+.star6 { top: 80px; left: 350px; animation-delay: 1.5s; }
+.star7 { top: 150px; left: 180px; animation-delay: 1.8s; }
+.star8 { top: 40px; left: 400px; animation-delay: 2.1s; }
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+}
+
+/* ============================================
+   CLOUDS
+   ============================================ */
+.cloud {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#cloudy:checked ~ .weather-widget .cloud,
+#rainy:checked ~ .weather-widget .cloud,
+#snowy:checked ~ .weather-widget .cloud {
+    opacity: 1;
+}
+
+.cloud1 {
+    top: 60px;
+    left: -100px;
+    animation: floatCloud1 20s linear infinite;
+}
+
+.cloud2 {
+    top: 140px;
+    left: -150px;
+    animation: floatCloud2 25s linear infinite;
+    animation-delay: 5s;
+}
+
+.cloud3 {
+    top: 100px;
+    left: -120px;
+    animation: floatCloud3 22s linear infinite;
+    animation-delay: 10s;
+}
+
+@keyframes floatCloud1 {
+    from { transform: translateX(0); }
+    to { transform: translateX(700px); }
+}
+
+@keyframes floatCloud2 {
+    from { transform: translateX(0); }
+    to { transform: translateX(750px); }
+}
+
+@keyframes floatCloud3 {
+    from { transform: translateX(0); }
+    to { transform: translateX(720px); }
+}
+
+.cloud-part {
+    width: 50px;
+    height: 50px;
+    background: var(--cloud-color);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.cloud-part:nth-child(1) {
+    left: 0;
+}
+
+.cloud-part:nth-child(2) {
+    left: 25px;
+    width: 70px;
+    height: 60px;
+}
+
+.cloud-part:nth-child(3) {
+    left: 50px;
+    width: 50px;
+}
+
+/* ============================================
+   RAIN
+   ============================================ */
+.rain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#rainy:checked ~ .weather-widget .rain {
+    opacity: 1;
+}
+
+.raindrop {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(transparent, var(--rain-color));
+    animation: fall 1s linear infinite;
+}
+
+.raindrop:nth-child(1) { left: 10%; animation-delay: 0s; }
+.raindrop:nth-child(2) { left: 20%; animation-delay: 0.1s; }
+.raindrop:nth-child(3) { left: 30%; animation-delay: 0.2s; }
+.raindrop:nth-child(4) { left: 40%; animation-delay: 0.3s; }
+.raindrop:nth-child(5) { left: 50%; animation-delay: 0.4s; }
+.raindrop:nth-child(6) { left: 60%; animation-delay: 0.5s; }
+.raindrop:nth-child(7) { left: 70%; animation-delay: 0.6s; }
+.raindrop:nth-child(8) { left: 80%; animation-delay: 0.7s; }
+.raindrop:nth-child(9) { left: 90%; animation-delay: 0.8s; }
+.raindrop:nth-child(10) { left: 95%; animation-delay: 0.9s; }
+
+@keyframes fall {
+    from { transform: translateY(-50px); }
+    to { transform: translateY(350px); }
+}
+
+/* ============================================
+   SNOW
+   ============================================ */
+.snow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#snowy:checked ~ .weather-widget .snow {
+    opacity: 1;
+}
+
+.snowflake {
+    position: absolute;
+    color: var(--snow-color);
+    font-size: 20px;
+    animation: snowfall 4s linear infinite;
+}
+
+.snowflake:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 4s; }
+.snowflake:nth-child(2) { left: 20%; animation-delay: 0.5s; animation-duration: 5s; }
+.snowflake:nth-child(3) { left: 30%; animation-delay: 1s; animation-duration: 4.5s; }
+.snowflake:nth-child(4) { left: 40%; animation-delay: 1.5s; animation-duration: 5.5s; }
+.snowflake:nth-child(5) { left: 50%; animation-delay: 2s; animation-duration: 4s; }
+.snowflake:nth-child(6) { left: 60%; animation-delay: 2.5s; animation-duration: 5s; }
+.snowflake:nth-child(7) { left: 70%; animation-delay: 3s; animation-duration: 4.5s; }
+.snowflake:nth-child(8) { left: 80%; animation-delay: 3.5s; animation-duration: 5.5s; }
+.snowflake:nth-child(9) { left: 90%; animation-delay: 4s; animation-duration: 4s; }
+.snowflake:nth-child(10) { left: 95%; animation-delay: 4.5s; animation-duration: 5s; }
+
+@keyframes snowfall {
+    from { 
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+    to { 
+        transform: translateY(350px) rotate(360deg);
+        opacity: 0.3;
+    }
+}
+
+/* ============================================
+   WEATHER INFO CARD
+   ============================================ */
+.weather-info {
+    padding: 30px;
+    background: white;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.location-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.city {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.temperature {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.temp-value {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+}
+
+.temp-unit {
+    font-size: 2rem;
+    color: #999;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.condition {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.detail-label {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ============================================
+   INFO SECTION
+   ============================================ */
+.info-section {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    color: white;
+}
+
+.info-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.info-section ul {
+    list-style: none;
+}
+
+.info-section li {
+    padding: 8px 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .weather-selector {
+        gap: 8px;
+    }
+
+    .weather-selector label {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    .sky {
+        height: 250px;
+    }
+
+    .temp-value {
+        font-size: 3rem;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .sun,
+    .moon {
+        width: 60px;
+        height: 60px;
+        top: 40px;
+        right: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .weather-selector label {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .weather-info {
+        padding: 20px;
+    }
+
+    .info-section {
+        padding: 20px;
+    }
+}

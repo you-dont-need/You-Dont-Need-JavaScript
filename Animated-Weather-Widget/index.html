@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure CSS Animated Weather Widget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Pure CSS Weather Widget</h1>
+        <p class="subtitle">Switch between weather conditions using radio buttons - No JavaScript!</p>
+
+        <!-- Weather Type Selector -->
+        <div class="weather-selector">
+            <input type="radio" name="weather" id="sunny" checked>
+            <label for="sunny">☀️ Sunny</label>
+
+            <input type="radio" name="weather" id="cloudy">
+            <label for="cloudy">☁️ Cloudy</label>
+
+            <input type="radio" name="weather" id="rainy">
+            <label for="rainy">🌧️ Rainy</label>
+
+            <input type="radio" name="weather" id="snowy">
+            <label for="snowy">❄️ Snowy</label>
+
+            <input type="radio" name="weather" id="night">
+            <label for="night">🌙 Night</label>
+        </div>
+
+        <!-- Weather Widget -->
+        <div class="weather-widget">
+            <!-- Background Sky -->
+            <div class="sky">
+                <!-- Sun -->
+                <div class="sun">
+                    <div class="sun-rays"></div>
+                </div>
+
+                <!-- Moon -->
+                <div class="moon">
+                    <div class="crater crater1"></div>
+                    <div class="crater crater2"></div>
+                    <div class="crater crater3"></div>
+                </div>
+
+                <!-- Stars (for night mode) -->
+                <div class="stars">
+                    <div class="star star1"></div>
+                    <div class="star star2"></div>
+                    <div class="star star3"></div>
+                    <div class="star star4"></div>
+                    <div class="star star5"></div>
+                    <div class="star star6"></div>
+                    <div class="star star7"></div>
+                    <div class="star star8"></div>
+                </div>
+
+                <!-- Clouds -->
+                <div class="cloud cloud1">
+                    <div class="cloud-part"></div>
+                    <div class="cloud-part"></div>
+                    <div class="cloud-part"></div>
+                </div>
+                <div class="cloud cloud2">
+                    <div class="cloud-part"></div>
+                    <div class="cloud-part"></div>
+                    <div class="cloud-part"></div>
+                </div>
+                <div class="cloud cloud3">
+                    <div class="cloud-part"></div>
+                    <div class="cloud-part"></div>
+                    <div class="cloud-part"></div>
+                </div>
+
+                <!-- Rain -->
+                <div class="rain">
+                    <div class="raindrop"></div>
+                    <div class="raindrop"></div>
+                    <div class="raindrop"></div>
+                    <div class="raindrop"></div>
+                    <div class="raindrop"></div>
+                    <div class="raindrop"></div>
+                    <div class="raindrop"></div>
+                    <div class="raindrop"></div>
+                    <div class="raindrop"></div>
+                    <div class="raindrop"></div>
+                </div>
+
+                <!-- Snow -->
+                <div class="snow">
+                    <div class="snowflake">❅</div>
+                    <div class="snowflake">❅</div>
+                    <div class="snowflake">❆</div>
+                    <div class="snowflake">❅</div>
+                    <div class="snowflake">❆</div>
+                    <div class="snowflake">❅</div>
+                    <div class="snowflake">❆</div>
+                    <div class="snowflake">❅</div>
+                    <div class="snowflake">❆</div>
+                    <div class="snowflake">❅</div>
+                </div>
+            </div>
+
+            <!-- Weather Info Card -->
+            <div class="weather-info">
+                <div class="location">
+                    <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city">San Francisco</span>
+                </div>
+
+                <div class="temperature">
+                    <span class="temp-value">72</span>
+                    <span class="temp-unit">°F</span>
+                </div>
+
+                <div class="condition">Partly Cloudy</div>
+
+                <div class="details">
+                    <div class="detail-item">
+                        <span class="detail-label">Humidity</span>
+                        <span class="detail-value">65%</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Wind</span>
+                        <span class="detail-value">12 mph</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Pressure</span>
+                        <span class="detail-value">1013 mb</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <h3>✨ Pure CSS Features</h3>
+            <ul>
+                <li>🎨 Animated sun with rotating rays</li>
+                <li>☁️ Floating clouds with smooth motion</li>
+                <li>🌧️ Realistic rain animation</li>
+                <li>❄️ Falling snowflakes</li>
+                <li>🌙 Night mode with twinkling stars</li>
+                <li>📱 Fully responsive design</li>
+                <li>🚫 Zero JavaScript required!</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
