@@ -1,0 +1,39 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #323439; /* dark navy bg */
+  font-family: "Poppins", sans-serif;
+}
+
+.pulse-btn {
+  background: rgba(197, 250, 159, 0.7); /* pink-red */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 0 0 rgba(197, 250, 159, 0.7);
+  animation: pulse 1.5s infinite;
+  transition: transform 0.2s ease-in-out;
+}
+
+.pulse-btn:hover {
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(197, 250, 159, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(225, 29, 72, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0);
+  }
+}
