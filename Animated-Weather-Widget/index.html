@@ -12,20 +12,18 @@
         <p class="subtitle">Switch between weather conditions using radio buttons - No JavaScript!</p>
 
         <!-- Weather Type Selector -->
+        <!-- Radio buttons must be siblings of weather-widget for CSS to work -->
+        <input type="radio" name="weather" id="sunny" checked>
+        <input type="radio" name="weather" id="cloudy">
+        <input type="radio" name="weather" id="rainy">
+        <input type="radio" name="weather" id="snowy">
+        <input type="radio" name="weather" id="night">
+
         <div class="weather-selector">
-            <input type="radio" name="weather" id="sunny" checked>
             <label for="sunny">☀️ Sunny</label>
-
-            <input type="radio" name="weather" id="cloudy">
             <label for="cloudy">☁️ Cloudy</label>
-
-            <input type="radio" name="weather" id="rainy">
             <label for="rainy">🌧️ Rainy</label>
-
-            <input type="radio" name="weather" id="snowy">
             <label for="snowy">❄️ Snowy</label>
-
-            <input type="radio" name="weather" id="night">
             <label for="night">🌙 Night</label>
         </div>
 
