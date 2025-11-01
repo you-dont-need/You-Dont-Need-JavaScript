@@ -29,6 +29,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Analog Clock](#analog-clock)
 - [Animated Button](#animated-button)
 - [Animated Buttons](#animated-buttons)
+- [Animated Weather Widget](#animated-weather-widget)
 - [Badge](#badge)
 - [Bonfire](#bonfire)
 - [Book Animation](#book-animation)
@@ -245,6 +246,26 @@ Your browser does not support the video tag.
 <img src="images/Animated-button.png" height="230" title="Demo 2">
 <img src="images/Animated-button-2.png" height="230" title="Demo 2">
 <img src="images/liquidButton.png" height="230" title="Demo 2">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="animated-weather-widget"></a>Animated Weather Widget
+
+A fully interactive weather widget with pure CSS animations! Switch between sunny, cloudy, rainy, snowy, and night modes. Features animated sun rays, floating clouds, falling rain/snow, and twinkling stars - all without JavaScript!
+
+[<img src="Animated-Weather-Widget/preview-sunny.png" height="230" title="Sunny Weather">](Animated-Weather-Widget/index.html)
+[<img src="Animated-Weather-Widget/preview-rainy.png" height="230" title="Rainy Weather">](Animated-Weather-Widget/index.html)
+[<img src="Animated-Weather-Widget/preview-night.png" height="230" title="Night Weather">](Animated-Weather-Widget/index.html)
+
+**Features:**
+- 🌞 Animated sun with rotating rays
+- ☁️ Floating clouds with smooth motion
+- 🌧️ Realistic rain animation
+- ❄️ Falling snowflakes
+- 🌙 Night mode with twinkling stars
+- 📱 Fully responsive design
 
 **[⬆ back to top](#quick-links)**
 
