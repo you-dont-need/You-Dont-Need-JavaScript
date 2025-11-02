@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #32004b; 
+  overflow: hidden;
+  height: 100vh;
+}
+.scroll-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.scroll-text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  padding: 3rem;
+  text-align: justify;
+  animation: scroll-up 25s linear infinite;
+}
+.scroll-text.duplicate {
+  top: 100%;
+}
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}

@@ -1,0 +1,107 @@
+body {
+  background: black;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+}
+.button {
+  background: #9fe870;
+  color: white;
+  font-weight: bold;
+  padding: 18px 48px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 8px 20px rgba(255,255,255,0.2);
+  transition: transform 0.15s ease;
+  user-select: none;
+}
+.button:active {
+  transform: scale(0.96);
+}
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  opacity: 0;
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+}
+#trigger:checked ~ .confetti-container .confetti {
+  animation: pop 3s ease-out forwards;
+}
+@keyframes pop {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(
+      calc(-50% + var(--x) * 300px),
+      calc(-50% + var(--y) * 300px)
+    )
+    rotate(1080deg);
+  }
+}
+.confetti:nth-child(1) { --x: 0.99; --y: -0.14; background: #ff3b30; }
+.confetti:nth-child(2) { --x: 0.90; --y: -0.43; background: #ff9500; }
+.confetti:nth-child(3) { --x: 0.70; --y: -0.71; background: #ffcc00; }
+.confetti:nth-child(4) { --x: 0.43; --y: -0.90; background: #34c759; }
+.confetti:nth-child(5) { --x: 0.00; --y: -1.00; background: #5ac8fa; }
+.confetti:nth-child(6) { --x: -0.43; --y: -0.90; background: #007aff; }
+.confetti:nth-child(7) { --x: -0.70; --y: -0.71; background: #5856d6; }
+.confetti:nth-child(8) { --x: -0.90; --y: -0.43; background: #ff2d55; }
+.confetti:nth-child(9) { --x: -1.00; --y: 0.00; background: #ff6b6b; }
+.confetti:nth-child(10) { --x: -0.90; --y: 0.43; background: #f06595; }
+.confetti:nth-child(11) { --x: -0.70; --y: 0.71; background: #ffcc00; }
+.confetti:nth-child(12) { --x: -0.43; --y: 0.90; background: #34c759; }
+.confetti:nth-child(13) { --x: 0.00; --y: 1.00; background: #5ac8fa; }
+.confetti:nth-child(14) { --x: 0.43; --y: 0.90; background: #007aff; }
+.confetti:nth-child(15) { --x: 0.70; --y: 0.71; background: #5856d6; }
+.confetti:nth-child(16) { --x: 0.90; --y: 0.43; background: #ff2d55; }
+
+.confetti:nth-child(17) { --x: 0.97; --y: -0.26; background: #ff4081; }
+.confetti:nth-child(18) { --x: 0.87; --y: -0.50; background: #ffeb3b; }
+.confetti:nth-child(19) { --x: 0.68; --y: -0.73; background: #8bc34a; }
+.confetti:nth-child(20) { --x: 0.35; --y: -0.94; background: #03a9f4; }
+.confetti:nth-child(21) { --x: 0.00; --y: -1.00; background: #673ab7; }
+.confetti:nth-child(22) { --x: -0.36; --y: -0.93; background: #9c27b0; }
+.confetti:nth-child(23) { --x: -0.68; --y: -0.73; background: #ff5722; }
+.confetti:nth-child(24) { --x: -0.88; --y: -0.47; background: #cddc39; }
+.confetti:nth-child(25) { --x: -0.99; --y: -0.14; background: #009688; }
+.confetti:nth-child(26) { --x: -0.93; --y: 0.36; background: #03a9f4; }
+.confetti:nth-child(27) { --x: -0.68; --y: 0.73; background: #4caf50; }
+.confetti:nth-child(28) { --x: -0.36; --y: 0.93; background: #ffc107; }
+.confetti:nth-child(29) { --x: 0.00; --y: 1.00; background: #e91e63; }
+.confetti:nth-child(30) { --x: 0.36; --y: 0.93; background: #03a9f4; }
+.confetti:nth-child(31) { --x: 0.64; --y: 0.77; background: #ff4081; }
+.confetti:nth-child(32) { --x: 0.84; --y: 0.54; background: #8bc34a; }
+.confetti:nth-child(33) { --x: 0.97; --y: 0.25; background: #cddc39; }
+.confetti:nth-child(34) { --x: 1.00; --y: 0.00; background: #ff5722; }
+.confetti:nth-child(35) { --x: 0.93; --y: -0.36; background: #9c27b0; }
+.confetti:nth-child(36) { --x: 0.77; --y: -0.64; background: #03a9f4; }
+.confetti:nth-child(37) { --x: 0.54; --y: -0.84; background: #009688; }
+.confetti:nth-child(38) { --x: 0.25; --y: -0.97; background: #673ab7; }
+.confetti:nth-child(39) { --x: -0.07; --y: -1.00; background: #ffeb3b; }
+.confetti:nth-child(40) { --x: -0.36; --y: -0.93; background: #4caf50; }
+.confetti:nth-child(50) { --x: -0.9; --y: -0.43; background: #03a9f4; }
+.confetti:nth-child(60) { --x: 0.5; --y: 0.87; background: #ff6b6b; }
+.confetti:nth-child(70) { --x: -0.64; --y: 0.77; background: #34c759; }
+.confetti:nth-child(80) { --x: 0.93; --y: -0.36; background: #5856d6; }
+.confetti:nth-child(90) { --x: -0.25; --y: -0.97; background: #ffcc00; }
+.confetti:nth-child(100) { --x: 0.00; --y: 1.00; background: #007aff; }
