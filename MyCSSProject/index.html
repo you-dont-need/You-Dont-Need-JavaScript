@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glass Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- THEME SWITCH -->
+  <input type="checkbox" id="theme-toggle" class="theme-checkbox" />
+  <label for="theme-toggle" class="theme-switch">
+    <i class="fas fa-sun"></i>
+    <i class="fas fa-moon"></i>
+  </label>
+
+  <!-- HAMBURGER TOGGLE -->
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+  <label for="menu-toggle" class="hamburger">
+    <i class="fas fa-bars"></i>
+  </label>
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="profile">
+      <img src="https://via.placeholder.com/80" alt="Profile" class="profile-img">
+      <h3>John Doe</h3>
+      <p>Admin</p>
+    </div>
+    <ul class="nav-links">
+      <li class="active"><i class="fas fa-home"></i> Dashboard</li>
+      <li><i class="fas fa-chart-line"></i> Analytics</li>
+      <li><i class="fas fa-tasks"></i> Projects</li>
+      <li><i class="fas fa-cog"></i> Settings</li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="background">
+    <div class="container">
+      <h1 class="title">Glassmorphism Dashboard</h1>
+
+      <div class="cards">
+        <div class="card">
+          <i class="fas fa-users card-icon"></i>
+          <h2>Users</h2>
+          <p>1,245</p>
+          <div class="card-trend up">
+            <i class="fas fa-arrow-up"></i>
+            <span>12%</span>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fas fa-dollar-sign card-icon"></i>
+          <h2>Revenue</h2>
+          <p>$12,345</p>
+          <div class="card-trend up">
+            <i class="fas fa-arrow-up"></i>
+            <span>8%</span>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fas fa-tasks card-icon"></i>
+          <h2>Tasks</h2>
+          <p>87%</p>
+          <div class="card-trend down">
+            <i class="fas fa-arrow-down"></i>
+            <span>3%</span>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fas fa-envelope card-icon"></i>
+          <h2>Messages</h2>
+          <p>56</p>
+          <div class="card-trend up">
+            <i class="fas fa-arrow-up"></i>
+            <span>24%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recent-activities">
+        <h2>Recent Activities</h2>
+        <div class="activity-list">
+          <div class="activity-item">
+            <i class="fas fa-user-plus"></i>
+            <div class="activity-content">
+              <h3>New User Registration</h3>
+              <p>John Smith joined the platform</p>
+              <span class="time">2 minutes ago</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <i class="fas fa-shopping-cart"></i>
+            <div class="activity-content">
+              <h3>New Sale</h3>
+              <p>Product XYZ was purchased</p>
+              <span class="time">15 minutes ago</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <i class="fas fa-file-alt"></i>
+            <div class="activity-content">
+              <h3>New Report</h3>
+              <p>Monthly report has been generated</p>
+              <span class="time">1 hour ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
+
