@@ -1,71 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated 3D Earth</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000;
-            overflow: hidden;
-            perspective: 1000px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Realistic 3D Earth Illusion</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #000015 0%, #000 80%);
+    overflow: hidden;
+  }
 
-        .scene {
-            width: 300px;
-            height: 300px;
-            position: relative;
-        }
+  .scene {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform: rotateX(18deg) rotateZ(-8deg);
+  }
 
-        .globe {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            position: absolute;
-            transform-style: preserve-3d;
-            background: url('https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57735/land_ocean_ice_cloud_2048.jpg');
-            background-size: 200% 150%;
-            animation: spin 20s linear infinite;
-            box-shadow:
-                inset 30px 0 80px rgba(0, 0, 0, 0.8),
-                inset -30px 0 40px rgba(255, 255, 255, 0.2),
-                0 0 40px rgba(168, 219, 255, 0.4);
-        }
+  .globe {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    background-image: url('https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57735/land_ocean_ice_cloud_2048.jpg');
+    background-size: 220% 100%;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    animation: spin 25s linear infinite;
+    box-shadow:
+      inset -40px 0 60px rgba(0, 0, 0, 0.9),
+      inset 40px 0 60px rgba(255, 255, 255, 0.2),
+      0 0 30px rgba(90,150,255,0.5);
+    overflow: hidden;
+  }
 
-        .globe::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), rgba(0,0,0,0.7) 70%);
-            mix-blend-mode: overlay;
-        }
+  /* Central highlight (curvature illusion) */
+  .globe::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.1) 35%, rgba(0,0,0,0.9) 100%);
+    mix-blend-mode: overlay;
+  }
 
-        @keyframes spin {
-            0% { background-position: 0 0; }
-            100% { background-position: -200% 0; }
-        }
+  /* Limb darkening (edge shadow for roundness) */
+  .globe::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.9) 100%);
+  }
 
-        @keyframes dayNightCycle {
-            0% { background-position: 0 0; }
-            100% { background-position: 100% 100%; }
-        }
+  /* Simulated atmospheric glow */
+  .atmosphere {
+    position: absolute;
+    inset: -12px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(120,190,255,0.45), transparent 70%);
+    filter: blur(12px);
+    z-index: -1;
+  }
 
-        @keyframes shadowMovement {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+  /* Gentle "axis wobble" to break flatness */
+  @keyframes spin {
+    0% { background-position: 0 0; transform: rotateY(0deg) rotateX(10deg); }
+    50% { background-position: -100% 0; transform: rotateY(10deg) rotateX(15deg); }
+    100% { background-position: -200% 0; transform: rotateY(0deg) rotateX(10deg); }
+  }
+</style>
 </head>
 <body>
-    <div class="scene">
-        <div class="globe"></div>
-    </div>
+  <div class="scene">
+    <div class="globe"></div>
+    <div class="atmosphere"></div>
+  </div>
 </body>
 </html>
-
