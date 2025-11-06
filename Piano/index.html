@@ -6,6 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="piano.css">
     <link rel="icon" href="piano-logo.png">
+    <style>
+        
+        .key audio {
+            width: 100%;
+            height: 600px;
+            position: absolute;
+            bottom: 5px;
+            left: 10px;
+            z-index: 10;
+            opacity: 0.7;
+            transform: scale(1.1);
+            transform-origin: bottom center;
+        }
+       
+       
+        .key audio::-webkit-media-controls-panel {
+            background: transparent;
+            padding: 0;
+        }
+        
+        .key audio::-webkit-media-controls-play-button {
+            margin: 0 auto;
+        }
+        
+        .key audio::-webkit-media-controls-timeline,
+        .key audio::-webkit-media-controls-current-time-display,
+        .key audio::-webkit-media-controls-time-remaining-display,
+        .key audio::-webkit-media-controls-mute-button,
+        .key audio::-webkit-media-controls-volume-slider {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,96 +50,117 @@
                 Piano
             </h1>
         </div>
-        
+         
         <div class="keys">
             <!-- First Octave -->
             <div class="key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/C3.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/D3.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/E3.wav"></audio>
             </div>
             <div class="key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/F3.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/G3.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/A3.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/B3.wav"></audio>
             </div>
 
-            <!-- Second Octave -->
+             <!-- Second Octave -->
             <div class="key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/C4.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/D4.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/E4.wav"></audio>
             </div>
             <div class="key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/F4.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/G4.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/A4.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/B4.wav"></audio>
             </div>
 
             <!-- Third Octave -->
             <div class="key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/C5.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/D5.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/E5.wav"></audio>
             </div>
             <div class="key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/F5.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/G5.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/A5.wav"></audio>
             </div>
             <div class="key black-key">
                 <div class="key-effect"></div>
                 <div class="note-symbol">♪</div>
+                <audio controls src="sounds/B5.wav"></audio>
             </div>
         </div>
     </div>
