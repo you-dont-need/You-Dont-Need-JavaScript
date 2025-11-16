@@ -1,96 +1,134 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body, html {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    font-family: 'Georgia', sans-serif;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at center, #020617 0%, #0f172a 100%);
+  overflow: hidden;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(#ade8f4, #90e0ef);
-    overflow: hidden;
+/* Subtle glowing background orbs */
+.glow-orbs::before,
+.glow-orbs::after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  filter: blur(180px);
+  opacity: 0.7;
+  animation: float 10s ease-in-out infinite alternate;
+  z-index: 0;
 }
 
-.loading-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 30px;
+.glow-orbs::before {
+  top: -200px;
+  left: -200px;
+  background: radial-gradient(circle, #00f5d4, transparent 80%);
 }
 
+.glow-orbs::after {
+  bottom: -250px;
+  right: -200px;
+  background: radial-gradient(circle, #9b5de5, transparent 80%);
+  animation-delay: 3s;
+}
+
+/* Main Loader Container */
+.loader-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Futuristic Spinner */
 .spinner {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 4px dashed rgba(0, 131, 212);
-    border-top-color: rgba(0, 131, 212);
-    animation: spin 10s linear infinite;
-    margin-bottom: 30px;
-    position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #00f5d4, #9b5de5, #f15bb5, #fee440, #00f5d4);
+  animation: rotate 1.5s linear infinite;
+  position: relative;
+  box-shadow: 0 0 50px rgba(255,255,255,0.3);
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.spinner::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  background: radial-gradient(circle at center, #0f172a 60%, #020617 100%);
+  border-radius: 50%;
 }
 
-.loading-page h1 {
-    font-size: 70px;
-    color: rgba(0, 131, 212, 0.7);
+.spinner::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border: 5px solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite alternate;
 }
 
-.loading-page h1::after {
-    content: "";
-    animation: loadingAnim 2s steps(4) infinite;
-    position: absolute;
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-@keyframes loadingAnim {
-    0%   { content: ""; }
-    25%  { content: "."; }
-    50%  { content: ".."; }
-    75%  { content: "..."; }
-    100% { content: ""; }
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.15); opacity: 1; }
 }
 
-.container::before,
-.container::after {
-    content: "";
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    filter: blur(100px);
-    animation: float 6s ease-in-out infinite alternate;
-    z-index: 0;
+/* Glowing Loading Text */
+.loading-text {
+  color: #fff;
+  margin-top: 40px;
+  font-size: 58px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00f5d4, #9b5de5, #f15bb5, #fee440);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  animation: glowText 2s ease-in-out infinite alternate;
 }
 
-.container::before {
-    background: #48cae4;
-    top: -100px;
-    left: -100px;
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #00f5d4, 0 0 30px #9b5de5, 0 0 60px #f15bb5;
+  }
+  to {
+    text-shadow: 0 0 20px #fee440, 0 0 50px #9b5de5, 0 0 80px #00f5d4;
+  }
 }
 
-.container::after {
-    background: #48cae4;
-    bottom: -100px;
-    right: -100px;
-    animation-delay: 3s;
+/* Animated dots for “...” */
+.dots::after {
+  content: "";
+  animation: dots 1.2s steps(4, end) infinite;
 }
 
+@keyframes dots {
+  0% { content: ""; }
+  25% { content: "."; }
+  50% { content: ".."; }
+  75% { content: "..."; }
+  100% { content: ""; }
+}
+
+/* Floating glowing animation for background orbs */
 @keyframes float {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(30px, -30px); }
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(80px, -80px); }
 }
