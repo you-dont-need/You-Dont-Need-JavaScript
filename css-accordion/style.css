@@ -1,0 +1,53 @@
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+  background: #f0f0f0;
+}
+
+.accordion {
+  max-width: 500px;
+  margin: auto;
+}
+
+.accordion input[type="radio"] {
+  display: none;
+}
+
+.accordion label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3498db;
+  color: white;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.accordion label:hover {
+  background: #2980b9;
+}
+
+.accordion .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background: #ecf0f1;
+  padding: 0 1rem;
+  border-radius: 0 0 5px 5px;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+  max-height: 200px;
+  padding: 1rem;
+}
+
+.arrow {
+  transition: transform 0.3s;
+}
+
+.accordion input[type="radio"]:checked + label .arrow {
+  transform: rotate(180deg);
+}
