@@ -1,17 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: black;
-    background-image: radial-gradient(white 1px, transparent 1px);
-    background-size: 5px 5px;
+    overflow: hidden;
+
+    
+    background-color: #02030a;
+    background-image: radial-gradient(
+        ellipse at bottom,
+        #0a0f3a 0%,
+        #040616 50%,
+        #000000 100%
+    );
 }
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image:
+        radial-gradient(1px 1px at 5% 10%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(1px 1px at 15% 80%, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 25% 30%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(2px 2px at 35% 60%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(2px 2px at 45% 20%, rgba(255,255,255,0.8), transparent),
+        radial-gradient(2px 2px at 55% 75%, rgba(255,255,255,0.85), transparent),
+        radial-gradient(3px 3px at 65% 40%, rgba(255,255,255,1), transparent),
+        radial-gradient(3px 3px at 75% 90%, rgba(255,255,255,0.95), transparent),
+        radial-gradient(3px 3px at 85% 15%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(2px 2px at 95% 55%, rgba(255,255,255,0.85), transparent);
+
+    background-size: 300px 300px;
+    background-repeat: repeat;
+
+    animation:
+        star-drift 100s linear infinite,
+        star-twinkle 6s ease-in-out infinite alternate;
+
+    pointer-events: none;
+    z-index: -2;
+}
+
+@keyframes star-drift {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-300px);
+    }
+}
+
+@keyframes star-twinkle {
+    from {
+        opacity: 0.7;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
 
 .solar-system {
     position: relative;
 }
+
+
 
 .sun {
     width: 200px;
@@ -21,7 +85,64 @@ body {
     position: relative;
     box-shadow: 0 0 50px 20px rgba(252, 179, 77, 0.8);
     animation: rotate-sun 20s linear infinite;
+    z-index: 2;
 }
+
+
+.sun::before {
+    content: "";
+    position: absolute;
+    inset: -50px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(255,200,100,0.9) 20%,
+        rgba(255,150,50,0.6) 40%,
+        rgba(255,100,0,0.3) 60%,
+        transparent 75%
+    );
+    filter: blur(8px);
+    animation: solar-pulse 3.5s ease-in-out infinite;
+}
+
+
+.sun::after {
+    content: "";
+    position: absolute;
+    inset: -90px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(255,180,60,0.35),
+        rgba(255,120,0,0.15),
+        transparent 70%
+    );
+    filter: blur(18px);
+    animation: solar-wave 6s ease-in-out infinite;
+}
+
+@keyframes solar-pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+@keyframes solar-wave {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.25);
+        opacity: 0.7;
+    }
+}
+
 
 
 .earth-orbit {
@@ -44,13 +165,12 @@ body {
     position: absolute;
     top: 50%;
     left: -30px;
-    transform-origin: 50% 50%;
     transform: rotate(-23.5deg);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     animation: rotate-earth 10s linear infinite;
 }
 
-/* Moon */
+
 .moon {
     width: 20px;
     height: 20px;
@@ -65,6 +185,7 @@ body {
 }
 
 
+
 .venus-orbit {
     width: 300px;
     height: 300px;
@@ -76,7 +197,6 @@ body {
     border: 2px dashed rgba(255, 255, 255, 0.5);
     border-radius: 50%;
 }
-
 
 .venus {
     width: 50px;
@@ -90,56 +210,40 @@ body {
 }
 
 
-@keyframes rotate-sun {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
+@keyframes rotate-sun {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
 @keyframes rotate-earth-orbit {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
-
 
 @keyframes rotate-earth {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
-
 @keyframes rotate-moon-around-earth {
-    0% {
+    from {
         transform: rotate(0deg) translateX(100px) translateY(-50%);
     }
-    100% {
+    to {
         transform: rotate(360deg) translateX(100px) translateY(-50%);
     }
 }
 
-l
 @keyframes rotate-venus-orbit {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
-.earth:hover, .moon:hover, .venus:hover {
+
+.earth:hover,
+.moon:hover,
+.venus:hover {
     filter: brightness(1.5);
     transition: filter 0.3s ease;
 }
