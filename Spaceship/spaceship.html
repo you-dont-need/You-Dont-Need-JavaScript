@@ -307,11 +307,119 @@
             text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
             letter-spacing: 3px;
         }
+      /* Nebula */
+.nebula {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background: radial-gradient(circle at 30% 30%,
+        rgba(255, 0, 150, 0.35),
+        rgba(0, 150, 255, 0.25),
+        transparent 70%);
+    filter: blur(60px);
+    opacity: 0.7;
+}
+
+.nebula.n1 {
+    top: 10%;
+    left: 5%;
+}
+
+.nebula.n2 {
+    bottom: 15%;
+    right: 10%;
+    background: radial-gradient(circle at 60% 40%,
+        rgba(0, 255, 200, 0.35),
+        rgba(150, 0, 255, 0.25),
+        transparent 70%);
+}
+
+/* Ringed Planet */
+.planet-ringed {
+    position: absolute;
+    top: 12%;
+    right: 15%;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ddd, #666);
+    box-shadow: 0 0 40px rgba(200, 200, 255, 0.4);
+}
+
+.planet-ringed::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 200px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid rgba(180, 200, 255, 0.6);
+    transform: translateY(-50%) rotate(-20deg);
+}
+
+/* Normal Planet */
+.planet {
+    position: absolute;
+    bottom: 12%;
+    left: 12%;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffcc88, #cc6600);
+    box-shadow: inset -10px -15px 25px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(255, 170, 80, 0.5);
+}
+
+/* Asteroid Belt */
+.asteroid-belt {
+    position: absolute;
+    top: 55%;
+    left: -10%;
+    width: 120%;
+    height: 120px;
+    pointer-events: none;
+}
+
+.asteroid {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #888;
+    border-radius: 50%;
+    box-shadow: inset -2px -3px 4px rgba(0, 0, 0, 0.6);
+    opacity: 0.8;
+}
+
+.asteroid:nth-child(1) { left: 10%; top: 40%; }
+.asteroid:nth-child(2) { left: 20%; top: 60%; }
+.asteroid:nth-child(3) { left: 35%; top: 30%; }
+.asteroid:nth-child(4) { left: 50%; top: 50%; }
+.asteroid:nth-child(5) { left: 65%; top: 35%; }
+.asteroid:nth-child(6) { left: 80%; top: 60%; }
+.asteroid:nth-child(7) { left: 92%; top: 45%; }
+
     </style>
 </head>
 <body>
     <div class="stars"></div>
-    
+    <!-- Space Decorations -->
+    <div class="nebula n1"></div>
+    <div class="nebula n2"></div>
+
+    <div class="planet-ringed"></div>
+    <div class="planet"></div>
+
+    <div class="asteroid-belt">
+    <div class="asteroid"></div>
+    <div class="asteroid"></div>
+    <div class="asteroid"></div>
+    <div class="asteroid"></div>
+    <div class="asteroid"></div>
+    <div class="asteroid"></div>
+    <div class="asteroid"></div>
+    </div>
+
     <div class="title">SPACESHIP</div>
     
     <div class="spaceship-container">
