@@ -192,6 +192,98 @@
             .firework{bottom:8vh}
             .ground{height:22vh}
         }
+    /* =========================
+   Upper Night Sky Enhancement
+   ========================= */
+
+/* soft cosmic glow in upper sky */
+.sky-glow{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:55vh;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(800px 400px at 50% 10%, rgba(120,80,255,0.12), transparent 60%),
+    radial-gradient(600px 300px at 20% 20%, rgba(255,120,80,0.08), transparent 65%),
+    radial-gradient(500px 260px at 80% 25%, rgba(120,200,255,0.06), transparent 70%);
+  mix-blend-mode:screen;
+}
+
+/* denser, brighter stars (top focused) */
+.stars{
+  background:
+    radial-gradient(circle at 5% 10%, #fff 0.7px, transparent 1.2px),
+    radial-gradient(circle at 15% 22%, #fff 0.6px, transparent 1.1px),
+    radial-gradient(circle at 28% 14%, #fff 0.8px, transparent 1.3px),
+    radial-gradient(circle at 42% 18%, #fff 0.6px, transparent 1.1px),
+    radial-gradient(circle at 55% 8%,  #fff 0.9px, transparent 1.4px),
+    radial-gradient(circle at 68% 20%, #fff 0.7px, transparent 1.2px),
+    radial-gradient(circle at 82% 12%, #fff 0.8px, transparent 1.3px),
+    radial-gradient(circle at 92% 26%, #fff 0.6px, transparent 1.1px);
+  animation:twinkle 4.5s ease-in-out infinite;
+}
+
+/* =========================
+   Ambient Spark Bursts (Top)
+   ========================= */
+
+.ambient-sparks{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:50vh;
+  z-index:1;
+  pointer-events:none;
+}
+
+.ambient-sparks span{
+  position:absolute;
+  top:var(--y);
+  left:var(--x);
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:radial-gradient(circle, #fff, rgba(255,200,120,0.8), transparent 70%);
+  filter:blur(0.6px);
+  opacity:0;
+  animation:sparkPop 3.5s ease-out infinite;
+  animation-delay:var(--d);
+  mix-blend-mode:screen;
+}
+
+/* random distribution */
+.ambient-sparks span:nth-child(1){--x:20%;--y:18%;--d:0s}
+.ambient-sparks span:nth-child(2){--x:35%;--y:12%;--d:.8s}
+.ambient-sparks span:nth-child(3){--x:50%;--y:20%;--d:1.6s}
+.ambient-sparks span:nth-child(4){--x:65%;--y:15%;--d:2.4s}
+.ambient-sparks span:nth-child(5){--x:80%;--y:22%;--d:3.2s}
+.ambient-sparks span:nth-child(6){--x:10%;--y:30%;--d:1.2s}
+.ambient-sparks span:nth-child(7){--x:28%;--y:34%;--d:2.1s}
+.ambient-sparks span:nth-child(8){--x:55%;--y:28%;--d:0.9s}
+.ambient-sparks span:nth-child(9){--x:72%;--y:32%;--d:1.8s}
+.ambient-sparks span:nth-child(10){--x:90%;--y:26%;--d:2.7s}
+
+@keyframes sparkPop{
+  0%{
+    transform:scale(0.2);
+    opacity:0;
+  }
+  20%{
+    opacity:1;
+  }
+  60%{
+    transform:scale(2.2);
+    opacity:0.9;
+  }
+  100%{
+    transform:scale(3.5);
+    opacity:0;
+  }
+}
 
     </style>
 </head>
@@ -207,6 +299,14 @@
 
     <div class="sky" aria-hidden="true">
         <div class="stars" aria-hidden="true"></div>
+        <!-- enhanced night sky glow -->
+        <div class="sky-glow"></div>
+
+        <!-- upper ambient spark bursts -->
+        <div class="ambient-sparks">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        </div>
 
         <!-- each firework contains many <i> sparks with --i for angle -->
         <!-- f1 (warm golden) -->
