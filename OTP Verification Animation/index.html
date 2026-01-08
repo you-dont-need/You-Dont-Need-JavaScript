@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Demo controls outside the card for CSS sibling selectors -->
+        <div class="demo-controls">
+            <input type="checkbox" id="demo-trigger" class="demo-trigger">
+            <input type="checkbox" id="reset-trigger" class="reset-trigger">
+        </div>
+        
+        <div class="otp-card">
+            <h2>Verify Your Phone</h2>
+            <p>We sent a code to your mobile number</p>
+            <div class="instruction">
+                <small>💡 Type any 6 digits or use demo below, then click Verify</small>
+            </div>
+            
+            <!-- OTP Input Form -->
+            <form class="otp-form">
+                <div class="otp-inputs">
+                    <input type="text" maxlength="1" pattern="[0-9]" class="otp-input" id="otp1" required placeholder="•">
+                    <input type="text" maxlength="1" pattern="[0-9]" class="otp-input" id="otp2" required placeholder="•">
+                    <input type="text" maxlength="1" pattern="[0-9]" class="otp-input" id="otp3" required placeholder="•">
+                    <input type="text" maxlength="1" pattern="[0-9]" class="otp-input" id="otp4" required placeholder="•">
+                    <input type="text" maxlength="1" pattern="[0-9]" class="otp-input" id="otp5" required placeholder="•">
+                    <input type="text" maxlength="1" pattern="[0-9]" class="otp-input" id="otp6" required placeholder="•">
+                </div>
+                
+                <!-- Hidden checkbox to trigger verification animation -->
+                <input type="checkbox" id="verify-trigger" class="verify-trigger">
+                <label for="verify-trigger" class="verify-btn">Verify Code</label>
+                
+                <!-- Loading Animation -->
+                <div class="loading-container">
+                    <div class="loading-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p>Checking code...</p>
+                </div>
+                
+                <!-- Success Animation -->
+                <div class="success-container">
+                    <div class="success-icon">✓</div>
+                    <h3>Phone Verified!</h3>
+                    <p>You're all set</p>
+                </div>
+            </form>
+            
+            <!-- Demo section -->
+            <div class="demo-section">
+                <p class="demo-text">Demo: Click below to auto-fill 123456</p>
+                
+                <div class="demo-buttons">
+                    <label for="demo-trigger" class="demo-btn">Fill Demo Code</label>
+                    <label for="reset-trigger" class="reset-btn">Reset</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
